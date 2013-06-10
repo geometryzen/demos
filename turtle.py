@@ -8,7 +8,7 @@ if (canvas):
     
 canvas = document.createElement("canvas")
 canvas.id = "canvas"
-canvas.width = "400"
+canvas.width = 400
 canvas.height = "300"
 #canvas.setAttribute("id", "canvas")
 container = document.getElementById("canvas-container")
