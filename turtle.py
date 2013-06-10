@@ -14,8 +14,8 @@ canvas.height = 300
 container = document.getElementById("canvas-container")
 container.appendChild(canvas)
 
-wn = turtle.Screen()
-wn.bgcolor("black")
+screen = turtle.Screen()
+screen.bgcolor("black")
 tess = turtle.Turtle()
 tess.color("yellow")
 tess.shape("turtle")
@@ -27,4 +27,4 @@ for size in range(5,60,2):
     tess.forward(size)
     tess.right(24)
 
-wn.exitonclick()
+screen.exitonclick()
