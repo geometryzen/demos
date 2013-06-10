@@ -6,7 +6,7 @@ canvas = document.getElementById("canvas")
 if (canvas):
     canvas.parentNode.removeChild(canvas)
     
-canvas = document.createElement("canvas")
+canvas = document.createElement("canvas", {id: "canvas"})
 canvas.id = "canvas"
 canvas.width = 400
 canvas.height = 300
@@ -16,6 +16,7 @@ container.appendChild(canvas)
 
 screen = Screen()
 screen.bgcolor("black")
+
 tess = Turtle()
 tess.color("yellow")
 tess.shape("turtle")
