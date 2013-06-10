@@ -14,9 +14,9 @@ canvas.height = 300
 container = document.getElementById("canvas-container")
 container.appendChild(canvas)
 
-screen = turtle.Screen()
+screen = Screen()
 screen.bgcolor("black")
-tess = turtle.Turtle()
+tess = Turtle()
 tess.color("yellow")
 tess.shape("turtle")
 
