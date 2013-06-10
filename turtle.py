@@ -11,7 +11,7 @@ if (canvas):
 canvas = document.createElement("canvas", {"id": "canvas"})
 canvas.width = 400
 canvas.height = 300
-#canvas.setAttribute("height", "300")
+canvas.setAttribute("height", "300")
 
 # Append the canvas to the provided container (the content of the widget).
 container = document.getElementById("canvas-container")
