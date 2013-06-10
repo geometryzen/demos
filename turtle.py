@@ -2,7 +2,7 @@
 from turtle import *
 from browser import *
 
-# Discard the old canvas if it exists.
+# Discard the old canvas if it exists. 
 canvas = document.getElementById("canvas")
 if (canvas):
     canvas.parentNode.removeChild(canvas)
