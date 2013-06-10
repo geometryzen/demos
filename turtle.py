@@ -1,5 +1,5 @@
 # turtle.py
-import turtle
+from turtle import *
 from browser import *
 
 canvas = document.getElementById("canvas")
