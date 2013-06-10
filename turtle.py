@@ -26,7 +26,6 @@ tess = Turtle()
 tess.color("yellow")
 tess.shape("turtle")
 
-print(range(5,60,2))
 tess.penup()
 for size in range(5,60,2):
     tess.stamp()
