@@ -6,7 +6,7 @@ canvas = document.createElement("canvas")
 print canvas
 container = document.getElementById("canvas-container")
 print container
-container.addChildNode(canvas)
+container.appendChild(canvas)
 
 
 
