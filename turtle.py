@@ -2,6 +2,11 @@
 import turtle
 from browser import *
 
+canvas = document.getElementById("canvas")
+if (canvas):
+    parentNode = canvas.parentNode()
+    parentNode.removeChild(canvas)
+    
 canvas = document.createElement("canvas")
 canvas.id = "canvas"
 canvas.width = "400"
