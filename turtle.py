@@ -1,5 +1,15 @@
 # turtle.py
 import turtle
+from browser import *
+
+canvas = document.createElement("canvas")
+print canvas
+container = document.getElementById("canvas-container")
+print container
+container.addChildNode(canvas)
+
+
+
 wn = turtle.Screen()
 wn.bgcolor("black")
 tess = turtle.Turtle()
