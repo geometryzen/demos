@@ -17,7 +17,7 @@ canvas.setAttribute("height", "300")
 container = document.getElementById("canvas-container")
 container.appendChild(canvas)
 
-# The turtle code will be happy that it now has a canvas element!
+# The turtle code will be happy now that it now has a canvas element!
 
 screen = Screen()
 screen.bgcolor("black")
