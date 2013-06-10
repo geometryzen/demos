@@ -22,14 +22,14 @@ container.appendChild(canvas)
 screen = Screen()
 screen.bgcolor("black")
 
-tess = Turtle()
-tess.color("yellow")
-tess.shape("turtle")
+alice = Turtle()
+alice.color("yellow")
+alice.shape("turtle")
 
-tess.penup()
+alice.penup()
 for size in range(5,60,2):
-    tess.stamp()
-    tess.forward(size)
-    tess.right(24)
+    alice.stamp()
+    alice.forward(size)
+    alice.right(24)
 
 screen.exitonclick()
