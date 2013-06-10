@@ -3,6 +3,11 @@ from ga import *
 # We will control the horizontal. We will control the vertical.
 from browser import *
 
+# Discard any old canvas if it exists. 
+canvas = document.getElementById("canvas")
+if (canvas):
+    canvas.parentNode.removeChild(canvas)
+
 container = document.createElement("div")
 document.body.appendChild(container)
 
