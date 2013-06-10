@@ -6,7 +6,7 @@ canvas = document.getElementById("canvas")
 if (canvas):
     canvas.parentNode.removeChild(canvas)
     
-canvas = document.createElement("canvas", {"id": "canvas"})
+canvas = document.createElement("canvas", {"id": "canvas", "width": 400})
 canvas.id = "canvas"
 canvas.width = 400
 canvas.height = 300
