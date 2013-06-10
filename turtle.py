@@ -4,7 +4,7 @@ from browser import *
 
 canvas = document.createElement("canvas")
 canvas.id = "canvas"
-canvas.setAttribute("id", "canvas")
+#canvas.setAttribute("id", "canvas")
 print canvas
 container = document.getElementById("canvas-container")
 print container
