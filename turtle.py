@@ -4,15 +4,11 @@ from browser import *
 
 canvas = document.createElement("canvas")
 canvas.id = "canvas"
-canvas.width = "800"
-canvas.height = "600"
+canvas.width = "400"
+canvas.height = "300"
 #canvas.setAttribute("id", "canvas")
-print canvas
 container = document.getElementById("canvas-container")
-print container
 container.appendChild(canvas)
-
-
 
 wn = turtle.Screen()
 wn.bgcolor("black")
