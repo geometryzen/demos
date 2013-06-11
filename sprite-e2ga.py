@@ -40,5 +40,6 @@ for size in range(5,60,2):
     alice.stamp()
     alice.forward(size)
     alice.right(24)
+    print alice.heading
 
 screen.exitonclick()
