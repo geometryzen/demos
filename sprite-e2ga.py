@@ -35,7 +35,7 @@ shapes = [
 ]
 a.shape(shapes[6]) 
 
-a.penup()
+a.up()
 for size in range(5,60,2):
     a.stamp()
     a.forward(size)
