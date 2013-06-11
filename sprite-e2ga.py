@@ -40,6 +40,10 @@ for size in range(5,60,2):
     alice.stamp()
     alice.forward(size)
     alice.right(24)
+    # heading() is currently degrees, we want a vector.
+    # It's also a method and we want a mutable property.
     print alice.heading()
+    # position() looks like a tuple, we want a vector.
+    print alice.position()
 
 screen.exitonclick()
