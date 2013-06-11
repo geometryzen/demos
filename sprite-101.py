@@ -22,8 +22,8 @@ container.appendChild(canvas)
 screen = Screen()
 screen.bgcolor("black")
 
-alice = Sprite()
-alice.color("yellow")
+a = Sprite()
+a.color("yellow")
 shapes = [
     "arrow",
     "blank",
@@ -33,12 +33,12 @@ shapes = [
     "triangle",
     "turtle"
 ]
-alice.shape(shapes[2]) 
+a.shape(shapes[2]) 
 
-alice.penup()
+a.penup()
 for size in range(5,60,2):
-    alice.stamp()
-    alice.forward(size)
-    alice.right(24)
+    a.stamp()
+    a.forward(size)
+    a.right(24)
 
 screen.exitonclick()
