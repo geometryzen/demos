@@ -24,8 +24,8 @@ screen.bgcolor("black")
 
 alice = Sprite()
 alice.color("yellow")
-shapes = ["arrow", "blank", "circle", "turtle"]
-alice.shape(shapes[2]) 
+shapes = ["arrow", "blank", "circle", "classic", "turtle"]
+alice.shape(shapes[3]) 
 
 alice.penup()
 for size in range(5,60,2):
