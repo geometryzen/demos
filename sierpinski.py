@@ -10,7 +10,6 @@ if (canvas):
 # Create a new canvas, setting the attributes in three ways! 
 canvas = document.createElement("canvas", {"id": "canvas"})
 canvas.width = 400
-canvas.height = 300
 canvas.setAttribute("height", "300")
 
 # Append the canvas to the provided container (the content of the widget).
@@ -22,12 +21,12 @@ container.appendChild(canvas)
 def drawTriangle(points, color, sprite):
     sprite.fillcolor(color)
     sprite.up()
-    sprite.goto(points[0][0],points[0][1])
+    sprite.goto(points[0][0], points[0][1])
     sprite.down()
     sprite.begin_fill()
-    sprite.goto(points[1][0],points[1][1])
-    sprite.goto(points[2][0],points[2][1])
-    sprite.goto(points[0][0],points[0][1])
+    sprite.goto(points[1][0], points[1][1])
+    sprite.goto(points[2][0], points[2][1])
+    sprite.goto(points[0][0], points[0][1])
     sprite.end_fill()
 
 def getMid(p1,p2):
