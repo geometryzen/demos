@@ -20,16 +20,16 @@ def initCanvas():
 def drawTriangle(points, color, sprite):
     sprite.fillcolor = color
     sprite.up()
-    sprite.location = Vector2(points[0][0], points[0][1])
+    sprite.location = points[0]
     sprite.down()
     sprite.begin_fill()
-    sprite.location = Vector2(points[1][0], points[1][1])
-    sprite.location = Vector2(points[2][0], points[2][1])
-    sprite.location = Vector2(points[0][0], points[0][1])
+    sprite.location = points[1]
+    sprite.location = points[2]
+    sprite.location = points[0]
     sprite.end_fill()
 
 def getMid(p1,p2):
-    return ( (p1[0]+p2[0]) / 2, (p1[1] + p2[1]) / 2)
+    return 0.5 * (p1 + p2)
 
 def sierpinski(points, degree, sprite):
     colormap = ['blue','red','green','white','yellow',
