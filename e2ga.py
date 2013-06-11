@@ -18,17 +18,17 @@ print "str(ij): " + str(I)
 print "repr(ij): " + repr(I)
 
 print "one + i + j + I = " + str(one + i + j + I)
-
+print ""
 print "1 * 1 = " + str(one * one)
 print "1 * i = " + str(one * i)
 print "1 * j = " + str(one * j)
 print "1 * I = " + str(one * I)
-
+print ""
 print "i * 1 = " + str(i * one)
 print "i * i = " + str(i * i)
 print "i * j = " + str(i * j)
 print "i * I = " + str(i * I)
-
+print ""
 print "j * 1 = " + str(j * one)
 print "j * i = " + str(j * i)
 print "j * j = " + str(j * j)
