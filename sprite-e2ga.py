@@ -22,7 +22,7 @@ container.appendChild(canvas)
 screen = Screen()
 screen.bgcolor("black")
 
-a = Sprite()
+a = Sprite({"color": "yellow"})
 a.color = "yellow"
 shapes = [
     "arrow",
