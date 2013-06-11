@@ -22,18 +22,7 @@ container.appendChild(canvas)
 screen = Screen()
 screen.bgcolor("black")
 
-a = Sprite()
-a.color("yellow")
-shapes = [
-    "arrow",
-    "blank",
-    "circle",
-    "classic",
-    "square",
-    "triangle",
-    "turtle"
-]
-a.shape(shapes[2]) 
+a = Sprite({"color": "red", "shape": "turtle"})
 
 a.up()
 for size in range(5,60,2):
