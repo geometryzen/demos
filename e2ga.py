@@ -60,3 +60,24 @@ print "I ^ 1 = " + str(I ^ one)
 print "I ^ i = " + str(I ^ i)
 print "I ^ j = " + str(I ^ j)
 print "I ^ I = " + str(I ^ I)
+print ""
+print "Left Contraction"
+print "1 << 1 = " + str(one << one)
+print "1 << i = " + str(one << i)
+print "1 << j = " + str(one << j)
+print "1 << I = " + str(one << I)
+print ""
+print "i << 1 = " + str(i << one)
+print "i << i = " + str(i << i)
+print "i << j = " + str(i << j)
+print "i << I = " + str(i << I)
+print ""
+print "j << 1 = " + str(j << one)
+print "j << i = " + str(j << i)
+print "j << j = " + str(j << j)
+print "j << I = " + str(j << I)
+print ""
+print "I << 1 = " + str(I << one)
+print "I << i = " + str(I << i)
+print "I << j = " + str(I << j)
+print "I << I = " + str(I << I)
