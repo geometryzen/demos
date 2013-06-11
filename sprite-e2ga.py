@@ -45,5 +45,6 @@ for size in range(5,60,2):
     print alice.heading()
     # position() looks like a tuple, we want a vector.
     print alice.position()
+    print alice.location
 
 screen.exitonclick()
