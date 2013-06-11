@@ -24,8 +24,8 @@ def drawTriangle(points, color, sprite):
     sprite.down()
     sprite.begin_fill()
     sprite.location = Vector2(points[1][0], points[1][1])
-    sprite.goto(points[2][0], points[2][1])
-    sprite.goto(points[0][0], points[0][1])
+    sprite.location = Vector2(points[2][0], points[2][1])
+    sprite.location = Vector2(points[0][0], points[0][1])
     sprite.end_fill()
 
 def getMid(p1,p2):
