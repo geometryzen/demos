@@ -18,6 +18,7 @@ def initCanvas():
     container.appendChild(canvas)
 
 def drawTriangle(points, color, sprite):
+    
     sprite.fillcolor = color
     sprite.up()
     sprite.location = points[0]
@@ -29,9 +30,12 @@ def drawTriangle(points, color, sprite):
     sprite.end_fill()
 
 def sierpinski(points, degree, sprite):
+    
     colormap = ['blue','red','green','white','yellow',
                 'violet','orange']
+    
     drawTriangle(points, colormap[degree], sprite)
+    
     if degree > 0:
         sierpinski([points[0],
                         0.5 * (points[0] + points[1]),
