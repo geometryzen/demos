@@ -11,7 +11,7 @@ def initCanvas():
         canvas.parentNode.removeChild(canvas)
 
     canvas = document.createElement("canvas", {"id": "canvas"})
-    canvas.width = 400
+    canvas.width = 300
     canvas.height = 300
 
     container = document.getElementById("canvas-container")
