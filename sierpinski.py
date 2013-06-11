@@ -1,6 +1,6 @@
 # sierpinski.py by Brad Miller
-from sprite import *
 from browser import *
+from sprite import *
 
 # Make the sprite code happy - give it a canvas element.
 def initCanvas():
