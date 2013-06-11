@@ -24,7 +24,7 @@ screen.bgcolor("black")
 
 alice = Sprite()
 alice.color("yellow")
-shapes = ["arrow", "turtle"]
+shapes = ["arrow", "blank", "turtle"]
 alice.shape(shapes[1]) 
 
 alice.penup()
