@@ -53,7 +53,7 @@ def sierpinski(points,degree,myTurtle):
 
 def main():
     myTurtle = sprite.Sprite()
-    myWin = turtle.Screen()
+    myWin = sprite.Screen()
     myPoints = [[-100,-50],[0,100],[100,-50]]
     sierpinski(myPoints, 3, myTurtle)
     myWin.exitonclick()
