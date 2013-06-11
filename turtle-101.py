@@ -1,5 +1,5 @@
-# turtle.py
-from turtle import *
+# sprite-101.py
+from sprite import *
 from browser import *
 
 # Discard the old canvas if it exists. 
@@ -22,7 +22,7 @@ container.appendChild(canvas)
 screen = Screen()
 screen.bgcolor("black")
 
-alice = Turtle()
+alice = Sprite()
 alice.color("yellow")
 alice.shape("turtle")
 
