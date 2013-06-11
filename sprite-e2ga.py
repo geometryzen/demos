@@ -27,7 +27,7 @@ a = Sprite({"color": "orange", "shape": "turtle"})
 a.up()
 for size in range(5,60,2):
     a.stamp()
-    a.forward(size)
+    a.backward(size)
     a.left(24)
     # heading() is currently degrees, we want a vector.
     # It's also a method and we want a mutable property.
