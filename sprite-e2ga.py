@@ -28,7 +28,7 @@ a.up()
 for size in range(5,60,2):
     a.stamp()
     a.forward(size)
-    a.right(24)
+    a.left(24)
     # heading() is currently degrees, we want a vector.
     # It's also a method and we want a mutable property.
     #print a.heading()
