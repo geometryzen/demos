@@ -53,7 +53,7 @@ def main():
     initCanvas()
     sprite = Sprite()
     screen = Screen()
-    points = [Vextor2(-100, -50), Vector2(0, 100), Vector2(100,-50)]
+    points = [Vector2(-100, -50), Vector2(0, 100), Vector2(100,-50)]
     sierpinski(points, 3, sprite)
     screen.exitonclick()
 
