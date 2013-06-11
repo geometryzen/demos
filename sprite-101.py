@@ -33,7 +33,7 @@ shapes = [
     "triangle",
     "turtle"
 ]
-alice.shape(shapes[5]) 
+alice.shape(shapes[6]) 
 
 alice.penup()
 for size in range(5,60,2):
