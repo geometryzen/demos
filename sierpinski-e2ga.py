@@ -34,7 +34,7 @@ def getMid(p1,p2):
 def sierpinski(points, degree, sprite):
     colormap = ['blue','red','green','white','yellow',
                 'violet','orange']
-    drawTriangle(points,colormap[degree], sprite)
+    drawTriangle(points, colormap[degree], sprite)
     if degree > 0:
         sierpinski([points[0],
                         getMid(points[0], points[1]),
@@ -53,7 +53,7 @@ def main():
     initCanvas()
     sprite = Sprite()
     screen = Screen()
-    points = [[-100,-50],[0,100],[100,-50]]
+    points = [Vextor2(-100, -50), Vector2(0, 100), Vector2(100,-50)]
     sierpinski(points, 3, sprite)
     screen.exitonclick()
 
