@@ -37,8 +37,8 @@ def sierpinski(points, degree, sprite):
     drawTriangle(points, colormap[degree], sprite)
     if degree > 0:
         sierpinski([points[0],
-                        getMid(points[0], points[1]),
-                        getMid(points[0], points[2])],
+                        0.5 * (points[0] + points[1]),
+                        0.5 * (points[0] + points[2])],
                    degree-1, sprite)
         sierpinski([points[1],
                         getMid(points[0], points[1]),
