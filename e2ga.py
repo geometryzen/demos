@@ -16,3 +16,8 @@ print "repr(j): " + repr(j)
 ij = Pseudoscalar2(1)
 print "str(ij): " + str(ij)
 print "repr(ij): " + repr(ij)
+
+print "one + i + j + ij = " + str(one + i + j + ij)
+
+print "1 * 1 = " + str(one * one)
+print "1 * i = " + str(one * i)
