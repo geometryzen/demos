@@ -45,6 +45,6 @@ for size in range(5,60,2):
     #print a.heading()
     # position() looks like a tuple, we want a vector.
     #print a.position()
-    #print a.location
+    print a.location
 
 screen.exitonclick()
