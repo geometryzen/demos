@@ -29,9 +29,10 @@ shapes = [
     "blank",
     "circle",
     "classic",
+    "square",
     "turtle"
 ]
-alice.shape(shapes[3]) 
+alice.shape(shapes[4]) 
 
 alice.penup()
 for size in range(5,60,2):
