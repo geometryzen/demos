@@ -28,3 +28,8 @@ print "i * 1 = " + str(i * one)
 print "i * i = " + str(i * i)
 print "i * j = " + str(i * j)
 print "i * I = " + str(i * I)
+
+print "j * 1 = " + str(j * one)
+print "j * i = " + str(j * i)
+print "j * j = " + str(j * j)
+print "j * I = " + str(j * I)
