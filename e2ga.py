@@ -102,3 +102,6 @@ print "I >> 1 = " + str(I >> one)
 print "I >> i = " + str(I >> i)
 print "I >> j = " + str(I >> j)
 print "I >> I = " + str(I >> I)
+
+print "0.5 * (one + i + j + I) = " + str(0.5 * (one + i + j + I))
+
