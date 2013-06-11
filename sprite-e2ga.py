@@ -42,9 +42,9 @@ for size in range(5,60,2):
     a.right(24)
     # heading() is currently degrees, we want a vector.
     # It's also a method and we want a mutable property.
-    print a.heading()
+    #print a.heading()
     # position() looks like a tuple, we want a vector.
-    print a.position()
-    print a.location
+    #print a.position()
+    #print a.location
 
 screen.exitonclick()
