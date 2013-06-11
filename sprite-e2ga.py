@@ -23,7 +23,6 @@ screen = Screen()
 screen.bgcolor("black")
 
 a = Sprite({"color": "red", "shape": "turtle"})
-a.color = "yellow"
 
 a.up()
 for size in range(5,60,2):
