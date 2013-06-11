@@ -23,7 +23,7 @@ screen = Screen()
 screen.bgcolor("black")
 
 a = Sprite()
-a.color("yellow")
+a.color = "yellow"
 shapes = [
     "arrow",
     "blank",
