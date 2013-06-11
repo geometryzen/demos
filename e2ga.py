@@ -13,11 +13,18 @@ j = Vector2(0, 1)
 print "str(j): " + str(j)
 print "repr(j): " + repr(j)
 
-ij = Pseudoscalar2(1)
-print "str(ij): " + str(ij)
-print "repr(ij): " + repr(ij)
+I = Pseudoscalar2(1)
+print "str(ij): " + str(I)
+print "repr(ij): " + repr(I)
 
-print "one + i + j + ij = " + str(one + i + j + ij)
+print "one + i + j + I = " + str(one + i + j + I)
 
 print "1 * 1 = " + str(one * one)
 print "1 * i = " + str(one * i)
+print "1 * j = " + str(one * j)
+print "1 * I = " + str(one * I)
+
+print "i * 1 = " + str(i * one)
+print "i * i = " + str(i * i)
+print "i * j = " + str(i * j)
+print "i * I = " + str(i * I)
