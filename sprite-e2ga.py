@@ -33,7 +33,7 @@ shapes = [
     "triangle",
     "turtle"
 ]
-a.shape(shapes[6]) 
+a.shape = shapes[6] 
 
 a.up()
 for size in range(5,60,2):
