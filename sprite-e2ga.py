@@ -46,5 +46,6 @@ for size in range(5,60,2):
     # position() looks like a tuple, we want a vector.
     #print a.position()
     print a.location.x
+    print a.location.y
 
 screen.exitonclick()
