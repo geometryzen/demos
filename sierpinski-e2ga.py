@@ -20,8 +20,7 @@ def initCanvas():
 def drawTriangle(points, color, sprite):
     sprite.fillcolor = color
     sprite.up()
-    sprite.location.x = points[0][0]
-    sprite.location.y = points[0][1]
+    sprite.location = Vector2(points[0][0],points[0][1])
     sprite.down()
     sprite.begin_fill()
     sprite.goto(points[1][0], points[1][1])
