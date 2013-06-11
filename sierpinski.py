@@ -17,7 +17,7 @@ def initCanvas():
     container.appendChild(canvas)
 
 def drawTriangle(points, color, sprite):
-    sprite.fillcolor(color)
+    sprite.fillcolor = color
     sprite.up()
     sprite.goto(points[0][0], points[0][1])
     sprite.down()
