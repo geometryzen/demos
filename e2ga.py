@@ -33,3 +33,8 @@ print "j * 1 = " + str(j * one)
 print "j * i = " + str(j * i)
 print "j * j = " + str(j * j)
 print "j * I = " + str(j * I)
+print ""
+print "I * 1 = " + str(I * one)
+print "I * i = " + str(I * i)
+print "I * j = " + str(I * j)
+print "I * I = " + str(I * I)
