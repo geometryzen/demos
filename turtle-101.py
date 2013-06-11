@@ -24,7 +24,7 @@ screen.bgcolor("black")
 
 alice = Sprite()
 alice.color("yellow")
-alice.shape("turtle")
+alice.shape("circle")
 
 alice.penup()
 for size in range(5,60,2):
