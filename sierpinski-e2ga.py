@@ -28,9 +28,6 @@ def drawTriangle(points, color, sprite):
     sprite.location = points[0]
     sprite.end_fill()
 
-def getMid(p1,p2):
-    return 0.5 * (p1 + p2)
-
 def sierpinski(points, degree, sprite):
     colormap = ['blue','red','green','white','yellow',
                 'violet','orange']
@@ -41,12 +38,12 @@ def sierpinski(points, degree, sprite):
                         0.5 * (points[0] + points[2])],
                    degree-1, sprite)
         sierpinski([points[1],
-                        getMid(points[0], points[1]),
-                        getMid(points[1], points[2])],
+                        0.5 * (points[0] + points[1]),
+                        0.5 * (points[1] + points[2])],
                    degree-1, sprite)
         sierpinski([points[2],
-                        getMid(points[2], points[1]),
-                        getMid(points[0], points[2])],
+                        0.5 * (points[2] + points[1]),
+                        0.5 * (points[0] + points[2])],
                    degree-1, sprite)
 
 def main():
