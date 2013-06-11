@@ -4,3 +4,7 @@ from e2ga import *
 one = Scalar2(1)
 print "str(one): " + str(one)
 print "repr(one): " + repr(one)
+
+i = Vector2(1, 0)
+print "str(i): " + str(i)
+print "repr(i): " + repr(i)
