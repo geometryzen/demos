@@ -9,4 +9,6 @@ print range(-1)  # => []
 
 print range(-10) # => []
 
-print range(-2, 4, 1)
+print range(-2, 4, 1) # => [-2, -1, 0, 1, 2, 3]
+
+print range(-2, 4, 2) # => [-2, 0, 2]
