@@ -2,21 +2,19 @@
 from sprite import *
 from browser import *
 
-# Discard the old canvas if it exists. 
-canvas = document.getElementById("canvas")
-if (canvas):
-    canvas.parentNode.removeChild(canvas)
+# Make the sprite code happy - give it a canvas element.
+def initCanvas():
+    # Discard the old canvas if it exists. 
+    canvas = document.getElementById("canvas")
+    if (canvas):
+        canvas.parentNode.removeChild(canvas)
 
-# Create a new canvas, setting the attributes in three ways! 
-canvas = document.createElement("canvas", {"id": "canvas"})
-canvas.width = 400
-canvas.setAttribute("height", "300")
+    canvas = document.createElement("canvas", {"id": "canvas"})
+    canvas.width = 400
+    canvas.height = 300
 
-# Append the canvas to the provided container (the content of the widget).
-container = document.getElementById("canvas-container")
-container.appendChild(canvas)
-
-# The turtle code will be happy now that it now has a canvas element!
+    container = document.getElementById("canvas-container")
+    container.appendChild(canvas)
 
 def drawTriangle(points, color, sprite):
     sprite.fillcolor(color)
@@ -51,6 +49,7 @@ def sierpinski(points, degree, sprite):
                    degree-1, sprite)
 
 def main():
+    initCanvas()
     sprite = Sprite()
     screen = Screen()
     points = [[-100,-50],[0,100],[100,-50]]
