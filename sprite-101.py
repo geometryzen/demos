@@ -24,11 +24,12 @@ screen.bgcolor("black")
 
 alice = Sprite()
 alice.color("yellow")
-shapes = ["arrow",
-          "blank",
-          "circle",
-          "classic",
-          "turtle"
+shapes = [
+    "arrow",
+    "blank",
+    "circle",
+    "classic",
+    "turtle"
 ]
 alice.shape(shapes[3]) 
 
