@@ -19,6 +19,7 @@ print "repr(ij): " + repr(I)
 
 print "one + i + j + I = " + str(one + i + j + I)
 print ""
+print "Geometric Product"
 print "1 * 1 = " + str(one * one)
 print "1 * i = " + str(one * i)
 print "1 * j = " + str(one * j)
