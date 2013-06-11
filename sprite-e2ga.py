@@ -1,6 +1,7 @@
 # sprite-e2ga.py
-from sprite import *
 from browser import *
+from sprite import *
+from e2ga import *
 
 # Discard the old canvas if it exists. 
 canvas = document.getElementById("canvas")
