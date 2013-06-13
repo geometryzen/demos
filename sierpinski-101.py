@@ -10,8 +10,8 @@ def initCanvas():
         canvas.parentNode.removeChild(canvas)
 
     canvas = document.createElement("canvas", {"id": "canvas"})
-    canvas.width = 400
-    canvas.height = 300
+    canvas.width = 250
+    canvas.height = 250
 
     container = document.getElementById("canvas-container")
     container.appendChild(canvas)
