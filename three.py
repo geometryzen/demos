@@ -3,13 +3,10 @@ from ga import *
 # We will control the horizontal. We will control the vertical.
 from browser import *
 
-# Discard any old canvas if it exists. 
+# Discard the old canvas if it exists. 
 canvas = document.getElementById("canvas")
 if (canvas):
     canvas.parentNode.removeChild(canvas)
-
-container = document.createElement("div")
-document.body.appendChild(container)
 
 scene = Scene()
 
@@ -19,8 +16,8 @@ camera.position.z = 2
 
 renderer = WebGLRenderer()
 
-view = document.getElementById("view")
-view.parentNode.insertBefore(renderer.domElement, view)
+container = document.getElementById("canvas-container")
+container.appendChild(renderer.domElement)
 
 geometry = CubeGeometry(1, 1, 1)
 geometry = SphereGeometry(1.0, 32, 24)
@@ -62,7 +59,7 @@ def step(timestamp):
         render()
     else:
         window.cancelAnimationFrame(requestID)
-        view.parentNode.removeChild(renderer.domElement)
+        container.removeChild(renderer.domElement)
         # TODO: Remove the "resize" event listener
 
 window.addEventListener("resize", onWindowResize, False)
