@@ -30,7 +30,7 @@ sprites = [a, b, c, d]
 for s in sprites:
     s.up()
 
-a.position = Vector2(0,0)
+a.position = Vector2(-50, -50)
 b.position = Vector2( 50, -50)
 c.position = Vector2( 50,  50)
 d.position = Vector2(-50,  50)
