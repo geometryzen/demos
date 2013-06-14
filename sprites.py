@@ -10,7 +10,7 @@ if (canvas):
 
 canvas = document.createElement("canvas", {"id": "canvas"})
 canvas.width = 200
-canvas.height = 200
+canvas.height = 240
 
 # Append the canvas to the provided container (the content of the widget).
 container = document.getElementById("canvas-container")
