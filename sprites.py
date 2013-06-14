@@ -23,18 +23,17 @@ container.appendChild(canvas)
 screen = Screen()
 screen.bgcolor("black")
 
-a = Sprite({"color": "orange", "shape": "turtle"})
+a = Sprite({"color": "red"})
+b = Sprite({"color": "yello"})
+c = Sprite({"color": "green"})
+d = Sprite({"color": "blue"})
+sprites = [a, b, c, d]
 
 a.up()
 for size in range(5,60,2):
-    a.stamp()
-    a.forward(size)
-    a.left(24)
-    # heading() is currently degrees, we want a vector.
-    # It's also a method and we want a mutable property.
-    #print a.heading()
-    # position() looks like a tuple, we want a vector.
-    #print a.position()
-    #print a.location.x
+    for sprite in sprites
+        sprite.stamp()
+        sprite.forward(size)
+        sprite.right(24)
 
 screen.exitonclick()
