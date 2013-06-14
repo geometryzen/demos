@@ -4,8 +4,7 @@ from three import *
 from browser import *
 
 # Discard the old canvas if it exists. 
-canvas = document.getElementById("canvas")
-if (canvas):
+for canvas in document.getElementByTagName("canvas"):
     canvas.parentNode.removeChild(canvas)
 
 scene = Scene()
