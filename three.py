@@ -59,7 +59,7 @@ def step(timestamp):
         render()
     else:
         window.cancelAnimationFrame(requestID)
-        container.removeChild(renderer.domElement)
+        # container.removeChild(renderer.domElement)
         # TODO: Remove the "resize" event listener
 
 window.addEventListener("resize", onWindowResize, False)
