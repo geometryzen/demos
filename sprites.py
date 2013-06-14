@@ -27,19 +27,18 @@ c = Sprite({"color": "green"})
 d = Sprite({"color": "blue"})
 sprites = [a, b, c, d]
 
-a.up()
-b.up()
-c.up()
-d.up()
-a.location = Vector2(-50,-50)
+for s in sprites:
+    s.up()
+
+a.location = Vector2(0,0)
 b.location = Vector2( 50, -50)
 c.location = Vector2( 50,  50)
 d.location = Vector2(-50,  50)
 
-for size in range(1,10,1):
+for size in range(1,20,1):
     for s in sprites:
         s.stamp()
         s.forward(10)
-        s.right(5)
+        s.right(18)
 
 screen.exitonclick()
