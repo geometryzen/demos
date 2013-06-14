@@ -30,10 +30,10 @@ d = Sprite({"color": "blue"})
 sprites = [a, b, c, d]
 
 a.up()
-a.position = Vector2(-50,-50)
-b.position = Vector2( 50, -50)
-c.position = Vector2( 50,  50)
-d.position = Vector2(-50,  50)
+a.location = Vector2(-50,-50)
+b.location = Vector2( 50, -50)
+c.location = Vector2( 50,  50)
+d.location = Vector2(-50,  50)
 
 for size in range(5,60,2):
     for s in sprites:
