@@ -31,7 +31,7 @@ sprites = [a, b, c, d]
 
 a.up()
 for size in range(5,60,2):
-    for s in sprites
+    for s in sprites:
         s.stamp()
         s.forward(size)
         s.right(24)
