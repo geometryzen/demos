@@ -1,6 +1,7 @@
-# sprite-101.py
-from sprite import *
+# sprites.py
 from browser import *
+from sprite import *
+from e2ga import *
 
 # Discard the old canvas if it exists. 
 canvas = document.getElementById("canvas")
@@ -28,6 +29,12 @@ a.up()
 for size in range(5,60,2):
     a.stamp()
     a.forward(size)
-    a.right(24)
+    a.left(24)
+    # heading() is currently degrees, we want a vector.
+    # It's also a method and we want a mutable property.
+    #print a.heading()
+    # position() looks like a tuple, we want a vector.
+    #print a.position()
+    #print a.location.x
 
 screen.exitonclick()
