@@ -24,12 +24,15 @@ screen = Screen()
 screen.bgcolor("black")
 
 a = Sprite({"color": "red"})
-b = Sprite({"color": "yello"})
+b = Sprite({"color": "yellow"})
 c = Sprite({"color": "green"})
 d = Sprite({"color": "blue"})
 sprites = [a, b, c, d]
 
 a.up()
+b.up()
+c.up()
+d.up()
 a.location = Vector2(-50,-50)
 b.location = Vector2( 50, -50)
 c.location = Vector2( 50,  50)
