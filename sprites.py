@@ -31,9 +31,9 @@ sprites = [a, b, c, d]
 
 a.up()
 for size in range(5,60,2):
-    for sprite in sprites
-        sprite.stamp()
-        sprite.forward(size)
-        sprite.right(24)
+    for s in sprites
+        s.stamp()
+        s.forward(size)
+        s.right(24)
 
 screen.exitonclick()
