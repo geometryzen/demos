@@ -22,12 +22,12 @@ def drawTriangle(points, color, sprite):
     
     sprite.fillcolor = color
     sprite.up()
-    sprite.location = points[0]
+    sprite.position = points[0]
     sprite.down()
     sprite.begin_fill()
-    sprite.location = points[1]
-    sprite.location = points[2]
-    sprite.location = points[0]
+    sprite.position = points[1]
+    sprite.position = points[2]
+    sprite.position = points[0]
     sprite.end_fill()
 
 def sierpinski(points, degree, sprite):
