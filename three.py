@@ -1,5 +1,5 @@
 # three.py
-from ga import *
+from three import *
 # We will control the horizontal. We will control the vertical.
 from browser import *
 
