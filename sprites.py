@@ -36,10 +36,10 @@ b.location = Vector2( 50, -50)
 c.location = Vector2( 50,  50)
 d.location = Vector2(-50,  50)
 
-for size in range(5,60,2):
+for size in range(1,10,1):
     for s in sprites:
         s.stamp()
-        s.forward(size)
-        s.right(24)
+        s.forward(10)
+        s.right(5)
 
 screen.exitonclick()
