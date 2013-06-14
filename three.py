@@ -38,10 +38,8 @@ def render():
     renderer.render(scene, camera)
 
 def onWindowResize():
-    # TODO: width / height => window.innerSize.aspectRatio
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
-    # TODO: renderer.size = window.innerSize
     renderer.size = (window.innerWidth, window.innerHeight)
     
 def step(timestamp):
