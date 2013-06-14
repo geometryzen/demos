@@ -8,11 +8,9 @@ canvas = document.getElementById("canvas")
 if (canvas):
     canvas.parentNode.removeChild(canvas)
 
-# Create a new canvas, setting the attributes in three ways! 
 canvas = document.createElement("canvas", {"id": "canvas"})
 canvas.width = 200
 canvas.height = 200
-canvas.setAttribute("height", "300")
 
 # Append the canvas to the provided container (the content of the widget).
 container = document.getElementById("canvas-container")
