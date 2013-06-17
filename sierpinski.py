@@ -50,12 +50,14 @@ def sierpinski(points, degree, sprite):
                         0.5 * (points[2] + points[1]),
                         0.5 * (points[0] + points[2])],
                    degree-1, sprite)
+def Vector(x, y):
+    return Euclidean2(0, x, y, 0)
 
 def main():
     initCanvas()
     sprite = Sprite()
     screen = Screen()
-    points = [Vector2(-100, -50), Vector2(0, 100), Vector2(100,-50)]
+    points = [Vector(-100, -50), Vector(0, 100), Vector(100,-50)]
     sierpinski(points, 3, sprite)
     screen.exitonclick()
 
