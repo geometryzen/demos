@@ -26,9 +26,16 @@ i    = explain(Vector(1, 0))
 j    = explain(Vector(0, 1))
 I    = explain(Pseudoscalar(1))
 
+blades = [one, i, j, I]
+
 showValue("one + i + j + I = ", one + i + j + I)
 print ""
 print "Geometric Product"
+for a in blades:
+    print ""
+    for b in blades:
+        showValue(str(a) + " * " + str(b), a * b)
+
 print "1 * 1 = " + str(one * one)
 print "1 * i = " + str(one * i)
 print "1 * j = " + str(one * j)
