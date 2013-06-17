@@ -52,8 +52,8 @@ showValue("zero - sum", zero - sum)
 # Skulpt bug? It commutes the arguments!
 # showValue("0 - sum", 0 - sum)
 print ""
-print "Geometric Product Table"
-print "======================="
+print "Geometric Product Table *"
+print "========================="
 for a in blades:
     for b in blades:
         showValue(str(a) + " * " + str(b), a * b)
