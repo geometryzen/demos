@@ -1,4 +1,5 @@
 # e2ga-demo.py
+# Demonstration of Euclidean 2D Geometric Algebra.
 from blade import *
 
 # Convenience functions for creating Blades.
