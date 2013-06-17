@@ -41,6 +41,8 @@ blades = [one, e1, e2, e3, e12, e23, e31, I]
 sum = showValue("sum", one + e1 + e2 + e3 + e12 + e23 + e31 + I)
 
 # grade extraction is performed using Python's indexing operator [].
+print ""
+print "Grade extraction operator []"
 for grade in range(0, 4):
     showValue("sum[" + str(grade) + "]", sum[grade])
 
