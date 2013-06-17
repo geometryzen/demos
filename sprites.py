@@ -33,10 +33,10 @@ sprites = [a, b, c, d]
 for s in sprites:
     s.up()
 
-a.position = Vector2(-50, -50)
-b.position = Vector2( 50, -50)
-c.position = Vector2( 50,  50)
-d.position = Vector2(-50,  50)
+a.position = Vector(-50, -50)
+b.position = Vector( 50, -50)
+c.position = Vector( 50,  50)
+d.position = Vector(-50,  50)
 
 for size in range(1,20,1):
     for s in sprites:
