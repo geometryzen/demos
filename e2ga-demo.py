@@ -30,13 +30,28 @@ blades = [one, i, j, I]
 
 showValue("one + i + j + I = ", one + i + j + I)
 print ""
-print "Geometric, Exterior, Left and Right Contraction Products"
+print "Geometric Product"
 for a in blades:
     print ""
     for b in blades:
         showValue(str(a) + " * " + str(b), a * b)
+        
+print "Exterior Product"
+for a in blades:
+    print ""
+    for b in blades:
         showValue(str(a) + " ^ " + str(b), a ^ b)
+        
+print "Left Contraction"
+for a in blades:
+    print ""
+    for b in blades:
         showValue(str(a) + " << " + str(b), a << b)
+        
+print "Right Contraction"
+for a in blades:
+    print ""
+    for b in blades:
         showValue(str(a) + " >> " + str(b), a >> b)
         
 print ""
