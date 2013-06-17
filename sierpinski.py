@@ -2,7 +2,7 @@
 # Original program by Brad Miller.
 from browser import *
 from sprite import *
-from e2ga import *
+from blade import *
 
 # Make the sprite code happy - give it a canvas element.
 def initCanvas():
