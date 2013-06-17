@@ -53,8 +53,9 @@ showValue("zero - sum", zero - sum)
 # showValue("0 - sum", 0 - sum)
 print ""
 print "Geometric Product Table"
+print "======================="
 for a in blades:
-    print ""
     for b in blades:
         showValue(str(a) + " * " + str(b), a * b)
+    print ""
 
