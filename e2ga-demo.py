@@ -37,6 +37,7 @@ for a in blades:
         showValue(str(a) + " * " + str(b), a * b)
         showValue(str(a) + " ^ " + str(b), a ^ b)
         showValue(str(a) + " << " + str(b), a << b)
+        showValue(str(a) + " >> " + str(b), a >> b)
 
         print "Exterior Product"
 print "1 ^ 1 = " + str(one ^ one)
