@@ -3,6 +3,9 @@ from browser import *
 from sprite import *
 from blade import *
 
+def Vector(x, y):
+    return Euclidean2(0, x, y, 0)
+
 # Discard the old canvas if it exists. 
 canvas = document.getElementById("canvas")
 if (canvas):
