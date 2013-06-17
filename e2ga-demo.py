@@ -19,14 +19,9 @@ def showValue(name, m):
     print name + " => " + str(m)
     return m
 
-one = explain(Scalar(1))
-print "str(one): " + str(one)
-print "repr(one): " + repr(one)
-
-i = Vector(1, 0)
-print "str(i): " + str(i)
-print "repr(i): " + repr(i)
-
+zero = explain(Euclidean2(0,0,0,0))
+one  = explain(Scalar(1))
+i    = explain(Vector(1, 0))
 j = Vector(0, 1)
 print "str(j): " + str(j)
 print "repr(j): " + repr(j)
