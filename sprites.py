@@ -1,7 +1,7 @@
 # sprites.py
 from browser import *
 from sprite import *
-from e2ga import *
+from blade import *
 
 # Discard the old canvas if it exists. 
 canvas = document.getElementById("canvas")
