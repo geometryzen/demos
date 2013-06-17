@@ -48,7 +48,8 @@ for grade in range(0, 4):
 showValue("zero - sum", zero - sum)
 # Skulpt bug? It commutes the arguments!
 # showValue("0 - sum", 0 - sum)
-
+print ""
+print "Geometric Product Table"
 for a in blades:
     print ""
     for b in blades:
