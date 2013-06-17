@@ -11,7 +11,15 @@ def Vector(x, y):
 def Pseudoscalar(s):
     return Euclidean2(0, 0, 0, s)
 
-one = Scalar(1)
+def explain(m):
+    print str(m) + " is " + repr(m)
+    return m
+
+def showValue(name, m):
+    print name + " => " + str(m)
+    return m
+
+one = explain(Scalar(1))
 print "str(one): " + str(one)
 print "repr(one): " + repr(one)
 
