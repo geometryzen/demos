@@ -22,15 +22,10 @@ def showValue(name, m):
 zero = explain(Euclidean2(0,0,0,0))
 one  = explain(Scalar(1))
 i    = explain(Vector(1, 0))
-j = Vector(0, 1)
-print "str(j): " + str(j)
-print "repr(j): " + repr(j)
+j    = explain(Vector(0, 1))
+I    = explain(Pseudoscalar(1))
 
-I = Pseudoscalar(1)
-print "str(ij): " + str(I)
-print "repr(ij): " + repr(I)
-
-print "one + i + j + I = " + str(one + i + j + I)
+showValue("one + i + j + I = ", one + i + j + I)
 print ""
 print "Geometric Product"
 print "1 * 1 = " + str(one * one)
