@@ -1,4 +1,5 @@
 # e3ga-demo.py
+# Demonstration of Euclidean 3D Geometric Algebra.
 from blade import *
 
 def Scalar(w):
