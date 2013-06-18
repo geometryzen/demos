@@ -22,7 +22,7 @@ container.appendChild(renderer.domElement)
 # SphereGeometry
 radius = 40
 widthSegments = 8
-heightSegments = 6
+# heightSegments = 6
 heightSegments = None
 phiStart = 0
 # phiLength = 2 * pi
