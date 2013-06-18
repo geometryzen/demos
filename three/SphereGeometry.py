@@ -11,7 +11,7 @@ scene = Scene()
 
 # Aspect ratio will be reset in onWindowResize
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-camera.position.z = 2
+camera.position.z = 100
 
 renderer = WebGLRenderer()
 
