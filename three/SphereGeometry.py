@@ -23,6 +23,7 @@ container.appendChild(renderer.domElement)
 radius = 40
 widthSegments = 8
 heightSegments = 6
+heightSegments = None
 phiStart = 0
 # phiLength = 2 * pi
 phiLength = None
