@@ -35,7 +35,13 @@ sphere = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLeng
 
 print str(sphere)
 print repr(sphere)
-print "radius: " + repr(sphere.radius)
+print "radius:         " + repr(sphere.radius)
+print "widthSegments:  " + repr(sphere.widthSegments)
+print "heightSegments: " + repr(sphere.heightSegments)
+print "phiStart:       " + repr(sphere.phiStart)
+print "phiLength:      " + repr(sphere.phiLength)
+print "thetaStart:     " + repr(sphere.thetaStart)
+print "thetaLength:    " + repr(sphere.thetaLength)
 
 mesh = Mesh(sphere, MeshNormalMaterial())
 scene.add(mesh)
