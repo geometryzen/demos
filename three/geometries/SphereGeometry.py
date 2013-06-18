@@ -33,7 +33,6 @@ thetaLength = pi
 # phi is the angle measured in the equatorial plane, in radians.
 sphere = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
 
-print str(sphere)
 print repr(sphere)
 print "radius:         " + str(sphere.radius)
 print "widthSegments:  " + str(sphere.widthSegments)
@@ -42,6 +41,7 @@ print "phiStart:       " + str(sphere.phiStart)
 print "phiLength:      " + str(sphere.phiLength)
 print "thetaStart:     " + str(sphere.thetaStart)
 print "thetaLength:    " + str(sphere.thetaLength)
+print sphere
 
 mesh = Mesh(sphere, MeshNormalMaterial())
 scene.add(mesh)
