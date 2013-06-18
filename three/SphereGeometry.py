@@ -35,7 +35,7 @@ sphere = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLeng
 
 print str(sphere)
 print repr(sphere)
-print "radius: " + str(sphere.radius)
+print "radius: " + repr(sphere.radius)
 
 mesh = Mesh(sphere, MeshNormalMaterial())
 scene.add(mesh)
