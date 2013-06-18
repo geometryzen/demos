@@ -29,7 +29,7 @@ phiLength = 2 * pi
 thetaStart = 0
 thetaLength = pi
 # All arguments are optional.
-geometry = SphereGeometry()
+geometry = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
 
 print str(geometry)
 print repr(geometry)
