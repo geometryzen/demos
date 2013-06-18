@@ -20,20 +20,14 @@ container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
 # SphereGeometry
-# radius = 40
-radius = None
-# widthSegments = 8
-widthSegments = None
-# heightSegments = 6
-heightSegments = None
+radius = 40
+widthSegments = 8
+heightSegments = 6
 phiStart = 0
-# phiLength = 2 * pi
-phiLength = None
-# thetaStart = 0
-thetaStart = None
-# thetaLength = pi
-thetaLength = None
-geometry = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
+phiLength = 2 * pi
+thetaStart = 0
+thetaLength = pi
+geometry = SphereGeometry()
 
 print str(geometry)
 print repr(geometry)
