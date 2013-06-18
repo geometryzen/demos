@@ -20,8 +20,9 @@ container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
 # SphereGeometry
-radius = 40
-widthSegments = 8
+# radius = 40
+radius = None
+# widthSegments = 8
 # heightSegments = 6
 heightSegments = None
 phiStart = 0
