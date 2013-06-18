@@ -21,8 +21,8 @@ container.appendChild(renderer.domElement)
 
 # SphereGeometry(...)
 # The arguments and their default values, in order, are...
-radius = 50
-widthSegments = 8
+radius = 50 # The radius of the sphere
+widthSegments = 16 
 heightSegments = 6
 phiStart = 0
 phiLength = 2 * pi
