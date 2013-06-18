@@ -19,8 +19,6 @@ renderer = WebGLRenderer()
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-print pi
-
 # SphereGeometry
 radius = 40
 widthSegments = 8
