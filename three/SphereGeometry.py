@@ -26,7 +26,7 @@ widthSegments = 8 # The number of segments in the phi coordinate (min 3)
 heightSegments = 6 # The number of segments in the theta coordinate (min 2)
 phiStart = 0
 phiLength = 2 * pi
-thetaStart = 0
+thetaStart = 0.5 * pi
 thetaLength = pi
 # All arguments are optional.
 geometry = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
@@ -39,7 +39,7 @@ scene.add(mesh)
 
 requestID = None
 progress = None
-progressEnd = 2000
+progressEnd = 6000
 startTime =  None
 
 def render():
