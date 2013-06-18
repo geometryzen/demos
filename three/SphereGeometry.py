@@ -29,6 +29,8 @@ phiLength = 2 * pi
 thetaStart = 0.5 * pi
 thetaLength = pi
 # All arguments are optional.
+# theta is the angle measured from the north pole, in radians
+# phi is the angle measured in the equatorial plane, in radians.
 geometry = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
 
 print str(geometry)
