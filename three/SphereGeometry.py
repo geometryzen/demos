@@ -28,11 +28,13 @@ thetaStart = 0
 thetaLength = 3.14159
 geometry = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
 mesh = Mesh(geometry, MeshNormalMaterial())
+print str(mesh)
+print repr(mesh)
 scene.add(mesh)
 
 requestID = None
 progress = None
-progressEnd = 10000 # run for 10 seconds
+progressEnd = 2000
 startTime =  None
 
 def render():
