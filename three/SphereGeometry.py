@@ -27,9 +27,12 @@ phiLength = 3.14149 * 2
 thetaStart = 0
 thetaLength = 3.14159
 geometry = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
+
+print str(geometry)
+print repr(geometry)
+
+
 mesh = Mesh(geometry, MeshNormalMaterial())
-print str(mesh)
-print repr(mesh)
 scene.add(mesh)
 
 requestID = None
