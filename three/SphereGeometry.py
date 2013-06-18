@@ -31,7 +31,6 @@ geometry = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLe
 print str(geometry)
 print repr(geometry)
 
-
 mesh = Mesh(geometry, MeshNormalMaterial())
 scene.add(mesh)
 
