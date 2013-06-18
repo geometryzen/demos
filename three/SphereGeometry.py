@@ -24,7 +24,7 @@ container.appendChild(renderer.domElement)
 radius = 50 # The radius of the sphere
 widthSegments = 8 # The number of segments in the phi coordinate (min 3)
 heightSegments = 6 # The number of segments in the theta coordinate (min 2)
-phiStart = 0.5 * pi
+phiStart = 0
 phiLength = pi
 thetaStart = 0
 thetaLength = pi
