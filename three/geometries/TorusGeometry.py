@@ -19,14 +19,12 @@ renderer = WebGLRenderer()
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-# TorusGeometry(...)
-# The arguments and their default values, in order, are...
-radius = 50 # The radius of the sphere
-tube
-radialSegments = 8 # The number of segments in the phi coordinate (min 3)
-tubularSegments = 6 # The number of segments in the theta coordinate (min 2)
-arc = 0
-# All arguments are optional.
+radius = 100
+tube = 40
+radialSegments = 8
+tubularSegments = 6
+arc = 2 * pi
+
 torus = TorusGeometry(radius, tube, radialSegments, tubularSegments, arc)
 
 print repr(torus)
