@@ -30,8 +30,8 @@ thetaStart = 0
 thetaLength = pi
 geometry = SphereGeometry()
 
-#print str(geometry)
-#print repr(geometry)
+print str(geometry)
+print repr(geometry)
 
 mesh = Mesh(geometry, MeshNormalMaterial())
 scene.add(mesh)
