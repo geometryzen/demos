@@ -48,6 +48,8 @@ for grade in range(0, 4):
     showValue("sum[" + str(grade) + "]", sum[grade])
 
 # subtraction uses the - operator, as you would expect.
+showValue("zero + sum", zero + sum)
+showValue("0    + sum", 0 + sum)
 showValue("zero - sum", zero - sum)
 showValue("0    - sum", 0 - sum)
 print ""
