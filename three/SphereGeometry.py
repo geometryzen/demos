@@ -20,7 +20,7 @@ container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
 # SphereGeometry(...)
-# The arguments adn their default values, in order, are...
+# The arguments and their default values, in order, are...
 radius = 40
 widthSegments = 8
 heightSegments = 6
@@ -28,6 +28,7 @@ phiStart = 0
 phiLength = 2 * pi
 thetaStart = 0
 thetaLength = pi
+# All arguments are optional.
 geometry = SphereGeometry()
 
 print str(geometry)
