@@ -24,9 +24,9 @@ container.appendChild(renderer.domElement)
 radius = 50 # The radius of the sphere
 widthSegments = 8 # The number of segments in the phi coordinate (min 3)
 heightSegments = 6 # The number of segments in the theta coordinate (min 2)
-phiStart = 0
+phiStart = 0.1
 phiLength = 2 * pi
-thetaStart = 0
+thetaStart = 0.2
 thetaLength = pi
 # All arguments are optional.
 # theta is the angle measured from the north pole, in radians
