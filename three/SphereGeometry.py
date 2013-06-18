@@ -19,7 +19,8 @@ renderer = WebGLRenderer()
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-# SphereGeometry
+# SphereGeometry(...)
+# The arguments adn their default values, in order, are...
 radius = 40
 widthSegments = 8
 heightSegments = 6
