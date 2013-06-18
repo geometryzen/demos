@@ -49,8 +49,7 @@ for grade in range(0, 4):
 
 # subtraction uses the - operator, as you would expect.
 showValue("zero - sum", zero - sum)
-# Skulpt bug? It commutes the arguments!
-showValue("0 - sum", 0 - sum)
+showValue("0    - sum", 0 - sum)
 print ""
 print "Geometric Product Table *"
 print "========================="
