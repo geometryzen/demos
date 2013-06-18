@@ -54,6 +54,8 @@ showValue("zero - sum", zero - sum)
 showValue("0    - sum", 0 - sum)
 showValue("one  * sum", one * sum)
 showValue("1    * sum", 1 * sum)
+showValue("one  ^ sum", one ^ sum)
+showValue("1    ^ sum", 1 ^ sum)
 print ""
 print "Geometric Product Table *"
 print "========================="
