@@ -2,6 +2,7 @@
 from three import *
 # We will control the horizontal. We will control the vertical.
 from browser import *
+fom math import pi
 
 # Discard the old canvas if it exists. 
 for canvas in document.getElementsByTagName("canvas"):
@@ -17,6 +18,8 @@ renderer = WebGLRenderer()
 
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
+
+print pi
 
 # SphereGeometry
 radius = 40
