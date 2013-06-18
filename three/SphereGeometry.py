@@ -35,8 +35,8 @@ sphere = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLeng
 
 print str(sphere)
 print repr(sphere)
-print "radius:         " + repr(sphere.radius)
-print "widthSegments:  " + repr(sphere.widthSegments)
+print "radius:         " + str(sphere.radius)
+print "widthSegments:  " + str(sphere.widthSegments)
 print "heightSegments: " + repr(sphere.heightSegments)
 print "phiStart:       " + repr(sphere.phiStart)
 print "phiLength:      " + repr(sphere.phiLength)
