@@ -21,7 +21,7 @@ container.appendChild(renderer.domElement)
 
 # SphereGeometry(...)
 # The arguments and their default values, in order, are...
-radius = 40
+radius = 50
 widthSegments = 8
 heightSegments = 6
 phiStart = 0
