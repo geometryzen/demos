@@ -25,9 +25,10 @@ widthSegments = 8
 heightSegments = 6
 phiStart = 0
 phiLength = 2 * pi
-thetaStart = 0
-thetaLength = pi
-#thetaLength = None
+#thetaStart = 0
+thetaStart = None
+#thetaLength = pi
+thetaLength = None
 geometry = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
 
 print str(geometry)
