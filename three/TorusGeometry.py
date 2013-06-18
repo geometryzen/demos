@@ -25,7 +25,8 @@ container.appendChild(renderer.domElement)
 # @param radialSegments=8
 # @param tubularSegments=6
 # @param arc=Math.PI * 2
-mesh = Mesh(TorusGeometry(1), MeshNormalMaterial())
+geometry = TorusGeometry(100, 40, 8, 6, 3.14159 * 2)
+mesh = Mesh(geometry, MeshNormalMaterial())
 scene.add(mesh)
 
 requestID = None
