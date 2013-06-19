@@ -31,7 +31,7 @@ print repr(cube)
 print "width:          " + str(cube.width)
 print "height:         " + str(cube.height)
 print "depth:          " + str(cube.depth)
-print "widthSegments:  " + str(cube.radiusSegments)
+print "widthSegments:  " + str(cube.widthSegments)
 print "heightSegments: " + str(cube.heightSegments)
 print "depthSegments:  " + str(cube.depthSegments)
 print cube
