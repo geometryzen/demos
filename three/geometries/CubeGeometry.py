@@ -12,19 +12,19 @@ scene = Scene()
 
 # Aspect ratio will be reset in onWindowResize
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-camera.position.z = 100
+camera.position.z = 5
 
 renderer = WebGLRenderer()
 
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-width = 20
-height = 20
-depth = 100
-widthSegments = 8
+width = 1
+height = 1
+depth = 1
+widthSegments = 1
 heightSegments = 1
-depthSegments = 
+depthSegments = 1
 cube = CubeGeometry(width, height, depth, widthSegments, heightSegments, depthSegments)
 
 print repr(cube)
