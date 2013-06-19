@@ -12,15 +12,15 @@ scene = Scene()
 
 # Aspect ratio will be reset in onWindowResize
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-camera.position.z = 100
+camera.position.z = 150
 
 renderer = WebGLRenderer()
 
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-radius = 100.0
-tube = 40.0
+radius = 100
+tube = 40
 radialSegments = 8
 tubularSegments = 6
 arc = 2 * pi
