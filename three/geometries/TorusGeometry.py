@@ -23,7 +23,7 @@ radius = 100
 tube = 40
 radialSegments = 32
 tubularSegments = 24
-arc = 1.5 * pi
+arc = 2.0 * pi
 
 torus = TorusGeometry(radius, tube, radialSegments, tubularSegments, arc)
 
