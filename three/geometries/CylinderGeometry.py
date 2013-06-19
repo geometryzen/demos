@@ -22,7 +22,7 @@ container.appendChild(renderer.domElement)
 radiusTop = 20
 radiusBottom = 20
 height = 100
-radiusSegments = 8
+radiusSegments = 32
 heightSegments = 1
 openEnded = False
 cylinder = CylinderGeometry(radiusTop, radiusBottom, height, radiusSegments, heightSegments, openEnded)
