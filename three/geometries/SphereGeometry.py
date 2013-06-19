@@ -20,8 +20,8 @@ container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
 radius = 50
-widthSegments = 8
-heightSegments = 6
+widthSegments = 16
+heightSegments = 12
 phiStart = 0
 phiLength = 2 * pi
 thetaStart = 0
