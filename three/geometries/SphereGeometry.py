@@ -1,4 +1,4 @@
-# SphereGeometry.py
+# SphereGeometry demonstration.
 from three import *
 # We will control the horizontal. We will control the vertical.
 from browser import *
@@ -19,18 +19,13 @@ renderer = WebGLRenderer()
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-# SphereGeometry(...)
-# The arguments and their default values, in order, are...
-radius = 50 # The radius of the sphere
-widthSegments = 8 # The number of segments in the phi coordinate (min 3)
-heightSegments = 6 # The number of segments in the theta coordinate (min 2)
+radius = 50
+widthSegments = 8
+heightSegments = 6
 phiStart = 0
 phiLength = 2 * pi
 thetaStart = 0
 thetaLength = pi
-# All arguments are optional.
-# theta is the angle measured from the north pole, in radians
-# phi is the angle measured in the equatorial plane, in radians.
 sphere = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
 
 print repr(sphere)
