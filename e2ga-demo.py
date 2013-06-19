@@ -54,4 +54,4 @@ for a in blades:
     for b in blades:
         showValue(str(a) + " >> " + str(b), a >> b)
 print ""
-print "0.5 * (one + i - j - I) = " + str(0.5 * (one - i + j - I))
+print "0.5 * (one - i - j + I) = " + str(0.5 * (one - i - j + I))
