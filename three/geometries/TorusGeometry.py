@@ -21,7 +21,7 @@ container.appendChild(renderer.domElement)
 
 radius = 100
 tube = 40
-radialSegments = 8
+radialSegments = 16
 tubularSegments = 6
 arc = 2 * pi
 
