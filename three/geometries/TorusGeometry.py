@@ -21,8 +21,8 @@ container.appendChild(renderer.domElement)
 
 radius = 100
 tube = 40
-radialSegments = 8
-tubularSegments = 6
+radialSegments = 32
+tubularSegments = 24
 arc = 2.0 * pi
 
 torus = TorusGeometry(radius, tube, radialSegments, tubularSegments, arc)
