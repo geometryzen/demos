@@ -24,14 +24,15 @@ container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
 material = MeshNormalMaterial()
-mesh = Mesh(SphereGeometry(50, 32, 24), material)
 
-print repr(mesh)
+print repr(material)
 #print "autoClear:         " + str(renderer.autoClear)
 #print "gammaInput:        " + str(renderer.gammaInput)
 #print "gammaOutput:       " + str(renderer.gammaOutput)
 #print "getClearColor():   " + str(renderer.getClearColor())
-print str(mesh)
+print str(material)
+
+mesh = Mesh(SphereGeometry(50, 32, 24), material)
 
 scene.add(mesh)
 
