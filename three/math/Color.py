@@ -8,6 +8,14 @@ print "r: " + str(color.r)
 print "g: " + str(color.g)
 print "b: " + str(color.b)
 print color
+color.r = 0.1
+color.g = 0.2
+color.b = 0.3
+print repr(color)
+print "r: " + str(color.r)
+print "g: " + str(color.g)
+print "b: " + str(color.b)
+print color
 
 red = Color(0xFF0000)
 print repr(red)
