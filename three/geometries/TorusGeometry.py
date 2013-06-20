@@ -15,6 +15,7 @@ camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 200
 
 renderer = WebGLRenderer()
+renderer.setClearColor(Color(0x000000), 1.0)
 
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
