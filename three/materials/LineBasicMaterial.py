@@ -27,6 +27,7 @@ material = LineBasicMaterial()
 
 print repr(material)
 print "color:              " + str(material.color)
+print "opacity:            " + str(material.opacity)
 #print "gammaInput:        " + str(renderer.gammaInput)
 #print "gammaOutput:       " + str(renderer.gammaOutput)
 #print "getClearColor():   " + str(renderer.getClearColor())
@@ -38,7 +39,7 @@ scene.add(mesh)
 
 requestID = None
 progress = None
-progressEnd = 6000
+progressEnd = 2000
 startTime =  None
 
 def render():
