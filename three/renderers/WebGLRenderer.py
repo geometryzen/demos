@@ -15,8 +15,9 @@ camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 100
 
 renderer = WebGLRenderer()
-renderer.autoClear = True
-renderer.gammaInput = True
+renderer.autoClear   = True
+renderer.gammaInput  = True
+renderer.gammaOutput = True
 
 print repr(renderer)
 print "autoClear:         " + str(renderer.autoClear)
