@@ -27,14 +27,7 @@ print renderer
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-radius = 50
-widthSegments = 32
-heightSegments = 24
-phiStart = 0
-phiLength = 2 * pi
-thetaStart = 0
-thetaLength = pi
-sphere = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
+sphere = SphereGeometry(50)
 
 mesh = Mesh(sphere, MeshNormalMaterial())
 scene.add(mesh)
