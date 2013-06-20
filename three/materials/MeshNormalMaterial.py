@@ -26,6 +26,14 @@ container.appendChild(renderer.domElement)
 sphere = SphereGeometry(50, 32, 24)
 
 mesh = Mesh(sphere, MeshNormalMaterial())
+
+print repr(mesh)
+#print "autoClear:         " + str(renderer.autoClear)
+#print "gammaInput:        " + str(renderer.gammaInput)
+#print "gammaOutput:       " + str(renderer.gammaOutput)
+#print "getClearColor():   " + str(renderer.getClearColor())
+print str(mesh)
+
 scene.add(mesh)
 
 requestID = None
