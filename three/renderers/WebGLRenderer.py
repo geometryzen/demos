@@ -24,7 +24,6 @@ print "autoClear:         " + str(renderer.autoClear)
 print "gammaInput:        " + str(renderer.gammaInput)
 print "gammaOutput:       " + str(renderer.gammaOutput)
 print str(renderer)
-print renderer
 
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
