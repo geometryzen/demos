@@ -1,1 +1,4 @@
-# Color demonstration
+# Color demonstration.
+from three import *
+
+color = Color()
