@@ -43,5 +43,6 @@ for color in colors:
     print color
     
 x = Color(color)
+print "x: " + repr(x)
 
 
