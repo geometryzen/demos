@@ -24,6 +24,7 @@ container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
 material = LineBasicMaterial()
+material.color = Color(0x0000FF)
 
 print repr(material)
 print "color:              " + str(material.color)
