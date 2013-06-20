@@ -15,6 +15,7 @@ camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 100
 
 renderer = WebGLRenderer()
+renderer.autoClear = True
 
 print repr(renderer)
 #print "radius:         " + str(renderer.radius)
