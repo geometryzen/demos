@@ -14,7 +14,7 @@ scene = Scene()
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 100
 
-renderer = WebGLRenderer({"clearColor":0xFF0000, "maxLights":4})
+renderer = WebGLRenderer()
 renderer.autoClear = True
 renderer.gammaInput = True
 
