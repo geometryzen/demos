@@ -18,7 +18,7 @@ renderer = WebGLRenderer()
 renderer.autoClear   = True
 renderer.gammaInput  = True
 renderer.gammaOutput = True
-renderer.setClearColor(Color(0xFFFFFF), 1.0)
+renderer.setClearColor(Color(0xFF0000), 1.0)
 
 print repr(renderer)
 print "autoClear:         " + str(renderer.autoClear)
