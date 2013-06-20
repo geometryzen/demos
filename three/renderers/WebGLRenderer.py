@@ -18,7 +18,7 @@ renderer = WebGLRenderer()
 renderer.autoClear = True
 
 print repr(renderer)
-#print "radius:         " + str(renderer.radius)
+print "autoClear:         " + str(renderer.autoClear)
 print renderer
 
 container = document.getElementById("canvas-container")
