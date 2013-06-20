@@ -20,6 +20,7 @@ renderer.gammaInput = True
 
 print repr(renderer)
 print "autoClear:         " + str(renderer.autoClear)
+print "gammaInput:        " + str(renderer.gammaInput)
 print str(renderer)
 print renderer
 
