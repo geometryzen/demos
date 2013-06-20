@@ -14,8 +14,8 @@ scene = Scene()
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 100
 
-renderer = WebGLRenderer()
-renderer.autoClear = False
+renderer = WebGLRenderer({"maxLights":4})
+renderer.autoClear = True
 
 print repr(renderer)
 print "autoClear:         " + str(renderer.autoClear)
