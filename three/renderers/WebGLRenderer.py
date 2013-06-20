@@ -15,10 +15,11 @@ camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 100
 
 renderer = WebGLRenderer()
-renderer.autoClear = True
+renderer.autoClear = False
 
 print repr(renderer)
 print "autoClear:         " + str(renderer.autoClear)
+print str(renderer)
 print renderer
 
 container = document.getElementById("canvas-container")
