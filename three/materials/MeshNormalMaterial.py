@@ -23,9 +23,8 @@ renderer.setClearColor(Color(0x080808), 1.0)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-sphere = SphereGeometry(50, 32, 24)
-
-mesh = Mesh(sphere, MeshNormalMaterial())
+material = MeshNormalMaterial()
+mesh = Mesh(SphereGeometry(50, 32, 24), material)
 
 print repr(mesh)
 #print "autoClear:         " + str(renderer.autoClear)
