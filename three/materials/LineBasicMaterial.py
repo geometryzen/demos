@@ -20,19 +20,20 @@ renderer.gammaInput  = True
 renderer.gammaOutput = True
 renderer.setClearColor(Color(0x080808), 1.0)
 
-print repr(renderer)
-print "autoClear:         " + str(renderer.autoClear)
-print "gammaInput:        " + str(renderer.gammaInput)
-print "gammaOutput:       " + str(renderer.gammaOutput)
-print "getClearColor():   " + str(renderer.getClearColor())
-print str(renderer)
-
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-sphere = SphereGeometry(50, 32, 24)
+material = LineBasicMaterial()
 
-mesh = Mesh(sphere, MeshNormalMaterial())
+print repr(material)
+#print "autoClear:         " + str(renderer.autoClear)
+#print "gammaInput:        " + str(renderer.gammaInput)
+#print "gammaOutput:       " + str(renderer.gammaOutput)
+#print "getClearColor():   " + str(renderer.getClearColor())
+print str(material)
+
+mesh = Mesh(SphereGeometry(50, 32, 24), material)
+
 scene.add(mesh)
 
 requestID = None
