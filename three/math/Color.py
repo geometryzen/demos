@@ -23,4 +23,11 @@ print "g: " + str(green.g)
 print "b: " + str(green.b)
 print green
 
+blue = Color(0x00FF00)
+print repr(blue)
+print "r: " + str(blue.r)
+print "g: " + str(blue.g)
+print "b: " + str(blue.b)
+print blue
+
 
