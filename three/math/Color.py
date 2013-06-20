@@ -39,8 +39,8 @@ print "b: " + str(blue.b)
 print blue
 
 colors = [Color("rgb(250,0,0)"),Color("rgb(100%,0%,0%)"), Color("#ff0000"),Color("#f00"),Color("red")]
-for color in colors:
-    print color
+for c in colors:
+    print c
     
 x = Color(color)
 print "x: " + repr(x)
