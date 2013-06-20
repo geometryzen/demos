@@ -16,6 +16,7 @@ camera.position.z = 100
 
 renderer = WebGLRenderer({"clearColor":0xFF0000, "maxLights":4})
 renderer.autoClear = True
+renderer.gammaInput = True
 
 print repr(renderer)
 print "autoClear:         " + str(renderer.autoClear)
