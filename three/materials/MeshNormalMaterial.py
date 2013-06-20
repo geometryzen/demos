@@ -20,13 +20,6 @@ renderer.gammaInput  = True
 renderer.gammaOutput = True
 renderer.setClearColor(Color(0x080808), 1.0)
 
-print repr(renderer)
-print "autoClear:         " + str(renderer.autoClear)
-print "gammaInput:        " + str(renderer.gammaInput)
-print "gammaOutput:       " + str(renderer.gammaOutput)
-print "getClearColor():   " + str(renderer.getClearColor())
-print str(renderer)
-
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
