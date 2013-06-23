@@ -8,3 +8,7 @@ print re.findall(p,s)
 p = 'gg[a|g]'
 print re.findall(p,s)
 #['gga', 'ggg', 'gga']
+
+p = 'gg.'
+print re.findall(p,s)
+#['gga', 'ggc', 'ggg', 'gga']
