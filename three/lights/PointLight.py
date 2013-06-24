@@ -1,1 +1,1 @@
-# lights/PointLight.py
+# PointLight.py
