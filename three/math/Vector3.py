@@ -23,4 +23,4 @@ print str(Vector3(0,0,0))
 print repr(Vector3(0,0,0))
 
 #
-print Vector()
+print Vector3()
