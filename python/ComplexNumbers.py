@@ -1,29 +1,30 @@
 # Complex Numbers
 from cmath import *
 
-z1 = complex(11.0, 7.0)
-z2 = complex(5, 3)
+z = complex(11.0, 7.0)
+w = complex(5, 3)
 
-print z1.real
-print z1.imag
+print z.real
+print z.imag
 print "----------"
-print z1
-print str(z1)
-print repr(z1)
+print z
+print str(z)
+print repr(z)
 print "----------"
-print z1 + z2
-print z1 - z2
-print z1 * z2
-print z1 / z2
+print z + w
+print z - w
+print z * w
+print z / w
 print "----------"
-print z1 == z1
-print z1 != z1
-print z1 == z2
-print z1 != z2
+print z == z
+print z != z
+print z == w
+print z != w
 print "----------"
 print phase(complex(-1.0, 0.0))
-print phase(z1)
+print phase(z)
 print type(1.0)
-print type(z1)(1.0,3)
-print type(z1)
-print str(type(z1))
+print type(z)(1.0,3)
+print type(z)
+print str(type(z))
+print repr(type(z))
