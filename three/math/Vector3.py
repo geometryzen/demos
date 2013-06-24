@@ -1,6 +1,7 @@
 # Vector3 demonstration
 from three import *
 
+# Vector3 is represented as a Cartesian triple.
 a = Vector3(1,1,1)
 
 print str(a)
