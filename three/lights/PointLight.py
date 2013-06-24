@@ -9,5 +9,6 @@ print repr(light)
 print type(light)
 print str(type(light))
 print repr(type(light))
+print "color:" + str(light.color)
 
 
