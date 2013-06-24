@@ -37,7 +37,3 @@ print a
 print a.getComponent(0)
 print a.getComponent(1)
 print a.getComponent(2)
-print a.getComponent(3)
-
-
-
