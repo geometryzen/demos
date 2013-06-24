@@ -1,1 +1,0 @@
-# CanvasRenderer.py
