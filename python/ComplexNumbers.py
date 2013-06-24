@@ -1,8 +1,8 @@
-# Complex Number demonstraction
+# Complex Numbers
 from cmath import *
 
-z1 = complex(7, 11)
-z2 = complex(3, 5)
+z1 = complex(11, 7)
+z2 = complex(5, 3)
 
 print z1
 print str(z1)
