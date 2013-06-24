@@ -20,4 +20,6 @@ print "color:" + str(light.color)
 print "intensity:" + str(light.intensity)
 print "distance:" + str(light.distance)
 
+print "position:" + str(light.position)
+
 
