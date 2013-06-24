@@ -33,6 +33,7 @@ print "position:" + str(light.position)
 print "rotation:" + str(light.rotation)
 
 r = Vector3(2,2,2)
+print light.foo
 light.position = r
 print "position:" + str(light.position)
 
