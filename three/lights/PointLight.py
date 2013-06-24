@@ -21,9 +21,13 @@ light.distance = 200
 light.position.x = 1
 light.position.y = 2
 light.position.z = 3
+light.rotation.x = 4
+light.rotation.y = 5
+light.rotation.z = 6
 print "color:" + str(light.color)
 print "intensity:" + str(light.intensity)
 print "distance:" + str(light.distance)
 print "position:" + str(light.position)
+print "rotation:" + str(light.rotation)
 
 
