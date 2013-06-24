@@ -23,4 +23,3 @@ print z1 != z2
 print "----------"
 print phase(complex(-1.0, 0.0))
 print phase(z1)
-print abs(z1)
