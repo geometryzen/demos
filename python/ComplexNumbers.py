@@ -24,3 +24,4 @@ print "----------"
 print phase(complex(-1.0, 0.0))
 print phase(z1)
 print type(1.0)
+print type(z1)
