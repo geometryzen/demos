@@ -7,4 +7,8 @@ print repr(geometry)
 print str(type(geometry))
 print repr(type(geometry))
 
-print geometry.vertices
+vs = geometry.vertices
+print vs
+vs.append(Vector3(0,0,0))
+print vs
+
