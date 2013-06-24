@@ -37,3 +37,8 @@ print a
 print a.getComponent(0)
 print a.getComponent(1)
 print a.getComponent(2)
+
+# Multiplication promotes the vectors to Euclidean3 
+i = Vector3(1,0,0)
+j = Vector3(0,1,0)
+print i * j
