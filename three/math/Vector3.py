@@ -21,3 +21,6 @@ print a
 # The string value of the zero vector is just "0"
 print str(Vector3(0,0,0))
 print repr(Vector3(0,0,0))
+
+#
+print Vector()
