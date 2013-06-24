@@ -14,5 +14,8 @@ print "intensity:" + str(light.intensity)
 print "distance:" + str(light.distance)
 
 light.color = 0x00FF00
+print "color:" + str(light.color)
+print "intensity:" + str(light.intensity)
+print "distance:" + str(light.distance)
 
 
