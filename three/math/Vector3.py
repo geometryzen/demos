@@ -19,8 +19,8 @@ a.z = 5
 print a
 
 # The string value of the zero vector is just "0"
-print str(Vector3(0,0,0))
-print repr(Vector3(0,0,0))
+print "str(Vector3(0,0,0)) => " + str(Vector3(0,0,0))
+print "repr(Vector3(0,0,0)) => " + repr(Vector3(0,0,0))
 
-#
-print Vector3()
+# The constructor without arguments gives the zero vector:
+print "Vector3() => " + str(Vector3())
