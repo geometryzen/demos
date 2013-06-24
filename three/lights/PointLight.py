@@ -35,6 +35,7 @@ print "rotation:" + str(light.rotation)
 r = Vector3(2,2,2)
 print str(r)
 print repr(r)
+print type(r)
 light.position = r
 print "position:" + str(light.position)
 
