@@ -9,11 +9,11 @@ print repr(light)
 print type(light)
 print str(type(light))
 print repr(type(light))
-print "color:" + str(light.color)
-print "intensity:" + str(light.intensity)
-print "distance:" + str(light.distance)
-print "position:" + str(light.position)
-print "rotation:" + str(light.rotation)
+print "color:     " + str(light.color)
+print "intensity: " + str(light.intensity)
+print "distance:  " + str(light.distance)
+print "position:  " + str(light.position)
+print "rotation:  " + str(light.rotation)
 
 light.color = 0x00FF00
 light.intensity = 0.5
@@ -26,15 +26,15 @@ light.position.z = 3
 light.rotation.x = 4
 light.rotation.y = 5
 light.rotation.z = 6
-print "color:" + str(light.color)
-print "intensity:" + str(light.intensity)
-print "distance:" + str(light.distance)
-print "position:" + str(light.position)
-print "rotation:" + str(light.rotation)
+print "color:     " + str(light.color)
+print "intensity: " + str(light.intensity)
+print "distance:  " + str(light.distance)
+print "position:  " + str(light.position)
+print "rotation:  " + str(light.rotation)
 
 light.position = Vector3(2,2,2)
 light.rotation = Vector3(3,3,3)
-print "position:" + str(light.position)
-print "rotation:" + str(light.rotation)
+print "position:  " + str(light.position)
+print "rotation:  " + str(light.rotation)
 
 
