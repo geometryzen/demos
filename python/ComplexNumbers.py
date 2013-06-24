@@ -15,3 +15,8 @@ print z1 + z2
 print z1 - z2
 print z1 * z2
 print z1 / z2
+print "----------"
+print z1 == z1
+print z1 != z1
+print z1 == z2
+print z1 != z2
