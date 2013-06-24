@@ -28,6 +28,7 @@ print "Vector3() => " + str(Vector3())
 # The setX, setY and setZ methods are chainable.
 print a.setX(4).setY(7).setZ(1)
 
+# setComponent(index, value) and getComponent(index)
 a.setComponent(0, 4.4)
 a.setComponent(1, 7.7)
 a.setComponent(2, 1.1)
