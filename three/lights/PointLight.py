@@ -13,6 +13,7 @@ print "color:" + str(light.color)
 print "intensity:" + str(light.intensity)
 print "distance:" + str(light.distance)
 print "position:" + str(light.position)
+print "rotation:" + str(light.rotation)
 
 light.color = 0x00FF00
 light.intensity = 0.5
