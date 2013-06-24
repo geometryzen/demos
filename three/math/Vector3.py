@@ -24,3 +24,7 @@ print "repr(Vector3(0,0,0)) => " + repr(Vector3(0,0,0))
 
 # The constructor without arguments gives the zero vector:
 print "Vector3() => " + str(Vector3())
+
+# The setX, setY and setZ methods are chainable.
+print a.setX(4).setY(7).setZ(1)
+
