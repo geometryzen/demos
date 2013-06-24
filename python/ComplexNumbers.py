@@ -1,4 +1,4 @@
-# ComplexNumbers.py
+# Complex Number demonstraction
 from cmath import *
 
 z1 = complex(3, 5)
