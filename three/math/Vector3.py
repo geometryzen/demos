@@ -10,3 +10,7 @@ print str(a)
 print repr(a)
 print str(type(a))
 print repr(type(a))
+a.x = 2
+a.y = 3
+a.z = 5
+print a
