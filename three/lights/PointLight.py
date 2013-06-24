@@ -15,7 +15,7 @@ print "distance:  " + str(light.distance)
 print "position:  " + str(light.position)
 print "rotation:  " + str(light.rotation)
 
-light.color = Color("rgb(1,2,3)")
+light.color = Color("rgb(255,255,255)")
 light.intensity = 0.5
 light.distance = 200
 
