@@ -14,7 +14,6 @@ a.x = 2
 a.y = 3
 a.z = 5
 print a
-a.x = 0
-a.y = 0
-a.z = 0
-print a
+# The string value of the zero vector is just "0"
+print str(Vector3(0,0,0))
+print repr(Vector3(0,0,0))
