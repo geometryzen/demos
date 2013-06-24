@@ -33,4 +33,6 @@ a.setComponent(1, 7.7)
 a.setComponent(2, 1.1)
 print a
 
+print a.getComponent(0)
+
 
