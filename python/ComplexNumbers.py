@@ -1,7 +1,7 @@
 # Complex Numbers
 from cmath import *
 
-z1 = complex(11, 7)
+z1 = complex(11.0, 7.0)
 z2 = complex(5, 3)
 
 print z1.real
@@ -14,5 +14,4 @@ print "----------"
 print z1 + z2
 print z1 - z2
 print z1 * z2
-
-
+print z1 / z2
