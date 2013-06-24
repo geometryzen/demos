@@ -46,3 +46,4 @@ print j * 2.0
 print 2.0 * j
 
 print i + j
+print i - j
