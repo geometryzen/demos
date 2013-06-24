@@ -38,6 +38,8 @@ print a.getComponent(0)
 print a.getComponent(1)
 print a.getComponent(2)
 
-# Scalar multiplication.
+# Scalar multiplication 
+i = Vector3(1,0,0)
+j = Vector3(0,1,0)
 print j * 2.0
 print 2.0 * j
