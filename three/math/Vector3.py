@@ -17,3 +17,4 @@ print a
 a.x = 0
 a.y = 0
 a.z = 0
+print a
