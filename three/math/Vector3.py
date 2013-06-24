@@ -1,4 +1,5 @@
 # Vector3 demonstration
+from three import *
 #
 # It is important to realize that Vector3 is mutable.
 # This contrasts to the usual approach of treating mathematical
