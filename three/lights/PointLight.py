@@ -32,14 +32,9 @@ print "distance:" + str(light.distance)
 print "position:" + str(light.position)
 print "rotation:" + str(light.rotation)
 
-r = Vector3(2,2,2)
-print str(r)
-print repr(r)
-print type(r)
-light.position = r
+light.position = Vector3(2,2,2)
+light.rotation = Vector3(3,3,3)
 print "position:" + str(light.position)
-r.x = 5
 print "position:" + str(light.position)
-light.rotation = r
 
 
