@@ -14,3 +14,6 @@ a.x = 2
 a.y = 3
 a.z = 5
 print a
+a.x = 0
+a.y = 0
+a.z = 0
