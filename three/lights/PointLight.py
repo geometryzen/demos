@@ -10,5 +10,7 @@ print type(light)
 print str(type(light))
 print repr(type(light))
 print "color:" + str(light.color)
+print "intensity:" + str(light.intensity)
+print "distance:" + str(light.distance)
 
 
