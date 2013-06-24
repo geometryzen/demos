@@ -41,4 +41,4 @@ print a.getComponent(2)
 # TODO: Multiplication promotes the vectors to Euclidean3 
 i = Vector3(1,0,0)
 j = Vector3(0,1,0)
-print i * j
+#print i * j
