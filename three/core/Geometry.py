@@ -1,4 +1,4 @@
-# Geometry.py
+# Geometry demonstration.
 from three import *
 
 geometry = Geometry()
