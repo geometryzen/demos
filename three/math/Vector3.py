@@ -29,5 +29,7 @@ print "Vector3() => " + str(Vector3())
 print a.setX(4).setY(7).setZ(1)
 
 a.setComponent(0, 4.4)
+a.setComponent(1, 7.7)
+a.setComponent(2, 1.1)
 print a
 
