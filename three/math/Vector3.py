@@ -6,3 +6,7 @@ from three import *
 # objects as immutable types.
 
 a = Vector3(1,1,1)
+print str(a)
+print repr(a)
+print str(type(a))
+print repr(type(a))
