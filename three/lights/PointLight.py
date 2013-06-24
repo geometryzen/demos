@@ -38,5 +38,8 @@ print repr(r)
 print type(r)
 light.position = r
 print "position:" + str(light.position)
+r.x = 5
+print "position:" + str(light.position)
+light.rotation = r
 
 
