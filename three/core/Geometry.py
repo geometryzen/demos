@@ -16,4 +16,5 @@ print vs[0]
 print vs[1]
 print "len(vs) => " + str(len(vs))
 print geometry.vertices[0]
+print geometry.vertices[1]
 
