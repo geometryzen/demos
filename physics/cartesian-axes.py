@@ -81,7 +81,7 @@ container.appendChild(renderer.domElement)
 
 sphere = SphereGeometry(20, 32, 24)
 
-mesh = Mesh(sphere, MeshPhongMaterial({"color": 0x0000FF, "specular": 0x0000FF, "shininess": 100}))
+mesh = Mesh(sphere, MeshPhongMaterial({"color": 0xFFFF00, "specular": 0xFFFF00, "shininess": 100}))
 scene.add(mesh)
 
 addLights(scene)
