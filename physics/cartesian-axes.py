@@ -38,6 +38,20 @@ def addAxes(scene):
     
     return scene.add(sceneObject)
 
+def addLights(scene):
+    pointLight = PointLight(0xFFFFFF)
+    pointLight.position.set(100, 100, 100)
+    scene.add(pointLight)
+    pointLight = PointLight(0xFFFFFF)
+    pointLight.position.set(100, -100, 100)
+    scene.add(pointLight)
+    pointLight = PointLight(0xFFFFFF)
+    pointLight.position.set(100, 100, -100)
+    scene.add(pointLight)
+    pointLight = PointLight(0xFFFFFF)
+    pointLight.position.set(100, -100, -100)
+    scene.add(pointLight)
+
 # Discard the old canvas if it exists. 
 for canvas in document.getElementsByTagName("canvas"):
     canvas.parentNode.removeChild(canvas)
@@ -59,9 +73,10 @@ container.appendChild(renderer.domElement)
 
 sphere = SphereGeometry(50, 32, 24)
 
-mesh = Mesh(sphere, MeshNormalMaterial())
+mesh = Mesh(sphere, MeshPhongMaterial({"color": 0xFF0000, "specular": 0xFF0000, "shininess": 100}))
 scene.add(mesh)
 
+addLights(scene)
 addAxes(scene)
 
 requestID = None
