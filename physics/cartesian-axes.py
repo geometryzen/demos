@@ -57,6 +57,7 @@ def addAxes(scene):
     return scene.add(sceneObject)
 
 def addMainGrid(scene, size):
+    sceneObject = Object3D()
 
 # Discard the old canvas if it exists. 
 for canvas in document.getElementsByTagName("canvas"):
