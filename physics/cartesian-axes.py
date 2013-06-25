@@ -3,11 +3,14 @@
 from three import *
 # We will control the horizontal. We will control the vertical...
 from browser import *
-from math import pi
+from math import pi, sin, cos
 
 COLOR_X_AXIS = 0xff0000
 COLOR_Y_AXIS = 0x00ff00
 COLOR_Z_AXIS = 0x0000ff
+COLOR_GRID = 0x66A1D2
+MATERIAL_GRID_MAJOR = LineBasicMaterial({"color": COLOR_GRID,"opacity":0.20,"transparent":True})
+MATERIAL_GRID_MINOR = LineBasicMaterial({"color": COLOR_GRID,"opacity":0.02,"transparent":True})
 
 def addAxes(scene):
     axes = [Geometry(),Geometry(),Geometry(),Geometry(),Geometry(),Geometry()]
@@ -60,8 +63,12 @@ for canvas in document.getElementsByTagName("canvas"):
 scene = Scene()
 
 # Aspect ratio will be reset in onWindowResize
-camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-camera.position.z = 100
+camera  = PerspectiveCamera(30, 1.0, 1, 10000)
+camera.position.set(-15, 10, 10)
+camera.up.x = 0
+camera.up.y = 0
+camera.up.z = 1
+scene.add(camera)
 
 renderer = WebGLRenderer()
 renderer.autoClear   = True
@@ -85,11 +92,37 @@ progress = None
 progressEnd = 6000
 startTime =  None
 
+lastCameraPosition = Vector3(0,0,0)
+distance = 1000
+polarAngle = 60 * pi / 180
+azimuthAngle = 10 * pi / 180
+target = {"distance": 300, "polarAngle": polarAngle, "azimuthAngle": azimuthAngle}
+targetScenePosition = Vector3(0,0,0)
+
 def render():
-    mesh.rotation.x = mesh.rotation.x + 0.02
-    mesh.rotation.y = mesh.rotation.y + 0.02
-    mesh.rotation.z = mesh.rotation.z + 0.02
-        
+    global distance, polarAngle, azimuthAngle
+    azimuthAngle += (target["azimuthAngle"] - azimuthAngle) * 0.2
+    polarAngle += (target["polarAngle"] - polarAngle) * 0.3
+    dDistance = (target["distance"] - distance) * 0.3
+    if (distance + dDistance > 1000):
+        target["distance"] = 1000
+        distance = 1000
+    elif (distance + dDistance < 3):
+        target["distance"] = 3
+        distance = 3
+    else:
+        distance += dDistance
+    dScenePosition = (targetScenePosition - scene.position) * 0.2
+    scene.position = scene.position + dScenePosition
+    lastCameraPosition = camera.position.clone()
+    camera.position.x = distance * sin(polarAngle) * cos(azimuthAngle)
+    camera.position.y = distance * sin(polarAngle) * sin(azimuthAngle)
+    camera.position.z = distance * cos(polarAngle)
+    camera.position = camera.position + scene.position
+    dCameraPosition = camera.position - lastCameraPosition
+    if ((dScenePosition.length() > 0.1) or (dCameraPosition.length() > 0.1)):
+        camera.lookAt(scene.position)
+
     renderer.render(scene, camera)
 
 def onWindowResize():
