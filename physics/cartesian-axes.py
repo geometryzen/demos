@@ -71,9 +71,9 @@ renderer.setClearColor(Color(0x080808), 1.0)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-sphere = SphereGeometry(50, 32, 24)
+sphere = SphereGeometry(20, 32, 24)
 
-mesh = Mesh(sphere, MeshPhongMaterial({"color": 0xFF0000, "specular": 0xFF0000, "shininess": 100}))
+mesh = Mesh(sphere, MeshPhongMaterial({"color": 0x0000FF, "specular": 0x0000FF, "shininess": 100}))
 scene.add(mesh)
 
 addLights(scene)
