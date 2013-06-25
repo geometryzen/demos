@@ -12,6 +12,20 @@ COLOR_GRID = 0x66A1D2
 MATERIAL_GRID_MAJOR = LineBasicMaterial({"color": COLOR_GRID,"opacity":0.20,"transparent":True})
 MATERIAL_GRID_MINOR = LineBasicMaterial({"color": COLOR_GRID,"opacity":0.02,"transparent":True})
 
+def addLights(scene):
+    pointLight = PointLight(0xFFFFFF)
+    pointLight.position.set(100, 100, 100)
+    scene.add(pointLight)
+    pointLight = PointLight(0xFFFFFF)
+    pointLight.position.set(100, -100, 100)
+    scene.add(pointLight)
+    pointLight = PointLight(0xFFFFFF)
+    pointLight.position.set(100, 100, -100)
+    scene.add(pointLight)
+    pointLight = PointLight(0xFFFFFF)
+    pointLight.position.set(100, -100, -100)
+    scene.add(pointLight)
+
 def addAxes(scene):
     axes = [Geometry(),Geometry(),Geometry(),Geometry(),Geometry(),Geometry()]
     axes[0].vertices.append(Vector3(0,0,0))
@@ -42,19 +56,7 @@ def addAxes(scene):
     
     return scene.add(sceneObject)
 
-def addLights(scene):
-    pointLight = PointLight(0xFFFFFF)
-    pointLight.position.set(100, 100, 100)
-    scene.add(pointLight)
-    pointLight = PointLight(0xFFFFFF)
-    pointLight.position.set(100, -100, 100)
-    scene.add(pointLight)
-    pointLight = PointLight(0xFFFFFF)
-    pointLight.position.set(100, 100, -100)
-    scene.add(pointLight)
-    pointLight = PointLight(0xFFFFFF)
-    pointLight.position.set(100, -100, -100)
-    scene.add(pointLight)
+def addMainGrid(scene, size):
 
 # Discard the old canvas if it exists. 
 for canvas in document.getElementsByTagName("canvas"):
@@ -86,6 +88,7 @@ scene.add(mesh)
 
 addLights(scene)
 addAxes(scene)
+addMainGrid(scene, 60)
 
 requestID = None
 progress = None
