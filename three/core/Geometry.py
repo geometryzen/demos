@@ -14,6 +14,6 @@ vs.append(Vector3(60,0,0))
 print vs
 print vs[0]
 print vs[1]
-print "vs.count => " + str(vs.len())
+print "vs.count => " + str(len(vs))
 print geometry.vertices
 
