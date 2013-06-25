@@ -1,4 +1,5 @@
-# cartesian-axes.py
+# Demonstractes using the Python three library to create cartesian axes.
+# Convenience objects will be provided for common coordinate systems.
 from three import *
 # We will control the horizontal. We will control the vertical...
 from browser import *
