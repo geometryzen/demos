@@ -1,1 +1,2 @@
-# objects/Line.py
+# Line demonstration
+from three import *
