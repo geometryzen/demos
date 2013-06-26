@@ -76,6 +76,8 @@ def onWindowResize():
         camera.aspect = window.innerWidth / window.innerHeight
         camera.updateProjectionMatrix()
         renderer.setSize(window.innerWidth, window.innerHeight)
+        graph.width = container.clientWidth
+        graph.height = container.clientHeight
         graph.style.width = str(container.clientWidth) + "px"
         graph.style.height = str(container.clientHeight) + "px"
         print graph.width
