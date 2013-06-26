@@ -86,9 +86,11 @@ def init():
         container = document.createElement("div")
         document.body.appendChild(container)
         view.parentNode.insertBefore(renderer.domElement, view)
+        view.parentNode.insertBefore(debugCanvas, view)
     else:
         container = document.getElementById("canvas-container")
         container.appendChild(renderer.domElement)
+        container.appendChild(debugCanvas)
 
     camera.position.z = 2
 
@@ -133,6 +135,7 @@ def terminate():
     window.cancelAnimationFrame(requestID)
     if (useLargeCanvas):
         view.parentNode.removeChild(renderer.domElement)
+        view.parentNode.removeChild(debugCanvas)
     else:
         discardExistingCanvas()
     document.removeEventListener("keydown", onDocumentKeyDown, False)
