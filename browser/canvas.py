@@ -15,9 +15,9 @@ moveLeft = False
 moveRight = False
 
 # Global variables
-camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-renderer = WebGLRenderer({"antialias": True})
-scene = Scene()
+#camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
+#renderer = WebGLRenderer({"antialias": True})
+#scene = Scene()
 view = document.getElementById("view")
 graph = document.createElement("canvas")
 graph.width = 400
@@ -67,9 +67,9 @@ def onDocumentKeyUp(event):
     keyHandlers[event.keyCode](False)
 
 def onWindowResize():
-    camera.aspect = window.innerWidth / window.innerHeight
-    camera.updateProjectionMatrix()
-    renderer.size = (window.innerWidth, window.innerHeight)
+#    camera.aspect = window.innerWidth / window.innerHeight
+#    camera.updateProjectionMatrix()
+#    renderer.size = (window.innerWidth, window.innerHeight)
     
 def discardExistingCanvas():
     for canvas in document.getElementsByTagName("canvas"):
@@ -85,11 +85,11 @@ def init():
     if (useLargeCanvas):
         container = document.createElement("div")
         document.body.appendChild(container)
-        view.parentNode.insertBefore(renderer.domElement, view)
+#        view.parentNode.insertBefore(renderer.domElement, view)
         view.parentNode.insertBefore(graph, view)
     else:
         container = document.getElementById("canvas-container")
-        container.appendChild(renderer.domElement)
+#        container.appendChild(renderer.domElement)
         container.appendChild(graph)
 
     camera.position.z = 2
@@ -127,7 +127,7 @@ def render():
     context.closePath()
     context.stroke()
       
-    renderer.render(scene, camera)
+#    renderer.render(scene, camera)
     
 def animate(timestamp):
     global requestID, progress, startTime
@@ -148,7 +148,7 @@ def animate(timestamp):
 def terminate():
     window.cancelAnimationFrame(requestID)
     if (useLargeCanvas):
-        view.parentNode.removeChild(renderer.domElement)
+#        view.parentNode.removeChild(renderer.domElement)
         view.parentNode.removeChild(graph)
     else:
         discardExistingCanvas()
