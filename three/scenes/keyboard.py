@@ -1,4 +1,3 @@
-# Under Construction.
 # Demonstrates keyboard handling.
 from three import *
 # We will control the horizontal. We will control the vertical.
