@@ -44,7 +44,6 @@ def moveBackward(downFlag):
     print "moveBackward " + str(downFlag)
     
 def escKey(downFlag):
-    print "escKey " + str(downFlag)
     terminate()
     
 def onDocumentKeyDown(event):
