@@ -19,6 +19,7 @@ renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
 view = document.getElementById("view")
 debugCanvas = document.createElement("canvas")
+debugCanvas.width = 512
 
 # Use Python's dictionary to handle event.keyCode(s).
 def escKey(downFlag):
