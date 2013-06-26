@@ -113,6 +113,8 @@ def render():
     if (moveRight):
         camera.position.x += 0.02
         
+    debugContext.clearRect(-256, -256, 512, 512)
+        
     renderer.render(scene, camera)
     
 def animate(timestamp):
