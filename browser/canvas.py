@@ -25,9 +25,9 @@ graph.height = 400
 graph.style.position = "absolute"
 graph.style.top = "0px"
 graph.style.left = "0px"
-debugContext = graph.getContext("2d")
-debugContext.setTransform(1, 0, 0, 1, 200, 200)
-debugContext.strokeStyle = "#808080"
+context = graph.getContext("2d")
+context.setTransform(1, 0, 0, 1, 200, 200)
+context.strokeStyle = "#808080"
 
 # Use Python's dictionary to handle event.keyCode(s).
 def escKey(downFlag):
@@ -113,19 +113,19 @@ def render():
     if (moveRight):
         camera.position.x += 0.02
         
-    debugContext.clearRect(-200, -200, 400, 400)
-    debugContext.beginPath()
+    context.clearRect(-200, -200, 400, 400)
+    context.beginPath()
     
     # center
-    debugContext.moveTo(-10, 0)
-    debugContext.lineTo(10, 0)
-    debugContext.moveTo(0, -10)
-    debugContext.lineTo(0, 10)
+    context.moveTo(-10, 0)
+    context.lineTo(10, 0)
+    context.moveTo(0, -10)
+    context.lineTo(0, 10)
 
-    debugContext.rect(-50, -50, 100, 100)
+    context.rect(-50, -50, 100, 100)
 
-    debugContext.closePath()
-    debugContext.stroke()
+    context.closePath()
+    context.stroke()
       
     renderer.render(scene, camera)
     
