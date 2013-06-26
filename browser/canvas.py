@@ -129,7 +129,8 @@ def render():
         
     context.clearRect(-200, -200, 400, 400)
     context.beginPath()
-    
+    context.setTransform(1, 0, 0, 1, 200, 200)
+    context.strokeStyle = "#808080" 
     # center
     context.moveTo(-10, 0)
     context.lineTo(10, 0)
