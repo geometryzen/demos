@@ -44,6 +44,7 @@ def moveBackward(flag):
     print "moveBackward " + str(flag)
     
 def onDocumentKeyDown(event):
+    print event
     event.preventDefault()
     print event
 #    {
@@ -52,6 +53,7 @@ def onDocumentKeyDown(event):
 #    }[event.keyCode](True)
 
 def onDocumentKeyUp(event):
+    print event
     event.preventDefault()
     print event
 #    {
