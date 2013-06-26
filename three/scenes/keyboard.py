@@ -44,16 +44,18 @@ def moveBackward(flag):
     print "moveBackward " + str(flag)
     
 def onDocumentKeyDown(event):
-    {
-      38: moveForward,
-      40: moveBackward
-    }[event.keyCode](True)
+    event.preventDefault()
+#    {
+#      38: moveForward,
+#      40: moveBackward
+#    }[event.keyCode](True)
 
 def onDocumentKeyUp(event):
-    {
-      38: moveForward,
-      40: moveBackward
-    }[event.keyCode](False)
+    event.preventDefault()
+#    {
+#      38: moveForward,
+#      40: moveBackward
+#    }[event.keyCode](False)
     
 def step(timestamp):
     global requestID, progress, startTime
@@ -72,8 +74,8 @@ def step(timestamp):
         window.cancelAnimationFrame(requestID)
         view.parentNode.removeChild(renderer.domElement)
 
-document.addEventListener("keydown", onDocumentKeyDown, True)
-document.addEventListener("keyup", onDocumentKeyUp, True)
+document.addEventListener("keydown", onDocumentKeyDown, False)
+document.addEventListener("keyup", onDocumentKeyUp, False)
 
 window.addEventListener("resize", onWindowResize, False)
 onWindowResize()
