@@ -77,7 +77,7 @@ def onWindowResize():
         camera.updateProjectionMatrix()
         renderer.setSize(window.innerWidth, window.innerHeight)
         graph.style.width = str(container.clientWidth) + "px"
-        graph.style.height = str(container.style.height) + "px"
+        graph.style.height = str(container.clientHeight) + "px"
         print graph.style.width
     
 def discardExistingCanvas():
