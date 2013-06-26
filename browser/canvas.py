@@ -24,7 +24,6 @@ debugCanvas.height = 512
 print debugCanvas.width
 print debugCanvas.height
 
-
 # Use Python's dictionary to handle event.keyCode(s).
 def escKey(downFlag):
     terminate()
