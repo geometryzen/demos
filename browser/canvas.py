@@ -123,7 +123,9 @@ def render():
     debugContext.lineTo(10, 0)
     debugContext.moveTo(0, -10)
     debugContext.lineTo(0, 10)
-        
+
+    debugContext.rect(-50, -50, 100, 100)
+      
     renderer.render(scene, camera)
     
 def animate(timestamp):
