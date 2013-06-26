@@ -15,8 +15,7 @@ moveRight = False
 
 # Global variables
 camera = None
-
-
+renderer =  None
 
 # Use Python's dictionary to handle event.keyCode(s).
 def escKey(downFlag):
