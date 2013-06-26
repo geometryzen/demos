@@ -13,7 +13,8 @@ moveBackward = False
 moveLeft = False
 moveRight = False
 
-
+# Global variables
+camera = None
 
 # Use Python's dictionary to handle event.keyCode(s).
 def escKey(downFlag):
@@ -77,6 +78,7 @@ def init():
     scene = Scene()
 
     # Aspect ratio will be reset in onWindowResize
+    global camera
     camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
     camera.position.z = 2
 
