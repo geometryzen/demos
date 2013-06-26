@@ -8,7 +8,7 @@ from math import pi
 for canvas in document.getElementsByTagName("canvas"):
     canvas.parentNode.removeChild(canvas)
 
-renderer = WebGLRenderer()
+renderer = WebGLRenderer({"antialias": True})
 renderer.setClearColor(Color(0x080808), 1.0)
 
 container = document.getElementById("canvas-container")
