@@ -25,6 +25,7 @@ debugCanvas.style.position = "absolute"
 debugCanvas.style.top = "0px"
 debugCanvas.style.left = "0px"
 debugContext = debugCanvas.getContext("2d")
+print debugContext
 
 # Use Python's dictionary to handle event.keyCode(s).
 def escKey(downFlag):
