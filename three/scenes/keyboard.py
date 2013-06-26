@@ -65,7 +65,7 @@ scene.add(mesh)
 
 requestID = None
 progress = None
-progressEnd = 10000 # run for 10 seconds
+progressEnd = 60000
 startTime =  None
 
 def render():
