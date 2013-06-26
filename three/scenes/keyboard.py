@@ -72,8 +72,8 @@ def step(timestamp):
         window.cancelAnimationFrame(requestID)
         view.parentNode.removeChild(renderer.domElement)
 
-document.addEventListener("keydown", onDocumentKeyDown, False)
-document.addEventListener("keyup", onDocumentKeyUp, False)
+document.addEventListener("keydown", onDocumentKeyDown, True)
+document.addEventListener("keyup", onDocumentKeyUp, True)
 
 window.addEventListener("resize", onWindowResize, False)
 onWindowResize()
