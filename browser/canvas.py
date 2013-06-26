@@ -124,9 +124,11 @@ def render():
         camera.position.x += 0.02
         
     context.setTransform(1, 0, 0, 1, 200, 200)
+    context.fillStyle = "#FF66CC"
+    context.strokeStyle = "#808080" 
+
     context.clearRect(-200, -200, 400, 400)
     context.beginPath()
-    context.strokeStyle = "#808080" 
     # center
     context.moveTo(-10, 0)
     context.lineTo(10, 0)
@@ -134,7 +136,6 @@ def render():
     context.lineTo(0, 10)
 
     context.rect(10, 10, 50, 50)
-    context.fillStyle = "#FF66CC"
     context.fillRect(100, 100, 50, 50)
 
     context.strokeText("Hello, Canvas", 60, 60)
