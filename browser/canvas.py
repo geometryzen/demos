@@ -123,9 +123,9 @@ def render():
     if (moveRight):
         camera.position.x += 0.02
         
+    context.setTransform(1, 0, 0, 1, 200, 200)
     context.clearRect(-200, -200, 400, 400)
     context.beginPath()
-    context.setTransform(1, 0, 0, 1, 200, 200)
     context.strokeStyle = "#808080" 
     # center
     context.moveTo(-10, 0)
