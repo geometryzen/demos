@@ -17,6 +17,7 @@ def leftArrowKey(downFlag):
     moveLeft = downFlag
 
 def upArrowKey(downFlag):
+    global moveForward
     moveForward = downFlag
     
 def rightArrowKey(downFlag):
