@@ -73,6 +73,8 @@ def step(timestamp):
     else:
         window.cancelAnimationFrame(requestID)
         view.parentNode.removeChild(renderer.domElement)
+        document.removeEventListener("keydown", onDocumentKeyDown, False)
+        document.removeEventListener("keyup", onDocumentKeyUp, False)
 
 document.addEventListener("keydown", onDocumentKeyDown, False)
 document.addEventListener("keyup", onDocumentKeyUp, False)
