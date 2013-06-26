@@ -23,7 +23,7 @@ scene.add(mesh)
 
 requestID = None
 progress = None
-progressEnd = 20000 # run for 10 seconds
+progressEnd = 10000 # run for 10 seconds
 startTime =  None
 
 def render():
@@ -45,6 +45,7 @@ def moveBackward(flag):
     
 def onDocumentKeyDown(event):
     event.preventDefault()
+    print event
 #    {
 #      38: moveForward,
 #      40: moveBackward
