@@ -27,9 +27,9 @@ progressEnd = 20000 # run for 10 seconds
 startTime =  None
 
 def render():
-    mesh.rotation.x = mesh.rotation.x + 0.02
-    mesh.rotation.y = mesh.rotation.y + 0.02
-    mesh.rotation.z = mesh.rotation.z + 0.02
+#    mesh.rotation.x = mesh.rotation.x + 0.02
+#    mesh.rotation.y = mesh.rotation.y + 0.02
+#    mesh.rotation.z = mesh.rotation.z + 0.02
         
     renderer.render(scene, camera)
 
