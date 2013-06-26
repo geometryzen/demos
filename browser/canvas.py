@@ -19,14 +19,14 @@ camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
 view = document.getElementById("view")
-debugCanvas = document.createElement("canvas")
-debugCanvas.width = 512
-debugCanvas.height = 512
-print "height: " + str(debugCanvas.height)
-debugCanvas.style.position = "absolute"
-debugCanvas.style.top = "0px"
-debugCanvas.style.left = "0px"
-debugContext = debugCanvas.getContext("2d")
+graph = document.createElement("canvas")
+graph.width = 512
+graph.height = 512
+print "height: " + str(graph.height)
+graph.style.position = "absolute"
+graph.style.top = "0px"
+graph.style.left = "0px"
+debugContext = graph.getContext("2d")
 debugContext.setTransform(1, 0, 0, 1, 256, 256)
 debugContext.strokeStyle = "#808080"
 
@@ -87,11 +87,11 @@ def init():
         container = document.createElement("div")
         document.body.appendChild(container)
         view.parentNode.insertBefore(renderer.domElement, view)
-        view.parentNode.insertBefore(debugCanvas, view)
+        view.parentNode.insertBefore(graph, view)
     else:
         container = document.getElementById("canvas-container")
         container.appendChild(renderer.domElement)
-        container.appendChild(debugCanvas)
+        container.appendChild(graph)
 
     camera.position.z = 2
 
@@ -150,7 +150,7 @@ def terminate():
     window.cancelAnimationFrame(requestID)
     if (useLargeCanvas):
         view.parentNode.removeChild(renderer.domElement)
-        view.parentNode.removeChild(debugCanvas)
+        view.parentNode.removeChild(graph)
     else:
         discardExistingCanvas()
     document.removeEventListener("keydown", onDocumentKeyDown, False)
