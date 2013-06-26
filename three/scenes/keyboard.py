@@ -5,14 +5,6 @@ from three import *
 from browser import *
 
 # Use Python's dictionary to handle event.keyCode(s).
-keyHandlers = {
- 27: escKey,
- 37: leftArrowKey,
- 38: upArrowKey,
- 39: rightArrowKey,
- 40: downArrowKey
-}
-    
 def escKey(downFlag):
     terminate()
 
@@ -24,6 +16,15 @@ def rightArrowKey(downFlag):
     print "right " + str(downFlag)
 def downArrowKey(downFlag):
     print "down " + str(downFlag)
+
+keyHandlers = {
+ 27: escKey,
+ 37: leftArrowKey,
+ 38: upArrowKey,
+ 39: rightArrowKey,
+ 40: downArrowKey
+}
+    
     
 def onDocumentKeyDown(event):
     event.preventDefault()
