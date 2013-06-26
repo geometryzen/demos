@@ -20,15 +20,13 @@ renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
 view = document.getElementById("view")
 graph = document.createElement("canvas")
-graph.width = 512
-graph.height = 512
-graph.setAttribute("height", "400")
-print "height: " + str(graph.height)
+graph.width = 400
+graph.height = 400
 graph.style.position = "absolute"
 graph.style.top = "0px"
 graph.style.left = "0px"
 debugContext = graph.getContext("2d")
-debugContext.setTransform(1, 0, 0, 1, 256, 256)
+debugContext.setTransform(1, 0, 0, 1, 200, 200)
 debugContext.strokeStyle = "#808080"
 
 # Use Python's dictionary to handle event.keyCode(s).
@@ -115,7 +113,7 @@ def render():
     if (moveRight):
         camera.position.x += 0.02
         
-    debugContext.clearRect(-256, -256, 512, 512)
+    debugContext.clearRect(-200, -200, 400, 400)
     debugContext.beginPath()
     
     # center
