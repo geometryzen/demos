@@ -22,6 +22,7 @@ view = document.getElementById("view")
 debugCanvas = document.createElement("canvas")
 debugCanvas.width = 512
 debugCanvas.height = 512
+print "height: " + str(debugCanvas.height)
 debugCanvas.style.position = "absolute"
 debugCanvas.style.top = "0px"
 debugCanvas.style.left = "0px"
