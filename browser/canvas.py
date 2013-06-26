@@ -27,6 +27,7 @@ graph.style.top = "0px"
 graph.style.left = "0px"
 graph.style.width = "700px"
 graph.style.height = "250px"
+print graph.style.height
 context = graph.getContext("2d")
 context.setTransform(1, 0, 0, 1, 200, 200)
 context.strokeStyle = "#808080"
