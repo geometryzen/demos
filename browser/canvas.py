@@ -22,8 +22,7 @@ debugCanvas = document.createElement("canvas")
 debugCanvas.width = 512
 debugCanvas.height = 512
 debugCanvas.style.position = "absolute"
-print debugCanvas.width
-print debugCanvas.height
+print debugCanvas.style.position
 
 # Use Python's dictionary to handle event.keyCode(s).
 def escKey(downFlag):
