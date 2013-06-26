@@ -66,7 +66,7 @@ startTime =  None
 
 def render():
     if (moveForward):
-        camera.position.z -= 0.01
+        camera.position.z -= 0.1
         
     renderer.render(scene, camera)
 
