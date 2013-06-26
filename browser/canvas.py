@@ -128,16 +128,17 @@ def render():
     context.strokeStyle = "#808080" 
 
     context.clearRect(-200, -200, 400, 400)
+
+    context.rect(10, 10, 50, 50)
+    context.fillRect(100, 100, 50, 50)
+    context.strokeRect(75, 75, 50, 50)
+
     context.beginPath()
     # center
     context.moveTo(-10, 0)
     context.lineTo(10, 0)
     context.moveTo(0, -10)
     context.lineTo(0, 10)
-
-    context.rect(10, 10, 50, 50)
-    context.fillRect(100, 100, 50, 50)
-    context.strokeRect(75, 75, 50, 50)
 
     context.strokeText("Hello, Canvas", 60, 60)
 
