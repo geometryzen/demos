@@ -3,6 +3,10 @@ from three import *
 # We will control the horizontal. We will control the vertical.
 from browser import *
 
+# Convenince variable controlling whether we embed in the existing canvas container
+# or create a nearly full screen canvas
+useLargeCanvas = True
+
 # Variables to track the intentions of the user.
 moveForward = False
 moveBackward = False
@@ -45,21 +49,23 @@ def onDocumentKeyDown(event):
 def onDocumentKeyUp(event):
     event.preventDefault()
     keyHandlers[event.keyCode](False)
-
-    # Discard the old canvas if it exists. 
-for canvas in document.getElementsByTagName("canvas"):
-    canvas.parentNode.removeChild(canvas)
+    
+def discardExistingCanvas():
+    for canvas in document.getElementsByTagName("canvas"):
+        canvas.parentNode.removeChild(canvas)
+        
+discardExistingCanvas()
 
 renderer = WebGLRenderer({"antialias": True})
+if (useLargeCanvas):
+    container = document.createElement("div")
+    document.body.appendChild(container)
+    view = document.getElementById("view")
+    view.parentNode.insertBefore(renderer.domElement, view)
+else:
+    container = document.getElementById("canvas-container")
+    container.appendChild(renderer.domElement)
 
-container = document.getElementById("canvas-container")
-container.appendChild(renderer.domElement)
-
-#container = document.createElement("div")
-#document.body.appendChild(container)
-#renderer = WebGLRenderer()
-#view = document.getElementById("view")
-#view.parentNode.insertBefore(renderer.domElement, view)
 
 scene = Scene()
 
@@ -112,7 +118,10 @@ def animate(timestamp):
         
 def terminate():
     window.cancelAnimationFrame(requestID)
-    #view.parentNode.removeChild(renderer.domElement)
+    if (useLargeCanvas):
+        view.parentNode.removeChild(renderer.domElement)
+    else:
+        discardExistingCanvas()
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
     
