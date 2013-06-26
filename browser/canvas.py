@@ -136,6 +136,7 @@ def render():
     context.lineTo(0, 10)
 
     context.rect(10, 10, 50, 50)
+    context.fillRect(100, 100, 50, 50)
 
     context.strokeText("Hello, Canvas", 60, 60)
 
