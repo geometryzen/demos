@@ -14,6 +14,7 @@ def escKey(downFlag):
     terminate()
 
 def leftArrowKey(downFlag):
+    global moveLeft
     moveLeft = downFlag
 
 def upArrowKey(downFlag):
@@ -21,9 +22,11 @@ def upArrowKey(downFlag):
     moveForward = downFlag
     
 def rightArrowKey(downFlag):
+    global moveRight
     moveRight = downFlag
 
 def downArrowKey(downFlag):
+    global moveBackward
     moveBackward = downFlag
 
 keyHandlers = {
@@ -67,7 +70,13 @@ startTime =  None
 
 def render():
     if (moveForward):
-        camera.position.z -= 0.1
+        camera.position.z -= 0.01
+    if (moveBackward):
+        camera.position.z += 0.01
+    if (moveLeft):
+        camera.position.x -= 0.01
+    if (moveRight):
+        camera.position.x += 0.01
         
     renderer.render(scene, camera)
 
