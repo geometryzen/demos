@@ -27,6 +27,7 @@ debugCanvas.style.top = "0px"
 debugCanvas.style.left = "0px"
 debugContext = debugCanvas.getContext("2d")
 debugContext.setTransform(1, 0, 0, 1, 256, 256)
+debugContext.strokeStyle = "#808080"
 
 # Use Python's dictionary to handle event.keyCode(s).
 def escKey(downFlag):
