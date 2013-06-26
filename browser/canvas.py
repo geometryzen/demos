@@ -13,6 +13,8 @@ moveBackward = False
 moveLeft = False
 moveRight = False
 
+
+
 # Use Python's dictionary to handle event.keyCode(s).
 def escKey(downFlag):
     terminate()
