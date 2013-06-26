@@ -14,8 +14,8 @@ moveLeft = False
 moveRight = False
 
 # Global variables
-camera = None
-renderer =  None
+camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
+renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
 
 # Use Python's dictionary to handle event.keyCode(s).
@@ -66,8 +66,6 @@ startTime =  None
 
 def init():
     discardExistingCanvas()
-    global renderer
-    renderer = WebGLRenderer({"antialias": True})
     if (useLargeCanvas):
         container = document.createElement("div")
         document.body.appendChild(container)
@@ -77,11 +75,7 @@ def init():
         container = document.getElementById("canvas-container")
         container.appendChild(renderer.domElement)
 
-    # Aspect ratio will be reset in onWindowResize
-    global camera
-    camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
     camera.position.z = 2
-
 
     mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
     scene.add(mesh)
