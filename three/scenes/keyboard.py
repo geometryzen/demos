@@ -38,13 +38,22 @@ def onWindowResize():
     camera.updateProjectionMatrix()
     renderer.size = (window.innerWidth, window.innerHeight)
     
+def moveForward(flag):
+    print "moveForward" + str(flag)
+def moveBackward(flag):
+    print "moveBackward" + str(flag)
+    
 def onDocumentKeyDown(event):
-    print event
-    print event.keyCode
+    {
+      38: moveForward,
+      40: moveBackward
+    }[event.keyCode](True)
 
 def onDocumentKeyUp(event):
-    print event
-    print event.keyCode
+    {
+      38: moveForward,
+      40: moveBackward
+    }[event.keyCode](False)
     
 def step(timestamp):
     global requestID, progress, startTime
