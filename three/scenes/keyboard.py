@@ -38,6 +38,14 @@ def onWindowResize():
     camera.updateProjectionMatrix()
     renderer.size = (window.innerWidth, window.innerHeight)
     
+def onDocumentKeyDown(event):
+    print event
+    print event.keyCode
+
+def onDocumentKeyUp(event):
+    print event
+    print event.keyCode
+    
 def step(timestamp):
     global requestID, progress, startTime
     if (startTime):
@@ -54,6 +62,9 @@ def step(timestamp):
     else:
         window.cancelAnimationFrame(requestID)
         view.parentNode.removeChild(renderer.domElement)
+
+document.addEventListener("keydown", onDocumentKeyDown, False)
+document.addEventListener("keyup", onDocumentKeyUp, False)
 
 window.addEventListener("resize", onWindowResize, False)
 onWindowResize()
