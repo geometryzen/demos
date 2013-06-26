@@ -75,8 +75,8 @@ def onWindowResize():
         camera.aspect = window.innerWidth / window.innerHeight
         camera.updateProjectionMatrix()
         renderer.setSize(window.innerWidth, window.innerHeight)
-        graph.width = window.innerWidth
-        graph.height = window.innerHeight
+        graph.width = 731
+        graph.height = 286
     
 def discardExistingCanvas():
     for canvas in document.getElementsByTagName("canvas"):
