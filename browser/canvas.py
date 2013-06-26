@@ -117,6 +117,12 @@ def render():
     debugContext.beginPath()
     debugContext.closePath()
     debugContext.stroke()
+    
+    # center
+    debugContext.moveTo(-10, 0)
+    debugContext.lineTo(10, 0)
+    debugContext.moveTo(0, -10)
+    debugContext.lineTo(0, 10)
         
     renderer.render(scene, camera)
     
