@@ -136,9 +136,10 @@ def render():
 
     context.rect(10, 10, 50, 50)
 
+    context.fillText("Hello, Canvas", 60, 60)
+
     context.closePath()
     context.stroke()
-    context.fillText("Hello, Canvas", 60, 60)
       
     renderer.render(scene, camera)
     
