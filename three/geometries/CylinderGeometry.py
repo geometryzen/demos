@@ -8,17 +8,17 @@ from math import pi
 for canvas in document.getElementsByTagName("canvas"):
     canvas.parentNode.removeChild(canvas)
 
-scene = Scene()
-
-# Aspect ratio will be reset in onWindowResize
-camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-camera.position.z = 100
-
 renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
 
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
+
+scene = Scene()
+
+# Aspect ratio will be reset in onWindowResize
+camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
+camera.position.z = 100
 
 radiusTop = 20
 radiusBottom = 20
