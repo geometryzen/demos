@@ -140,6 +140,7 @@ def render():
     context.lineTo(10, 0)
     context.moveTo(0, -10)
     context.lineTo(0, 10)
+    context.fill()
 
     context.rect(10, 10, 50, 50)
 
