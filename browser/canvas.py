@@ -16,6 +16,7 @@ moveRight = False
 # Global variables
 camera = None
 renderer =  None
+scene = Scene()
 
 # Use Python's dictionary to handle event.keyCode(s).
 def escKey(downFlag):
@@ -75,9 +76,6 @@ def init():
     else:
         container = document.getElementById("canvas-container")
         container.appendChild(renderer.domElement)
-
-
-    scene = Scene()
 
     # Aspect ratio will be reset in onWindowResize
     global camera
