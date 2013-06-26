@@ -72,9 +72,9 @@ def onWindowResize():
         camera.updateProjectionMatrix()
         renderer.size = (window.innerWidth, window.innerHeight)
     else:
-        camera.aspect = 2
+        camera.aspect = window.innerWidth / window.innerHeight
         camera.updateProjectionMatrix()
-#        renderer.setSize(200,100)
+        renderer.size = (window.innerWidth, window.innerHeight)
     
 def discardExistingCanvas():
     for canvas in document.getElementsByTagName("canvas"):
