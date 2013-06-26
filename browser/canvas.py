@@ -73,9 +73,9 @@ def onWindowResize():
         renderer.size = (window.innerWidth, window.innerHeight)
     else:
         container = document.getElementById("canvas-container")
-        camera.aspect = window.innerWidth / window.innerHeight
+        camera.aspect = container.clientWidth / container.clientHeight
         camera.updateProjectionMatrix()
-        renderer.setSize(window.innerWidth, window.innerHeight)
+        renderer.setSize(container.clientWidth, container.clientHeight)
         graph.width = container.clientWidth
         graph.height = container.clientHeight
         graph.style.width = str(container.clientWidth) + "px"
