@@ -4,18 +4,24 @@ from three import *
 # We will control the horizontal. We will control the vertical.
 from browser import *
 
+moveForward = False
+moveBackward = False
+moveLeft = False
+moveRight = False
+
 # Use Python's dictionary to handle event.keyCode(s).
 def escKey(downFlag):
     terminate()
 
 def leftArrowKey(downFlag):
-    print "left" + str(downFlag)
+    moveLeft = downFlag
+    print "left  " + str(downFlag)
 def upArrowKey(downFlag):
-    print "up " + str(downFlag)
+    print "up    " + str(downFlag)
 def rightArrowKey(downFlag):
     print "right " + str(downFlag)
 def downArrowKey(downFlag):
-    print "down " + str(downFlag)
+    print "down  " + str(downFlag)
 
 keyHandlers = {
  27: escKey,
