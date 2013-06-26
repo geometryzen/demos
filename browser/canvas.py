@@ -26,7 +26,7 @@ graph.style.left = "0px"
 context = graph.getContext("2d")
 context.setTransform(1, 0, 0, 1, 200, 200)
 context.strokeStyle = "#808080"
-context.fillStyle = "#0066CC"
+context.fillStyle = "#FF66CC"
 
 # Use Python's dictionary to handle event.keyCode(s).
 def escKey(downFlag):
