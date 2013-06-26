@@ -4,6 +4,36 @@ from three import *
 # We will control the horizontal. We will control the vertical.
 from browser import *
 
+# Use Python's dictionary to handle event.keyCode(s).
+keyHandlers =
+{
+ 27: escKey,
+ 37: leftArrowKey,
+ 38: upArrowKey,
+ 39: rightArrowKey,
+ 40: downArrowKey
+}
+    
+def escKey(downFlag):
+    terminate()
+
+def leftArrowKey(downFlag):
+    print "left" + str(downFlag)
+def upArrowKey(downFlag):
+    print "up " + str(downFlag)
+def rightArrowKey(downFlag):
+    print "right " + str(downFlag)
+def downArrowKey(downFlag):
+    print "down " + str(downFlag)
+    
+def onDocumentKeyDown(event):
+    event.preventDefault()
+    keyHandlers[event.keyCode](True)
+
+def onDocumentKeyUp(event):
+    event.preventDefault()
+    keyHandlers[event.keyCode](False)
+
 container = document.createElement("div")
 document.body.appendChild(container)
 
@@ -38,30 +68,6 @@ def onWindowResize():
     camera.updateProjectionMatrix()
     renderer.size = (window.innerWidth, window.innerHeight)
     
-def moveForward(downFlag):
-    print "moveForward " + str(downFlag)
-def moveBackward(downFlag):
-    print "moveBackward " + str(downFlag)
-    
-def escKey(downFlag):
-    terminate()
-    
-def onDocumentKeyDown(event):
-    print event.keyCode
-    event.preventDefault()
-    {
-     27: escKey,
-     38: moveForward,
-     40: moveBackward
-    }[event.keyCode](True)
-
-def onDocumentKeyUp(event):
-    event.preventDefault()
-    {
-     27: escKey,
-     38: moveForward,
-     40: moveBackward
-    }[event.keyCode](False)
     
 def animate(timestamp):
     global requestID, progress, startTime
