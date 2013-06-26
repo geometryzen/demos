@@ -92,7 +92,7 @@ def init():
 #        container.appendChild(renderer.domElement)
         container.appendChild(graph)
 
-    camera.position.z = 2
+#    camera.position.z = 2
 
 #    mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
 #    scene.add(mesh)
