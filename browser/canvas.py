@@ -66,7 +66,7 @@ def onDocumentKeyUp(event):
     event.preventDefault()
     keyHandlers[event.keyCode](False)
 
-def onWindowResize():
+#def onWindowResize():
 #    camera.aspect = window.innerWidth / window.innerHeight
 #    camera.updateProjectionMatrix()
 #    renderer.size = (window.innerWidth, window.innerHeight)
@@ -100,8 +100,8 @@ def init():
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
 
-    window.addEventListener("resize", onWindowResize, False)
-    onWindowResize()
+#    window.addEventListener("resize", onWindowResize, False)
+#    onWindowResize()
 
 def render():
     if (moveForward):
