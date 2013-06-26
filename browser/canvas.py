@@ -54,33 +54,39 @@ def discardExistingCanvas():
     for canvas in document.getElementsByTagName("canvas"):
         canvas.parentNode.removeChild(canvas)
         
-discardExistingCanvas()
-
-renderer = WebGLRenderer({"antialias": True})
-if (useLargeCanvas):
-    container = document.createElement("div")
-    document.body.appendChild(container)
-    view = document.getElementById("view")
-    view.parentNode.insertBefore(renderer.domElement, view)
-else:
-    container = document.getElementById("canvas-container")
-    container.appendChild(renderer.domElement)
-
-
-scene = Scene()
-
-# Aspect ratio will be reset in onWindowResize
-camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-camera.position.z = 2
-
-
-mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
-scene.add(mesh)
-
 requestID = None
 progress = None
 progressEnd = 60000
 startTime =  None
+
+def init():
+    discardExistingCanvas()
+    renderer = WebGLRenderer({"antialias": True})
+    if (useLargeCanvas):
+        container = document.createElement("div")
+        document.body.appendChild(container)
+        view = document.getElementById("view")
+        view.parentNode.insertBefore(renderer.domElement, view)
+    else:
+        container = document.getElementById("canvas-container")
+        container.appendChild(renderer.domElement)
+
+
+    scene = Scene()
+
+    # Aspect ratio will be reset in onWindowResize
+    camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
+    camera.position.z = 2
+
+
+    mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
+    scene.add(mesh)
+    
+    document.addEventListener("keydown", onDocumentKeyDown, False)
+    document.addEventListener("keyup", onDocumentKeyUp, False)
+
+    window.addEventListener("resize", onWindowResize, False)
+    onWindowResize()
 
 def render():
     if (moveForward):
@@ -124,12 +130,6 @@ def terminate():
         discardExistingCanvas()
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
-    
 
-document.addEventListener("keydown", onDocumentKeyDown, False)
-document.addEventListener("keyup", onDocumentKeyUp, False)
-
-window.addEventListener("resize", onWindowResize, False)
-onWindowResize()
-
+init()
 animate(None)
