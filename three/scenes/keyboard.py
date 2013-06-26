@@ -27,9 +27,9 @@ progressEnd = 10000 # run for 10 seconds
 startTime =  None
 
 def render():
-#    mesh.rotation.x = mesh.rotation.x + 0.02
-#    mesh.rotation.y = mesh.rotation.y + 0.02
-#    mesh.rotation.z = mesh.rotation.z + 0.02
+    mesh.rotation.x = mesh.rotation.x + 0.02
+    mesh.rotation.y = mesh.rotation.y + 0.02
+    mesh.rotation.z = mesh.rotation.z + 0.02
         
     renderer.render(scene, camera)
 
@@ -44,14 +44,15 @@ def moveBackward(flag):
     print "moveBackward " + str(flag)
     
 def onDocumentKeyDown(event):
-    event.preventDefault()
     print event
+    event.preventDefault()
 #    {
 #      38: moveForward,
 #      40: moveBackward
 #    }[event.keyCode](True)
 
 def onDocumentKeyUp(event):
+    print event
     event.preventDefault()
 #    {
 #      38: moveForward,
