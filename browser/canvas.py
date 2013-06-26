@@ -20,7 +20,7 @@ scene = Scene()
 view = document.getElementById("view")
 debugCanvas = document.createElement("canvas")
 debugCanvas.width = 512
-debugCanvas.height = 512
+debugCanvas.height = 513
 print debugCanvas.width
 print debugCanvas.height
 
