@@ -94,8 +94,8 @@ def init():
 
     camera.position.z = 2
 
-    mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
-    scene.add(mesh)
+#    mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
+#    scene.add(mesh)
     
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
