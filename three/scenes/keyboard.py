@@ -53,6 +53,7 @@ def onDocumentKeyDown(event):
 
 def onDocumentKeyUp(event):
     event.preventDefault()
+    print event
 #    {
 #      38: moveForward,
 #      40: moveBackward
