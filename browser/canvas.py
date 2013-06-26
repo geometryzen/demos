@@ -138,6 +138,7 @@ def render():
 
     context.closePath()
     context.stroke()
+    context.fillText("Hello, Canvas", 60, 60)
       
     renderer.render(scene, camera)
     
