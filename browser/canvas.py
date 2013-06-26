@@ -67,9 +67,10 @@ def onDocumentKeyUp(event):
     keyHandlers[event.keyCode](False)
 
 def onWindowResize():
-    camera.aspect = window.innerWidth / window.innerHeight
-    camera.updateProjectionMatrix()
-    renderer.size = (window.innerWidth, window.innerHeight)
+    if (useLargeCanvas):
+        camera.aspect = window.innerWidth / window.innerHeight
+        camera.updateProjectionMatrix()
+        renderer.size = (window.innerWidth, window.innerHeight)
     
 def discardExistingCanvas():
     for canvas in document.getElementsByTagName("canvas"):
