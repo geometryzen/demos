@@ -78,6 +78,7 @@ def onWindowResize():
         renderer.setSize(window.innerWidth, window.innerHeight)
         graph.style.width = str(container.clientWidth) + "px"
         graph.style.height = str(container.style.height) + "px"
+        print graph.style.width
     
 def discardExistingCanvas():
     for canvas in document.getElementsByTagName("canvas"):
