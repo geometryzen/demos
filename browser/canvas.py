@@ -17,6 +17,7 @@ moveRight = False
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
+view = document.getElementById("view")
 
 # Use Python's dictionary to handle event.keyCode(s).
 def escKey(downFlag):
@@ -54,6 +55,11 @@ def onDocumentKeyDown(event):
 def onDocumentKeyUp(event):
     event.preventDefault()
     keyHandlers[event.keyCode](False)
+
+def onWindowResize():
+    camera.aspect = window.innerWidth / window.innerHeight
+    camera.updateProjectionMatrix()
+    renderer.size = (window.innerWidth, window.innerHeight)
     
 def discardExistingCanvas():
     for canvas in document.getElementsByTagName("canvas"):
@@ -69,7 +75,6 @@ def init():
     if (useLargeCanvas):
         container = document.createElement("div")
         document.body.appendChild(container)
-        view = document.getElementById("view")
         view.parentNode.insertBefore(renderer.domElement, view)
     else:
         container = document.getElementById("canvas-container")
@@ -97,12 +102,6 @@ def render():
         camera.position.x += 0.02
         
     renderer.render(scene, camera)
-
-def onWindowResize():
-    camera.aspect = window.innerWidth / window.innerHeight
-    camera.updateProjectionMatrix()
-    renderer.size = (window.innerWidth, window.innerHeight)
-    
     
 def animate(timestamp):
     global requestID, progress, startTime
