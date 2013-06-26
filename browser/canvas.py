@@ -129,7 +129,7 @@ def render():
     context.moveTo(0, -10)
     context.lineTo(0, 10)
 
-    context.rect(10, 10, 100, 100)
+    context.rect(10, 10, 50, 50)
 
     context.closePath()
     context.stroke()
