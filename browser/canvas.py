@@ -22,6 +22,7 @@ view = document.getElementById("view")
 graph = document.createElement("canvas")
 graph.width = 512
 graph.height = 512
+graph.setAttribute("height", "400")
 print "height: " + str(graph.height)
 graph.style.position = "absolute"
 graph.style.top = "0px"
