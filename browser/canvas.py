@@ -128,6 +128,6 @@ def terminate():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
 
-print "ESC to terminate, Arrow keys to move Left, Right, Foreward, Backward"
+print "ESC to terminate, Arrow keys to move Left, Right, Forward, Backward"
 init()
 animate(None)
