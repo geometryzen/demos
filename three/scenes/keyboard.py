@@ -39,9 +39,9 @@ def onWindowResize():
     renderer.size = (window.innerWidth, window.innerHeight)
     
 def moveForward(flag):
-    print "moveForward" + str(flag)
+    print "moveForward " + str(flag)
 def moveBackward(flag):
-    print "moveBackward" + str(flag)
+    print "moveBackward " + str(flag)
     
 def onDocumentKeyDown(event):
     {
