@@ -59,7 +59,7 @@ def onDocumentKeyUp(event):
 #      40: moveBackward
 #    }[event.keyCode](False)
     
-def step(timestamp):
+def animate(timestamp):
     global requestID, progress, startTime
     if (startTime):
         progress = timestamp - startTime
@@ -70,7 +70,7 @@ def step(timestamp):
             progress = 0
         
     if (progress < progressEnd):
-        requestID = window.requestAnimationFrame(step)
+        requestID = window.requestAnimationFrame(animate)
         render()
     else:
         window.cancelAnimationFrame(requestID)
@@ -84,4 +84,4 @@ document.addEventListener("keyup", onDocumentKeyUp, False)
 window.addEventListener("resize", onWindowResize, False)
 onWindowResize()
 
-step(None)
+animate(None)
