@@ -18,6 +18,7 @@ camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
 view = document.getElementById("view")
+debugCanvas = document.createElement("canvas")
 
 # Use Python's dictionary to handle event.keyCode(s).
 def escKey(downFlag):
