@@ -42,8 +42,10 @@ def moveForward(downFlag):
     print "moveForward " + str(downFlag)
 def moveBackward(downFlag):
     print "moveBackward " + str(downFlag)
+    
 def escKey(downFlag):
     print "escKey " + str(downFlag)
+    terminate()
     
 def onDocumentKeyDown(event):
     print event.keyCode
@@ -55,7 +57,6 @@ def onDocumentKeyDown(event):
     }[event.keyCode](True)
 
 def onDocumentKeyUp(event):
-    print event.keyCode
     event.preventDefault()
     {
      27: escKey,
@@ -77,10 +78,14 @@ def animate(timestamp):
         requestID = window.requestAnimationFrame(animate)
         render()
     else:
-        window.cancelAnimationFrame(requestID)
-        view.parentNode.removeChild(renderer.domElement)
-        document.removeEventListener("keydown", onDocumentKeyDown, False)
-        document.removeEventListener("keyup", onDocumentKeyUp, False)
+        terminate()
+        
+def terminate():
+    window.cancelAnimationFrame(requestID)
+    view.parentNode.removeChild(renderer.domElement)
+    document.removeEventListener("keydown", onDocumentKeyDown, False)
+    document.removeEventListener("keyup", onDocumentKeyUp, False)
+    
 
 document.addEventListener("keydown", onDocumentKeyDown, False)
 document.addEventListener("keyup", onDocumentKeyUp, False)
