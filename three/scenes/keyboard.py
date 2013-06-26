@@ -45,6 +45,7 @@ def moveBackward(flag):
     
 def onDocumentKeyDown(event):
     event.preventDefault()
+    print event
 #    {
 #      38: moveForward,
 #      40: moveBackward
