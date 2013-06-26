@@ -46,8 +46,21 @@ def onDocumentKeyUp(event):
     event.preventDefault()
     keyHandlers[event.keyCode](False)
 
-container = document.createElement("div")
-document.body.appendChild(container)
+    # Discard the old canvas if it exists. 
+for canvas in document.getElementsByTagName("canvas"):
+    canvas.parentNode.removeChild(canvas)
+
+renderer = WebGLRenderer({"antialias": True})
+renderer.setClearColor(Color(0x080808), 1.0)
+
+container = document.getElementById("canvas-container")
+container.appendChild(renderer.domElement)
+
+#container = document.createElement("div")
+#document.body.appendChild(container)
+#renderer = WebGLRenderer()
+#view = document.getElementById("view")
+#view.parentNode.insertBefore(renderer.domElement, view)
 
 scene = Scene()
 
@@ -55,10 +68,6 @@ scene = Scene()
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 2
 
-renderer = WebGLRenderer()
-
-view = document.getElementById("view")
-view.parentNode.insertBefore(renderer.domElement, view)
 
 mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
 scene.add(mesh)
@@ -104,7 +113,7 @@ def animate(timestamp):
         
 def terminate():
     window.cancelAnimationFrame(requestID)
-    view.parentNode.removeChild(renderer.domElement)
+    #view.parentNode.removeChild(renderer.domElement)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
     
