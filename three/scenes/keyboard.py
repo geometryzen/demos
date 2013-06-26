@@ -38,26 +38,30 @@ def onWindowResize():
     camera.updateProjectionMatrix()
     renderer.size = (window.innerWidth, window.innerHeight)
     
-def moveForward(flag):
-    print "moveForward " + str(flag)
-def moveBackward(flag):
-    print "moveBackward " + str(flag)
+def moveForward(downFlag):
+    print "moveForward " + str(downFlag)
+def moveBackward(downFlag):
+    print "moveBackward " + str(downFlag)
+def escKey(downFlag):
+    print "escKey " + str(downFlag)
     
 def onDocumentKeyDown(event):
     print event.keyCode
     event.preventDefault()
-#    {
-#      38: moveForward,
-#      40: moveBackward
-#    }[event.keyCode](True)
+    {
+     27: escKey,
+     38: moveForward,
+     40: moveBackward
+    }[event.keyCode](True)
 
 def onDocumentKeyUp(event):
     print event.keyCode
     event.preventDefault()
-#    {
-#      38: moveForward,
-#      40: moveBackward
-#    }[event.keyCode](False)
+    {
+     27: escKey,
+     38: moveForward,
+     40: moveBackward
+    }[event.keyCode](False)
     
 def animate(timestamp):
     global requestID, progress, startTime
