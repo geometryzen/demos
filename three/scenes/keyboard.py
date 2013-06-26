@@ -15,13 +15,15 @@ def escKey(downFlag):
 
 def leftArrowKey(downFlag):
     moveLeft = downFlag
-    print "left  " + str(downFlag)
+
 def upArrowKey(downFlag):
-    print "up    " + str(downFlag)
+    moveForward = downFlag
+    
 def rightArrowKey(downFlag):
-    print "right " + str(downFlag)
+    moveRight = downFlag
+
 def downArrowKey(downFlag):
-    print "down  " + str(downFlag)
+    moveBackward = downFlag
 
 keyHandlers = {
  27: escKey,
@@ -63,9 +65,8 @@ progressEnd = 10000 # run for 10 seconds
 startTime =  None
 
 def render():
-    mesh.rotation.x = mesh.rotation.x + 0.02
-    mesh.rotation.y = mesh.rotation.y + 0.02
-    mesh.rotation.z = mesh.rotation.z + 0.02
+    if (moveForward):
+        camera.position.z -= 0.01
         
     renderer.render(scene, camera)
 
