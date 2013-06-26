@@ -25,9 +25,6 @@ graph.height = 400
 graph.style.position = "absolute"
 graph.style.top = "0px"
 graph.style.left = "0px"
-graph.style.width = "700px"
-graph.style.height = "250px"
-print graph.style.height
 context = graph.getContext("2d")
 context.setTransform(1, 0, 0, 1, 200, 200)
 context.strokeStyle = "#808080"
@@ -75,11 +72,14 @@ def onWindowResize():
         camera.updateProjectionMatrix()
         renderer.size = (window.innerWidth, window.innerHeight)
     else:
+        container = document.getElementById("canvas-container")
         camera.aspect = window.innerWidth / window.innerHeight
         camera.updateProjectionMatrix()
         renderer.setSize(window.innerWidth, window.innerHeight)
         graph.width = 700
         graph.height = 250
+        graph.style.width = container.style.width
+        graph.style.height = container.style.height
     
 def discardExistingCanvas():
     for canvas in document.getElementsByTagName("canvas"):
