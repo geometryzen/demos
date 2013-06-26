@@ -103,8 +103,8 @@ def init():
         view.parentNode.insertBefore(graph, view)
     else:
         container = document.getElementById("canvas-container")
-        container.appendChild(renderer.domElement)
         container.appendChild(graph)
+        container.appendChild(renderer.domElement)
 
     camera.position.z = 2
 
