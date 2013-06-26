@@ -114,6 +114,9 @@ def render():
         camera.position.x += 0.02
         
     debugContext.clearRect(-256, -256, 512, 512)
+    debugContext.beginPath()
+    debugContext.closePath()
+    debugContext.stroke()
         
     renderer.render(scene, camera)
     
