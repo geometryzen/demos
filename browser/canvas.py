@@ -134,7 +134,7 @@ def render():
 
     context.beginPath()
     context.moveTo(0,0)
-    context.lineTo(100,100)
+    context.lineTo(0,100)
     # center
     context.moveTo(-10, 0)
     context.lineTo(10, 0)
