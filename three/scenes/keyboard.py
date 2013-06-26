@@ -5,8 +5,7 @@ from three import *
 from browser import *
 
 # Use Python's dictionary to handle event.keyCode(s).
-keyHandlers =
-{
+keyHandlers = {
  27: escKey,
  37: leftArrowKey,
  38: upArrowKey,
