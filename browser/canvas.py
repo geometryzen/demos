@@ -65,6 +65,7 @@ startTime =  None
 
 def init():
     discardExistingCanvas()
+    global renderer
     renderer = WebGLRenderer({"antialias": True})
     if (useLargeCanvas):
         container = document.createElement("div")
