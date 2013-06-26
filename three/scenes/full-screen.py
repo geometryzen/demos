@@ -1,4 +1,4 @@
-# scenes/full-screen.py
+# Demonstrates manipulating the document object model to make a canvas near full-screen.
 from three import *
 # We will control the horizontal. We will control the vertical.
 from browser import *
