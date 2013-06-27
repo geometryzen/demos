@@ -140,7 +140,6 @@ def terminate():
     window.cancelAnimationFrame(requestID)
     if (useLargeCanvas):
         view.parentNode.removeChild(renderer.domElement)
-        view.parentNode.removeChild(graph)
     else:
         discardExistingCanvas()
     print "Goodbye!"
