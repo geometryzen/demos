@@ -20,10 +20,10 @@ canvas = document.createElement(CANVAS_TAGNAME)
 #canvas.style.position = "absolute"
 #canvas.style.top = "0px"
 #canvas.style.left = "0px"
-canvas.width = 400
-canvas.height = 400
-canvas.style.width = str(canvas.width) + "px"
-canvas.style.height = str(canvas.height) + "px"
+#canvas.width = 400
+#canvas.height = 400
+#canvas.style.width = str(canvas.width) + "px"
+#canvas.style.height = str(canvas.height) + "px"
 #context = canvas.getContext("experimental-webgl")
 
 # Use Python's dictionary to handle event.keyCode(s).
