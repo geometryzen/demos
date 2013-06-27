@@ -42,7 +42,7 @@ print "repr(material)    => " + repr(material)
 #print "wireframeLinewidth:  " + str(material.wireframeLinewidth)
 print "str(material)     => " + str(material)
 
-mesh = Mesh(CubeGeometry(50, 50, 50), material)
+mesh = Mesh(CubeGeometry(5, 7, 5), material)
 
 scene.add(mesh)
 
