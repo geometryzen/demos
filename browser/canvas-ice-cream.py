@@ -13,9 +13,6 @@ moveLeft = False
 moveRight = False
 
 # Global variables
-camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-renderer = WebGLRenderer({"antialias": True})
-scene = Scene()
 view = document.getElementById("view")
 graph = document.createElement("canvas")
 graph.style.position = "absolute"
