@@ -70,6 +70,9 @@ def init():
     geometry = Geometry()
     for i in range(-size, size+step, step):
         geometry.vertices.append(Vector3(-size, 0, i))
+        geometry.vertices.append(Vector3(+size, 0, i))
+        geometry.vertices.append(Vector3( i, 0, -size))
+        geometry.vertices.append(Vector3( i, 0, +size))
         print i
 
     mesh = Mesh(CubeGeometry(100.0, 100.0, 100.0), MeshNormalMaterial())
