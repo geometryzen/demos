@@ -64,7 +64,8 @@ def init():
         container = document.getElementById("canvas-container")
         container.appendChild(renderer.domElement)
         
-    print range(-500, 550, 50)
+    for i in range(-500, 550, 50):
+        print i
 
     mesh = Mesh(CubeGeometry(100.0, 100.0, 100.0), MeshNormalMaterial())
     scene.add(mesh)
