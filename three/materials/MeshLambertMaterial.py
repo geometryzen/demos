@@ -1,4 +1,4 @@
-# MeshLambertMaterial.py
+# MeshLambertMaterial demonstration.
 from three import *
 from browser import *
 from math import pi
@@ -26,7 +26,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-material = MeshBasicMaterial({"color":0x0000FF})
+material = MeshLambertMaterial({"color":0x0000FF})
 material.name = "bluecube"
 
 print "repr(material)    => " + repr(material)
