@@ -26,8 +26,8 @@ renderer.setClearColor(Color(0x080808), 1.0)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-material = MeshLambertMaterial({"color":0x00FF00})
-material.name = "greenie"
+material = MeshBasicMaterial({"color":0x0000FF})
+material.name = "bluecube"
 
 print "repr(material)    => " + repr(material)
 #print "id:                  " + str(material.id)
