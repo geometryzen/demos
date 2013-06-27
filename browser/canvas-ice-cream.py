@@ -17,9 +17,9 @@ moveRight = False
 # Global variables
 view = document.getElementById("view")
 canvas = document.createElement(CANVAS_TAGNAME)
-canvas.style.position = "absolute"
-canvas.style.top = "0px"
-canvas.style.left = "0px"
+#canvas.style.position = "absolute"
+#canvas.style.top = "0px"
+#canvas.style.left = "0px"
 canvas.width = 400
 canvas.height = 400
 canvas.style.width = str(canvas.width) + "px"
