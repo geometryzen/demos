@@ -28,7 +28,7 @@ material.color = 0x00FF00
 material.wireframe = True
 material.wireframeLinewidth = 2
 
-print repr(material)
+print "Construction:       " + repr(material)
 print "color:              " + str(material.color)
 print "wireframe:          " + str(material.wireframe)
 print "wireframeLinewidth: " + str(material.wireframeLinewidth)
