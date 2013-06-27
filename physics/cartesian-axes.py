@@ -1,7 +1,5 @@
 # Demonstractes using the Python three library to create cartesian axes.
-# Convenience objects will be provided for common coordinate systems.
 from three import *
-# We will control the horizontal. We will control the vertical...
 from browser import *
 from math import pi, sin, cos
 
@@ -65,7 +63,6 @@ for canvas in document.getElementsByTagName("canvas"):
 
 scene = Scene()
 
-# Aspect ratio will be reset in onWindowResize
 camera  = PerspectiveCamera(30, 1.0, 1, 10000)
 camera.position.set(-15, 10, 10)
 camera.up.x = 0
@@ -150,7 +147,6 @@ def step(timestamp):
     else:
         window.cancelAnimationFrame(requestID)
         # container.removeChild(renderer.domElement)
-        # TODO: Remove the "resize" event listener
 
 window.addEventListener("resize", onWindowResize, False)
 
