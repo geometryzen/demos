@@ -37,6 +37,7 @@ print "name:                " + material.name
 print "color:               " + str(material.color)
 print "opacity:             " + str(material.opacity)
 print "transparent:         " + str(material.transparent)
+print "visible:             " + str(material.visible)
 print "wireframe:           " + str(material.wireframe)
 print "wireframeLinewidth:  " + str(material.wireframeLinewidth)
 print "str(material)     => " + str(material)
