@@ -6,6 +6,7 @@ from browser import *
 # Convenince variable controlling whether we embed in the existing canvas container
 # or create a nearly full screen canvas
 useLargeCanvas = False
+CANVAS_TAGNAME = "div"
 
 # Variables to track the intentions of the user.
 moveForward = False
@@ -16,7 +17,7 @@ moveRight = False
 # Global variables
 print window.devicePixelRatio
 view = document.getElementById("view")
-canvas = document.createElement("div")
+canvas = document.createElement(CANVAS_TAGNAME)
 canvas.style.position = "absolute"
 canvas.style.top = "0px"
 canvas.style.left = "0px"
@@ -79,7 +80,7 @@ def onWindowResize():
         canvas.style.height = str(container.clientHeight) + "px"
     
 def discardExistingCanvas():
-    for es in document.getElementsByTagName("canvas"):
+    for es in document.getElementsByTagName(CANVAS_TAGNAME):
         es.parentNode.removeChild(es)
         
 requestID = None
