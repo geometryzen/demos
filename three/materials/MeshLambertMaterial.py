@@ -16,9 +16,9 @@ camera.lookAt(scene.position)
 ambientLight = AmbientLight(0x111111)
 scene.add(ambientLight)
 
-#pointLight = PointLight(0xFFFFFF)
-#pointLight.position.set(20, 20, 20)
-#scene.add(pointLight)
+pointLight = PointLight(0xFFFFFF)
+pointLight.position.set(20, 20, 20)
+scene.add(pointLight)
 
 renderer = WebGLRenderer()
 renderer.autoClear   = True
