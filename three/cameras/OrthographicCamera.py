@@ -12,6 +12,9 @@ moveRight = False
 
 # Global variables
 camera  = OrthographicCamera(-1, 1, 1, -1, -500, 1000)
+camera.position.x = 200
+camera.position.y = 100
+camera.position.z = 200
 print repr(camera)
 print str(camera)
 renderer = WebGLRenderer({"antialias": True})
@@ -60,10 +63,6 @@ def init():
     else:
         container = document.getElementById("canvas-container")
         container.appendChild(renderer.domElement)
-
-    camera.position.x = 200
-    camera.position.y = 100
-    camera.position.z = 200
 
     mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
     scene.add(mesh)
