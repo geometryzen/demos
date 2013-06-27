@@ -1,7 +1,8 @@
-# Demonstractes using the Python three library to create cartesian axes.
+# Warning: This is currently slow. It requires optimization in the Python cross-compiler.
+# It probably also makes sense to consider convenience functions to do this.
 from three import *
 from browser import *
-from math import pi, sin, cos
+from math import pi, sin, cos, sqrt
 
 COLOR_X_AXIS = 0xff0000
 COLOR_Y_AXIS = 0x00ff00
@@ -56,13 +57,73 @@ def addAxes(scene):
 
 def addMainGrid(scene, size):
     sceneObject = Object3D()
+    for x in range(-size, size+1):
+        if (x != 0):
+            gridLineGeometry = Geometry()
+            gridLineGeometry.vertices.append(Vector3(x, -size, 0))
+            gridLineGeometry.vertices.append(Vector3(x, size, 0))
+            material = MATERIAL_GRID_MAJOR if (x % 10 == 0) else MATERIAL_GRID_MINOR
+            line = Line(gridLineGeometry, material)
+            sceneObject.add(line)
+    for y in range(-size, size+1):
+        if (y != 0):
+            gridLineGeometry = Geometry()
+            gridLineGeometry.vertices.append(Vector3(-size, y, 0))
+            gridLineGeometry.vertices.append(Vector3(size, y, 0))
+            material = MATERIAL_GRID_MAJOR if (y % 10 == 0) else MATERIAL_GRID_MINOR
+            line = Line(gridLineGeometry, material)
+            sceneObject.add(line)
+    scene.add(sceneObject)
 
+def addFadingGrid(scene, size, boundary):
+    sceneObject = Object3D()
+    for x in range(-size-boundary, size+boundary+1):
+        for y in range(-size-boundary, size+boundary+1):
+            inside = isInsideX(x, size) and isInsideY(y, size)
+            if ((x % 10 == 0) and (y % 10 == 0) and (x != 0) and (y != 0) and  not inside):
+                addFadingGridTile(x, y, size, sceneObject)
+    scene.add(sceneObject)
+    
+def isInsideX(x, size):
+    return (x >= -size) and (x <= size)
+    
+def isInsideY(y, size):
+    return (y >= -size) and (y <= size)
+
+def addFadingGridTile(x, y, size, sceneObject):
+    fadingGridLineGeometry = Geometry()
+    fadingGridLineGeometry.vertices.append(Vector3(0,0,0))
+    fadingGridLineGeometry.vertices.append(Vector3(10,0,0))
+    dx = 0
+    if (x < -size):
+        dx = -size - x
+    elif (x > size):
+        dx = x - size
+    dy = 0
+    if (y < -size):
+        dy = -size - y
+    elif (y > size):
+        dy = y - size
+    r = sqrt(dx * dx + dy * dy)
+    opacity = 1.0 if (r == 0) else 1.0 / (r * 0.9)
+    material = LineBasicMaterial({"color": COLOR_GRID, "opacity": opacity, "transparent": True})    
+    line = Line(fadingGridLineGeometry, material)
+    line.position.x = x - 10 if (x > 0) else x
+    line.position.y = y
+    sceneObject.add(line)
+    line = Line(fadingGridLineGeometry, material)
+    line.position.x = x
+    line.position.y = y - 10 if (y > 0) else y
+    line.rotation.z = 90 * pi / 180
+    sceneObject.add(line)
+    
 # Discard the old canvas if it exists. 
 for canvas in document.getElementsByTagName("canvas"):
     canvas.parentNode.removeChild(canvas)
 
 scene = Scene()
 
+# Aspect ratio will be reset in onWindowResize
 camera  = PerspectiveCamera(30, 1.0, 1, 10000)
 camera.position.set(-15, 10, 10)
 camera.up.x = 0
@@ -70,23 +131,20 @@ camera.up.y = 0
 camera.up.z = 1
 scene.add(camera)
 
-renderer = WebGLRenderer()
+renderer = WebGLRenderer({"antialias": True})
 renderer.autoClear   = True
 renderer.gammaInput  = True
 renderer.gammaOutput = True
 renderer.setClearColor(Color(0x080808), 1.0)
+renderer.sortObjects = False
 
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-sphere = SphereGeometry(20, 32, 24)
-
-mesh = Mesh(sphere, MeshPhongMaterial({"color": 0xFFFF00, "specular": 0xFFFF00, "shininess": 100}))
-scene.add(mesh)
-
 addLights(scene)
 addAxes(scene)
 addMainGrid(scene, 60)
+addFadingGrid(scene, 60, 50)
 
 requestID = None
 progress = None
@@ -147,6 +205,7 @@ def step(timestamp):
     else:
         window.cancelAnimationFrame(requestID)
         # container.removeChild(renderer.domElement)
+        # TODO: Remove the "resize" event listener
 
 window.addEventListener("resize", onWindowResize, False)
 
