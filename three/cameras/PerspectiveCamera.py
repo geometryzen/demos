@@ -20,9 +20,6 @@ progress = None
 progressEnd = 6000
 startTime =  None
 
-init()
-animate(None)
-
 def onWindowResize():
     if (useLargeCanvas):
         camera.aspect = window.innerWidth / window.innerHeight
@@ -82,3 +79,6 @@ def terminate():
         view.parentNode.removeChild(graph)
     else:
         discardExistingCanvas()
+
+init()
+animate(None)
