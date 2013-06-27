@@ -16,7 +16,7 @@ moveRight = False
 # Global variables
 print window.devicePixelRatio
 view = document.getElementById("view")
-canvas = document.createElement("canvas")
+canvas = document.createElement("div")
 canvas.style.position = "absolute"
 canvas.style.top = "0px"
 canvas.style.left = "0px"
