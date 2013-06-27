@@ -12,6 +12,8 @@ moveRight = False
 
 # Global variables
 camera  = OrthographicCamera(-1, 1, 1, -1, -500, 1000)
+print repr(camera)
+print str(camera)
 renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
 view = document.getElementById("view")
