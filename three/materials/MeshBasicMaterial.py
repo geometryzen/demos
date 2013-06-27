@@ -28,11 +28,11 @@ material.color = 0x00FF00
 material.wireframe = True
 material.wireframeLinewidth = 2
 
-print "Construction:       " + repr(material)
-print "color:              " + str(material.color)
-print "wireframe:          " + str(material.wireframe)
-print "wireframeLinewidth: " + str(material.wireframeLinewidth)
-print str(material)
+print "repr(material)    => " + repr(material)
+print "color:               " + str(material.color)
+print "wireframe:           " + str(material.wireframe)
+print "wireframeLinewidth:  " + str(material.wireframeLinewidth)
+print "str(material)     => " + str(material)
 
 mesh = Mesh(SphereGeometry(50, 32, 24), material)
 
