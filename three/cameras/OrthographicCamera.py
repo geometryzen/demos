@@ -4,7 +4,7 @@ from browser import *
 from math import cos, sin
 from time import clock
 
-useLargeCanvas = False
+useLargeCanvas = True
 
 # Variables to track the intentions of the user.
 moveForward = False
