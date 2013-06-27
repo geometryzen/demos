@@ -4,7 +4,7 @@ from browser import *
 from math import cos, sin, floor, random
 from time import clock
 
-useLargeCanvas = True
+useLargeCanvas = False
 
 # Variables to track the intentions of the user.
 moveForward = False
