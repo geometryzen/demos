@@ -14,6 +14,7 @@ moveLeft = False
 moveRight = False
 
 # Global variables
+print window.devicePixelRatio
 view = document.getElementById("view")
 graph = document.createElement("canvas")
 graph.style.position = "absolute"
