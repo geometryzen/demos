@@ -46,5 +46,6 @@ x = Color(color)
 print "x: " + repr(x)
 
 x.setRGB(0.0, 1.0, 0.0)
+print "x: " + repr(x)
 
 
