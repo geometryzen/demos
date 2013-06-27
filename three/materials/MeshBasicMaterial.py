@@ -33,6 +33,7 @@ print "repr(material)    => " + repr(material)
 print "id:                  " + str(material.id)
 print "name:                " + material.name
 print "color:               " + str(material.color)
+print "opacity:             " + str(material.opacity)
 print "wireframe:           " + str(material.wireframe)
 print "wireframeLinewidth:  " + str(material.wireframeLinewidth)
 print "str(material)     => " + str(material)
