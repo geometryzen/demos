@@ -106,6 +106,7 @@ def render():
     context.lineTo(250, 100)
     context.fillStyle = "#D3BEA5"
     context.fill()
+    context.stroke()
 
     context.beginPath()
     context.arc(200, 100, 50, 0, pi, True)
