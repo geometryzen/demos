@@ -22,12 +22,25 @@ startTime =  None
 
 def onWindowResize():
     if (useLargeCanvas):
-        camera.aspect = window.innerWidth / window.innerHeight
+        halfW = window.innerWidth / 2
+        halfH = window.innerHeight / 2
+        
+        camera.left   = -halfW
+        camera.right  =  halfW
+        camera.top    =  halfH
+        camera.bottom = -halfH
+        
         camera.updateProjectionMatrix()
-        renderer.size = (window.innerWidth, window.innerHeight)
+        renderer.setSize(window.innerWidth, window.innerHeight)
     else:
         container = document.getElementById("canvas-container")
-        camera.aspect = container.clientWidth / container.clientHeight
+        halfW = container.clientWidth / 2
+        halfH = container.clientHeight / 2
+        
+        camera.left   = -halfW
+        camera.right  =  halfW
+        camera.top    =  halfH
+        camera.bottom = -halfH
         camera.updateProjectionMatrix()
         renderer.setSize(container.clientWidth, container.clientHeight)
     
