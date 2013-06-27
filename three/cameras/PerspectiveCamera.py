@@ -11,7 +11,7 @@ moveLeft = False
 moveRight = False
 
 # Global variables
-camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
+camera  = OrthographicCamera(-1, 1, 1, -1, -500, 1000)
 renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
 view = document.getElementById("view")
