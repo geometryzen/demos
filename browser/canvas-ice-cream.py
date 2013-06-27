@@ -113,8 +113,8 @@ def render():
     context.fillStyle = "#FB6CF9"
     context.fill()
 
-    context.closePath()
-    context.stroke()
+    #context.closePath()
+    #context.stroke()
 
 def animate(timestamp):
     global requestID, progress, startTime
