@@ -18,6 +18,10 @@ graph = document.createElement("canvas")
 graph.style.position = "absolute"
 graph.style.top = "0px"
 graph.style.left = "0px"
+graph.width = 400
+graph.height = 400
+graph.style.width = str(graph.width) + "px"
+graph.style.height = str(graph.height) + "px"
 context = graph.getContext("2d")
 
 # Use Python's dictionary to handle event.keyCode(s).
