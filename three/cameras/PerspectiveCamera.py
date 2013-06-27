@@ -16,23 +16,6 @@ renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
 view = document.getElementById("view")
 
-# Use Python's dictionary to handle event.keyCode(s).
-def escKey(downFlag):
-    terminate()
-
-keyHandlers = {
- 27: escKey
-}
-    
-    
-def onDocumentKeyDown(event):
-    event.preventDefault()
-    keyHandlers[event.keyCode](True)
-
-def onDocumentKeyUp(event):
-    event.preventDefault()
-    keyHandlers[event.keyCode](False)
-
 def onWindowResize():
     if (useLargeCanvas):
         camera.aspect = window.innerWidth / window.innerHeight
@@ -67,9 +50,6 @@ def init():
 
     mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
     scene.add(mesh)
-    
-    document.addEventListener("keydown", onDocumentKeyDown, False)
-    document.addEventListener("keyup", onDocumentKeyUp, False)
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
@@ -100,8 +80,6 @@ def terminate():
         view.parentNode.removeChild(graph)
     else:
         discardExistingCanvas()
-    document.removeEventListener("keydown", onDocumentKeyDown, False)
-    document.removeEventListener("keyup", onDocumentKeyUp, False)
 
 init()
 animate(None)
