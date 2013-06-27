@@ -26,7 +26,7 @@ material.wireframeLinewidth = 2
 material.name = "greenie"
 
 print "repr(material)    => " + repr(material)
-print "id:                  " + str(material.id)
+#print "id:                  " + str(material.id)
 print "name:                " + material.name
 print "color:               " + str(material.color)
 print "needsUpdate:         " + str(material.needsUpdate)
