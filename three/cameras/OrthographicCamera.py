@@ -73,7 +73,12 @@ def init():
         geometry.vertices.append(Vector3(+size, 0, i))
         geometry.vertices.append(Vector3( i, 0, -size))
         geometry.vertices.append(Vector3( i, 0, +size))
-        print i
+        
+    material = LineBasicMaterial({"color":0x000000,"opacity":0.2})
+    
+    line = Line(geometry, material)
+    line.type = LinePieces
+    scene.add(line)
 
     mesh = Mesh(CubeGeometry(100.0, 100.0, 100.0), MeshNormalMaterial())
     scene.add(mesh)
