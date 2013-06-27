@@ -6,7 +6,7 @@ from browser import *
 # Convenince variable controlling whether we embed in the existing canvas container
 # or create a nearly full screen canvas
 useLargeCanvas = False
-CANVAS_TAGNAME = "div"
+CANVAS_TAGNAME = "canvas"
 
 # Variables to track the intentions of the user.
 moveForward = False
