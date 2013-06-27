@@ -11,6 +11,7 @@ scene = Scene()
 
 camera  = PerspectiveCamera(35, 1.0, 0.1, 10000)
 camera.position.set(-15, 10, 10)
+camera.lookAt(scene.position)
 
 light = PointLight(0xFFFFFF)
 light.position.set(20, 20, 20)
