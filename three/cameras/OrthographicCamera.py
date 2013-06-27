@@ -19,7 +19,7 @@ camera.position.x = 200
 camera.position.y = 100
 camera.position.z = 200
 renderer = WebGLRenderer({"antialias": True})
-renderer.setClearColor(Color(0x080808), 1.0)
+renderer.setClearColor(Color(0xFFFFFF), 1.0)
 scene = Scene()
 view = document.getElementById("view")
 requestID = None
