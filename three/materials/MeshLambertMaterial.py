@@ -35,7 +35,7 @@ print "repr(material)    => " + repr(material)
 #print "transparent:         " + str(material.transparent)
 #print "visible:             " + str(material.visible)
 #print "wireframe:           " + str(material.wireframe)
-print "wireframeLinewidth:  " + str(material.wireframeLinewidth)
+#print "wireframeLinewidth:  " + str(material.wireframeLinewidth)
 print "str(material)     => " + str(material)
 
 mesh = Mesh(CubeGeometry(50, 50, 50), material)
