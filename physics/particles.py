@@ -135,6 +135,6 @@ def terminate():
     document.removeEventListener("keyup", onDocumentKeyUp, False)
 
 print "ESC to terminate"
-print "This program will self-destruct in "+str(progressEnd)+" seconds."
+print "This program will self-destruct in "+str(progressEnd/1000)+" seconds."
 init()
 animate(None)
