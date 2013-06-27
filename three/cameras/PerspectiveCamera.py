@@ -15,6 +15,13 @@ camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
 view = document.getElementById("view")
+requestID = None
+progress = None
+progressEnd = 6000
+startTime =  None
+
+init()
+animate(None)
 
 def onWindowResize():
     if (useLargeCanvas):
@@ -30,11 +37,6 @@ def onWindowResize():
 def discardExistingCanvas():
     for cs in document.getElementsByTagName("canvas"):
         cs.parentNode.removeChild(cs)
-        
-requestID = None
-progress = None
-progressEnd = 6000
-startTime =  None
 
 def init():
     discardExistingCanvas()
@@ -80,6 +82,3 @@ def terminate():
         view.parentNode.removeChild(graph)
     else:
         discardExistingCanvas()
-
-init()
-animate(None)
