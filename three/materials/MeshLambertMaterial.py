@@ -28,7 +28,7 @@ material.name = "greenie"
 print "repr(material)    => " + repr(material)
 #print "id:                  " + str(material.id)
 #print "name:                " + material.name
-print "color:               " + str(material.color)
+#print "color:               " + str(material.color)
 print "needsUpdate:         " + str(material.needsUpdate)
 print "opacity:             " + str(material.opacity)
 print "overdraw:            " + str(material.overdraw)
