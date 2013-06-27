@@ -1,13 +1,10 @@
-# Under Construction.
 # HTML5 Canvas demonstration.
-# We will control the horizontal. We will control the vertical.
 from browser import *
 from math import pi
 
 # Convenince variable controlling whether we embed in the existing canvas container
 # or create a nearly full screen canvas
 useLargeCanvas = False
-CANVAS_TAGNAME = "canvas"
 
 # Variables to track the intentions of the user.
 moveForward = False
@@ -17,7 +14,7 @@ moveRight = False
 
 # Global variables
 view = document.getElementById("view")
-canvas = document.createElement(CANVAS_TAGNAME)
+canvas = document.createElement("canvas")
 canvas.width = 400 * window.devicePixelRatio
 canvas.height = 400 * window.devicePixelRatio
 context = canvas.getContext("2d")
@@ -50,7 +47,6 @@ keyHandlers = {
  40: downArrowKey
 }
     
-    
 def onDocumentKeyDown(event):
     if (event.keyCode in keyHandlers):
         keyHandlers[event.keyCode](True)
@@ -75,7 +71,7 @@ def onWindowResize():
         canvas.style.height = str(container.clientHeight) + "px"
     
 def discardExistingCanvas():
-    for es in document.getElementsByTagName(CANVAS_TAGNAME):
+    for es in document.getElementsByTagName("canvas"):
         es.parentNode.removeChild(es)
         
 requestID = None
