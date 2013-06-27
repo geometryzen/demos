@@ -24,7 +24,7 @@ container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
 material = MeshBasicMaterial({"color":0x00FF00, "wireframe":False})
-material.color = 0x00FF00
+material.color = "0x00FF00"
 material.wireframe = True
 material.wireframeLinewidth = 2
 
