@@ -2,7 +2,7 @@
 from three import *
 from browser import *
 
-useLargeCanvas = True
+useLargeCanvas = False
 
 # Variables to track the intentions of the user.
 moveForward = False
@@ -33,7 +33,7 @@ def discardExistingCanvas():
         
 requestID = None
 progress = None
-progressEnd = 60000
+progressEnd = 6000
 startTime =  None
 
 def init():
