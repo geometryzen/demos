@@ -55,20 +55,14 @@ keyHandlers = {
     
     
 def onDocumentKeyDown(event):
-    try:
-        if (event.keyCode in keyHandlers):
-            keyHandlers[event.keyCode](True)
-            event.preventDefault()
-    except:
-        return        
+    if (event.keyCode in keyHandlers):
+        keyHandlers[event.keyCode](True)
+        event.preventDefault()
 
 def onDocumentKeyUp(event):
-    try:
-        if (event.keyCode in keyHandlers):
-            keyHandlers[event.keyCode](False)
-            event.preventDefault()
-    except:
-        return
+    if (event.keyCode in keyHandlers):
+        keyHandlers[event.keyCode](False)
+        event.preventDefault()
 
 def onWindowResize():
     if (useLargeCanvas):
