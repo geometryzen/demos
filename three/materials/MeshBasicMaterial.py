@@ -1,6 +1,5 @@
-# MeshBasicMaterial.py
+# MeshBasicMaterial demonstration.
 from three import *
-# We will control the horizontal. We will control the vertical.
 from browser import *
 from math import pi
 
@@ -10,7 +9,6 @@ for canvas in document.getElementsByTagName("canvas"):
 
 scene = Scene()
 
-# Aspect ratio will be reset in onWindowResize
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 100
 
