@@ -59,18 +59,12 @@ def onDocumentKeyUp(event):
 
 def onWindowResize():
     if (useLargeCanvas):
-        camera.aspect = window.innerWidth / window.innerHeight
-        camera.updateProjectionMatrix()
-        renderer.size = (window.innerWidth, window.innerHeight)
         graph.width = window.innerWidth
         graph.height = window.innerHeight
         graph.style.width = str(window.innerWidth) + "px"
         graph.style.height = str(window.innerHeight) + "px"
     else:
         container = document.getElementById("canvas-container")
-        camera.aspect = container.clientWidth / container.clientHeight
-        camera.updateProjectionMatrix()
-        renderer.setSize(container.clientWidth, container.clientHeight)
         graph.width = container.clientWidth
         graph.height = container.clientHeight
         graph.style.width = str(container.clientWidth) + "px"
@@ -90,18 +84,11 @@ def init():
     if (useLargeCanvas):
         container = document.createElement("div")
         document.body.appendChild(container)
-        view.parentNode.insertBefore(renderer.domElement, view)
         view.parentNode.insertBefore(graph, view)
     else:
         container = document.getElementById("canvas-container")
         container.appendChild(graph)
-        container.appendChild(renderer.domElement)
 
-    camera.position.z = 2
-
-    mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
-    scene.add(mesh)
-    
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
 
@@ -109,15 +96,6 @@ def init():
     onWindowResize()
 
 def render():
-    if (moveForward):
-        camera.position.z -= 0.02
-    if (moveBackward):
-        camera.position.z += 0.02
-    if (moveLeft):
-        camera.position.x -= 0.02
-    if (moveRight):
-        camera.position.x += 0.02
-        
     context.setTransform(1, 0, 0, 1, 200, 200)
     context.fillStyle = "#FF66CC"
     context.strokeStyle = "#808080" 
@@ -143,8 +121,6 @@ def render():
 
     context.closePath()
     context.stroke()
-      
-    renderer.render(scene, camera)
     
 def animate(timestamp):
     global requestID, progress, startTime
