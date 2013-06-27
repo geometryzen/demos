@@ -61,7 +61,9 @@ def init():
         container = document.getElementById("canvas-container")
         container.appendChild(renderer.domElement)
 
-    camera.position.z = 2
+    camera.position.x = 200
+    camera.position.y = 100
+    camera.position.z = 200
 
     mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
     scene.add(mesh)
