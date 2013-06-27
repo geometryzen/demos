@@ -114,7 +114,7 @@ def render():
     context.fill()
 
     #context.closePath()
-    #context.stroke()
+    context.stroke()
 
 def animate(timestamp):
     global requestID, progress, startTime
