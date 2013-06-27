@@ -27,6 +27,7 @@ material = MeshBasicMaterial({"color":0x00FF00, "wireframe":False})
 material.color = 0x00FF00
 material.wireframe = True
 material.wireframeLinewidth = 2
+material.name = "greenie"
 
 print "repr(material)    => " + repr(material)
 print "id:                  " + str(material.id)
