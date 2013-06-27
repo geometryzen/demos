@@ -29,7 +29,7 @@ material.wireframe = True
 material.wireframeLinewidth = 2
 material.name = "greenie"
 material.opacity = 1
-material.transparent = True
+material.transparent = False
 
 print "repr(material)    => " + repr(material)
 print "id:                  " + str(material.id)
