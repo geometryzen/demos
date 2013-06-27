@@ -21,7 +21,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-material = MeshBasicMaterial({"color":0x00FF00, "wireframe":True})
+material = MeshLambertMaterial({"color":0x00FF00, "wireframe":True})
 material.wireframeLinewidth = 2
 material.name = "greenie"
 
@@ -38,7 +38,7 @@ print "wireframe:           " + str(material.wireframe)
 print "wireframeLinewidth:  " + str(material.wireframeLinewidth)
 print "str(material)     => " + str(material)
 
-mesh = Mesh(SphereGeometry(50, 32, 24), material)
+mesh = Mesh(CubeGeometry(50, 50, 50), material)
 
 scene.add(mesh)
 
