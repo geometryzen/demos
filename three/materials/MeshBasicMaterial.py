@@ -26,6 +26,7 @@ container.appendChild(renderer.domElement)
 material = MeshBasicMaterial({"color":0x00FF00, "wireframe":False})
 material.color = 0x00FF00
 material.wireframe = True
+material.wireframeLinewidth = 4
 
 print repr(material)
 print "color:         " + str(material.color)
