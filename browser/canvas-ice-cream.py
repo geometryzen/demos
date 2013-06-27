@@ -2,6 +2,7 @@
 # HTML5 Canvas demonstration.
 # We will control the horizontal. We will control the vertical.
 from browser import *
+from math import pi
 
 # Convenince variable controlling whether we embed in the existing canvas container
 # or create a nearly full screen canvas
@@ -104,6 +105,11 @@ def render():
     context.lineTo(200, 225)
     context.lineTo(250, 100)
     context.fillStyle = "#D3BEA5"
+    context.fill()
+
+    context.beginPath()
+    context.arc(200, 100, 50, 0, pi, True)
+    context.fillStyle = "#FB6CF9"
     context.fill()
 
     context.closePath()
