@@ -31,7 +31,7 @@ def onWindowResize():
         camera.right  =  halfW
         camera.top    =  halfH
         camera.bottom = -halfH
-        
+        print repr(camera)
         camera.updateProjectionMatrix()
         renderer.setSize(window.innerWidth, window.innerHeight)
     else:
@@ -43,6 +43,7 @@ def onWindowResize():
         camera.right  =  halfW
         camera.top    =  halfH
         camera.bottom = -halfH
+        print repr(camera)
         camera.updateProjectionMatrix()
         renderer.setSize(container.clientWidth, container.clientHeight)
     
