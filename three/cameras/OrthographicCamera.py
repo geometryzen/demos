@@ -64,7 +64,7 @@ def init():
         container = document.getElementById("canvas-container")
         container.appendChild(renderer.domElement)
 
-    mesh = Mesh(CubeGeometry(10.0, 10.0, 10.0), MeshNormalMaterial())
+    mesh = Mesh(CubeGeometry(100.0, 100.0, 100.0), MeshNormalMaterial())
     scene.add(mesh)
 
     window.addEventListener("resize", onWindowResize, False)
