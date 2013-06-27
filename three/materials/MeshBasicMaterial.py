@@ -29,7 +29,7 @@ material.wireframe = True
 
 print repr(material)
 print "color:         " + str(material.color)
-#print "gammaInput:        " + str(renderer.gammaInput)
+print "wireframe:     " + str(material.wireframe)
 #print "gammaOutput:       " + str(renderer.gammaOutput)
 #print "getClearColor():   " + str(renderer.getClearColor())
 print str(material)
