@@ -26,6 +26,7 @@ container.appendChild(renderer.domElement)
 material = MeshBasicMaterial({"color":0x00FF00, "wireframe":True})
 material.wireframeLinewidth = 2
 material.name = "greenie"
+material.overdraw = True
 
 print "repr(material)    => " + repr(material)
 print "id:                  " + str(material.id)
