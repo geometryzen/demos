@@ -1,6 +1,8 @@
 # OrthographicCamera.py
 from three import *
 from browser import *
+from math import cos, sin
+from time import clock
 
 useLargeCanvas = False
 
@@ -87,6 +89,8 @@ def init():
     onWindowResize()
 
 def render():
+    time = clock()
+    print time
     renderer.render(scene, camera)
     
 def animate(timestamp):
