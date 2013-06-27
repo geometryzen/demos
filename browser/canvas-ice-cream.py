@@ -24,7 +24,7 @@ graph.width = 400
 graph.height = 400
 graph.style.width = str(graph.width) + "px"
 graph.style.height = str(graph.height) + "px"
-context = graph.getContext("2d")
+context = graph.getContext("experimental-webgl")
 
 # Use Python's dictionary to handle event.keyCode(s).
 def escKey(downFlag):
@@ -104,6 +104,7 @@ def init():
     onWindowResize()
 
 def render():
+'''
     context.setTransform(1, 0, 0, 1, 200, 200)
     context.fillStyle = "#FF66CC"
     context.strokeStyle = "#808080" 
@@ -129,7 +130,7 @@ def render():
 
     context.closePath()
     context.stroke()
-    
+'''    
 def animate(timestamp):
     global requestID, progress, startTime
     if (startTime):
