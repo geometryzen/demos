@@ -63,8 +63,13 @@ def init():
     else:
         container = document.getElementById("canvas-container")
         container.appendChild(renderer.domElement)
-        
-    for i in range(-500, 550, 50):
+
+    # Grid
+    size = 500
+    step = 50
+    geometry = Geometry()
+    for i in range(-size, size+step, step):
+        geometry.vertices.append(Vector3(-size, 0, i))
         print i
 
     mesh = Mesh(CubeGeometry(100.0, 100.0, 100.0), MeshNormalMaterial())
