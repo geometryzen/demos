@@ -26,7 +26,7 @@ container.appendChild(renderer.domElement)
 material = MeshBasicMaterial({"color":0x0000FF, "wireframe":True})
 
 print repr(material)
-#print "autoClear:         " + str(renderer.autoClear)
+print "color:         " + str(material.color)
 #print "gammaInput:        " + str(renderer.gammaInput)
 #print "gammaOutput:       " + str(renderer.gammaOutput)
 #print "getClearColor():   " + str(renderer.getClearColor())
