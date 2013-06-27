@@ -67,14 +67,14 @@ def onDocumentKeyUp(event):
 
 def onWindowResize():
     if (useLargeCanvas):
-        canvas.width = window.innerWidth
-        canvas.height = window.innerHeight
+        canvas.width = window.innerWidth * window.devicePixelRatio
+        canvas.height = window.innerHeight * window.devicePixelRatio
         canvas.style.width = str(window.innerWidth) + "px"
         canvas.style.height = str(window.innerHeight) + "px"
     else:
         container = document.getElementById("canvas-container")
-        canvas.width = container.clientWidth
-        canvas.height = container.clientHeight
+        canvas.width = container.clientWidth * window.devicePixelRatio
+        canvas.height = container.clientHeight * window.devicePixelRatio
         canvas.style.width = str(container.clientWidth) + "px"
         canvas.style.height = str(container.clientHeight) + "px"
     
