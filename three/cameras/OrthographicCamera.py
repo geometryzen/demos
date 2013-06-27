@@ -100,6 +100,13 @@ def init():
     directionalLight.position.z = random() - 0.5
     directionalLight.position.normalize()
     scene.add(directionalLight)
+    
+    directionalLight = DirectionalLight(random() * 0xFFFFFF)
+    directionalLight.position.x = random() - 0.5
+    directionalLight.position.y = random() - 0.5
+    directionalLight.position.z = random() - 0.5
+    directionalLight.position.normalize()
+    scene.add(directionalLight)
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
