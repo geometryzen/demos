@@ -67,20 +67,20 @@ def onDocumentKeyUp(event):
 
 def onWindowResize():
     if (useLargeCanvas):
-        graph.width = window.innerWidth
-        graph.height = window.innerHeight
-        graph.style.width = str(window.innerWidth) + "px"
-        graph.style.height = str(window.innerHeight) + "px"
+        canvas.width = window.innerWidth
+        canvas.height = window.innerHeight
+        canvas.style.width = str(window.innerWidth) + "px"
+        canvas.style.height = str(window.innerHeight) + "px"
     else:
         container = document.getElementById("canvas-container")
-        graph.width = container.clientWidth
-        graph.height = container.clientHeight
-        graph.style.width = str(container.clientWidth) + "px"
-        graph.style.height = str(container.clientHeight) + "px"
+        canvas.width = container.clientWidth
+        canvas.height = container.clientHeight
+        canvas.style.width = str(container.clientWidth) + "px"
+        canvas.style.height = str(container.clientHeight) + "px"
     
 def discardExistingCanvas():
-    for canvas in document.getElementsByTagName("canvas"):
-        canvas.parentNode.removeChild(canvas)
+    for es in document.getElementsByTagName("canvas"):
+        es.parentNode.removeChild(es)
         
 requestID = None
 progress = None
