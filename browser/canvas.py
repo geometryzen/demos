@@ -99,7 +99,7 @@ def init():
     else:
         container = document.getElementById("canvas-container")
         container.appendChild(graph)
-        #container.appendChild(renderer.domElement)
+        container.appendChild(renderer.domElement)
 
     camera.position.z = 2
 
