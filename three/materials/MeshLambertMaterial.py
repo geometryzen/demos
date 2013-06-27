@@ -12,6 +12,10 @@ scene = Scene()
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 100
 
+light = PointLight(0xFFFFFF)
+light.position.set(20, 20, 20)
+scene.add(light)
+
 renderer = WebGLRenderer()
 renderer.autoClear   = True
 renderer.gammaInput  = True
