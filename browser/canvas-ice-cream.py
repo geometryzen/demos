@@ -24,7 +24,7 @@ canvas = document.createElement(CANVAS_TAGNAME)
 #canvas.height = 400
 #canvas.style.width = str(canvas.width) + "px"
 #canvas.style.height = str(canvas.height) + "px"
-#context = canvas.getContext("experimental-webgl")
+context = canvas.getContext("2d")
 
 # Use Python's dictionary to handle event.keyCode(s).
 def escKey(downFlag):
