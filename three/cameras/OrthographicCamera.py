@@ -85,7 +85,7 @@ def init():
     for i in range(0, 100):
         cube = Mesh(geometry, material)
         cube.scale.y = floor(random() * 2 + 1)
-        cube.position.x = floor((random() * 1000 - 500) / 50) * 50 + 25
+#       cube.position.x = floor((random() * 1000 - 500) / 50) * 50 + 25
 #		cube.position.y = (cube.scale.y * 50) / 2
 #		cube.position.z = floor((random() * 1000 - 500) / 50) * 50 + 25
 		scene.add(cube)
