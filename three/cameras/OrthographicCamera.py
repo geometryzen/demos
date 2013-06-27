@@ -89,6 +89,10 @@ def init():
         cube.position.y = (cube.scale.y * 50) / 2
         cube.position.z = floor((random() * 1000 - 500) / 50) * 50 + 25
         scene.add(cube)
+        
+    # Lights
+    ambientLight = AmbientLight(random() * 0x10)
+    scene.add(ambientLight)
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
