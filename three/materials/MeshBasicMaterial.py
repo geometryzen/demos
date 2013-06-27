@@ -23,7 +23,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-material = MeshBasicMaterial()
+material = MeshBasicMaterial({"color":0x0000FF})
 
 print repr(material)
 #print "autoClear:         " + str(renderer.autoClear)
