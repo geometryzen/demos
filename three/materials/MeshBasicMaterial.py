@@ -29,6 +29,7 @@ material.wireframe = True
 material.wireframeLinewidth = 2
 
 print "repr(material)    => " + repr(material)
+print "id   .  .  .  .  . : " + str(material.color)
 print "color:               " + str(material.color)
 print "wireframe:           " + str(material.wireframe)
 print "wireframeLinewidth:  " + str(material.wireframeLinewidth)
