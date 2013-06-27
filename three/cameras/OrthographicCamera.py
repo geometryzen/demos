@@ -17,8 +17,6 @@ camera  = OrthographicCamera(-1, 1, 1, -1, -500, 1000)
 camera.position.x = 200
 camera.position.y = 100
 camera.position.z = 200
-print repr(camera)
-print str(camera)
 renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
 view = document.getElementById("view")
@@ -36,7 +34,6 @@ def onWindowResize():
         camera.right  =  halfW
         camera.top    =  halfH
         camera.bottom = -halfH
-        print repr(camera)
         camera.updateProjectionMatrix()
         renderer.setSize(window.innerWidth, window.innerHeight)
     else:
@@ -48,7 +45,6 @@ def onWindowResize():
         camera.right  =  halfW
         camera.top    =  halfH
         camera.bottom = -halfH
-        print repr(camera)
         camera.updateProjectionMatrix()
         renderer.setSize(container.clientWidth, container.clientHeight)
     
