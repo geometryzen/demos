@@ -72,13 +72,13 @@ def onWindowResize():
         graph.style.height = str(window.innerHeight) + "px"
     else:
         container = document.getElementById("canvas-container")
-        #camera.aspect = container.clientWidth / container.clientHeight
-        #camera.updateProjectionMatrix()
-        #renderer.setSize(container.clientWidth, container.clientHeight)
-        #graph.width = container.clientWidth
-        #graph.height = container.clientHeight
-        #graph.style.width = str(container.clientWidth) + "px"
-        #graph.style.height = str(container.clientHeight) + "px"
+        camera.aspect = container.clientWidth / container.clientHeight
+        camera.updateProjectionMatrix()
+        renderer.setSize(container.clientWidth, container.clientHeight)
+        graph.width = container.clientWidth
+        graph.height = container.clientHeight
+        graph.style.width = str(container.clientWidth) + "px"
+        graph.style.height = str(container.clientHeight) + "px"
     
 def discardExistingCanvas():
     for canvas in document.getElementsByTagName("canvas"):
