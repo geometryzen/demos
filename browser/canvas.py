@@ -1,5 +1,4 @@
-# Under Construction.
-# browser/canvas.py
+# HTML5 (2D) Canvas coexisting with a WebGL canvas.
 from three import *
 # We will control the horizontal. We will control the vertical.
 from browser import *
