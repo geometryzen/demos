@@ -88,7 +88,7 @@ def init():
         # cube.position.x = floor((random() * 1000 - 500) / 50) * 50 + 25
         # cube.position.y = (cube.scale.y * 50) / 2
         # cube.position.z = floor((random() * 1000 - 500) / 50) * 50 + 25
-		scene.add(cube)
+        scene.add(cube)
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
