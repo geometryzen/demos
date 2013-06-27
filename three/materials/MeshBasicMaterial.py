@@ -23,7 +23,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-material = MeshBasicMaterial({"color":0x0000FF, "wireframe":False})
+material = MeshBasicMaterial({"color":0x00FF00, "wireframe":False})
 material.color = 0x00FF00
 material.wireframe = True
 
