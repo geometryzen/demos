@@ -56,14 +56,14 @@ keyHandlers = {
     
 def onDocumentKeyDown(event):
     event.preventDefault()
-    try
+    try:
         keyHandlers[event.keyCode](True)
     except:
         # Ignore
 
 def onDocumentKeyUp(event):
     event.preventDefault()
-    try
+    try:
         keyHandlers[event.keyCode](False)
     except:
         # Ignore
