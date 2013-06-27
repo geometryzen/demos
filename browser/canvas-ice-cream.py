@@ -16,15 +16,15 @@ moveRight = False
 # Global variables
 print window.devicePixelRatio
 view = document.getElementById("view")
-graph = document.createElement("canvas")
-graph.style.position = "absolute"
-graph.style.top = "0px"
-graph.style.left = "0px"
-graph.width = 400
-graph.height = 400
-graph.style.width = str(graph.width) + "px"
-graph.style.height = str(graph.height) + "px"
-context = graph.getContext("experimental-webgl")
+canvas = document.createElement("canvas")
+canvas.style.position = "absolute"
+canvas.style.top = "0px"
+canvas.style.left = "0px"
+canvas.width = 400
+canvas.height = 400
+canvas.style.width = str(graph.width) + "px"
+canvas.style.height = str(graph.height) + "px"
+context = canvas.getContext("experimental-webgl")
 
 # Use Python's dictionary to handle event.keyCode(s).
 def escKey(downFlag):
@@ -151,8 +151,7 @@ def animate(timestamp):
 def terminate():
     window.cancelAnimationFrame(requestID)
     if (useLargeCanvas):
-        view.parentNode.removeChild(renderer.domElement)
-        view.parentNode.removeChild(graph)
+        view.parentNode.removeChild(canvas)
     else:
         discardExistingCanvas()
     document.removeEventListener("keydown", onDocumentKeyDown, False)
