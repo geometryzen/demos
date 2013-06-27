@@ -1,6 +1,5 @@
 # Demonstrates manipulating the document object model to make a canvas near full-screen.
 from three import *
-# We will control the horizontal. We will control the vertical.
 from browser import *
 
 container = document.createElement("div")
@@ -8,7 +7,6 @@ document.body.appendChild(container)
 
 scene = Scene()
 
-# Aspect ratio will be reset in onWindowResize
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 2
 
@@ -22,7 +20,7 @@ scene.add(mesh)
 
 requestID = None
 progress = None
-progressEnd = 20000 # run for 10 seconds
+progressEnd = 20000
 startTime =  None
 
 def render():
