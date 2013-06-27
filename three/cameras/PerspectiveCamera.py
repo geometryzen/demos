@@ -79,6 +79,7 @@ def terminate():
         view.parentNode.removeChild(graph)
     else:
         discardExistingCanvas()
+    print "Goodbye!"
 
 print "This example will end automatically in "+str(progressEnd/1000)+" seconds."
 init()
