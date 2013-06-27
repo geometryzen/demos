@@ -89,8 +89,12 @@ def init():
     onWindowResize()
 
 def render():
-    time = clock()
-    print time
+    theta = clock() * 0.1
+    
+    camera.position.x = cos(theta) * 200
+    camera.position.z = sin(theta) * 200
+    camera.lookAt(scene.position)
+    
     renderer.render(scene, camera)
     
 def animate(timestamp):
