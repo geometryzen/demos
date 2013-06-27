@@ -13,6 +13,9 @@ camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.set(10, 10, 10)
 camera.lookAt(scene.position)
 
+ambientLight = AmbientLight(0x111111)
+scene.add(ambientLight)
+
 pointLight = PointLight(0xFFFFFF)
 pointLight.position.set(20, 20, 20)
 scene.add(pointLight)
