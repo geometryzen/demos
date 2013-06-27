@@ -103,7 +103,7 @@ def init():
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
 
-def render()
+def render():
     x = 1
 '''
     context.setTransform(1, 0, 0, 1, 200, 200)
