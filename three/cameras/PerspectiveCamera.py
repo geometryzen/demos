@@ -80,5 +80,6 @@ def terminate():
     else:
         discardExistingCanvas()
 
+print "This example will end automatically in "+str(progressEnd/1000)+" seconds."
 init()
 animate(None)
