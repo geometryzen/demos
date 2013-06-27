@@ -29,10 +29,9 @@ material.wireframe = True
 material.wireframeLinewidth = 4
 
 print repr(material)
-print "color:         " + str(material.color)
-print "wireframe:     " + str(material.wireframe)
-#print "gammaOutput:       " + str(renderer.gammaOutput)
-#print "getClearColor():   " + str(renderer.getClearColor())
+print "color:              " + str(material.color)
+print "wireframe:          " + str(material.wireframe)
+print "wireframeLinewidth: " + str(material.wireframeLinewidth)
 print str(material)
 
 mesh = Mesh(SphereGeometry(50, 32, 24), material)
