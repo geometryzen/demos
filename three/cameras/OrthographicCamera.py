@@ -1,7 +1,7 @@
 # OrthographicCamera.py
 from three import *
 from browser import *
-from math import cos, sin
+from math import cos, sin, floor, random
 from time import clock
 
 useLargeCanvas = False
