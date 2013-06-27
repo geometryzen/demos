@@ -30,7 +30,7 @@ material = MeshLambertMaterial({"color":0x0000FF})
 material.name = "bluecube"
 
 print "repr(material)    => " + repr(material)
-#print "id:                  " + str(material.id)
+print "id:                  " + str(material.id)
 #print "name:                " + material.name
 #print "color:               " + str(material.color)
 #print "needsUpdate:         " + str(material.needsUpdate)
