@@ -15,7 +15,6 @@ moveLeft = False
 moveRight = False
 
 # Global variables
-print window.devicePixelRatio
 view = document.getElementById("view")
 canvas = document.createElement(CANVAS_TAGNAME)
 canvas.style.position = "absolute"
