@@ -113,7 +113,7 @@ def render():
     context.fillStyle = "#FB6CF9"
     context.fill()
 
-    #context.closePath()
+    context.closePath()
     context.stroke()
 
 def animate(timestamp):
