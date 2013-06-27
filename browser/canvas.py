@@ -81,8 +81,8 @@ def onWindowResize():
         graph.style.height = str(container.clientHeight) + "px"
     
 def discardExistingCanvas():
-    for canvas in document.getElementsByTagName("canvas"):
-        canvas.parentNode.removeChild(canvas)
+    for cs in document.getElementsByTagName("canvas"):
+        cs.parentNode.removeChild(cs)
         
 requestID = None
 progress = None
