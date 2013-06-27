@@ -77,9 +77,10 @@ def init():
     line = Line(geometry, material)
     line.type = LinePieces
     scene.add(line)
-
-    mesh = Mesh(CubeGeometry(100.0, 100.0, 100.0), MeshNormalMaterial())
-    scene.add(mesh)
+    
+    # Cubes
+    geometry = CubeGeometry(50, 50, 50)
+    material = MeshLambertMaterial({"color":0xFFFFFF,"shading":FlatShading, "overdraw":True})
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
