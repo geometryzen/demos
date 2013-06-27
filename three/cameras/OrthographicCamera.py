@@ -11,7 +11,7 @@ moveLeft = False
 moveRight = False
 
 # Global variables
-camera  = OrthographicCamera(-1, 1, 1, -1, -500, 1000)
+camera  = OrthographicCamera(-1, 1, 1, -1, 0.1, 1000)
 camera.position.x = 200
 camera.position.y = 100
 camera.position.z = 200
