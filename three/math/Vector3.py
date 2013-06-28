@@ -42,6 +42,7 @@ print a.getComponent(1)
 print a.getComponent(2)
 
 print a.set(3,5,7)
+print a
 
 b = a.clone()
 a.set(4,7,9)
