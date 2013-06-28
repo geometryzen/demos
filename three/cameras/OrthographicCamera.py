@@ -6,12 +6,6 @@ from time import clock
 
 useLargeCanvas = True
 
-# Variables to track the intentions of the user.
-moveForward = False
-moveBackward = False
-moveLeft = False
-moveRight = False
-
 # Global variables
 camera  = OrthographicCamera(-1, 1, 1, -1, -500, 1000)
 camera.position.x = 200
