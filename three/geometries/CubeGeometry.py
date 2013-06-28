@@ -9,7 +9,6 @@ for canvas in document.getElementsByTagName("canvas"):
 
 scene = Scene()
 
-# Aspect ratio will be reset in onWindowResize
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 20
 
@@ -71,7 +70,6 @@ def step(timestamp):
     else:
         window.cancelAnimationFrame(requestID)
         # container.removeChild(renderer.domElement)
-        # TODO: Remove the "resize" event listener
 
 window.addEventListener("resize", onWindowResize, False)
 
