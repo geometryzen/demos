@@ -1,4 +1,4 @@
 # Line demonstration
-from three import *
+from eight import *
 
 line = Line()
