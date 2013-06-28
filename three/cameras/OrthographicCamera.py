@@ -1,5 +1,5 @@
 # OrthographicCamera demonstration.
-from eight import *
+from three import *
 from browser import *
 from math import cos, sin, floor, random
 from time import clock
@@ -23,7 +23,7 @@ scene = Scene()
 view = document.getElementById("view")
 requestID = None
 progress = None
-progressEnd = 15000
+progressEnd = 10000
 startTime =  None
 
 def onWindowResize():
