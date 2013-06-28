@@ -29,12 +29,12 @@ print "repr(Vector3(0,0,0)) => " + repr(Vector3(0,0,0))
 print "Vector3() => " + str(Vector3())
 
 # The setX, setY and setZ methods are chainable.
-print a.setX(4).setY(7).setZ(1)
+print a.setX(4).setY(7).setZ(9)
 
 # setComponent(index, value) and getComponent(index)
 a.setComponent(0, 4.4)
 a.setComponent(1, 7.7)
-a.setComponent(2, 1.1)
+a.setComponent(2, 9.9)
 print a
 
 print a.getComponent(0)
@@ -42,6 +42,9 @@ print a.getComponent(1)
 print a.getComponent(2)
 
 print a.set(3,5,7)
+
+b = a.clone()
+a.set(4,7,9)
 
 # Linear Algebra
 i = Vector3(1,0,0)
