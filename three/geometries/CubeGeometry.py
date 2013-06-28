@@ -43,7 +43,7 @@ requestID = None
 progress = None
 progressEnd = 6000
 startTime =  None
-movement = Vector3(0.02, 0.02, 0.02)
+movement = 0.02 * Vector3(1, 1, 1)
 print movement
 
 def render():
