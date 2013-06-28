@@ -3,7 +3,6 @@ from three import *
 from browser import *
 from math import pi
 
-# Discard the old canvas if it exists. 
 for canvas in document.getElementsByTagName("canvas"):
     canvas.parentNode.removeChild(canvas)
 
