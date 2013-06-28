@@ -1,5 +1,5 @@
 # MeshLambertMaterial demonstration.
-from three import *
+from eight import *
 from browser import *
 
 for canvas in document.getElementsByTagName("canvas"):
