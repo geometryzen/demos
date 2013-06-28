@@ -20,6 +20,7 @@ camera  = OrthographicCamera(-1, 1, 1, -1, -500, 1000)
 camera.position.x = 200
 camera.position.y = 100
 camera.position.z = 200
+print camera.position
 renderer = WebGLRenderer({"antialias": True})
 renderer.setClearColor(Color(0xFFFFFF), 1.0)
 scene = Scene()
