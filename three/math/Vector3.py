@@ -1,4 +1,5 @@
-# MultiVector3 demonstration
+# MultiVector3 demonstration.
+# Vector3 is a convenience wrapper when using the eight module.
 from eight import *
 
 a = Vector3(1,1,1)
@@ -9,17 +10,19 @@ print str(type(a))
 print repr(type(a))
 
 #
-# It is important to realize that Vector3 is mutable.
+# It is important to realize that MultiVector3 is mutable.
 # This contrasts to the usual approach of treating mathematical
-# objects as immutable types.
-#a.w = 8
+# objects as immutable types. The reason for this is that MultiVector3
+# is part of a graphics library that deals with mutable
+# objects for performance.
+a.w = 8
 a.x = 7
 a.y = 6
 a.z = 5
-#a.xy = 4
-#a.yz = 3
-#a.zx = 2
-#a.xyz = 1
+a.xy = 4
+a.yz = 3
+a.zx = 2
+a.xyz = 1
 print a
 
 # The string value of the zero vector is just "0"
