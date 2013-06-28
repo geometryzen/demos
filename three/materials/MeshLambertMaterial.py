@@ -55,11 +55,10 @@ requestID = None
 progress = None
 progressEnd = 6000
 startTime =  None
+movement = vector3(0.02, 0.02, 0.02)
 
 def render():
-    mesh.rotation.x = mesh.rotation.x + 0.02
-    mesh.rotation.y = mesh.rotation.y + 0.02
-    mesh.rotation.z = mesh.rotation.z + 0.02
+    mesh.rotation.add(movement)
         
     renderer.render(scene, camera)
 
