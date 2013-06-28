@@ -19,6 +19,7 @@ pointLight.position.set(20, 20, 20)
 scene.add(pointLight)
 
 directionalLight = DirectionalLight(0xFFFFFF)
+print directionalLight.position
 directionalLight.position.set(0, 1, 0)
 scene.add(directionalLight)
 
