@@ -1,4 +1,4 @@
-# Vector3 demonstration
+# MultiVector3 demonstration
 from eight import *
 
 a = Vector3(1,1,1)
