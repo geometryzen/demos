@@ -55,7 +55,7 @@ requestID = None
 progress = None
 progressEnd = 6000
 startTime =  None
-movement = vector3(0.02, 0.02, 0.02)
+movement = Vector3(0.02, 0.02, 0.02)
 
 def render():
     mesh.rotation.add(movement)
