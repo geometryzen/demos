@@ -17,7 +17,7 @@ scene = Scene()
 view = document.getElementById("view")
 requestID = None
 progress = None
-progressEnd = 6000
+progressEnd = 60000
 startTime =  None
 
 def onWindowResize():
