@@ -1,16 +1,13 @@
 # SphereGeometry demonstration.
 from three import *
-# We will control the horizontal. We will control the vertical.
 from browser import *
 from math import pi
 
-# Discard the old canvas if it exists. 
 for canvas in document.getElementsByTagName("canvas"):
     canvas.parentNode.removeChild(canvas)
 
 scene = Scene()
 
-# Aspect ratio will be reset in onWindowResize
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 100
 
@@ -46,11 +43,10 @@ requestID = None
 progress = None
 progressEnd = 6000
 startTime =  None
+movement = Vector3(0.02, 0.02, 0.02)
 
 def render():
-    mesh.rotation.x = mesh.rotation.x + 0.02
-    mesh.rotation.y = mesh.rotation.y + 0.02
-    mesh.rotation.z = mesh.rotation.z + 0.02
+    mesh.rotation.add(movement)
         
     renderer.render(scene, camera)
 
@@ -75,7 +71,6 @@ def step(timestamp):
     else:
         window.cancelAnimationFrame(requestID)
         # container.removeChild(renderer.domElement)
-        # TODO: Remove the "resize" event listener
 
 window.addEventListener("resize", onWindowResize, False)
 
