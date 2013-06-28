@@ -41,6 +41,8 @@ print a.getComponent(0)
 print a.getComponent(1)
 print a.getComponent(2)
 
+print a.set(3,5,7)
+
 # Linear Algebra
 i = Vector3(1,0,0)
 j = Vector3(0,1,0)
