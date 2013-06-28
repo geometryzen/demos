@@ -34,7 +34,7 @@ print "repr(Vector3(0,0,0)) => " + repr(Vector3(0,0,0))
 print "Vector3() => " + str(Vector3())
 
 # The setX, setY and setZ methods are chainable.
-print a.setX(4).setY(7).setZ(9)
+print Vector3().setX(4).setY(7).setZ(9)
 
 # setComponent(index, value) and getComponent(index)
 a.setComponent(0, 4.4)
