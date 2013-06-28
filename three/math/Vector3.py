@@ -25,7 +25,7 @@ print a
 print "str(Vector3(0,0,0)) => " + str(Vector3(0,0,0))
 print "repr(Vector3(0,0,0)) => " + repr(Vector3(0,0,0))
 
-# The constructor without arguments gives the zero vector:
+# The constructor without arguments gives the zero multivector:
 print "Vector3() => " + str(Vector3())
 
 # The setX, setY and setZ methods are chainable.
