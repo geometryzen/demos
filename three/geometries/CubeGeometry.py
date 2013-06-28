@@ -44,10 +44,9 @@ progress = None
 progressEnd = 10000
 startTime =  None
 movement = 0.02 * Vector3(1, 1, 1)
-print movement
 
 def render():
-    mesh.rotation = mesh.rotation + movement
+    mesh.rotation.add(movement)
         
     renderer.render(scene, camera)
 
