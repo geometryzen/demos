@@ -1,5 +1,5 @@
 # Demonstrates keyboard handling.
-from three import *
+from eight import *
 from browser import *
 
 # Variables to track the intentions of the user.
