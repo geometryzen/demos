@@ -44,6 +44,7 @@ print a.getComponent(2)
 # Linear Algebra
 i = Vector3(1,0,0)
 j = Vector3(0,1,0)
+k = Vector3(0,0,1)
 print j * 2.0
 print 2.0 * j
 print i + j
