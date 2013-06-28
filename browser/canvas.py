@@ -1,10 +1,7 @@
 # HTML5 (2D) Canvas coexisting with a WebGL canvas.
-from three import *
-# We will control the horizontal. We will control the vertical.
+from eight import *
 from browser import *
 
-# Convenince variable controlling whether we embed in the existing canvas container
-# or create a nearly full screen canvas
 useLargeCanvas = True
 
 # Variables to track the intentions of the user.
