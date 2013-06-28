@@ -51,6 +51,7 @@ print a
 print a.length()
 print a.normalize()
 print a
+print a.length()
 
 # Linear Algebra
 i = Vector3(1,0,0)
