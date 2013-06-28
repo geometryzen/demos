@@ -64,5 +64,3 @@ for a in blades:
     print ""
     for b in blades:
         showValue(str(a) + " >> " + str(b), a >> b)
-print ""
-print "0.5 * (one - i - j + I) = " + str(0.5 * (one - i - j + I))
