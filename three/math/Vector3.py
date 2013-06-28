@@ -1,8 +1,8 @@
 # Vector3 demonstration
-from eight import *
+from three import *
 
-def Vector3(x, y, z):
-    return MultiVector3(0, x, y, z, 0, 0, 0, 0)
+#def Vector3(x, y, z):
+#    return MultiVector3(0, x, y, z, 0, 0, 0, 0)
 
 # Vector3 is represented as a Cartesian triple.
 a = Vector3(1,1,1)
