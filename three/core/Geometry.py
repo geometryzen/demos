@@ -1,5 +1,5 @@
 # Geometry demonstration.
-from three import *
+from eight import *
 
 geometry = Geometry()
 print str(geometry)
