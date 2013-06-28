@@ -16,9 +16,14 @@ print repr(type(a))
 # It is important to realize that Vector3 is mutable.
 # This contrasts to the usual approach of treating mathematical
 # objects as immutable types.
-a.x = 2
-a.y = 3
+a.w = 8
+a.x = 7
+a.y = 6
 a.z = 5
+a.xy = 4
+a.yz = 3
+a.zx = 2
+a.xyz = 1
 print a
 
 # The string value of the zero vector is just "0"
