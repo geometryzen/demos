@@ -27,7 +27,7 @@ i    = explain(Vector(1, 0))
 j    = explain(Vector(0, 1))
 I    = explain(Pseudoscalar(1))
 
-blades = [one, two, i, j, I]
+blades = [zero, one, two, i, j, I]
 
 print ""
 print "Sum"
