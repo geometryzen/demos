@@ -40,7 +40,7 @@ scene.add(mesh)
 
 requestID = None
 progress = None
-progressEnd = 10000
+progressEnd = 6000
 startTime =  None
 movement = 0.02 * Vector3(1, 1, 1)
 
