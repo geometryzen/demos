@@ -1,5 +1,5 @@
 # Vector3 demonstration
-from three import *
+from eight import *
 
 #def Vector3(x, y, z):
 #    return MultiVector3(0, x, y, z, 0, 0, 0, 0)
