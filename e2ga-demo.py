@@ -41,28 +41,28 @@ print "Difference"
 for a in blades:
     print ""
     for b in blades:
-        showValue(str(a) + " - " + str(b), a - b)
+        showValue(str(a) + " - " + str(b), repr(a - b))
 print ""
 print "Geometric Product"
 for a in blades:
     print ""
     for b in blades:
-        showValue(str(a) + " * " + str(b), a * b)
+        showValue(str(a) + " * " + str(b), repr(a * b))
 print ""
 print "Exterior Product"
 for a in blades:
     print ""
     for b in blades:
-        showValue(str(a) + " ^ " + str(b), a ^ b)
+        showValue(str(a) + " ^ " + str(b), repr(a ^ b))
 print ""
 print "Left Contraction"
 for a in blades:
     print ""
     for b in blades:
-        showValue(str(a) + " << " + str(b), a << b)
+        showValue(str(a) + " << " + str(b), repr(a << b))
 print ""
 print "Right Contraction"
 for a in blades:
     print ""
     for b in blades:
-        showValue(str(a) + " >> " + str(b), a >> b)
+        showValue(str(a) + " >> " + str(b), repr(a >> b))
