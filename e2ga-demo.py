@@ -16,9 +16,9 @@ def explain(m):
     print str(m) + " is " + repr(m)
     return m
 
-def showValue(name, m):
-    print name + " => " + str(m)
-    return m
+def showValue(name, x):
+    print name + " => " + str(x)
+    return x
 
 zero = explain(Euclidean2(0,0,0,0))
 one  = explain(Scalar(1))
