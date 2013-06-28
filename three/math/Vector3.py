@@ -49,6 +49,7 @@ a.set(4,7,9)
 print b
 print a
 print a.length()
+a.normalize()
 
 # Linear Algebra
 i = Vector3(1,0,0)
