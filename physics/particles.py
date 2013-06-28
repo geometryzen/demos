@@ -1,10 +1,8 @@
 # Under Construction!!!
 # particle system demonstration
-from three import *
+from eight import *
 from browser import *
 
-# Convenince variable controlling whether we embed in the existing canvas container
-# or create a nearly full screen canvas
 useLargeCanvas = False
 
 # Variables to track the intentions of the user.
@@ -19,7 +17,6 @@ renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
 view = document.getElementById("view")
 
-# Use Python's dictionary to handle event.keyCode(s).
 def escKey(downFlag):
     terminate()
 
