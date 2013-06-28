@@ -20,7 +20,6 @@ camera  = OrthographicCamera(-1, 1, 1, -1, -500, 1000)
 camera.position.x = 200
 camera.position.y = 100
 camera.position.z = 200
-print camera.position
 renderer = WebGLRenderer({"antialias": True})
 renderer.setClearColor(Color(0xFFFFFF), 1.0)
 scene = Scene()
@@ -89,6 +88,7 @@ def init():
     for i in range(0, 100):
         cube = Mesh(geometry, material)
         cube.scale.y = floor(random() * 2 + 1)
+        print cube.scale
         cube.position.x = floor((random() * 1000 - 500) / 50) * 50 + 25
         cube.position.y = (cube.scale.y * 50) / 2
         cube.position.z = floor((random() * 1000 - 500) / 50) * 50 + 25
