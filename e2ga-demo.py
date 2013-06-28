@@ -35,7 +35,7 @@ print "Sum"
 for a in blades:
     print ""
     for b in blades:
-        showValue(str(a) + " + " + str(b), explain(a + b))
+        showValue(str(a) + " + " + str(b), repr(a + b))
 print ""
 print "Difference"
 for a in blades:
