@@ -20,7 +20,7 @@ e23  = explain(Bivector3(0, 1, 0))
 e31  = explain(Bivector3(0, 0, 1))
 I    = explain(Pseudoscalar3(1))
 
-blades = [zero, one, two, e1, e2, e3, e12, e23, e31, I]
+blades = [zero, one, two, e1, e2, e3, e12, e23, e31, I, 0]
 
 # Skulpt bug? The string representation of the list does not recurse.
 # print str(blades)
