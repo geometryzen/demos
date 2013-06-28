@@ -1,11 +1,11 @@
 # OrthographicCamera demonstration.
-from eight import *
+from three import *
 from browser import *
 from math import cos, sin, floor, random
 from time import clock
 
-def Vector3(x, y, z):
-    return MultiVector3(0, x, y, z, 0, 0, 0, 0)
+#def Vector3(x, y, z):
+#    return MultiVector3(0, x, y, z, 0, 0, 0, 0)
 
 useLargeCanvas = False
 
