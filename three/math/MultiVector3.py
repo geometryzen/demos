@@ -10,14 +10,14 @@ def showValue(name, m):
     return m
 
 zero = explain(MultiVector3(0, 0, 0, 0, 0, 0, 0, 0))
-one  = explain(Scalar(1))
-e1   = explain(Vector(1, 0, 0))
-e2   = explain(Vector(0, 1, 0))
-e3   = explain(Vector(0, 0, 1))
-e12  = explain(Bivector(1, 0, 0))
-e23  = explain(Bivector(0, 1, 0))
-e31  = explain(Bivector(0, 0, 1))
-I    = explain(Pseudoscalar(1))
+one  = explain(Scalar3(1))
+e1   = explain(Vector3(1, 0, 0))
+e2   = explain(Vector3(0, 1, 0))
+e3   = explain(Vector3(0, 0, 1))
+e12  = explain(Bivector3(1, 0, 0))
+e23  = explain(Bivector3(0, 1, 0))
+e31  = explain(Bivector3(0, 0, 1))
+I    = explain(Pseudoscalar3(1))
 
 blades = [one, e1, e2, e3, e12, e23, e31, I]
 
