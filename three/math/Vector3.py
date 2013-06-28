@@ -68,7 +68,5 @@ print j
 print k
 print j * 2.0
 print 2.0 * j
-print i + j
-print i - j
-print i
-print j
+print i + j - k
+print i - j + k
