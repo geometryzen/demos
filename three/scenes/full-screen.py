@@ -1,5 +1,4 @@
-# Demonstrates manipulating the document object model to make a canvas near full-screen.
-from three import *
+from eight import *
 from browser import *
 
 container = document.createElement("div")
