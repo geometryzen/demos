@@ -1,6 +1,5 @@
 # CylinderGeometry demonstration.
 from three import *
-# We will control the horizontal. We will control the vertical.
 from browser import *
 from math import pi
 
@@ -16,7 +15,6 @@ container.appendChild(renderer.domElement)
 
 scene = Scene()
 
-# Aspect ratio will be reset in onWindowResize
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 100
 
@@ -73,7 +71,6 @@ def step(timestamp):
     else:
         window.cancelAnimationFrame(requestID)
         # container.removeChild(renderer.domElement)
-        # TODO: Remove the "resize" event listener
 
 window.addEventListener("resize", onWindowResize, False)
 
