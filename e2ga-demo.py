@@ -28,7 +28,18 @@ I    = explain(Pseudoscalar(1))
 
 blades = [one, i, j, I]
 
-showValue("one - i - j + I = ", one - i - j + I)
+print ""
+print "Sum"
+for a in blades:
+    print ""
+    for b in blades:
+        showValue(str(a) + " + " + str(b), a + b)
+print ""
+print "Difference"
+for a in blades:
+    print ""
+    for b in blades:
+        showValue(str(a) + " - " + str(b), a - b)
 print ""
 print "Geometric Product"
 for a in blades:
