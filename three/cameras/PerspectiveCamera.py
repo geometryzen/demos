@@ -1,5 +1,5 @@
 # Under Construction!
-from three import *
+from eight import *
 from browser import *
 
 useLargeCanvas = False
