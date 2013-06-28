@@ -66,7 +66,7 @@ k = Vector3(0,0,1)
 print i
 print j
 print k
-print j * 2.0
-print 2.0 * j
+print (1 + i + j + k + i * j + j * k + k * i + i * j * k) * 2.0
+print 2.0 * (1 + i + j + k)
 print i + j - k
 print i - j + k
