@@ -1,6 +1,5 @@
 # CubeGeometry demonstration.
-from three import *
-# We will control the horizontal. We will control the vertical.
+from eight import *
 from browser import *
 from math import pi
 
