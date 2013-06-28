@@ -4,6 +4,9 @@ from browser import *
 from math import cos, sin, floor, random
 from time import clock
 
+def Vector3(x, y, z):
+    return MultiVector3(0, x, y, z, 0, 0, 0, 0)
+
 useLargeCanvas = False
 
 # Variables to track the intentions of the user.
