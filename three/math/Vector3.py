@@ -46,6 +46,7 @@ print a.set(3,5,7)
 b = a.clone()
 a.set(4,7,9)
 print b
+print a
 
 # Linear Algebra
 i = Vector3(1,0,0)
