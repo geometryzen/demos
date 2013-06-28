@@ -53,6 +53,9 @@ print a
 i = Vector3(1,0,0)
 j = Vector3(0,1,0)
 k = Vector3(0,0,1)
+print i
+print j
+print k
 print j * 2.0
 print 2.0 * j
 print i + j
