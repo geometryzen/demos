@@ -23,11 +23,12 @@ def showValue(name, x):
 zero = explain(Euclidean2(0,0,0,0))
 one  = explain(Scalar(1))
 two  = explain(Scalar(2))
+five = explain(5)
 i    = explain(Vector(1, 0))
 j    = explain(Vector(0, 1))
 I    = explain(Pseudoscalar(1))
 
-blades = [zero, one, two, i, j, I, 5]
+blades = [zero, one, two, i, j, I, five]
 
 print ""
 print "Sum"
