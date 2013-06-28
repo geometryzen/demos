@@ -47,9 +47,7 @@ movement = 0.02 * Vector3(1, 1, 1)
 print movement
 
 def render():
-    mesh.rotation.x = mesh.rotation.x + movement.x
-    mesh.rotation.y = mesh.rotation.y + movement.y
-    mesh.rotation.z = mesh.rotation.z + movement.z
+    mesh.rotation = mesh.rotation + movement
         
     renderer.render(scene, camera)
 
