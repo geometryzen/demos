@@ -1,19 +1,5 @@
-# MultiVector3.py
-# e3ga-demo.py
-# Demonstration of Euclidean 3D Geometric Algebra.
-from blade import *
-
-def Scalar(w):
-    return Euclidean3(w, 0, 0, 0, 0, 0, 0, 0)
-
-def Vector(x, y, z):
-    return Euclidean3(0, x, y, z, 0, 0, 0, 0)
-
-def Bivector(xy, yz, zx):
-    return Euclidean3(0, 0, 0, 0, xy, yz, zx, 0)
-
-def Pseudoscalar(s):
-    return Euclidean3(0, 0, 0, 0, 0, 0, 0, s)
+# MultiVector3 demonstration of Euclidean 3D Geometric Algebra.
+from eight import *
 
 def explain(m):
     print str(m) + " is " + repr(m)
