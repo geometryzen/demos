@@ -17,7 +17,7 @@ scene = Scene()
 view = document.getElementById("view")
 requestID = None
 progress = None
-progressEnd = 15000
+progressEnd = 10000
 startTime = None
 
 def onWindowResize():
@@ -43,16 +43,14 @@ def onWindowResize():
         camera.updateProjectionMatrix()
         renderer.setSize(container.clientWidth, container.clientHeight)
     
-def discardExistingCanvas():
+def discardCanvases():
     for cs in document.getElementsByTagName("canvas"):
         cs.parentNode.removeChild(cs)
 
 def init():
-    discardExistingCanvas()
+    discardCanvases()
     if (useLargeCanvas):
-        container = document.createElement("div")
-        document.body.appendChild(container)
-        view.parentNode.insertBefore(renderer.domElement, view)
+        document.body.insertBefore(renderer.domElement, document.body.firstChild)
     else:
         container = document.getElementById("canvas-container")
         container.appendChild(renderer.domElement)
@@ -132,10 +130,7 @@ def animate(timestamp):
         
 def terminate():
     window.cancelAnimationFrame(requestID)
-    if (useLargeCanvas):
-        view.parentNode.removeChild(renderer.domElement)
-    else:
-        discardExistingCanvas()
+    discardCanvases()
     print "Goodbye!"
 
 print "This example will end automatically in "+str(progressEnd/1000)+" seconds."
