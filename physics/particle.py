@@ -96,7 +96,7 @@ def discardCanvases():
         
 requestID = None
 frameIndex = 0
-frameTime = 0
+frameTime = 0.0
 END_TIME_MILLISECONDS = 2000
 startTime =  None
 
