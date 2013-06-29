@@ -1,4 +1,3 @@
-# Under Construction!
 # This program is an on-going experiment to improve the experience in Computational Modeling.
 from eight import *
 from browser import *
