@@ -89,6 +89,11 @@ progressEnd = 20000
 startTime =  None
 
 def init():
+    print "Hello!"
+    print "This program is an exploration of ways to improve the user experience."        
+    print "ESC to terminate, Arrow keys to move the 3D cube Left, Right, Forward, Backward."
+    print "This program will 'self-destruct' in "+str(progressEnd/1000)+" seconds!"
+    print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
     discardExistingCanvas()
     if (useLargeCanvas):
         container = document.createElement("div")
@@ -174,10 +179,7 @@ def terminate():
         discardExistingCanvas()
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
+    print "Goodbye."
 
-print "This program is an exploration of ways to improve the user experience."    
-print "ESC to terminate, Arrow keys to move the 3D cube Left, Right, Forward, Backward."
-print "This program will 'self-destruct' in "+str(progressEnd/1000)+" seconds!"
-print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
 init()
 animate(None)
