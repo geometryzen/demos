@@ -7,7 +7,6 @@ from eight import *
 from browser import *
 # Change this variable render the graphics in different ways. 
 useLargeCanvas = False
-useWebGL = True
 
 # Variables to track the intentions of the user.
 moveForward = False
@@ -15,11 +14,10 @@ moveBackward = False
 moveLeft = False
 moveRight = False
 
-if useWebGL:
-    camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-    camera.position.z = 2
-    renderer = WebGLRenderer({"antialias": True})
-    scene = Scene()
+camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
+camera.position.z = 2
+renderer = WebGLRenderer({"antialias": True})
+scene = Scene()
 view = document.getElementById("view")
 graph = document.createElement("canvas")
 # Initialize the graph extent before we get resized to the container.
@@ -70,18 +68,16 @@ def onDocumentKeyUp(event):
 
 def onWindowResize():
     if (useLargeCanvas):
-        if useWebGL:
-            camera.aspect = window.innerWidth / window.innerHeight
-            camera.updateProjectionMatrix()
-            renderer.size = (window.innerWidth, window.innerHeight)
+        camera.aspect = window.innerWidth / window.innerHeight
+        camera.updateProjectionMatrix()
+        renderer.size = (window.innerWidth, window.innerHeight)
         graph.width = window.innerWidth
         graph.height = window.innerHeight
     else:
         container = document.getElementById("canvas-container")
-        if useWebGL:
-            camera.aspect = container.clientWidth / container.clientHeight
-            camera.updateProjectionMatrix()
-            renderer.setSize(container.clientWidth, container.clientHeight)
+        camera.aspect = container.clientWidth / container.clientHeight
+        camera.updateProjectionMatrix()
+        renderer.setSize(container.clientWidth, container.clientHeight)
         graph.width = container.clientWidth
         graph.height = container.clientHeight
     
@@ -104,18 +100,15 @@ def init():
     if useLargeCanvas:
         container = document.createElement("div")
         document.body.appendChild(container)
-        if useWebGL:
-            view.parentNode.insertBefore(renderer.domElement, view)
+        view.parentNode.insertBefore(renderer.domElement, view)
         view.parentNode.insertBefore(graph, view)
     else:
         container = document.getElementById("canvas-container")
         container.appendChild(graph)
-        if useWebGL:
-            container.appendChild(renderer.domElement)
+        container.appendChild(renderer.domElement)
 
-    if useWebGL:
-        mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
-        scene.add(mesh)
+    mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
+    scene.add(mesh)
     
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
@@ -124,13 +117,13 @@ def init():
     onWindowResize()
 
 def render():
-    if moveForward and useWebGL:
+    if moveForward:
         camera.position.z -= 0.02
-    if moveBackward and useWebGL:
+    if moveBackward:
         camera.position.z += 0.02
-    if moveLeft and useWebGL:
+    if moveLeft:
         camera.position.x -= 0.02
-    if moveRight and useWebGL:
+    if moveRight:
         camera.position.x += 0.02
         
     context.setTransform(1, 0, 0, 1, 0, 0)
@@ -161,8 +154,8 @@ def render():
 
     context.closePath()
     context.stroke()
-    if useWebGL:
-        renderer.render(scene, camera)
+
+    renderer.render(scene, camera)
     
 def animate(timestamp):
     global requestID, progress, startTime
