@@ -9,6 +9,8 @@ moveBackward = False
 moveLeft = False
 moveRight = False
 
+view = document.getElementById("view")
+
 graph = document.createElement("canvas")
 graph.height = 400
 graph.width = 400
@@ -78,7 +80,7 @@ def init():
     print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
     discardCanvases()
     if useLargeCanvas:
-        document.body.appendChild(graph)
+        document.body.insertBefore(graph, None)
     else:
         container = document.getElementById("canvas-container")
         container.appendChild(graph)
