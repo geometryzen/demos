@@ -1,9 +1,11 @@
 # This program is an on-going experiment to improve the experience for Computational Modeling students.
 # Geometry Zen is very flexible, but does not yet provide ease-of-use features or modules to improve
 # the experience for exploration and demonstration.
+# The 'eight' module provides the 3D graphics API and Geometric Algebra in Euclidean 3D-space.
 from eight import *
+# The 'browser' module provides an API to the window and document as well as the HTML5 2D canvas.
 from browser import *
-
+# Change this variable render the graphics in different ways. 
 useLargeCanvas = False
 
 # Variables to track the intentions of the user.
