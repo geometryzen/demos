@@ -83,7 +83,7 @@ def discardExistingCanvas():
         
 requestID = None
 progress = None
-progressEnd = 60000
+progressEnd = 20000
 startTime =  None
 
 def init():
@@ -172,9 +172,10 @@ def terminate():
         discardExistingCanvas()
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
-
-print "ESC to terminate, Arrow keys to move Left, Right, Forward, Backward."
-print "This program will self-destruct in 60 seconds."
+    
+print "Combine the 2D HTML5 Canvas API with 3D WebGL graphics!"
+print "ESC to terminate, Arrow keys to move the 3D cube Left, Right, Forward, Backward."
+print "This program will 'self-destruct' in "+str(progressEnd/1000)+" seconds!"
 print "Try setting the useLargeCanvas parameter to True. Then scroll down to see what is going on."
 init()
 animate(None)
