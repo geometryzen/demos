@@ -81,6 +81,7 @@ def init():
     discardCanvases()
     if useLargeCanvas:
         # It would be more flexible to use document.body.firstChild here
+        
         document.body.insertBefore(graph, document.getElementsByTagName("header")[0])
     else:
         container = document.getElementById("canvas-container")
