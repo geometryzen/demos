@@ -80,6 +80,7 @@ def init():
     print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
     discardCanvases()
     if useLargeCanvas:
+        # It would be more flexible to use document.body.firstChild here
         document.body.insertBefore(graph, document.getElementsByTagName("header")[0])
     else:
         container = document.getElementById("canvas-container")
