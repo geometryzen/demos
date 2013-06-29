@@ -1,4 +1,3 @@
-# experimental/axes.py
 # Warning: This is currently slow. It requires optimization in the Python cross-compiler.
 # It probably also makes sense to consider convenience functions to do this.
 from eight import *
