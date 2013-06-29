@@ -146,6 +146,8 @@ def render():
 
     context.closePath()
     context.stroke()
+    
+    mesh.rotation.x += 0.02
       
     renderer.render(scene, camera)
     
