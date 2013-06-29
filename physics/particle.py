@@ -131,7 +131,7 @@ def render(frameIndex, frameTime, interval):
     if (moveRight):
         camera.position.x += 0.2
         
-    print {"frame":frameIndex}
+    print {'frameIndex':frameIndex}
     
     renderer.render(scene, camera)
     
