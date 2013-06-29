@@ -130,7 +130,7 @@ def render():
     if (moveRight):
         camera.position.x += 0.2
         
-    print "emapsedTime: " + repr(elapsedTime)
+    print "elapsedTime: " + repr(elapsedTime)
     
     renderer.render(scene, camera)
     
