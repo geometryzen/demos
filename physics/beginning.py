@@ -150,8 +150,6 @@ def render():
 
     context.rect(10, 10, 50, 50)
 
-    context.strokeText("Hello, Canvas", 60, 60)
-
     context.closePath()
     context.stroke()
       
