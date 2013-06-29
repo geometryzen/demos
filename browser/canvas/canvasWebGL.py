@@ -78,9 +78,7 @@ def init():
     print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
     discardCanvases()
     if useLargeCanvas:
-        container = document.createElement("div")
-        document.body.appendChild(container)
-        view.parentNode.insertBefore(renderer.domElement, view)
+        document.body.insertBefore(renderer.domElement, document.body.firstChild)
     else:
         container = document.getElementById("canvas-container")
         container.appendChild(renderer.domElement)
