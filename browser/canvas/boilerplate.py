@@ -86,7 +86,7 @@ def onWindowResize():
         graph.width = container.clientWidth
         graph.height = container.clientHeight
     
-def discardExistingCanvas():
+def discardExistingCanvases():
     for cs in document.getElementsByTagName("canvas"):
         cs.parentNode.removeChild(cs)
         
@@ -101,7 +101,7 @@ def init():
     print "Press ESC to terminate, Arrow keys to move the 3D cube Left, Right, Forward, Backward."
     print "This program will 'self-terminate' in "+str(progressEnd/1000)+" seconds!"
     print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
-    discardExistingCanvas()
+    discardExistingCanvases()
     if useLargeCanvas:
         container = document.createElement("div")
         document.body.appendChild(container)
@@ -183,12 +183,7 @@ def animate(timestamp):
         
 def terminate():
     window.cancelAnimationFrame(requestID)
-    if useLargeCanvas:
-        if useWebGL:
-            view.parentNode.removeChild(renderer.domElement)
-        view.parentNode.removeChild(graph)
-    else:
-        discardExistingCanvas()
+    discardExistingCanvases()
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
     print "Goodbye."
