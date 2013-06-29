@@ -1,14 +1,8 @@
-# This program is an on-going experiment to improve the experience for Computational Modeling students.
-# Geometry Zen is very flexible, but does not yet provide ease-of-use features or modules to improve
-# the experience for exploration and demonstration.
-# The 'eight' module provides the 3D graphics API and Geometric Algebra in Euclidean 3D-space.
 from eight import *
-# The 'browser' module provides an API to the window and document as well as the HTML5 2D canvas.
 from browser import *
-# Change this variable render the graphics in different ways. 
+
 useLargeCanvas = False
 
-# Variables to track the intentions of the user.
 moveForward = False
 moveBackward = False
 moveLeft = False
@@ -22,17 +16,14 @@ scene = Scene()
 view = document.getElementById("view")
 
 graph = document.createElement("canvas")
-# Initialize the graph extent before we get resized to the container.
 graph.height = 400
 graph.width = 400
-# Use absolute positioning so that the WebGL and Printer aren't pushed down.
 graph.style.position = "absolute"
 graph.style.top = "0px"
 graph.style.left = "0px"
 
 context = graph.getContext("2d")
 
-# Use Python's dictionary to handle event.keyCode(s).
 def escKey(downFlag):
     terminate()
 
