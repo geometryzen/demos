@@ -120,7 +120,7 @@ def init():
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
 
-def render(elapsedTimeInMs):
+def render():
     if (moveForward):
         camera.position.z -= 0.2
     if (moveBackward):
