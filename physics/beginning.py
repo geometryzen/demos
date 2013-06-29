@@ -147,6 +147,7 @@ def render():
     context.stroke()
     
     mesh.rotation.x += 0.02
+    mesh.rotation.y += 0.02
       
     renderer.render(scene, camera)
     
