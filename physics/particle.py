@@ -96,7 +96,7 @@ def discardCanvases():
         
 requestID = None
 frameIndex = 0
-frameTime = None
+frameTime = 0
 END_TIME_MILLISECONDS = 2000
 startTime =  None
 
@@ -138,12 +138,11 @@ def render(frameIndex, frameTime):
 def bootstrap(timestamp):
     global requestID, startTime
     startTime = timestamp
-    frameTime = startTime
     requestID = window.requestAnimationFrame(animate)
-    render(0, 0.0)
+    render(frameIndex, frameTime)
     
 def animate(timestamp):
-    global requestID, frameIndex
+    global requestID, frameIndex, frameTime
     frameIndex += 1
     frameTime = timestamp - startTime    
     if elapsedTime < END_TIME_MILLISECONDS:
