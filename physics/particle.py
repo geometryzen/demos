@@ -139,6 +139,7 @@ def bootstrap(timestamp):
     print "timestamp: " + repr(timestamp)
     startTime = timestamp
     requestID = window.requestAnimationFrame(animate)
+    render()
     
 def animate(timestamp):
     global requestID, elapsedTime
