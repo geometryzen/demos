@@ -13,6 +13,8 @@ moveRight = False
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 print camera.up
 camera.up.set(0,0,1)
+camera.position.z = 2
+print camera.up
 renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
 
@@ -100,8 +102,6 @@ def init():
         container = document.getElementById("canvas-container")
         container.appendChild(graph)
         container.appendChild(renderer.domElement)
-
-    camera.position.z = 2
 
     mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
     scene.add(mesh)
