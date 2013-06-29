@@ -119,7 +119,7 @@ def render():
     if (moveRight):
         camera.position.x += 0.02
         
-    context.setTransform(1, 0, 0, 1, 10, 10)
+    context.setTransform(1, 0, 0, 1, 0, 0)
     context.fillStyle = "#FF66CC"
     context.strokeStyle = "#808080" 
 
