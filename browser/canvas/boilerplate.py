@@ -60,7 +60,6 @@ keyHandlers = {
  40: downArrowKey
 }
     
-    
 def onDocumentKeyDown(event):
     event.preventDefault()
     keyHandlers[event.keyCode](True)
@@ -86,7 +85,7 @@ def onWindowResize():
         graph.width = container.clientWidth
         graph.height = container.clientHeight
     
-def discardExistingCanvases():
+def discardCanvases():
     for cs in document.getElementsByTagName("canvas"):
         cs.parentNode.removeChild(cs)
         
@@ -101,7 +100,7 @@ def init():
     print "Press ESC to terminate, Arrow keys to move the 3D cube Left, Right, Forward, Backward."
     print "This program will 'self-terminate' in "+str(progressEnd/1000)+" seconds!"
     print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
-    discardExistingCanvases()
+    discardCanvases()
     if useLargeCanvas:
         container = document.createElement("div")
         document.body.appendChild(container)
@@ -183,7 +182,7 @@ def animate(timestamp):
         
 def terminate():
     window.cancelAnimationFrame(requestID)
-    discardExistingCanvases()
+    discardCanvases()
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
     print "Goodbye."
