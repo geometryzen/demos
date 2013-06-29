@@ -95,7 +95,7 @@ def discardCanvases():
         cs.parentNode.removeChild(cs)
         
 requestID = None
-progress = None
+elapsedTime = None
 progressEnd = 600000
 startTime =  None
 
@@ -120,7 +120,7 @@ def init():
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
 
-def render():
+def render(elapsedTime):
     if (moveForward):
         camera.position.z -= 0.2
     if (moveBackward):
@@ -133,18 +133,18 @@ def render():
     renderer.render(scene, camera)
     
 def animate(timestamp):
-    global requestID, progress, startTime
+    global requestID, elapsedTime, startTime
     if (startTime):
-        progress = timestamp - startTime
+        elapsedTime = timestamp - startTime
     else:
         if (timestamp):
             startTime = timestamp
         else:
-            progress = 0
+            elapsedTime = 0
         
-    if (progress < progressEnd):
+    if (elapsedTime < progressEnd):
         requestID = window.requestAnimationFrame(animate)
-        render()
+        render(elapsedTime)
     else:
         terminate()
         
