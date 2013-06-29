@@ -96,7 +96,7 @@ def discardCanvases():
         
 requestID = None
 elapsedTime = None
-progressEnd = 600000
+progressEnd = 1000
 startTime =  None
 
 def init():
@@ -129,7 +129,9 @@ def render(elapsedTime):
         camera.position.x -= 0.2
     if (moveRight):
         camera.position.x += 0.2
-
+        
+    print elapsedTime
+    
     renderer.render(scene, camera)
     
 def animate(timestamp):
