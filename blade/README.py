@@ -9,6 +9,9 @@
 # The 'blade' module will contain other usefual algebras for Physics and Engineering 
 # including Space-time, Homogenous anf Conformal.
 #
+# The 'blade' module will always be decoupled from a specific geometric representation, reflecting
+# the fact that an algebra may have more than one geometric interpretation.
+#
 # Geometric Algebra of 2D Euclidean Space (the "Plane").
 # ======================================================
 #
