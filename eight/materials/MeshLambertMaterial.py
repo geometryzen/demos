@@ -15,9 +15,7 @@ ambientLight = AmbientLight(0x111111)
 scene.add(ambientLight)
 
 pointLight = PointLight(0xFFFFFF)
-print pointLight.position
 pointLight.position.set(20, 20, 20)
-print pointLight.position
 scene.add(pointLight)
 
 directionalLight = DirectionalLight(0xFFFFFF)
