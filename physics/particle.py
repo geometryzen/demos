@@ -121,7 +121,7 @@ def init():
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
 
-def render(frameIndex, frameTime):
+def render(frameIndex, frameTime, interval):
     if (moveForward):
         camera.position.z -= 0.2
     if (moveBackward):
@@ -139,15 +139,16 @@ def bootstrap(timestamp):
     global requestID, startTime
     startTime = timestamp
     requestID = window.requestAnimationFrame(animate)
-    render(frameIndex, frameTime)
+    render(frameIndex, frameTime, 0)
     
 def animate(timestamp):
     global requestID, frameIndex, frameTime
     frameIndex += 1
+    interval = timestamp - frameTime 
     frameTime = timestamp - startTime    
     if frameTime < END_TIME_MILLISECONDS:
         requestID = window.requestAnimationFrame(animate)
-        render(frameIndex, frameTime)
+        render(frameIndex, frameTime, interval)
     else:
         terminate()
         
