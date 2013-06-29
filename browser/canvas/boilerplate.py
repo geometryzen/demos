@@ -18,7 +18,9 @@ camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 2
 renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
+
 view = document.getElementById("view")
+
 graph = document.createElement("canvas")
 # Initialize the graph extent before we get resized to the container.
 graph.height = 400
