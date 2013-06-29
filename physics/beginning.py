@@ -125,8 +125,9 @@ def render():
 
     context.clearRect(-200, -200, 400, 400)
 
-    context.fillRect(100, 100, 50, 50)
-    context.strokeRect(75, 75, 50, 50)
+    context.rect(10, 10, 50, 50)
+    context.strokeRect(60, 60, 50, 50)
+    context.fillRect(110, 110, 50, 50)
 
     context.beginPath()
     context.moveTo(0,30)
@@ -137,8 +138,6 @@ def render():
     context.moveTo(0, -10)
     context.lineTo(0, 10)
     context.fill()
-
-    context.rect(10, 10, 50, 50)
 
     context.closePath()
     context.stroke()
