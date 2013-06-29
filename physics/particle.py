@@ -121,7 +121,7 @@ def init():
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
 
-def render():
+def render(frameIndex):
     if (moveForward):
         camera.position.z -= 0.2
     if (moveBackward):
