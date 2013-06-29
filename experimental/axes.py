@@ -1,4 +1,5 @@
 # Warning: This is currently slow. It requires optimization in the Python cross-compiler.
+# Wait 4-6 seconds after pressing the Run button!
 # It probably also makes sense to consider convenience functions to do this.
 from eight import *
 from browser import *
