@@ -1,37 +1,20 @@
-# WebGLRenderer demonstration.
-from three import *
+from eight import *
 from browser import *
-from math import pi
 
-# Discard the old canvas if it exists. 
-for canvas in document.getElementsByTagName("canvas"):
-    canvas.parentNode.removeChild(canvas)
+container = document.createElement("div")
+document.body.appendChild(container)
 
 scene = Scene()
 
-# Aspect ratio will be reset in onWindowResize
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-camera.position.z = 100
+camera.position.z = 2
 
 renderer = WebGLRenderer()
-renderer.autoClear   = True
-renderer.gammaInput  = True
-renderer.gammaOutput = True
-renderer.setClearColor(0x080808, 1.0)
 
-print repr(renderer)
-print "autoClear:         " + str(renderer.autoClear)
-print "gammaInput:        " + str(renderer.gammaInput)
-print "gammaOutput:       " + str(renderer.gammaOutput)
-print "getClearColor():   " + str(renderer.getClearColor())
-print str(renderer)
+view = document.getElementById("view")
+view.parentNode.insertBefore(renderer.domElement, view)
 
-container = document.getElementById("canvas-container")
-container.appendChild(renderer.domElement)
-
-sphere = SphereGeometry(50, 32, 24)
-
-mesh = Mesh(sphere, MeshNormalMaterial())
+mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
 scene.add(mesh)
 
 requestID = None
@@ -66,10 +49,9 @@ def step(timestamp):
         render()
     else:
         window.cancelAnimationFrame(requestID)
-        # container.removeChild(renderer.domElement)
+        view.parentNode.removeChild(renderer.domElement)
 
 window.addEventListener("resize", onWindowResize, False)
-
 onWindowResize()
 
 step(None)

@@ -1,42 +1,54 @@
-# SphereGeometry demonstration.
+# MeshLambertMaterial demonstration.
 from eight import *
 from browser import *
-from math import pi
 
 for canvas in document.getElementsByTagName("canvas"):
     canvas.parentNode.removeChild(canvas)
 
 scene = Scene()
 
-camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-camera.position.z = 100
+camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
+camera.position.set(10, 10, 10)
+camera.lookAt(scene.position)
+
+ambientLight = AmbientLight(0x111111)
+scene.add(ambientLight)
+
+pointLight = PointLight(0xFFFFFF)
+print pointLight.position
+pointLight.position.set(20, 20, 20)
+print pointLight.position
+scene.add(pointLight)
+
+directionalLight = DirectionalLight(0xFFFFFF)
+directionalLight.position.set(0, 1, 0)
+scene.add(directionalLight)
 
 renderer = WebGLRenderer()
+renderer.autoClear   = True
+renderer.gammaInput  = True
+renderer.gammaOutput = True
 renderer.setClearColor(Color(0x080808), 1.0)
 
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-radius = 50
-widthSegments = 32
-heightSegments = 24
-phiStart = 0
-phiLength = 2 * pi
-thetaStart = 0
-thetaLength = pi
-sphere = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
+material = MeshLambertMaterial({"color":0x0000FF})
+material.name = "bluecube"
 
-print repr(sphere)
-print "radius:         " + str(sphere.radius)
-print "widthSegments:  " + str(sphere.widthSegments)
-print "heightSegments: " + str(sphere.heightSegments)
-print "phiStart:       " + str(sphere.phiStart)
-print "phiLength:      " + str(sphere.phiLength)
-print "thetaStart:     " + str(sphere.thetaStart)
-print "thetaLength:    " + str(sphere.thetaLength)
-print sphere
+print "repr(material)    => " + repr(material)
+print "id:                  " + str(material.id)
+print "name:                " + material.name
+print "color:               " + str(material.color)
+print "needsUpdate:         " + str(material.needsUpdate)
+print "opacity:             " + str(material.opacity)
+print "overdraw:            " + str(material.overdraw)
+print "transparent:         " + str(material.transparent)
+print "visible:             " + str(material.visible)
+print "str(material)     => " + str(material)
 
-mesh = Mesh(sphere, MeshNormalMaterial())
+mesh = Mesh(CubeGeometry(5, 5, 5), material)
+
 scene.add(mesh)
 
 requestID = None

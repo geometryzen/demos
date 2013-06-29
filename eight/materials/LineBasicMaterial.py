@@ -1,16 +1,13 @@
 # LineBasicMaterial demonstration.
-from three import *
-# We will control the horizontal. We will control the vertical.
+from eight import *
 from browser import *
 from math import pi
 
-# Discard the old canvas if it exists. 
 for canvas in document.getElementsByTagName("canvas"):
     canvas.parentNode.removeChild(canvas)
 
 scene = Scene()
 
-# Aspect ratio will be reset in onWindowResize
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 100
 
@@ -30,9 +27,6 @@ material.opacity = 0.5
 print repr(material)
 print "color:              " + str(material.color)
 print "opacity:            " + str(material.opacity)
-#print "gammaInput:        " + str(renderer.gammaInput)
-#print "gammaOutput:       " + str(renderer.gammaOutput)
-#print "getClearColor():   " + str(renderer.getClearColor())
 print str(material)
 
 mesh = Mesh(SphereGeometry(50, 32, 24), material)
@@ -72,7 +66,6 @@ def step(timestamp):
     else:
         window.cancelAnimationFrame(requestID)
         # container.removeChild(renderer.domElement)
-        # TODO: Remove the "resize" event listener
 
 window.addEventListener("resize", onWindowResize, False)
 

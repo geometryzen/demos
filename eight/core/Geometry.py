@@ -1,5 +1,5 @@
-# Geometry.py
-from three import *
+# Geometry demonstration.
+from eight import *
 
 geometry = Geometry()
 print str(geometry)
@@ -12,5 +12,9 @@ print vs
 vs.append(Vector3(0,0,0))
 vs.append(Vector3(60,0,0))
 print vs
-print geometry.vertices
+print vs[0]
+print vs[1]
+print "len(vs) => " + str(len(vs))
+print geometry.vertices[0]
+print geometry.vertices[1]
 

@@ -1,5 +1,5 @@
 # Color demonstration.
-from three import *
+from eight import *
 
 color = Color()
 
@@ -43,6 +43,9 @@ for c in colors:
     print c
     
 x = Color(color)
+print "x: " + repr(x)
+
+x.setRGB(0.0, 1.0, 0.0)
 print "x: " + repr(x)
 
 

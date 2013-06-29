@@ -1,15 +1,13 @@
-# WebGLRenderer demonstration.
-from three import *
+# MeshBasicMaterial demonstration.
+from eight import *
 from browser import *
 from math import pi
 
-# Discard the old canvas if it exists. 
 for canvas in document.getElementsByTagName("canvas"):
     canvas.parentNode.removeChild(canvas)
 
 scene = Scene()
 
-# Aspect ratio will be reset in onWindowResize
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 100
 
@@ -17,21 +15,30 @@ renderer = WebGLRenderer()
 renderer.autoClear   = True
 renderer.gammaInput  = True
 renderer.gammaOutput = True
-renderer.setClearColor(0x080808, 1.0)
-
-print repr(renderer)
-print "autoClear:         " + str(renderer.autoClear)
-print "gammaInput:        " + str(renderer.gammaInput)
-print "gammaOutput:       " + str(renderer.gammaOutput)
-print "getClearColor():   " + str(renderer.getClearColor())
-print str(renderer)
+renderer.setClearColor(Color(0x080808), 1.0)
 
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-sphere = SphereGeometry(50, 32, 24)
+material = MeshBasicMaterial({"color":0x00FF00, "wireframe":True})
+material.wireframeLinewidth = 2
+material.name = "greenie"
 
-mesh = Mesh(sphere, MeshNormalMaterial())
+print "repr(material)    => " + repr(material)
+print "id:                  " + str(material.id)
+print "name:                " + material.name
+print "color:               " + str(material.color)
+print "needsUpdate:         " + str(material.needsUpdate)
+print "opacity:             " + str(material.opacity)
+print "overdraw:            " + str(material.overdraw)
+print "transparent:         " + str(material.transparent)
+print "visible:             " + str(material.visible)
+print "wireframe:           " + str(material.wireframe)
+print "wireframeLinewidth:  " + str(material.wireframeLinewidth)
+print "str(material)     => " + str(material)
+
+mesh = Mesh(SphereGeometry(50, 32, 24), material)
+
 scene.add(mesh)
 
 requestID = None
