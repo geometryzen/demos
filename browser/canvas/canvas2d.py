@@ -74,7 +74,7 @@ startTime =  None
 
 def init():
     print "Hello!"
-    print "This program demonstrates the use of the HTML5 2d canvas."        
+    print "This program demonstrates the use of the HTML5 Canvas and the '2d' context."        
     print "Press ESC to terminate."
     print "This program will 'self-terminate' in "+str(progressEnd/1000)+" seconds!"
     print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
