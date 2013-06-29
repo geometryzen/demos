@@ -122,13 +122,13 @@ def init():
 
 def render():
     if (moveForward):
-        camera.position.z -= 0.02
+        camera.position.z -= 0.2
     if (moveBackward):
-        camera.position.z += 0.02
+        camera.position.z += 0.2
     if (moveLeft):
-        camera.position.x -= 0.02
+        camera.position.x -= 0.2
     if (moveRight):
-        camera.position.x += 0.02
+        camera.position.x += 0.2
 
     renderer.render(scene, camera)
     
