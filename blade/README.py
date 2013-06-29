@@ -6,6 +6,9 @@
 # encapsulation of the powerful Three.js WebGL API with extensions for Geometric Algebra. The
 # eight module also contains its own multivector that is more suited to graphics.
 #
+# The 'blade' module will contain other usefual algebras for Physics and Engineering 
+# including Space-time, Homogenous anf Conformal.
+#
 # Geometric Algebra of 2D Euclidean Space (the "Plane").
 # ======================================================
 #
