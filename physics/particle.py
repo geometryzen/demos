@@ -145,7 +145,7 @@ def animate(timestamp):
     global requestID, frameIndex, frameTime
     frameIndex += 1
     frameTime = timestamp - startTime    
-    if elapsedTime < END_TIME_MILLISECONDS:
+    if frameTime < END_TIME_MILLISECONDS:
         requestID = window.requestAnimationFrame(animate)
         render(frameIndex, frameTime)
     else:
