@@ -3,7 +3,7 @@
 from eight import *
 from browser import *
 
-useLargeCanvas = True
+useLargeCanvas = False
 
 moveForward = False
 moveBackward = False
