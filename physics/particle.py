@@ -134,13 +134,16 @@ def render(elapsedTimeInMs):
     
     renderer.render(scene, camera)
     
+def bootstrap(timestamp):
+    global requestID, startTime
+    startTime = timestamp
+    elapsedTime = 0
+    requestID = window.requestAnimationFrame(animate)
+    render(elapsedTime)
+    
 def animate(timestamp):
-    global requestID, elapsedTime, startTime
-    if startTime:
-        elapsedTime = timestamp - startTime
-    else:
-        startTime = timestamp
-        elapsedTime = 0
+    global requestID, elapsedTime
+    elapsedTime = timestamp - startTime
         
     if elapsedTime < END_TIME_MILLISECONDS:
         requestID = window.requestAnimationFrame(animate)
@@ -155,4 +158,4 @@ def terminate():
     print "Goodbye."
 
 init()
-window.requestAnimationFrame(animate)
+window.requestAnimationFrame(bootstrap)
