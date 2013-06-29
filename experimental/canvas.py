@@ -18,6 +18,8 @@ graph.style.position = "absolute"
 graph.style.top = "0px"
 graph.style.left = "0px"
 
+position = vector3(0,0,0)
+
 context = graph.getContext("2d")
 
 def escKey(downFlag):
@@ -57,16 +59,10 @@ def onDocumentKeyUp(event):
 
 def onWindowResize():
     if (useLargeCanvas):
-        camera.aspect = window.innerWidth / window.innerHeight
-        camera.updateProjectionMatrix()
-        renderer.size = (window.innerWidth, window.innerHeight)
         graph.width = window.innerWidth
         graph.height = window.innerHeight
     else:
         container = document.getElementById("canvas-container")
-        camera.aspect = container.clientWidth / container.clientHeight
-        camera.updateProjectionMatrix()
-        renderer.setSize(container.clientWidth, container.clientHeight)
         graph.width = container.clientWidth
         graph.height = container.clientHeight
     
@@ -87,17 +83,11 @@ def init():
     print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
     discardCanvases()
     if useLargeCanvas:
-        container = document.createElement("div")
-        document.body.appendChild(container)
-        view.parentNode.insertBefore(renderer.domElement, view)
         view.parentNode.insertBefore(graph, view)
     else:
         container = document.getElementById("canvas-container")
         container.appendChild(graph)
         container.appendChild(renderer.domElement)
-
-    mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
-    scene.add(mesh)
     
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
@@ -107,13 +97,13 @@ def init():
 
 def render():
     if moveForward:
-        camera.position.z -= 0.02
+        position.z -= 0.02
     if moveBackward:
-        camera.position.z += 0.02
+        position.z += 0.02
     if moveLeft:
-        camera.position.x -= 0.02
+        position.x -= 0.02
     if moveRight:
-        camera.position.x += 0.02
+        position.x += 0.02
         
     context.setTransform(1, 0, 0, 1, 0, 0)
     context.fillStyle = "#FF66CC"
@@ -143,8 +133,6 @@ def render():
 
     context.closePath()
     context.stroke()
-
-    renderer.render(scene, camera)
     
 def animate(timestamp):
     global requestID, progress, startTime
