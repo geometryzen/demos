@@ -1,2 +1,2 @@
 # README.py
-print "Demonstration Geometry Zen Models"
+print "Geometry Zen Computational Models"
