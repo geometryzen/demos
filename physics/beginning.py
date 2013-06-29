@@ -16,11 +16,13 @@ moveRight = False
 
 # The camera is uses Perspective but Orthographic is also possible.
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-
 renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
 view = document.getElementById("view")
 graph = document.createElement("canvas")
+graph.style.position = "absolute"
+graph.style.top = "0px"
+graph.style.left = "0px"
 context = graph.getContext("2d")
 
 # Use Python's dictionary to handle event.keyCode(s).
