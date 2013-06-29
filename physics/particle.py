@@ -131,7 +131,7 @@ def render(frameIndex, frameTime, interval):
     if (moveRight):
         camera.position.x += 0.2
         
-    print "elapsedTime["+str(frameIndex)+"]: " + str(frameTime)
+    print {"frame":frameIndex}
     
     renderer.render(scene, camera)
     
