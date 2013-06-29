@@ -102,7 +102,7 @@ def init():
     print "Hello!"
     print "This program is an exploration of ways to improve the user experience."        
     print "Press ESC to terminate."
-    print "This program will 'self-destruct' in "+str(progressEnd/1000)+" seconds!"
+    print "This program will 'self-terminate' in "+str(progressEnd/1000)+" seconds!"
     print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
     discardCanvases()
     if (useLargeCanvas):
