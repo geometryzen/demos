@@ -17,6 +17,8 @@ scene = Scene()
 particle = Mesh(SphereGeometry(1.0, 32, 24), MeshLambertMaterial())
 scene.add(particle)
 
+ambientLight = AmbientLight(0xFFFFFF)
+scene.add(ambientLight)
 
 
 graph = document.createElement("canvas")
