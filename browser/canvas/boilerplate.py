@@ -20,7 +20,7 @@ if useWebGL:
     camera.position.z = 2
     renderer = WebGLRenderer({"antialias": True})
     scene = Scene()
-view = document.getElementById("view")
+view = document.getElementById("header")
 graph = document.createElement("canvas")
 # Initialize the graph extent before we get resized to the container.
 graph.height = 400
