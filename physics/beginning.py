@@ -14,6 +14,8 @@ camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 2
 renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
+mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
+scene.add(mesh)
 
 graph = document.createElement("canvas")
 graph.style.position = "absolute"
@@ -100,9 +102,6 @@ def init():
         container.appendChild(graph)
         container.appendChild(renderer.domElement)
 
-    mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
-    scene.add(mesh)
-    
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
 
