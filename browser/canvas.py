@@ -16,9 +16,9 @@ renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
 view = document.getElementById("view")
 graph = document.createElement("canvas")
-#graph.style.position = "absolute"
-#graph.style.top = "0px"
-#graph.style.left = "0px"
+graph.style.position = "absolute"
+graph.style.top = "0px"
+graph.style.left = "0px"
 context = graph.getContext("2d")
 
 # Use Python's dictionary to handle event.keyCode(s).
@@ -72,10 +72,10 @@ def onWindowResize():
         camera.aspect = container.clientWidth / container.clientHeight
         camera.updateProjectionMatrix()
         renderer.setSize(container.clientWidth, container.clientHeight)
-        #graph.width = container.clientWidth
-        #graph.height = container.clientHeight
-        #graph.style.width = str(container.clientWidth) + "px"
-        #graph.style.height = str(container.clientHeight) + "px"
+        graph.width = container.clientWidth
+        graph.height = container.clientHeight
+        graph.style.width = str(container.clientWidth) + "px"
+        graph.style.height = str(container.clientHeight) + "px"
     
 def discardExistingCanvas():
     for cs in document.getElementsByTagName("canvas"):
