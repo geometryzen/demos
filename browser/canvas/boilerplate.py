@@ -6,7 +6,7 @@ from eight import *
 # The 'browser' module provides an API to the window and document as well as the HTML5 2D canvas.
 from browser import *
 # Change this variable render the graphics in different ways. 
-useLargeCanvas = True
+useLargeCanvas = False
 useWebGL = True
 
 # Variables to track the intentions of the user.
