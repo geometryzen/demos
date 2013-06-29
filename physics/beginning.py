@@ -13,7 +13,7 @@ moveRight = False
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
-view = document.getElementById("view")
+
 graph = document.createElement("canvas")
 graph.style.position = "absolute"
 graph.style.top = "0px"
@@ -92,10 +92,8 @@ def init():
     print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
     discardCanvases()
     if (useLargeCanvas):
-        container = document.createElement("div")
-        document.body.appendChild(container)
-        view.parentNode.insertBefore(renderer.domElement, view)
-        view.parentNode.insertBefore(graph, view)
+        document.body.insertBefore(renderer.domElement, firstChild)
+        document.body.insertBefore(graph, document.body.firstChild)
     else:
         container = document.getElementById("canvas-container")
         container.appendChild(graph)
