@@ -20,7 +20,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-material = LineBasicMaterial()
+material = LineBasicMaterial({"wireframe": True})
 material.color = Color(0x00FF00)
 material.opacity = 0.5
 
