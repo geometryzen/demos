@@ -117,35 +117,7 @@ def render():
         camera.position.x -= 0.02
     if (moveRight):
         camera.position.x += 0.02
-        
-    context.setTransform(1, 0, 0, 1, 10, 10)
-    context.fillStyle = "#FF66CC"
-    context.strokeStyle = "#808080" 
 
-    context.clearRect(-200, -200, 400, 400)
-
-    context.strokeRect(60, 60, 50, 50)
-    context.fillRect(110, 110, 50, 50)
-
-    context.beginPath()
-
-    context.moveTo(0, 30)
-    context.lineTo(0, 100)
-
-    context.moveTo(30, 0)
-    context.lineTo(100, 0)
-
-    context.moveTo(-10, 0)
-    context.lineTo(10, 0)
-    context.moveTo(0, -10)
-    context.lineTo(0, 10)
-    context.fill()
-
-    context.rect(10, 10, 50, 50)
-
-    context.closePath()
-    context.stroke()
-      
     renderer.render(scene, camera)
     
 def animate(timestamp):
