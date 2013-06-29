@@ -14,8 +14,8 @@ camera  = PerspectiveCamera(45, 1.0, 0.1, 1000)
 camera.position.z = 4
 renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
-mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
-scene.add(mesh)
+particle = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
+scene.add(particle)
 
 graph = document.createElement("canvas")
 graph.style.position = "absolute"
@@ -145,9 +145,6 @@ def render():
 
     context.closePath()
     context.stroke()
-    
-    mesh.rotation.x += 0.02
-    mesh.rotation.y += 0.02
       
     renderer.render(scene, camera)
     
