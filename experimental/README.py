@@ -1,1 +1,1 @@
-# README.py
+This folder contains programming experiments for Geometry Zen.
