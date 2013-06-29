@@ -1,5 +1,5 @@
 # WebGLRenderer demonstration.
-from three import *
+from eight import *
 from browser import *
 from math import pi
 
