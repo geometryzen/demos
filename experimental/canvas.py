@@ -75,7 +75,7 @@ startTime =  None
 def init():
     print "Hello!"
     print "This program is an exploration of ways to improve the user experience."        
-    print "Press ESC to terminate, Arrow keys to move the 3D cube Left, Right, Forward, Backward."
+    print "Press ESC to terminate."
     print "This program will 'self-terminate' in "+str(progressEnd/1000)+" seconds!"
     print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
     discardCanvases()
