@@ -95,7 +95,7 @@ def discardCanvases():
         cs.parentNode.removeChild(cs)
         
 requestID = None
-elapsedTime = None
+elapsedTime = 0
 END_TIME_MILLISECONDS = 2000
 startTime =  None
 
@@ -138,7 +138,6 @@ def bootstrap(timestamp):
     global requestID, startTime
     print "timestamp: " + repr(timestamp)
     startTime = timestamp
-    elapsedTime = 0
     requestID = window.requestAnimationFrame(animate)
     
 def animate(timestamp):
