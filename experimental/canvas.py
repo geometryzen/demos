@@ -18,7 +18,7 @@ graph.style.position = "absolute"
 graph.style.top = "0px"
 graph.style.left = "0px"
 
-position = vector3(0,0,0)
+position = Vector3(0,0,0)
 
 context = graph.getContext("2d")
 
