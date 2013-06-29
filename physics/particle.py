@@ -131,7 +131,7 @@ def render(index, time, delta):
     if (moveRight):
         camera.position.x += 0.2
         
-    print {'index':index, 'time': time, 'delta':delta}
+    print {'index': index, 'time': time, 'delta': delta}
     
     renderer.render(scene, camera)
     
@@ -139,7 +139,7 @@ def bootstrap(timestamp):
     global requestID, startTime
     startTime = timestamp
     requestID = window.requestAnimationFrame(animate)
-    render(frameIndex, frameTime, 0)
+    render(frameIndex, frameTime, 0.0)
     
 def animate(timestamp):
     global requestID, frameIndex, frameTime
