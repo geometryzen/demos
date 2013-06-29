@@ -11,7 +11,7 @@ moveLeft = False
 moveRight = False
 
 camera  = PerspectiveCamera(45, 1.0, 0.1, 1000)
-camera.position.z = 2
+camera.position.z = 4
 renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
 mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
