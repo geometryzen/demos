@@ -17,6 +17,8 @@ scene = Scene()
 particle = Mesh(SphereGeometry(1.0, 32, 24), MeshLambertMaterial())
 scene.add(particle)
 
+
+
 graph = document.createElement("canvas")
 graph.style.position = "absolute"
 graph.style.top = "0px"
@@ -138,7 +140,6 @@ def animate(timestamp):
         
 def terminate():
     window.cancelAnimationFrame(requestID)
-    discardCanvases()
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
     print "Goodbye."
