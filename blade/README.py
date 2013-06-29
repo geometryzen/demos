@@ -15,7 +15,7 @@
 # Geometric Algebra of 2D Euclidean Space (the "Plane").
 # ======================================================
 #
-# This algebra contains an even sub-algebra that is isomorphic to complex numbers.
+# This algebra contains an even sub-algebra that is isomorphic to Complex Numbers.
 #
 # Geometric Algebra of 3D Euclidean Space ("Physical Space").
 # ===========================================================
