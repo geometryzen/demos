@@ -4,7 +4,7 @@ from browser import *
 from math import cos, sin, floor, random
 from time import clock
 
-useLargeCanvas = True
+useLargeCanvas = False
 
 # Global variables
 camera = OrthographicCamera(-1, 1, 1, -1, -500, 1000)
