@@ -2,7 +2,7 @@
 from eight import *
 from browser import *
 
-useLargeCanvas = True
+useLargeCanvas = False
 
 # Variables to track the intentions of the user.
 moveForward = False
