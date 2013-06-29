@@ -65,7 +65,7 @@ def onWindowResize():
     camera.updateProjectionMatrix()
     renderer.size = (window.innerWidth, window.innerHeight)
     
-def step(timestamp):
+def animate(timestamp):
     global requestID, progress, startTime
     if (startTime):
         progress = timestamp - startTime
@@ -86,4 +86,4 @@ window.addEventListener("resize", onWindowResize, False)
 
 onWindowResize()
 
-step(None)
+animate(None)
