@@ -129,9 +129,13 @@ def render():
     context.fillRect(110, 110, 50, 50)
 
     context.beginPath()
-    context.moveTo(0,30)
-    context.lineTo(0,100)
-    # center
+
+    context.moveTo(0, 30)
+    context.lineTo(0, 100)
+
+    context.moveTo(30, 0)
+    context.lineTo(100, 0)
+
     context.moveTo(-10, 0)
     context.lineTo(10, 0)
     context.moveTo(0, -10)
