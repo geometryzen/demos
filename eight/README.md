@@ -1,9 +1,9 @@
-The Geometry Zen eight module is a thin wrapper around the powerful Three.JS JavaScript library used
+The Geometry Zen 'eight' module is a thin wrapper around the powerful Three.JS JavaScript library used
 for WebGL 3D graphics programming. 
 
 (The Three.js library provides an easy-to-use, object-oriented API for WebGL and is widely used with an active community.)
 
-The eight module extends the Three.JS library by providing a multivector as a generalization of THREE.Vector3. This facilitates Geometric Algebra calculations as 
+The eight module extends the Three.JS library by providing a multivector as a generalization of THREE.Vector3. This facilitates Geometric Algebra calculations, as 
 opposed to simply Linear Algebra.
 
 While Geometry Zen has a Python language binding, it should be possible to make effective use of the documentation at threejs.org/docs as documentation for the eight Python module.
