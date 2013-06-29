@@ -16,15 +16,6 @@ scene = Scene()
 
 view = document.getElementById("view")
 
-graph = document.createElement("canvas")
-graph.height = 400
-graph.width = 400
-graph.style.position = "absolute"
-graph.style.top = "0px"
-graph.style.left = "0px"
-
-context = graph.getContext("2d")
-
 def escKey(downFlag):
     terminate()
 
@@ -65,15 +56,11 @@ def onWindowResize():
         camera.aspect = window.innerWidth / window.innerHeight
         camera.updateProjectionMatrix()
         renderer.size = (window.innerWidth, window.innerHeight)
-        graph.width = window.innerWidth
-        graph.height = window.innerHeight
     else:
         container = document.getElementById("canvas-container")
         camera.aspect = container.clientWidth / container.clientHeight
         camera.updateProjectionMatrix()
         renderer.setSize(container.clientWidth, container.clientHeight)
-        graph.width = container.clientWidth
-        graph.height = container.clientHeight
     
 def discardCanvases():
     for cs in document.getElementsByTagName("canvas"):
@@ -95,10 +82,8 @@ def init():
         container = document.createElement("div")
         document.body.appendChild(container)
         view.parentNode.insertBefore(renderer.domElement, view)
-        view.parentNode.insertBefore(graph, view)
     else:
         container = document.getElementById("canvas-container")
-        container.appendChild(graph)
         container.appendChild(renderer.domElement)
 
     mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
@@ -119,35 +104,6 @@ def render():
         camera.position.x -= 0.02
     if moveRight:
         camera.position.x += 0.02
-        
-    context.setTransform(1, 0, 0, 1, 0, 0)
-    context.fillStyle = "#FF66CC"
-    context.strokeStyle = "#808080" 
-
-    context.clearRect(-200, -200, 400, 400)
-
-    context.fillRect(0, 0, 50, 50)
-    context.fillRect(100, 100, 50, 50)
-    context.strokeRect(75, 75, 50, 50)
-
-    context.beginPath()
-    context.moveTo(0,30)
-    context.lineTo(0,100)
-    # center
-    context.moveTo(-10, 0)
-    context.lineTo(10, 0)
-    context.moveTo(0, -10)
-    context.lineTo(0, 10)
-    context.fill()
-    context.rect(0,0,100,100)
-    context.rect(0,0,200,200)
-    context.rect(0,0,300,300)
-    context.rect(10, 10, 50, 50)
-
-    context.strokeText("Hello, Canvas", 60, 60)
-
-    context.closePath()
-    context.stroke()
 
     renderer.render(scene, camera)
     
