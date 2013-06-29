@@ -136,8 +136,8 @@ def render():
     renderer.render(scene, camera)
     
 def bootstrap(timestamp):
-    global requestID
-    global startTime = timestamp
+    global requestID, startTime
+    startTime = timestamp
     requestID = window.requestAnimationFrame(animate)
     render()
     
