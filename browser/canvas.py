@@ -175,5 +175,6 @@ def terminate():
 
 print "ESC to terminate, Arrow keys to move Left, Right, Forward, Backward."
 print "This program will self-destruct in 60 seconds."
+print "Try setting the useLargeCanvas parameter to True. Then scroll down to see what is going on."
 init()
 animate(None)
