@@ -1,4 +1,3 @@
-# MultiVector3.py
 # MultiVector3 demonstration of Euclidean 3D Geometric Algebra.
 from eight import *
 
