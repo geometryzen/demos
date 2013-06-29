@@ -136,15 +136,13 @@ def render(elapsedTime):
     
 def animate(timestamp):
     global requestID, elapsedTime, startTime
-    if (startTime):
+    if startTime:
         elapsedTime = timestamp - startTime
     else:
-        if (timestamp):
-            startTime = timestamp
-        else:
-            elapsedTime = 0
+        startTime = timestamp
+        elapsedTime = 0
         
-    if (elapsedTime < progressEnd):
+    if elapsedTime < progressEnd:
         requestID = window.requestAnimationFrame(animate)
         render(elapsedTime)
     else:
@@ -157,4 +155,4 @@ def terminate():
     print "Goodbye."
 
 init()
-animate(None)
+window.requestAnimationFrame(animate)
