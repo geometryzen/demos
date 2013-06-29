@@ -17,6 +17,8 @@ graph.width = 400
 graph.style.position = "absolute"
 graph.style.top = "0px"
 graph.style.left = "0px"
+graph.style.height = "400px"
+graph.style.width = "400px"
 
 position = Vector3(0,0,0)
 
