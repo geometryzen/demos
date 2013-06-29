@@ -87,7 +87,6 @@ def init():
     else:
         container = document.getElementById("canvas-container")
         container.appendChild(graph)
-        container.appendChild(renderer.domElement)
     
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
