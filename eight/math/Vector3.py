@@ -1,5 +1,4 @@
-# MultiVector3 demonstration.
-# Vector3 is a convenience wrapper when using the eight module.
+# Vector3 demonstration.
 from eight import *
 
 a = Vector3(1,1,1)
