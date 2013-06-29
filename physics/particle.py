@@ -96,6 +96,7 @@ def discardCanvases():
         
 requestID = None
 elapsedTime = 0
+frameIndex = 0
 END_TIME_MILLISECONDS = 2000
 startTime =  None
 
@@ -130,20 +131,20 @@ def render():
     if (moveRight):
         camera.position.x += 0.2
         
-    print "elapsedTime: " + repr(elapsedTime)
+    print "elapsedTime["+str(frameIndex)+"]: " + str(elapsedTime)
     
     renderer.render(scene, camera)
     
 def bootstrap(timestamp):
     global requestID, startTime
-    print "timestamp: " + repr(timestamp)
     startTime = timestamp
     requestID = window.requestAnimationFrame(animate)
     render()
     
 def animate(timestamp):
-    global requestID, elapsedTime
+    global requestID, frameIndex, elapsedTime
     elapsedTime = timestamp - startTime
+    frameIndex += 1
         
     if elapsedTime < END_TIME_MILLISECONDS:
         requestID = window.requestAnimationFrame(animate)
