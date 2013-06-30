@@ -97,7 +97,7 @@ def discardCanvases():
         
 requestID = None
 frameIndex = 0
-DURATION_MILLISECONDS = 5000
+DURATION_MILLISECONDS = 1000
 startTime =  None
 frameTime = None
 endTime = None
@@ -125,6 +125,8 @@ def init():
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
+    # Here's a new one to try.
+    print document.webkitHidden
 
 def render(n, t, dt):
     n = n
