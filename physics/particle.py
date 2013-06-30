@@ -88,8 +88,11 @@ x = Vector3(-500,0,0)
 v = Vector3(75,75,0)
 m = 1
 g = Vector3(0, -9.81, 0)
+
+e = Scalar(1)
 E = Vector3()
 B = Bivector3(0,0,0)
+
 i = Vector3(1,0,0)
 j = Vector3(0,1,0)
 k = Vector3(0,0,1)
@@ -97,6 +100,10 @@ I = Pseudoscalar3(1)
 
 def F(x,v,t):
     return m * g
+    # TODO: Something like this for Electrodynamics with bivectors.
+    # No "dishonest" vectors here, Feynman would be proud!
+    # return e * (E + (v << B) * I)
+
 
 def init():       
     print "Press ESC to terminate."
@@ -158,7 +165,7 @@ def terminate():
     print "x: " + repr(x)
     print "v: " + repr(v)
     # TODO: It would be nice if standard mathematical function could be used on multivectors.
-    print "v.v: " + repr(v << v)
+    print "v.v: " + repr(v * v)
 
 init()
 window.requestAnimationFrame(bootstrap)
