@@ -147,7 +147,7 @@ def bootstrap(timestamp):
     frameTime = timestamp
     endTime = startTime + DURATION_MILLISECONDS
     requestID = window.requestAnimationFrame(animate)
-    render(frameIndex, frameTime, 0.0)
+#    render(frameIndex, frameTime, 0.0)
     
 def animate(timestamp):
     global requestID, frameIndex, frameTime
@@ -156,7 +156,7 @@ def animate(timestamp):
     frameTime = timestamp   
     if frameTime < endTime:
         requestID = window.requestAnimationFrame(animate)
-        render(frameIndex, frameTime - startTime, interval)
+#        render(frameIndex, frameTime - startTime, interval)
     else:
         terminate()
         
