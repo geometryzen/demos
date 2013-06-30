@@ -156,7 +156,7 @@ def bootstrap(timestamp):
     frameTime = timestamp
     endTime = startTime + DURATION_MILLISECONDS
     window.setTimeout(requestFrame, REQUEST_FRAME_DELAY);
-    render(frameIndex, frameTime, 0.0)
+    render(frameIndex, frameTime - startTime, 0.0)
     
 def animate(timestamp):
     global requestID, frameIndex, frameTime
