@@ -101,7 +101,7 @@ startTime =  None
 frameTime = None
 endTime = None
 
-velocity = Vector3(0.01,0,0)
+velocity = Vector3(0.005,0,0)
 
 def init():
     print "Hello!"
