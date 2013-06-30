@@ -130,7 +130,7 @@ def init():
     
 def render(n, t, dt):
     global velocity
-    data.append("t":t, "x":particle.position)
+    data.append({"t":t, "x":particle.position})
     velocity = velocity + g * dt
     particle.position = particle.position + velocity * dt
 #    if moveForward:
