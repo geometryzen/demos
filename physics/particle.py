@@ -96,9 +96,9 @@ def discardCanvases():
         
 requestID = None
 frameIndex = 0
-frameTime = 0.0
 DURATION_MILLISECONDS = 2000
 startTime =  None
+frameTime = None
 endTime = None
 velocity = Vector3(1,0,0)
 
@@ -141,8 +141,9 @@ def render(n, t, dt):
     renderer.render(scene, camera)
     
 def bootstrap(timestamp):
-    global requestID, startTime, endTime
+    global requestID, startTime, frameTime, endTime
     startTime = timestamp
+    frameTime = timestamp
     endTime = startTime + DURATION_MILLISECONDS
     requestID = window.requestAnimationFrame(animate)
     render(frameIndex, frameTime, 0.0)
