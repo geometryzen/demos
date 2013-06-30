@@ -8,6 +8,7 @@
 # TODO: Move the camera so that the z-axis is up, x-axis towards us and y to the right.
 from eight import *
 from browser import *
+from math import sqrt
 
 useLargeCanvas = False
 
@@ -152,6 +153,7 @@ def terminate():
     print "Done."
     print "x: " + str(particle.position)
     print "v: " + str(v)
+    print "speed: " + str(v << v)
 
 init()
 window.requestAnimationFrame(bootstrap)
