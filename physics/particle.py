@@ -115,7 +115,7 @@ def integrate(n, t, dt):
     # TODO: What about intrinsic properties such as mass or inertia tensor?
     particle.position = x
 
-def init():       
+def run():       
     print "Press ESC to terminate."
     print "This program will 'self-terminate' in "+str(DURATION_SECONDS)+" seconds!"
     discardCanvases()
@@ -132,6 +132,7 @@ def init():
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
+    window.requestAnimationFrame(frameZero)
 
 def frameZero(timestamp):
     global requestID, startTime, frameTime, endTime
@@ -166,5 +167,4 @@ def terminate():
     # TODO: It would be nice if standard mathematical function could be used on multivectors.
     print "v * v: " + repr(v * v)
 
-init()
-window.requestAnimationFrame(frameZero)
+run()
