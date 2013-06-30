@@ -126,12 +126,10 @@ def init():
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
-    # TODO
-    print window.animationTime
     
 def render(n, t, dt):
     n = n
-    # print {"n":n, "t":t, "dt":dt}
+    print {"n":n, "t":t, "dt":dt}
     # Using the timer should result in a smooth animation.
     # Perhaps the frame rate is just too low?
     particle.position.x = particle.position.x + (velocity * dt).x
