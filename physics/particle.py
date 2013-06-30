@@ -1,14 +1,8 @@
 # Single particle subject to a force. 
 from eight import *
 from browser import *
-from time import clock
 
 useLargeCanvas = False
-
-moveForward = False
-moveBackward = False
-moveLeft = False
-moveRight = False
 
 camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.z = 1000
@@ -38,28 +32,8 @@ context = graph.getContext("2d")
 def escKey(downFlag):
     terminate()
 
-def leftArrowKey(downFlag):
-    global moveLeft
-    moveLeft = downFlag
-
-def upArrowKey(downFlag):
-    global moveForward
-    moveForward = downFlag
-    
-def rightArrowKey(downFlag):
-    global moveRight
-    moveRight = downFlag
-
-def downArrowKey(downFlag):
-    global moveBackward
-    moveBackward = downFlag
-
 keyHandlers = {
- 27: escKey,
- 37: leftArrowKey,
- 38: upArrowKey,
- 39: rightArrowKey,
- 40: downArrowKey
+ 27: escKey
 }
     
 def onDocumentKeyDown(event):
@@ -133,14 +107,6 @@ def render(n, t, dt):
     v = v + a * dt
     particle.position = particle.position + v * dt
     
-    if moveForward:
-        camera.position.z -= 10
-    if moveBackward:
-        camera.position.z += 10
-    if moveLeft:
-        camera.position.x -= 10
-    if moveRight:
-        camera.position.x += 10
     renderer.render(scene, camera)
 
 def bootstrap(timestamp):
