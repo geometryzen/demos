@@ -24,7 +24,7 @@ phiStart = 0
 phiLength = 2 * pi
 thetaStart = 0
 thetaLength = pi
-sphere = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
+sphere = SphereGeometry(radius, widthSegments, heightSegments)
 
 print repr(sphere)
 print "radius:         " + str(sphere.radius)
