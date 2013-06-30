@@ -66,6 +66,7 @@ directionalLight = DirectionalLight(0xFFFFFF)
 directionalLight.position.set(0, 1, 0)
 scene.add(directionalLight)
 
+# We're not actually using the HTML Canvas (2d), but it is here just in case we need it.
 graph = document.createElement("canvas")
 graph.style.position = "absolute"
 graph.style.top = "0px"
