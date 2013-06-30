@@ -13,7 +13,7 @@ moveLeft = False
 moveRight = False
 
 camera  = PerspectiveCamera(45, 1.0, 0.1, 1000)
-camera.position.z = 20
+camera.position.z = 1000
 renderer = WebGLRenderer()
 renderer.setClearColor(0x080808, 1.0)
 scene = Scene()
@@ -104,7 +104,7 @@ endTime = None
 data = []
 
 particle.position = Vector3(-12,0,0)
-velocity = Vector3(0.004,0.004,0)
+velocity = Vector3(10,10,0)
 g = Vector3(0,-9.81, 0)
 
 def init():
