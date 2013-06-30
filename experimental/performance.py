@@ -151,6 +151,8 @@ def requestFrame():
     
 def bootstrap(timestamp):
     print "timestamp: " + str(timestamp)
+    print "clock:     " + str(clock())
+    
     global requestID, startTime, frameTime, endTime
     startTime = timestamp
     frameTime = timestamp
