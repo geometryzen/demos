@@ -127,6 +127,7 @@ def init():
     onWindowResize()
 
 def render(n, t, dt):
+    x = 0
 #    if moveForward:
 #        camera.position.z -= 0.2
 #    if moveBackward:
