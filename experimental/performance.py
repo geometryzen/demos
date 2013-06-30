@@ -3,6 +3,7 @@
 # Under Construction!
 from eight import *
 from browser import *
+from time import clock
 
 useLargeCanvas = False
 
@@ -149,6 +150,7 @@ def requestFrame():
     requestID = window.requestAnimationFrame(animate)
     
 def bootstrap(timestamp):
+    print "timestamp: " + str(timestamp)
     global requestID, startTime, frameTime, endTime
     startTime = timestamp
     frameTime = timestamp
