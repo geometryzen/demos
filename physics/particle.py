@@ -132,8 +132,6 @@ def render(n, t, dt):
         camera.position.x -= 0.2
     if (moveRight):
         camera.position.x += 0.2
-        
-    print {'index': n, 'time': t, 'delta': dt}
     
     particle.position = particle.position + velocity * n * 0.01
     print particle.position
