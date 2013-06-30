@@ -20,9 +20,7 @@ container.appendChild(renderer.domElement)
 
 radius = 20
 height = 100
-radiusSegments = 32
-heightSegments = 1
-arrow = ArrowGeometry(radius, height, radiusSegments, heightSegments)
+arrow = CylinderGeometry(radius, radius, height)
 
 print repr(arrow)
 print "radius:         " + str(arrow.radius)
