@@ -100,6 +100,7 @@ frameTime = 0.0
 DURATION_MILLISECONDS = 2000
 startTime =  None
 endTime = None
+velocity = Vector3(1,0,0)
 
 def init():
     print "Hello!"
@@ -133,6 +134,8 @@ def render(n, t, dt):
         camera.position.x += 0.2
         
     print {'index': n, 'time': t, 'delta': dt}
+    
+    particle.position = particle.position + velocity * dt
     
     renderer.render(scene, camera)
     
