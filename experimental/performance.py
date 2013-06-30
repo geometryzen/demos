@@ -105,6 +105,7 @@ data = []
 
 particle.position = Vector3(-12,0,0)
 velocity = Vector3(0.004,0.004,0)
+g = Vector3(0,-9.81, 0)
 
 def init():
     print "Hello!"
