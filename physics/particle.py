@@ -101,6 +101,7 @@ startTime =  None
 frameTime = None
 endTime = None
 
+particle.position = Vector3(-5,0,0)
 velocity = Vector3(0.005,0,0)
 
 def init():
