@@ -12,7 +12,6 @@ moveRight = False
 
 camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.z = 1000
-print camera.position
 renderer = WebGLRenderer()
 renderer.setClearColor(0x080808, 1.0)
 scene = Scene()
