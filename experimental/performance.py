@@ -130,14 +130,14 @@ def init():
 def render(n, t, dt):
     n = n
     particle.position = particle.position + velocity * dt
-    if moveForward:
-        camera.position.z -= 0.2
-    if moveBackward:
-        camera.position.z += 0.2
-    if moveLeft:
-        camera.position.x -= 0.2
-    if moveRight:
-        camera.position.x += 0.2
+#    if moveForward:
+#        camera.position.z -= 0.2
+#    if moveBackward:
+#        camera.position.z += 0.2
+#    if moveLeft:
+#        camera.position.x -= 0.2
+#    if moveRight:
+#        camera.position.x += 0.2
     renderer.render(scene, camera)
 
 # Experiment with ways to smooth up the animation
