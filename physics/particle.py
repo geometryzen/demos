@@ -123,7 +123,7 @@ def init():
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
     
-def render(n, t, dt):
+def integrate(n, t, dt):
     global x, v
     # TODO: Implement Multivector division by at least scalars and vectors.    
     a = F(x, v, t) * (1/m)
@@ -133,8 +133,6 @@ def render(n, t, dt):
     # TODO: Should we have Rigid Bodies with state/kinematic variables?
     # TODO: What about intrinsic properties such as mass or inertia tensor?
     particle.position = x
-    
-    renderer.render(scene, camera)
 
 def frameZero(timestamp):
     global requestID, startTime, frameTime, endTime
@@ -142,7 +140,8 @@ def frameZero(timestamp):
     frameTime = startTime
     endTime = startTime + DURATION_SECONDS * 1000
     requestID = window.requestAnimationFrame(animate)
-    render(frameIndex, (frameTime - startTime)/1000, 0.0)
+    integrate(frameIndex, (frameTime - startTime)/1000, 0.0)
+    renderer.render(scene, camera)
     
 def animate(timestamp):
     global requestID, frameIndex, frameTime
@@ -151,7 +150,8 @@ def animate(timestamp):
     frameTime = timestamp   
     if frameTime < endTime:
         requestID = window.requestAnimationFrame(animate)
-        render(frameIndex, (frameTime - startTime)/1000, interval/1000)
+        integrate(frameIndex, (frameTime - startTime)/1000, interval/1000)
+        renderer.render(scene, camera)
     else:
         terminate()
         
