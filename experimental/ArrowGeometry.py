@@ -20,7 +20,9 @@ container.appendChild(renderer.domElement)
 
 radius = 20
 height = 100
-arrow = CylinderGeometry(radius, radius, height)
+arrow = Geometry()
+shaft = CylinderGeometry(radius, radius, height)
+arrow.add(shaft)
 
 print repr(arrow)
 print "radius:         " + str(arrow.radiusTop)
