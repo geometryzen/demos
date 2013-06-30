@@ -1,6 +1,4 @@
-# performance.py
-# particle.py
-# Under Construction!
+# Single particle subject to a force. 
 from eight import *
 from browser import *
 from time import clock
