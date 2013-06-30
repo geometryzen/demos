@@ -89,7 +89,7 @@ v = Vector3(75,75,0)
 m = 1
 g = Vector3(0, -9.81, 0)
 
-e = Scalar(1)
+e = Scalar3(1)
 E = Vector3()
 B = Bivector3(0,0,0)
 
