@@ -9,7 +9,7 @@ camera.position.z = 1000
 renderer = WebGLRenderer()
 renderer.setClearColor(0x080808, 1.0)
 scene = Scene()
-particle = Mesh(SphereGeometry(50, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
+particle = Mesh(SphereGeometry(50, 32, 24), MeshLambertMaterial({"color":0xFF0000}))
 scene.add(particle)
 
 ambientLight = AmbientLight(0x222222)
