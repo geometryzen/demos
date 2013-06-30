@@ -87,6 +87,12 @@ particle.position = Vector3(-400,0,0)
 v = Vector3(75,75,0)
 m = 1
 g = Vector3(0, -9.81, 0)
+E = Vector3()
+B = Bivector(0,0,0)
+i = Vector3(1,0,0)
+j = Vector3(0,1,0)
+k = Vector3(0,0,1)
+I = Pseudoscalar3(1)
 
 def F(x,v,t):
     return m * g
@@ -144,6 +150,7 @@ def terminate():
     time = (frameTime-startTime)/1000
     count = frameIndex+1
     print "Done."
+    print "r: " + repr(particle.position)
 
 init()
 window.requestAnimationFrame(bootstrap)
