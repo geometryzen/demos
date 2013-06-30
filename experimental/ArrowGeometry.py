@@ -20,20 +20,12 @@ container.appendChild(renderer.domElement)
 radius = 50
 widthSegments = 32
 heightSegments = 24
-phiStart = 0
-phiLength = 2 * pi
-thetaStart = 0
-thetaLength = pi
 sphere = SphereGeometry(radius, widthSegments, heightSegments)
 
 print repr(sphere)
 print "radius:         " + str(sphere.radius)
 print "widthSegments:  " + str(sphere.widthSegments)
 print "heightSegments: " + str(sphere.heightSegments)
-print "phiStart:       " + str(sphere.phiStart)
-print "phiLength:      " + str(sphere.phiLength)
-print "thetaStart:     " + str(sphere.thetaStart)
-print "thetaLength:    " + str(sphere.thetaLength)
 print sphere
 
 mesh = Mesh(sphere, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
