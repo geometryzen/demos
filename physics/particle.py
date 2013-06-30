@@ -122,7 +122,7 @@ def init():
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
 
-def render(index, time, delta):
+def render(n, t, dt):
     if (moveForward):
         camera.position.z -= 0.2
     if (moveBackward):
@@ -132,7 +132,7 @@ def render(index, time, delta):
     if (moveRight):
         camera.position.x += 0.2
         
-    print {'index': index, 'time': time, 'delta': delta}
+    print {'index': n, 'time': t, 'delta': dt}
     
     renderer.render(scene, camera)
     
