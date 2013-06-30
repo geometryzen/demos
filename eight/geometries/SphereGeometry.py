@@ -36,7 +36,7 @@ print "thetaStart:     " + str(sphere.thetaStart)
 print "thetaLength:    " + str(sphere.thetaLength)
 print sphere
 
-mesh = Mesh(sphere, MeshNormalMaterial())
+mesh = Mesh(sphere, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
 scene.add(mesh)
 
 requestID = None
