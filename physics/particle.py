@@ -123,6 +123,8 @@ def render(n, t, dt):
     # TODO: Why doesn't += work here?
     v = v + a * dt
     x = x + v * dt
+    # TODO: Should we have Rigid Bodies with state/kinematic variables?
+    # TODO: What about intrinsic properties such as mass or inertia tensor?
     particle.position = x
     
     renderer.render(scene, camera)
