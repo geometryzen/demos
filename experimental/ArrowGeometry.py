@@ -17,7 +17,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-radius = 5
+radius = 50
 arrow = SphereGeometry(radius)
 
 print repr(arrow)
