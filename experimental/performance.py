@@ -136,8 +136,8 @@ def render(n, t, dt):
 #    if moveRight:
 #        camera.position.x += 0.2
 #    
-#    particle.position = particle.position + velocity * dt
-#    
+    particle.position = particle.position + velocity * dt
+    
     renderer.render(scene, camera)
     
 def bootstrap(timestamp):
