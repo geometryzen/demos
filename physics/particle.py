@@ -1,4 +1,4 @@
-# Single particle subject to a user-defined force.
+# Single particle subject to a user-defined force field.
 # The particle motion is simulated by integrating the velocity and position.
 # The initial configuration is specified with Cartesian coordinates.
 # The integration calculation is coordinate-free and is done with multivectors.
@@ -31,6 +31,7 @@ j = Vector3(0,1,0)
 k = Vector3(0,0,1)
 I = Pseudoscalar3(1)
 
+# The user-defined force field, F, may depend upon the particle position, velocity and time.
 def F(x,v,t):
     return m * g
     # TODO: Something like this for Electrodynamics with bivectors.
