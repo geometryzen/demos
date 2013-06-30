@@ -1,5 +1,6 @@
 # Single particle subject to a force.
-# TODO: This demonstration contains a lot of boilerplate code that could be 
+# TODO: This demonstration contains a lot of boilerplate code that could be put in a library.
+# TODO: 
 from eight import *
 from browser import *
 
@@ -8,7 +9,7 @@ useLargeCanvas = False
 camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.z = 1000
 renderer = WebGLRenderer()
-renderer.setClearColor(0x080808, 1.0)
+#renderer.setClearColor(0xFFFFFF080808, 1.0)
 scene = Scene()
 particle = Mesh(SphereGeometry(50, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
 scene.add(particle)
