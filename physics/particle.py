@@ -31,6 +31,7 @@ one = MultiVector3(1, 0, 0, 0, 0, 0, 0, 0)
 i = Vector3(1,0,0)
 j = Vector3(0,1,0)
 k = Vector3(0,0,1)
+ij = i ^ j
 I = Pseudoscalar3(1)
 
 # The user-defined force field, F, may depend upon the particle position, velocity and time.
