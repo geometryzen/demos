@@ -102,7 +102,7 @@ startTime =  None
 frameTime = None
 endTime = None
 # Experiment with slowing down the frame rate to get smoother animation.
-REQUEST_FRAME_DELAY = 1000/60
+REQUEST_FRAME_DELAY = 1000/120
 
 particle.position = Vector3(-12,0,0)
 velocity = Vector3(0.004,0,0)
