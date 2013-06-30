@@ -22,10 +22,13 @@ v = Vector3(75,75,0)
 m = 1
 g = Vector3(0, -9.81, 0)
 
+# Charge, Electric Field and Magnetic Field as an bivector (no axial vectors, Thank You).
 e = Scalar3(1)
 E = Vector3()
 B = Bivector3(0,0,0)
 
+# Some more examples of constructing reference multivectors.
+one = MultiVector3(1, 0, 0, 0, 0, 0, 0, 0)
 i = Vector3(1,0,0)
 j = Vector3(0,1,0)
 k = Vector3(0,0,1)
