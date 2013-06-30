@@ -34,7 +34,7 @@ arrow = LatheGeometry(points)
 print repr(arrow)
 print arrow
 
-arrow = SphereGeometry(1)
+arrow = SphereGeometry(50)
 material = MeshLambertMaterial({"color":0x0000FF})
 #material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
 mesh = Mesh(arrow, material)
