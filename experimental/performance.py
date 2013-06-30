@@ -126,7 +126,7 @@ def init():
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
     # TODO
-    window.setTimeout(hello(), 20000);
+    window.setTimeout(hello, 20000);
     
 def hello():
     print "Hello, World!"
