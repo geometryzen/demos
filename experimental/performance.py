@@ -140,7 +140,7 @@ def render(n, t, dt):
 #    
 #     particle.position = particle.position + velocity * dt
     
-    renderer.render(scene, camera)
+#    renderer.render(scene, camera)
     
 def bootstrap(timestamp):
     global requestID, startTime, frameTime, endTime
