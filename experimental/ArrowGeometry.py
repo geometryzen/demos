@@ -23,7 +23,7 @@ height = 100
 arrow = CylinderGeometry(radius, radius, height)
 
 print repr(arrow)
-print "radius:         " + str(arrow.radius)
+print "radius:         " + str(arrow.radiusTop)
 print arrow
 
 mesh = Mesh(arrow, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
