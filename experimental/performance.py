@@ -150,7 +150,6 @@ def requestFrame():
     requestID = window.requestAnimationFrame(animate)
     
 def bootstrap(timestamp):
-    timestamp = clock() * 1000
     global requestID, startTime, frameTime, endTime
     startTime = timestamp
     frameTime = timestamp
@@ -159,7 +158,6 @@ def bootstrap(timestamp):
     render(frameIndex, frameTime, 0.0)
     
 def animate(timestamp):
-    timestamp = clock() * 1000
     global requestID, frameIndex, frameTime
     frameIndex += 1
     interval = timestamp - frameTime 
