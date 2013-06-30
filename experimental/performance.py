@@ -128,6 +128,7 @@ def init():
 
 def render(n, t, dt):
     n = n
+    particle.position = particle.position + velocity * dt
 #    if moveForward:
 #        camera.position.z -= 0.2
 #    if moveBackward:
@@ -137,7 +138,7 @@ def render(n, t, dt):
 #    if moveRight:
 #        camera.position.x += 0.2
 #    
-     particle.position = particle.position + velocity * dt
+#     particle.position = particle.position + velocity * dt
     
 #    renderer.render(scene, camera)
     
