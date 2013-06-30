@@ -157,6 +157,7 @@ def terminate():
     print "Done."
     print "x: " + repr(x)
     print "v: " + repr(v)
+    # TODO: It would be nice if standard mathematical function could be used on multivectors.
     print "v.v: " + repr(v << v)
 
 init()
