@@ -125,6 +125,7 @@ def init():
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
+    hello()
     
 def hello():
     print "Hello, World!"
