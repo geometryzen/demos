@@ -97,7 +97,7 @@ def discardCanvases():
         
 requestID = None
 frameIndex = 0
-DURATION_MILLISECONDS = 6000
+DURATION_SECONDS = 6
 startTime =  None
 frameTime = None
 endTime = None
@@ -111,7 +111,7 @@ def init():
     print "Hello!"
     print "This program is an exploration of ways to improve the user experience."        
     print "Press ESC to terminate."
-    print "This program will 'self-terminate' in "+str(DURATION_MILLISECONDS/1000)+" seconds!"
+    print "This program will 'self-terminate' in "+str(DURATION_SECONDS)+" seconds!"
     print "Try setting the useLargeCanvas variable to True. Scroll down to see what is going on."
     discardCanvases()
     if (useLargeCanvas):
@@ -146,10 +146,10 @@ def render(n, t, dt):
 def bootstrap(timestamp):
     global requestID, startTime, frameTime, endTime
     startTime = timestamp
-    frameTime = timestamp
-    endTime = startTime + DURATION_MILLISECONDS
+    frameTime = startTime
+    endTime = startTime + DURATION_SECONDS * 1000
     requestID = window.requestAnimationFrame(animate)
-    render(frameIndex, frameTime - startTime, 0.0)
+    render(frameIndex, (frameTime - startTime)/1000, 0.0)
     
 def animate(timestamp):
     global requestID, frameIndex, frameTime
@@ -158,7 +158,7 @@ def animate(timestamp):
     frameTime = timestamp   
     if frameTime < endTime:
         requestID = window.requestAnimationFrame(animate)
-        render(frameIndex, frameTime - startTime, interval)
+        render(frameIndex, (frameTime - startTime)/1000, interval)
     else:
         terminate()
         
