@@ -35,7 +35,7 @@ print "heightSegments: " + str(cube.heightSegments)
 print "depthSegments:  " + str(cube.depthSegments)
 print cube
 
-mesh = Mesh(cube, MeshNormalMaterial())
+mesh = Mesh(cube, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
 scene.add(mesh)
 
 requestID = None
