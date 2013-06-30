@@ -63,7 +63,6 @@ keyHandlers = {
  40: downArrowKey
 }
     
-    
 def onDocumentKeyDown(event):
     event.preventDefault()
     keyHandlers[event.keyCode](True)
@@ -101,6 +100,7 @@ DURATION_MILLISECONDS = 6000
 startTime =  None
 frameTime = None
 endTime = None
+REQUEST_FRAME_DELAY = 1000/30
 
 particle.position = Vector3(-10,0,0)
 velocity = Vector3(0.004,0,0)
@@ -148,7 +148,7 @@ def bootstrap(timestamp):
     startTime = timestamp
     frameTime = timestamp
     endTime = startTime + DURATION_MILLISECONDS
-    window.setTimeout(requestFrame, 1000.0/60.0);
+    window.setTimeout(requestFrame, REQUEST_FRAME_DELAY);
     render(frameIndex, frameTime, 0.0)
     
 def animate(timestamp):
@@ -157,7 +157,7 @@ def animate(timestamp):
     interval = timestamp - frameTime 
     frameTime = timestamp   
     if frameTime < endTime:
-        window.setTimeout(requestFrame, 1000.0/60.0);
+        window.setTimeout(requestFrame, REQUEST_FRAME_DELAY);
         render(frameIndex, frameTime - startTime, interval)
     else:
         terminate()
