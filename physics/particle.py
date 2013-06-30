@@ -152,7 +152,7 @@ def terminate():
     time = (frameTime-startTime)/1000
     count = frameIndex+1
     print "Done."
-    print "x: " + repr(particle.position)
+    print "x: " + repr(x)
     print "v: " + repr(v)
     print "v.v: " + repr(v << v)
 
