@@ -5,7 +5,7 @@ from eight import *
 from browser import *
 from time import clock
 
-useLargeCanvas = True
+useLargeCanvas = False
 
 moveForward = False
 moveBackward = False
