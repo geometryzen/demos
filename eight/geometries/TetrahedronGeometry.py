@@ -30,7 +30,7 @@ print "radius:         " + str(tetra.radius)
 print "detail:         " + str(tetra.detail)
 print tetra
 
-mesh = Mesh(tetra, MeshNormalMaterial())
+mesh = Mesh(tetra, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
 scene.add(mesh)
 
 requestID = None
