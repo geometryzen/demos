@@ -84,7 +84,7 @@ frameTime = None
 endTime = None
 
 # Initialize the system configuration
-x = Vector3(-400,0,0)
+x = Vector3(-500,0,0)
 v = Vector3(75,75,0)
 m = 1
 g = Vector3(0, -9.81, 0)
