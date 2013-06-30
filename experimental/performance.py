@@ -101,7 +101,6 @@ DURATION_SECONDS = 15
 startTime =  None
 frameTime = None
 endTime = None
-data = []
 
 particle.position = Vector3(-400,0,0)
 v = Vector3(75,75,0)
@@ -112,11 +111,9 @@ def F(x,v,t):
     return mass * g
 
 def init():
-    print "Hello!"
     print "This program is an exploration of ways to improve the user experience."        
     print "Press ESC to terminate."
     print "This program will 'self-terminate' in "+str(DURATION_SECONDS)+" seconds!"
-    print "Try setting the useLargeCanvas variable to True. Scroll down to see what is going on."
     discardCanvases()
     if (useLargeCanvas):
         document.body.insertBefore(renderer.domElement, document.body.firstChild)
@@ -134,11 +131,11 @@ def init():
     
 def render(n, t, dt):
     global v
-#   data.append({"t":t, "dt":dt, "x":particle.position})
-    # TODO: Need to implement multivector division
+    
     a = F(particle.position, v, t) * (1.0/mass)
     v = v + a * dt
     particle.position = particle.position + v * dt
+    
     if moveForward:
         camera.position.z -= 10
     if moveBackward:
@@ -174,10 +171,7 @@ def terminate():
     document.removeEventListener("keyup", onDocumentKeyUp, False)
     time = (frameTime-startTime)/1000
     count = frameIndex+1
-    print {'count':count,'time':time,'rate':count/time,'dt':time/frameIndex}
     print "Goodbye."
-#    for e in data:
-#        print e
 
 init()
 window.requestAnimationFrame(bootstrap)
