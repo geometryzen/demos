@@ -8,7 +8,6 @@
 # TODO: Move the camera so that the z-axis is up, x-axis towards us and y to the right.
 from eight import *
 from browser import *
-from math import sqrt
 
 # TODO: This could be a particular coordinate system, not just a graphics scene?
 scene = Scene()
@@ -16,7 +15,7 @@ scene = Scene()
 particle = Mesh(SphereGeometry(50, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
 scene.add(particle)
 
-# Initialize the system configuration
+# Initialize the system configuration.
 x = Vector3(-500,0,0)
 v = Vector3(75,75,0)
 m = 1
