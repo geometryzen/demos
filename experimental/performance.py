@@ -110,7 +110,7 @@ def init():
     print "This program is an exploration of ways to improve the user experience."        
     print "Press ESC to terminate."
     print "This program will 'self-terminate' in "+str(DURATION_MILLISECONDS/1000)+" seconds!"
-    print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
+    print "Try setting the useLargeCanvas variable to True. Scroll down to see what is going on."
     discardCanvases()
     if (useLargeCanvas):
         document.body.insertBefore(renderer.domElement, document.body.firstChild)
@@ -126,10 +126,6 @@ def init():
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
     
-def requestFrame():
-    global requestID
-    requestID = window.requestAnimationFrame(animate)
-
 def render(n, t, dt):
     n = n
     particle.position = particle.position + velocity * dt
@@ -142,6 +138,11 @@ def render(n, t, dt):
     if moveRight:
         camera.position.x += 0.2
     renderer.render(scene, camera)
+
+# Experiment with ways to smooth up the animation
+def requestFrame():
+    global requestID
+    requestID = window.requestAnimationFrame(animate)
     
 def bootstrap(timestamp):
     global requestID, startTime, frameTime, endTime
