@@ -38,7 +38,7 @@ I = Pseudoscalar3(1)
 def F(x,v,t):
     return m * g
     # TODO: Something like this for Electrodynamics (with vectors and bivectors).
-    # No "dishonest" vectors here, Feynman would be proud!
+    # No "dishonest" vectors here; Feynman would be proud!
     # return e * (E + (v << B) * I)
     
 def integrate(n, t, dt):
