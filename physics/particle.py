@@ -103,7 +103,17 @@ def F(x,v,t):
     # TODO: Something like this for Electrodynamics with bivectors.
     # No "dishonest" vectors here, Feynman would be proud!
     # return e * (E + (v << B) * I)
-
+    
+def integrate(n, t, dt):
+    global x, v
+    # TODO: Implement Multivector division by at least scalars and vectors.    
+    a = F(x, v, t) * (1/m)
+    # TODO: Why doesn't += work here?
+    v = v + a * dt
+    x = x + v * dt
+    # TODO: Should we have Rigid Bodies with state/kinematic variables?
+    # TODO: What about intrinsic properties such as mass or inertia tensor?
+    particle.position = x
 
 def init():       
     print "Press ESC to terminate."
@@ -122,17 +132,6 @@ def init():
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
-    
-def integrate(n, t, dt):
-    global x, v
-    # TODO: Implement Multivector division by at least scalars and vectors.    
-    a = F(x, v, t) * (1/m)
-    # TODO: Why doesn't += work here?
-    v = v + a * dt
-    x = x + v * dt
-    # TODO: Should we have Rigid Bodies with state/kinematic variables?
-    # TODO: What about intrinsic properties such as mass or inertia tensor?
-    particle.position = x
 
 def frameZero(timestamp):
     global requestID, startTime, frameTime, endTime
