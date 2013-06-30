@@ -18,14 +18,12 @@ renderer.setClearColor(Color(0x080808), 1.0)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-radius = 20
-height = 100
-arrow = Geometry()
-shaft = CylinderGeometry(radius, radius, height)
-arrow.add(shaft)
+
+points = []
+segments = 32
+arrow = LatheGeometry(radius, segments)
 
 print repr(arrow)
-print "radius:         " + str(arrow.radiusTop)
 print arrow
 
 mesh = Mesh(arrow, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
