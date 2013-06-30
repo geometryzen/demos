@@ -18,8 +18,11 @@ renderer.setClearColor(Color(0x080808), 1.0)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-
-points = []
+radiusCone = 20
+radiusShaft = 10
+length = 100
+lengthShaft = 60
+points = [Vector3(0, 0, length), Vector3(radiusCone, 0, lengthShaft), Vector3(0,0,length)]
 segments = 32
 arrow = LatheGeometry(points, segments)
 
