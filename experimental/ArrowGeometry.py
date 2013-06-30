@@ -27,7 +27,7 @@ b = Vector3(radiusCone, 0, lengthShaft)
 c = Vector3(radiusShaft, 0, lengthShaft)
 d = Vector3(radiusShaft, 0, 0)
 e = Vector3(0, 0, 0)
-points = [a, b, c, e, a]
+points = [a, b, e, a]
 arrow = LatheGeometry(points)
 
 print repr(arrow)
