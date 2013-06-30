@@ -125,6 +125,9 @@ def init():
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
+    
+def hello():
+    print "Hello, World!"
 
 def render(n, t, dt):
     n = n
