@@ -104,7 +104,7 @@ endTime = None
 data = []
 
 particle.position = Vector3(-100,0,0)
-velocity = Vector3(10,10,0)
+velocity = Vector3(100,100,0)
 g = Vector3(0,-9.81, 0)
 
 def init():
