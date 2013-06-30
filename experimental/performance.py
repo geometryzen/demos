@@ -129,7 +129,8 @@ def init():
     onWindowResize()
     
 def render(n, t, dt):
-#    velocity = velocity + g * dt
+    global velocity
+    velocity = velocity + g * dt
     particle.position = particle.position + velocity * dt
 #    if moveForward:
 #        camera.position.z -= 0.2
