@@ -101,8 +101,6 @@ DURATION_MILLISECONDS = 6000
 startTime =  None
 frameTime = None
 endTime = None
-# Experiment with slowing down the frame rate to get smoother animation.
-REQUEST_FRAME_DELAY = 0
 data = []
 
 particle.position = Vector3(-12,0,0)
@@ -145,17 +143,12 @@ def render(n, t, dt):
 #        camera.position.x += 0.2
     renderer.render(scene, camera)
 
-# Experiment with ways to smooth up the animation
-def requestFrame():
-    global requestID
-    requestID = window.requestAnimationFrame(animate)
-    
 def bootstrap(timestamp):
     global requestID, startTime, frameTime, endTime
     startTime = timestamp
     frameTime = timestamp
     endTime = startTime + DURATION_MILLISECONDS
-    window.setTimeout(requestFrame, REQUEST_FRAME_DELAY);
+    requestID = window.requestAnimationFrame(animate)
     render(frameIndex, frameTime - startTime, 0.0)
     
 def animate(timestamp):
@@ -164,7 +157,7 @@ def animate(timestamp):
     interval = timestamp - frameTime 
     frameTime = timestamp   
     if frameTime < endTime:
-        window.setTimeout(requestFrame, REQUEST_FRAME_DELAY);
+        requestID = window.requestAnimationFrame(animate)
         render(frameIndex, frameTime - startTime, interval)
     else:
         terminate()
