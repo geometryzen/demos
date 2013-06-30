@@ -126,7 +126,7 @@ def init():
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
     
-def hello():
+def requestFrame():
     global requestID
     requestID = window.requestAnimationFrame(animate)
 
@@ -148,7 +148,7 @@ def bootstrap(timestamp):
     startTime = timestamp
     frameTime = timestamp
     endTime = startTime + DURATION_MILLISECONDS
-    window.setTimeout(hello, 1000.0/60.0);
+    window.setTimeout(requestFrame, 1000.0/60.0);
     render(frameIndex, frameTime, 0.0)
     
 def animate(timestamp):
@@ -157,7 +157,7 @@ def animate(timestamp):
     interval = timestamp - frameTime 
     frameTime = timestamp   
     if frameTime < endTime:
-        window.setTimeout(hello, 1000.0/60.0);
+        window.setTimeout(requestFrame, 1000.0/60.0);
         render(frameIndex, frameTime - startTime, interval)
     else:
         terminate()
