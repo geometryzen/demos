@@ -104,7 +104,7 @@ endTime = None
 data = []
 
 particle.position = Vector3(-400,0,0)
-velocity = Vector3(75,75,0)
+v = Vector3(75,75,0)
 mass = 1
 g = Vector3(0, -9.81, 0)
 
@@ -133,12 +133,12 @@ def init():
     onWindowResize()
     
 def render(n, t, dt):
-    global velocity
+    global v
 #   data.append({"t":t, "dt":dt, "x":particle.position})
     # TODO: Need to implement multivector division
-    a = F(particle.position, velocity,t) * (1.0/mass)
-    velocity = velocity + a * dt
-    particle.position = particle.position + velocity * dt
+    a = F(particle.position, v, t) * (1.0/mass)
+    v = v + a * dt
+    particle.position = particle.position + v * dt
     if moveForward:
         camera.position.z -= 10
     if moveBackward:
