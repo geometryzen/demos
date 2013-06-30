@@ -134,7 +134,7 @@ def render(n, t, dt):
     data.append({"n":n, "t":t, "dt":dt})
     # Using the timer should result in a smooth animation.
     # Perhaps the frame rate is just too low?
-    # particle.position.x = particle.position.x + 0.1#(velocity * dt).x
+    particle.position.x = particle.position.x + 0.1#(velocity * dt).x
 #    if moveForward:
 #        camera.position.z -= 0.2
 #    if moveBackward:
