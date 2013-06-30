@@ -150,7 +150,7 @@ def terminate():
     time = (frameTime-startTime)/1000
     count = frameIndex+1
     print "Done."
-    print "r: " + str(particle.position)
+    print "x: " + str(particle.position)
     print "v: " + str(v)
 
 init()
