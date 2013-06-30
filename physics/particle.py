@@ -162,7 +162,7 @@ def terminate():
     time = (frameTime-startTime)/1000
     count = frameIndex+1
     print "Done."
-    print "x: " + repr(x)
+    print "x: " + str(x)
     print "v: " + repr(v)
     # TODO: It would be nice if standard mathematical function could be used on multivectors.
     print "v * v: " + repr(v * v)
