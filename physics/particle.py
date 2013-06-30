@@ -133,7 +133,7 @@ def render(n, t, dt):
     if (moveRight):
         camera.position.x += 0.2
     
-    particle.position = particle.position + velocity * n * 0.005
+    particle.position = particle.position + velocity * (dt / 500)
     
     renderer.render(scene, camera)
     
