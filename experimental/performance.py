@@ -105,7 +105,11 @@ data = []
 
 particle.position = Vector3(-200,0,0)
 velocity = Vector3(50,50,0)
-g = Vector3(0,-9.81, 0)
+mass = 1
+g = Vector3(0, -9.81, 0)
+
+def F(x,v,t):
+    return mass * g
 
 def init():
     print "Hello!"
@@ -130,8 +134,9 @@ def init():
     
 def render(n, t, dt):
     global velocity
-    data.append({"t":t, "dt":dt, "x":particle.position})
-    velocity = velocity + g * dt
+#   data.append({"t":t, "dt":dt, "x":particle.position})
+    a = F(particle.position, velocity,t)
+    velocity = velocity + a * dt
     particle.position = particle.position + velocity * dt
 #    if moveForward:
 #        camera.position.z -= 0.2
@@ -170,8 +175,8 @@ def terminate():
     count = frameIndex+1
     print {'count':count,'time':time,'rate':count/time,'dt':time/frameIndex}
     print "Goodbye."
-    for e in data:
-        print e
+#    for e in data:
+#        print e
 
 init()
 window.requestAnimationFrame(bootstrap)
