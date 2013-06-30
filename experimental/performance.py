@@ -136,7 +136,7 @@ def render(n, t, dt):
     global velocity
 #   data.append({"t":t, "dt":dt, "x":particle.position})
     # TODO: Need to implement multivector division
-    a = F(particle.position, velocity,t) * (1/mass)
+    a = F(particle.position, velocity,t) * (1.0/mass)
     velocity = velocity + a * dt
     particle.position = particle.position + velocity * dt
 #    if moveForward:
