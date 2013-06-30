@@ -84,7 +84,7 @@ frameTime = None
 endTime = None
 
 # Initialize the system configuration
-particle.position = Vector3(-400,0,0)
+x = Vector3(-400,0,0)
 v = Vector3(75,75,0)
 m = 1
 g = Vector3(0, -9.81, 0)
@@ -119,9 +119,10 @@ def init():
 def render(n, t, dt):
     global v
     # TODO: Implement Multivector division by at least scalars and vectors.    
-    a = F(particle.position, v, t) * (1/m)
-    v = v + a * dt
-    particle.position = particle.position + v * dt
+    a = F(x, v, t) * (1/m)
+    v += a * dt
+    x += v * dt
+    particle.position = x
     
     renderer.render(scene, camera)
 
