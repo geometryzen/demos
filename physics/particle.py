@@ -37,7 +37,7 @@ I = Pseudoscalar3(1)
 # The user-defined force field, F, may depend upon the particle position, velocity and time.
 def F(x,v,t):
     return m * g
-    # TODO: Something like this for Electrodynamics with bivectors.
+    # TODO: Something like this for Electrodynamics (with vectors and bivectors).
     # No "dishonest" vectors here, Feynman would be proud!
     # return e * (E + (v << B) * I)
     
