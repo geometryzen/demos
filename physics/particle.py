@@ -151,9 +151,9 @@ def terminate():
     time = (frameTime-startTime)/1000
     count = frameIndex+1
     print "Done."
-    print "x: " + str(particle.position)
-    print "v: " + str(v)
-    print "v.v: " + str(v << v)
+    print "x: " + repr(particle.position)
+    print "v: " + repr(v)
+    print "v.v: " + repr(v << v)
 
 init()
 window.requestAnimationFrame(bootstrap)
