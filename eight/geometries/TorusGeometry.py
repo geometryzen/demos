@@ -1,5 +1,5 @@
 # TorusGeometry demonstration.
-from three import *
+from eight import *
 # We will control the horizontal. We will control the vertical.
 from browser import *
 from math import pi
