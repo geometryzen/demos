@@ -1,6 +1,11 @@
-# Single particle subject to a force.
+# Single particle subject to a user-defined force.
+# The particle motion is simulated by integrating the velocity and position.
+# The initial configuration is specified with Cartesian coordinates.
+# The integration calculation is coordinate-free and is done with multivectors.
+#
 # TODO: This demonstration contains a lot of boilerplate code that could be put in a library.
 # TODO: A 2D animation may be more appropriate in some cases and provide better graphing.
+# TODO: Move the camera so that the z-axis is up, x-axis towards us and y to the right.
 from eight import *
 from browser import *
 
@@ -76,6 +81,7 @@ startTime =  None
 frameTime = None
 endTime = None
 
+# Initialize the system configuration
 particle.position = Vector3(-400,0,0)
 v = Vector3(75,75,0)
 m = 1
