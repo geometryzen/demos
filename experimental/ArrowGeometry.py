@@ -24,7 +24,7 @@ length = 80
 lengthShaft = 60
 points = [Vector3(0, 0, length), Vector3(radiusCone, 0, lengthShaft), Vector3(radiusShaft, 0, lengthShaft), Vector3(radiusShaft,0,0), Vector3(0,0,0), Vector3(0,0,length)]
 segments = 32
-arrow = LatheGeometry(points, segments)
+arrow = LatheGeometry(points, segments, 0, 2 * pi)
 
 print repr(arrow)
 print arrow
