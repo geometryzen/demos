@@ -26,7 +26,7 @@ print "radius:         " + str(octah.radius)
 print "detail:         " + str(octah.detail)
 print octah
 
-mesh = Mesh(octah, MeshNormalMaterial())
+mesh = Mesh(octah, MeshNormalMaterial({"wireframe": True}))
 scene.add(mesh)
 
 requestID = None
