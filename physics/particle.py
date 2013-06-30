@@ -16,6 +16,7 @@ camera.position.z = 1000
 renderer = WebGLRenderer()
 renderer.setClearColor(0xFFFFFF, 1.0)
 scene = Scene()
+
 particle = Mesh(SphereGeometry(50, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
 scene.add(particle)
 
