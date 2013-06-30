@@ -35,7 +35,7 @@ print "heightSegments: " + str(cylinder.heightSegments)
 print "openEnded:      " + str(cylinder.openEnded)
 print cylinder
 
-mesh = Mesh(cylinder, MeshNormalMaterial())
+mesh = Mesh(cylinder, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
 scene.add(mesh)
 
 requestID = None
