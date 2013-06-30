@@ -20,7 +20,7 @@ container.appendChild(renderer.domElement)
 
 radiusCone = 20
 radiusShaft = 10
-length = 100
+length = 80
 lengthShaft = 60
 points = [Vector3(0, 0, length), Vector3(radiusCone, 0, lengthShaft), Vector3(radiusShaft, 0, lengthShaft), Vector3(0,0,length)]
 segments = 32
