@@ -10,6 +10,38 @@ from eight import *
 from browser import *
 from math import sqrt
 
+# Initialize the system configuration
+x = Vector3(-500,0,0)
+v = Vector3(75,75,0)
+m = 1
+g = Vector3(0, -9.81, 0)
+
+e = Scalar3(1)
+E = Vector3()
+B = Bivector3(0,0,0)
+
+i = Vector3(1,0,0)
+j = Vector3(0,1,0)
+k = Vector3(0,0,1)
+I = Pseudoscalar3(1)
+
+def F(x,v,t):
+    return m * g
+    # TODO: Something like this for Electrodynamics with bivectors.
+    # No "dishonest" vectors here, Feynman would be proud!
+    # return e * (E + (v << B) * I)
+    
+def integrate(n, t, dt):
+    global x, v
+    # TODO: Implement Multivector division by at least scalars and vectors.    
+    a = F(x, v, t) * (1/m)
+    # TODO: Why doesn't += work here?
+    v = v + a * dt
+    x = x + v * dt
+    # TODO: Should we have Rigid Bodies with state/kinematic variables?
+    # TODO: What about intrinsic properties such as mass or inertia tensor?
+    particle.position = x
+
 useLargeCanvas = False
 
 camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
@@ -82,38 +114,6 @@ DURATION_SECONDS = 15
 startTime =  None
 frameTime = None
 endTime = None
-
-# Initialize the system configuration
-x = Vector3(-500,0,0)
-v = Vector3(75,75,0)
-m = 1
-g = Vector3(0, -9.81, 0)
-
-e = Scalar3(1)
-E = Vector3()
-B = Bivector3(0,0,0)
-
-i = Vector3(1,0,0)
-j = Vector3(0,1,0)
-k = Vector3(0,0,1)
-I = Pseudoscalar3(1)
-
-def F(x,v,t):
-    return m * g
-    # TODO: Something like this for Electrodynamics with bivectors.
-    # No "dishonest" vectors here, Feynman would be proud!
-    # return e * (E + (v << B) * I)
-    
-def integrate(n, t, dt):
-    global x, v
-    # TODO: Implement Multivector division by at least scalars and vectors.    
-    a = F(x, v, t) * (1/m)
-    # TODO: Why doesn't += work here?
-    v = v + a * dt
-    x = x + v * dt
-    # TODO: Should we have Rigid Bodies with state/kinematic variables?
-    # TODO: What about intrinsic properties such as mass or inertia tensor?
-    particle.position = x
 
 def run():       
     print "Press ESC to terminate."
