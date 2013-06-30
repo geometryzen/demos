@@ -177,7 +177,8 @@ def terminate():
     count = frameIndex+1
     print {'count':count,'time':time,'rate':count/time,'dt':time/frameIndex}
     print "Goodbye."
-    print data
+    for e in data:
+        print e
 
 init()
 window.requestAnimationFrame(bootstrap)
