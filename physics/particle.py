@@ -10,6 +10,12 @@ from eight import *
 from browser import *
 from math import sqrt
 
+# TODO: This could be a particular coordinate system, not just a graphics scene?
+scene = Scene()
+
+particle = Mesh(SphereGeometry(50, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
+scene.add(particle)
+
 # Initialize the system configuration
 x = Vector3(-500,0,0)
 v = Vector3(75,75,0)
@@ -48,10 +54,6 @@ camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.z = 1000
 renderer = WebGLRenderer()
 renderer.setClearColor(0xFFFFFF, 1.0)
-scene = Scene()
-
-particle = Mesh(SphereGeometry(50, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
-scene.add(particle)
 
 ambientLight = AmbientLight(0x222222)
 scene.add(ambientLight)
