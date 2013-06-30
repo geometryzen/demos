@@ -1,4 +1,5 @@
-# Single particle subject to a force. 
+# Single particle subject to a force.
+# TODO: This demonstration contains a lot of boilerplate code that could be 
 from eight import *
 from browser import *
 
@@ -76,11 +77,11 @@ endTime = None
 
 particle.position = Vector3(-400,0,0)
 v = Vector3(75,75,0)
-mass = 1
+m = 1
 g = Vector3(0, -9.81, 0)
 
 def F(x,v,t):
-    return mass * g
+    return m * g
 
 def init():       
     print "Press ESC to terminate."
@@ -102,8 +103,8 @@ def init():
     
 def render(n, t, dt):
     global v
-    
-    a = F(particle.position, v, t) * (1.0/mass)
+    # TODO: Implement Multivector division by at least scalars and vectors.    
+    a = F(particle.position, v, t) * (1/m)
     v = v + a * dt
     particle.position = particle.position + v * dt
     
