@@ -163,7 +163,9 @@ def terminate():
     window.cancelAnimationFrame(requestID)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
-    print {'count':frameIndex+1,'time':(frameTime-startTime)/1000,'rate':(frameIndex+1)*1000/(frameTime-startTime)}
+    time = (frameTime-startTime)/1000
+    count = frameIndex+1
+    print {'count':count,'time':time,'rate':count/time,'dt':time/frameIndex}
     print "Goodbye."
 
 init()
