@@ -127,6 +127,7 @@ def init():
     onWindowResize()
 
 def render(n, t, dt):
+    n = 0
 #    if moveForward:
 #        camera.position.z -= 0.2
 #    if moveBackward:
@@ -138,7 +139,7 @@ def render(n, t, dt):
 #    
 #    particle.position = particle.position + velocity * dt
     
-    renderer.render(scene, camera)
+#    renderer.render(scene, camera)
     
 def bootstrap(timestamp):
     global requestID, startTime, frameTime, endTime
