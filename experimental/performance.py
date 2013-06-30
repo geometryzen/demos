@@ -103,7 +103,7 @@ frameTime = None
 endTime = None
 data = []
 
-particle.position = Vector3(-12,0,0)
+particle.position = Vector3(-100,0,0)
 velocity = Vector3(10,10,0)
 g = Vector3(0,-9.81, 0)
 
