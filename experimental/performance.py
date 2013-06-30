@@ -12,7 +12,7 @@ moveBackward = False
 moveLeft = False
 moveRight = False
 
-camera  = PerspectiveCamera(45, 1.0, 0.1, 1000)
+camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.z = 1000
 renderer = WebGLRenderer()
 renderer.setClearColor(0x080808, 1.0)
