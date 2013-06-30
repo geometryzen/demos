@@ -97,7 +97,7 @@ def discardCanvases():
         
 requestID = None
 frameIndex = 0
-DURATION_MILLISECONDS = 6000
+DURATION_MILLISECONDS = 1000
 startTime =  None
 frameTime = None
 endTime = None
@@ -163,7 +163,7 @@ def terminate():
     window.cancelAnimationFrame(requestID)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
-    print {'count':frameIndex}
+    print {'count':frameIndex,'time':frameTime-startTime,'rate':(frameTime-startTime)/frameIndex}
     print "Goodbye."
 
 init()
