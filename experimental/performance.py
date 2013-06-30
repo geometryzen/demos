@@ -108,8 +108,7 @@ g = Vector3(0, -9.81, 0)
 def F(x,v,t):
     return mass * g
 
-def init():
-    print "This program is an exploration of ways to improve the user experience."        
+def init():       
     print "Press ESC to terminate."
     print "This program will 'self-terminate' in "+str(DURATION_SECONDS)+" seconds!"
     discardCanvases()
@@ -169,7 +168,7 @@ def terminate():
     document.removeEventListener("keyup", onDocumentKeyUp, False)
     time = (frameTime-startTime)/1000
     count = frameIndex+1
-    print "Goodbye."
+    print "Done."
 
 init()
 window.requestAnimationFrame(bootstrap)
