@@ -36,7 +36,7 @@ print "tubularSegments:" + str(torus.tubularSegments)
 print "arc:            " + str(torus.arc)
 print torus
 
-mesh = Mesh(torus, MeshNormalMaterial())
+mesh = Mesh(torus, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
 scene.add(mesh)
 
 requestID = None
