@@ -30,7 +30,7 @@ print "widthSegments:  " + str(plane.widthSegments)
 print "heightSegments: " + str(plane.heightSegments)
 print plane
 
-mesh = Mesh(plane, MeshNormalMaterial({"wireframe":True}))
+mesh = Mesh(plane, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
 scene.add(mesh)
 
 requestID = None
