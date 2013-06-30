@@ -125,8 +125,6 @@ def init():
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
-    # Here's a new one to try.
-    print document.webkitHidden
 
 def render(n, t, dt):
     n = n
