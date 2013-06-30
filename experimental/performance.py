@@ -13,11 +13,11 @@ moveLeft = False
 moveRight = False
 
 camera  = PerspectiveCamera(45, 1.0, 0.1, 1000)
-camera.position.z = 100
+camera.position.z = 1000
 renderer = WebGLRenderer()
 renderer.setClearColor(0x080808, 1.0)
 scene = Scene()
-particle = Mesh(SphereGeometry(100, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
+particle = Mesh(SphereGeometry(10, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
 scene.add(particle)
 
 ambientLight = AmbientLight(0x222222)
