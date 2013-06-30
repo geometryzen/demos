@@ -17,15 +17,11 @@ renderer.setClearColor(Color(0x080808), 1.0)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-radius = 50
-widthSegments = 32
-heightSegments = 24
-arrow = SphereGeometry(radius, widthSegments, heightSegments)
+radius = 5
+arrow = SphereGeometry(radius)
 
 print repr(arrow)
 print "radius:         " + str(arrow.radius)
-print "widthSegments:  " + str(arrow.widthSegments)
-print "heightSegments: " + str(arrow.heightSegments)
 print arrow
 
 mesh = Mesh(arrow, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
