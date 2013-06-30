@@ -22,7 +22,7 @@ radius = 20
 height = 100
 radiusSegments = 32
 heightSegments = 1
-arrow = SphereGeometry(radius, height, radiusSegments, heightSegments)
+arrow = ArrowGeometry(radius, height, radiusSegments, heightSegments)
 
 print repr(arrow)
 print "radius:         " + str(arrow.radius)
