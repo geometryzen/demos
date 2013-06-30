@@ -34,7 +34,9 @@ arrow = LatheGeometry(points)
 print repr(arrow)
 print arrow
 
-mesh = Mesh(arrow, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
+material = MeshLambertMaterial({"color":0x0000FF})
+#material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
+mesh = Mesh(arrow, material)
 scene.add(mesh)
 
 ambientLight = AmbientLight(0x222222)
