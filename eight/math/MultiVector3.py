@@ -12,6 +12,7 @@ def showValue(name, m):
 zero = explain(MultiVector3(0, 0, 0, 0, 0, 0, 0, 0))
 one = explain(Scalar3(1))
 two = explain(Scalar3(2))
+three = explain(3)
 e1 = explain(Vector3(1, 0, 0))
 e2 = explain(Vector3(0, 1, 0))
 e3 = explain(Vector3(0, 0, 1))
