@@ -33,6 +33,8 @@ e = Vector3(0, 0, 0)
 #e = Vector3(0.001, 0, 0)
 points = [a, b, c, d, e, a]
 arrow = LatheGeometry(points, 24)
+for v in arrow.vertices:
+    print v
 
 print repr(arrow)
 print arrow
