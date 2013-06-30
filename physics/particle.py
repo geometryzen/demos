@@ -153,7 +153,7 @@ def terminate():
     print "Done."
     print "x: " + str(particle.position)
     print "v: " + str(v)
-    print "speed: " + str(v << v)
+    print "v.v: " + str(v << v)
 
 init()
 window.requestAnimationFrame(bootstrap)
