@@ -158,7 +158,7 @@ def animate(timestamp):
     frameTime = timestamp   
     if frameTime < endTime:
         requestID = window.requestAnimationFrame(animate)
-        render(frameIndex, (frameTime - startTime)/1000, interval)
+        render(frameIndex, (frameTime - startTime)/1000, interval/1000)
     else:
         terminate()
         
