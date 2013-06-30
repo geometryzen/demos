@@ -72,6 +72,7 @@ k = Vector3(0,0,1)
 print i
 print j
 print k
+print i + j
 print a * 2.0
 print 2.0 * a
 print i + j - k
