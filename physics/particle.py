@@ -135,7 +135,7 @@ def render(n, t, dt):
         
     print {'index': n, 'time': t, 'delta': dt}
     
-    particle.position = particle.position + velocity * dt
+    particle.position = particle.position + velocity * n * 0.01
     print particle.position
     
     renderer.render(scene, camera)
