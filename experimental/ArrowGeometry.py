@@ -20,15 +20,15 @@ container.appendChild(renderer.domElement)
 radius = 50
 widthSegments = 32
 heightSegments = 24
-sphere = SphereGeometry(radius, widthSegments, heightSegments)
+arrow = SphereGeometry(radius, widthSegments, heightSegments)
 
-print repr(sphere)
-print "radius:         " + str(sphere.radius)
-print "widthSegments:  " + str(sphere.widthSegments)
-print "heightSegments: " + str(sphere.heightSegments)
-print sphere
+print repr(arrow)
+print "radius:         " + str(arrow.radius)
+print "widthSegments:  " + str(arrow.widthSegments)
+print "heightSegments: " + str(arrow.heightSegments)
+print arrow
 
-mesh = Mesh(sphere, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
+mesh = Mesh(arrow, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
 scene.add(mesh)
 
 requestID = None
