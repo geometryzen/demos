@@ -120,8 +120,8 @@ def render(n, t, dt):
     global x, v
     # TODO: Implement Multivector division by at least scalars and vectors.    
     a = F(x, v, t) * (1/m)
-    v += a * dt
-    x += v * dt
+    v = v + a * dt
+    x = x + v * dt
     particle.position = x
     
     renderer.render(scene, camera)
