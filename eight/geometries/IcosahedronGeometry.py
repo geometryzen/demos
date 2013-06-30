@@ -18,7 +18,7 @@ container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
 radius = 1
-detail = 0 # Must be an integer: 0,1,2,...
+detail = 2 # Must be an integer: 0,1,2,...
 
 icosa = IcosahedronGeometry(radius, detail)
 
