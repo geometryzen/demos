@@ -117,7 +117,7 @@ def init():
     onWindowResize()
     
 def render(n, t, dt):
-    global v
+    global x, v
     # TODO: Implement Multivector division by at least scalars and vectors.    
     a = F(x, v, t) * (1/m)
     v += a * dt
