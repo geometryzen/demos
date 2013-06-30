@@ -101,7 +101,6 @@ DURATION_MILLISECONDS = 2000
 startTime =  None
 frameTime = None
 endTime = None
-x = 2
 
 particle.position = Vector3(-10,0,0)
 velocity = Vector3(0.002,0,0)
@@ -128,8 +127,6 @@ def init():
     onWindowResize()
 
 def render(n, t, dt):
-    global x
-    x = 0
 #    if moveForward:
 #        camera.position.z -= 0.2
 #    if moveBackward:
@@ -141,7 +138,7 @@ def render(n, t, dt):
 #    
 #    particle.position = particle.position + velocity * dt
 #    
-#    renderer.render(scene, camera)
+    renderer.render(scene, camera)
     
 def bootstrap(timestamp):
     global requestID, startTime, frameTime, endTime
