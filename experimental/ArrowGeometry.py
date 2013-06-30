@@ -39,7 +39,7 @@ print arrow
 
 arrow = CubeGeometry(50, 50, 50)
 material = MeshLambertMaterial({"color":0x0000FF})
-#material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
+material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
 mesh = Mesh(arrow, material)
 scene.add(mesh)
 
