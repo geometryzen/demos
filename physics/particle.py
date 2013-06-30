@@ -125,13 +125,13 @@ def init():
     onWindowResize()
 
 def render(n, t, dt):
-    if (moveForward):
+    if moveForward:
         camera.position.z -= 0.2
-    if (moveBackward):
+    if moveBackward:
         camera.position.z += 0.2
-    if (moveLeft):
+    if moveLeft:
         camera.position.x -= 0.2
-    if (moveRight):
+    if moveRight:
         camera.position.x += 0.2
     
     particle.position = particle.position + velocity * dt
