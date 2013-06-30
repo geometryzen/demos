@@ -75,7 +75,9 @@ print k
 print i + j
 print i + 3
 print 3 + i
-print i + j
+print i - j
+print i - 3
+print 3 - i
 print a * 2.0
 print 2.0 * a
 print i + j - k
