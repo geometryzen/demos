@@ -23,6 +23,14 @@ a.yz = 3
 a.zx = 2
 a.xyz = 1
 print a
+print "a.w   => " + str(a.w)
+print "a.x   => " + str(a.x)
+print "a.y   => " + str(a.y)
+print "a.z   => " + str(a.z)
+print "a.xy  => " + str(a.xy)
+print "a.yz  => " + str(a.yz)
+print "a.zx  => " + str(a.zx)
+print "a.xyz => " + str(a.xyz)
 
 # The string value of the zero vector is just "0"
 print "str(Vector3(0,0,0)) => " + str(Vector3(0,0,0))
