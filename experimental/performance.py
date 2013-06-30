@@ -13,7 +13,7 @@ moveLeft = False
 moveRight = False
 
 camera  = PerspectiveCamera(45, 1.0, 0.1, 1000)
-camera.position.z = 1000
+camera.position.z = 100
 renderer = WebGLRenderer()
 renderer.setClearColor(0x080808, 1.0)
 scene = Scene()
@@ -130,6 +130,7 @@ def init():
     
 def render(n, t, dt):
     global velocity
+    data.append("t":t, "x":particle.position)
     velocity = velocity + g * dt
     particle.position = particle.position + velocity * dt
 #    if moveForward:
