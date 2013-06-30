@@ -27,7 +27,7 @@ print "radius:         " + str(icosa.radius)
 print "detail:         " + str(icosa.detail)
 print icosa
 
-mesh = Mesh(icosa, MeshNormalMaterial())
+mesh = Mesh(icosa, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
 scene.add(mesh)
 
 requestID = None
