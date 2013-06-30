@@ -10,7 +10,7 @@ for canvas in document.getElementsByTagName("canvas"):
 scene = Scene()
 
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-camera.position.z = 20
+camera.position.z = 15
 
 renderer = WebGLRenderer()
 
@@ -19,8 +19,8 @@ container.appendChild(renderer.domElement)
 
 width = 10
 height = 10
-widthSegments = 1
-heightSegments = 1
+widthSegments = 4
+heightSegments = 4
 plane = PlaneGeometry(width, height, widthSegments, heightSegments)
 
 print repr(plane)
