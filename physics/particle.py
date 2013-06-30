@@ -101,8 +101,8 @@ startTime =  None
 frameTime = None
 endTime = None
 
-particle.position = Vector3(-5,0,0)
-velocity = Vector3(0.005,0,0)
+particle.position = Vector3(-10,0,0)
+velocity = Vector3(0.001,0,0)
 
 def init():
     print "Hello!"
