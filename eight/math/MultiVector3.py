@@ -38,10 +38,13 @@ for grade in range(0, 4):
 # subtraction uses the - operator, as you would expect.
 showValue("zero + sum", zero + sum)
 showValue("0 + sum", 0 + sum)
+
 showValue("zero - sum", zero - sum)
 showValue("0 - sum", 0 - sum)
+
 showValue("one * sum", one * sum)
 showValue("1 * sum", 1 * sum)
+
 showValue("one ^ sum", one ^ sum)
 showValue("1 ^ sum", 1 ^ sum)
 print ""
