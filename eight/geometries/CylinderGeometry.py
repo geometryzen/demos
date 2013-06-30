@@ -22,7 +22,7 @@ radiusTop = 20
 radiusBottom = 20
 height = 100
 radiusSegments = 32
-heightSegments = 2
+heightSegments = 1
 openEnded = False
 cylinder = CylinderGeometry(radiusTop, radiusBottom, height, radiusSegments, heightSegments, openEnded)
 
