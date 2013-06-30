@@ -100,7 +100,7 @@ DURATION_MILLISECONDS = 6000
 startTime =  None
 frameTime = None
 endTime = None
-REQUEST_FRAME_DELAY = 1000/30
+REQUEST_FRAME_DELAY = 1000/15
 
 particle.position = Vector3(-10,0,0)
 velocity = Vector3(0.004,0,0)
