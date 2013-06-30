@@ -31,6 +31,10 @@ directionalLight = DirectionalLight(0xFFFFFF)
 directionalLight.position.set(0, 1, 0)
 scene.add(directionalLight)
 
+directionalLight = DirectionalLight(0xFFFFFF)
+directionalLight.position.set(0, -1, 0)
+scene.add(directionalLight)
+
 graph = document.createElement("canvas")
 graph.style.position = "absolute"
 graph.style.top = "0px"
