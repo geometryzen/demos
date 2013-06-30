@@ -1,7 +1,7 @@
-# particle.py
-# Under Construction!
+# Single particle subject to a force. 
 from eight import *
 from browser import *
+from time import clock
 
 useLargeCanvas = False
 
@@ -10,15 +10,15 @@ moveBackward = False
 moveLeft = False
 moveRight = False
 
-camera  = PerspectiveCamera(45, 1.0, 0.1, 1000)
-camera.position.z = 20
-renderer = WebGLRenderer({"antialias": True})
-renderer.setClearColor(0xFFFFFF, 1.0)
+camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
+camera.position.z = 1000
+renderer = WebGLRenderer()
+renderer.setClearColor(0x080808, 1.0)
 scene = Scene()
-particle = Mesh(SphereGeometry(1.0, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
+particle = Mesh(SphereGeometry(50, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
 scene.add(particle)
 
-ambientLight = AmbientLight(0x111111)
+ambientLight = AmbientLight(0x222222)
 scene.add(ambientLight)
 
 pointLight = PointLight(0xFFFFFF)
@@ -62,7 +62,6 @@ keyHandlers = {
  40: downArrowKey
 }
     
-    
 def onDocumentKeyDown(event):
     event.preventDefault()
     keyHandlers[event.keyCode](True)
@@ -96,20 +95,22 @@ def discardCanvases():
         
 requestID = None
 frameIndex = 0
-DURATION_MILLISECONDS = 6000
+DURATION_SECONDS = 15
 startTime =  None
 frameTime = None
 endTime = None
 
-particle.position = Vector3(-10,0,0)
-velocity = Vector3(0.002,0,0)
+particle.position = Vector3(-400,0,0)
+v = Vector3(75,75,0)
+mass = 1
+g = Vector3(0, -9.81, 0)
 
-def init():
-    print "Hello!"
-    print "This program is an exploration of ways to improve the user experience."        
+def F(x,v,t):
+    return mass * g
+
+def init():       
     print "Press ESC to terminate."
-    print "This program will 'self-terminate' in "+str(DURATION_MILLISECONDS/1000)+" seconds!"
-    print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
+    print "This program will 'self-terminate' in "+str(DURATION_SECONDS)+" seconds!"
     discardCanvases()
     if (useLargeCanvas):
         document.body.insertBefore(renderer.domElement, document.body.firstChild)
@@ -124,28 +125,31 @@ def init():
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
-
+    
 def render(n, t, dt):
+    global v
+    
+    a = F(particle.position, v, t) * (1.0/mass)
+    v = v + a * dt
+    particle.position = particle.position + v * dt
+    
     if moveForward:
-        camera.position.z -= 0.2
+        camera.position.z -= 10
     if moveBackward:
-        camera.position.z += 0.2
+        camera.position.z += 10
     if moveLeft:
-        camera.position.x -= 0.2
+        camera.position.x -= 10
     if moveRight:
-        camera.position.x += 0.2
-    
-    particle.position = particle.position + velocity * dt
-    
+        camera.position.x += 10
     renderer.render(scene, camera)
-    
+
 def bootstrap(timestamp):
     global requestID, startTime, frameTime, endTime
     startTime = timestamp
-    frameTime = timestamp
-    endTime = startTime + DURATION_MILLISECONDS
+    frameTime = startTime
+    endTime = startTime + DURATION_SECONDS * 1000
     requestID = window.requestAnimationFrame(animate)
-    render(frameIndex, frameTime, 0.0)
+    render(frameIndex, (frameTime - startTime)/1000, 0.0)
     
 def animate(timestamp):
     global requestID, frameIndex, frameTime
@@ -154,7 +158,7 @@ def animate(timestamp):
     frameTime = timestamp   
     if frameTime < endTime:
         requestID = window.requestAnimationFrame(animate)
-        render(frameIndex, frameTime - startTime, interval)
+        render(frameIndex, (frameTime - startTime)/1000, interval/1000)
     else:
         terminate()
         
@@ -162,7 +166,9 @@ def terminate():
     window.cancelAnimationFrame(requestID)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
-    print "Goodbye."
+    time = (frameTime-startTime)/1000
+    count = frameIndex+1
+    print "Done."
 
 init()
 window.requestAnimationFrame(bootstrap)
