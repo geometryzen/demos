@@ -37,6 +37,17 @@ print arrow
 mesh = Mesh(arrow, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
 scene.add(mesh)
 
+ambientLight = AmbientLight(0x222222)
+scene.add(ambientLight)
+
+pointLight = PointLight(0xFFFFFF)
+pointLight.position.set(20, 20, 20)
+scene.add(pointLight)
+
+directionalLight = DirectionalLight(0xFFFFFF)
+directionalLight.position.set(0, 1, 0)
+scene.add(directionalLight)
+
 requestID = None
 progress = None
 progressEnd = 6000
