@@ -128,10 +128,6 @@ def init():
     onWindowResize()
     
 def render(n, t, dt):
-    n = n
-    data.append({"n":n, "t":t, "dt":dt})
-    # Using the timer should result in a smooth animation.
-    # Perhaps the frame rate is just too low?
     particle.position = particle.position + velocity * dt
 #    if moveForward:
 #        camera.position.z -= 0.2
