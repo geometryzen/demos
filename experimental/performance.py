@@ -19,9 +19,6 @@ scene = Scene()
 particle = Mesh(SphereGeometry(1.0, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
 scene.add(particle)
 
-ambientLight = AmbientLight(0x222222)
-scene.add(ambientLight)
-
 pointLight = PointLight(0xFFFFFF)
 pointLight.position.set(20, 20, 20)
 scene.add(pointLight)
