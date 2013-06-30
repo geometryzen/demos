@@ -136,7 +136,7 @@ def render(n, t, dt):
     
     renderer.render(scene, camera)
 
-def frame0(timestamp):
+def frameZero(timestamp):
     global requestID, startTime, frameTime, endTime
     startTime = timestamp
     frameTime = startTime
@@ -168,4 +168,4 @@ def terminate():
     print "v * v: " + repr(v * v)
 
 init()
-window.requestAnimationFrame(frame0)
+window.requestAnimationFrame(frameZero)
