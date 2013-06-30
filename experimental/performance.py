@@ -140,13 +140,13 @@ def render(n, t, dt):
     velocity = velocity + a * dt
     particle.position = particle.position + velocity * dt
     if moveForward:
-        camera.position.z -= 0.2
+        camera.position.z -= 10
     if moveBackward:
-        camera.position.z += 0.2
+        camera.position.z += 10
     if moveLeft:
-        camera.position.x -= 0.2
+        camera.position.x -= 10
     if moveRight:
-        camera.position.x += 0.2
+        camera.position.x += 10
     renderer.render(scene, camera)
 
 def bootstrap(timestamp):
