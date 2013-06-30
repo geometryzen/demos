@@ -132,14 +132,14 @@ def render(n, t, dt):
     # Using the timer should result in a smooth animation.
     # Perhaps the frame rate is just too low?
     particle.position = particle.position + velocity * dt
-#    if moveForward:
-#        camera.position.z -= 0.2
-#    if moveBackward:
-#        camera.position.z += 0.2
-#    if moveLeft:
-#        camera.position.x -= 0.2
-#    if moveRight:
-#        camera.position.x += 0.2
+    if moveForward:
+        camera.position.z -= 0.2
+    if moveBackward:
+        camera.position.z += 0.2
+    if moveLeft:
+        camera.position.x -= 0.2
+    if moveRight:
+        camera.position.x += 0.2
     renderer.render(scene, camera)
 
 # Experiment with ways to smooth up the animation
