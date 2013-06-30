@@ -21,7 +21,7 @@ container.appendChild(renderer.domElement)
 
 points = []
 segments = 32
-arrow = LatheGeometry(radius, segments)
+arrow = LatheGeometry(points, segments)
 
 print repr(arrow)
 print arrow
