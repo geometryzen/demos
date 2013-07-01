@@ -32,5 +32,6 @@ cosTheta = a.dot(b)/(a.length()*b.length())
 print "cos(theta) = " + str(cosTheta)
 sinTheta = sqrt(1 - cosTheta * cosTheta)
 print "sin(theta) = " + str(sinTheta)
+print "|a cross b|= " + str(c.length())
 
 
