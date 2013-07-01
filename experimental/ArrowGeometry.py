@@ -46,7 +46,7 @@ segments = 24
 
 redGeom = ArrowGeometry()
 grnGeom = ArrowGeometry()
-bluGeom = LatheGeometry(points, segments)
+bluGeom = ArrowGeometry()
 
 redMesh = Mesh(redGeom, redWire)
 redMesh.position.set(0,1,0)
