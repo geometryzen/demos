@@ -162,6 +162,8 @@ def terminate():
     document.removeEventListener("keyup", onDocumentKeyUp, False)
     time = (frameTime-startTime)/1000
     count = frameIndex+1
+    if useLargeCanvas:
+        discardCanvases()
     print "Done."
 
 run()
