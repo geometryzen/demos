@@ -10,12 +10,17 @@ scene.add(particle)
 
 xyPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":0xFFFF00, "wireframe":True}))
 scene.add(xyPlane)
+xyPlane.position.set(500,500,0)
+
 yzPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":0x00FFFF, "wireframe":True}))
 yzPlane.rotation.set(0,pi/2,0)
+yzPlane.position.set()
 scene.add(yzPlane)
+
 zxPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":0xFF00FF, "wireframe":True}))
 zxPlane.rotation.set(pi/2,0,0)
 zxPlane.position.set(500, 0, 500)
+
 scene.add(zxPlane)
 
 # Initialize the system configuration.
