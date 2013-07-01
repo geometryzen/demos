@@ -21,10 +21,10 @@ renderer.setClearColor(Color(0x080808), 1.0)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
+length = 100
 radiusShaft = 5
 radiusCone = radiusShaft * 2
 lengthCone = 20
-length = 80
 lengthShaft = length - lengthCone
 a = Vector3(0, 0, length)
 b = Vector3(radiusCone, 0, lengthShaft)
