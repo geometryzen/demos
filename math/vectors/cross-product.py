@@ -25,5 +25,5 @@ print "(a cross b).dot(b) => " + str(c.dot(b))
 # 2) |a cross b| = |a||b|sin(theta), where theta is angle between  a and b.
 # This takes a bit more work because we need a definition of the angle between a and b:
 # a dot b = |a||b|cos(theta)
-
+print "|a| => " + str(a.length())
 
