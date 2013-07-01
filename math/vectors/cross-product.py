@@ -38,5 +38,6 @@ print "|a||b|sin(theta)= " + str(a.length() * b.length() * sinTheta)
 i = Vector3(1, 0, 0)
 j = Vector3(0, 1, 0)
 k = Vector3(0, 0, 1)
+print "i cross j => " + str(i.clone().cross(j))
 
 
