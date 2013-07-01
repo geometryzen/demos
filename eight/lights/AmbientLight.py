@@ -10,7 +10,7 @@ camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.set(10, 10, 10)
 camera.lookAt(scene.position)
 
-ambientLight = AmbientLight(0xFFFFFF)
+ambientLight = AmbientLight(0x555555)
 scene.add(ambientLight)
 
 renderer = WebGLRenderer()
