@@ -16,23 +16,23 @@ xyPlane = Mesh(PlaneGeometry(LENGTH,LENGTH,10,10), MeshBasicMaterial({"color":CO
 scene.add(xyPlane)
 xyPlane.position.set(LENGTH/2,LENGTH/2,0)
 
-yzPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True, "opacity":0.2,"transparent":True}))
+yzPlane = Mesh(PlaneGeometry(LENGTH,LENGTH,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True, "opacity":0.2,"transparent":True}))
 yzPlane.rotation.set(0,pi/2,0)
-yzPlane.position.set(0,500,500)
+yzPlane.position.set(0,LENGTH/2,LENGTH/2)
 scene.add(yzPlane)
 
-zxPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True, "opacity":0.2,"transparent":True}))
+zxPlane = Mesh(PlaneGeometry(LENGTH,LENGTH,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True, "opacity":0.2,"transparent":True}))
 zxPlane.rotation.set(pi/2,0,0)
-zxPlane.position.set(500, 0, 500)
+zxPlane.position.set(LENGTH, 0, LENGTH)
 scene.add(zxPlane)
 
-camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
+camera = PerspectiveCamera(45, 1.0, 0.1, 5 * LENGTH)
 camera.up.set(0,0,1)
-camera.position.set(1500,1500,1500)
+camera.position.set(LENGTH * 1.5, LENGTH * 1.5, LENGTH * 1.5)
 camera.lookAt(scene.position)
 
 # Initialize the system configuration.
-x = Vector3(0, 0, 1000)
+x = Vector3(0, 0, LENGTH)
 v = Vector3(0,0,0)
 m = 1
 g = Vector3(0, 0, -9.81)
