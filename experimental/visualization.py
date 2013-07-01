@@ -3,6 +3,7 @@ from eight import *
 from browser import *
 from math import pi
 
+useLargeCanvas = True
 COLOR_GRID = 0x66A1D2
 
 scene = Scene()
@@ -43,8 +44,6 @@ def integrate(n, t, dt):
     v = v + a * dt
     x = x + v * dt
     particle.position = x
-
-useLargeCanvas = False
 
 camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.up.set(0,0,1)
