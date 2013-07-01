@@ -20,8 +20,8 @@ print "a cross b => " + str(c)
 
 # We can now verify the three defining properties of the cross product in 3D.
 # 1) a cross b is orthogonal to both b and c
-print "c.dot(a) => " + str(c.dot(a))
-print "c.dot(b) => " + str(c.dot(b))
+print "(a cross b).dot(a) => " + str(c.dot(a))
+print "(a cross b).dot(b) => " + str(c.dot(b))
 # 2) |a cross b| = |a||b|sin(theta), where theta is angle between  a and b.
 # This takes a bit more work because we need a definition of the angle between a and b:
 # a dot b = |a||b|cos(theta)
