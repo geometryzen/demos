@@ -38,9 +38,14 @@ bluWire = MeshBasicMaterial({"color":0x0000FF, "wireframe":True, "wireframeLinew
 grnWire = MeshBasicMaterial({"color":0x00FF00, "wireframe":True, "wireframeLinewidth":3})
 yloWire = MeshBasicMaterial({"color":0xFFFF00, "wireframe":True, "wireframeLinewidth":3})
 segments = 3
-redMesh = Mesh(LatheGeometry(points, segments), redWire)
-bluMesh = Mesh(LatheGeometry(points, segments), bluWire)
-grnMesh = Mesh(LatheGeometry(points, segments), grnWire)
+
+redGeom = LatheGeometry(points, segments)
+grnGeom = LatheGeometry(points, segments)
+bluGeom = LatheGeometry(points, segments)
+
+redMesh = Mesh(redGeom, redWire)
+bluMesh = Mesh(grnGeom, bluWire)
+grnMesh = Mesh(bluGeo, grnWire)
 
 print repr(redMesh)
 print redMesh
