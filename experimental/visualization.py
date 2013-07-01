@@ -9,6 +9,8 @@ scene.add(particle)
 
 xyPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":0xFFFF00, "wireframe":True}))
 scene.add(xyPlane)
+yzPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":0x00FFFF, "wireframe":True}))
+scene.add(yzPlane)
 
 # Initialize the system configuration.
 x = Vector3(0,-500,0)
