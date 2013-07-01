@@ -1,4 +1,4 @@
-# Under Construction
+# Under Constructiones through the floor!
 from eight import *
 from browser import *
 from math import pi
@@ -32,23 +32,23 @@ camera.position.set(LENGTH * 1.5, LENGTH * 1.5, LENGTH * 1.5)
 camera.lookAt(scene.position)
 
 # Initialize the system configuration.
-x = Vector3(0, 0, LENGTH)
+r = Vector3(0, 0, LENGTH)
 v = Vector3(0,0,0)
 m = 1
 g = Vector3(0, 0, -9.81)
 
 # The user-defined force field, F, may depend upon the particle position, velocity and time.
-def F(x,v,t):
+def F(r,v,t):
     return m * g
     
 def integrate(n, t, dt):
-    global x, v
+    global r, v
     # TODO: Implement Multivector division by at least scalars and vectors.    
-    a = F(x, v, t) * (1/m)
+    a = F(r, v, t) * (1/m)
     # TODO: Why doesn't += work here?
     v = v + a * dt
-    x = x + v * dt
-    particle.position = x
+    r = r + v * dt
+    particle.position = r
 
 renderer = WebGLRenderer()
 renderer.setClearColor(0x080808, 1.0)
