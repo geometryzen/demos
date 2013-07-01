@@ -1,6 +1,7 @@
 # visualization.py
 from eight import *
 from browser import *
+from math import pi
 
 scene = Scene()
 
@@ -10,6 +11,7 @@ scene.add(particle)
 xyPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":0xFFFF00, "wireframe":True}))
 scene.add(xyPlane)
 yzPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":0x00FFFF, "wireframe":True}))
+yzPlane.rotation.set(0,pi/2,0)
 scene.add(yzPlane)
 
 # Initialize the system configuration.
