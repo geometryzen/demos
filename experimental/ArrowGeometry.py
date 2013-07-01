@@ -27,22 +27,9 @@ renderer.setClearColor(Color(0x080808), 1.0)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-length = 1
-radiusShaft = length * 0.01
-radiusCone = length * 0.08
-lengthCone = length * 0.2
-lengthShaft = length - lengthCone
-a = Vector3(0, 0, length)
-b = Vector3(radiusCone, 0, lengthShaft)
-c = Vector3(radiusShaft, 0, lengthShaft)
-d = Vector3(radiusShaft, 0, 0)
-e = Vector3(0, 0, 0)
-points = [a, b, c, d, e]
-
 redWire = MeshLambertMaterial({"color":0xFF0000})
 grnWire = MeshLambertMaterial({"color":0x00FF00})
 bluWire = MeshBasicMaterial({"color":0x0000FF})
-segments = 24
 
 redGeom = ArrowGeometry()
 grnGeom = ArrowGeometry()
