@@ -19,7 +19,7 @@ yzPlane.rotation.set(0,pi/2,0)
 yzPlane.position.set(0,500,500)
 scene.add(yzPlane)
 
-zxPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True, "opacity":0.02,"transparent":True}))
+zxPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True, "opacity":0.2,"transparent":True}))
 zxPlane.rotation.set(pi/2,0,0)
 zxPlane.position.set(500, 0, 500)
 
