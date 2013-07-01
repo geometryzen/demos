@@ -10,5 +10,5 @@ b = Vector3(random(), random(), random())
 print "a=" + str(a)
 print "b=" + str(b)
 
-print a * b
+print a.cross(b)
 
