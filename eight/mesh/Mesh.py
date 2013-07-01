@@ -1,4 +1,3 @@
-# Under Construction
 # Mesh demonstration.
 from eight import *
 from browser import *
@@ -40,23 +39,16 @@ yloWire = MeshBasicMaterial({"color":0xFFFF00, "wireframe":True, "wireframeLinew
 segments = 3
 
 redGeom = LatheGeometry(points, segments)
-redGeom.name = "redGeom"
-print redGeom.name
 grnGeom = LatheGeometry(points, segments)
-grnGeom.name = "grnGeom"
 bluGeom = LatheGeometry(points, segments)
-bluGeom.name = "bluGeom"
 
 redMesh = Mesh(redGeom, redWire)
-redMesh.name = "redMesh"
 bluMesh = Mesh(grnGeom, bluWire)
 grnMesh = Mesh(bluGeom, grnWire)
 
 scene.add(redMesh)
 scene.add(bluMesh)
 scene.add(grnMesh)
-
-#bluMesh.setGeometry(CubeGeometry(1))
 
 ambientLight = AmbientLight(0x222222)
 scene.add(ambientLight)
@@ -102,7 +94,6 @@ def step(timestamp):
         render()
     else:
         window.cancelAnimationFrame(requestID)
-        # container.removeChild(renderer.domElement)
 
 window.addEventListener("resize", onWindowResize, False)
 
