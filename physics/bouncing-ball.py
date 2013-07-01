@@ -23,7 +23,7 @@ scene.add(yzPlane)
 
 zxPlane = Mesh(PlaneGeometry(LENGTH,LENGTH,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True, "opacity":0.2,"transparent":True}))
 zxPlane.rotation.set(pi/2,0,0)
-zxPlane.position.set(LENGTH, 0, LENGTH)
+zxPlane.position.set(LENGTH/2, 0, LENGTH/2)
 scene.add(zxPlane)
 
 camera = PerspectiveCamera(45, 1.0, 0.1, 5 * LENGTH)
