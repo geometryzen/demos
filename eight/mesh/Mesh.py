@@ -61,6 +61,7 @@ print redMesh.geometry.id
 print redMesh.geometry.name
 print "---------------"
 print type(redMesh.geometry)
+print str(redMesh.geometry)
 print repr(redMesh.geometry)
 
 scene.add(redMesh)
