@@ -10,5 +10,7 @@ b = Vector3(random(), random(), random())
 print "a=" + str(a)
 print "b=" + str(b)
 
-print a.cross(b)
+# Make a copy of a first because the cross method mutates its target.
+c = a.clone().cross(b)
+print c
 
