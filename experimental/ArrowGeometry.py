@@ -14,6 +14,11 @@ camera.up.set(0,0,1)
 camera.position.set(3,0,0)
 camera.lookAt(scene.position)
 
+camera2  = PerspectiveCamera(45, 1.0, 0.1, 1000)
+camera2.up.set(0,0,1)
+camera2.position.set(3,1,0)
+camera2.lookAt(scene.position)
+
 renderer = WebGLRenderer()
 renderer.autoClear = True
 renderer.gammaInput = True
@@ -73,6 +78,7 @@ startTime =  None
 def render():
         
     renderer.render(scene, camera)
+    renderer.render(scene, camera2)
 
 def onWindowResize():
     camera.aspect = window.innerWidth / window.innerHeight
