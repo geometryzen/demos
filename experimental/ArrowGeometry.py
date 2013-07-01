@@ -38,10 +38,10 @@ redLamb = MeshLambertMaterial({"color":0xFF0000})
 redWire = MeshBasicMaterial({"color":0xFF0000, "wireframe":True, "wireframeLinewidth":3})
 bluWire = MeshBasicMaterial({"color":0x0000FF, "wireframe":True, "wireframeLinewidth":3})
 grnWire = MeshBasicMaterial({"color":0x00FF00, "wireframe":True, "wireframeLinewidth":3})
-
-redArrow = Mesh(LatheGeometry(points, 4), redWire)
-bluArrow = Mesh(LatheGeometry(points, 4), bluWire)
-grnArrow = Mesh(LatheGeometry(points, 4), grnWire)
+segments = 5
+redArrow = Mesh(LatheGeometry(points, segments), redWire)
+bluArrow = Mesh(LatheGeometry(points, segments), bluWire)
+grnArrow = Mesh(LatheGeometry(points, segments), grnWire)
 
 scene.add(redArrow)
 scene.add(bluArrow)
