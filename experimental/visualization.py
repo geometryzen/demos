@@ -13,7 +13,7 @@ scene.add(xyPlane)
 yzPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":0x00FFFF, "wireframe":True}))
 yzPlane.rotation.set(0,pi/2,0)
 scene.add(yzPlane)
-zxPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":0x00FFFF, "wireframe":True}))
+zxPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":0xFF00FF, "wireframe":True}))
 zxPlane.rotation.set(pi/2,0,0)
 scene.add(zxPlane)
 
