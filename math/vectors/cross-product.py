@@ -27,4 +27,5 @@ print "(a cross b).dot(b) => " + str(c.dot(b))
 # a dot b = |a||b|cos(theta)
 print "|a| => " + str(a.length())
 print "|b| => " + str(b.length())
+print "a.dot(b) => " + str(a.dot(b))
 
