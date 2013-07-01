@@ -28,7 +28,7 @@ print "(a cross b).dot(b) => " + str(c.dot(b))
 print "|a| => " + str(a.length())
 print "|b| => " + str(b.length())
 print "a.dot(b) => " + str(a.dot(b))
-print "cos(theta) = " + str(a.dot(b)/(a.length()*b.length()))
-print "theta = " + str(acos(a.dot(b)/(a.length()*b.length()))) + " radians"
-print "theta = " + str(180 * acos(a.dot(b)/(pi * a.length()*b.length()))) + " degress"
+cosTheta = a.dot(b)/(a.length()*b.length())
+print "cos(theta) = " + str(cosTheta)
+
 
