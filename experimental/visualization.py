@@ -26,9 +26,6 @@ g = Vector3(0, 0, -9.81)
 # The user-defined force field, F, may depend upon the particle position, velocity and time.
 def F(x,v,t):
     return m * g
-    # TODO: Something like this for Electrodynamics (with vectors and bivectors).
-    # No "dishonest" vectors here; Feynman would be proud!
-    # return e * (E + (v << B))
     
 def integrate(n, t, dt):
     global x, v
@@ -37,9 +34,6 @@ def integrate(n, t, dt):
     # TODO: Why doesn't += work here?
     v = v + a * dt
     x = x + v * dt
-    # TODO: Implement a bounce with the Geometric reflection formula (-nvn).
-    # TODO: Should we have Rigid Bodies with state/kinematic variables?
-    # TODO: What about intrinsic properties such as mass or inertia tensor?
     particle.position = x
 
 useLargeCanvas = False
