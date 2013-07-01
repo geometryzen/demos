@@ -9,14 +9,9 @@ scene.add(particle)
 
 # Initialize the system configuration.
 x = Vector3(-500,0,0)
-v = Vector3(75,0,75)
+v = Vector3(0,75,75)
 m = 1
 g = Vector3(0, 0, -9.81)
-
-# Charge, Electric Field, and Magnetic Field as an bivector (no "dishonest" axial vectors, Thank You).
-e = Scalar3(1)
-E = Vector3()
-B = Bivector3(0,0,0)
 
 # The user-defined force field, F, may depend upon the particle position, velocity and time.
 def F(x,v,t):
@@ -43,6 +38,7 @@ camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.up.set(0,0,1)
 camera.position.set(1000,1000,1000)
 camera.lookAt(scene.position)
+
 renderer = WebGLRenderer()
 renderer.setClearColor(0x080808, 1.0)
 
