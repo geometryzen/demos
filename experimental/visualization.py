@@ -27,7 +27,7 @@ scene.add(zxPlane)
 
 # Initialize the system configuration.
 x = Vector3(0, 0, 0)
-v = Vector3(0,75,75)
+v = Vector3(25,75,75)
 m = 1
 g = Vector3(0, 0, -9.81)
 
