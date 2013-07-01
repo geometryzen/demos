@@ -1,5 +1,5 @@
 # Under Construction
-# ArrowGeometry demonstration.
+# Mesh demonstration.
 from eight import *
 from browser import *
 from math import pi
@@ -10,7 +10,7 @@ for canvas in document.getElementsByTagName("canvas"):
 scene = Scene()
 
 camera  = PerspectiveCamera(45, 1.0, 0.1, 1000)
-camera.position.z = 5
+camera.position.z = 3
 
 renderer = WebGLRenderer()
 renderer.autoClear = True
@@ -33,19 +33,23 @@ d = Vector3(radiusShaft, 0, 0)
 e = Vector3(0, 0, 0)
 points = [a, b, c, d, e]
 
-redLamb = MeshLambertMaterial({"color":0xFF0000})
-
 redWire = MeshBasicMaterial({"color":0xFF0000, "wireframe":True, "wireframeLinewidth":3})
 bluWire = MeshBasicMaterial({"color":0x0000FF, "wireframe":True, "wireframeLinewidth":3})
 grnWire = MeshBasicMaterial({"color":0x00FF00, "wireframe":True, "wireframeLinewidth":3})
-segments = 6
-redArrow = Mesh(LatheGeometry(points, segments), redWire)
-bluArrow = Mesh(LatheGeometry(points, segments), bluWire)
-grnArrow = Mesh(LatheGeometry(points, segments), grnWire)
+yloWire = MeshBasicMaterial({"color":0xFFFF00, "wireframe":True, "wireframeLinewidth":3})
+segments = 3
 
-scene.add(redArrow)
-scene.add(bluArrow)
-scene.add(grnArrow)
+redGeom = LatheGeometry(points, segments)
+grnGeom = LatheGeometry(points, segments)
+bluGeom = LatheGeometry(points, segments)
+
+redMesh = Mesh(redGeom, redWire)
+bluMesh = Mesh(grnGeom, bluWire)
+grnMesh = Mesh(bluGeom, grnWire)
+
+scene.add(redMesh)
+scene.add(bluMesh)
+scene.add(grnMesh)
 
 ambientLight = AmbientLight(0x222222)
 scene.add(ambientLight)
@@ -65,9 +69,9 @@ startTime =  None
 movement = Vector3(0.02, 0.02, 0.02)
 
 def render():
-    grnArrow.position.set(1,1,1);
-    grnArrow.scale.set(1,1,1)
-    grnArrow.rotation.add(movement)
+    grnMesh.position.set(0.5,0,0);
+    grnMesh.scale.set(1,1,1)
+    bluMesh.rotation.add(movement)
         
     renderer.render(scene, camera)
 
@@ -91,7 +95,6 @@ def step(timestamp):
         render()
     else:
         window.cancelAnimationFrame(requestID)
-        # container.removeChild(renderer.domElement)
 
 window.addEventListener("resize", onWindowResize, False)
 
