@@ -34,12 +34,18 @@ e = Vector3(0, 0, 0)
 points = [a, b, c, d, e]
 
 redLamb = MeshLambertMaterial({"color":0xFF0000})
+
 redWire = MeshBasicMaterial({"color":0xFF0000, "wireframe":True, "wireframeLinewidth":3})
 bluWire = MeshBasicMaterial({"color":0x0000FF, "wireframe":True, "wireframeLinewidth":3})
+grnWire = MeshBasicMaterial({"color":0x00FF00, "wireframe":True, "wireframeLinewidth":3})
+
 redArrow = Mesh(LatheGeometry(points, 4), redWire)
 bluArrow = Mesh(LatheGeometry(points, 4), bluWire)
+grnArrow = Mesh(LatheGeometry(points, 4), grnWire)
+
 scene.add(redArrow)
 scene.add(bluArrow)
+scene.add(grnArrow)
 
 ambientLight = AmbientLight(0x222222)
 scene.add(ambientLight)
@@ -59,7 +65,7 @@ startTime =  None
 movement = Vector3(0.02, 0.02, 0.02)
 
 def render():
-    bluArrow.rotation.add(movement)
+    grnArrow.rotation.add(movement)
         
     renderer.render(scene, camera)
 
