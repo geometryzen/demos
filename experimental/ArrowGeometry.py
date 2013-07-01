@@ -54,6 +54,7 @@ redMesh.rotation.set(0,pi/2,0)
 grnMesh = Mesh(bluGeom, grnWire)
 grnMesh.rotation.set(-pi/2,0,0)
 bluMesh = Mesh(grnGeom, bluWire)
+bliMesh.scale.set(1.5,1.5,1.5)
 
 scene.add(redMesh)
 scene.add(bluMesh)
