@@ -46,9 +46,6 @@ scene.add(redMesh)
 scene.add(bluMesh)
 scene.add(grnMesh)
 
-#ambientLight = AmbientLight(0x111111)
-#scene.add(ambientLight)
-
 pointLight = PointLight(0x888888)
 pointLight.position.set(20, 20, 20)
 scene.add(pointLight)
