@@ -58,11 +58,11 @@ scene.add(grnMesh)
 ambientLight = AmbientLight(0x222222)
 scene.add(ambientLight)
 
-pointLight = PointLight(0xFFFFFF)
+pointLight = PointLight(0x888888)
 pointLight.position.set(20, 20, 20)
 scene.add(pointLight)
 
-directionalLight = DirectionalLight(0xFFFFFF)
+directionalLight = DirectionalLight(0x888888)
 directionalLight.position.set(0, 1, 0)
 scene.add(directionalLight)
 
