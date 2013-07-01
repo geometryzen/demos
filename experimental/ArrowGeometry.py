@@ -34,7 +34,7 @@ points = [a, b, c, d, e]
 arrow = LatheGeometry(points, 24)
 
 material = MeshLambertMaterial({"color":0x0000FF})
-material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
+material = MeshNormalMaterial({"color":0xFF0000, "wireframe":True, "wireframeLinewidth":3})
 mesh = Mesh(arrow, material)
 scene.add(mesh)
 
