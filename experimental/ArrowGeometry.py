@@ -44,7 +44,7 @@ grnWire = MeshLambertMaterial({"color":0x00FF00})
 bluWire = MeshBasicMaterial({"color":0x0000FF})
 segments = 24
 
-redGeom = ArrowGeometry(1,5,0.08)
+redGeom = ArrowGeometry(1,5,0.04)
 grnGeom = LatheGeometry(points, segments)
 bluGeom = LatheGeometry(points, segments)
 
