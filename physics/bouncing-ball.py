@@ -9,7 +9,7 @@ LENGTH = 100
 
 scene = Scene()
 
-particle = Mesh(SphereGeometry(50, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
+particle = Mesh(SphereGeometry(LENGTH * 5 /100, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
 scene.add(particle)
 
 xyPlane = Mesh(PlaneGeometry(LENGTH,LENGTH,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True, "opacity":0.2,"transparent":True}))
