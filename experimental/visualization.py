@@ -3,16 +3,18 @@ from eight import *
 from browser import *
 from math import pi
 
+COLOR_GRID = 0x66A1D2
+
 scene = Scene()
 
 particle = Mesh(SphereGeometry(50, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
 scene.add(particle)
 
-xyPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":0xFFFF00, "wireframe":True}))
+xyPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True}))
 scene.add(xyPlane)
 xyPlane.position.set(500,500,0)
 
-yzPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":0x00FFFF, "wireframe":True}))
+yzPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True}))
 yzPlane.rotation.set(0,pi/2,0)
 yzPlane.position.set(0,500,500)
 scene.add(yzPlane)
