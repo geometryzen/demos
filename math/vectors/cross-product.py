@@ -50,6 +50,8 @@ print "repr(k) => " + repr(k)
 I = Pseudoscalar3(1)
 print I
 print repr(I)
-print -(a << (b * I))
+dualB = -(b * I)
+print "dual(B) => " + dualB
+print a << dualB
 
 
