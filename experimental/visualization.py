@@ -67,7 +67,7 @@ def onWindowResize():
     if (useLargeCanvas):
         camera.aspect = window.innerWidth / window.innerHeight
         camera.updateProjectionMatrix()
-        renderer.size = (window.innerWidth, window.innerHeight)
+        renderer.setSize(window.innerWidth, window.innerHeight)
         graph.width = window.innerWidth
         graph.height = window.innerHeight
     else:
