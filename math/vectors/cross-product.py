@@ -1,7 +1,7 @@
 # This program examines the vector cross-product from a Geometric Algebra perspective
 # and provides an alternative geometric formulation of the Lorentz force law.
 from eight import *
-from math import random
+from math import random, acos
 
 def makeCoord(n):
     return n
@@ -29,4 +29,5 @@ print "|a| => " + str(a.length())
 print "|b| => " + str(b.length())
 print "a.dot(b) => " + str(a.dot(b))
 print "cos(theta) = " + str(a.dot(b)/(a.length()*b.length()))
+print "theta/rads = " + str(acos(a.dot(b)/(a.length()*b.length())))
 
