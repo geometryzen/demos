@@ -32,13 +32,12 @@ c = Vector3(radiusShaft, 0, lengthShaft)
 d = Vector3(radiusShaft, 0, 0)
 e = Vector3(0, 0, 0)
 points = [a, b, c, d, e]
-arrow = LatheGeometry(points, 4)
 
 redLamb = MeshLambertMaterial({"color":0xFF0000})
 redWire = MeshBasicMaterial({"color":0xFF0000, "wireframe":True, "wireframeLinewidth":3})
 bluWire = MeshBasicMaterial({"color":0x0000FF, "wireframe":True, "wireframeLinewidth":3})
-redArrow = Mesh(arrow, redWire)
-bluArrow = Mesh(arrow, bluWire)
+redArrow = Mesh(LatheGeometry(points, 4), redWire)
+bluArrow = Mesh(LatheGeometry(points, 4), bluWire)
 scene.add(redArrow)
 scene.add(bluArrow)
 
