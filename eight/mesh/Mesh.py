@@ -69,7 +69,7 @@ startTime =  None
 movement = Vector3(0.02, 0.02, 0.02)
 
 def render():
-    grnMesh.position.set(1,1,1);
+    grnMesh.position.set(0.5,0,0);
     grnMesh.scale.set(1,1,1)
     grnMesh.rotation.add(movement)
         
