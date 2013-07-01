@@ -1,5 +1,6 @@
 # This program examines the vector cross-product from a Geometric Algebra perspective
 # and provides an alternative geometric formulation of the Lorentz force law.
+# It is not a complete pedagogical analysis, and instead a glimpse of the computations.
 from eight import *
 from math import random, acos, pi, sqrt
 
