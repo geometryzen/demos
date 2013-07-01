@@ -34,5 +34,9 @@ sinTheta = sqrt(1 - cosTheta * cosTheta)
 print "sin(theta) = " + str(sinTheta)
 print "|a cross b|= " + str(c.length())
 print "|a||b|sin(theta)= " + str(a.length() * b.length() * sinTheta)
+# 3) The direction of a cross b follows the right-hand rule.
+i = Vector3(1, 0, 0)
+j = Vector3(0, 1, 0)
+k = Vector3(0, 0, 1)
 
 
