@@ -10,7 +10,7 @@ for canvas in document.getElementsByTagName("canvas"):
 scene = Scene()
 
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-camera.position.z = 100
+camera.position.z = 200
 
 renderer = WebGLRenderer()
 renderer.autoClear = True
