@@ -30,7 +30,6 @@ b = Vector3(radiusCone, 0, lengthShaft)
 c = Vector3(radiusShaft, 0, lengthShaft)
 d = Vector3(radiusShaft, 0, 0)
 e = Vector3(0, 0, 0)
-#e = Vector3(0.001, 0, 0)
 points = [a, b, c, d, e]
 arrow = LatheGeometry(points, 24)
 
@@ -54,7 +53,7 @@ scene.add(directionalLight)
 
 requestID = None
 progress = None
-progressEnd = 1000
+progressEnd = 10000
 startTime =  None
 movement = Vector3(0.02, 0.02, 0.02)
 
