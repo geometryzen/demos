@@ -1,5 +1,4 @@
 # LatheGeometry demonstration.
-# LatheGeometry appears to have a few bugs as of 2013-06-30.
 from eight import *
 from browser import *
 from math import pi
