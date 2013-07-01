@@ -22,8 +22,12 @@ scene.add(yzPlane)
 zxPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True, "opacity":0.2,"transparent":True}))
 zxPlane.rotation.set(pi/2,0,0)
 zxPlane.position.set(500, 0, 500)
-
 scene.add(zxPlane)
+
+camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
+camera.up.set(0,0,1)
+camera.position.set(1500,1500,1500)
+camera.lookAt(scene.position)
 
 # Initialize the system configuration.
 x = Vector3(0, 0, 0)
@@ -43,11 +47,6 @@ def integrate(n, t, dt):
     v = v + a * dt
     x = x + v * dt
     particle.position = x
-
-camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
-camera.up.set(0,0,1)
-camera.position.set(1500,1500,1500)
-camera.lookAt(scene.position)
 
 renderer = WebGLRenderer()
 renderer.setClearColor(0x080808, 1.0)
