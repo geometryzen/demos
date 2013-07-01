@@ -43,5 +43,7 @@ print "j cross k => " + str(j.clone().cross(k))
 print "k cross i => " + str(k.clone().cross(i))
 print "j cross i => " + str(j.clone().cross(i))
 print "k cross j => " + str(k.clone().cross(j))
+I = Pseudoscalar3(1)
+print (a << (b * I))
 
 
