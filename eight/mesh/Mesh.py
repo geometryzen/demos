@@ -53,7 +53,9 @@ grnMesh = Mesh(bluGeom, grnWire)
 print repr(redMesh)
 print redMesh
 print str(redMesh)
+print "---------------"
 print redMesh.geometry.name
+print "---------------"
 print type(redMesh.geometry)
 print repr(redMesh.geometry)
 
