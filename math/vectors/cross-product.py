@@ -3,9 +3,13 @@
 from eight import *
 from math import random
 
+def makeCoord(n):
+    return n
+    # return random()
+
 # Start with two random vectors a and b:
-a = Vector3(random(), random(), random())
-b = Vector3(random(), random(), random())
+a = Vector3(makeCoord(1), makeCoord(3), makeCoord(5))
+b = Vector3(makeCoord(2), makeCoord(4), makeCoord(6))
 
 print "a => " + str(a)
 print "b => " + str(b)
