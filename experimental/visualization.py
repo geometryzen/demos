@@ -11,7 +11,7 @@ moveRight = False
 
 scene = Scene()
 
-camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
+camera = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.up.set(0,0,1)
 camera.position.set(10,10,10)
 camera.lookAt(scene.position)
