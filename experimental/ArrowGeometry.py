@@ -55,7 +55,7 @@ scene.add(redMesh)
 scene.add(bluMesh)
 scene.add(grnMesh)
 
-ambientLight = AmbientLight(0x222222)
+ambientLight = AmbientLight(0x111111)
 scene.add(ambientLight)
 
 pointLight = PointLight(0x888888)
