@@ -54,6 +54,7 @@ print repr(redMesh)
 print redMesh
 print str(redMesh)
 print "---------------"
+print redMedh.geometry.id
 print redMesh.geometry.name
 print "---------------"
 print type(redMesh.geometry)
