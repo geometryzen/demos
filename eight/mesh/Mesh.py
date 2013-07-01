@@ -45,7 +45,7 @@ bluGeom = LatheGeometry(points, segments)
 
 redMesh = Mesh(redGeom, redWire)
 bluMesh = Mesh(grnGeom, bluWire)
-grnMesh = Mesh(bluGeo, grnWire)
+grnMesh = Mesh(bluGeom, grnWire)
 
 print repr(redMesh)
 print redMesh
