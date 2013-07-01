@@ -4,8 +4,8 @@ from eight import *
 from math import random, acos, pi, sqrt
 
 def makeCoord(n):
-    return n
-    # return random()
+    # return n
+    return random()
 
 # Start with two random vectors a and b:
 a = Vector3(makeCoord(3), makeCoord(5), makeCoord(7))
@@ -55,5 +55,6 @@ print "dual(b) => " + str(dualB)
 print "repr(dual(b)) => " + repr(dualB)
 print "a << dual(b) => " + str(a << dualB)
 print "a cross b    => " + str(c)
+# This is not just a coincidence!
 
 
