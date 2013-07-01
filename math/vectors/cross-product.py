@@ -1,6 +1,7 @@
 # This program examines the vector cross-product from a Geometric Algebra perspective
 # and provides an alternative geometric formulation of the Lorentz force law.
 from eight import *
+from math import random
 
 # Start with two example vectors a and b:
 a = Vector3(1, 3, 5)
@@ -18,4 +19,5 @@ print "c => " + str(c)
 # We can now verify the three defining properties of the cross product in 3D.
 # 1) c is orthogonal to both b and c
 print "c.dot(a) => " + str(c.dot(a))
+print "c.dot(b) => " + str(c.dot(b))
 
