@@ -77,8 +77,8 @@ startTime =  None
 
 def render():
         
-#    renderer.render(scene, camera)
-    renderer.render(scene, camera2)
+    renderer.render(scene, camera)
+#    renderer.render(scene, camera2)
 
 def onWindowResize():
     camera.aspect = window.innerWidth / window.innerHeight
