@@ -32,7 +32,7 @@ d = Vector3(radiusShaft, 0, 0)
 e = Vector3(0, 0, 0)
 #e = Vector3(0.001, 0, 0)
 points = [a, b, c, d, e, a]
-arrow = LatheGeometry(points, 24)
+arrow = LatheGeometry(points, 24, 0, pi)
 
 print repr(arrow)
 print arrow
