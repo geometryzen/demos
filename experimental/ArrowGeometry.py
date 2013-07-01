@@ -32,11 +32,11 @@ c = Vector3(radiusShaft, 0, lengthShaft)
 d = Vector3(radiusShaft, 0, 0)
 e = Vector3(0, 0, 0)
 points = [a, b, c, d, e]
-arrow = LatheGeometry(points, 16)
+arrow = LatheGeometry(points, 3)
 
 redLamb = MeshLambertMaterial({"color":0xFF0000})
 redWire = MeshBasicMaterial({"color":0xFF0000, "wireframe":True, "wireframeLinewidth":3})
-mesh = Mesh(arrow, redLamb)
+mesh = Mesh(arrow, redWire)
 scene.add(mesh)
 
 ambientLight = AmbientLight(0x222222)
