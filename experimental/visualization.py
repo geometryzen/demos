@@ -8,7 +8,7 @@ particle = Mesh(SphereGeometry(50, 32, 24), MeshLambertMaterial({"color":0x0000F
 scene.add(particle)
 
 # Initialize the system configuration.
-x = Vector3(-500,0,0)
+x = Vector3(,-500,0)
 v = Vector3(0,75,75)
 m = 1
 g = Vector3(0, 0, -9.81)
