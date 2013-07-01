@@ -2,7 +2,7 @@ from eight import *
 from browser import *
 from math import pi
 
-useLargeCanvas = True
+useLargeCanvas = False
 COLOR_GRID = 0x66A1D2
 
 scene = Scene()
