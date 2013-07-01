@@ -41,7 +41,7 @@ def F(x,v,t):
     return m * g
     # TODO: Something like this for Electrodynamics (with vectors and bivectors).
     # No "dishonest" vectors here; Feynman would be proud!
-    # return e * (E + (v << B) * I)
+    # return e * (E + (v << B))
     
 def integrate(n, t, dt):
     global x, v
