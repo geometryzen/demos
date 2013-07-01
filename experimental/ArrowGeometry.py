@@ -16,7 +16,7 @@ camera.lookAt(scene.position)
 
 camera2  = PerspectiveCamera(45, 1.0, 0.1, 1000)
 camera2.up.set(0,0,1)
-camera2.position.set(3,1,0)
+camera2.position.set(3,0.1,0)
 camera2.lookAt(scene.position)
 
 renderer = WebGLRenderer()
