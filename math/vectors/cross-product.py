@@ -4,8 +4,8 @@ from eight import *
 from math import random, acos, pi, sqrt
 
 def makeCoord(n):
-    # return n
-    return random()
+    return n
+    # return random()
 
 # Start with two random vectors a and b:
 a = Vector3(makeCoord(3), makeCoord(5), makeCoord(7))
@@ -44,17 +44,20 @@ print "k cross i => " + str(k.clone().cross(i))
 print "j cross i => " + str(j.clone().cross(i))
 print "k cross j => " + str(k.clone().cross(j))
 # Now lets talk about the Geometric Algebra approach.
+# i, j and k are actually multivectors under the covers!
 print "repr(i) => " + repr(i)
 print "repr(j) => " + repr(j)
 print "repr(k) => " + repr(k)
 I = Pseudoscalar3(1)
 print I
 print repr(I)
+print "ijk =>" + str(i * j * k)
 dualB = -(b * I)
 print "dual(b) => " + str(dualB)
 print "repr(dual(b)) => " + repr(dualB)
 print "a << dual(b) => " + str(a << dualB)
 print "a cross b    => " + str(c)
-# This is not just a coincidence!
+# This is not just a coincidence! Verify it by trying a few random vectors.
+# 
 
 
