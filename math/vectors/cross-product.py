@@ -16,8 +16,6 @@ print "b => " + str(b)
 
 # Make a copy of a first because the cross method mutates its target.
 c = a.clone().cross(b)
-print "a => " + str(a)
-print "b => " + str(b)
 print "c => " + str(c)
 
 # We can now verify the three defining properties of the cross product in 3D.
