@@ -47,6 +47,7 @@ print redMesh
 print str(redMesh)
 print redMesh.geometry
 print type(redMesh.geometry)
+print repr(redMesh.geometry)
 
 scene.add(redMesh)
 scene.add(bluMesh)
