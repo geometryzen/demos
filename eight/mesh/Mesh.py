@@ -45,6 +45,7 @@ grnMesh = Mesh(LatheGeometry(points, segments), grnWire)
 print repr(redMesh)
 print redMesh
 print str(redMesh)
+print redMesh.geometry
 
 scene.add(redMesh)
 scene.add(bluMesh)
