@@ -29,5 +29,5 @@ print "|a| => " + str(a.length())
 print "|b| => " + str(b.length())
 print "a.dot(b) => " + str(a.dot(b))
 print "cos(theta) = " + str(a.dot(b)/(a.length()*b.length()))
-print "theta/rads = " + str(acos(a.dot(b)/(a.length()*b.length())))
+print "theta = " + str(acos(a.dot(b)/(a.length()*b.length()))) + " radians"
 
