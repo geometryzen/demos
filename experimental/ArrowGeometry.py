@@ -77,7 +77,7 @@ startTime =  None
 
 def render():
         
-    renderer.render(scene, camera)
+#    renderer.render(scene, camera)
     renderer.render(scene, camera2)
 
 def onWindowResize():
