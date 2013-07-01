@@ -3,9 +3,9 @@
 from eight import *
 from math import random
 
-# Start with two example vectors a and b:
-a = Vector3(1, 3, 5)
-b = Vector3(2, 4, 6)
+# Start with two random vectors a and b:
+a = Vector3(random(), random(), random())
+b = Vector3(random(), random(), random())
 
 print "a => " + str(a)
 print "b => " + str(b)
