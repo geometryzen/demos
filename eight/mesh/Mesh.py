@@ -41,7 +41,9 @@ redArrow = Mesh(LatheGeometry(points, segments), redWire)
 bluArrow = Mesh(LatheGeometry(points, segments), bluWire)
 grnArrow = Mesh(LatheGeometry(points, segments), grnWire)
 
+print repr(redArrow)
 print redArrow
+print str(redArrow)
 
 scene.add(redArrow)
 scene.add(bluArrow)
