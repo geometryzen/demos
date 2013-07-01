@@ -17,10 +17,10 @@ renderer = WebGLRenderer()
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-width = 10
-height = 10
-widthSegments = 4
-heightSegments = 4
+width = 16
+height = 16
+widthSegments = 8
+heightSegments = 8
 plane = PlaneGeometry(width, height, widthSegments, heightSegments)
 
 print repr(plane)
