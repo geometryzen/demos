@@ -37,7 +37,7 @@ r = Vector3(0, 0, LENGTH)
 v = Vector3(0,0,0)
 m = 1
 g = Vector3(0, 0, -9.81)
-k = Vector3(0,0,0)
+k = Vector3(0,0,1)
 
 # The user-defined force field, F, may depend upon the particle position, velocity and time.
 def F(r,v,t):
