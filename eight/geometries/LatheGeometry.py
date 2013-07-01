@@ -1,7 +1,6 @@
 # LatheGeometry demonstration.
 from eight import *
 from browser import *
-from math import pi
 
 for canvas in document.getElementsByTagName("canvas"):
     canvas.parentNode.removeChild(canvas)
