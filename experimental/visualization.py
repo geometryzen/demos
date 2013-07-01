@@ -9,12 +9,15 @@ moveBackward = False
 moveLeft = False
 moveRight = False
 
+scene = Scene()
+
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.up.set(0,0,1)
-camera.position.z = 2
+camera.position.set(10,10,10)
+camera.lookAt(scene.position)
+
 renderer = WebGLRenderer({"antialias": True})
 renderer.setClearColor(0x080808, 1)
-scene = Scene()
 
 graph = document.createElement("canvas")
 graph.height = 400
