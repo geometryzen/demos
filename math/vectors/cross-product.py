@@ -4,7 +4,7 @@ from eight import *
 
 # Start with two example vectors a and b:
 a = Vector3(1, 3, 5)
-b = Vector3(7, 11, 13)
+b = Vector3(2, 4, 6)
 
 print "a => " + str(a)
 print "b => " + str(b)
