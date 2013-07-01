@@ -5,15 +5,16 @@ from math import pi
 
 useLargeCanvas = False
 COLOR_GRID = 0x66A1D2
+LENGTH = 1000
 
 scene = Scene()
 
 particle = Mesh(SphereGeometry(50, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
 scene.add(particle)
 
-xyPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True, "opacity":0.2,"transparent":True}))
+xyPlane = Mesh(PlaneGeometry(LENGTH,LENGTH,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True, "opacity":0.2,"transparent":True}))
 scene.add(xyPlane)
-xyPlane.position.set(500,500,0)
+xyPlane.position.set(LENGTH/2,LENGTH/2,0)
 
 yzPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True, "opacity":0.2,"transparent":True}))
 yzPlane.rotation.set(0,pi/2,0)
