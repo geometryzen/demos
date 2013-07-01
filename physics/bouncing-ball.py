@@ -50,7 +50,6 @@ def integrate(n, t, dt):
     # TODO: Why doesn't += work here?
     v = v + a * dt
     r = r + v * dt
-    print r
     if r.z < 0:
         v = - k * v * k
         r.z = -r.z
