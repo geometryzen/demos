@@ -1,40 +1,70 @@
-# PointLight.py
 from eight import *
+from browser import *
 
-light = PointLight(0xff0000, 1, 100)
+for canvas in document.getElementsByTagName("canvas"):
+    canvas.parentNode.removeChild(canvas)
 
-print light
-print str(light)
-print repr(light)
-print type(light)
-print str(type(light))
-print repr(type(light))
-print "color:     " + str(light.color)
-print "intensity: " + str(light.intensity)
-print "distance:  " + str(light.distance)
-print "position:  " + str(light.position)
-print "rotation:  " + str(light.rotation)
+scene = Scene()
 
-light.color = Color("rgb(255,255,255)")
-light.intensity = 0.5
-light.distance = 200
+camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
+camera.position.set(10, 10, 10)
+camera.lookAt(scene.position)
 
-light.position.x = 1
-light.position.y = 2
-light.position.z = 3
+pointLight = PointLight(0xFFFFFF)
+pointLight.position.set(20, 20, 20)
+scene.add(pointLight)
 
-light.rotation.x = 4
-light.rotation.y = 5
-light.rotation.z = 6
-print "color:     " + str(light.color)
-print "intensity: " + str(light.intensity)
-print "distance:  " + str(light.distance)
-print "position:  " + str(light.position)
-print "rotation:  " + str(light.rotation)
+renderer = WebGLRenderer()
+renderer.autoClear = True
+renderer.gammaInput = True
+renderer.gammaOutput = True
+renderer.setClearColor(Color(0x080808), 1.0)
 
-light.position = Vector3(2,2,2)
-light.rotation = Vector3(3,3,3)
-print "position:  " + str(light.position)
-print "rotation:  " + str(light.rotation)
+container = document.getElementById("canvas-container")
+container.appendChild(renderer.domElement)
 
+material = MeshLambertMaterial({"color":0x0000FF})
+material.name = "bluecube"
 
+mesh = Mesh(CubeGeometry(5, 5, 5), material)
+
+scene.add(mesh)
+
+requestID = None
+progress = None
+progressEnd = 6000
+startTime = None
+movement = Vector3(0.02, 0.02, 0.02)
+
+def render():
+    mesh.rotation.add(movement)
+        
+    renderer.render(scene, camera)
+
+def onWindowResize():
+    camera.aspect = window.innerWidth / window.innerHeight
+    camera.updateProjectionMatrix()
+    renderer.size = (window.innerWidth, window.innerHeight)
+    
+def animate(timestamp):
+    global requestID, progress, startTime
+    if (startTime):
+        progress = timestamp - startTime
+    else:
+        if (timestamp):
+            startTime = timestamp
+        else:
+            progress = 0
+        
+    if (progress < progressEnd):
+        requestID = window.requestAnimationFrame(animate)
+        render()
+    else:
+        window.cancelAnimationFrame(requestID)
+        # container.removeChild(renderer.domElement)
+
+window.addEventListener("resize", onWindowResize, False)
+
+onWindowResize()
+
+animate(None)
