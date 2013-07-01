@@ -5,7 +5,7 @@ from math import pi
 
 useLargeCanvas = False
 LENGTH = 10
-DURATION_SECONDS = 15
+DURATION_SECONDS = 60
 
 scene = Scene()
 
