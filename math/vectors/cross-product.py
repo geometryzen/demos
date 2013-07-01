@@ -19,7 +19,7 @@ c = a.clone().cross(b)
 print "a cross b => " + str(c)
 
 # We can now verify the three defining properties of the cross product in 3D.
-# 1) a cross b is orthogonal to both b and c
+print "1) a cross b is orthogonal to both b and c."
 print "(a cross b).dot(a) => " + str(c.dot(a))
 print "(a cross b).dot(b) => " + str(c.dot(b))
 # 2) |a cross b| = |a||b|sin(theta), where theta is angle between  a and b.
