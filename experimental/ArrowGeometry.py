@@ -32,10 +32,6 @@ d = Vector3(radiusShaft, 0, 0)
 e = Vector3(0, 0, 0)
 points = [a, b, c, d, e]
 arrow = LatheGeometry(points, 24)
-print arrow.vertices
-
-print repr(arrow)
-print arrow
 
 material = MeshLambertMaterial({"color":0x0000FF})
 material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
