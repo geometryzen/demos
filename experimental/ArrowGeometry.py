@@ -34,9 +34,8 @@ e = Vector3(0, 0, 0)
 points = [a, b, c, d, e]
 
 redWire = MeshBasicMaterial({"color":0xFF0000, "wireframe":True, "wireframeLinewidth":3})
-bluWire = MeshBasicMaterial({"color":0x0000FF, "wireframe":True, "wireframeLinewidth":3})
 grnWire = MeshBasicMaterial({"color":0x00FF00, "wireframe":True, "wireframeLinewidth":3})
-yloWire = MeshBasicMaterial({"color":0xFFFF00, "wireframe":True, "wireframeLinewidth":3})
+bluWire = MeshBasicMaterial({"color":0x0000FF, "wireframe":True, "wireframeLinewidth":3})
 segments = 3
 
 redGeom = LatheGeometry(points, segments)
@@ -44,9 +43,10 @@ grnGeom = LatheGeometry(points, segments)
 bluGeom = LatheGeometry(points, segments)
 
 redMesh = Mesh(redGeom, redWire)
-redMesh.rotation.set(-pi/2,0,0)
-bluMesh = Mesh(grnGeom, bluWire)
+redMesh.rotation.set(0,pi/2,0)
 grnMesh = Mesh(bluGeom, grnWire)
+grnMesh.rotation.set(-pi/2,0,0)
+bluMesh = Mesh(grnGeom, bluWire)
 
 scene.add(redMesh)
 scene.add(bluMesh)
@@ -67,12 +67,8 @@ requestID = None
 progress = None
 progressEnd = 6000
 startTime =  None
-movement = Vector3(0.02, 0.02, 0.02)
 
 def render():
-    grnMesh.position.set(0.5,0,0);
-    grnMesh.scale.set(1,1,1)
-    bluMesh.rotation.add(movement)
         
     renderer.render(scene, camera)
 
