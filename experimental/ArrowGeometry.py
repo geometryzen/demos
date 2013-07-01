@@ -36,7 +36,7 @@ d = Vector3(radiusShaft, 0, 0)
 e = Vector3(0, 0, 0)
 points = [a, b, c, d, e]
 
-redWire = MeshBasicMaterial({"color":0xFF0000, "wireframe":True, "wireframeLinewidth":3})
+redWire = MeshLambertMaterial({"color":0xFF0000, "wireframe":True, "wireframeLinewidth":3})
 grnWire = MeshBasicMaterial({"color":0x00FF00, "wireframe":True, "wireframeLinewidth":3})
 bluWire = MeshBasicMaterial({"color":0x0000FF, "wireframe":True, "wireframeLinewidth":3})
 segments = 24
