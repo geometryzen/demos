@@ -4,14 +4,15 @@ from browser import *
 from math import pi
 
 useLargeCanvas = False
-COLOR_GRID = 0x66A1D2
 LENGTH = 10
+DURATION_SECONDS = 15
 
 scene = Scene()
 
 particle = Mesh(SphereGeometry(LENGTH * 0.05, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
 scene.add(particle)
 
+COLOR_GRID = 0x66A1D2
 xyPlane = Mesh(PlaneGeometry(LENGTH,LENGTH,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True, "opacity":0.2,"transparent":True}))
 scene.add(xyPlane)
 xyPlane.position.set(LENGTH/2,LENGTH/2,0)
@@ -49,6 +50,7 @@ def integrate(n, t, dt):
     # TODO: Why doesn't += work here?
     v = v + a * dt
     r = r + v * dt
+    print r
     if r.x < 0:
         v = - k * v * k
     particle.position = r
@@ -114,7 +116,6 @@ def discardCanvases():
         
 requestID = None
 frameIndex = 0
-DURATION_SECONDS = 15
 startTime =  None
 frameTime = None
 endTime = None
