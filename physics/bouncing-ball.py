@@ -36,6 +36,7 @@ r = Vector3(0, 0, LENGTH)
 v = Vector3(0,0,0)
 m = 1
 g = Vector3(0, 0, -9.81)
+k = Vector3(0,0,0)
 
 # The user-defined force field, F, may depend upon the particle position, velocity and time.
 def F(r,v,t):
@@ -48,6 +49,8 @@ def integrate(n, t, dt):
     # TODO: Why doesn't += work here?
     v = v + a * dt
     r = r + v * dt
+    if r.x < 0:
+        v = - k * v * k
     particle.position = r
 
 renderer = WebGLRenderer()
