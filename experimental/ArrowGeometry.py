@@ -36,8 +36,9 @@ arrow = LatheGeometry(points, 4)
 
 redLamb = MeshLambertMaterial({"color":0xFF0000})
 redWire = MeshBasicMaterial({"color":0xFF0000, "wireframe":True, "wireframeLinewidth":3})
-mesh = Mesh(arrow, redWire)
-scene.add(mesh)
+bluWire = MeshBasicMaterial({"color":0x0000FF, "wireframe":True, "wireframeLinewidth":3})
+redArrow = Mesh(arrow, redWire)
+scene.add(redArrow)
 
 ambientLight = AmbientLight(0x222222)
 scene.add(ambientLight)
