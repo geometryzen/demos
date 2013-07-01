@@ -26,17 +26,6 @@ container.appendChild(renderer.domElement)
 material = MeshLambertMaterial({"color":0x0000FF})
 material.name = "bluecube"
 
-print "repr(material) => " + repr(material)
-print "id: " + str(material.id)
-print "name: " + material.name
-print "color: " + str(material.color)
-print "needsUpdate: " + str(material.needsUpdate)
-print "opacity: " + str(material.opacity)
-print "overdraw: " + str(material.overdraw)
-print "transparent: " + str(material.transparent)
-print "visible: " + str(material.visible)
-print "str(material) => " + str(material)
-
 mesh = Mesh(CubeGeometry(5, 5, 5), material)
 
 scene.add(mesh)
