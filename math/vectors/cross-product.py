@@ -42,5 +42,6 @@ print "i cross j => " + str(i.clone().cross(j))
 print "j cross k => " + str(j.clone().cross(k))
 print "k cross i => " + str(k.clone().cross(i))
 print "j cross i => " + str(j.clone().cross(i))
+print "k cross j => " + str(k.clone().cross(j))
 
 
