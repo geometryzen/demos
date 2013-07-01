@@ -54,7 +54,7 @@ scene.add(directionalLight)
 
 requestID = None
 progress = None
-progressEnd = 3000
+progressEnd = 1000
 startTime =  None
 movement = Vector3(0.02, 0.02, 0.02)
 
