@@ -16,7 +16,7 @@ print "b => " + str(b)
 
 # Make a copy of a first because the cross method mutates its target.
 c = a.clone().cross(b)
-print "c => " + str(c)
+print "a cross b => " + str(c)
 
 # We can now verify the three defining properties of the cross product in 3D.
 # 1) a cross b is orthogonal to both b and c
