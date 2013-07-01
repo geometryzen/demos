@@ -54,5 +54,6 @@ dualB = -(b * I)
 print "dual(b) => " + str(dualB)
 print "repr(dual(b)) => " + repr(dualB)
 print "a << dual(b) => " + str(a << dualB)
+print "a cross b    => " + str(c)
 
 
