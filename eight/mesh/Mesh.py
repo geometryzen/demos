@@ -37,17 +37,17 @@ redWire = MeshBasicMaterial({"color":0xFF0000, "wireframe":True, "wireframeLinew
 bluWire = MeshBasicMaterial({"color":0x0000FF, "wireframe":True, "wireframeLinewidth":3})
 grnWire = MeshBasicMaterial({"color":0x00FF00, "wireframe":True, "wireframeLinewidth":3})
 segments = 6
-redArrow = Mesh(LatheGeometry(points, segments), redWire)
-bluArrow = Mesh(LatheGeometry(points, segments), bluWire)
-grnArrow = Mesh(LatheGeometry(points, segments), grnWire)
+redMesh = Mesh(LatheGeometry(points, segments), redWire)
+bluMesh = Mesh(LatheGeometry(points, segments), bluWire)
+grnMesh = Mesh(LatheGeometry(points, segments), grnWire)
 
-print repr(redArrow)
-print redArrow
-print str(redArrow)
+print repr(redMesh)
+print redMesh
+print str(redMesh)
 
-scene.add(redArrow)
-scene.add(bluArrow)
-scene.add(grnArrow)
+scene.add(redMesh)
+scene.add(bluMesh)
+scene.add(grnMesh)
 
 ambientLight = AmbientLight(0x222222)
 scene.add(ambientLight)
@@ -67,9 +67,9 @@ startTime =  None
 movement = Vector3(0.02, 0.02, 0.02)
 
 def render():
-    grnArrow.position.set(1,1,1);
-    grnArrow.scale.set(1,1,1)
-    grnArrow.rotation.add(movement)
+    grnMesh.position.set(1,1,1);
+    grnMesh.scale.set(1,1,1)
+    grnMesh.rotation.add(movement)
         
     renderer.render(scene, camera)
 
