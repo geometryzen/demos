@@ -10,7 +10,7 @@ for canvas in document.getElementsByTagName("canvas"):
 scene = Scene()
 
 camera  = PerspectiveCamera(45, 1.0, 0.1, 1000)
-camera.position.z = 5
+camera.position.z = 4
 
 renderer = WebGLRenderer()
 renderer.autoClear = True
@@ -71,7 +71,7 @@ movement = Vector3(0.02, 0.02, 0.02)
 def render():
     grnMesh.position.set(0.5,0,0);
     grnMesh.scale.set(1,1,1)
-    grnMesh.rotation.add(movement)
+    bluMesh.rotation.add(movement)
         
     renderer.render(scene, camera)
 
