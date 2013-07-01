@@ -29,7 +29,7 @@ scene.add(zxPlane)
 
 camera = PerspectiveCamera(45, 1.0, 0.1, 5 * LENGTH)
 camera.up.set(0,0,1)
-camera.position.set(LENGTH * 1.5, LENGTH * 2.0, LENGTH * 2.5)
+camera.position.set(LENGTH * 2.0, LENGTH * 2.0, LENGTH * 1.0)
 camera.lookAt(scene.position)
 
 # Initialize the system configuration.
