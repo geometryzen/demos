@@ -62,9 +62,9 @@ scene.add(ambientLight)
 #pointLight.position.set(20, 20, 20)
 #scene.add(pointLight)
 
-directionalLight = DirectionalLight(0x888888)
-directionalLight.position.set(0, 1, 0)
-scene.add(directionalLight)
+#directionalLight = DirectionalLight(0x888888)
+#directionalLight.position.set(0, 1, 0)
+#scene.add(directionalLight)
 
 requestID = None
 progress = None
