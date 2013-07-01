@@ -52,7 +52,6 @@ def integrate(n, t, dt):
     r = r + v * dt
     print r
     if r.z < 0:
-        print "Hit floor"
         v = - k * v * k
         r.z = -r.z
     particle.position = r
