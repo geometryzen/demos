@@ -39,6 +39,7 @@ redWire = MeshBasicMaterial({"color":0xFF0000, "wireframe":True, "wireframeLinew
 bluWire = MeshBasicMaterial({"color":0x0000FF, "wireframe":True, "wireframeLinewidth":3})
 redArrow = Mesh(arrow, redWire)
 bluArrow = Mesh(arrow, bluWire)
+scene.add(redArrow)
 scene.add(bluArrow)
 
 ambientLight = AmbientLight(0x222222)
@@ -59,7 +60,7 @@ startTime =  None
 movement = Vector3(0.02, 0.02, 0.02)
 
 def render():
-    redArrow.rotation.add(movement)
+    bluArrow.rotation.add(movement)
         
     renderer.render(scene, camera)
 
