@@ -37,7 +37,7 @@ e = Vector3(0, 0, 0)
 points = [a, b, c, d, e]
 
 redWire = MeshLambertMaterial({"color":0xFF0000})
-grnWire = MeshLambertMaterial({"color":0x00FF00})
+grnWire = MeshLambertMaterial({"color":0x00FF00,"opacity":0.2,"transparent":True})
 bluWire = MeshBasicMaterial({"color":0x0000FF,"opacity":0.2,"transparent":True})
 segments = 24
 
