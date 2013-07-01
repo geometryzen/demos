@@ -12,5 +12,7 @@ print "b=" + str(b)
 
 # Make a copy of a first because the cross method mutates its target.
 c = a.clone().cross(b)
-print c
+print "a=" + str(a)
+print "b=" + str(b)
+print "c=" + str(c)
 
