@@ -65,6 +65,7 @@ startTime =  None
 movement = Vector3(0.02, 0.02, 0.02)
 
 def render():
+    grnArrow.scale.set(2,2,2)
     grnArrow.rotation.add(movement)
         
     renderer.render(scene, camera)
