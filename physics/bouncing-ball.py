@@ -5,7 +5,7 @@ from math import pi
 
 useLargeCanvas = False
 COLOR_GRID = 0x66A1D2
-LENGTH = 1000
+LENGTH = 10
 
 scene = Scene()
 
