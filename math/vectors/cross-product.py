@@ -31,5 +31,6 @@ print "a.dot(b) => " + str(a.dot(b))
 cosTheta = a.dot(b)/(a.length()*b.length())
 print "cos(theta) = " + str(cosTheta)
 sinTheta = sqrt(1 - cosTheta * cosTheta)
+print "sin(theta) = " + str(sinTheta)
 
 
