@@ -51,13 +51,13 @@ print "repr(k) => " + repr(k)
 I = Pseudoscalar3(1)
 print I
 print repr(I)
-print "ijk =>" + str(i * j * k)
+print "ijk => " + str(i * j * k)
 dualB = -(b * I)
 print "dual(b) => " + str(dualB)
 print "repr(dual(b)) => " + repr(dualB)
 print "a << dual(b) => " + str(a << dualB)
 print "a cross b    => " + str(c)
 # This is not just a coincidence! Verify it by trying a few random vectors.
-# 
+# The properties of the cross product then follow from duality and contraction definitions.
 
 
