@@ -33,5 +33,6 @@ print "cos(theta) = " + str(cosTheta)
 sinTheta = sqrt(1 - cosTheta * cosTheta)
 print "sin(theta) = " + str(sinTheta)
 print "|a cross b|= " + str(c.length())
+print "|a||b|sin(theta)= " + str(a.length() * b.length() * sinTheta)
 
 
