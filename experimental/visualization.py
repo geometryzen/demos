@@ -10,6 +10,7 @@ moveLeft = False
 moveRight = False
 
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
+camera.up.set(0,0,1)
 camera.position.z = 2
 renderer = WebGLRenderer({"antialias": True})
 renderer.setClearColor(0x080808, 1)
