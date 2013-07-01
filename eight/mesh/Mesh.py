@@ -33,8 +33,6 @@ d = Vector3(radiusShaft, 0, 0)
 e = Vector3(0, 0, 0)
 points = [a, b, c, d, e]
 
-redLamb = MeshLambertMaterial({"color":0xFF0000})
-
 redWire = MeshBasicMaterial({"color":0xFF0000, "wireframe":True, "wireframeLinewidth":3})
 bluWire = MeshBasicMaterial({"color":0x0000FF, "wireframe":True, "wireframeLinewidth":3})
 grnWire = MeshBasicMaterial({"color":0x00FF00, "wireframe":True, "wireframeLinewidth":3})
@@ -42,6 +40,8 @@ segments = 6
 redArrow = Mesh(LatheGeometry(points, segments), redWire)
 bluArrow = Mesh(LatheGeometry(points, segments), bluWire)
 grnArrow = Mesh(LatheGeometry(points, segments), grnWire)
+
+print redArrow
 
 scene.add(redArrow)
 scene.add(bluArrow)
