@@ -4,8 +4,8 @@ from eight import *
 from math import random
 
 def makeCoord(n):
-    return n
-    # return random()
+    # return n
+    return random()
 
 # Start with two random vectors a and b:
 a = Vector3(makeCoord(1), makeCoord(3), makeCoord(5))
