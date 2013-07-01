@@ -58,7 +58,7 @@ startTime =  None
 movement = Vector3(0.02, 0.02, 0.02)
 
 def render():
-    mesh.rotation.add(movement)
+    redArrow.rotation.add(movement)
         
     renderer.render(scene, camera)
 
