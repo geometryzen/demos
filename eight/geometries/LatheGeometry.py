@@ -31,7 +31,7 @@ c = Vector3(radiusShaft, 0, lengthShaft)
 d = Vector3(radiusShaft, 0, 0)
 e = Vector3(0, 0, 0)
 e = Vector3(0.001, 0, 0)
-points = [a, b, c, d, e, a]
+points = [a, b, c, d, e]
 arrow = LatheGeometry(points, 24, 0, pi)
 
 print repr(arrow)
@@ -54,7 +54,7 @@ scene.add(directionalLight)
 
 requestID = None
 progress = None
-progressEnd = 10
+progressEnd = 1000
 startTime =  None
 movement = Vector3(0.02, 0.02, 0.02)
 
