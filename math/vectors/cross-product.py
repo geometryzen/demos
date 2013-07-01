@@ -44,6 +44,7 @@ print "j cross k => " + str(j.clone().cross(k))
 print "k cross i => " + str(k.clone().cross(i))
 print "j cross i => " + str(j.clone().cross(i))
 print "k cross j => " + str(k.clone().cross(j))
+print "i cross k => " + str(i.clone().cross(k))
 # Now lets talk about the Geometric Algebra approach.
 # i, j and k are actually multivectors under the covers!
 print "repr(i) => " + repr(i)
