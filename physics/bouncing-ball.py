@@ -44,7 +44,7 @@ def F(r,v,t):
     return m * g
     
 def integrate(n, t, dt):
-    # TODO: The accuracy should be improved using interpolation.
+    # TODO: The accuracy should be improved using interpolation on impact
     global r, v
     # TODO: Implement Multivector division by at least scalars and vectors.    
     a = F(r, v, t) * (1/m)
@@ -52,8 +52,11 @@ def integrate(n, t, dt):
     v = v + a * dt
     r = r + v * dt
     if r.z < 0:
+        # Why is this wrong?
         # v = -v
+        # The non-geometric solution.
         # v.z = -v.z
+        # The geometric solution
         v = - k * v * k
         r.z = -r.z
     particle.position = r
