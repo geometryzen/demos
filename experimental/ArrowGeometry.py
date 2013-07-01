@@ -23,8 +23,9 @@ container.appendChild(renderer.domElement)
 
 radiusShaft = 5
 radiusCone = radiusShaft * 2
+lengthCone = 20
 length = 80
-lengthShaft = 60
+lengthShaft = length - lengthCone
 a = Vector3(0, 0, length)
 b = Vector3(radiusCone, 0, lengthShaft)
 c = Vector3(radiusShaft, 0, lengthShaft)
