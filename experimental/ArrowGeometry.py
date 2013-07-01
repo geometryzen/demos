@@ -45,7 +45,7 @@ bluWire = MeshBasicMaterial({"color":0x0000FF})
 segments = 24
 
 redGeom = ArrowGeometry()
-grnGeom = LatheGeometry(points, segments)
+grnGeom = ArrowGeometry()
 bluGeom = LatheGeometry(points, segments)
 
 redMesh = Mesh(redGeom, redWire)
