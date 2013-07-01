@@ -52,18 +52,6 @@ redMesh.name = "redMesh"
 bluMesh = Mesh(grnGeom, bluWire)
 grnMesh = Mesh(bluGeom, grnWire)
 
-print repr(redMesh)
-print redMesh
-print str(redMesh)
-print redMesh.name
-print "---------------"
-print redMesh.geometry.id
-print redMesh.geometry.name
-print "---------------"
-print type(redMesh.geometry)
-print str(redMesh.geometry)
-print repr(redMesh.geometry)
-
 scene.add(redMesh)
 scene.add(bluMesh)
 scene.add(grnMesh)
