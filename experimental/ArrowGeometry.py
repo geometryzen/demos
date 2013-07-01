@@ -46,7 +46,7 @@ grnGeom = LatheGeometry(points, segments)
 bluGeom = LatheGeometry(points, segments)
 
 redMesh = Mesh(redGeom, redWire)
-redmesh.position.set(0,1,0)
+redMesh.position.set(0,1,0)
 redMesh.rotation.set(0,pi/2,0)
 grnMesh = Mesh(bluGeom, grnWire)
 grnMesh.rotation.set(-pi/2,0,0)
