@@ -18,7 +18,7 @@ zxPlane.rotation.set(pi/2,0,0)
 scene.add(zxPlane)
 
 # Initialize the system configuration.
-x = Vector3(0,-500,0)
+x = Vector3(0, 0, 0)
 v = Vector3(0,75,75)
 m = 1
 g = Vector3(0, 0, -9.81)
