@@ -49,7 +49,7 @@ scene.add(redMesh)
 scene.add(bluMesh)
 scene.add(grnMesh)
 
-bluMesh.setGeometry(CubeGeometry())
+#bluMesh.setGeometry(CubeGeometry())
 
 ambientLight = AmbientLight(0x222222)
 scene.add(ambientLight)
