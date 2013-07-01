@@ -5,11 +5,11 @@ from math import pi
 
 useLargeCanvas = False
 COLOR_GRID = 0x66A1D2
-LENGTH = 500
+LENGTH = 10
 
 scene = Scene()
 
-particle = Mesh(SphereGeometry(LENGTH * 5 /100, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
+particle = Mesh(SphereGeometry(LENGTH * 0.05, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
 scene.add(particle)
 
 xyPlane = Mesh(PlaneGeometry(LENGTH,LENGTH,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True, "opacity":0.2,"transparent":True}))
