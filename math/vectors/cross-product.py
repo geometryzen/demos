@@ -45,6 +45,8 @@ print "j cross i => " + str(j.clone().cross(i))
 print "k cross j => " + str(k.clone().cross(j))
 # Now lets talk about the Geometric Algebra approach.
 print "repr(i) => " + repr(i)
+print "repr(j) => " + repr(j)
+print "repr(k) => " + repr(k)
 I = Pseudoscalar3(1)
 print I
 print repr(I)
