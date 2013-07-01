@@ -52,6 +52,7 @@ print I
 print repr(I)
 dualB = -(b * I)
 print "dual(B) => " + str(dualB)
+print "repr(dual(B)) => " + repr(dualB)
 print a << dualB
 
 
