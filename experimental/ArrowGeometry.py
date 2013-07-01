@@ -28,7 +28,7 @@ container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
 length = 1
-radiusShaft = length * 0.05
+radiusShaft = length * 0.01
 radiusCone = length * 0.05 * 2
 lengthCone = radiusCone * 2
 lengthShaft = length - lengthCone
