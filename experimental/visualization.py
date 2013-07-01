@@ -7,6 +7,9 @@ scene = Scene()
 particle = Mesh(SphereGeometry(50, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
 scene.add(particle)
 
+xyPlane = Mesh(PlaneGeometry())
+scene.add(xyPlane)
+
 # Initialize the system configuration.
 x = Vector3(0,-500,0)
 v = Vector3(0,75,75)
