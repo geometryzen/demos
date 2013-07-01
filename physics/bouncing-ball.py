@@ -53,6 +53,7 @@ def integrate(n, t, dt):
     print r
     if r.z < 0:
         v = - k * v * k
+        r.z = -r.z
     particle.position = r
 
 renderer = WebGLRenderer()
