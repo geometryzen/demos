@@ -93,9 +93,6 @@ def init():
         container = document.getElementById("canvas-container")
         container.appendChild(graph)
         container.appendChild(renderer.domElement)
-
-    mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
-    scene.add(mesh)
     
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
@@ -104,14 +101,6 @@ def init():
     onWindowResize()
 
 def render():
-    if moveForward:
-        camera.position.z -= 0.02
-    if moveBackward:
-        camera.position.z += 0.02
-    if moveLeft:
-        camera.position.x -= 0.02
-    if moveRight:
-        camera.position.x += 0.02
 
     renderer.render(scene, camera)
     
