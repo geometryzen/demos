@@ -24,7 +24,7 @@ zxPlane.rotation.set(pi/2,0,0)
 zxPlane.position.set(500, 0, 500)
 scene.add(zxPlane)
 
-camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
+camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.up.set(0,0,1)
 camera.position.set(1500,1500,1500)
 camera.lookAt(scene.position)
