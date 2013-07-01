@@ -59,5 +59,15 @@ print "a << dual(b) => " + str(a << dualB)
 print "a cross b    => " + str(c)
 # This is not just a coincidence! Verify it by trying a few random vectors.
 # The properties of the cross product then follow from duality and contraction definitions.
-
+# This insight allows us to dispense with axial vectors (those resulting from a cross product
+# of polar vectors.
+# Feynman called polar vectors "honest" because of their reflection symmetry properties.
+# We can make all 3D vectors honest if we use vectors and bivectors appropriately.
+# In the Lorentz Force Law, the part of the force resulting from v cross B is an "honest"
+# vector because B is a "dishonest" vector. We should instead represent B by a bivector
+# which is dual to the classical magnetic field. Then the Lorentz Force law becomes:
+# F = q(E + v << B)
+#
+# This is, perhaps, suggestive that we recover an electric field by removing a velocity from
+# the bivector magnetic field.
 
