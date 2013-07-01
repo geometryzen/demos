@@ -47,6 +47,7 @@ bluGeom = LatheGeometry(points, segments)
 bluGeom.name = "bluGeom"
 
 redMesh = Mesh(redGeom, redWire)
+redMesh.name = "redMesh"
 bluMesh = Mesh(grnGeom, bluWire)
 grnMesh = Mesh(bluGeom, grnWire)
 
