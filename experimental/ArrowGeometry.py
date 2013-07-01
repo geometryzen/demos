@@ -66,7 +66,7 @@ movement = Vector3(0.02, 0.02, 0.02)
 
 def render():
     grnArrow.position.set(1,1,1);
-    grnArrow.scale.set(2,2,2)
+    grnArrow.scale.set(1,1,1)
     grnArrow.rotation.add(movement)
         
     renderer.render(scene, camera)
