@@ -41,6 +41,7 @@ segments = 3
 
 redGeom = LatheGeometry(points, segments)
 redGeom.name = "redGeom"
+print redGeom.name
 grnGeom = LatheGeometry(points, segments)
 grnGeom.name = "grnGeom"
 bluGeom = LatheGeometry(points, segments)
