@@ -44,6 +44,7 @@ def F(r,v,t):
     return m * g
     
 def integrate(n, t, dt):
+    # TODO: The accuracy should be improved using interpolation.
     global r, v
     # TODO: Implement Multivector division by at least scalars and vectors.    
     a = F(r, v, t) * (1/m)
