@@ -2,7 +2,6 @@
 from eight import *
 from browser import *
 
-# TODO: This could be a particular coordinate system, not just a graphics scene?
 scene = Scene()
 
 particle = Mesh(SphereGeometry(50, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
@@ -51,9 +50,10 @@ def integrate(n, t, dt):
 useLargeCanvas = False
 
 camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
+camera.up.set(0,0,1)
 camera.position.z = 1000
 renderer = WebGLRenderer()
-renderer.setClearColor(0xFFFFFF, 1.0)
+renderer.setClearColor(0x080808, 1.0)
 
 ambientLight = AmbientLight(0x222222)
 scene.add(ambientLight)
