@@ -39,5 +39,6 @@ i = Vector3(1, 0, 0)
 j = Vector3(0, 1, 0)
 k = Vector3(0, 0, 1)
 print "i cross j => " + str(i.clone().cross(j))
+print "j cross k => " + str(j.clone().cross(k))
 
 
