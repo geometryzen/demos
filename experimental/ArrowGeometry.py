@@ -12,6 +12,7 @@ scene = Scene()
 camera  = PerspectiveCamera(45, 1.0, 0.1, 1000)
 camera.up.set(0,0,1)
 camera.position.z = 3
+camera.lookAt(scene.position)
 
 renderer = WebGLRenderer()
 renderer.autoClear = True
