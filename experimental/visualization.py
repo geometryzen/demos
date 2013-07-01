@@ -51,7 +51,8 @@ useLargeCanvas = False
 
 camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.up.set(0,0,1)
-camera.position.z = 1000
+camera.position.set(1000,1000,1000)
+camera.lookAt(scene.position)
 renderer = WebGLRenderer()
 renderer.setClearColor(0x080808, 1.0)
 
