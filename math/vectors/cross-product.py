@@ -51,7 +51,7 @@ I = Pseudoscalar3(1)
 print I
 print repr(I)
 dualB = -(b * I)
-print "dual(B) => " + dualB
+print "dual(B) => " + str(dualB)
 print a << dualB
 
 
