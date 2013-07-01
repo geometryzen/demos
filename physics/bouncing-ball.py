@@ -51,7 +51,7 @@ def integrate(n, t, dt):
     v = v + a * dt
     r = r + v * dt
     print r
-    if r.x < 0:
+    if r.z < 0:
         v = - k * v * k
     particle.position = r
 
