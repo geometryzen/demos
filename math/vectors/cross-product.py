@@ -51,7 +51,7 @@ print "repr(i) => " + repr(i)
 print "repr(j) => " + repr(j)
 print "repr(k) => " + repr(k)
 I = Pseudoscalar3(1)
-print I
+print "Pseudoscalar(1) => " + str(I)
 print repr(I)
 print "ijk => " + str(i * j * k)
 dualB = -(b * I)
