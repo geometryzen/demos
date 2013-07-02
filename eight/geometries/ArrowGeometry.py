@@ -22,12 +22,12 @@ container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
 arrow = ArrowGeometry()
-arrow.scale.set(80,80,80)
 print repr(arrow)
 print arrow
 
 material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
 mesh = Mesh(arrow, material)
+mesh.scale.set(80,80,80)
 scene.add(mesh)
 
 ambientLight = AmbientLight(0x222222)
