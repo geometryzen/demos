@@ -22,7 +22,9 @@ container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
 length = 1
-arrow = ArrowGeometry(length)
+segments = 12
+radiusShaft = 0.01
+arrow = ArrowGeometry(length, segments, radiusShaft, radiusCone, lengthCone)
 print repr(arrow)
 print arrow
 
