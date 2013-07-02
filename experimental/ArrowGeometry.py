@@ -43,9 +43,10 @@ grnMesh = Mesh(bluGeom, grnWire)
 bluMesh = Mesh(grnGeom, bluWire)
 # lookAt is an alternate way of performing a rotation.
 # lookAt aligns the arrow with the specified vector.
-#redMesh.lookAt(Vector3(1,0,0))
-#grnMesh.lookAt(Vector3(0,1,0))
-#bluMesh.lookAt(Vector3(0,0,1))
+# It probably depends on the position of the arrow.
+redMesh.lookAt(Vector3(1,0,0))
+grnMesh.lookAt(Vector3(0,1,0))
+bluMesh.lookAt(Vector3(0,0,1))
 # up doesn't seem to have much effect for a mesh.
 redMesh.up = Vector3(1,1,1)
 
