@@ -3,6 +3,7 @@
 # of an arrow.
 from eight import *
 from browser import *
+from math import random 
 
 for canvas in document.getElementsByTagName("canvas"):
     canvas.parentNode.removeChild(canvas)
@@ -30,6 +31,7 @@ lengthCone = 0.2
 arrow = ArrowGeometry(length, segments, radiusShaft, radiusCone, lengthCone)
 
 material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
+material = MeshBasicMaterial({"color":random(), "wireframe":True, "wireframeLinewidth":3})
 mesh = Mesh(arrow, material)
 scene.add(mesh)
 
