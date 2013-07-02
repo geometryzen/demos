@@ -1,5 +1,6 @@
-# ArrowGeometry.py
-# LatheGeometry demonstration.
+# ArrowGeometry is not a standard Geometry in the Three.js library.
+# It is created from the LatheGeometry using a set of points that create the cone and shaft
+# of an arrow.
 from eight import *
 from browser import *
 
@@ -20,17 +21,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-radiusCone = 20
-radiusShaft = 10
-length = 80
-lengthShaft = 60
-a = Vector3(0, 0, length)
-b = Vector3(radiusCone, 0, lengthShaft)
-c = Vector3(radiusShaft, 0, lengthShaft)
-d = Vector3(radiusShaft, 0, 0)
-e = Vector3(0, 0, 0)
-points = [a, b, c, d, e]
-arrow = LatheGeometry(points, 25)
+arrow = ArrowGeometry()
 
 print repr(arrow)
 print arrow
