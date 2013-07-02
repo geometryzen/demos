@@ -22,7 +22,7 @@ container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
 arrow = ArrowGeometry()
-
+arrow.scale.set(80,80,80)
 print repr(arrow)
 print arrow
 
