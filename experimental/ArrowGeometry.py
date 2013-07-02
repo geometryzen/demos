@@ -45,8 +45,10 @@ bluMesh = Mesh(grnGeom, bluWire)
 # It depends on the position of the arrow.
 redMesh.lookAt(Vector3(1,0,0))
 grnMesh.lookAt(Vector3(0,1,0))
-bluMesh.lookAt(Vector3(0,0,1))
-print bluMesh.scale
+
+print "position => " + str(bluMesh.position)
+print "rotation => " + str(bluMesh.rotation)
+print "scale    => " + str(bluMesh.scale)
 
 scene.add(redMesh)
 scene.add(bluMesh)
