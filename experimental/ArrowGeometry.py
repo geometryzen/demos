@@ -36,9 +36,7 @@ grnGeom = ArrowGeometry()
 bluGeom = ArrowGeometry()
 
 redMesh = Mesh(redGeom, redWire)
-#redMesh.rotation.set(0,pi/2,0)
 grnMesh = Mesh(bluGeom, grnWire)
-#grnMesh.rotation.set(-pi/2,0,0)
 bluMesh = Mesh(grnGeom, bluWire)
 # lookAt is an alternate way of performing a rotation.
 # lookAt aligns the arrow with the specified vector.
@@ -46,9 +44,10 @@ bluMesh = Mesh(grnGeom, bluWire)
 redMesh.lookAt(Vector3(1,0,0))
 grnMesh.lookAt(Vector3(0,1,0))
 
-print "position => " + str(bluMesh.position)
-print "rotation => " + str(bluMesh.rotation)
-print "scale    => " + str(bluMesh.scale)
+print "position   => " + str(bluMesh.position)
+print "rotation   => " + str(bluMesh.rotation)
+print "eulerOrder => " + str(bluMesh.eulerOrder)
+print "scale      => " + str(bluMesh.scale)
 
 scene.add(redMesh)
 scene.add(bluMesh)
