@@ -24,6 +24,8 @@ container.appendChild(renderer.domElement)
 length = 1
 segments = 12
 radiusShaft = 0.01
+radiusCone = 0.08
+lengthCone = 0.2
 arrow = ArrowGeometry(length, segments, radiusShaft, radiusCone, lengthCone)
 print repr(arrow)
 print arrow
