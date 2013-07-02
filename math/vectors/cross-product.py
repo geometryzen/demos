@@ -68,8 +68,12 @@ print "a cross b    => " + str(c)
 # In the Lorentz Force Law, the part of the force resulting from v cross B is an "honest"
 # vector because B is a "dishonest" vector. We should instead represent B by a bivector
 # which is dual to the classical magnetic field. Then the Lorentz Force law becomes:
-# F = q(E + v << B)
+# F = q(E + v << B).
 #
 # This is, perhaps, suggestive that we recover an electric field by removing a velocity from
 # the bivector magnetic field.
-
+#
+# An even tidier approach is to define the new magnetic field to be scaled by the speed of 
+# light, then
+# F = q(E + beta << B), where beta = v/c and B = I * B(traditional) * c
+#
