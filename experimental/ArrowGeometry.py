@@ -43,6 +43,7 @@ bluMesh = Mesh(grnGeom, bluWire)
 # It depends on the position of the arrow.
 redMesh.lookAt(Vector3(1,0,0))
 grnMesh.lookAt(Vector3(0,1,0))
+grnMesh.visible = False
 
 print "position   => " + str(bluMesh.position)
 print "rotation   => " + str(bluMesh.rotation)
