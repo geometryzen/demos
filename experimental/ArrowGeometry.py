@@ -45,7 +45,7 @@ redMesh.lookAt(Vector3(1,0,0))
 grnMesh.lookAt(Vector3(0,1,0))
 
 bluMesh.rotation.set(pi/2,-pi/2,0)
-bluMesh.eulerOrder = "YZX"
+bluMesh.eulerOrder = "XYZ"
 print "position   => " + str(bluMesh.position)
 print "rotation   => " + str(bluMesh.rotation)
 print "eulerOrder => " + str(bluMesh.eulerOrder)
