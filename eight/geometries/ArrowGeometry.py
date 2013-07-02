@@ -31,7 +31,6 @@ lengthCone = 0.2
 arrow = ArrowGeometry(length, segments, radiusShaft, radiusCone, lengthCone)
 
 material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
-#material = MeshBasicMaterial({"color":random() * 0xFFFFFF, "wireframe":True, "wireframeLinewidth":3})
 mesh = Mesh(arrow,material)
 scene.add(mesh)
 
