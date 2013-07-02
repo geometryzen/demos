@@ -76,4 +76,3 @@ print "a cross b    => " + str(c)
 # An even tidier approach is to define the new magnetic field to be scaled by the speed of 
 # light, then
 # F = q(E + beta << B), where beta = v/c and B = I * B(traditional) * c
-#
