@@ -46,6 +46,7 @@ bluMesh = Mesh(grnGeom, bluWire)
 #redMesh.lookAt(Vector3(1,0,0))
 #grnMesh.lookAt(Vector3(0,1,0))
 #bluMesh.lookAt(Vector3(0,0,1))
+# up doesn't seem to have much effect for a mesh.
 redMesh.up = Vector3(1,1,1)
 
 scene.add(redMesh)
