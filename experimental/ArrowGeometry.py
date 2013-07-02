@@ -41,9 +41,11 @@ redMesh = Mesh(redGeom, redWire)
 grnMesh = Mesh(bluGeom, grnWire)
 #grnMesh.rotation.set(-pi/2,0,0)
 bluMesh = Mesh(grnGeom, bluWire)
-redMesh.lookAt(Vector3(1,0,0))
-grnMesh.lookAt(Vector3(0,1,0))
-bluMesh.lookAt(Vector3(0,0,1))
+# lookAt is an alternate way of performing a rotation.
+# lookAt aligns the arrow with the specified vector.
+#redMesh.lookAt(Vector3(1,0,0))
+#grnMesh.lookAt(Vector3(0,1,0))
+#bluMesh.lookAt(Vector3(0,0,1))
 
 scene.add(redMesh)
 scene.add(bluMesh)
