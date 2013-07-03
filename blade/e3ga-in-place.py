@@ -21,7 +21,7 @@ jk    = explain(Bivector3(0, 1, 0))
 ki    = explain(Bivector3(0, 0, 1))
 I     = explain(Pseudoscalar3(1))
 
-x = zero
+x = zero.clone()
 showValue("x", x)
 
 x += one
@@ -34,21 +34,21 @@ showValue("x", x)
 x -= 1
 showValue("x", x)
 
-x = one
+x = one.clone()
 showValue("x", x)
 x *= two
 showValue("x", x)
 x *= 2
 showValue("x", x)
 
-x = i
+x = i.clone()
 showValue("x", x)
 x ^= j
 showValue("x", x)
 x ^= 2
 showValue("x", x)
 
-x = i
+x = i.clone()
 showValue("x", x)
 x <<= I
 showValue("x", x)
