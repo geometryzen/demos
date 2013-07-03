@@ -2,16 +2,16 @@
 from eight import *
 
 def Scalar3(w):
-    return Euclidean3(w, 0, 0, 0, 0, 0, 0, 0)
+    return MultiVector3(w, 0, 0, 0, 0, 0, 0, 0)
 
 def Vector3(x, y, z):
-    return Euclidean3(0, x, y, z, 0, 0, 0, 0)
+    return MultiVector3(0, x, y, z, 0, 0, 0, 0)
 
 def Bivector3(xy, yz, zx):
-    return Euclidean3(0, 0, 0, 0, xy, yz, zx, 0)
+    return MultiVector3(0, 0, 0, 0, xy, yz, zx, 0)
 
 def Pseudoscalar3(s):
-    return Euclidean3(0, 0, 0, 0, 0, 0, 0, s)
+    return MultiVector3(0, 0, 0, 0, 0, 0, 0, s)
 
 def explain(m):
     print str(m) + " is " + repr(m)
@@ -21,7 +21,7 @@ def showValue(name, m):
     print name + " => " + str(m)
     return m
 
-zero = explain(Euclidean3(0, 0, 0, 0, 0, 0, 0, 0))
+zero = explain(MultiVector3(0, 0, 0, 0, 0, 0, 0, 0))
 one  = explain(Scalar3(1))
 two  = explain(Scalar3(2))
 three= explain(3)
