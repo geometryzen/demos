@@ -29,5 +29,5 @@ explain(x)
 
 x = i * j
 showValue("x", x)
-x = -x
+x = +x
 showValue("x", x)
