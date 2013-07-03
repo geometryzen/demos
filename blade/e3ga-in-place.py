@@ -40,3 +40,4 @@ showValue("x", x)
 x *= two
 showValue("x", x)
 x *= 2
+showValue("x", x)
