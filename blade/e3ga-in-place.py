@@ -21,3 +21,6 @@ e12  = explain(Bivector3(1, 0, 0))
 e23  = explain(Bivector3(0, 1, 0))
 e31  = explain(Bivector3(0, 0, 1))
 I    = explain(Pseudoscalar3(1))
+
+x = zero
+showValue("x", x)
