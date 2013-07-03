@@ -47,9 +47,8 @@ def integrate(n, t, dt):
     global x, v
     # TODO: Implement Multivector division by at least scalars and vectors.    
     a = F(x, v, t) * (1/m)
-    # TODO: Why doesn't += work here?
-    v = v + a * dt
-    x = x + v * dt
+    v += a * dt
+    x += v * dt
     # TODO: Implement a bounce with the Geometric reflection formula (-nvn).
     # TODO: Should we have Rigid Bodies with state/kinematic variables?
     # TODO: What about intrinsic properties such as mass or inertia tensor?
