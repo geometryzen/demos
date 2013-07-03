@@ -26,3 +26,5 @@ x = zero
 showValue("x", x)
 x += one
 showValue("x", x)
+x += 1
+showValue("x", x)
