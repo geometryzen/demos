@@ -52,5 +52,8 @@ x = i.clone()
 showValue("x", x)
 x <<= I
 showValue("x", x)
-x <<= 2
+
+x = I.clone()
+showValue("x", x)
+x >>= k
 showValue("x", x)
