@@ -28,3 +28,5 @@ explain(x)
 
 x += i
 showValue("x", x)
+x -= j
+showValue("x", x)
