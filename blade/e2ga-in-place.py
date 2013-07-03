@@ -20,7 +20,7 @@ def showValue(name, x):
     return x
 
 i = Vector2(1,0)
-j = Vector2(0,0)
+j = Vector2(0,1)
 x = Vector2(0,0)
 explain(i)
 explain(j)
