@@ -24,11 +24,19 @@ I    = explain(Pseudoscalar3(1))
 
 x = zero
 showValue("x", x)
+
 x += one
 showValue("x", x)
 x += 1
 showValue("x", x)
+
 x -= one
 showValue("x", x)
 x -= 1
 showValue("x", x)
+
+x = one
+showValue("x", x)
+x *= two
+showValue("x", x)
+x *= 2
