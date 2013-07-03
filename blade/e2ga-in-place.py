@@ -27,4 +27,4 @@ explain(j)
 explain(x)
 
 x = x + i
-explain(x)
+showValue("x", x)
