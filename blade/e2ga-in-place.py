@@ -25,3 +25,6 @@ x = Vector2(0,0)
 explain(i)
 explain(j)
 explain(x)
+
+x = x + i
+explain(x)
