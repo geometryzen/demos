@@ -24,3 +24,5 @@ I    = explain(Pseudoscalar3(1))
 
 x = zero
 showValue("x", x)
+x += one
+showValue("x", x)
