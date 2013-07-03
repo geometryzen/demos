@@ -48,9 +48,9 @@ showValue("x", x)
 x ^= 2
 showValue("x", x)
 
-x = i
+x = I
 showValue("x", x)
-x <<= I
+x <<= j
 showValue("x", x)
 x <<= 2
 showValue("x", x)
