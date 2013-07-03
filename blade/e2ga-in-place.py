@@ -22,6 +22,7 @@ def showValue(name, x):
 i = Vector2(1,0)
 j = Vector2(0,1)
 x = Vector2(0,0)
+I = Pseudoscalar2(1)
 explain(i)
 explain(j)
 explain(x)
