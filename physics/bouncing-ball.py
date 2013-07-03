@@ -48,9 +48,8 @@ def integrate(n, t, dt):
     global r, v
     # TODO: Implement Multivector division by at least scalars and vectors.    
     a = F(r, v, t) * (1/m)
-    # TODO: Why doesn't += work here?
-    v = v + a * dt
-    r = r + v * dt
+    v += a * dt
+    r += v * dt
     if r.z < 0:
         # Why is this wrong?
         # v = -v
