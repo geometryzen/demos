@@ -22,8 +22,8 @@ def showValue(name, m):
     return m
 
 zero = explain(Euclidean3(0, 0, 0, 0, 0, 0, 0, 0))
-one  = explain(Scalar(1))
-two  = explain(Scalar(2))
+one  = explain(Scalar3(1))
+two  = explain(Scalar3(2))
 three= explain(3)
 e1   = explain(Vector(1, 0, 0))
 e2   = explain(Vector(0, 1, 0))
