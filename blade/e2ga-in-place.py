@@ -27,6 +27,6 @@ explain(i)
 explain(j)
 explain(x)
 
-x = I
-x *= j
+x = i
+x <<= I
 showValue("x", x)
