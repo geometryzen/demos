@@ -28,5 +28,6 @@ explain(j)
 explain(x)
 
 x = i
+showValue("x", x)
 x <<= I
 showValue("x", x)
