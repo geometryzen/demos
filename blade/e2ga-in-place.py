@@ -36,3 +36,6 @@ showValue("x", x)
 x *= I
 x *= 2
 showValue("x", x)
+x ^= j
+x ^= 2
+showValue("x", x)
