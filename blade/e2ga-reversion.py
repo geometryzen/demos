@@ -31,3 +31,4 @@ x = i * j
 showValue("x", x)
 showValue("+x", +x)
 showValue("-x", -x)
+showValue("~x", ~x)
