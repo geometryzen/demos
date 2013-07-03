@@ -27,19 +27,6 @@ explain(i)
 explain(j)
 explain(x)
 
-x += i
-x += 2
-showValue("x", x)
-x -= j
-x -= 1
-showValue("x", x)
-x *= I
-x *= 2
-showValue("x", x)
-x ^= j
-x ^= 2
-showValue("x", x)
-x <<= i
-showValue("x", x)
-x <<= 2
+x = i
+x *= j
 showValue("x", x)
