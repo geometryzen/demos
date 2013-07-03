@@ -41,7 +41,7 @@ showValue("x", x)
 x *= 2
 showValue("x", x)
 
-x = j
+x = i
 showValue("x", x)
 x ^= j
 showValue("x", x)
