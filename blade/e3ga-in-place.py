@@ -47,3 +47,10 @@ x ^= j
 showValue("x", x)
 x ^= 2
 showValue("x", x)
+
+x = i
+showValue("x", x)
+x <<= I
+showValue("x", x)
+x <<= 2
+showValue("x", x)
