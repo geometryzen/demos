@@ -30,4 +30,5 @@ x += i
 x += 2
 showValue("x", x)
 x -= j
+x -= 1
 showValue("x", x)
