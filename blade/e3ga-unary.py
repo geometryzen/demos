@@ -10,6 +10,9 @@ def Vector3(x, y, z):
 def Bivector3(xy, yz, zx):
     return Euclidean3(0, 0, 0, 0, xy, yz, zx, 0)    
 
+def Pseudoscalar3(xyz):
+    return Euclidean3(0, 0, 0, 0, 0, 0, 0, xyz)    
+
 def explain(m):
     print str(m) + " is " + repr(m)
     return m
