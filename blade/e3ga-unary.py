@@ -9,7 +9,7 @@ def showValue(name, m):
     print name + " => " + str(m)
     return m
 
-zero  = explain(MultiVector3(0, 0, 0, 0, 0, 0, 0, 0))
+zero  = explain(Scalar3(0))
 one   = explain(Scalar3(1))
 two   = explain(Scalar3(2))
 three = explain(3)
