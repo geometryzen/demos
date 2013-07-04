@@ -7,6 +7,9 @@ def Scalar3(w):
 def Vector3(x, y, z):
     return Euclidean3(0, x, y, z, 0, 0, 0, 0)    
 
+def Bivector3(xy, yz, zx):
+    return Euclidean3(0, 0, 0, 0, xy, yz, zx, 0)    
+
 def explain(m):
     print str(m) + " is " + repr(m)
     return m
