@@ -80,6 +80,20 @@ for a in blades:
     for b in blades:
         showValue(str(a) + " ^ " + str(b), a ^ b)
     print ""
+print "----------"
+print "Left Contraction <<"
+print "----------"
+for a in blades:
+    for b in blades:
+        showValue(str(a) + " << " + str(b), a << b)
+    print ""
+print "----------"
+print "Right Contraction >>"
+print "----------"
+for a in blades:
+    for b in blades:
+        showValue(str(a) + " >> " + str(b), a >> b)
+    print ""
 
 
 
