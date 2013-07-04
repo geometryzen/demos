@@ -32,7 +32,7 @@ i = Vector3(1,0,0)
 j = Vector3(0,1,0)
 k = Vector3(0,0,1)
 ij = i ^ j
-jk = MultiVector3(0, 0, 0, 0, 0, 1, 0, 0)
+jk = Euclidean3(0, 0, 0, 0, 0, 1, 0, 0)
 ki = Bivector3(0, 0, 1)
 I = Pseudoscalar3(1)
 
