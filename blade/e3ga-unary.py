@@ -1,5 +1,5 @@
 # e3ga-unary.py
-from eight import *
+from blade import *
 
 def explain(m):
     print str(m) + " is " + repr(m)
