@@ -73,6 +73,13 @@ for a in blades:
     for b in blades:
         showValue(str(a) + " * " + str(b), a * b)
     print ""
+print "----------"
+print "Extension ^"
+print "----------"
+for a in blades:
+    for b in blades:
+        showValue(str(a) + " ^ " + str(b), a ^ b)
+    print ""
 
 
 
