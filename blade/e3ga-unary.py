@@ -23,3 +23,4 @@ I     = explain(Pseudoscalar3(1))
 
 showValue("+zero", +zero)
 showValue("+i", +i)
+showValue("-i", -i)
