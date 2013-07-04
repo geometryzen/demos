@@ -4,6 +4,9 @@ from blade import *
 def Scalar3(w):
     return Euclidean3(w, 0, 0, 0, 0, 0, 0, 0)    
 
+def Vector3(x, y, z):
+    return Euclidean3(0, x, y, z, 0, 0, 0, 0)    
+
 def explain(m):
     print str(m) + " is " + repr(m)
     return m
