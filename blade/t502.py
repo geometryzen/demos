@@ -1,4 +1,4 @@
-from blade import *
+from eight import *
 
 def explain(m):
     print str(m) + " is " + repr(m)
