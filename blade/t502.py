@@ -94,6 +94,3 @@ for a in blades:
     for b in blades:
         showValue(str(a) + " >> " + str(b), a >> b)
     print ""
-
-
-
