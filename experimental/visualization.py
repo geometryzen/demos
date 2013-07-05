@@ -39,7 +39,7 @@ def F(x,v,t):
 def integrate(n, t, dt):
     global v
     # TODO: Implement Multivector division by at least scalars and vectors.    
-    a = F(x, v, t) * (1/m)
+    a = F(particle.position, v, t) * (1/m)
     v += a * dt
     particle.position += v * dt
 
