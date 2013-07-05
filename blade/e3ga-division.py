@@ -28,3 +28,4 @@ b = ~a
 showValue("~a",b)
 
 c = a * b
+showValue("a * ~a", c)
