@@ -14,15 +14,11 @@ two   = Euclidean2(2, 0, 0, 0)
 three = 3
 i     = Euclidean2(0, 1, 0, 0)
 j     = Euclidean2(0, 0, 1, 0)
-k     = Euclidean2(0, 0, 0, 1)
-ij    = Bivector3(1, 0, 0)
-jk    = Bivector3(0, 1, 0)
-ki    = Bivector3(0, 0, 1)
-I     = Pseudoscalar3(1, 0, 0)
+I     = Euclidean2(0, 0, 0, 1)
 
-blades = [zero, one, two, three, i, j, k, ij, jk, ki, I]
+blades = [zero, one, two, three, i, j, I]
 
-sum = one + i + j + k + ij + jk + ki + I
+sum = one + i + j + I
 
 print "----------"
 print "repr"
