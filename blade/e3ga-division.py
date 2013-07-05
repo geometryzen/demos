@@ -29,3 +29,6 @@ showValue("~a",b)
 
 c = a * b
 showValue("a * ~a", c)
+
+d = c * c
+showValue("d", d)
