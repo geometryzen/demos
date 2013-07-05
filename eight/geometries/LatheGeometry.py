@@ -31,9 +31,6 @@ e = Vector3(0, 0, 0)
 points = [a, b, c, d, e]
 arrow = LatheGeometry(points, 25)
 
-print repr(arrow)
-print arrow
-
 material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
 mesh = Mesh(arrow, material)
 scene.add(mesh)
