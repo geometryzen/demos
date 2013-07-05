@@ -31,4 +31,7 @@ showValue("d", d)
 e = d * d
 showValue("e", e)
 
+f = e * e
+showValue("f", f)
+
 print Euclidean2(0,1,0,0) * Euclidean2(0,0,1,0)
