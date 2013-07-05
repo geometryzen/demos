@@ -29,6 +29,7 @@ scene.add(zxPlane)
 # Initialize the system configuration.
 particle.position = Vector3(0, 0, 0)
 particle.velocity = Vector3(25,75,75)
+print particle.mass
 particle.mass = 1
 m = 1
 g = Vector3(0, 0, -9.81)
