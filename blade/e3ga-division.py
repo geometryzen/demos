@@ -1,6 +1,6 @@
 # e3ga-division.py
 from eight import *
-from math import random
+from math import random, floor
 
 def explain(m):
     print str(m) + " is " + repr(m)
@@ -9,6 +9,9 @@ def explain(m):
 def showValue(name, m):
     print name + " => " + str(m)
     return m
+
+def ri():
+    return floor(random())
 
 zero = explain(Euclidean3(0, 0, 0, 0, 0, 0, 0, 0))
 one  = explain(Scalar3(1))
@@ -22,7 +25,7 @@ e23  = explain(Bivector3(0, 1, 0))
 e31  = explain(Bivector3(0, 0, 1))
 I    = explain(Pseudoscalar3(1))
 
-a = Euclidean3(random(),random(),random(),random(),random(),random(),random(),random())
+a = Euclidean3(ri(),ri(),ri(),ri(),ri(),ri(),ri(),ri())
 showValue("a",a)
 
 b = ~a
