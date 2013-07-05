@@ -23,7 +23,7 @@ I    = explain(Pseudoscalar3(1))
 
 blades = [zero, one, two, three, e1, e2, e3, e12, e23, e31, I]
 
-print one / three
+print one / one
 
 print ""
 print "Geometric Product Table *"
