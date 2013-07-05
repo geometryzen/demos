@@ -25,8 +25,10 @@ e23  = explain(Bivector3(0, 1, 0))
 e31  = explain(Bivector3(0, 0, 1))
 I    = explain(Pseudoscalar3(1))
 
-#a = Euclidean3(ri(),ri(),ri(),ri(),ri(),ri(),ri(),ri())
-a = Euclidean3(ri(),0,0,0,ri(),ri(),ri(),0)
+# A general multivector (in 3D at least) has a path to inversion.
+a = Euclidean3(ri(),ri(),ri(),ri(),ri(),ri(),ri(),ri())
+# A spinor in 3D is more direct.
+#a = Euclidean3(ri(),0,0,0,ri(),ri(),ri(),0)
 showValue("a",a)
 
 b = ~a
