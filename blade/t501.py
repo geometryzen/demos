@@ -29,10 +29,6 @@ print repr(two)
 print repr(three)
 print repr(i)
 print repr(j)
-print repr(k)
-print repr(ij)
-print repr(jk)
-print repr(ki)
 print repr(I)
 print "----------"
 print "str"
@@ -43,10 +39,6 @@ print str(two)
 print str(three)
 print str(i)
 print str(j)
-print str(k)
-print str(ij)
-print str(jk)
-print str(ki)
 print str(I)
 print "----------"
 print "Addition +"
