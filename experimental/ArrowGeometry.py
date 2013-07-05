@@ -1,5 +1,4 @@
 # Under Construction
-# Mesh demonstration.
 from eight import *
 from browser import *
 from math import pi
