@@ -11,7 +11,7 @@ def showValue(name, m):
     return m
 
 def ri():
-    return floor(random())
+    return random()
 
 zero = explain(Euclidean3(0, 0, 0, 0, 0, 0, 0, 0))
 one  = explain(Scalar3(1))
