@@ -27,3 +27,5 @@ showValue("a * ~a", repr(c))
 
 d = c * c
 showValue("d", d)
+
+print Euclidean2(0,1,0,0) * Euclidean2(0,0,1,0))
