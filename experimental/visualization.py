@@ -29,19 +29,16 @@ scene.add(zxPlane)
 # Initialize the system configuration.
 particle.position = Vector3(0, 0, 0)
 particle.velocity = Vector3(25,75,75)
-print particle.mass
 particle.mass = 1
-print repr(particle.mass)
-m = 1
 g = Vector3(0, 0, -9.81)
 
 # The user-defined force field, F, may depend upon the particle position, velocity and time.
 def F(x, v, t):
-    return m * g
+    return particle.mass * g
     
 def integrate(n, t, dt):
     # TODO: Implement Multivector division by at least scalars and vectors.    
-    a = F(particle.position, particle.velocity, t) * (1/m)
+    a = F(particle.position, particle.velocity, t) * (1 / particle.mass)
     particle.velocity += a * dt
     particle.position += particle.velocity * dt
 
