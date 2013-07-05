@@ -9,10 +9,10 @@ def showValue(name, m):
     return m
 
 zero  = Euclidean2(0, 0, 0, 0)
-one   = Scalar3(1)
-two   = Scalar3(2)
+one   = Euclidean2(1, 0, 0, 0)
+two   = Euclidean2(2, 0, 0, 0)
 three = 3
-i     = Vector3(1, 0, 0)
+i     = Euclidean2(0, 1, 0, 0)
 j     = Vector3(0, 1, 0)
 k     = Vector3(0, 0, 1)
 ij    = Bivector3(1, 0, 0)
