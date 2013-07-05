@@ -1,5 +1,5 @@
 # e2ga-in-place.py
-from blade import *
+from e2ga import *
 
 # Convenience functions for creating Blades.
 def Scalar2(w):
