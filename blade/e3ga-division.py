@@ -22,7 +22,8 @@ e31  = explain(Bivector3(0, 0, 1))
 I    = explain(Pseudoscalar3(1))
 
 a = Euclidean3(1,2,3,4,5,6,7,8)
+showValue("a",a)
 
 b = ~a
 
-c
+c = a * b
