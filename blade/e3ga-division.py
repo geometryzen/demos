@@ -21,14 +21,8 @@ e23  = explain(Bivector3(0, 1, 0))
 e31  = explain(Bivector3(0, 0, 1))
 I    = explain(Pseudoscalar3(1))
 
-blades = [zero, one, two, three, e1, e2, e3, e12, e23, e31, I]
+a = Euclidean3(1,2,3,4,5,6,7,8)
 
-print one / one
+b = ~a
 
-print ""
-print "Geometric Product Table *"
-print "========================="
-for a in blades:
-    for b in blades:
-        showValue(str(a) + " * " + str(b), a * b)
-    print ""
+c
