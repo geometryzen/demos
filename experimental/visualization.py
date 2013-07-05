@@ -33,7 +33,7 @@ m = 1
 g = Vector3(0, 0, -9.81)
 
 # The user-defined force field, F, may depend upon the particle position, velocity and time.
-def F(x,v,t):
+def F(x, v, t):
     return m * g
     
 def integrate(n, t, dt):
