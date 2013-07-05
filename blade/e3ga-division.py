@@ -29,7 +29,7 @@ b = ~a
 showValue("~a",b)
 
 c = a * b
-showValue("a * ~a", c)
+showValue("a * ~a", repr(c))
 
 d = c * c
 showValue("d", d)
