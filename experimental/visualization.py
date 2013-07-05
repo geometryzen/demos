@@ -31,7 +31,7 @@ particle.position = Vector3(0, 0, 0)
 particle.velocity = Vector3(25,75,75)
 print particle.mass
 particle.mass = 1
-print particle.mass
+print repr(particle.mass)
 m = 1
 g = Vector3(0, 0, -9.81)
 
