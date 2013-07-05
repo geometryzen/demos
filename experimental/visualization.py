@@ -29,7 +29,6 @@ scene.add(zxPlane)
 # Initialize the system configuration.
 particle.position = Vector3(0, 0, 0)
 particle.velocity = Vector3(25,75,75)
-v = Vector3(25,75,75)
 m = 1
 g = Vector3(0, 0, -9.81)
 
@@ -38,11 +37,10 @@ def F(x,v,t):
     return m * g
     
 def integrate(n, t, dt):
-    global v
     # TODO: Implement Multivector division by at least scalars and vectors.    
     a = F(particle.position, v, t) * (1/m)
-    v += a * dt
-    particle.position += v * dt
+    particle.velocity += a * dt
+    particle.position += particle.velocity * dt
 
 camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.up.set(0,0,1)
