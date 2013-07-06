@@ -21,15 +21,7 @@ twiddleA = ~a
 showValue("~a", twiddleA)
 
 c = a * twiddleA
+showValue("a * ~a", c)
 
-c = Euclidean2(0.5, c.x/(2*c.w), c.y/(2*c.w), c.xy/(2*c.w))
 d = c * c
 showValue("d", d)
-
-e = d * d
-showValue("e", e)
-
-f = e * e
-showValue("f", f)
-
-print Euclidean2(0,1,0,0) * Euclidean2(0,0,1,0)
