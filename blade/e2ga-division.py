@@ -23,3 +23,5 @@ A = Euclidean2(ri(),ri(),ri(),ri())
 showValue("A", A)
 
 showValue("inv(A)", inv(A))
+
+showValue("A * inv(A)", A * inv(A))
