@@ -27,7 +27,7 @@ showValue("c.x", c.x)
 showValue("c.y", c.y)
 showValue("c.xy", c.xy)
 
-#d = Euclidean2(c.w, c.x, c.y, c.xy)
+d = Euclidean2(0.5, c.x/(2*c.w), c.y/(2*c.w), c.xy/(2*c.w))
 d = c * c
 showValue("d", d)
 
