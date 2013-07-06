@@ -28,6 +28,7 @@ def inverse(M):
 A = Euclidean2(ri(),ri(),ri(),ri())
 
 showValue("A", A)
+showValue("A/1", A/1)
 
 showValue("1/A", Euclidean2(1,0,0,0)/A)
 showValue("1/A", 1/A)
