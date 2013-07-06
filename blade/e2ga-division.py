@@ -8,6 +8,8 @@ def showValue(name, m):
 def ri():
     return floor(100*random())
 
+# In e2ga, bot grade involution and Clifford conjugation work in this context.
+# Maybe one is more general?
 def cliffordConjugate(A):
     return Euclidean2(A.w, -A.x, -A.y, -A.xy)
 
