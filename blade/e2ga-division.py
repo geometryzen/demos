@@ -6,7 +6,7 @@ def explain(m):
     return m
 
 def showValue(name, m):
-    print name + " => " + repr(m)
+    print name + " => " + str(m)
     return m
 
 def ri():
