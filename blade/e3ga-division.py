@@ -19,7 +19,7 @@ def inverse(M):
     m = M * r
     s = r * cliffordConjugate(m)
     k = (M * s).w
-    return Euclidean2(s.w/k, s.x/k, s.y/k, s.z/k, s.xy/k, s.yz/k, s.zx/k, s.xyz/k)
+    return Euclidean3(s.w/k, s.x/k, s.y/k, s.z/k, s.xy/k, s.yz/k, s.zx/k, s.xyz/k)
 
 A = Euclidean3(ri(),ri(),ri(),ri(),ri(),ri(),ri(),ri())
 
