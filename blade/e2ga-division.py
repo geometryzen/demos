@@ -23,5 +23,5 @@ showValue("~a", twiddleA)
 c = a * twiddleA
 showValue("a * ~a", c)
 
-d = c * c
+d = c * ~c
 showValue("d", d)
