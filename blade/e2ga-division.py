@@ -8,7 +8,7 @@ def showValue(name, m):
 def ri():
     return floor(100*random())
 
-# In e2ga, bot grade involution and Clifford conjugation work in this context.
+# In e2ga, both grade involution and Clifford conjugation work in this context.
 # Maybe one is more general?
 def cliffordConjugate(A):
     return Euclidean2(A.w, -A.x, -A.y, -A.xy)
@@ -24,6 +24,7 @@ def inverse(M):
     return Euclidean2(s.w/k, s.x/k, s.y/k, s.xy/k)
 
 A = Euclidean2(ri(),ri(),ri(),ri())
+
 showValue("A", A)
 
 showValue("inverse(A)", inverse(A))
