@@ -14,8 +14,8 @@ def ri():
 
 a = Euclidean2(ri(),ri(),ri(),ri())
 showValue("a", a)
-a = a[0] + a[2]
-showValue("a", a)
+#a = a[0] + a[2]
+#showValue("a", a)
 
 twiddleA = ~a
 showValue("~a", twiddleA)
