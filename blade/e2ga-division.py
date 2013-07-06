@@ -31,7 +31,7 @@ showValue("A", A)
 showValue("A/2", A/2)
 
 showValue("1/A", Euclidean2(1,0,0,0)/A)
-showValue("1/A", 1/A)
+showValue("1/A", 2/A)
 
 showValue("inverse(A)", inverse(A))
 
