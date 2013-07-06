@@ -27,7 +27,7 @@ A = Euclidean2(ri(),ri(),ri(),ri())
 
 showValue("A", A)
 
-showValue("1/A", Euclidean2(1,0,0,0)/A)
+#showValue("1/A", Euclidean2(1,0,0,0)/A)
 
 showValue("inverse(A)", inverse(A))
 
