@@ -37,7 +37,7 @@ showValue("inverse(A)", inverse(A))
 
 showValue("A * inverse(A)", A * inverse(A))
 
-B = Euclidean(2,2,2,2)
+B = Euclidean2(2,2,2,2)
 showValue("B", B)
 B /= 2
 showValue("B", B)
