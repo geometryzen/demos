@@ -16,11 +16,8 @@ def gradeInvolution(A):
 
 def inverse(M):
     r = ~M
-    m = M * r
-    c = cliffordConjugate(m)
-    s = r * c
-    k = (M * s)
-    return s / k[0]
+    s = r * cliffordConjugate(M * r)
+    return s / (M * s)[0]
 
 A = Euclidean2(ri(),ri(),ri(),ri())
 
