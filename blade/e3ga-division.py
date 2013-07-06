@@ -16,6 +16,7 @@ def gradeInvolution(A):
 
 def inverse(M):
     r = ~M
+    showValue("r", r)
     m = M * r
     showValue("m", m)
     s = r * cliffordConjugate(m)
