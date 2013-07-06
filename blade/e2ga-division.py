@@ -17,8 +17,9 @@ def cc(A):
 
 def inv(M):
     m = M * ~M
-    x = ~M * cc(m)
-    return x
+    s = ~M * cc(m)
+    k = (M * s).w
+    return Euclidean2(s.w/k.w, s.x/k.w, s.y/k.w, s.xy/k.w)
 
 A = Euclidean2(ri(),ri(),ri(),ri())
 showValue("A", A)
