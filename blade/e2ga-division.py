@@ -15,16 +15,11 @@ def ri():
 def cc(A):
     return Euclidean2(A.w, -A.x, -A.y, -A.xy)
 
-a = Euclidean2(ri(),ri(),ri(),ri())
-showValue("a", a)
-#a = a[0] + a[2]
-#showValue("a", a)
+def inv(M):
+    m = M * ~M
+    return ~M * cc(m)
 
-twiddleA = ~a
-showValue("~a", twiddleA)
+A = Euclidean2(ri(),ri(),ri(),ri())
+showValue("A", A)
 
-c = a * twiddleA
-showValue("a * ~a", c)
-
-d = c * cc(c)
-showValue("d", d)
+showValue("inv(A)", inv(A))
