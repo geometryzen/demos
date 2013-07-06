@@ -22,7 +22,7 @@ showValue("~a", twiddleA)
 
 c = a * twiddleA
 showValue("a * ~a", c)
-#showValue("c.w", c.w)
+showValue("c.w", c.w)
 
 #d = Euclidean2(c.w, c.x, c.y, c.xy)
 d = c * c
