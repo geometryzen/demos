@@ -18,7 +18,7 @@ def inverse(M):
     r = ~M
     m = M * r
     showValue("m", m)
-    s = r * gradeInvolution(m)
+    s = r * cliffordConjugate(m)
     k = (M * s).w
     return Euclidean3(s.w/k, s.x/k, s.y/k, s.z/k, s.xy/k, s.yz/k, s.zx/k, s.xyz/k)
 
