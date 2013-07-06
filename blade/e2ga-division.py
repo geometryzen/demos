@@ -16,7 +16,7 @@ def ri():
 # A general multivector (in 3D at least) has a path to inversion.
 a = Euclidean2(ri(),ri(),ri(),ri())
 # A spinor in 3D is more direct.
-a = Euclidean2(ri(),0,0,ri())
+#a = Euclidean2(ri(),0,0,ri())
 showValue("a",a)
 
 b = ~a
