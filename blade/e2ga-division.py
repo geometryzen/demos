@@ -11,6 +11,9 @@ def ri():
 def cliffordConjugate(A):
     return Euclidean2(A.w, -A.x, -A.y, -A.xy)
 
+def gradeInvolution(A):
+    return Euclidean2(A.w, -A.x, -A.y, A.xy)
+
 def inv(M):
     r = ~M
     m = M * r
