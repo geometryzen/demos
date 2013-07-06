@@ -25,6 +25,8 @@ showValue("~a", twiddleA)
 c = a * twiddleA
 showValue("a * ~a", repr(c))
 
+showValue("(a * ~a)[0]", repr(c[0]))
+
 d = c * c
 showValue("d", d)
 
