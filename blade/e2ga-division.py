@@ -21,11 +21,6 @@ twiddleA = ~a
 showValue("~a", twiddleA)
 
 c = a * twiddleA
-showValue("a * ~a", c)
-showValue("c.w", c.w)
-showValue("c.x", c.x)
-showValue("c.y", c.y)
-showValue("c.xy", c.xy)
 
 c = Euclidean2(0.5, c.x/(2*c.w), c.y/(2*c.w), c.xy/(2*c.w))
 d = c * c
