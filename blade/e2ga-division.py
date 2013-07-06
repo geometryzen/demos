@@ -13,6 +13,7 @@ def ri():
     return floor(100*random())
 
 a = Euclidean2(ri(),ri(),ri(),ri())
+showValue("a", a)
 a = a[0] + a[2]
 showValue("a", a)
 
