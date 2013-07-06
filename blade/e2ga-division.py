@@ -14,7 +14,7 @@ def cliffordConjugate(A):
 def inv(M):
     r = ~M
     m = M * r
-    s = r * cliffoedConjugate(m)
+    s = r * cliffordConjugate(m)
     k = (M * s).w
     return Euclidean2(s.w/k, s.x/k, s.y/k, s.xy/k)
 
