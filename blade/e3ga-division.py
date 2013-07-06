@@ -29,3 +29,5 @@ showValue("A", A)
 showValue("inverse(A)", inverse(A))
 
 showValue("A * inverse(A)", A * inverse(A))
+
+showValue("1/A", Scalar3(1)/A)
