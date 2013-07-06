@@ -1,10 +1,5 @@
-# e3ga-division.py
 from eight import *
 from math import random, floor
-
-def explain(m):
-    print str(m) + " is " + repr(m)
-    return m
 
 def showValue(name, m):
     print name + " => " + str(m)
@@ -13,29 +8,23 @@ def showValue(name, m):
 def ri():
     return floor(100*random())
 
-zero = explain(Euclidean3(0, 0, 0, 0, 0, 0, 0, 0))
-one  = explain(Scalar3(1))
-two  = explain(Scalar3(2))
-three= explain(3)
-e1   = explain(Vector3(1, 0, 0))
-e2   = explain(Vector3(0, 1, 0))
-e3   = explain(Vector3(0, 0, 1))
-e12  = explain(Bivector3(1, 0, 0))
-e23  = explain(Bivector3(0, 1, 0))
-e31  = explain(Bivector3(0, 0, 1))
-I    = explain(Pseudoscalar3(1))
+def cliffordConjugate(A):
+    return Euclidean3(A.w, -A.x, -A.y, -A.z, -A.xy, -A.yz, -A.zx, A.xyz)
 
-# A general multivector (in 3D at least) has a path to inversion.
-a = Euclidean3(ri(),ri(),ri(),ri(),ri(),ri(),ri(),ri())
-# A spinor in 3D is more direct.
-#a = Euclidean3(ri(),0,0,0,ri(),ri(),ri(),0)
-showValue("a",a)
+def gradeInvolution(A):
+    return Euclidean3(A.w, -A.x, -A.y, -A.z, A.xy, A.yz, A.zx, -A.xyz)
 
-b = ~a
-showValue("~a",b)
+def inverse(M):
+    r = ~M
+    m = M * r
+    s = r * cliffordConjugate(m)
+    k = (M * s).w
+    return Euclidean2(s.w/k, s.x/k, s.y/k, s.xy/k)
 
-c = a * b
-showValue("a * ~a", repr(c))
+A = Euclidean3(ri(),ri(),ri(),ri(),ri(),ri(),ri(),ri())
 
-d = c * c
-showValue("d", d)
+showValue("A", A)
+
+showValue("inverse(A)", inverse(A))
+
+showValue("A * inverse(A)", A * inverse(A))
