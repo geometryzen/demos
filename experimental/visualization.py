@@ -37,7 +37,7 @@ def F(x, v, t):
     return particle.mass * g
     
 def integrate(n, t, dt):
-    # TODO: Implement Multivector division by at least scalars and vectors.    
+    # TODO: Implement Multivector division.    
     a = F(particle.position, particle.velocity, t) * (1 /10.0)
     particle.velocity += a * dt
     particle.position += particle.velocity * dt
