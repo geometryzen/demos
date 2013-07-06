@@ -17,12 +17,12 @@ def ri():
 a = Euclidean2(ri(),ri(),ri(),ri())
 # A spinor in 3D is more direct.
 #a = Euclidean2(ri(),0,0,ri())
-showValue("a",a)
+showValue("a", a)
 
-b = ~a
-showValue("~a",b)
+twiddleA = ~a
+showValue("~a", twiddleA)
 
-c = a * b
+c = a * twiddleA
 showValue("a * ~a", repr(c))
 
 d = c * c
