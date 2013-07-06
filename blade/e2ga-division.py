@@ -1,4 +1,3 @@
-# e2ga-division.py
 from e2ga import *
 from math import random, floor
 
@@ -13,10 +12,8 @@ def showValue(name, m):
 def ri():
     return floor(100*random())
 
-# A general multivector (in 3D at least) has a path to inversion.
 a = Euclidean2(ri(),ri(),ri(),ri())
-# A spinor in 3D is more direct.
-#a = Euclidean2(ri(),0,0,ri())
+a = a[0] + a[2]
 showValue("a", a)
 
 twiddleA = ~a
