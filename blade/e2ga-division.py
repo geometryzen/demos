@@ -26,6 +26,6 @@ def inverse(M):
 A = Euclidean2(ri(),ri(),ri(),ri())
 showValue("A", A)
 
-showValue("inv(A)", inverse(A))
+showValue("inverse(A)", inverse(A))
 
-showValue("A * inv(A)", A * inverse(A))
+showValue("A * inverse(A)", A * inverse(A))
