@@ -16,7 +16,7 @@ def cliffordConjugate(A):
 def gradeInvolution(A):
     return Euclidean2(A.w, -A.x, -A.y, A.xy)
 
-def inv(M):
+def inverse(M):
     r = ~M
     m = M * r
     s = r * cliffordConjugate(m)
@@ -26,6 +26,6 @@ def inv(M):
 A = Euclidean2(ri(),ri(),ri(),ri())
 showValue("A", A)
 
-showValue("inv(A)", inv(A))
+showValue("inv(A)", inverse(A))
 
-showValue("A * inv(A)", A * inv(A))
+showValue("A * inv(A)", A * inverse(A))
