@@ -22,8 +22,7 @@ def inverse(M):
     c = cliffordConjugate(m)
     s = r * c
     k = (M * s)
-    k0 = k.w
-    return Euclidean2(s.w/k0, s.x/k0, s.y/k0, s.xy/k0)
+    return s / k[0]
 
 A = Euclidean2(ri(),ri(),ri(),ri())
 
