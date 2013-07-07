@@ -1,11 +1,12 @@
 from eight import *
+from time import clock
 
 def explain(m):
-    print str(m) + " is " + repr(m)
+    # print str(m) + " is " + repr(m)
     return m
 
 def showValue(name, m):
-    print name + " => " + str(m)
+    # print name + " => " + str(m)
     return m
 
 zero  = Scalar3(0)
