@@ -34,8 +34,8 @@ yloWire = MeshBasicMaterial({"color":0xFFFF00,"wireframe":True, "wireframeLinewi
 redGeom = ArrowGeometry()
 grnGeom = ArrowGeometry()
 bluGeom = ArrowGeometry()
-quarters = 2
-yloGeom = CircleGeometry(1, 8 * quarters, 0, pi*quarters/2)
+quarters = 4
+yloGeom = CircleGeometry(1, 8 * quarters, 0, pi*quarters/)
 
 redMesh = Mesh(redGeom, redWire)
 grnMesh = Mesh(bluGeom, grnWire)
