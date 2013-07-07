@@ -35,8 +35,8 @@ grnGeom = ArrowGeometry()
 bluGeom = ArrowGeometry()
 
 redMesh = Mesh(redGeom, redWire)
-grnMesh = Mesh(bluGeom)
-bluMesh = Mesh(grnGeom)
+grnMesh = Mesh(bluGeom, grnWire)
+bluMesh = Mesh(grnGeom, bluWire)
 # lookAt is an alternate way of performing a rotation.
 # lookAt aligns the arrow with the specified vector.
 # It depends on the position of the arrow.
