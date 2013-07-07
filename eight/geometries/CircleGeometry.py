@@ -23,7 +23,7 @@ thetaStart = 0
 thetaLength = 2 * pi
 circle = CircleGeometry(radius, segments, thetaStart, thetaLength)
 
-mesh = Mesh(circle, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
+mesh = Mesh(circle)
 scene.add(mesh)
 
 requestID = None
