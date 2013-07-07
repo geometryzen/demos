@@ -20,7 +20,7 @@ container.appendChild(renderer.domElement)
 radius = 50
 segments = 32
 thetaStart = 0
-thetaLength = pi
+thetaLength = 2 * pi
 circle = CircleGeometry(radius, segments, thetaStart, thetaLength)
 
 print repr(circle)
