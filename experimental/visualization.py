@@ -1,166 +1,105 @@
-# visualization.py
+# Under Construction
 from eight import *
 from browser import *
 from math import pi
 
-useLargeCanvas = False
-COLOR_GRID = 0x66A1D2
+i = Vector3(1,0,0)
+j = Vector3(0,1,0)
+k = Vector3(0,0,1)
+
+for canvas in document.getElementsByTagName("canvas"):
+    canvas.parentNode.removeChild(canvas)
 
 scene = Scene()
 
-particle = Mesh(SphereGeometry(50, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
-scene.add(particle)
-
-xyPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True}))
-scene.add(xyPlane)
-xyPlane.position.set(500,500,0)
-
-yzPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True}))
-yzPlane.rotation.set(0,pi/2,0)
-yzPlane.position.set(0,500,500)
-scene.add(yzPlane)
-
-zxPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True}))
-zxPlane.rotation.set(pi/2,0,0)
-zxPlane.position.set(500, 0, 500)
-
-scene.add(zxPlane)
-
-# Initialize the system configuration.
-particle.position = Vector3(0, 0, 0)
-particle.velocity = Vector3(25,75,75)
-particle.mass = 10
-g = Vector3(0, 0, -9.81)
-
-# The user-defined force field, F, may depend upon the particle position, velocity and time.
-def F(x, v, t):
-    return particle.mass * g
-    
-def integrate(n, t, dt):
-    # TODO: Implement Multivector division.    
-    a = F(particle.position, particle.velocity, t) * (1 /10.0)
-    particle.velocity += a * dt
-    particle.position += particle.velocity * dt
-
-camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
-camera.up.set(0,0,1)
-camera.position.set(1500,1500,1500)
+camera  = PerspectiveCamera(45, 1.0, 0.1, 1000)
+camera.up.set(0, 0, 1)
+camera.position.set(3, 3, 3)
 camera.lookAt(scene.position)
 
 renderer = WebGLRenderer()
-renderer.setClearColor(0x080808, 1.0)
+renderer.autoClear = True
+renderer.gammaInput = True
+renderer.gammaOutput = True
+renderer.setClearColor(Color(0x080808), 1.0)
 
-ambientLight = AmbientLight(0x222222)
-scene.add(ambientLight)
+container = document.getElementById("canvas-container")
+container.appendChild(renderer.domElement)
 
-pointLight = PointLight(0xFFFFFF)
+redWire = MeshLambertMaterial({"color":0xFF0000})
+grnWire = MeshLambertMaterial({"color":0x00FF00})
+bluWire = MeshLambertMaterial({"color":0x0000FF})
+yloWire = MeshBasicMaterial({"color":0xFFFF00,"wireframe":True})
+
+redGeom = ArrowGeometry()
+grnGeom = ArrowGeometry()
+bluGeom = ArrowGeometry()
+yloGeom = ArrowGeometry()
+
+redMesh = Mesh(redGeom, redWire)
+grnMesh = Mesh(bluGeom, grnWire)
+bluMesh = Mesh(grnGeom, bluWire)
+yloMesh = Mesh(yloGeom, yloWire)
+# lookAt is an alternate way of performing a rotation.
+# lookAt aligns the arrow with the specified vector.
+# It depends on the position of the arrow.
+redMesh.lookAt(Vector3(1,0,0))
+grnMesh.lookAt(Vector3(0,1,0))
+grnMesh.visible = True
+yloMesh.lookAt(Vector3(1,0,0))
+yloMesh.position = Vector3(0,1,1)
+
+print "position   => " + str(bluMesh.position)
+print "rotation   => " + str(bluMesh.rotation)
+print "eulerOrder => " + str(bluMesh.eulerOrder)
+print "scale      => " + str(bluMesh.scale)
+print "visible    => " + str(bluMesh.visible)
+
+scene.add(redMesh)
+scene.add(bluMesh)
+scene.add(grnMesh)
+scene.add(yloMesh)
+
+pointLight = PointLight(0x888888)
 pointLight.position.set(20, 20, 20)
 scene.add(pointLight)
 
-directionalLight = DirectionalLight(0xFFFFFF)
+directionalLight = DirectionalLight(0x888888)
 directionalLight.position.set(0, 1, 0)
 scene.add(directionalLight)
 
-# We're not actually using the HTML Canvas (2d), but it is here just in case we need it.
-graph = document.createElement("canvas")
-graph.style.position = "absolute"
-graph.style.top = "0px"
-graph.style.left = "0px"
-context = graph.getContext("2d")
+requestID = None
+progress = None
+progressEnd = 6000
+startTime =  None
 
-def escKey(downFlag):
-    terminate()
-
-keyHandlers = {
- 27: escKey
-}
-    
-def onDocumentKeyDown(event):
-    event.preventDefault()
-    keyHandlers[event.keyCode](True)
-
-def onDocumentKeyUp(event):
-    event.preventDefault()
-    keyHandlers[event.keyCode](False)
+def render():
+        
+    renderer.render(scene, camera)
 
 def onWindowResize():
-    if (useLargeCanvas):
-        camera.aspect = window.innerWidth / window.innerHeight
-        camera.updateProjectionMatrix()
-        renderer.size = (window.innerWidth, window.innerHeight)
-        graph.width = window.innerWidth
-        graph.height = window.innerHeight
-        graph.style.width = str(window.innerWidth) + "px"
-        graph.style.height = str(window.innerHeight) + "px"
-    else:
-        container = document.getElementById("canvas-container")
-        camera.aspect = container.clientWidth / container.clientHeight
-        camera.updateProjectionMatrix()
-        renderer.setSize(container.clientWidth, container.clientHeight)
-        graph.width = container.clientWidth
-        graph.height = container.clientHeight
-        graph.style.width = str(container.clientWidth) + "px"
-        graph.style.height = str(container.clientHeight) + "px"
-    
-def discardCanvases():
-    for cs in document.getElementsByTagName("canvas"):
-        cs.parentNode.removeChild(cs)
-        
-requestID = None
-frameIndex = 0
-DURATION_SECONDS = 15
-startTime =  None
-frameTime = None
-endTime = None
-
-def run():       
-    print "Press ESC to terminate."
-    print "This program will 'self-terminate' in "+str(DURATION_SECONDS)+" seconds!"
-    discardCanvases()
-    if (useLargeCanvas):
-        document.body.insertBefore(renderer.domElement, document.body.firstChild)
-        document.body.insertBefore(graph, document.body.firstChild)
-    else:
-        container = document.getElementById("canvas-container")
-        container.appendChild(graph)
-        container.appendChild(renderer.domElement)
-
-    document.addEventListener("keydown", onDocumentKeyDown, False)
-    document.addEventListener("keyup", onDocumentKeyUp, False)
-
-    window.addEventListener("resize", onWindowResize, False)
-    onWindowResize()
-    window.requestAnimationFrame(frameZero)
-
-def frameZero(timestamp):
-    global requestID, startTime, frameTime, endTime
-    startTime = timestamp
-    frameTime = startTime
-    endTime = startTime + DURATION_SECONDS * 1000
-    requestID = window.requestAnimationFrame(animate)
-    integrate(frameIndex, (frameTime - startTime)/1000, 0.0)
-    renderer.render(scene, camera)
+    camera.aspect = window.innerWidth / window.innerHeight
+    camera.updateProjectionMatrix()
+    renderer.size = (window.innerWidth, window.innerHeight)
     
 def animate(timestamp):
-    global requestID, frameIndex, frameTime
-    frameIndex += 1
-    interval = timestamp - frameTime 
-    frameTime = timestamp   
-    if frameTime < endTime:
-        requestID = window.requestAnimationFrame(animate)
-        integrate(frameIndex, (frameTime - startTime)/1000, interval/1000)
-        renderer.render(scene, camera)
+    global requestID, progress, startTime
+    if (startTime):
+        progress = timestamp - startTime
     else:
-        terminate()
+        if (timestamp):
+            startTime = timestamp
+        else:
+            progress = 0
         
-def terminate():
-    window.cancelAnimationFrame(requestID)
-    document.removeEventListener("keydown", onDocumentKeyDown, False)
-    document.removeEventListener("keyup", onDocumentKeyUp, False)
-    time = (frameTime-startTime)/1000
-    count = frameIndex+1
-    if useLargeCanvas:
-        discardCanvases()
-    print "Done."
+    if (progress < progressEnd):
+        requestID = window.requestAnimationFrame(animate)
+        render()
+    else:
+        window.cancelAnimationFrame(requestID)
 
-run()
+window.addEventListener("resize", onWindowResize, False)
+
+onWindowResize()
+
+animate(None)
