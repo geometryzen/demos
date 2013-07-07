@@ -83,7 +83,7 @@ for a in blades:
         showValue(str(a) + " / " + str(b), a / b)
     print ""
 finish = clock()
-showValue("elapsed", finish - start)
+print "elapsed" + " => " + str(finish - start)
 print "----------"
 print "Extension ^"
 print "----------"
