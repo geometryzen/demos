@@ -46,8 +46,8 @@ def integrate(n, t, dt):
     # TODO: The accuracy should be improved using interpolation on impact.
     # TODO: Otherwise, the ball will gain/lose energy.
     global r, v
-    # TODO: Implement Multivector division by at least scalars and vectors.    
-    a = F(r, v, t) * (1/m)
+
+    a = F(r, v, t)/m
     v += a * dt
     r += v * dt
     if r.z < 0:
