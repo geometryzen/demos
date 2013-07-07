@@ -35,7 +35,7 @@ redGeom = ArrowGeometry()
 grnGeom = ArrowGeometry()
 bluGeom = ArrowGeometry()
 quarters = 4
-yloGeom = CircleGeometry(1, 8 * quarters, 0, pi*quarters/)
+yloGeom = CircleGeometry(1, 8 * quarters, 0, pi*quarters/2)
 
 redMesh = Mesh(redGeom, redWire)
 grnMesh = Mesh(bluGeom, grnWire)
