@@ -20,16 +20,9 @@ renderer.setClearColor(Color(0x080808), 1.0)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-# All arguments are optional and the defaults are as follows.
-length = 1
-segments = 12
-radiusShaft = 0.01
-radiusCone = 0.08
-lengthCone = 0.2
-arrow = ArrowGeometry(length, segments, radiusShaft, radiusCone, lengthCone)
+arrow = TextGeometry("Geometry Zen")
 
-material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
-mesh = Mesh(arrow,material)
+mesh = Mesh(arrow)
 scene.add(mesh)
 
 ambientLight = AmbientLight(0x222222)
