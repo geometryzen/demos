@@ -18,25 +18,19 @@ container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
 radius = 50
-widthSegments = 32
-heightSegments = 24
-phiStart = 0
-phiLength = 2 * pi
+segments = 32
 thetaStart = 0
 thetaLength = pi
-sphere = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
+circle = CircleGeometry(radius, segments, thetaStart, thetaLength)
 
-print repr(sphere)
-print "radius:         " + str(sphere.radius)
-print "widthSegments:  " + str(sphere.widthSegments)
-print "heightSegments: " + str(sphere.heightSegments)
-print "phiStart:       " + str(sphere.phiStart)
-print "phiLength:      " + str(sphere.phiLength)
-print "thetaStart:     " + str(sphere.thetaStart)
-print "thetaLength:    " + str(sphere.thetaLength)
-print sphere
+print repr(circle)
+print "radius:         " + str(circle.radius)
+print "segments:       " + str(circle.segments)
+print "thetaStart:     " + str(circle.thetaStart)
+print "thetaLength:    " + str(circle.thetaLength)
+print circle
 
-mesh = Mesh(sphere, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
+mesh = Mesh(circle, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
 scene.add(mesh)
 
 requestID = None
