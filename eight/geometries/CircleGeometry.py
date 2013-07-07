@@ -23,6 +23,13 @@ thetaStart = 0
 thetaLength = 2 * pi
 circle = CircleGeometry(radius, segments, thetaStart, thetaLength)
 
+print repr(circle)
+print "radius:         " + str(circle.radius)
+print "segments:       " + str(circle.segments)
+print "thetaStart:     " + str(circle.thetaStart)
+print "thetaLength:    " + str(circle.thetaLength)
+print circle
+
 mesh = Mesh(circle, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
 scene.add(mesh)
 
