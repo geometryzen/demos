@@ -77,10 +77,13 @@ for a in blades:
 print "----------"
 print "Division /"
 print "----------"
+start = clock()
 for a in blades:
     for b in blades:
         showValue(str(a) + " / " + str(b), a / b)
     print ""
+finish = clock()
+showValue("elapsed", finish - start)
 print "----------"
 print "Extension ^"
 print "----------"
