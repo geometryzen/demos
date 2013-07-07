@@ -18,7 +18,7 @@ container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
 radius = 50
-segments = 16
+segments = 32
 thetaStart = 0
 thetaLength = 2 * pi
 circle = CircleGeometry(radius, segments, thetaStart, thetaLength)
