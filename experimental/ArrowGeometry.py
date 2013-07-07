@@ -29,20 +29,24 @@ container.appendChild(renderer.domElement)
 redWire = MeshLambertMaterial({"color":0xFF0000})
 grnWire = MeshLambertMaterial({"color":0x00FF00})
 bluWire = MeshLambertMaterial({"color":0x0000FF})
+yloMatl = MeshBasicMaterial({"color":0xFFFF00,"wireframe":True})
 
 redGeom = ArrowGeometry()
 grnGeom = ArrowGeometry()
 bluGeom = ArrowGeometry()
+yloGeom = ArrowGeometry()
 
 redMesh = Mesh(redGeom, redWire)
 grnMesh = Mesh(bluGeom, grnWire)
 bluMesh = Mesh(grnGeom, bluWire)
+yloMesh = Mesh(yloGeom, yloWire)
 # lookAt is an alternate way of performing a rotation.
 # lookAt aligns the arrow with the specified vector.
 # It depends on the position of the arrow.
 redMesh.lookAt(Vector3(1,0,0))
 grnMesh.lookAt(Vector3(0,1,0))
 grnMesh.visible = True
+yloMesh.lookAt(Vector3(1,1,0))
 
 print "position   => " + str(bluMesh.position)
 print "rotation   => " + str(bluMesh.rotation)
@@ -53,6 +57,7 @@ print "visible    => " + str(bluMesh.visible)
 scene.add(redMesh)
 scene.add(bluMesh)
 scene.add(grnMesh)
+scene.add(yloMesh)
 
 pointLight = PointLight(0x888888)
 pointLight.position.set(20, 20, 20)
