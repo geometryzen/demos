@@ -29,7 +29,7 @@ container.appendChild(renderer.domElement)
 redWire = MeshLambertMaterial({"color":0xFF0000})
 grnWire = MeshLambertMaterial({"color":0x00FF00})
 bluWire = MeshLambertMaterial({"color":0x0000FF})
-yloWire = MeshBasicMaterial({"color":0xFFFF00,"wireframe":True})
+yloWire = MeshBasicMaterial({"color":0xFFFF00,"wireframe":True,"wireframeLinewidth":3})
 
 redGeom = ArrowGeometry()
 grnGeom = ArrowGeometry()
