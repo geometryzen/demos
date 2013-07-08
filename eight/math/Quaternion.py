@@ -49,9 +49,6 @@ print "----------"
 print "copy(q) Quaternion"
 print "----------"
 target = Quaternion()
-source = Quaternion()
-print repr(quaternion.set(17,13,11,7))
-print "quaternion.x => " + str(quaternion.x)
-print "quaternion.y => " + str(quaternion.y)
-print "quaternion.z => " + str(quaternion.z)
-print "quaternion.w => " + str(quaternion.w)
+source = Quaternion(4, 3, 2, 1)
+print target.copy(source)
+print repr(target)
