@@ -64,3 +64,9 @@ axis = Vector3(1.0, 1.0, 1.0).normalize()
 target = Quaternion()
 print target.setFromAxisAngle(axis, pi/2)
 print repr(target)
+print "----------"
+print "inverse()"
+print "----------"
+source = Quaternion(4, 3, 2, 1)
+print source.inverse
+print source
