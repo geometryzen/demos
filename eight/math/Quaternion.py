@@ -36,3 +36,11 @@ quaternion.w = 40
 print quaternion
 print str(quaternion)
 print repr(quaternion)
+print "----------"
+print "set"
+print "----------"
+quaternion.set(17,13,11,7)
+print "quaternion.x => " + str(quaternion.x)
+print "quaternion.y => " + str(quaternion.y)
+print "quaternion.z => " + str(quaternion.z)
+print "quaternion.w => " + str(quaternion.w)
