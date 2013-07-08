@@ -1,4 +1,3 @@
-# Under Construction 2013-Jul-07
 from eight import *
 from math import pi
 
