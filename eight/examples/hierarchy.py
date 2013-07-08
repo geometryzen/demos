@@ -52,7 +52,6 @@ def onDocumentKeyUp(event):
     
 def onDocumentMouseMove(event):
     global mouseX, mouseY
-    print "MouseMove"
     print event.clientX
     mouseX = (event.clientX - windowHalfX) * 10
     mouseY = (event.clientY - windowHalfXy) * 10                               
