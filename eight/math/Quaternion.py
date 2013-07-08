@@ -1,6 +1,6 @@
 # Under Construction 2013-Jul-07
 from eight import *
-print "Quaternion"
+print "Quaternions"
 print "----------"
 print "Construction"
 print "----------"
