@@ -1,7 +1,6 @@
 # Under Construction 2013-Jul-07
 # Quaternion.py
 from eight import *
-from math import random
 
 print "----------"
 print "Construction"
