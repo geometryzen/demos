@@ -65,10 +65,8 @@ def run():
     discardCanvases()
     if (useLargeCanvas):
         document.body.insertBefore(renderer.domElement, document.body.firstChild)
-        document.body.insertBefore(graph, document.body.firstChild)
     else:
         container = document.getElementById("canvas-container")
-        container.appendChild(graph)
         container.appendChild(renderer.domElement)
 
     document.addEventListener("keydown", onDocumentKeyDown, False)
