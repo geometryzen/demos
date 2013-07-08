@@ -4,10 +4,10 @@ print "Quaternions"
 print "----------"
 print "Construction"
 print "----------"
-quaternion = Quaternion(1,2,3,4)
+quaternion = Quaternion(1, 2, 3, 4)
+print repr(quaternion)
 print quaternion
 print str(quaternion)
-print repr(quaternion)
 print "quaternion.x => " + str(quaternion.x)
 print "quaternion.y => " + str(quaternion.y)
 print "quaternion.z => " + str(quaternion.z)
