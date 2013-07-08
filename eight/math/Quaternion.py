@@ -6,4 +6,5 @@ print quaternion
 print str(quaternion)
 print repr(quaternion)
 
+print Quaternion()
 print repr(Quaternion())
