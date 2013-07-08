@@ -29,7 +29,10 @@ quaternion = Quaternion(0,0,0,0)
 print quaternion
 print str(quaternion)
 print repr(quaternion)
-quaternion.x = 1
-quaternion.y = 2
-quaternion.z = 3
-quaternion.w = 4
+quaternion.x = 10
+quaternion.y = 20
+quaternion.z = 30
+quaternion.w = 40
+print quaternion
+print str(quaternion)
+print repr(quaternion)
