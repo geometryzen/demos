@@ -1,5 +1,6 @@
 # Under Construction 2013-Jul-07
 from eight import *
+from math import pi
 print "Quaternions"
 print "----------"
 print "Construction"
@@ -50,9 +51,16 @@ source = Quaternion(4, 3, 2, 1)
 print target.copy(source)
 print repr(target)
 print "----------"
-print "setFromEuler(vector) Quaternion"
+print "setFromEuler(vector, order) Quaternion"
 print "----------"
 vector = Vector3(0.5, 1.0, 2.0)
 target = Quaternion()
 print target.setFromEuler(vector)
+print repr(target)
+print "----------"
+print "setFromAxisAngle(vector) Quaternion"
+print "----------"
+vector = Vector3(1.0, 1.0, 1.0).normalize()
+target = Quaternion()
+print target.setFromAxisAngle(vector, pi/2)
 print repr(target)
