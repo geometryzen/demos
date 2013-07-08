@@ -18,3 +18,7 @@ print "Defaults"
 print "----------"
 print Quaternion()
 print repr(Quaternion())
+print "x => " + str(Quaternion().x)
+print "y => " + str(Quaternion().y)
+print "z => " + str(Quaternion().z)
+print "w => " + str(Quaternion().w)
