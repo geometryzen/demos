@@ -123,6 +123,7 @@ def terminate():
     window.cancelAnimationFrame(requestID)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
+    document.removeEventListener("mousemove", onDocumentMouseMove, False)
     time = (frameTime-startTime)/1000
     count = frameIndex+1
     if useLargeCanvas:
