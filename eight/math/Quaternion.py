@@ -97,3 +97,10 @@ i   = Quaternion(1, 0, 0, 0)
 j   = Quaternion(0, 1, 0, 0)
 k   = Quaternion(0, 0, 1, 0)
 qs = [one, i, j, k]
+print ""
+print "Geometric Product Table *"
+print "========================="
+for a in qs:
+    for b in qs:
+        showValue(str(a) + " + " + str(b), a + b)
+    print ""
