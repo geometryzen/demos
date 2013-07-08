@@ -1,5 +1,6 @@
 # Quaternion.py
 from eight import *
+from math import random
 
 print "----------"
 print "Construction"
@@ -37,8 +38,18 @@ print quaternion
 print str(quaternion)
 print repr(quaternion)
 print "----------"
-print "set"
+print "set(x, y, z, w)"
 print "----------"
+print repr(quaternion.set(17,13,11,7))
+print "quaternion.x => " + str(quaternion.x)
+print "quaternion.y => " + str(quaternion.y)
+print "quaternion.z => " + str(quaternion.z)
+print "quaternion.w => " + str(quaternion.w)
+print "----------"
+print "copy(q) Quaternion"
+print "----------"
+target = Quaternion()
+source = Quaternion()
 print repr(quaternion.set(17,13,11,7))
 print "quaternion.x => " + str(quaternion.x)
 print "quaternion.y => " + str(quaternion.y)
