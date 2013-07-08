@@ -56,12 +56,17 @@ def onDocumentMouseMove(event):
     mouseY = (event.clientY - windowHalfXy) * 10                               
 
 def onWindowResize():
+    global windowHalfX, windowHalfY
     if (useLargeCanvas):
+        windowHalfX = window.innerWidth / 2
+        windowHalfY = window.innerHeight / 2
         camera.aspect = window.innerWidth / window.innerHeight
         camera.updateProjectionMatrix()
         renderer.size = (window.innerWidth, window.innerHeight)
     else:
         container = document.getElementById("canvas-container")
+        windowHalfX = container.clientWidth / 2
+        windowHalfY = container.clientHeight / 2
         camera.aspect = container.clientWidth / container.clientHeight
         camera.updateProjectionMatrix()
         renderer.setSize(container.clientWidth, container.clientHeight)
