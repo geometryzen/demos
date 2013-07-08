@@ -6,10 +6,16 @@ useLargeCanvas = False
 
 scene = Scene()
 
-camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
-camera.up.set(0,0,1)
-camera.position.set(1500,1500,1500)
-camera.lookAt(scene.position)
+geometry = CubeGeometry(100,100,100)
+material = MeshNormalMaterial()
+
+group = Object3D()
+
+for i in range(0,200):
+    print i
+
+camera  = PerspectiveCamera(60, 1.0, 1, 10000)
+camera.position.z = 500
 
 renderer = WebGLRenderer()
 renderer.setClearColor(0x080808, 1.0)
