@@ -1,6 +1,6 @@
 from eight import *
 from browser import *
-from math import pi
+from math import pi, random
 
 useLargeCanvas = False
 
@@ -11,8 +11,18 @@ material = MeshNormalMaterial()
 
 group = Object3D()
 
-for i in range(0,200):
-    print i
+for i in range(0, 200):
+    mesh = Mesh(geometry, material)
+    mesh.position.x = random() * 2000 - 1000
+    mesh.position.y = random() * 2000 - 1000
+    mesh.position.z = random() * 2000 - 1000
+    mesh.rotation.x = random() * 2 * pi
+    mesh.rotation.y = random() * 2 * pi
+    mesh.matrixAutoUpdate = False
+    mesh.updateMatrix();
+    group.add(mesh)
+
+scene.add(group)
 
 camera  = PerspectiveCamera(60, 1.0, 1, 10000)
 camera.position.z = 500
