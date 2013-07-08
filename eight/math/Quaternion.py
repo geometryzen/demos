@@ -1,6 +1,11 @@
 # Under Construction 2013-Jul-07
 from eight import *
 from math import pi
+
+def showValue(name, m):
+    print name + " => " + str(m)
+    return m
+
 print "Quaternions"
 print "----------"
 print "Construction"
