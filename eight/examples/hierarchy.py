@@ -3,7 +3,7 @@ from browser import *
 from math import pi, random, sin
 from time import clock
 
-useLargeCanvas = False
+useLargeCanvas = True
 
 mouseX = 0
 mouseY = 0
