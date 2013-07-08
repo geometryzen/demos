@@ -80,6 +80,11 @@ print "----------"
 source = Quaternion(4, 3, 2, 1)
 print source.length()
 print "----------"
+print "lengthSq()"
+print "----------"
+source = Quaternion(4, 3, 2, 1)
+print source.lengthSq()
+print "----------"
 print "normalize()"
 print "----------"
 source = Quaternion(4, 3, 2, 1)
