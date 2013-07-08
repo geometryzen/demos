@@ -94,6 +94,7 @@ def run():
 
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
+    document.addEventListener("mousemove", onDocumentMouseMove, False)
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
