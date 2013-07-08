@@ -4,6 +4,10 @@ from math import pi, random
 
 useLargeCanvas = False
 
+mouseX = 0
+mouseY = 0
+windowHalfX = window.innerWidth / 2
+windowHalfY = window.innerHeight / 2
 scene = Scene()
 
 geometry = CubeGeometry(100,100,100)
@@ -45,6 +49,11 @@ def onDocumentKeyDown(event):
 def onDocumentKeyUp(event):
     event.preventDefault()
     keyHandlers[event.keyCode](False)
+    
+def onDocumentMouseMove(event):
+    global mouseX, mouseY
+    mouseX = (event.clientX - windowHalfX) * 10
+    mouseY = (event.clientY - windowHalfXy) * 10                               
 
 def onWindowResize():
     if (useLargeCanvas):
