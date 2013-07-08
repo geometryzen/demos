@@ -1,10 +1,8 @@
-# examples/hierarchy.py
 from eight import *
 from browser import *
 from math import pi
 
 useLargeCanvas = False
-COLOR_GRID = 0x66A1D2
 
 scene = Scene()
 
@@ -15,24 +13,6 @@ camera.lookAt(scene.position)
 
 renderer = WebGLRenderer()
 renderer.setClearColor(0x080808, 1.0)
-
-ambientLight = AmbientLight(0x222222)
-scene.add(ambientLight)
-
-pointLight = PointLight(0xFFFFFF)
-pointLight.position.set(20, 20, 20)
-scene.add(pointLight)
-
-directionalLight = DirectionalLight(0xFFFFFF)
-directionalLight.position.set(0, 1, 0)
-scene.add(directionalLight)
-
-# We're not actually using the HTML Canvas (2d), but it is here just in case we need it.
-graph = document.createElement("canvas")
-graph.style.position = "absolute"
-graph.style.top = "0px"
-graph.style.left = "0px"
-context = graph.getContext("2d")
 
 def escKey(downFlag):
     terminate()
