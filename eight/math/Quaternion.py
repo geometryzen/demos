@@ -79,3 +79,8 @@ print "normalize()"
 print "----------"
 source = Quaternion(4, 3, 2, 1)
 print source.normalize()
+print "----------"
+print "clone()"
+print "----------"
+source = Quaternion(4, 3, 2, 1)
+print source.clone()
