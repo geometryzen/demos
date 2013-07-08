@@ -1,3 +1,4 @@
+# Under Construction
 # Quaternion.py
 from eight import *
 from math import random
@@ -57,5 +58,5 @@ print "setFromEuler(vector) Quaternion"
 print "----------"
 vector = Vector3(0.5, 1.0, 2.0)
 target = Quaternion()
-print target.setFromEuler(vector)
+#print target.setFromEuler(vector)
 print repr(target)
