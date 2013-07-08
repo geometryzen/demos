@@ -39,7 +39,7 @@ print repr(quaternion)
 print "----------"
 print "set"
 print "----------"
-quaternion.set(17,13,11,7)
+print repr(quaternion.set(17,13,11,7))
 print "quaternion.x => " + str(quaternion.x)
 print "quaternion.y => " + str(quaternion.y)
 print "quaternion.z => " + str(quaternion.z)
