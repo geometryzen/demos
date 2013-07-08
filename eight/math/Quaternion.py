@@ -25,9 +25,8 @@ print "----------"
 print "Assignment"
 print "----------"
 quaternion = Quaternion(0,0,0,0)
-print quaternion
-print str(quaternion)
 print repr(quaternion)
+print str(quaternion)
 quaternion.x = 10
 quaternion.y = 20
 quaternion.z = 30
