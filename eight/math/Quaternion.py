@@ -13,7 +13,7 @@ print "quaternion.z => " + str(quaternion.z)
 print "quaternion.w => " + str(quaternion.w)
 
 print "----------"
-print "Defaults"
+print "Defaults for Quaternion()"
 print "----------"
 print repr(Quaternion())
 print str(Quaternion())
