@@ -82,6 +82,11 @@ startTime =  None
 frameTime = None
 endTime = None
 
+def render():
+    camera.position.x += (mouseX - camera.position.x) * 0.05
+    camera.position.y += (mouseX - camera.position.y) * 0.05
+    camera.lookAt(scene.position)
+
 def run():       
     print "Press ESC to terminate."
     print "This program will 'self-terminate' in "+str(DURATION_SECONDS)+" seconds!"
@@ -106,6 +111,7 @@ def frameZero(timestamp):
     frameTime = startTime
     endTime = startTime + DURATION_SECONDS * 1000
     requestID = window.requestAnimationFrame(animate)
+    render()
     renderer.render(scene, camera)
     
 def animate(timestamp):
@@ -115,6 +121,7 @@ def animate(timestamp):
     frameTime = timestamp   
     if frameTime < endTime:
         requestID = window.requestAnimationFrame(animate)
+        render()
         renderer.render(scene, camera)
     else:
         terminate()
