@@ -8,40 +8,6 @@ COLOR_GRID = 0x66A1D2
 
 scene = Scene()
 
-particle = Mesh(SphereGeometry(50, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
-scene.add(particle)
-
-xyPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True}))
-scene.add(xyPlane)
-xyPlane.position.set(500,500,0)
-
-yzPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True}))
-yzPlane.rotation.set(0,pi/2,0)
-yzPlane.position.set(0,500,500)
-scene.add(yzPlane)
-
-zxPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True}))
-zxPlane.rotation.set(pi/2,0,0)
-zxPlane.position.set(500, 0, 500)
-
-scene.add(zxPlane)
-
-# Initialize the system configuration.
-particle.position = Vector3(0, 0, 0)
-particle.velocity = Vector3(25,75,75)
-particle.mass = 10
-g = Vector3(0, 0, -9.81)
-
-# The user-defined force field, F, may depend upon the particle position, velocity and time.
-def F(x, v, t):
-    return particle.mass * g
-    
-def integrate(n, t, dt):
-    # TODO: Implement Multivector division.    
-    a = F(particle.position, particle.velocity, t) * (1 /10.0)
-    particle.velocity += a * dt
-    particle.position += particle.velocity * dt
-
 camera  = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.up.set(0,0,1)
 camera.position.set(1500,1500,1500)
@@ -138,7 +104,6 @@ def frameZero(timestamp):
     frameTime = startTime
     endTime = startTime + DURATION_SECONDS * 1000
     requestID = window.requestAnimationFrame(animate)
-    integrate(frameIndex, (frameTime - startTime)/1000, 0.0)
     renderer.render(scene, camera)
     
 def animate(timestamp):
@@ -148,7 +113,6 @@ def animate(timestamp):
     frameTime = timestamp   
     if frameTime < endTime:
         requestID = window.requestAnimationFrame(animate)
-        integrate(frameIndex, (frameTime - startTime)/1000, interval/1000)
         renderer.render(scene, camera)
     else:
         terminate()
