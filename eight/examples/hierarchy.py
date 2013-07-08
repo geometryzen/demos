@@ -2,7 +2,7 @@ from eight import *
 from browser import *
 from math import pi, random
 
-useLargeCanvas = False
+useLargeCanvas = True
 
 mouseX = 0
 mouseY = 0
@@ -52,9 +52,8 @@ def onDocumentKeyUp(event):
     
 def onDocumentMouseMove(event):
     global mouseX, mouseY
-    print event.clientX
     mouseX = (event.clientX - windowHalfX) * 10
-    mouseY = (event.clientY - windowHalfXy) * 10                               
+    mouseY = (event.clientY - windowHalfY) * 10                               
 
 def onWindowResize():
     global windowHalfX, windowHalfY
