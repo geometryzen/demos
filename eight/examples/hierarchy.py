@@ -88,10 +88,10 @@ def render():
     camera.position.y += (mouseX - camera.position.y) * 0.05
     camera.lookAt(scene.position)
     
-    currentSeconds = clock()
-    group.rotation.x = sin(currentSeconds * 0.7) * 0.5
-    group.rotation.y = sin(currentSeconds * 0.3) * 0.5
-    group.rotation.z = sin(currentSeconds * 0.2) * 0.5
+#    currentSeconds = clock()
+#    group.rotation.x = sin(currentSeconds * 0.7) * 0.5
+#    group.rotation.y = sin(currentSeconds * 0.3) * 0.5
+#    group.rotation.z = sin(currentSeconds * 0.2) * 0.5
 
 def run():       
     print "Press ESC to terminate."
