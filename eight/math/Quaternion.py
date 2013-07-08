@@ -22,3 +22,10 @@ print "x => " + str(Quaternion().x)
 print "y => " + str(Quaternion().y)
 print "z => " + str(Quaternion().z)
 print "w => " + str(Quaternion().w)
+print "----------"
+print "Assignment"
+print "----------"
+quaternion = Quaternion(0,0,0,0)
+print quaternion
+print str(quaternion)
+print repr(quaternion)
