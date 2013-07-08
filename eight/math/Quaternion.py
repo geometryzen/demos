@@ -111,3 +111,10 @@ for a in qs:
     for b in qs:
         showValue(str(a) + " - " + str(b), a - b)
     print ""
+print "----------"
+print "Multiplication -"
+print "----------"
+for a in qs:
+    for b in qs:
+        showValue(str(a) + " * " + str(b), a * b)
+    print ""
