@@ -1,6 +1,9 @@
 # Quaternion.py
 from eight import *
 
+print "----------"
+print "Construction"
+print "----------"
 quaternion = Quaternion(1,2,3,4)
 print quaternion
 print str(quaternion)
@@ -10,5 +13,8 @@ print "quaternion.y => " + str(quaternion.y)
 print "quaternion.z => " + str(quaternion.z)
 print "quaternion.w => " + str(quaternion.w)
 
+print "----------"
+print "Defaults"
+print "----------"
 print Quaternion()
 print repr(Quaternion())
