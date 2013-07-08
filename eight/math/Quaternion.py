@@ -72,8 +72,8 @@ print repr(target)
 print "----------"
 print "inverse()"
 print "----------"
-source = Quaternion(4, 3, 2, 1)
-print source.inverse()
+print Quaternion(4, 3, 2, 1).inverse()
+print Quaternion(4, 3, 2, 1) * Quaternion(4, 3, 2, 1).inverse()
 print "----------"
 print "length()"
 print "----------"
