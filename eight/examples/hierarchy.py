@@ -28,6 +28,7 @@ camera  = PerspectiveCamera(60, 1.0, 1, 10000)
 camera.position.z = 500
 
 renderer = WebGLRenderer()
+renderer.sortObjects = False
 renderer.setClearColor(0x080808, 1.0)
 
 def escKey(downFlag):
