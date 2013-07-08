@@ -84,3 +84,11 @@ print "clone()"
 print "----------"
 source = Quaternion(4, 3, 2, 1)
 print source.clone()
+print "----------"
+print "operators"
+print "----------"
+one = Quaternion(0, 0, 0, 1)
+i   = Quaternion(1, 0, 0, 0)
+j   = Quaternion(0, 1, 0, 0)
+k   = Quaternion(0, 0, 1, 0)
+qs = [one, i, j, k]
