@@ -58,9 +58,9 @@ target = Quaternion()
 print target.setFromEuler(vector)
 print repr(target)
 print "----------"
-print "setFromAxisAngle(vector) Quaternion"
+print "setFromAxisAngle(axis, angle) Quaternion"
 print "----------"
-vector = Vector3(1.0, 1.0, 1.0).normalize()
+axis = Vector3(1.0, 1.0, 1.0).normalize()
 target = Quaternion()
-print target.setFromAxisAngle(vector, pi/2)
+print target.setFromAxisAngle(axis, pi/2)
 print repr(target)
