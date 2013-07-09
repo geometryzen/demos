@@ -21,6 +21,7 @@ canvas.width = 400
 context = canvas.getContext("2d")
 
 pixelRatio = backingScale(context)
+pixelRatio = 2
 print "backingScale => " + str(pixelRatio)
 # Multiply width and height of canvas by the backing scale.
 # Drawing instructions that refer to points in the coordinate space
