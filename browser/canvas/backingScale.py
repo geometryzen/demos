@@ -98,7 +98,7 @@ def init():
 
 def render():
     context.save()
-    context.rotate(pi/4)
+    context.rotate(pi/4) # Not seeing this do much?
     context.setTransform(1, 0, 0, 1, 0, 0)
     context.fillStyle = "#FF66CC"
     context.strokeStyle = "#808080" 
