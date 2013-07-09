@@ -102,7 +102,7 @@ def render():
     context.setTransform(1, 0, 0, 1, 0, 0)
     context.fillStyle = "#FF66CC"
     context.strokeStyle = "#808080"
-    context.lineWidth = 4
+    context.lineWidth = 2 * pixelRatio
 
     context.clearRect(-200, -200, 400, 400)
 
