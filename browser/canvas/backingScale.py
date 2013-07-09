@@ -102,6 +102,7 @@ def render():
     context.fillStyle = "rgba(255, 102, 207, 1.0)" # "#FF66CC"
     context.strokeStyle = "#808080" # name, rgb or hex
     context.lineWidth = 2 * pixelRatio
+    context.lineCap = "round"
 
     context.clearRect(-200, -200, 400, 400) # erase to transparent(Alpha) black(RGB)
 
@@ -117,7 +118,7 @@ def render():
     context.lineTo(10, 0)
     context.moveTo(0, -10)
     context.lineTo(0, 10)
-    context.fill()
+    context.fill() # lines are treated as the outline of a shape.
     context.rect(0*pixelRatio,0*pixelRatio,100*pixelRatio,100*pixelRatio)
     context.rect(0*pixelRatio,0*pixelRatio,200*pixelRatio,200*pixelRatio)
     context.rect(0*pixelRatio,0*pixelRatio,300*pixelRatio,300*pixelRatio)
