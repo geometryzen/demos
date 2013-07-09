@@ -105,7 +105,10 @@ def render():
     context.beginPath()
     context.moveTo(0, 0)
     context.quadraticCurveTo(ctrlX, ctrlY, canvas.width, canvas.height)
-    context.stroke()
+    context.stroke()zierCurveTo(ctrlX, ctrlY, ctrlXa, ctrlYa, canvas.width, canvas.height)
+    context.beginPath()
+    context.moveTo(0, 0)
+    context.be
     
 def animate(timestamp):
     global requestID, progress, startTime
