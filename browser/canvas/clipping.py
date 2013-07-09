@@ -102,6 +102,7 @@ def drawMask():
 def render():
     context.strokeStyle = "black"
     context.strokeRect(1,1,canvas.width/2,canvas.height/2)
+    drawMask()
 
     
 def animate(timestamp):
