@@ -1,7 +1,7 @@
 # Under Construction
 from eight import *
 from browser import *
-from math import pi
+from math import pi,sqrt
 
 i = Vector3(1,0,0)
 j = Vector3(0,1,0)
