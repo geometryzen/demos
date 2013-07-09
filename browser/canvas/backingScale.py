@@ -117,7 +117,7 @@ def render():
     context.lineTo(0, 10)
     context.fill()
     context.rect(0,0,100,100)
-    context.rect(0,0,200,200)
+    context.rect(0*pixelRatio,0*pixelRatio,200*pixelRatio,200*pixelRatio)
     context.rect(0*pixelRatio,0*pixelRatio,300*pixelRatio,300*pixelRatio)
     context.rect(10*pixelRatio, 10*pixelRatio, 50*pixelRatio, 50*pixelRatio)
 
