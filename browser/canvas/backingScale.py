@@ -27,10 +27,6 @@ print "backingScale => " + str(pixelRatio)
 canvas.height = 400 * pixelRatio
 canvas.width = 400 * pixelRatio
 
-context.save()
-context.restore()
-context.rotate(pi/4)
-
 def escKey(downFlag):
     terminate()
 
@@ -102,6 +98,7 @@ def init():
 
 def render():
     context.save()
+    context.rotate(pi/4)
     context.setTransform(1, 0, 0, 1, 0, 0)
     context.fillStyle = "#FF66CC"
     context.strokeStyle = "#808080" 
