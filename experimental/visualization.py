@@ -51,7 +51,7 @@ yloMesh.useQuaternion = True
 a = k
 b = i
 R = (1 + b * a)/sqrt(2 * (1 + (b << a))[0].w)
-print "R => " + str(R)
+print "R => " + repr(R)
 yloMesh.quaternion.set(0,0,0,1)
 
 print "position   => " + str(bluMesh.position)
