@@ -34,7 +34,7 @@ yloWire = MeshBasicMaterial({"color":0xFFFF00,"wireframe":True, "wireframeLinewi
 redGeom = ArrowGeometry()
 grnGeom = ArrowGeometry()
 bluGeom = ArrowGeometry()
-quarters = 4
+quarters = 2
 yloGeom = CircleGeometry(1, 8 * quarters, 0, pi*quarters/2)
 
 redMesh = Mesh(redGeom, redWire)
@@ -48,8 +48,8 @@ redMesh.lookAt(Vector3(1,0,0))
 grnMesh.lookAt(Vector3(0,1,0))
 grnMesh.visible = True
 yloMesh.useQuaternion = True
-a = k
-b = i
+a = k # from vector
+b = i # to vector
 R = (1 + b * a)/sqrt(2 * (1 + (b << a))[0].w)
 print "R => " + repr(R)
 yloMesh.quaternion.set(R.yz, R.zx, R.xy, R.w)
