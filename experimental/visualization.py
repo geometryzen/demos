@@ -50,7 +50,7 @@ grnMesh.visible = True
 yloMesh.useQuaternion = True
 a = k
 b = i
-R = (1 + b * a)/(1 + b << a)
+R = (1 + b * a)#/(1 + b << a)
 print "R => " + str(R)
 yloMesh.quaternion.set(0,0,0,1)
 
