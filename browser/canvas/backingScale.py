@@ -18,6 +18,8 @@ graph.width = 400
 
 context = graph.getContext("2d")
 
+scale = backingScale(context)
+
 def escKey(downFlag):
     terminate()
 
