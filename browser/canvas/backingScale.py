@@ -100,7 +100,7 @@ def render():
     context.save()
     context.rotate(pi/4) # Not seeing this do much?
     context.setTransform(1, 0, 0, 1, 0, 0)
-    context.fillStyle = "rgba(255, 102, 207, 0.5)"
+    context.fillStyle = "rgba(255, 102, 207, 1.0)" # "#FF66CC"
     context.strokeStyle = "#808080"
     context.lineWidth = 2 * pixelRatio
 
