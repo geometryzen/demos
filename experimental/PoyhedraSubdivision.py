@@ -46,4 +46,4 @@ def subdivide(verts, faces):
 
     return verts, faces
 
-print subdivide(verts, faces)
+subdivide(verts, faces)
