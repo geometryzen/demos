@@ -25,6 +25,7 @@ faces = [
 def subdivide(verts, faces):
     """Subdivide each triangle into four triangles, pushing verts to the unit sphere"""
     triangles = len(faces)
+    print triangles
     for faceIndex in range(triangles):
     
         # Create three new verts at the midpoints of each edge:
