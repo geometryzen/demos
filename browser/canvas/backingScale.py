@@ -26,6 +26,8 @@ print "backingScale => " + str(pixelRatio)
 canvas.height = 400 * pixelRatio
 canvas.width = 400 * pixelRatio
 
+context.save()
+
 def escKey(downFlag):
     terminate()
 
