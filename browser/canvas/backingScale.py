@@ -21,6 +21,7 @@ graph.width = 400
 context = graph.getContext("2d")
 
 scale = backingScale(context)
+print "backingScale => " + str(scale)
 
 def escKey(downFlag):
     terminate()
