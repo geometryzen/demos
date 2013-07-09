@@ -86,15 +86,6 @@ def init():
     onWindowResize()
 
 def render():
-    if moveForward:
-        position.z -= 0.02
-    if moveBackward:
-        position.z += 0.02
-    if moveLeft:
-        position.x -= 0.02
-    if moveRight:
-        position.x += 0.02
-        
     context.setTransform(1, 0, 0, 1, 0, 0)
     context.fillStyle = "#FF66CC"
     context.strokeStyle = "#808080" 
