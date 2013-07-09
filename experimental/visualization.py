@@ -49,7 +49,7 @@ grnMesh.lookAt(Vector3(0,1,0))
 grnMesh.visible = True
 yloMesh.useQuaternion = True
 a = k # from vector
-b = (i + j)/2 # to vector
+b = (k + j)/2 # to vector
 R = (1 + b * a)/(a + b).length()
 print "R => " + repr(R)
 yloMesh.quaternion.set(-R.yz, -R.zx, -R.xy, R.w)
