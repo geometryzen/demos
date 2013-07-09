@@ -108,8 +108,8 @@ def render():
     context.strokeRect(75*pixelRatio, 75*pixelRatio, 50*pixelRatio, 50*pixelRatio)
 
     context.beginPath()
-    context.moveTo(0,30)
-    context.lineTo(0,100)
+    context.moveTo(0*pixelRatio,30*pixelRatio)
+    context.lineTo(0*pixelRatio,100*pixelRatio)
     # center
     context.moveTo(-10, 0)
     context.lineTo(10, 0)
