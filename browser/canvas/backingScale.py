@@ -105,7 +105,7 @@ def render():
 
     context.fillRect(0, 0, 50, 50)
     context.fillRect(100, 100, 50, 50)
-    context.strokeRect(75, 75, 50, 50)
+    context.strokeRect(75*pixelRatio, 75*pixelRatio, 50*pixelRatio, 50*pixelRatio)
 
     context.beginPath()
     context.moveTo(0,30)
