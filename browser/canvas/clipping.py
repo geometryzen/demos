@@ -97,8 +97,7 @@ def init():
 
 def render():
     context.strokeStyle = "black"
-    context.arc(canvas.width/2,canvas.height/2,50,0,2*pi)
-    context.stroke()
+    context.strokeRect(1,1,canvas.width/2,canvas.height/2)
 
     
 def animate(timestamp):
