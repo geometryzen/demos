@@ -49,9 +49,9 @@ grnMesh.lookAt(Vector3(0,1,0))
 grnMesh.visible = True
 yloMesh.useQuaternion = True
 yloMesh.quaternion.set(0,0,0,1)
-print yloMesh.useQuaternion
 
 print "position   => " + str(bluMesh.position)
+print "quaternion => " + str(bluMesh.quaternion)
 print "rotation   => " + str(bluMesh.rotation)
 print "eulerOrder => " + str(bluMesh.eulerOrder)
 print "scale      => " + str(bluMesh.scale)
