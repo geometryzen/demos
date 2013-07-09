@@ -23,3 +23,4 @@ faces = [
     (5, 4, 1) ]
 
 print verts
+print faces
