@@ -36,9 +36,9 @@ def subdivide(verts, faces):
             print vertIndex
             print verts[vertIndex] 
         a,b,c = (Vector3(*verts[vertIndex]) for vertIndex in face)
-        verts.append((a + b).normalized()[:])
-        verts.append((b + c).normalized()[:])
-        verts.append((a + c).normalized()[:])
+#        verts.append((a + b).normalized()[:])
+#        verts.append((b + c).normalized()[:])
+#        verts.append((a + c).normalized()[:])
 
         # Split the current triangle into four smaller triangles:
         i = len(verts) - 3
