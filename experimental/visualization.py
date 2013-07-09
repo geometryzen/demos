@@ -47,6 +47,7 @@ yloMesh = Mesh(yloGeom, yloWire)
 redMesh.lookAt(Vector3(1,0,0))
 grnMesh.lookAt(Vector3(0,1,0))
 grnMesh.visible = True
+yloMesh.useQuaternion = True
 print yloMesh.useQuaternion
 
 print "position   => " + str(bluMesh.position)
