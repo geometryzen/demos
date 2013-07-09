@@ -52,7 +52,7 @@ a = k
 b = i
 R = (1 + b * a)/sqrt(2 * (1 + (b << a))[0].w)
 print "R => " + repr(R)
-yloMesh.quaternion.set(0,0,0,1)
+yloMesh.quaternion.set(R.yz, R.zx, R.xy, R.w)
 
 print "position   => " + str(bluMesh.position)
 print "quaternion => " + str(bluMesh.quaternion)
