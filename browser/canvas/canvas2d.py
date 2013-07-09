@@ -9,7 +9,7 @@ moveBackward = False
 moveLeft = False
 moveRight = False
 
-view = document.getElementById("view")
+#view = document.getElementById("view")
 
 graph = document.createElement("canvas")
 graph.height = 400
