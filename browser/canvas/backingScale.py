@@ -11,7 +11,7 @@ moveRight = False
 def backingScale(context):
     devicePixelRatio = window.devicePixelRatio
     print devicePixelRatio
-    print context.webkitBackingStorePixelRation
+    print context.webkitBackingStorePixelRatio
 
 graph = document.createElement("canvas")
 graph.height = 400
