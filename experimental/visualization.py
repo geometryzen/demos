@@ -48,7 +48,7 @@ redMesh.lookAt(Vector3(1,0,0))
 grnMesh.lookAt(Vector3(0,1,0))
 grnMesh.visible = True
 yloMesh.useQuaternion = True
-a = i # from vector
+a = k # from vector
 b = (i + j)/2 # to vector
 R = (1 + b * a)/(a + b).length()
 print "R => " + repr(R)
