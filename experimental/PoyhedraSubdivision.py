@@ -30,7 +30,6 @@ def subdivide(verts, faces):
     for faceIndex in range(triangles):
         # Create three new verts at the midpoints of each edge:
         face = faces[faceIndex]
-        for vertIndex in face:
 #        a,b,c = (Vector3(*verts[vertIndex]) for vertIndex in face)
 #        verts.append((a + b).normalized()[:])
 #        verts.append((b + c).normalized()[:])
