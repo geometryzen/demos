@@ -1,5 +1,6 @@
 # Supporting High Resolution Displays
 from browser import *
+from math import pi
 
 useLargeCanvas = False
 
@@ -28,6 +29,7 @@ canvas.width = 400 * pixelRatio
 
 context.save()
 context.restore()
+context.rotate(pi/4)
 
 def escKey(downFlag):
     terminate()
