@@ -94,6 +94,10 @@ def init():
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
+    
+def drawMask():
+    context.font = "24pt Helvetica"
+    context.fillText("Triangular Clipping Mask", 20, 180)
 
 def render():
     context.strokeStyle = "black"
