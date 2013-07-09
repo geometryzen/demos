@@ -15,8 +15,6 @@ def backingScale(context):
         return 1
 
 canvas = document.createElement("canvas")
-canvas.height = 400
-canvas.width = 400
 
 context = canvas.getContext("2d")
 
@@ -25,6 +23,8 @@ print "backingScale => " + str(pixelRatio)
 # Multiply width and height of canvas by the backing scale.
 # Drawing instructions that refer to points in the coordinate space
 # must also be multiplied by the backing scale.
+canvas.height = 400 * pixelRatio
+canvas.width = 400 * pixelRatio
 
 def escKey(downFlag):
     terminate()
