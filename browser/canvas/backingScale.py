@@ -118,7 +118,7 @@ def render():
     context.fill()
     context.rect(0,0,100,100)
     context.rect(0,0,200,200)
-    context.rect(0,0,300,300)
+    context.rect(0*pixelRatio,0*pixelRatio,300*pixelRatio,300*pixelRatio)
     context.rect(10*pixelRatio, 10*pixelRatio, 50*pixelRatio, 50*pixelRatio)
 
     context.strokeText("Hello, Canvas", 60, 60)
