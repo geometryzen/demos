@@ -27,6 +27,7 @@ canvas.height = 400 * pixelRatio
 canvas.width = 400 * pixelRatio
 
 context.save()
+context.restore()
 
 def escKey(downFlag):
     terminate()
@@ -98,6 +99,7 @@ def init():
     onWindowResize()
 
 def render():
+    context.save()
     context.setTransform(1, 0, 0, 1, 0, 0)
     context.fillStyle = "#FF66CC"
     context.strokeStyle = "#808080" 
