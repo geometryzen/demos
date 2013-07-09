@@ -1,5 +1,3 @@
-# bezier.py
-# Supporting High Resolution Displays
 from browser import *
 from math import pi
 
