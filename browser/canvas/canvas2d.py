@@ -11,8 +11,6 @@ graph = document.createElement("canvas")
 graph.height = 400
 graph.width = 400
 
-position = Vector3(0,0,0)
-
 context = graph.getContext("2d")
 
 def escKey(downFlag):
