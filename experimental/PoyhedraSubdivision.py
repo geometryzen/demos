@@ -34,7 +34,7 @@ def subdivide(verts, faces):
         for vertIndex in face:
             print vertIndex
             print verts[vertIndex]
-        print verts[vertIndex]) for vertIndex in face    
+        print (verts[vertIndex]) for vertIndex in face    
         a,b,c = (Vector3(*verts[vertIndex]) for vertIndex in face)
         verts.append((a + b).normalized()[:])
         verts.append((b + c).normalized()[:])
