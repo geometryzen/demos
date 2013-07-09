@@ -8,6 +8,10 @@ moveBackward = False
 moveLeft = False
 moveRight = False
 
+def backingScale(context):
+    devicePixelRatio = window.devicePixelRatio
+    print devicePixelRatio
+
 graph = document.createElement("canvas")
 graph.height = 400
 graph.width = 400
