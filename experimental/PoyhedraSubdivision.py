@@ -4,7 +4,7 @@ from math import *
 """Construct an eight-sided polyhedron"""
 f = sqrt(2.0) / 2.0
 
-verts = [ \
+verts = [
     ( 0, -1,  0),
 	(-f,  0,  f),
 	( f,  0,  f),
