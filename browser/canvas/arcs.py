@@ -1,4 +1,3 @@
-# arcs.py
 from browser import *
 from math import pi
 
@@ -97,7 +96,7 @@ def init():
 
 def render():
     context.strokeStyle = "black"
-    context.arc(canvas.width/2,canvas.height/2,50,0,pi/2)
+    context.arc(canvas.width/2,canvas.height/2,50,0,2*pi)
     context.stroke()
 
     
