@@ -1,5 +1,6 @@
 # PoyhedraSubdivision.py
 from math import *
+from eight import *
 	 
 """Construct an eight-sided polyhedron"""
 f = sqrt(2.0) / 2.0
@@ -33,8 +34,7 @@ def subdivide(verts, faces):
         print face
         for vertIndex in face:
             print vertIndex
-            print verts[vertIndex]
-        print ((*verts[vertIndex]) for vertIndex in face)    
+            print verts[vertIndex] 
         a,b,c = (Vector3(*verts[vertIndex]) for vertIndex in face)
         verts.append((a + b).normalized()[:])
         verts.append((b + c).normalized()[:])
