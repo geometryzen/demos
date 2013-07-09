@@ -1,4 +1,3 @@
-# canvas2d.py
 from eight import *
 from browser import *
 
