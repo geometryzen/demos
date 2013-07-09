@@ -10,18 +10,21 @@ moveRight = False
 
 def backingScale(context):
     if window.devicePixelRatio and context.webkitBackingStorePixelRatio:
-        return window.devicePixelRation
+        return window.devicePixelRatio
     else:
         return 1
 
-graph = document.createElement("canvas")
-graph.height = 400
-graph.width = 400
+canvas = document.createElement("canvas")
+canvas.height = 400
+canvas.width = 400
 
-context = graph.getContext("2d")
+context = canvas.getContext("2d")
 
-scale = backingScale(context)
-print "backingScale => " + str(scale)
+pixelRatio = backingScale(context)
+print "backingScale => " + str(pixelRatio)
+# Multiply width and height of canvas by the backing scale.
+# Drawing instructions that refer to points in the coordinate space
+# must also be multiplied by the backing scale.
 
 def escKey(downFlag):
     terminate()
@@ -60,12 +63,12 @@ def onDocumentKeyUp(event):
 
 def onWindowResize():
     if (useLargeCanvas):
-        graph.width = window.innerWidth
-        graph.height = window.innerHeight
+        canvas.width = window.innerWidth * pixelRatio
+        canvas.height = window.innerHeight * pixelRatio
     else:
         container = document.getElementById("canvas-container")
-        graph.width = container.clientWidth
-        graph.height = container.clientHeight
+        canvas.width = container.clientWidth * pixelRatio
+        canvas.height = container.clientHeight * pixelRatio
     
 def discardCanvases():
     for cs in document.getElementsByTagName("canvas"):
@@ -77,14 +80,11 @@ progressEnd = 60000
 startTime =  None
 
 def init():
-    print "Hello!"
-    print "This program demonstrates the use of the HTML5 Canvas and the '2d' context."        
     print "Press ESC to terminate."
     print "This program will 'self-terminate' in "+str(progressEnd/1000)+" seconds!"
-    print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
     discardCanvases()
     if useLargeCanvas:
-        document.body.insertBefore(graph, document.body.firstChild)
+        document.body.insertBefore(canvas, document.body.firstChild)
     else:
         container = document.getElementById("canvas-container")
         container.appendChild(graph)
@@ -146,7 +146,7 @@ def terminate():
     discardCanvases()
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
-    print "Goodbye."
+    print "Done."
 
 init()
 animate(None)
