@@ -96,6 +96,9 @@ def init():
     onWindowResize()
     
 def drawMask():
+    context.beginPath()
+    context,moveTo(canvas.width/2, 0)
+    canvas.lineTo(canvas.width, canvas.height)
     context.font = "24pt Helvetica"
     context.fillText("Triangular Clipping Mask", 20, 180)
 
