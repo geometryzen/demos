@@ -103,7 +103,7 @@ def render():
     context.strokeStyle = "#808080" # name, rgb or hex
     context.lineWidth = 2 * pixelRatio
 
-    context.clearRect(-200, -200, 400, 400)
+    context.clearRect(-200, -200, 400, 400) # erase to transparent(Alpha) black(RGB)
 
     context.fillRect(0*pixelRatio, 0*pixelRatio, 50*pixelRatio, 50*pixelRatio)
     context.fillRect(100*pixelRatio, 100*pixelRatio, 50*pixelRatio, 50*pixelRatio)
