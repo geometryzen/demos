@@ -69,6 +69,9 @@ def onWindowResize():
         container = document.getElementById("canvas-container")
         canvas.width = container.clientWidth * pixelRatio
         canvas.height = container.clientHeight * pixelRatio
+
+    context.strokeStyle = "black"
+    context.strokeRect(1,1,canvas.width/2,canvas.height/2)
     
 def discardCanvases():
     for cs in document.getElementsByTagName("canvas"):
@@ -109,8 +112,6 @@ def drawMask():
     context.fillText("Triangular Clipping Mask", 20, 180)
 
 def render():
-    context.strokeStyle = "black"
-    context.strokeRect(1,1,canvas.width/2,canvas.height/2)
     drawMask()
 
     
