@@ -77,7 +77,7 @@ def discardCanvases():
         
 requestID = None
 progress = None
-progressEnd = 60000
+progressEnd = 10000
 startTime =  None
 
 def init():
