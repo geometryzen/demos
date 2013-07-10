@@ -2,7 +2,7 @@
 from browser import *
 from math import pi
 
-useLargeCanvas = True
+useLargeCanvas = False
 
 moveForward = False
 moveBackward = False
