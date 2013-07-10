@@ -1,4 +1,3 @@
-# Under Construction
 from browser import *
 from math import pi
 
