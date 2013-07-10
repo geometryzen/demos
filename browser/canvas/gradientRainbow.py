@@ -1,4 +1,3 @@
-# Under Construction
 from browser import *
 
 useLargeCanvas = False
