@@ -60,7 +60,7 @@ progressEnd = 10000
 startTime =  None
 step = 0
 steps = 50
-addScale = 1 / steps
+addScale = 1.0 / steps
 
 def init():
     print "Press ESC to terminate."
