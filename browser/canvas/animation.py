@@ -44,6 +44,7 @@ def onWindowResize():
         canvas.width = container.clientWidth * pixelRatio
         canvas.height = container.clientHeight * pixelRatio
 
+    # Changing the canvas width or height resets the canvas.
     context.fillStyle = "blue"
     context.font = "24pt Helvetica"
     context.textAlign = "center"
@@ -57,6 +58,8 @@ requestID = None
 progress = None
 progressEnd = 10000
 startTime =  None
+step = 0
+steps = 50
 
 def init():
     print "Press ESC to terminate."
@@ -76,6 +79,7 @@ def init():
     onWindowResize()
 
 def render():
+    context.clearRect(0,0,canvas.width,canvas.height)
     centerX = (canvas.width/2) * pixelRatio
     centerY = (canvas.height/2) * pixelRatio
     context.fillText("Geometry Zen", centerX, centerY)
