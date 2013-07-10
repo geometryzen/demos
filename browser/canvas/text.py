@@ -98,8 +98,8 @@ def init():
 
 def render():
     context.fillStyle = "blue"
-    context.font = "24pt Helvetica"
-    context.fillText("Hello", 10, 250)
+    context.font = "24pt Arial"
+    context.fillText("Hello", 60, 60)
 
     
 def animate(timestamp):
