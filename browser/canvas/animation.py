@@ -79,10 +79,13 @@ def init():
     onWindowResize()
 
 def render():
-    context.clearRect(0,0,canvas.width,canvas.height)
+    context.clearRect(0, 0, canvas.width, canvas.height)
+    context.save()
+    context.translate(canvas.width/2,canvas.height/2)
     centerX = (canvas.width/2) * pixelRatio
     centerY = (canvas.height/2) * pixelRatio
     context.fillText("Geometry Zen", centerX, centerY)
+    context.restore()
 
     
 def animate(timestamp):
