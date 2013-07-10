@@ -81,7 +81,8 @@ def init():
 
 def render():
     global step
-    step += 1
+    if step < steps:
+        step += 1
     context.clearRect(0, 0, canvas.width, canvas.height)
     context.save()
     context.translate(canvas.width / 2, canvas.height / 2)
