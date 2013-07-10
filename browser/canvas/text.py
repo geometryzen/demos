@@ -29,7 +29,6 @@ canvas.width = 400 * pixelRatio
 #context.textBaseline = "top"
 #context.textAlign = "right"
 context.fillStyle = "blue"
-context.font = "sans-serif"
 context.fillText("Hello", 10, 250)
 
 def escKey(downFlag):
