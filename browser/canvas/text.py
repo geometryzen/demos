@@ -100,7 +100,7 @@ def render():
     context.fillStyle = "blue"
     context.strokeStyle = "blue"
     context.font = "80pt Helvetica"
-    context.fillText("Geometry Zen", 100, 100)
+    context.fillText("Geometry Zen", 10, 100)
 
     
 def animate(timestamp):
