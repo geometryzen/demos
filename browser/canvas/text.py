@@ -16,6 +16,7 @@ def backingScale(context):
         return 1
 
 canvas = document.createElement("canvas")
+canvas.dir = "rtl"
 
 context = canvas.getContext("2d")
 
