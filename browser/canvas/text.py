@@ -95,9 +95,9 @@ def init():
     onWindowResize()
 
 def render():
-    context.strokeStyle = "black"
-    context.arc(canvas.width/2,canvas.height/2,50,0,2*pi)
-    context.stroke()
+    context.fillStyle = "blue"
+    context.font = "24pt Helvetica"
+    context.fillText("Hello", 10, 250)
 
     
 def animate(timestamp):
