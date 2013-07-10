@@ -99,7 +99,7 @@ def init():
 def render():
     context.fillStyle = "blue"
     context.font = "20pt Arial"
-    context.fillText("Hello", 60, 60)
+    context.strokeText("Hello", 60, 60)
 
     
 def animate(timestamp):
