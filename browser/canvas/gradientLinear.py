@@ -44,10 +44,6 @@ def onWindowResize():
         container = document.getElementById("canvas-container")
         canvas.width = container.clientWidth * pixelRatio
         canvas.height = container.clientHeight * pixelRatio
-    grad = context.createLinearGradient(10, 0, 80, 0)
-    grad.addColorStop(0, 'black')
-    grad.addColorStop(1, 'white')
-    context.fillStyle = grad
     
 def discardCanvases():
     for cs in document.getElementsByTagName("canvas"):
@@ -76,6 +72,10 @@ def init():
     onWindowResize()
 
 def render():
+    grad = context.createLinearGradient(10, 0, 80, 0)
+    grad.addColorStop(0, 'black')
+    grad.addColorStop(1, 'white')
+    context.fillStyle = grad
     context.fillRect(10, 10, 100, 100)
     
 def animate(timestamp):
