@@ -97,6 +97,8 @@ def init():
 def render():
     context.fillStyle = "blue"
     context.font = "24pt Helvetica"
+    print context.fillStyle
+    print context.font
     context.fillText("Hello", 10, 250)
 
     
