@@ -97,8 +97,7 @@ def init():
     onWindowResize()
 
 def render():
-    context.fillStyle = "blue"
-    context.strokeStyle = "blue"
+    context.fillStyle = "#080808"
     context.font = "80pt Helvetica"
     context.fillText("Geometry Zen", 10, 100)
 
