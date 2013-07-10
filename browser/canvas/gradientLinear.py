@@ -72,6 +72,8 @@ def init():
     onWindowResize()
 
 def render():
+    # It would clearly be better to create these gradiens once
+    # and cache them. This demo just proves the API.
     grad = context.createLinearGradient(0, 0, 50, 0)
     grad.addColorStop(0, 'black')
     grad.addColorStop(1, 'rgba(255, 255, 255, 0.5)')
