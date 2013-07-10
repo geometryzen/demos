@@ -99,12 +99,15 @@ def init():
     onWindowResize()
     
 def drawMask():
+    # Make a triangle with the top at mid canvas.
     context.beginPath()
-    context.moveTo(canvas.width/2, 0)
+    context.moveTo(canvas.width / 2, 0)
     context.lineTo(canvas.width, canvas.height)
     context.lineTo(0, canvas.height)
     context.closePath()
+    # Make the current path the clipping region.
     context.clip()
+    # Rectangle and text are clipped to the triangle.
     context.fillStyle = "blue"
     context.fillRect(0, 0, canvas.width, canvas.height)
     context.fillStyle = "white"
