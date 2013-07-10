@@ -98,7 +98,7 @@ def init():
 
 def render():
     context.fillStyle = "blue"
-    context.font = "20pt Arial"
+    context.font = "0pt Arial"
     context.strokeText("Hello", 60, 60)
 
     
