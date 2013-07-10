@@ -43,6 +43,11 @@ def onWindowResize():
         container = document.getElementById("canvas-container")
         canvas.width = container.clientWidth * pixelRatio
         canvas.height = container.clientHeight * pixelRatio
+
+    context.fillStyle = "blue"
+    context.font = "24pt Helvetica"
+    context.textAlign = "center"
+    context.textBaseline = "middle"
     
 def discardCanvases():
     for cs in document.getElementsByTagName("canvas"):
@@ -67,11 +72,6 @@ def init():
     document.addEventListener("keyup", onDocumentKeyUp, False)
 
     window.addEventListener("resize", onWindowResize, False)
-
-    context.fillStyle = "blue"
-    context.font = "24pt Helvetica"
-    context.textAlign = "center"
-    context.textBaseline = "middle"
 
     onWindowResize()
 
