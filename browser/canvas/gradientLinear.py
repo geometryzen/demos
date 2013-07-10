@@ -72,11 +72,11 @@ def init():
     onWindowResize()
 
 def render():
-    grad = context.createLinearGradient(10, 0, 80, 0)
+    grad = context.createLinearGradient(0, 0, 50, 0)
     grad.addColorStop(0, 'black')
-    grad.addColorStop(1, 'white')
+    grad.addColorStop(1, 'rgba(255, 255, 255, 0.5)')
     context.fillStyle = grad
-    context.fillRect(10, 10, 100, 100)
+    context.fillRect(0, 0, 75, 75)
     
 def animate(timestamp):
     global requestID, progress, startTime
