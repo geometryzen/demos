@@ -86,7 +86,7 @@ def render():
     context.clearRect(0, 0, canvas.width, canvas.height)
     context.save()
     context.translate(canvas.width / 2, canvas.height / 2)
-    context.scale(addScale * step, addScale * step)
+    #context.scale(addScale * step, addScale * step)
     centerX = (canvas.width/2) * pixelRatio
     centerY = (canvas.height/2) * pixelRatio
     context.fillText("Geometry Zen", centerX, centerY)
