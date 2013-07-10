@@ -99,7 +99,7 @@ def init():
 def render():
     context.strokeStyle = "#080808"
     context.font = "80pt Helvetica"
-    context.strokeText("Geometry Zen", 10, 100, 25)
+    context.strokeText("Geometry Zen", 10, 100, 50)
 
     
 def animate(timestamp):
