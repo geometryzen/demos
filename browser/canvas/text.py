@@ -95,13 +95,11 @@ def init():
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
-    print "fillText"
-    context.fillText("Hello", 10, 10)
 
 def render():
     context.fillStyle = "blue"
-    #context.font = "24pt Helvetica"
-    #context.fillText("Hello", 10, 250)
+    context.font = "24pt Helvetica"
+    context.fillText("Hello", 10, 250)
 
     
 def animate(timestamp):
