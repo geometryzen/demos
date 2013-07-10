@@ -109,7 +109,7 @@ def drawMask():
     context.clip()
     # Rectangle and text are clipped to the triangle.
     context.fillStyle = "blue"
-    context.fillRect(0, 0, canvas.width, canvas.height)
+    context.fillRect(1, 1, canvas.width - 2, canvas.height - 2)
     context.fillStyle = "white"
     context.font = "32pt Helvetica"
     context.textAlign = "center"
