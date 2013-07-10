@@ -71,7 +71,7 @@ def onWindowResize():
         canvas.height = container.clientHeight * pixelRatio
 
     context.strokeStyle = "black"
-    context.strokeRect(1, 1, canvas.width / 2, canvas.height / 2)
+    context.strokeRect(1, 1, canvas.width - 2, canvas.height - 2)
     
 def discardCanvases():
     for cs in document.getElementsByTagName("canvas"):
