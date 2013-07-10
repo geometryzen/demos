@@ -26,12 +26,6 @@ pixelRatio = backingScale(context)
 canvas.height = 400 * pixelRatio
 canvas.width = 400 * pixelRatio
 
-#context.textBaseline = "top"
-#context.textAlign = "right"
-context.fillStyle = "blue"
-context.font = "30px Arial"
-context.fillText("Hello", 10, 250)
-
 def escKey(downFlag):
     terminate()
 
