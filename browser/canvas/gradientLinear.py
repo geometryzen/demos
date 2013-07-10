@@ -87,6 +87,11 @@ def render():
     grad.addColorStop(1, 'rgba(255, 255, 255, 0.5)')
     context.fillStyle = grad
     context.fillRect(150, 0, 75, 75)
+    grad = context.createLinearGradient(275, 50, 225, 0)
+    grad.addColorStop(0, 'black')
+    grad.addColorStop(1, 'rgba(255, 255, 255, 0.5)')
+    context.fillStyle = grad
+    context.fillRect(225, 0, 75, 75)
     
 def animate(timestamp):
     global requestID, progress, startTime
