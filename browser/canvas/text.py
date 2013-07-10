@@ -25,6 +25,10 @@ pixelRatio = backingScale(context)
 canvas.height = 400 * pixelRatio
 canvas.width = 400 * pixelRatio
 
+context.fillStyle = "blue"
+context.font = "24pt Helvetica"
+context.fillText("Hello", 10, 250)
+
 def escKey(downFlag):
     terminate()
 
@@ -96,8 +100,8 @@ def init():
 
 def render():
     context.fillStyle = "blue"
-    context.font = "24pt Helvetica"
-    context.fillText("Hello", 10, 250)
+    #context.font = "24pt Helvetica"
+    #context.fillText("Hello", 10, 250)
 
     
 def animate(timestamp):
