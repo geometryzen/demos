@@ -72,6 +72,7 @@ def init():
     onWindowResize()
 
 def render():
+    grad = context.createLinearGradient(10, 0, 80, 0)
     context.fillRect(10, 10, 100, 100)
     
 def animate(timestamp):
