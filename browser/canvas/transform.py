@@ -69,9 +69,12 @@ def init():
     onWindowResize()
 
 def render():
-    context.fillStyle = "blue"
     context.font = "48pt Helvetica"
+    context.fillStyle = "blue"
     context.fillText("Geometry Zen", 0, 100)
+    context.setTransform(1, 0, 0, -1, 0, 0)
+    context.fillStyle = "red"
+    context.fillText("Geometry Zen", 0, -100)
 
     
 def animate(timestamp):
