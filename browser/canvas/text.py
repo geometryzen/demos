@@ -62,6 +62,7 @@ def onDocumentKeyUp(event):
     keyHandlers[event.keyCode](False)
 
 def onWindowResize():
+    print "resize"
     if (useLargeCanvas):
         canvas.width = window.innerWidth * pixelRatio
         canvas.height = window.innerHeight * pixelRatio
@@ -94,6 +95,7 @@ def init():
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
+    print "fillText"
     context.fillText("Hello", 10, 10)
 
 def render():
