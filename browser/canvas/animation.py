@@ -1,5 +1,6 @@
 # Under Construction
 from browser import *
+from math import pi
 
 useLargeCanvas = False
 
@@ -60,6 +61,7 @@ progressEnd = 10000
 startTime =  None
 step = 0
 steps = 50
+addAngle = 2 * pi / steps
 addScale = 1.0 / steps
 
 def init():
@@ -88,6 +90,7 @@ def render():
     context.save()
     context.translate(canvas.width / 2, canvas.height / 2)
     context.scale(addScale * step, addScale * step)
+    context.rotate(addAngle * step)
     context.fillText("Geometry Zen", 0, 0)
     context.restore()
 
