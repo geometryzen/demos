@@ -94,6 +94,7 @@ def init():
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
+    context.fillText("Hello", 10, 10)
 
 def render():
     context.fillStyle = "blue"
