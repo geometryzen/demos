@@ -101,7 +101,9 @@ def render():
     context.font = "24pt Helvetica"
     context.textAlign = "center"
     context.textBaseline = "middle"
-    context.fillText("Geometry Zen", canvas.width/2, canvas.height/2)
+    centerX = (canvas.width/2) * pixelRatio
+    centerY = (canvas.height/2) * pixelRatio
+    context.fillText("Geometry Zen", centerX, centerY)
 
     
 def animate(timestamp):
