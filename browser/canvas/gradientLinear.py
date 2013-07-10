@@ -73,6 +73,8 @@ def init():
 
 def render():
     grad = context.createLinearGradient(10, 0, 80, 0)
+    grad.addColorStop(0, 'black')
+    grad.addColorStop(1, 'white')
     context.fillStyle = grad
     context.fillRect(10, 10, 100, 100)
     
