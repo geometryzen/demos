@@ -97,9 +97,10 @@ def init():
     onWindowResize()
 
 def render():
-    context.strokeStyle = "#080808"
+    context.fillStyle = "#080808"
     context.font = "80pt Helvetica bold, sans-serif"
-    context.strokeText("Geometry Zen", 10, 100)
+    context.textAlign = "center"
+    context.fillText("Geometry Zen", 10, 100)
 
     
 def animate(timestamp):
