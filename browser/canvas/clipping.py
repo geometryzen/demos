@@ -112,7 +112,9 @@ def drawMask():
     context.fillRect(0, 0, canvas.width, canvas.height)
     context.fillStyle = "white"
     context.font = "24pt Helvetica"
-    context.fillText("Triangular Clipping Mask", 20, 180)
+    context.textAlign = "center"
+    context.textBaseline = "middle"
+    context.fillText("Triangular Clipping Mask", canvas.width / 2, canvas.height / 2)
 
 def render():
     drawMask()
