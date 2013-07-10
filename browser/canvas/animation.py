@@ -67,13 +67,15 @@ def init():
     document.addEventListener("keyup", onDocumentKeyUp, False)
 
     window.addEventListener("resize", onWindowResize, False)
-    onWindowResize()
 
-def render():
     context.fillStyle = "blue"
     context.font = "24pt Helvetica"
     context.textAlign = "center"
     context.textBaseline = "middle"
+
+    onWindowResize()
+
+def render():
     centerX = (canvas.width/2) * pixelRatio
     centerY = (canvas.height/2) * pixelRatio
     context.fillText("Geometry Zen", centerX, centerY)
