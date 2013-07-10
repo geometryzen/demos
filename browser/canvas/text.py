@@ -1,13 +1,6 @@
-# Under Construction
 from browser import *
-from math import pi
 
 useLargeCanvas = False
-
-moveForward = False
-moveBackward = False
-moveLeft = False
-moveRight = False
 
 def backingScale(context):
     if window.devicePixelRatio and context.webkitBackingStorePixelRatio:
@@ -29,28 +22,8 @@ canvas.width = 400 * pixelRatio
 def escKey(downFlag):
     terminate()
 
-def leftArrowKey(downFlag):
-    global moveLeft
-    moveLeft = downFlag
-
-def upArrowKey(downFlag):
-    global moveForward
-    moveForward = downFlag
-    
-def rightArrowKey(downFlag):
-    global moveRight
-    moveRight = downFlag
-
-def downArrowKey(downFlag):
-    global moveBackward
-    moveBackward = downFlag
-
 keyHandlers = {
- 27: escKey,
- 37: leftArrowKey,
- 38: upArrowKey,
- 39: rightArrowKey,
- 40: downArrowKey
+ 27: escKey
 }
     
 def onDocumentKeyDown(event):
