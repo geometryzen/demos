@@ -99,7 +99,7 @@ def init():
 def render():
     context.fillStyle = "#080808"
     context.font = "80pt Helvetica bold, sans-serif"
-    context.textAlign = "center"
+    context.textAlign = "centerXXX"
     context.fillText("Geometry Zen", 10, 100)
 
     
