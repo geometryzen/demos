@@ -70,12 +70,8 @@ def init():
 
 def render():
     context.fillStyle = "blue"
-    context.font = "24pt Helvetica"
-    context.textAlign = "center"
-    context.textBaseline = "middle"
-    centerX = (canvas.width/2) * pixelRatio
-    centerY = (canvas.height/2) * pixelRatio
-    context.fillText("Geometry Zen", centerX, centerY)
+    context.font = "48pt Helvetica"
+    context.fillText("Geometry Zen", 0, 100)
 
     
 def animate(timestamp):
