@@ -1,4 +1,3 @@
-# gradientLinear.py
 from browser import *
 from math import pi
 
