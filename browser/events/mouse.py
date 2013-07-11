@@ -69,9 +69,10 @@ startTime =  None
 
 def init():
     print "Hello!"
-    print "This program demonstrates the use of the mouse."        
+    print "This program demonstrates the use of the HTML5 Canvas and the '2d' context."        
     print "Press ESC to terminate."
     print "This program will 'self-terminate' in "+str(progressEnd/1000)+" seconds!"
+    print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
     discardCanvases()
     if useLargeCanvas:
         document.body.insertBefore(graph, document.body.firstChild)
@@ -86,6 +87,14 @@ def init():
     onWindowResize()
 
 def render():
+    context.strokeStyle = "#808080" 
+
+    context.clearRect(-200, -200, 400, 400)
+
+    context.strokeText("Hello, Canvas", 60, 60)
+
+    context.closePath()
+    context.stroke()
     
 def animate(timestamp):
     global requestID, progress, startTime
