@@ -3,11 +3,6 @@ from browser import *
 
 useLargeCanvas = False
 
-moveForward = False
-moveBackward = False
-moveLeft = False
-moveRight = False
-
 canvas = document.createElement("canvas")
 canvas.height = 400
 canvas.width = 400
@@ -17,37 +12,17 @@ context = canvas.getContext("2d")
 def escKey(downFlag):
     terminate()
 
-def leftArrowKey(downFlag):
-    global moveLeft
-    moveLeft = downFlag
-
-def upArrowKey(downFlag):
-    global moveForward
-    moveForward = downFlag
-    
-def rightArrowKey(downFlag):
-    global moveRight
-    moveRight = downFlag
-
-def downArrowKey(downFlag):
-    global moveBackward
-    moveBackward = downFlag
-
 keyHandlers = {
- 27: escKey,
- 37: leftArrowKey,
- 38: upArrowKey,
- 39: rightArrowKey,
- 40: downArrowKey
+ 27: escKey
 }
     
 def onDocumentKeyDown(event):
-    event.preventDefault()
     keyHandlers[event.keyCode](True)
+    event.preventDefault()
 
 def onDocumentKeyUp(event):
-    event.preventDefault()
     keyHandlers[event.keyCode](False)
+    event.preventDefault()
 
 def onWindowResize():
     if (useLargeCanvas):
