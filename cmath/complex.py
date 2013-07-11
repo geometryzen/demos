@@ -92,10 +92,12 @@ print x
 x /= z1
 print x
 
-#print "----------"
-#print z1 == z1
-#print z1 != z1
-#print z1 == z2
-#print z1 != z2
+print "----------"
+print "Equality"
+print "----------"
+print z1 == z1
+print z1 != z1
+print z1 == z2
+print z1 != z2
 #print "----------"
 #print phase(complex(-1.0, 0.0))
