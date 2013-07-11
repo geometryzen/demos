@@ -29,7 +29,7 @@ two = 2
 i = complex(0, 1)
 zs = [one, two, i, z1, z2]
 print "----------"
-print "Addition +"
+print "Addition (+)"
 print "----------"
 for a in zs:
     for b in zs:
@@ -42,6 +42,21 @@ print x
 x += 1
 print x
 x += z1
+print x
+print "----------"
+print "Subtraction (-)"
+print "----------"
+for a in zs:
+    for b in zs:
+        print str(a) + " - " + str(b) + " => " + str(a-b)
+print "----------"
+print "-="
+print "----------"
+x = complex(0, 0)
+print x
+x -= 1
+print x
+x -= z1
 print x
 
 #print z1 + z2
