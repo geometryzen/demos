@@ -33,7 +33,7 @@ print "Addition"
 print "----------"
 for a in zs:
     for b in zs:
-        print str(a)
+        print str(a) + " + " + str(b) + " => " + str(a+b)
 #print z1 + z2
 #print z1 - z2
 #print z1 * z2
