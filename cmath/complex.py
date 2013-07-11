@@ -73,6 +73,9 @@ x *= 1
 print x
 x *= z1
 print x
+x *= z2
+print x
+
 print "----------"
 print "Division (/)"
 print "----------"
