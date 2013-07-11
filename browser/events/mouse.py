@@ -77,7 +77,7 @@ def init():
         document.body.insertBefore(canvas, document.body.firstChild)
     else:
         container = document.getElementById("canvas-container")
-        container.appendChild(graph)
+        container.appendChild(canvas)
     
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
