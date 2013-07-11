@@ -21,6 +21,7 @@ canvas.width = 400 * pixelRatio
 
 matrix = context.currentTransform
 print matrix
+inverse = matrix.inverse()
 
 def escKey(downFlag):
     terminate()
