@@ -11,18 +11,23 @@ context = canvas.getContext("2d")
 
 def escKey(downFlag):
     terminate()
-
+    
 keyHandlers = {
  27: escKey
 }
     
 def onDocumentKeyDown(event):
-    keyHandlers[event.keyCode](True)
-    event.preventDefault()
+    try:
+        keyHandlers[event.keyCode](True)
+        event.preventDefault()
+    except:
 
 def onDocumentKeyUp(event):
-    keyHandlers[event.keyCode](False)
-    event.preventDefault()
+    try:
+        keyHandlers[event.keyCode](False)
+        event.preventDefault()
+    except:
+
 
 def onWindowResize():
     if (useLargeCanvas):
