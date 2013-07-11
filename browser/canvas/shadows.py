@@ -69,6 +69,8 @@ def init():
     onWindowResize()
 
 def render():
+    context.shadowBlur = 5
+    context.shadowColor = "rgba(127, 127, 127, 0.5)"
     context.font = "48pt Helvetica"
     context.fillStyle = "blue"
     context.fillText("Geometry Zen", 0, 100)
