@@ -5,6 +5,7 @@ print "----------"
 print "construction"
 print "----------"
 z1 = complex(11.0, 7.0)
+print repr(z1)
 print "----------"
 print "properties"
 print "----------"
@@ -15,7 +16,6 @@ print "representations"
 print "----------"
 print z1
 print str(z1)
-print repr(z1)
 print "----------"
 print "type"
 print "----------"
