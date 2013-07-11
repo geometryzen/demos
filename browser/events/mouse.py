@@ -8,11 +8,11 @@ moveBackward = False
 moveLeft = False
 moveRight = False
 
-graph = document.createElement("canvas")
-graph.height = 400
-graph.width = 400
+canvas = document.createElement("canvas")
+canvas.height = 400
+canvas.width = 400
 
-context = graph.getContext("2d")
+context = canvas.getContext("2d")
 
 def escKey(downFlag):
     terminate()
@@ -51,12 +51,12 @@ def onDocumentKeyUp(event):
 
 def onWindowResize():
     if (useLargeCanvas):
-        graph.width = window.innerWidth
-        graph.height = window.innerHeight
+        canvas.width = window.innerWidth
+        canvas.height = window.innerHeight
     else:
         container = document.getElementById("canvas-container")
-        graph.width = container.clientWidth
-        graph.height = container.clientHeight
+        canvas.width = container.clientWidth
+        canvas.height = container.clientHeight
     
 def discardCanvases():
     for cs in document.getElementsByTagName("canvas"):
