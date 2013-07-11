@@ -19,11 +19,6 @@ pixelRatio = backingScale(context)
 canvas.height = 400 * pixelRatio
 canvas.width = 400 * pixelRatio
 
-context.resetTransform()
-matrix = context.currentTransform
-print matrix
-inverse = matrix.inverse()
-
 def escKey(downFlag):
     terminate()
 
@@ -78,8 +73,6 @@ def render():
     context.fillStyle = "blue"
     context.fillText("Geometry Zen", 0, 100)
     context.setTransform(1, 0, 0, -1, 0, 0)
-    #context.resetTransform()
-    #context.transform(1, 0, 0, -1, 0, 0)
     context.fillStyle = "red"
     context.fillText("Geometry Zen", 0, -100)
 
