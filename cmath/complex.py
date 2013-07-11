@@ -67,7 +67,7 @@ for a in zs:
 print "----------"
 print "*="
 print "----------"
-x = complex(0, 0)
+x = complex(1, 0)
 print x
 x *= 1
 print x
