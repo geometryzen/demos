@@ -13,6 +13,9 @@ def onDocumentKeyDown(event):
     if event.keyCode == 27:
         terminate()
 
+def onMouseMove(event):
+    print event
+
 def onWindowResize():
     if (useLargeCanvas):
         canvas.width = window.innerWidth
@@ -44,7 +47,7 @@ def init():
         container.appendChild(canvas)
     
     document.addEventListener("keydown", onDocumentKeyDown, False)
-    #document.addEventListener("keyup", onDocumentKeyUp, False)
+    canvas.addEventListener("mousemove", onMouseMove, False)
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
@@ -76,7 +79,7 @@ def terminate():
     window.cancelAnimationFrame(requestID)
     discardCanvases()
     document.removeEventListener("keydown", onDocumentKeyDown, False)
-    #document.removeEventListener("keyup", onDocumentKeyUp, False)
+    canavs.removeEventListener("mousemove", onMouseMove, False)
     print "Goodbye."
 
 init()
