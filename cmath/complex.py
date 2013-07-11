@@ -73,8 +73,22 @@ x *= 1
 print x
 x *= z1
 print x
+print "----------"
+print "Division (/)"
+print "----------"
+for a in zs:
+    for b in zs:
+        print str(a) + " / " + str(b) + " => " + str(a/b)
+print "----------"
+print "*="
+print "----------"
+x = complex(1, 0)
+print x
+x /= 1
+print x
+x /= z1
+print x
 
-#print z1 / z2
 #print "----------"
 #print z1 == z1
 #print z1 != z1
