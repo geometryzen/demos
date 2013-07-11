@@ -91,10 +91,7 @@ def render():
 
     context.clearRect(-200, -200, 400, 400)
 
-    context.strokeText("Hello, Canvas", 60, 60)
-
-    context.closePath()
-    context.stroke()
+    context.strokeText("Hello, Mouse", 60, 60)
     
 def animate(timestamp):
     global requestID, progress, startTime
