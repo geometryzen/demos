@@ -1,4 +1,3 @@
-# cmath/complex.py
 from cmath import *
 
 print "----------"
