@@ -20,6 +20,7 @@ canvas.height = 400 * pixelRatio
 canvas.width = 400 * pixelRatio
 
 matrix = context.currentTransform
+print matrix
 
 def escKey(downFlag):
     terminate()
