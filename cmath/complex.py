@@ -41,6 +41,8 @@ x = complex(0, 0)
 print x
 x += 1
 print x
+x += z1
+print x
 
 #print z1 + z2
 #print z1 - z2
