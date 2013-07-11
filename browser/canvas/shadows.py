@@ -18,6 +18,7 @@ pixelRatio = backingScale(context)
 # must also be multiplied by the backing scale.
 canvas.height = 400 * pixelRatio
 canvas.width = 400 * pixelRatio
+print context.shadowBlur
 
 def escKey(downFlag):
     terminate()
