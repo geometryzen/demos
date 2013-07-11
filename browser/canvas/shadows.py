@@ -20,6 +20,8 @@ canvas.height = 400 * pixelRatio
 canvas.width = 400 * pixelRatio
 print context.shadowBlur
 print context.shadowColor
+context.shadowOffsetX = 1
+context.shadowOffsetY = 2
 print context.shadowOffsetX
 print context.shadowOffsetY
 
