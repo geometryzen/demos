@@ -8,28 +8,10 @@ canvas.height = 400
 canvas.width = 400
 
 context = canvas.getContext("2d")
-
-def escKey(downFlag):
-    terminate()
-    
-keyHandlers = {
- 27: escKey
-}
     
 def onDocumentKeyDown(event):
-    try:
-        keyHandlers[event.keyCode](True)
-        event.preventDefault()
-    except:
-        print "X"
-        
-def onDocumentKeyUp(event):
-    try:
-        keyHandlers[event.keyCode](False)
-        event.preventDefault()
-    except:
-        print "Y"
-
+    if event.keyCode == 27:
+        terminate()
 
 def onWindowResize():
     if (useLargeCanvas):
@@ -62,7 +44,7 @@ def init():
         container.appendChild(canvas)
     
     document.addEventListener("keydown", onDocumentKeyDown, False)
-    document.addEventListener("keyup", onDocumentKeyUp, False)
+    #document.addEventListener("keyup", onDocumentKeyUp, False)
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
@@ -94,7 +76,7 @@ def terminate():
     window.cancelAnimationFrame(requestID)
     discardCanvases()
     document.removeEventListener("keydown", onDocumentKeyDown, False)
-    document.removeEventListener("keyup", onDocumentKeyUp, False)
+    #document.removeEventListener("keyup", onDocumentKeyUp, False)
     print "Goodbye."
 
 init()
