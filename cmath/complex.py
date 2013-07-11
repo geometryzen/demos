@@ -32,8 +32,8 @@ print "----------"
 print "Addition"
 print "----------"
 for a in zs:
-  for b in zs:
-    print star(a)""
+    for b in zs:
+        print str(a)
 #print z1 + z2
 #print z1 - z2
 #print z1 * z2
