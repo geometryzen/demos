@@ -47,7 +47,7 @@ def init():
         container.appendChild(canvas)
     
     document.addEventListener("keydown", onDocumentKeyDown, False)
-    canvas.addEventListener("mousemove", onMouseMove, False)
+    document.addEventListener("mousemove", onMouseMove, False)
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
@@ -79,7 +79,7 @@ def terminate():
     window.cancelAnimationFrame(requestID)
     discardCanvases()
     document.removeEventListener("keydown", onDocumentKeyDown, False)
-    canavs.removeEventListener("mousemove", onMouseMove, False)
+    document.removeEventListener("mousemove", onMouseMove, False)
     print "Goodbye."
 
 init()
