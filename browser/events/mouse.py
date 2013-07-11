@@ -14,6 +14,8 @@ def onDocumentKeyDown(event):
         terminate()
 
 def onMouseMove(event):
+    print "screenX: " + str(event.screenX)
+    print "screenY: " + str(event.screenY)
     print "clientX: " + str(event.clientX)
     print "clientY: " + str(event.clientY)
 
