@@ -14,7 +14,8 @@ def onDocumentKeyDown(event):
         terminate()
 
 def onMouseMove(event):
-    print event.clientX
+    print "clientX: " + str(event.clientX)
+    print "clientY: " + str(event.clientY)
 
 def onWindowResize():
     if (useLargeCanvas):
