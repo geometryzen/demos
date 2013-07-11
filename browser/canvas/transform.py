@@ -19,6 +19,7 @@ pixelRatio = backingScale(context)
 canvas.height = 400 * pixelRatio
 canvas.width = 400 * pixelRatio
 
+context.resetTransform()
 matrix = context.currentTransform
 print matrix
 inverse = matrix.inverse()
