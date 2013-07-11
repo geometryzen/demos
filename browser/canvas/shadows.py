@@ -69,7 +69,7 @@ def init():
     onWindowResize()
 
 def render():
-    context.shadowBlur = 10
+    context.shadowBlur = 5
     context.shadowColor = "rgba(127, 255, 127, 0.25)"
     context.shadowOffsetX = 5
     context.shadowOffsetY = 5
