@@ -1,4 +1,4 @@
-# events/mouse.py
+# Under Construction
 from browser import *
 
 useLargeCanvas = False
@@ -69,10 +69,9 @@ startTime =  None
 
 def init():
     print "Hello!"
-    print "This program demonstrates the use of the HTML5 Canvas and the '2d' context."        
+    print "This program demonstrates the use of the mouse."        
     print "Press ESC to terminate."
     print "This program will 'self-terminate' in "+str(progressEnd/1000)+" seconds!"
-    print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
     discardCanvases()
     if useLargeCanvas:
         document.body.insertBefore(graph, document.body.firstChild)
@@ -87,34 +86,6 @@ def init():
     onWindowResize()
 
 def render():
-    context.setTransform(1, 0, 0, 1, 0, 0)
-    context.fillStyle = "#FF66CC"
-    context.strokeStyle = "#808080" 
-
-    context.clearRect(-200, -200, 400, 400)
-
-    context.fillRect(0, 0, 50, 50)
-    context.fillRect(100, 100, 50, 50)
-    context.strokeRect(75, 75, 50, 50)
-
-    context.beginPath()
-    context.moveTo(0,30)
-    context.lineTo(0,100)
-    # center
-    context.moveTo(-10, 0)
-    context.lineTo(10, 0)
-    context.moveTo(0, -10)
-    context.lineTo(0, 10)
-    context.fill()
-    context.rect(0,0,100,100)
-    context.rect(0,0,200,200)
-    context.rect(0,0,300,300)
-    context.rect(10, 10, 50, 50)
-
-    context.strokeText("Hello, Canvas", 60, 60)
-
-    context.closePath()
-    context.stroke()
     
 def animate(timestamp):
     global requestID, progress, startTime
