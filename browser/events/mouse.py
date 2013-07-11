@@ -90,7 +90,7 @@ def render():
     context.strokeStyle = "#808080" 
 
     context.clearRect(-200, -200, 400, 400)
-
+    context.font = "40pt Arial"
     context.strokeText("Hello, Mouse", 60, 60)
     
 def animate(timestamp):
