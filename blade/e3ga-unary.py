@@ -1,5 +1,5 @@
 # e3ga-unary.py
-from blade import *
+from eight import *
 
 def Scalar3(w):
     return Euclidean3(w, 0, 0, 0, 0, 0, 0, 0)    
