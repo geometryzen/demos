@@ -71,6 +71,8 @@ def init():
 def render():
     context.shadowBlur = 5
     context.shadowColor = "rgba(127, 127, 127, 0.5)"
+    context.shadowOffsetX = 5
+    context.shadowOffsetY = 5
     context.font = "48pt Helvetica"
     context.fillStyle = "blue"
     context.fillText("Geometry Zen", 0, 100)
