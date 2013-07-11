@@ -21,12 +21,14 @@ def onDocumentKeyDown(event):
         keyHandlers[event.keyCode](True)
         event.preventDefault()
     except:
-
+        print "X"
+        
 def onDocumentKeyUp(event):
     try:
         keyHandlers[event.keyCode](False)
         event.preventDefault()
     except:
+        print "Y"
 
 
 def onWindowResize():
