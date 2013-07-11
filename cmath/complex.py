@@ -34,6 +34,9 @@ print "----------"
 for a in zs:
     for b in zs:
         print str(a) + " + " + str(b) + " => " + str(a+b)
+x = complex(0, 0)
+print x
+
 #print z1 + z2
 #print z1 - z2
 #print z1 * z2
