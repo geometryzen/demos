@@ -13,6 +13,7 @@ screenX = 0
 screenY = 0
 clientX = 0
 clientY = 0
+button = 0
     
 def onDocumentKeyDown(event):
     if event.keyCode == 27:
@@ -24,8 +25,7 @@ def onMouseMove(event):
     screenY = event.screenY
     clientX = event.clientX
     clientY = event.clientY
-    if event.button != 0:
-        print event.button
+    button = event.button
 
 def onWindowResize():
     if (useLargeCanvas):
