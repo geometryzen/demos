@@ -26,7 +26,8 @@ def onMouseMove(event):
     clientX = event.clientX
     clientY = event.clientY
     button = event.button
-    print event.ctrlKey
+    if event.altKey:
+        print "ALT"
 
 def onWindowResize():
     if (useLargeCanvas):
