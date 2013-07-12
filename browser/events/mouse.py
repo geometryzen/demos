@@ -24,7 +24,8 @@ def onMouseMove(event):
     screenY = event.screenY
     clientX = event.clientX
     clientY = event.clientY
-    print event.button
+    if event.button != 1:
+        print event.button
 
 def onWindowResize():
     if (useLargeCanvas):
