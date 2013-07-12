@@ -63,10 +63,6 @@ def init():
 
 def render():
     context.strokeStyle = "#808080" 
-
-    context.clearRect(-200, -200, 400, 400)
-    context.font = "48pt Arial"
-    context.strokeText("Hello, Mouse", clientX, clientY)
     
 def animate(timestamp):
     global requestID, progress, startTime
