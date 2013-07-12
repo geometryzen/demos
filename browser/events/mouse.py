@@ -32,6 +32,11 @@ def onMouseMove(event):
         print "CTRL"
     if event.shiftKey:
         print "SHIFT"
+    event.stopPropagation()
+    event.stopImmediatePropagation()
+    print event.cancelable
+    print event.bubbles
+    print event.defaultPrevented
 
 def onWindowResize():
     if (useLargeCanvas):
