@@ -28,6 +28,10 @@ def onMouseMove(event):
     button = event.button
     if event.altKey:
         print "ALT"
+    if event.ctrlKey:
+        print "CTRL"
+    if event.shiftKey:
+        print "SHIFT"
 
 def onWindowResize():
     if (useLargeCanvas):
