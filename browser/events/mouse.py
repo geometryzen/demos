@@ -8,16 +8,22 @@ canvas.height = 400
 canvas.width = 400
 
 context = canvas.getContext("2d")
+
+screenX = 0
+screenY = 0
+clientX = 0
+clientY = 0
     
 def onDocumentKeyDown(event):
     if event.keyCode == 27:
         terminate()
 
 def onMouseMove(event):
-    print "screenX: " + str(event.screenX)
-    print "screenY: " + str(event.screenY)
-    print "clientX: " + str(event.clientX)
-    print "clientY: " + str(event.clientY)
+    global screenX, screenY, clientX, clientY
+    screenX = event.screenX
+    screenY = event.screenY
+    clientX = event.clientX
+    clientY = event.clientY
 
 def onWindowResize():
     if (useLargeCanvas):
@@ -60,7 +66,7 @@ def render():
 
     context.clearRect(-200, -200, 400, 400)
     context.font = "48pt Arial"
-    context.strokeText("Hello, Mouse", 60, 60)
+    context.strokeText("Hello, Mouse", clientX, clientY)
     
 def animate(timestamp):
     global requestID, progress, startTime
