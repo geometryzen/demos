@@ -32,4 +32,4 @@ showValue("x", x)
 x >>= j
 showValue("x", x)
 showValue("i << I", i << I)
-showValue("I << j", I << j)
+showValue("I >> j", I >> j)
