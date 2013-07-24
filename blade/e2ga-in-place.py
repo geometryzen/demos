@@ -31,5 +31,6 @@ x = I
 showValue("x", x)
 x >>= j
 showValue("x", x)
+I = Euclidean2(0,0,0,1)
 showValue("i << I", i << I)
 showValue("I >> j", I >> j)
