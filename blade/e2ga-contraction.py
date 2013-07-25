@@ -39,9 +39,9 @@ I   = explain(Pseudoscalar(1))
 
 assertEqual(+z, ~z, str(z))
 assertEqual(+u, ~u, str(u))
-assertEqual(-i, ~i, str(i))
-assertEqual(-I, ~I, "0 == 1")
-assertEqual(-I, ~I, "0 == 1")
+assertEqual(+i, ~i, str(i))
+assertEqual(+j, ~j, str(j))
+assertEqual(-I, ~I, str(I))
 
 blades = [z, u, d, i, j, I]
 for a in blades:
