@@ -2,7 +2,7 @@
 # and provides an alternative geometric formulation of the Lorentz force law.
 # It is not a complete pedagogical analysis, only a glimpse of the computations.
 from eight import *
-from math import random, acos, pi, sqrt
+from math import acos, pi, sqrt
 
 def makeCoord(n):
     return n
