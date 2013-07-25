@@ -44,7 +44,9 @@ assertEqual(+j, ~j, str(j))
 assertEqual(-I, ~I, str(I))
 
 blades = [z, u, d, i, j, I]
-for a in blades:
+for A in blades:
     print ""
-    for b in blades:
-        showValue(str(a) + " >> " + str(b), repr(a >> b))
+    for B in blades:
+        M = A << B
+        N = ~((~A) >> (~B)) 
+        assertEqual(M, N, str(M) + "" + str(N))
