@@ -6,7 +6,6 @@ from math import acos, pi, sqrt
 
 def makeCoord(n):
     return n
-    # return random()
 
 # Start with two random vectors a and b:
 a = Vector3(makeCoord(3), makeCoord(5), makeCoord(7))
