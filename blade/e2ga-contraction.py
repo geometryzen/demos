@@ -12,7 +12,6 @@ def assertCloseTo(expect, actual, message):
     if expect != actual:
         print {"expect":expect,"actual":actual,"message":message}
 
-# Convenience functions for creating Blades.
 def Scalar(w):
     return Euclidean2(w, 0, 0, 0)
 
