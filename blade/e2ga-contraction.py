@@ -49,8 +49,6 @@ for A in blades:
     for B in blades:
         M = B >> A
         Ms = str(B) + ">>" + str(A) + "=>"+ str(M)
-        Arev = ~A
-        Brev = ~B
-        N = ~(Arev << Brev)
+        N = ~((~A) << (~B))
         Ns = "~(~" + str(A) + "<<~" + str(B) + ")=>" + str(N)
         assertEqual(M, N, Ms  + " " + Ns)
