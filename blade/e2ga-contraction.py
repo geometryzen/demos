@@ -47,8 +47,8 @@ blades = [z, u, d, i, j, I]
 for A in blades:
     print ""
     for B in blades:
-        M = A << B
+        M = B << A
         Arev = ~A
         Brev = ~B
-        N = ~((~A) >> (~B)) 
+        N = ~(Arev << Brev) 
         assertEqual(M, N, str(A) + " << " + str(B) + " => "+ str(M) + ", S/B ~(" + str(Arev) + " >> " + str(Brev) + ") => " + str(N))
