@@ -37,9 +37,9 @@ i   = explain(Vector(1, 0))
 j   = explain(Vector(0, 1))
 I   = explain(Pseudoscalar(1))
 
-assertEqual(+z, ~z, "0 == 1")
-assertEqual(+u, ~u, "0 == 1")
-assertEqual(-I, ~I, "0 == 1")
+assertEqual(+z, ~z, str(z))
+assertEqual(+u, ~u, str(u))
+assertEqual(-i, ~i, str(i))
 assertEqual(-I, ~I, "0 == 1")
 assertEqual(-I, ~I, "0 == 1")
 
