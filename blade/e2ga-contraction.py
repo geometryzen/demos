@@ -38,6 +38,8 @@ j    = explain(Vector(0, 1))
 I    = explain(Pseudoscalar(1))
 
 assertEqual(zero, ~zero, "0 == 1")
+assertEqual(one, ~one, "0 == 1")
+assertEqual(I, ~I, "0 == 1")
 
 blades = [zero, one, two, i, j, I]
 for a in blades:
