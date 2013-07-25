@@ -30,18 +30,20 @@ def showValue(name, x):
     print name + " => " + str(x)
     return x
 
-zero = explain(Euclidean2(0,0,0,0))
-one  = explain(Scalar(1))
-two  = explain(Scalar(2))
-i    = explain(Vector(1, 0))
-j    = explain(Vector(0, 1))
-I    = explain(Pseudoscalar(1))
+z = explain(Euclidean2(0,0,0,0))
+u = explain(Scalar(1))
+d = explain(Scalar(2))
+i   = explain(Vector(1, 0))
+j   = explain(Vector(0, 1))
+I   = explain(Pseudoscalar(1))
 
-assertEqual(zero, ~zero, "0 == 1")
-assertEqual(one, ~one, "0 == 1")
+assertEqual(+z, ~z, "0 == 1")
+assertEqual(+u, ~u, "0 == 1")
+assertEqual(-I, ~I, "0 == 1")
+assertEqual(-I, ~I, "0 == 1")
 assertEqual(-I, ~I, "0 == 1")
 
-blades = [zero, one, two, i, j, I]
+blades = [z, u, d, i, j, I]
 for a in blades:
     print ""
     for b in blades:
