@@ -35,6 +35,9 @@ assertEqual(+z, ~z, str(z))
 assertEqual(+u, ~u, str(u))
 assertEqual(+i, ~i, str(i))
 assertEqual(+j, ~j, str(j))
+assertEqual(-ij, ~ij, str(I))
+assertEqual(-jk, ~jk, str(I))
+assertEqual(-ki, ~ki, str(I))
 assertEqual(-I, ~I, str(I))
 
 blades = [z, u, d, i, j, k, I]
