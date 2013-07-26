@@ -40,7 +40,7 @@ assertEqual(-jk, ~jk, str(I))
 assertEqual(-ki, ~ki, str(I))
 assertEqual(-I, ~I, str(I))
 
-blades = [z, u, d, i, j, k, I]
+blades = [z, u, d, i, j, k, ij, jk, ki, I]
 for A in blades:
     print ""
     for B in blades:
