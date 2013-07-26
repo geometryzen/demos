@@ -1,4 +1,4 @@
-from e2ga import *
+from eight import *
 import math
 
 def isCloseTo(expected, actual, precision):
