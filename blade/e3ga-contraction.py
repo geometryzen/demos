@@ -12,15 +12,6 @@ def assertCloseTo(expect, actual, message):
     if expect != actual:
         print {"expect":expect,"actual":actual,"message":message}
 
-def Scalar(w):
-    return Euclidean2(w, 0, 0, 0)
-
-def Vector(x, y):
-    return Euclidean2(0, x, y, 0)
-
-def Pseudoscalar(s):
-    return Euclidean2(0, 0, 0, s)
-
 def explain(m):
     print str(m) + " is " + repr(m)
     return m
@@ -29,12 +20,13 @@ def showValue(name, x):
     print name + " => " + str(x)
     return x
 
-z = explain(Euclidean2(0,0,0,0))
-u = explain(Scalar(1))
-d = explain(Scalar(2))
-i   = explain(Vector(1, 0))
-j   = explain(Vector(0, 1))
-I   = explain(Pseudoscalar(1))
+z = explain(Euclidean3(0, 0, 0, 0, 0, 0, 0, 0))
+u = explain(Scalar3(1))
+d = explain(Scalar3(2))
+i   = explain(Vector3(1, 0, 0))
+j   = explain(Vector3(0, 1, 0))
+k   = explain(Vector3(0, 0, 1))
+I   = explain(Pseudoscalar3(1))
 
 assertEqual(+z, ~z, str(z))
 assertEqual(+u, ~u, str(u))
