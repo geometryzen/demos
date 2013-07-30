@@ -1,5 +1,6 @@
 from e2ga import *
-from math import random, floor
+from math import floor
+from random import random
 
 def showValue(name, m):
     print name + " => " + str(m)
