@@ -2,6 +2,7 @@
 from eight import *
 from browser import *
 from math import cos, sin, floor, random
+from time import time
 
 useLargeCanvas = False
 
@@ -103,7 +104,7 @@ def init():
     onWindowResize()
 
 def render():
-    theta = clock() * 0.1
+    theta = time() * 0.1
     
     camera.position.x = cos(theta) * 200
     camera.position.z = sin(theta) * 200
