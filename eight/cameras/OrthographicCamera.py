@@ -1,7 +1,7 @@
 # OrthographicCamera demonstration.
 from eight import *
 from browser import *
-from math import cos, sin, floor, random
+from math import cos, sin, floor
 from time import time
 
 useLargeCanvas = False
