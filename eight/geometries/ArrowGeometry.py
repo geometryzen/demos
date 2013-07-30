@@ -3,7 +3,6 @@
 # of an arrow.
 from eight import *
 from browser import *
-from math import random 
 
 for canvas in document.getElementsByTagName("canvas"):
     canvas.parentNode.removeChild(canvas)
