@@ -1,5 +1,6 @@
 from eight import *
 from math import floor
+from random import random
 
 def showValue(name, m):
     print name + " => " + str(m)
