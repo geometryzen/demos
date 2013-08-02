@@ -55,7 +55,7 @@ def render():
         
     renderer.render(scene, camera)
 
-def onWindowResize(event):
+def onWindowResize():
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
     renderer.size = (window.innerWidth, window.innerHeight)
