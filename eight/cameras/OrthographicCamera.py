@@ -3,6 +3,7 @@ from eight import *
 from browser import *
 from math import cos, sin, floor
 from time import time
+from random import random
 
 useLargeCanvas = False
 
