@@ -40,7 +40,6 @@ progressEnd = 6000
 startTime =  None
 
 def render():
-    print "Rendering"
     mesh.rotation.x = mesh.rotation.x + 0.02
     mesh.rotation.y = mesh.rotation.y + 0.02
     mesh.rotation.z = mesh.rotation.z + 0.02
