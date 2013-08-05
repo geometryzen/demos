@@ -52,7 +52,7 @@ def sierpinski(points, degree, sprite):
                         0.5 * (points[2] + points[1]),
                         0.5 * (points[0] + points[2])],
                    degree-1, sprite)
-def Vector(x, y):
+def Vector2(x, y):
     return Euclidean2(0, x, y, 0)
 
 def main():
