@@ -1,4 +1,3 @@
-# e2ga-reversion.py
 from e2ga import *
 
 # Convenience functions for creating Blades.
