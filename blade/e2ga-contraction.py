@@ -12,15 +12,6 @@ def assertCloseTo(expect, actual, message):
     if expect != actual:
         print {"expect":expect,"actual":actual,"message":message}
 
-def Scalar(w):
-    return Euclidean2(w, 0, 0, 0)
-
-def Vector(x, y):
-    return Euclidean2(0, x, y, 0)
-
-def Pseudoscalar(s):
-    return Euclidean2(0, 0, 0, s)
-
 def explain(m):
     print str(m) + " is " + repr(m)
     return m
