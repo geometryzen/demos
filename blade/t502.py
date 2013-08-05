@@ -1,4 +1,4 @@
-from eight import *
+from e3ga import *
 
 def explain(m):
     print str(m) + " is " + repr(m)
