@@ -1,4 +1,3 @@
-# e2ga-in-place.py
 from e2ga import *
 
 # Convenience functions for creating Blades.
