@@ -1,15 +1,5 @@
 from e2ga import *
 
-# Convenience functions for creating Blades.
-def Scalar2(w):
-    return Euclidean2(w, 0, 0, 0)
-
-def Vector2(x, y):
-    return Euclidean2(0, x, y, 0)
-
-def Pseudoscalar2(s):
-    return Euclidean2(0, 0, 0, s)
-
 def explain(m):
     print str(m) + " is " + repr(m)
     return m
