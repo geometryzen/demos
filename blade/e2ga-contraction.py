@@ -21,11 +21,11 @@ def showValue(name, x):
     return x
 
 z = explain(Euclidean2(0,0,0,0))
-u = explain(Scalar(1))
-d = explain(Scalar(2))
-i   = explain(Vector(1, 0))
-j   = explain(Vector(0, 1))
-I   = explain(Pseudoscalar(1))
+u = explain(Scalar2(1))
+d = explain(Scalar2(2))
+i   = explain(Vector2(1, 0))
+j   = explain(Vector2(0, 1))
+I   = explain(Pseudoscalar2(1))
 
 assertEqual(+z, ~z, str(z))
 assertEqual(+u, ~u, str(u))
