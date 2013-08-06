@@ -1,7 +1,8 @@
 from eight import *
 from browser import *
-from math import pi, random, sin
-from time import clock
+from math import pi, sin
+from random import random
+from time import time
 
 useLargeCanvas = True
 
