@@ -11,7 +11,7 @@ print repr(type(a))
 #
 # It is important to realize that Euclidean3 is mutable.
 # This contrasts to the usual approach of treating mathematical
-# objects as immutable types. The reason for this is that MultiVector3
+# objects as immutable types. The reason for this is that Euclidean3
 # is part of a graphics library that deals with mutable
 # objects for performance.
 a.w = 8
