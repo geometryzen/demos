@@ -1,4 +1,9 @@
 # IterationBroken.py
+x = list("bar")
+for i in x:
+    print i
+
+
 class MyTest:
     def __init__(self,s):
         self.w = list(s)
