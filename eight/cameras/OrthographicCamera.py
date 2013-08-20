@@ -12,6 +12,7 @@ camera = OrthographicCamera(-1, 1, 1, -1, -500, 1000)
 camera.position.x = 200
 camera.position.y = 100
 camera.position.z = 200
+print "camera.eulerOrder      => " + str(camera.eulerOrder)
 print "camera.useQuaternion   => " + str(camera.useQuaternion)
 
 renderer = WebGLRenderer({"antialias": True})
