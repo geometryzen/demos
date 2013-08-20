@@ -13,7 +13,8 @@ camera.position.x = 200
 camera.position.y = 100
 camera.position.z = 200
 print "camera.eulerOrder      => " + str(camera.eulerOrder)
-print "camera.useQuaternion   => " + str(camera.scale)
+print "camera.scale           => " + str(camera.scale)
+print "camera.useQuaternion   => " + str(camera.useQuaternion)
 
 renderer = WebGLRenderer({"antialias": True})
 renderer.setClearColor(Color(0xFFFFFF), 1.0)
