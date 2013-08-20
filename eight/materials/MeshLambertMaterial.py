@@ -41,6 +41,7 @@ print "color: " + str(material.color)
 print "needsUpdate: " + str(material.needsUpdate)
 print "opacity: " + str(material.opacity)
 print "overdraw: " + str(material.overdraw)
+material.skinning = True
 print "skinning: " + str(material.skinning)
 print "transparent: " + str(material.transparent)
 print "visible: " + str(material.visible)
