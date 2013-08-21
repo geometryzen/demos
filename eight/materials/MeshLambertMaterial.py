@@ -43,7 +43,6 @@ print "opacity: " + str(material.opacity)
 print "overdraw: " + str(material.overdraw)
 material.skinning = True
 material.skinning = False
-material.skinning = 6
 print "skinning: " + str(material.skinning)
 print "transparent: " + str(material.transparent)
 print "visible: " + str(material.visible)
