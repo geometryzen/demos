@@ -11,7 +11,6 @@ for canvas in document.getElementsByTagName("canvas"):
     canvas.parentNode.removeChild(canvas)
 
 scene = Scene()
-print "scene.useQuaternion   => " + str(scene.useQuaternion)
 
 camera  = PerspectiveCamera(45, 1.0, 0.1, 1000)
 camera.up.set(0, 0, 1)
