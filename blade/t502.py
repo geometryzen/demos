@@ -18,7 +18,7 @@ k     = Vector3(0, 0, 1)
 ij    = Bivector3(1, 0, 0)
 jk    = Bivector3(0, 1, 0)
 ki    = Bivector3(0, 0, 1)
-I     = Pseudoscalar3(1, 0, 0)
+I     = Pseudoscalar3(1)
 
 blades = [zero, one, two, three, i, j, k, ij, jk, ki, I]
 
