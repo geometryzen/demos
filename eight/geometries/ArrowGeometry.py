@@ -79,6 +79,6 @@ def step(timestamp):
 
 window.addEventListener("resize", onWindowResize, False)
 
-onWindowResize()
+onWindowResize(None)
 
 step(None)
