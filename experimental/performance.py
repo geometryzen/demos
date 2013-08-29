@@ -105,7 +105,7 @@ v = VectorE3(75,75,0)
 mass = 1
 g = VectorE3(0, -9.81, 0)
 
-def F(x,v,t):
+def F(r,v,t):
     return mass * g
 
 def init():       
