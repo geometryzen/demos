@@ -1,5 +1,5 @@
 # Vector3 demonstration.
-from eight import *
+from three import *
 
 a = Vector3(1,1,1)
 
