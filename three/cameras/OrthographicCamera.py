@@ -15,7 +15,6 @@ camera = OrthographicCamera(-1, 1, 1, -1, -500, 1000)
 camera.position.x = 200
 camera.position.y = 100
 camera.position.z = 200
-print "camera.eulerOrder      => " + str(camera.eulerOrder)
 print "str(camera.scale)      => " + str(camera.scale)
 print "repr(camera.scale)     => " + repr(camera.scale)
 
