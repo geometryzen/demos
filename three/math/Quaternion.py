@@ -1,4 +1,4 @@
-from eight import *
+from three import *
 from math import pi
 
 def showValue(name, m):
