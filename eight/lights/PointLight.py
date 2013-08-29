@@ -1,3 +1,5 @@
+# This example is being re-worked.
+# You may experience some issues.
 from eight import *
 from browser import *
 
