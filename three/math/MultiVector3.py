@@ -1,5 +1,5 @@
 # MultiVector3 demonstration of Euclidean 3D Geometric Algebra.
-from eight import *
+from e3ga import *
 
 def explain(m):
     print str(m) + " is " + repr(m)
