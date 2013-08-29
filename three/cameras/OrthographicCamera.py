@@ -1,5 +1,5 @@
 # OrthographicCamera demonstration.
-from eight import *
+from three import *
 from browser import *
 from math import cos, sin, floor
 from time import time
