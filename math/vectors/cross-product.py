@@ -1,7 +1,7 @@
 # This program examines the vector cross-product from a Geometric Algebra perspective
 # and provides an alternative geometric formulation of the Lorentz force law.
 # It is not a complete pedagogical analysis, only a glimpse of the computations.
-from eight import *
+from e3ga import *
 from math import acos, pi, sqrt
 
 def makeCoord(n):
