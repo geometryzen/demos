@@ -21,15 +21,15 @@ def showValue(name, x):
     return x
 
 z = explain(Euclidean3(0, 0, 0, 0, 0, 0, 0, 0))
-u = explain(Scalar3(1))
-d = explain(Scalar3(2))
-i   = explain(Vector3(1, 0, 0))
-j   = explain(Vector3(0, 1, 0))
-k   = explain(Vector3(0, 0, 1))
-ij  = explain(Bivector3(1, 0, 0))
-jk  = explain(Bivector3(0, 1, 0))
+u = explain(ScalarE3(1))
+d = explain(ScalarE3(2))
+i   = explain(VectorE3(1, 0, 0))
+j   = explain(VectorE3(0, 1, 0))
+k   = explain(VectorE3(0, 0, 1))
+ij  = explain(BivectorE3(1, 0, 0))
+jk  = explain(BivectorE3(0, 1, 0))
 ki  = explain(Bivector3(0, 0, 1))
-I   = explain(Pseudoscalar3(1))
+I   = explain(PseudoscalarE3(1))
 
 assertEqual(+z, ~z, str(z))
 assertEqual(+u, ~u, str(u))
