@@ -28,13 +28,13 @@ B = BivectorE3(0,0,0)
 
 # Some more examples of constructing reference multivectors.
 one = Euclidean3(1, 0, 0, 0, 0, 0, 0, 0)
-i = Vector3(1,0,0)
-j = Vector3(0,1,0)
-k = Vector3(0,0,1)
+i = VectorE3(1,0,0)
+j = VectorE3(0,1,0)
+k = VectorE3(0,0,1)
 ij = i ^ j
 jk = Euclidean3(0, 0, 0, 0, 0, 1, 0, 0)
-ki = Bivector3(0, 0, 1)
-I = Pseudoscalar3(1)
+ki = BivectorE3(0, 0, 1)
+I = PseudoscalarE3(1)
 
 # The user-defined force field, F, may depend upon the particle position, velocity and time.
 def F(x,v,t):
