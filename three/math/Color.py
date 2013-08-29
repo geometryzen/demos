@@ -1,5 +1,5 @@
 # Color demonstration.
-from eight import *
+from three import *
 
 color = Color()
 
