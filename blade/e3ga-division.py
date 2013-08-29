@@ -27,7 +27,7 @@ def inverse(M):
 A = Euclidean3(ri(),ri(),ri(),ri(),ri(),ri(),ri(),ri())
 
 showValue("A", A)
-showValue("1/A", Scalar3(1)/A)
+showValue("1/A", ScalarE3(1)/A)
 
 showValue("inverse(A)", inverse(A))
 
