@@ -1,7 +1,4 @@
 # OrthographicCamera demonstration.
-# Aug 29, 2013: THIS IS BEING RE-WORKED TO USE A NEW LIBRARY.
-# IT MAY NOT WORK TEMPORARILY
-# SORRY FOR THE INCONVENIENCE.
 from three import *
 from browser import *
 from math import cos, sin, floor
@@ -15,8 +12,6 @@ camera = OrthographicCamera(-1, 1, 1, -1, -500, 1000)
 camera.position.x = 200
 camera.position.y = 100
 camera.position.z = 200
-print "str(camera.scale)      => " + str(camera.scale)
-print "repr(camera.scale)     => " + repr(camera.scale)
 
 renderer = WebGLRenderer({"antialias": True})
 renderer.setClearColor(Color(0xFFFFFF), 1.0)
