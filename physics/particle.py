@@ -6,7 +6,7 @@
 # TODO: This demonstration contains a lot of boilerplate code that could be put in a library.
 # TODO: A 2D animation may be more appropriate in some cases and provide better graphing.
 # TODO: Move the camera so that the z-axis is up, x-axis towards us and y to the right.
-from eight import *
+from three import *
 from browser import *
 
 # TODO: This could be a particular coordinate system, not just a graphics scene?
