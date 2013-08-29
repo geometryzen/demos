@@ -28,7 +28,7 @@ j   = explain(VectorE3(0, 1, 0))
 k   = explain(VectorE3(0, 0, 1))
 ij  = explain(BivectorE3(1, 0, 0))
 jk  = explain(BivectorE3(0, 1, 0))
-ki  = explain(Bivector3(0, 0, 1))
+ki  = explain(BivectorE3(0, 0, 1))
 I   = explain(PseudoscalarE3(1))
 
 assertEqual(+z, ~z, str(z))
