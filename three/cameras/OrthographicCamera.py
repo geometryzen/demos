@@ -28,7 +28,7 @@ progress = None
 progressEnd = 10000
 startTime = None
 
-def onWindowResize():
+def onWindowResize(event):
     if (useLargeCanvas):
         halfW = window.innerWidth / 2
         halfH = window.innerHeight / 2
@@ -109,7 +109,7 @@ def init():
     scene.add(directionalLight)
 
     window.addEventListener("resize", onWindowResize, False)
-    onWindowResize()
+    onWindowResize(None)
 
 def render():
     theta = time() * 0.1
