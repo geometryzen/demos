@@ -23,7 +23,7 @@ g = VectorE3(0, -9.81, 0)
 
 # Charge, Electric Field, and Magnetic Field as an bivector (no "dishonest" axial vectors, Thank You).
 e = ScalarE3(1)
-E = VectorE3()
+E = VectorE3(0,0,0)
 B = BivectorE3(0,0,0)
 
 # Some more examples of constructing reference multivectors.
