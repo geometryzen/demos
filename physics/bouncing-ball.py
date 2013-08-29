@@ -33,11 +33,11 @@ camera.position.set(LENGTH * 2.0, LENGTH * 2.0, LENGTH * 1.0)
 camera.lookAt(scene.position)
 
 # Initialize the system configuration.
-r = Vector3(0, 0, LENGTH)
-v = Vector3(0,0,0)
+r = VectorE3(0, 0, LENGTH)
+v = VectorE3(0,0,0)
 m = 1
-g = Vector3(0, 0, -9.81)
-k = Vector3(0,0,1)
+g = VectorE3(0, 0, -9.81)
+k = VectorE3(0,0,1)
 
 # The user-defined force field, F, may depend upon the particle position, velocity and time.
 def F(r,v,t):
