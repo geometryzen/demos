@@ -1,4 +1,5 @@
-# Single particle subject to a force. 
+# Single particle subject to a force.
+from e3ga import *
 from three import *
 from browser import *
 
@@ -100,9 +101,9 @@ frameTime = None
 endTime = None
 
 particle.position = Vector3(-400,0,0)
-v = Vector3(75,75,0)
+v = VectorE3(75,75,0)
 mass = 1
-g = Vector3(0, -9.81, 0)
+g = VectorE3(0, -9.81, 0)
 
 def F(x,v,t):
     return mass * g
