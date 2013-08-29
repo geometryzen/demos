@@ -56,7 +56,7 @@ startTime = None
 movement = Vector3(0.02, 0.02, 0.02)
 
 def render():
-    mesh.rotation.add(movement)
+    mesh.rotation += movement
         
     renderer.render(scene, camera)
 
