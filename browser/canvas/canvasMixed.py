@@ -1,4 +1,4 @@
-from eight import *
+from three import *
 from browser import *
 
 useLargeCanvas = False
