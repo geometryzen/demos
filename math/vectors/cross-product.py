@@ -49,7 +49,7 @@ print "i, j and k are actually multivectors under the covers!"
 print "repr(i) => " + repr(i)
 print "repr(j) => " + repr(j)
 print "repr(k) => " + repr(k)
-I = Pseudoscalar3(1)
+I = PseudoscalarE3(1)
 print "Pseudoscalar3(1) => " + str(I)
 print "repr(Pseudoscalar3(1)) => " + repr(I)
 print "ijk => " + str(i * j * k)
