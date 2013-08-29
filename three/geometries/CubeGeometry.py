@@ -1,4 +1,5 @@
 # CubeGeometry demonstration.
+from e3ga import *
 from three import *
 from browser import *
 from math import pi
@@ -42,7 +43,7 @@ requestID = None
 progress = None
 progressEnd = 10000
 startTime =  None
-movement = 0.02 * Vector3(1, 1, 1)
+movement = 0.02 * VectorE3(1, 1, 1)
 
 def render():
     mesh.rotation.add(movement)
