@@ -51,7 +51,6 @@ yloMesh.position = Vector3(0,1,1)
 
 print "position   => " + str(bluMesh.position)
 print "rotation   => " + str(bluMesh.rotation)
-print "eulerOrder => " + str(bluMesh.eulerOrder)
 print "scale      => " + str(bluMesh.scale)
 print "visible    => " + str(bluMesh.visible)
 
