@@ -16,7 +16,8 @@ camera.position.x = 200
 camera.position.y = 100
 camera.position.z = 200
 print "camera.eulerOrder      => " + str(camera.eulerOrder)
-print "camera.scale           => " + str(camera.scale)
+print "str(camera.scale)      => " + str(camera.scale)
+print "repr(camera.scale)     => " + repr(camera.scale)
 
 renderer = WebGLRenderer({"antialias": True})
 renderer.setClearColor(Color(0xFFFFFF), 1.0)
