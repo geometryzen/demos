@@ -8,8 +8,8 @@ def makeCoord(n):
     return n
 
 # Start with two random vectors a and b:
-a = Vector3(makeCoord(3), makeCoord(5), makeCoord(7))
-b = Vector3(makeCoord(2), makeCoord(4), makeCoord(6))
+a = VectorE3(makeCoord(3), makeCoord(5), makeCoord(7))
+b = VectorE3(makeCoord(2), makeCoord(4), makeCoord(6))
 
 print "a => " + str(a)
 print "b => " + str(b)
