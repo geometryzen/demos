@@ -1,4 +1,7 @@
 # OrthographicCamera demonstration.
+# Aug 29, 2013: THIS IS BEING RE-WORKED TO USE A NEW LIBRARY.
+# IT MAY NOT WORK TEMPORARILY
+# SORRY FOR THE INCONVENIENCE.
 from three import *
 from browser import *
 from math import cos, sin, floor
