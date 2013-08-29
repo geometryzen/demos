@@ -129,7 +129,7 @@ def init():
 def render(n, t, dt):
     global v
     
-    a = F(particle.position, v, t) * (1.0/mass)
+    a = F(particle.position, v, t) / mass
     v = v + a * dt
     particle.position = particle.position + v * dt
     
