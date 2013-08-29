@@ -27,6 +27,8 @@ zxPlane.position.set(500, 0, 500)
 scene.add(zxPlane)
 
 # Initialize the system configuration.
+# TODO: The three module no longer supports custom properties.
+# Look to the upcoming visual module.
 particle.position = Vector3(0, 0, 0)
 particle.velocity = Vector3(25,75,75)
 particle.mass = 10
