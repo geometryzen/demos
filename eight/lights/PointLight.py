@@ -1,6 +1,6 @@
 # This example is being re-worked.
 # You may experience some issues.
-from eight import *
+from three import *
 from browser import *
 
 for canvas in document.getElementsByTagName("canvas"):
