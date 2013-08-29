@@ -8,29 +8,13 @@ print repr(a)
 print str(type(a))
 print repr(type(a))
 
-#
-# It is important to realize that Euclidean3 is mutable.
-# This contrasts to the usual approach of treating mathematical
-# objects as immutable types. The reason for this is that Euclidean3
-# is part of a graphics library that deals with mutable
-# objects for performance.
-a.w = 8
 a.x = 7
 a.y = 6
 a.z = 5
-a.xy = 4
-a.yz = 3
-a.zx = 2
-a.xyz = 1
 print a
-print "a.w   => " + str(a.w)
 print "a.x   => " + str(a.x)
 print "a.y   => " + str(a.y)
 print "a.z   => " + str(a.z)
-print "a.xy  => " + str(a.xy)
-print "a.yz  => " + str(a.yz)
-print "a.zx  => " + str(a.zx)
-print "a.xyz => " + str(a.xyz)
 
 # The string value of the zero vector is just "0"
 print "str(Vector3(0,0,0)) => " + str(Vector3(0,0,0))
