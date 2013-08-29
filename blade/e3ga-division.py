@@ -1,4 +1,4 @@
-from eight import *
+from e3ga import *
 from math import floor
 from random import random
 
