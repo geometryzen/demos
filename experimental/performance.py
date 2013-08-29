@@ -131,7 +131,8 @@ def render(n, t, dt):
     
     a = F(particle.position, v, t) / mass
     v = v + a * dt
-    particle.position = particle.position + v * dt
+    dr = v * dt
+    particle.position = particle.position + Vector3(dr.x, dr.y, dr.z)
     
     if moveForward:
         camera.position.z -= 10
