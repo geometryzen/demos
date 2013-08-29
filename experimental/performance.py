@@ -1,5 +1,5 @@
 # Single particle subject to a force. 
-from eight import *
+from three import *
 from browser import *
 
 useLargeCanvas = False
