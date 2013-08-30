@@ -23,4 +23,7 @@ print mass
 # TODO: Got a bit of a bug here.
 # Check the newton.
 print newton
+# That looks OK.
+
+# Maybe it's the power stuff.
 
