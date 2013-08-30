@@ -25,5 +25,6 @@ print mass
 print newton
 # That looks OK.
 
-# Maybe it's the power stuff.
+# Maybe it's the power stuff...
+# To be continued.
 
