@@ -18,3 +18,5 @@ print length
 
 mass = (h * c / G) ** 0.5
 
+print mass
+
