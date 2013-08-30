@@ -1,6 +1,6 @@
 from units import *
 
-c = 3e8 * meter / second ** 2
+c = 3e+8 * meter / second ** 2
 
 print c
 
