@@ -16,3 +16,5 @@ length = (h * G / c ** 3) ** 0.5
 
 print length
 
+mass = (h * c / G) ** 0.5
+
