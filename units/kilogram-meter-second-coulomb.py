@@ -10,4 +10,4 @@ print second
 print repr(second)
 
 # TODO: Support for coulomb and the "electrodynamic" units.
-print coulomb
+# print coulomb
