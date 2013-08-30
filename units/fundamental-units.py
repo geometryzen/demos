@@ -20,3 +20,7 @@ mass = (h * c / G) ** 0.5
 
 print mass
 
+# TODO: Got a bit of a bug here.
+# Check the newton.
+print newton
+
