@@ -1,5 +1,5 @@
 import json
 
-x = json.loads('{"name":"David"}')
+x = json.loads('{"name":"David", "height":1.8542}')
 
 print x
