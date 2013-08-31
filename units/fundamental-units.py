@@ -8,7 +8,7 @@ h = 6.6e-34 * joule * second
 print "Planck's constant, h=" + str(h)
 
 G = 6.7e-11 * newton * (meter ** 2) / (kilogram ** 2)
-print "G=" + str(G)
+print "Universal gravitational constant, G=" + str(G)
 
 print ""
 lp = (h * G / c ** 3) ** 0.5
