@@ -16,6 +16,9 @@ print "Planck length=" + str(lp)
 mp = (h * c / G) ** 0.5
 print "Planck mass=" + str(mp)
 
+tp = (h * G / c ** 5) ** 0.5
+print "Planck time=" + str(tp)
+
 # TODO: Got a bit of a bug here.
 # Check the newton.
 print newton
