@@ -1,7 +1,7 @@
 from e3ga import *
 from units import kilogram, meter, second, newton, joule, watt, coulomb
 
-print coulomb
+print kilogram
 
 us = [kilogram, meter, second]
  
