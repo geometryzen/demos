@@ -1,6 +1,6 @@
 import json
 
-def replacer():
+def replacer(key, value):
     return "pqr"
 
 x = json.parse('{"name":"David", "height":1.8542, "favorite":6, "male":true, "religion":null}')
