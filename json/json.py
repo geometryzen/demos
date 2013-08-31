@@ -11,3 +11,7 @@ print x['favorite']
 print type(x['favorite'])
 
 print json.stringify(x)
+
+x = json.parse['["David",1.8542,true,null]']
+
+print x
