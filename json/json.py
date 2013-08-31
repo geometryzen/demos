@@ -9,3 +9,5 @@ print x['height']
 print type(x['height'])
 print x['favorite']
 print type(x['favorite'])
+
+print json.stringify(x)
