@@ -5,6 +5,8 @@ def replacer(key, value):
     print "val:" + repr(value)
     if key == '':
         return value
+    elif key == 'height':
+        return value * 2
     else:
         return "pqr"
 
