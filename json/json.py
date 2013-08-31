@@ -10,7 +10,7 @@ def replacer(key, value):
     if key == '':
         return value
     elif key == 'height':
-        return value * 2
+        return value * 100
     elif key == 'favorite':
         return None
     else:
