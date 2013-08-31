@@ -1,10 +1,11 @@
 import json
 
-def ugly():
+def givesNone():
     return
 
-print "ugly() => " + str(ugly())
+print "givesNone() => " + str(givesNone())
 
+# Note: It's not possible to return 'undefined' and drop an attribute.
 def replacer(key, value):
     if key == '':
         return value
