@@ -12,6 +12,7 @@ print type(x['favorite'])
 
 print json.stringify(x)
 
+# This gives a TypeError 'function' does not support indexing
 x = json.parse['["David"]']
 
 print x
