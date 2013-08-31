@@ -6,3 +6,4 @@ print x
 print x['name']
 print repr(x["name"])
 print x['height']
+print type(x['height'])
