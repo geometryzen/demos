@@ -6,7 +6,7 @@ def replacer(key, value):
     elif key == 'height':
         return value * 2
     else:
-        return "pqr"
+        return None
 
 x = json.parse('{"name":"David", "height":1.8542, "favorite":6, "male":true, "religion":null}')
 
