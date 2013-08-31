@@ -13,8 +13,6 @@ print "G=" + str(G)
 lp = (h * G / c ** 3) ** 0.5
 print "Planck Length=" + str(lp)
 
-print planckL
-
 mass = (h * c / G) ** 0.5
 
 print mass
