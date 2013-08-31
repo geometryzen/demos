@@ -20,3 +20,6 @@ print repr(joule)
 
 print watt
 print repr(watt)
+
+print ampere
+print repr(ampere)
