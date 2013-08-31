@@ -8,7 +8,7 @@ print c
 h = 6.6e-34 * joule * second
 
 print h
-print repr(h)
+print "h: " + repr(h)
 
 G = 6.7e-11 * newton * (meter ** 2) / (kilogram ** 2)
 
