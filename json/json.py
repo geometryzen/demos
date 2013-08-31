@@ -11,7 +11,7 @@ print type(x['height'])
 print x['favorite']
 print type(x['favorite'])
 
-print json.stringify(x)
+print json.stringify(x, None, 2)
 
 # This gives a TypeError 'function' does not support indexing
 #x = json.parse['["David"]']
