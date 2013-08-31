@@ -1,1 +1,3 @@
-# json/json.py
+import json
+
+json.foo()
