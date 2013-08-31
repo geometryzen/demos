@@ -7,13 +7,8 @@ print "c=" + str(c)
 h = 6.6e-34 * joule * second
 print "h=" + str(h)
 
-print h
-print "h: " + repr(h)
-
 G = 6.7e-11 * newton * (meter ** 2) / (kilogram ** 2)
-
-print G
-print "G: " + repr(G)
+print "G=" + str(G)
 
 print repr((h * G / c ** 3))
 planckL = (h * G / c ** 3) ** 0.5
