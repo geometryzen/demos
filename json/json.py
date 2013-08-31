@@ -1,9 +1,9 @@
 import json
 
-def givesNone():
-    return
+#def givesNone():
+#    return
 
-print "givesNone() => " + str(givesNone())
+#print "givesNone() => " + str(givesNone())
 
 # Note: It's not possible to return 'undefined' and drop an attribute.
 def replacer(key, value):
