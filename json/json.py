@@ -23,7 +23,7 @@ print type(replacer)
 print json.stringify(x)
 print json.stringify(x, None)
 print json.stringify(x, None, 5)
-print json.stringify(x, replacer, 5)
+#print json.stringify(x, replacer, 5)
 
 # This gives a TypeError 'function' does not support indexing
 #x = json.parse['["David"]']
