@@ -3,6 +3,7 @@ import json
 x = json.parse('{"name":"David", "height":1.8542, "favorite":6, "male":true, "religion":null}')
 
 print x
+print type(x)
 print x['name']
 print repr(x["name"])
 print x['height']
