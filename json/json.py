@@ -13,7 +13,7 @@ def replacer(key, value):
     elif key == 'favorite':
         return None
     else:
-        return
+        return None
 
 x = json.parse('{"name":"David", "height":1.8542, "favorite":6, "male":true, "religion":null}')
 
