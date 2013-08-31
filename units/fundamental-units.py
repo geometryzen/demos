@@ -11,10 +11,10 @@ G = 6.7e-11 * newton * (meter ** 2) / (kilogram ** 2)
 print "G=" + str(G)
 
 lp = (h * G / c ** 3) ** 0.5
-print "Planck length=" + str(lp)
+print "Planck length: " + str(lp)
 
 mp = (h * c / G) ** 0.5
-print "Planck mass=" + str(mp)
+print "Planck mass:   " + str(mp)
 
 tp = (h * G / c ** 5) ** 0.5
-print "Planck time=" + str(tp)
+print "Planck time:   " + str(tp)
