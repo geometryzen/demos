@@ -23,3 +23,9 @@ print repr(watt)
 
 print ampere
 print repr(ampere)
+
+print volt
+print repr(volt)
+
+print tesla
+print repr(tesla)
