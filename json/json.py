@@ -16,7 +16,7 @@ def replacer(key, value):
     else:
         return None
 
-x = json.parse('{"name":"David", "height":1.8542, "favorite":6, "male":true, "religion":null}')
+#x = json.parse('{"name":"David", "height":1.8542, "favorite":6, "male":true, "religion":null}')
 
 #print type(replacer)
 
