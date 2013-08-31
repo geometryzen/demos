@@ -12,20 +12,14 @@ print repr(second)
 print coulomb
 print repr(coulomb)
 
-print newton
-print repr(newton)
+print "N = newton " +str(newton)
 
-print joule
-print repr(joule)
+print "J = joule " +str(joule)
 
-print watt
-print repr(watt)
+print "W = watt " +str(watt)
 
-print ampere
-print repr(ampere)
+print "A = ampere " +str(ampere)
 
 print "V = volt " +str(volt)
-print repr(volt)
 
 print "T = tesla " +str(tesla)
-print repr(tesla)
