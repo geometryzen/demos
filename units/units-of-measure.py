@@ -1,5 +1,5 @@
 from e3ga import *
-from units import kilogram, meter, second, newton, joule, watt, coulomb
+from units import kilogram, meter, second, newton, joule, watt
 
 print kilogram
 
