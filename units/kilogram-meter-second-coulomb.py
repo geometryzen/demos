@@ -27,5 +27,5 @@ print repr(ampere)
 print volt
 print repr(volt)
 
-print tesla
+print "T = tesla " +str(tesla)
 print repr(tesla)
