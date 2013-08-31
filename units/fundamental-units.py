@@ -18,12 +18,3 @@ print "Planck mass=" + str(mp)
 
 tp = (h * G / c ** 5) ** 0.5
 print "Planck time=" + str(tp)
-
-# TODO: Got a bit of a bug here.
-# Check the newton.
-print newton
-# That looks OK.
-
-# Maybe it's the power stuff...
-# To be continued.
-
