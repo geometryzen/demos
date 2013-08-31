@@ -7,3 +7,5 @@ print x['name']
 print repr(x["name"])
 print x['height']
 print type(x['height'])
+print x['favorite']
+print type(x['favorite'])
