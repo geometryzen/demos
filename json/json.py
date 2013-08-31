@@ -1,8 +1,6 @@
 import json
 
 def replacer(key, value):
-    print "key: " + repr(key)
-    print "val:" + repr(value)
     if key == '':
         return value
     elif key == 'height':
