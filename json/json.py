@@ -1,10 +1,5 @@
 import json
 
-def givesNone():
-    return
-
-print "givesNone() => " + str(givesNone())
-
 # Note: It's not possible to return 'undefined' and drop an attribute.
 def replacer(key, value):
     if key == '':
@@ -24,4 +19,4 @@ print json.stringify(x, None, 5)
 print json.stringify(x, replacer, 5)
 
 # This gives a TypeError 'function' does not support indexing
-#x = json.parse['["David"]']
+x = json.parse['["David"]']
