@@ -11,3 +11,6 @@ print repr(second)
 
 print coulomb
 print repr(coulomb)
+
+print newton
+print repr(newton)
