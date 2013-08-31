@@ -1,3 +1,3 @@
 import json
 
-json.foo()
+x = json.loads("{"name":"David"}")
