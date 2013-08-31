@@ -1,8 +1,8 @@
 from units import *
 
-print "kg = kilogram " +str(kilogram)
+print "kg = kilogram (" +str(kilogram) + ")"
 
-print "m = meter " +str(meter)
+print "m = meter (" +str(meter) + ")"
 
 print "s = second " +str(second)
 
