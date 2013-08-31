@@ -1,6 +1,6 @@
 import json
 
-x = json.loads('{"name":"David", "height":1.8542, "favorite":6, "male":true}')
+x = json.loads('{"name":"David", "height":1.8542, "favorite":6, "male":true, "religion":null}')
 
 print x
 print x['name']
