@@ -1,9 +1,5 @@
 from e3ga import *
-from units import kilogram, meter, second, newton, joule, watt
-
-print kilogram
-
-us = [kilogram, meter, second]
+from units import *
  
 m = ScalarE3(10) * kilogram
  
