@@ -5,6 +5,8 @@ def replacer(key, value):
         return value
     elif key == 'height':
         return value * 2
+    elif key == 'favorite':
+        return None
     else:
         return None
 
