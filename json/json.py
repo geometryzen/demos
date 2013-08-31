@@ -1,5 +1,10 @@
 import json
 
+def ugly():
+    return
+
+print "ugly() => " + str(ugly())
+
 def replacer(key, value):
     if key == '':
         return value
