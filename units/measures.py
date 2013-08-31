@@ -1,6 +1,6 @@
 from units import *
 
-print "meter => " + str(5 * meter)
+print "meter => " + str(meter)
 # TODO: Addition of units
 print "meter + meter => " + str(meter + meter)
 print "meter * meter => " + str(meter * meter)
