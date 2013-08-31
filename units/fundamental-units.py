@@ -10,6 +10,7 @@ print "h=" + str(h)
 G = 6.7e-11 * newton * (meter ** 2) / (kilogram ** 2)
 print "G=" + str(G)
 
+print ""
 lp = (h * G / c ** 3) ** 0.5
 print "Planck length: " + str(lp)
 
