@@ -24,7 +24,8 @@ print repr(watt)
 print ampere
 print repr(ampere)
 
-print volt
+print "V = volt " +str(volt)
 print repr(volt)
 
 print "T = tesla " +str(tesla)
+print repr(tesla)
