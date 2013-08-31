@@ -1,7 +1,7 @@
 import json
 
 def replacer(key, value):
-    print "key: " + str(key)
+    print "key: " + repr(key)
     print "val:" + str(value)
     return "pqr"
 
