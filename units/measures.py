@@ -1,2 +1,2 @@
 from units import *
-print meter
+print "meter: " + str(meter)
