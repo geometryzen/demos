@@ -4,18 +4,18 @@ print "kg = kilogram (" +str(kilogram) + ")"
 
 print "m = meter (" +str(meter) + ")"
 
-print "s = second " +str(second)
+print "s = second (" +str(second) + ")"
 
-print "C = coulomb " +str(coulomb)
+print "C = coulomb (" +str(coulomb) + ")"
 
-print "N = newton " +str(newton)
+print "N = newton (" +str(newton) + ")"
 
-print "J = joule " +str(joule)
+print "J = joule (" +str(joule) + ")"
 
-print "W = watt " +str(watt)
+print "W = watt (" +str(watt) + ")"
 
-print "A = ampere " +str(ampere)
+print "A = ampere (" +str(ampere) + ")"
 
-print "V = volt " +str(volt)
+print "V = volt (" +str(volt) + ")"
 
-print "T = tesla " +str(tesla)
+print "T = tesla (" +str(tesla) + ")"
