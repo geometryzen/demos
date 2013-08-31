@@ -1,7 +1,7 @@
 from units import *
 
 # Construct the Plank units for Length, Mass and Time.
-c = 3e+8 * meter / second ** 2
+c = 3e+8 * meter / second
 
 print c
 print "c: " + repr(c)
