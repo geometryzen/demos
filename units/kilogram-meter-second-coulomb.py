@@ -1,16 +1,12 @@
 from units import *
 
-print kilogram
-print repr(kilogram)
+print "kg = kilogram " +str(kg)
 
-print meter
-print repr(meter)
+print "m = meter " +str(meter)
 
-print second
-print repr(second)
+print "s = second " +str(second)
 
-print coulomb
-print repr(coulomb)
+print "C = coulomb " +str(coulomb)
 
 print "N = newton " +str(newton)
 
