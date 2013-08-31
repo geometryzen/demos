@@ -14,3 +14,6 @@ print repr(coulomb)
 
 print newton
 print repr(newton)
+
+print joule
+print repr(joule)
