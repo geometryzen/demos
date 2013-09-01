@@ -13,10 +13,7 @@ scene = world()
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.set(2, 2, 2)
 camera.lookAt(scene.position)
-
-#pointLight = PointLight(0xFFFFFF)
-#pointLight.position.set(4, 4, 4)
-#scene.add(pointLight)
+scene.add(camera)
 
 renderer = WebGLRenderer()
 renderer.autoClear = True
