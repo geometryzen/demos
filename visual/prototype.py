@@ -62,6 +62,6 @@ def animate(timestamp):
 
 window.addEventListener("resize", onWindowResize, False)
 
-onWindowResize(None)
+#onWindowResize(None)
 
 animate(None)
