@@ -1,6 +1,10 @@
 from e3ga import *
 from units import *
 
+velocity = VectorE3(0,0,0) * meter / second ** 2
+
+print velocity
+
 print "meter => " + str(meter)
 print "meter * meter  => " + str(meter * meter)
 print "meter + meter  => " + str(meter + meter)
