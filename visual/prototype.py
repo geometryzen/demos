@@ -79,4 +79,4 @@ window.addEventListener("resize", onWindowResize, False)
 
 onWindowResize(None)
 
-step(None)
+animate(None)
