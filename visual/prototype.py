@@ -8,7 +8,7 @@ from browser import *
 for canvas in document.getElementsByTagName("canvas"):
     canvas.parentNode.removeChild(canvas)
 
-scene = Scene()
+scene = world()
 
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.set(2, 2, 2)
