@@ -8,15 +8,15 @@ from browser import *
 for canvas in document.getElementsByTagName("canvas"):
     canvas.parentNode.removeChild(canvas)
 
-scene = Scene()
+model = Model()
 
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.set(10, 10, 10)
-camera.lookAt(scene.position)
+camera.lookAt(model.position)
 
 pointLight = PointLight(0xFFFFFF)
 pointLight.position.set(20, 20, 20)
-scene.add(pointLight)
+model.add(pointLight)
 
 renderer = WebGLRenderer()
 renderer.autoClear = True
@@ -32,7 +32,7 @@ material.name = "bluecube"
 
 mesh = Mesh(CubeGeometry(5, 5, 5), material)
 
-scene.add(mesh)
+model.add(mesh)
 
 requestID = None
 progress = None
@@ -43,7 +43,7 @@ movement = Vector3(0.02, 0.02, 0.02)
 def render():
     mesh.rotation += movement
         
-    renderer.render(scene, camera)
+    renderer.render(model, camera)
 
 def onWindowResize(event):
     camera.aspect = window.innerWidth / window.innerHeight
