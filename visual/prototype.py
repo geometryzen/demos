@@ -27,7 +27,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-cube = box(width=2, height=2)
+cube = box(width=1, height=1, depth=1)
 
 scene.add(cube)
 
