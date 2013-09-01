@@ -40,11 +40,6 @@ def render():
     shape.rotation += movement
         
     renderer.render(scene, camera)
-
-#def onWindowResize(event):
-#    camera.aspect = window.innerWidth / window.innerHeight
-#    camera.updateProjectionMatrix()
-#    renderer.size = (window.innerWidth, window.innerHeight)
     
 def animate(timestamp):
     global requestID, progress, startTime
@@ -62,9 +57,5 @@ def animate(timestamp):
     else:
         window.cancelAnimationFrame(requestID)
         # container.removeChild(renderer.domElement)
-
-#window.addEventListener("resize", onWindowResize, False)
-
-#onWindowResize(None)
 
 animate(None)
