@@ -29,9 +29,9 @@ container.appendChild(renderer.domElement)
 
 material = MeshLambertMaterial({"color":0x0000FF})
 material.name = "bluecube"
-box = Mesh(CubeGeometry(0.5, 0.5, 0.5), material)
+cube = Mesh(CubeGeometry(0.5, 0.5, 0.5), material)
 
-scene.add(box)
+scene.add(cube)
 
 requestID = None
 progress = None
@@ -40,7 +40,7 @@ startTime = None
 movement = Vector3(0.02, 0.02, 0.02)
 
 def render():
-    box.rotation += movement
+    cube.rotation += movement
         
     renderer.render(scene, camera)
 
