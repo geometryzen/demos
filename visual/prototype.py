@@ -2,51 +2,43 @@
 # This is a work in progress. It may not work for you yet!
 # The idea is to create a simple 3D visualization library.
 # The library will be similar to Visual Python.
-from e3ga import *
-from visual import *
+from three import *
 from browser import *
-from math import pi
 
-# Discard the old canvas if it exists. 
 for canvas in document.getElementsByTagName("canvas"):
     canvas.parentNode.removeChild(canvas)
 
 scene = Scene()
 
-camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-camera.position.z = 20
+camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
+camera.position.set(10, 10, 10)
+camera.lookAt(scene.position)
+
+pointLight = PointLight(0xFFFFFF)
+pointLight.position.set(20, 20, 20)
+scene.add(pointLight)
 
 renderer = WebGLRenderer()
+renderer.autoClear = True
+renderer.gammaInput = True
+renderer.gammaOutput = True
 renderer.setClearColor(Color(0x080808), 1.0)
 
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-width = 10
-height = 10
-depth = 10
-widthSegments = 1
-heightSegments = 1
-depthSegments = 1
-cube = CubeGeometry(width, height, depth, widthSegments, heightSegments, depthSegments)
+material = MeshLambertMaterial({"color":0x0000FF})
+material.name = "bluecube"
 
-print repr(cube)
-print "width:          " + str(cube.width)
-print "height:         " + str(cube.height)
-print "depth:          " + str(cube.depth)
-print "widthSegments:  " + str(cube.widthSegments)
-print "heightSegments: " + str(cube.heightSegments)
-print "depthSegments:  " + str(cube.depthSegments)
-print cube
+mesh = Mesh(CubeGeometry(5, 5, 5), material)
 
-mesh = Mesh(cube, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
 scene.add(mesh)
 
 requestID = None
 progress = None
-progressEnd = 10000
-startTime =  None
-movement = 0.02 * Vector3(1, 1, 1)
+progressEnd = 6000
+startTime = None
+movement = Vector3(0.02, 0.02, 0.02)
 
 def render():
     mesh.rotation += movement
