@@ -14,10 +14,6 @@ camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.set(2, 2, 2)
 camera.lookAt(scene.position)
 
-camera2 = PerspectiveCamera(45, 1.0, 0.1, 10000)
-camera2.position.set(-2, -2, -2)
-camera2.lookAt(scene.position)
-
 renderer = WebGLRenderer()
 renderer.autoClear = True
 renderer.gammaInput = True
