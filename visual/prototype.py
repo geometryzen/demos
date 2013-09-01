@@ -11,11 +11,11 @@ for canvas in document.getElementsByTagName("canvas"):
 scene = Scene()
 
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
-camera.position.set(1, 1, 1)
+camera.position.set(2, 2, 2)
 camera.lookAt(scene.position)
 
 pointLight = PointLight(0xFFFFFF)
-pointLight.position.set(2, 2, 2)
+pointLight.position.set(4, 4, 4)
 scene.add(pointLight)
 
 renderer = WebGLRenderer()
