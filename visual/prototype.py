@@ -60,7 +60,7 @@ def animate(timestamp):
         window.cancelAnimationFrame(requestID)
         # container.removeChild(renderer.domElement)
 
-window.addEventListener("resize", onWindowResize, False)
+#window.addEventListener("resize", onWindowResize, False)
 
 #onWindowResize(None)
 
