@@ -8,7 +8,7 @@ print velocity
 
 momentum = mass * velocity
 
-x = momentum - velocity
+x = momentum * velocity
 
 print "meter => " + str(meter)
 print "meter * meter  => " + str(meter * meter)
