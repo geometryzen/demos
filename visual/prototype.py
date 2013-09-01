@@ -69,7 +69,7 @@ def animate(timestamp):
             progress = 0
         
     if (progress < progressEnd):
-        requestID = window.requestAnimationFrame(step)
+        requestID = window.requestAnimationFrame(animate)
         render()
     else:
         window.cancelAnimationFrame(requestID)
