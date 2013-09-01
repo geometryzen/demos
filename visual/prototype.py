@@ -3,7 +3,7 @@
 # The idea is to create a simple 3D visualization library.
 # The library will be similar to Visual Python.
 from e3ga import *
-from three import *
+from vista import *
 from browser import *
 from math import pi
 
