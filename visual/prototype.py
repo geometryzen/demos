@@ -2,7 +2,7 @@
 # This is a work in progress. It may not work for you yet!
 # The idea is to create a simple 3D visualization library.
 # The library will be similar to Visual Python.
-from visual import *
+from eight import *
 from browser import *
 
 for canvas in document.getElementsByTagName("canvas"):
