@@ -2,8 +2,11 @@ from e3ga import *
 from units import *
 
 velocity = VectorE3(0,0,0) * meter / second ** 2
+mass = 10 * kilogram
 
 print velocity
+
+momentum = mass * velocity
 
 print "meter => " + str(meter)
 print "meter * meter  => " + str(meter * meter)
