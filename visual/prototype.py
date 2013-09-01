@@ -53,7 +53,7 @@ def animate(timestamp):
         
     if (progress < progressEnd):
         requestID = window.requestAnimationFrame(animate)
-        render()
+        render(timestamp)
     else:
         window.cancelAnimationFrame(requestID)
         # container.removeChild(renderer.domElement)
