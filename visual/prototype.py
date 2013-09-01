@@ -27,9 +27,9 @@ renderer.setClearColor(Color(0x080808), 1.0)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-cube = box()
+shape = box()
 
-scene.add(cube)
+scene.add(shape)
 
 requestID = None
 progress = None
@@ -38,7 +38,7 @@ startTime = None
 movement = Vector3(0.02, 0.02, 0.02)
 
 def render():
-    cube.rotation += movement
+    shape.rotation += movement
         
     renderer.render(scene, camera)
 
