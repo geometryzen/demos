@@ -29,7 +29,6 @@ container.appendChild(renderer.domElement)
 
 material = MeshLambertMaterial({"color":0x0000FF})
 material.name = "bluecube"
-
 box = Mesh(CubeGeometry(0.5, 0.5, 0.5), material)
 
 scene.add(box)
