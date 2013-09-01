@@ -29,6 +29,8 @@ container.appendChild(renderer.domElement)
 
 cube = box()
 
+print cube
+
 scene.add(cube)
 
 requestID = None
