@@ -13,7 +13,10 @@ scene = world()
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.set(2, 2, 2)
 camera.lookAt(scene.position)
-scene.add(camera)
+
+camera2 = PerspectiveCamera(45, 1.0, 0.1, 10000)
+camera2.position.set(-2, -2, -2)
+camera2.lookAt(scene.position)
 
 renderer = WebGLRenderer()
 renderer.autoClear = True
@@ -38,10 +41,13 @@ def render():
     shape.rotation += movement
         
     renderer.render(scene, camera)
+    renderer.render(scene, camera2)
 
 def onWindowResize(event):
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
+    camera2.aspect = window.innerWidth / window.innerHeight
+    camera2.updateProjectionMatrix()
     renderer.size = (window.innerWidth, window.innerHeight)
     
 def animate(timestamp):
