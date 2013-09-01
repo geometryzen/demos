@@ -36,7 +36,7 @@ progressEnd = 6000
 startTime = None
 movement = Vector3(0.02, 0.02, 0.02)
 
-def render():
+def render(timestamp):
     shape.rotation += movement
         
     renderer.render(scene, camera)
