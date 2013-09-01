@@ -37,7 +37,6 @@ def render():
     shape.rotation += movement
         
     renderer.render(scene, camera)
-    renderer.render(scene, camera2)
 
 def onWindowResize(event):
     camera.aspect = window.innerWidth / window.innerHeight
