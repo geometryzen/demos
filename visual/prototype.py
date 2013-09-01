@@ -46,8 +46,6 @@ def render():
 def onWindowResize(event):
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
-    camera2.aspect = window.innerWidth / window.innerHeight
-    camera2.updateProjectionMatrix()
     renderer.size = (window.innerWidth, window.innerHeight)
     
 def animate(timestamp):
