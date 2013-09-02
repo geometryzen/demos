@@ -22,7 +22,9 @@ container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
 renderer.size = (window.innerWidth, window.innerHeight)
-print renderer.size
+renderer.size = (container.innerWidth, window.innerHeight)
+
+# TODO: be able to get the 
 
 # The camera needs to be available for the render function.
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
