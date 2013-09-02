@@ -1,6 +1,7 @@
-# t600.py
 from cmath import *
 import math
+
+print complex(1,0) * "hello"
 
 def isCloseTo(expected, actual, precision):
     return math.fabs(expected - actual) < (math.pow(10, -precision) / 2)
