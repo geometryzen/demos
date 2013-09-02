@@ -4,7 +4,6 @@
 # to use the HTML5 Canvas API provided through the browser module.
 from browser import *
 from sprite import *
-from e2ga import *
 
 # Make the sprite code happy - give it a canvas element.
 def initCanvas():
