@@ -106,6 +106,7 @@ print phase(+1)
 print phase(+i)
 print phase(-1)
 print phase(-i)
+print phase("bogus")
 print "----------"
 print "~"
 print "----------"
