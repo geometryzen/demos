@@ -1,7 +1,5 @@
 # Sierpinski Gasket demonstration
 # Original program by Brad Miller.
-# While using the sprite module is amusing, it would probably better
-# to use the HTML5 Canvas API provided through the browser module.
 from browser import *
 from sprite import *
 
