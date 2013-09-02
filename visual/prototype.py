@@ -43,7 +43,8 @@ def render(timestamp):
     shape.rotation += movement
         
     renderer.render(scene, camera)
-    
+
+print type(render)    
 war = WindowAnimationRunner(window, render)
     
 def animate(timestamp):
