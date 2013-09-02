@@ -33,10 +33,6 @@ shape = cylinder()
 
 scene.add(shape)
 
-requestID = None
-progress = None
-progressEnd = 6000
-startTime = None
 movement = Vector3(0.02, 0.02, 0.02)
 
 def render(timestamp):
@@ -47,22 +43,3 @@ def render(timestamp):
 war = WindowAnimationRunner(window, render)
 
 war.start()
-    
-def animate(timestamp):
-    global requestID, progress, startTime
-    if (startTime):
-        progress = timestamp - startTime
-    else:
-        if (timestamp):
-            startTime = timestamp
-        else:
-            progress = 0
-        
-    if (progress < progressEnd):
-        requestID = window.requestAnimationFrame(animate)
-        render(timestamp)
-    else:
-        window.cancelAnimationFrame(requestID)
-        # container.removeChild(renderer.domElement)
-
-animate(None)
