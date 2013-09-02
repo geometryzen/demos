@@ -46,7 +46,7 @@ def render(timestamp):
 
 print type(render)    
 war = WindowAnimationRunner(window, render)
-print str(war, 123)
+print str(war)
 print repr(war)
     
 def animate(timestamp):
