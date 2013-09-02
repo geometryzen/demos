@@ -28,7 +28,6 @@ container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
 shape = cylinder()
-shape.material
 
 scene.add(shape)
 
