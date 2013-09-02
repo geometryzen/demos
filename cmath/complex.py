@@ -107,6 +107,14 @@ print phase(+i)
 print phase(-1)
 print phase(-i)
 print "----------"
+print "polar"
+print "----------"
+print polar(complex(-1.0, 0.0))
+print polar(+1)
+print polar(+i)
+print polar(-1)
+print polar(-i)
+print "----------"
 print "~"
 print "----------"
 print ~i
