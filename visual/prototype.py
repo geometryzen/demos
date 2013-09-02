@@ -10,22 +10,23 @@ for canvas in document.getElementsByTagName("canvas"):
 
 scene = world()
 
-camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
-camera.position.set(4, 4, 4)
-camera.lookAt(scene.position)
-camera.aspect = window.innerWidth / window.innerHeight
-camera.updateProjectionMatrix()
-
+# The renderer needs to be available for the render function.
 renderer = WebGLRenderer()
 renderer.autoClear = True
 renderer.gammaInput = True
 renderer.gammaOutput = True
-#renderer.setClearColor(Color(0x080808), 0.5)
 renderer.setClearColor(Color(0x080808), 1.0)
 renderer.size = (window.innerWidth, window.innerHeight)
 
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
+
+# The camera needs to be available for the render function.
+camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
+camera.position.set(4, 4, 4)
+camera.lookAt(scene.position)
+camera.aspect = window.innerWidth / window.innerHeight
+camera.updateProjectionMatrix()
 
 shape = cylinder()
 
