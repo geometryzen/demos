@@ -38,10 +38,10 @@ scene.add(shape)
 
 movement = Vector3(0.02, 0.02, 0.02)
 
-def render(timestamp):
+def animate(timestamp):
     shape.rotation += movement
         
     renderer.render(scene, camera)
 
 # This is hard-coded to run for 6 seconds at the moment.
-WindowAnimationRunner(window, render).start()
+WindowAnimationRunner(window, animate).start()
