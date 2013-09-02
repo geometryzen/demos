@@ -1,4 +1,5 @@
 # Sep 1, 2013
+# Sep 2, 2013
 # This is a work in progress. It may not work for you yet!
 # The idea is to create a simple 3D visualization library.
 # The library will be similar to Visual Python.
@@ -16,10 +17,11 @@ renderer.autoClear = True
 renderer.gammaInput = True
 renderer.gammaOutput = True
 renderer.setClearColor(Color(0x080808), 1.0)
-renderer.size = (window.innerWidth, window.innerHeight)
 
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
+
+renderer.size = (window.innerWidth, window.innerHeight)
 
 # The camera needs to be available for the render function.
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
