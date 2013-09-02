@@ -1,8 +1,10 @@
-# Sep 1, 2013
-# Sep 2, 2013
 # This is a work in progress. It may not work for you yet!
 # The idea is to create a simple 3D visualization library.
 # The library will be similar to Visual Python.
+#
+# Sep 1, 2013 world, cube, cylinder, sphere
+# Sep 2, 2013 WindowAnimationRunner
+# TODO: Managing the size for the renderer and aspect for the camera.
 from three import *
 from browser import *
 
@@ -21,10 +23,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-renderer.size = (window.innerWidth, window.innerHeight)
-renderer.size = (container.innerWidth, window.innerHeight)
-
-# TODO: be able to get the 
+renderer.size = (window.innerWidth, window.innerHeight) 
 
 # The camera needs to be available for the render function.
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
