@@ -11,7 +11,7 @@ for canvas in document.getElementsByTagName("canvas"):
 scene = world()
 
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
-camera.position.set(4, 4, 4)
+camera.position.set(4, 4, 4, 123)
 camera.lookAt(scene.position)
 camera.aspect = window.innerWidth / window.innerHeight
 camera.updateProjectionMatrix()
