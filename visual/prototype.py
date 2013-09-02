@@ -44,10 +44,9 @@ def render(timestamp):
         
     renderer.render(scene, camera)
 
-print type(render)    
 war = WindowAnimationRunner(window, render)
-print str(war)
-print repr(war)
+
+war.start()
     
 def animate(timestamp):
     global requestID, progress, startTime
