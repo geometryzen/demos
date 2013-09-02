@@ -1,7 +1,5 @@
 from cmath import *
 
-print type((2,3))
-
 print "----------"
 print "construction"
 print "----------"
@@ -104,7 +102,6 @@ print "----------"
 print "phase"
 print "----------"
 print "phase(complex(-1,0)) => " + str(phase(complex(-1.0, 0.0)))
-print phase((2,3))
 print phase(+1)
 print phase(+i)
 print phase(-1)
