@@ -1,5 +1,7 @@
 from cmath import *
 
+print type((2,3))
+
 print "----------"
 print "construction"
 print "----------"
