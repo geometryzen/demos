@@ -107,6 +107,10 @@ print phase(+i)
 print phase(-1)
 print phase(-i)
 print "----------"
-print "abs"
+print "~"
 print "----------"
-print abs(i)
+print ~i
+#print "----------"
+#print "abs"
+#print "----------"
+#print abs(i)
