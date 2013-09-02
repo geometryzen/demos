@@ -3,7 +3,7 @@ from cmath import *
 print "----------"
 print "construction"
 print "----------"
-z1 = complex(11.0, 7.0, 123)
+z1 = complex(11.0, 7.0)
 print repr(z1)
 print "----------"
 print "properties"
