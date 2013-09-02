@@ -103,4 +103,5 @@ print "phase"
 print "----------"
 print phase(complex(-1.0, 0.0))
 print phase(+1)
+print phase(+i)
 print phase(-1)
