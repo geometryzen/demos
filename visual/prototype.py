@@ -38,4 +38,5 @@ def render(timestamp):
         
     renderer.render(scene, camera)
 
+# This is hard-coded to run for 6 seconds at the moment.
 WindowAnimationRunner(window, render).start()
