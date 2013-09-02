@@ -40,6 +40,4 @@ def render(timestamp):
         
     renderer.render(scene, camera)
 
-war = WindowAnimationRunner(window, render)
-
-war.start()
+WindowAnimationRunner(window, render).start()
