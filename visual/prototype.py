@@ -21,7 +21,7 @@ renderer.autoClear = True
 renderer.gammaInput = True
 renderer.gammaOutput = True
 #renderer.setClearColor(Color(0x080808), 0.5)
-renderer.setClearColor(Color(0x000000), 1.0)
+renderer.setClearColor(Color(0x080808), 1.0)
 renderer.size = (window.innerWidth, window.innerHeight)
 
 container = document.getElementById("canvas-container")
