@@ -26,7 +26,7 @@ renderer.size = (window.innerWidth, window.innerHeight)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-shape = cylinder()
+shape = sphere()
 
 scene.add(shape)
 
