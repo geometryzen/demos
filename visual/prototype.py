@@ -46,6 +46,7 @@ def render(timestamp):
 
 print type(render)    
 war = WindowAnimationRunner(window, render)
+print war
     
 def animate(timestamp):
     global requestID, progress, startTime
