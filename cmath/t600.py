@@ -1,7 +1,7 @@
 from cmath import *
 import math
 
-print complex(1,0) - "hello"
+print "hello" + complex(1,0)
 
 def isCloseTo(expected, actual, precision):
     return math.fabs(expected - actual) < (math.pow(10, -precision) / 2)
