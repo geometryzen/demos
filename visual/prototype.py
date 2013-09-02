@@ -23,7 +23,7 @@ renderer.gammaOutput = True
 renderer.setClearColor(Color(0x080808), 0.5)
 renderer.size = (window.innerWidth, window.innerHeight)
 
-print renderer.getClearColor()
+print renderer.getClearColor(123)
 
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
