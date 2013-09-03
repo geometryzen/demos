@@ -51,7 +51,11 @@ def setUp():
 
     renderer.size = (window.innerWidth, window.innerHeight) 
 
+
 def tearDown():
+    ''' 
+    tearDown is called by the animation runner when the animation is complete.
+    '''
     cleanUp()
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
