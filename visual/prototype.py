@@ -38,8 +38,8 @@ scene.add(shape)
 
 movement = Vector3(0.02, 0.02, 0.02)
 
-def animate(timestamp):
-    print timestamp
+def animate(elapsed):
+    print elapsed
     shape.rotation += movement
         
     renderer.render(scene, camera)
