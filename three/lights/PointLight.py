@@ -13,8 +13,7 @@ scene.add(pointLight)
 
 renderer = WebGLRenderer()
 print renderer.gammaInput
-renderer.autoClear = True
-renderer.gammaInput = True
+#renderer.gammaInput = True
 renderer.gammaOutput = True
 renderer.setClearColor(Color(0x080808), 1.0)
 
