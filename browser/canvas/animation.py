@@ -54,16 +54,13 @@ def discardCanvases():
     for cs in document.getElementsByTagName("canvas"):
         cs.parentNode.removeChild(cs)
         
-requestID = None
-progress = None
 progressEnd = 10000
-startTime =  None
 step = 0
 steps = 50
 addAngle = 2 * pi / steps
 addScale = 1.0 / steps
 
-def init():
+def setUp():
     print "Press ESC to terminate."
     print "This program will 'self-terminate' in "+str(progressEnd/1000)+" seconds!"
     discardCanvases()
@@ -75,12 +72,10 @@ def init():
     
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
-
     window.addEventListener("resize", onWindowResize, False)
-
     onWindowResize()
 
-def render():
+def tick(elapsed):
     global step
     if step < steps:
         step += 1
@@ -92,29 +87,14 @@ def render():
     context.fillText("Geometry Zen", 0, 0)
     context.restore()
 
+def terminate(elapsed):
+    return elapsed > progressEnd
     
-def animate(timestamp):
-    global requestID, progress, startTime
-    if startTime:
-        progress = timestamp - startTime
-    else:
-        if timestamp:
-            startTime = timestamp
-        else:
-            progress = 0
-        
-    if progress < progressEnd:
-        requestID = window.requestAnimationFrame(animate)
-        render()
-    else:
-        terminate()
-        
-def terminate():
-    window.cancelAnimationFrame(requestID)
+def tearDown():
     discardCanvases()
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
+    window.removeEventListener("resize", onWindowResize, False)
     print "Done."
 
-init()
-animate(None)
+WindowAnimationRunner(window, tick, terminate, setUp, tearDown)
