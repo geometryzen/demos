@@ -39,6 +39,7 @@ scene.add(shape)
 movement = Vector3(0.02, 0.02, 0.02)
 
 def tick(elapsed):
+    print elapsed
     shape.rotation += movement
         
     renderer.render(scene, camera)
