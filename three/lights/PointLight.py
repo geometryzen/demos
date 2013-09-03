@@ -1,7 +1,7 @@
 from three import *
 from browser import *
 
-scene = Scene()
+scene = world()
 
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.set(10, 10, 10)
