@@ -11,11 +11,12 @@ pointLight = PointLight(0xFFFFFF)
 pointLight.position.set(20, 20, 20)
 scene.add(pointLight)
 
-renderer = WebGLRenderer({"clearColor":0x080808, "clearAlpha":1})
+renderer = WebGLRenderer()
 print renderer.autoClear
 renderer.autoClear = True
 renderer.gammaInput = True
 renderer.gammaOutput = True
+renderer.setClearColor(Color(0x080808), 1.0)
 
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
