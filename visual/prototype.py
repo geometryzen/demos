@@ -46,4 +46,11 @@ def tick(elapsed):
 def terminate(elapsed):
     return elapsed > 10000
 
-WindowAnimationRunner(window, tick, terminate).start()
+def setUp():
+    print "Hello"
+    
+def tearDown();
+    for canvas in document.getElementsByTagName("canvas"):
+        canvas.parentNode.removeChild(canvas)
+
+WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
