@@ -8,35 +8,23 @@
 from three import *
 from browser import *
 
-for canvas in document.getElementsByTagName("canvas"):
-    canvas.parentNode.removeChild(canvas)
-
 scene = world()
 
-# The renderer needs to be available for the render function.
-renderer = WebGLRenderer()
-renderer.autoClear = True
-renderer.gammaInput = True
-renderer.gammaOutput = True
-renderer.setClearColor(Color(0x080808), 1.0)
+scene.add(cylinder())
 
-container = document.getElementById("canvas-container")
-container.appendChild(renderer.domElement)
-
-renderer.size = (window.innerWidth, window.innerHeight) 
-
-# The camera needs to be available for the render function.
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.set(4, 4, 4)
 camera.lookAt(scene.position)
 camera.aspect = window.innerWidth / window.innerHeight
 camera.updateProjectionMatrix()
 
-shape = cylinder()
-
-scene.add(shape)
+renderer = None
 
 movement = Vector3(0.02, 0.02, 0.02)
+
+def cleanUp():
+    for canvas in document.getElementsByTagName("canvas"):
+        canvas.parentNode.removeChild(canvas)
 
 def tick(elapsed):
     shape.rotation += movement
@@ -47,10 +35,20 @@ def terminate(elapsed):
     return elapsed > 10000
 
 def setUp():
-    print "Hello"
-    
+    cleanUp()
+
+    renderer = WebGLRenderer()
+    renderer.autoClear = True
+    renderer.gammaInput = True
+    renderer.gammaOutput = True
+    renderer.setClearColor(Color(0x080808), 1.0)
+
+    container = document.getElementById("canvas-container")
+    container.appendChild(renderer.domElement)
+
+    renderer.size = (window.innerWidth, window.innerHeight) 
+
 def tearDown():
-    for canvas in document.getElementsByTagName("canvas"):
-        canvas.parentNode.removeChild(canvas)
+    cleanUp()
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
