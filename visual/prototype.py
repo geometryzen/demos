@@ -22,6 +22,7 @@ camera.aspect = window.innerWidth / window.innerHeight
 camera.updateProjectionMatrix()
 
 renderer = None
+container = None
 
 movement = Vector3(0.02, 0.02, 0.02)
 
@@ -57,8 +58,9 @@ def setUp():
     renderer.gammaOutput = True
     renderer.setClearColor(Color(0x080808), 1.0)
 
-    document.getElementById("canvas-container").appendChild(renderer.domElement)
-
+    container = document.getElementById("canvas-container")
+    container.appendChild(renderer.domElement)
+    print container.offsetWidth
     renderer.size = (window.innerWidth, window.innerHeight) 
 
 
