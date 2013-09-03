@@ -36,10 +36,7 @@ def setUp():
     renderer.setClearColor(Color(0x080808), 1.0)
 
     document.body.insertBefore(renderer.domElement, document.body.firstChild)
-#    container = document.getElementById("canvas-container")
-#    container.appendChild(renderer.domElement)
-    renderer.size = (window.innerWidth, window.innerHeight) 
-#   renderer.size = (container.offsetWidth, container.offsetHeight) 
+    renderer.size = (window.innerWidth, window.innerHeight)
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
 
