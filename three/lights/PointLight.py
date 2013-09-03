@@ -11,7 +11,7 @@ pointLight = PointLight(0xFFFFFF)
 pointLight.position.set(20, 20, 20)
 scene.add(pointLight)
 
-renderer = WebGLRenderer({"clearColor":0x088080, "clearAlpha":1})
+renderer = WebGLRenderer({"clearColor":0x080808, "clearAlpha":1})
 renderer.autoClear = True
 renderer.gammaInput = True
 renderer.gammaOutput = True
