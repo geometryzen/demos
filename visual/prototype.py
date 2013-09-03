@@ -24,7 +24,7 @@ renderer = None
 
 movement = Vector3(0.02, 0.02, 0.02)
 
-def cleanUp():
+def removeCanvasElements():
     """
     Removes all canvas elements from the document.
     """
@@ -50,7 +50,8 @@ def setUp():
     Called by the animation runner before the animation has started.
     """
     global renderer
-    cleanUp()
+
+    removeCanvasElements()
 
     renderer = WebGLRenderer()
     renderer.autoClear = True
@@ -68,6 +69,6 @@ def tearDown():
     """
     Called by the animation runner after the animation has finished.
     """
-    cleanUp()
+    removeCanvasElements()
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
