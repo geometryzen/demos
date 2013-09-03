@@ -3,7 +3,7 @@ from browser import *
 
 scene = world()
 
-shape = cube()
+shape = cylinder()
 
 scene.add(shape)
 
