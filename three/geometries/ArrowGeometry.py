@@ -46,7 +46,7 @@ def removeElementsByTagName(tagName):
         element.parentNode.removeChild(element)
 
 def tick(elapsed):
-    shape.rotation += movement
+    mesh.rotation += movement
         
     renderer.render(scene, camera)
     
