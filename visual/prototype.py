@@ -40,7 +40,7 @@ def setUp():
 #    container.appendChild(renderer.domElement)
     renderer.size = (window.innerWidth, window.innerHeight) 
 #   renderer.size = (container.offsetWidth, container.offsetHeight) 
-    camera.aspect = window.innerWidth / widow.innerHeight
+    camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
 
 
