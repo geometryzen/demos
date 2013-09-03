@@ -11,7 +11,7 @@ from browser import *
 
 scene = world()
 
-shape = cylinder()
+shape = cube()
 
 scene.add(shape)
 
