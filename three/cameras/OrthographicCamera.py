@@ -5,7 +5,7 @@ from math import cos, sin, floor
 from time import time
 from random import random
 
-useLargeCanvas = False
+useLargeCanvas = True
 
 # Global variables
 camera = OrthographicCamera(-1, 1, 1, -1, -500, 1000)
