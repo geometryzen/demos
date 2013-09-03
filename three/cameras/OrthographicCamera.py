@@ -115,7 +115,7 @@ def tick(elapsed):
     renderer.render(scene, camera)
 
 def terminate(elapsed):
-    return elapsed > 5000
+    return elapsed > progressEnd
 
 def tearDown():
     window.cancelAnimationFrame(requestID)
