@@ -115,7 +115,6 @@ def terminate(elapsed):
     return elapsed > progressEnd
 
 def tearDown():
-    window.cancelAnimationFrame(requestID)
     discardCanvases()
     print "Goodbye!"
 
