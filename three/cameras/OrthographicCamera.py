@@ -17,10 +17,7 @@ renderer = WebGLRenderer({"antialias": True})
 renderer.setClearColor(Color(0xFFFFFF), 1.0)
 scene = Scene()
 view = document.getElementById("view")
-requestID = None
-progress = None
 progressEnd = 20000
-startTime = None
 
 def onWindowResize(event):
     if (useLargeCanvas):
