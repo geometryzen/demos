@@ -97,4 +97,4 @@ def tearDown():
     window.removeEventListener("resize", onWindowResize, False)
     print "Done."
 
-WindowAnimationRunner(window, tick, terminate, setUp, tearDown)
+WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
