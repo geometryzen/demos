@@ -38,11 +38,11 @@ scene.add(shape)
 
 movement = Vector3(0.02, 0.02, 0.02)
 
-def animate(elapsed):
+def tick(elapsed):
     print elapsed
     shape.rotation += movement
         
     renderer.render(scene, camera)
 
 # This is hard-coded to run for 6 seconds at the moment.
-WindowAnimationRunner(window, animate).start()
+WindowAnimationRunner(window, tick).start()
