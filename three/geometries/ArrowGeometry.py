@@ -75,5 +75,6 @@ def setUp():
 
 def tearDown():
     removeElementsByTagName("canvas")
+    window.removeEventListener("resize", onWindowResize, False)
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
