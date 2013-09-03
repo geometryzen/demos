@@ -37,6 +37,7 @@ def terminate(elapsed):
     return elapsed > 10000
 
 def setUp():
+    global renderer
     cleanUp()
 
     renderer = WebGLRenderer()
