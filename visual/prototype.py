@@ -37,7 +37,6 @@ def setUp():
 
     container = document.getElementById("canvas-container")
     container.appendChild(renderer.domElement)
-    print (container.offsetWidth, container.offsetHeight)
 #   renderer.size = (window.innerWidth, window.innerHeight) 
     renderer.size = (container.offsetWidth, container.offsetHeight) 
     camera.aspect = container.offsetWidth / container.offsetHeight
@@ -45,6 +44,6 @@ def setUp():
 
 
 def tearDown():
-    removeElementsByTagName("canvas")
+    discardCanvasElements()
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
