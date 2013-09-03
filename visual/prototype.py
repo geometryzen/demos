@@ -49,7 +49,7 @@ def terminate(elapsed):
 def setUp():
     print "Hello"
     
-def tearDown();
+def tearDown():
     for canvas in document.getElementsByTagName("canvas"):
         canvas.parentNode.removeChild(canvas)
 
