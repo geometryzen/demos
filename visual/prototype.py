@@ -5,6 +5,7 @@
 # Sep 1, 2013 world, cube, cylinder, sphere
 # Sep 2, 2013 WindowAnimationRunner
 # TODO: Managing the size for the renderer and aspect for the camera.
+# TODO: Shape color and name.
 from three import *
 from browser import *
 
