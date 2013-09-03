@@ -61,7 +61,8 @@ def setUp():
     container = document.getElementById("canvas-container")
     container.appendChild(renderer.domElement)
     print (container.offsetWidth, container.offsetHeight)
-    renderer.size = (window.innerWidth, window.innerHeight) 
+#   renderer.size = (window.innerWidth, window.innerHeight) 
+    renderer.size = (container.offsetWidth, container.offsetHeight) 
 
 
 def tearDown():
