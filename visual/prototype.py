@@ -16,7 +16,7 @@ shape = cylinder()
 scene.add(shape)
 
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
-camera.position.set(4, 4, 4)
+camera.position.set(8, 8, 8)
 camera.lookAt(scene.position)
 
 renderer = None
