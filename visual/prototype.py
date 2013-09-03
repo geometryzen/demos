@@ -25,12 +25,9 @@ renderer = None
 
 movement = Vector3(0.02, 0.02, 0.02)
 
-def removeCanvasElements():
-    """
-    Removes all canvas elements from the document.
-    """
-    for canvas in document.getElementsByTagName("canvas"):
-        canvas.parentNode.removeChild(canvas)
+def removeElementsByTagName(tagName):
+    for element in document.getElementsByTagName(tagName):
+        element.parentNode.removeChild(element)
 
 def tick(elapsed):
     """
@@ -52,7 +49,7 @@ def setUp():
     """
     global renderer
 
-    removeCanvasElements()
+    removeElementsByTagName("canvas")
 
     renderer = WebGLRenderer()
     renderer.autoClear = True
@@ -60,8 +57,7 @@ def setUp():
     renderer.gammaOutput = True
     renderer.setClearColor(Color(0x080808), 1.0)
 
-    container = document.getElementById("canvas-container")
-    container.appendChild(renderer.domElement)
+    document.getElementById("canvas-container").appendChild(renderer.domElement)
 
     renderer.size = (window.innerWidth, window.innerHeight) 
 
@@ -70,6 +66,6 @@ def tearDown():
     """
     Called by the animation runner after the animation has finished.
     """
-    removeCanvasElements()
+    removeElementsByTagName("canvas")
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
