@@ -42,6 +42,8 @@ def tick(elapsed):
     shape.rotation += movement
         
     renderer.render(scene, camera)
+    
+def terminate(elapsed):
+    return elapsed > 6000
 
-# This is hard-coded to run for 6 seconds at the moment.
-WindowAnimationRunner(window, tick).start()
+WindowAnimationRunner(window, tick, terminate).start()
