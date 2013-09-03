@@ -15,7 +15,6 @@ renderer = WebGLRenderer({"clearColor":0x088080, "clearAlpha":1})
 renderer.autoClear = True
 renderer.gammaInput = True
 renderer.gammaOutput = True
-#renderer.setClearColor(Color(0x080808), 1.0)
 
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
