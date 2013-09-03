@@ -49,7 +49,7 @@ def discardCanvases():
     for cs in document.getElementsByTagName("canvas"):
         cs.parentNode.removeChild(cs)
 
-def init():
+def setUp():
     discardCanvases()
     if (useLargeCanvas):
         document.body.insertBefore(renderer.domElement, document.body.firstChild)
@@ -105,7 +105,7 @@ def init():
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize(None)
 
-def render():
+def tick(elapsed):
     theta = time() * 0.1
     
     camera.position.x = cos(theta) * 200
@@ -113,28 +113,15 @@ def render():
     camera.lookAt(scene.position)
     
     renderer.render(scene, camera)
-    
-def animate(timestamp):
-    global requestID, progress, startTime
-    if (startTime):
-        progress = timestamp - startTime
-    else:
-        if (timestamp):
-            startTime = timestamp
-        else:
-            progress = 0
-        
-    if (progress < progressEnd):
-        requestID = window.requestAnimationFrame(animate)
-        render()
-    else:
-        terminate()
-        
-def terminate():
+
+def terminate(elapsed):
+    return elapsed > 5000
+
+def tearDown():
     window.cancelAnimationFrame(requestID)
     discardCanvases()
     print "Goodbye!"
 
 print "This example will end automatically in "+str(progressEnd/1000)+" seconds."
-init()
-animate(None)
+
+WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
