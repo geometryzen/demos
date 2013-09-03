@@ -47,6 +47,8 @@ def discardCanvases():
         cs.parentNode.removeChild(cs)
 
 def setUp():
+    print "Hello!"
+    print "This example will end automatically in "+str(progressEnd/1000)+" seconds."
     discardCanvases()
     if (useLargeCanvas):
         document.body.insertBefore(renderer.domElement, document.body.firstChild)
@@ -117,7 +119,5 @@ def terminate(elapsed):
 def tearDown():
     discardCanvases()
     print "Goodbye!"
-
-print "This example will end automatically in "+str(progressEnd/1000)+" seconds."
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
