@@ -18,8 +18,6 @@ scene.add(shape)
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.set(4, 4, 4)
 camera.lookAt(scene.position)
-camera.aspect = window.innerWidth / window.innerHeight
-camera.updateProjectionMatrix()
 
 renderer = None
 container = None
@@ -63,6 +61,8 @@ def setUp():
     print (container.offsetWidth, container.offsetHeight)
 #   renderer.size = (window.innerWidth, window.innerHeight) 
     renderer.size = (container.offsetWidth, container.offsetHeight) 
+    camera.aspect = container.offsetWidth / container.offsetHeight
+    camera.updateProjectionMatrix()
 
 
 def tearDown():
