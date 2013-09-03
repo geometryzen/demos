@@ -25,18 +25,30 @@ renderer = None
 movement = Vector3(0.02, 0.02, 0.02)
 
 def cleanUp():
+    """
+    Removes all canvas elements from the document.
+    """
     for canvas in document.getElementsByTagName("canvas"):
         canvas.parentNode.removeChild(canvas)
 
 def tick(elapsed):
+    """
+    Called by the animation runner for each animation frame.
+    """
     shape.rotation += movement
         
     renderer.render(scene, camera)
     
 def terminate(elapsed):
+    """
+    Called by the animation runner to determine if the animation should terminate.
+    """
     return elapsed > 10000
 
 def setUp():
+    """
+    Called by the animation runner before the animation has started.
+    """
     global renderer
     cleanUp()
 
@@ -54,7 +66,7 @@ def setUp():
 
 def tearDown():
     """
-    tearDown is called by the animation runner when the animation is complete.
+    Called by the animation runner after the animation has finished.
     """
     cleanUp()
 
