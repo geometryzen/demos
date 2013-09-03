@@ -10,7 +10,9 @@ from browser import *
 
 scene = world()
 
-scene.add(cylinder())
+shape = cylinder()
+
+scene.add(shape)
 
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.set(4, 4, 4)
