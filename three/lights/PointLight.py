@@ -35,9 +35,16 @@ def discardCanvases():
     for canvas in document.getElementsByTagName("canvas"):
         canvas.parentNode.removeChild(canvas)
 
+def onWindowResize(event):
+    camera.aspect = window.innerWidth / window.innerHeight
+    camera.updateProjectionMatrix()
+    renderer.size = (window.innerWidth, window.innerHeight)
+
 def setUp():
     print "Hello!"
     print "This demonstration will end in 6 seconds."
+    window.addEventListener("resize", onWindowResize, False)
+    onWindowResize(None)
     
 def tick(elapsed):
     mesh.rotation += movement
@@ -48,14 +55,6 @@ def terminate(elapsed):
 
 def tearDown():
     discardCanvases()
-
-def onWindowResize(event):
-    camera.aspect = window.innerWidth / window.innerHeight
-    camera.updateProjectionMatrix()
-    renderer.size = (window.innerWidth, window.innerHeight)
-
-window.addEventListener("resize", onWindowResize, False)
-
-onWindowResize(None)
+    window.removeEventListener("resize", onWindowResize, False)
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
