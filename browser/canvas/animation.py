@@ -54,7 +54,7 @@ def discardCanvases():
     for cs in document.getElementsByTagName("canvas"):
         cs.parentNode.removeChild(cs)
         
-progressEnd = 10000
+progressEnd = 3000
 step = 0
 steps = 50
 addAngle = 2 * pi / steps
