@@ -51,9 +51,8 @@ def setUp():
     removeElementsByTagName("canvas")
 
     renderer = WebGLRenderer()
-    renderer.autoClear = True
-    renderer.gammaInput = True
-    renderer.gammaOutput = True
+    #renderer.gammaInput = True
+    #renderer.gammaOutput = True
     renderer.setClearColor(Color(0x080808), 1.0)
 
     container = document.getElementById("canvas-container")
