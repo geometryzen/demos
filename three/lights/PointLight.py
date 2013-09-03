@@ -1,5 +1,3 @@
-# This example is being re-worked.
-# You may experience some issues.
 from three import *
 from browser import *
 
@@ -56,5 +54,6 @@ def terminate(elapsed):
 def tearDown():
     discardCanvases()
     window.removeEventListener("resize", onWindowResize, False)
+    print "Goodbye!"
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
