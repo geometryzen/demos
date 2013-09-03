@@ -44,6 +44,6 @@ def tick(elapsed):
     renderer.render(scene, camera)
     
 def terminate(elapsed):
-    return elapsed > 6000
+    return elapsed > 10000
 
 WindowAnimationRunner(window, tick, terminate).start()
