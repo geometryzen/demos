@@ -41,10 +41,6 @@ def onWindowResize(event):
     camera.updateProjectionMatrix()
     renderer.size = (window.innerWidth, window.innerHeight)
     
-window.addEventListener("resize", onWindowResize, False)
-
-onWindowResize(None)
-
 def removeElementsByTagName(tagName):
     for element in document.getElementsByTagName(tagName):
         element.parentNode.removeChild(element)
@@ -71,6 +67,10 @@ def setUp():
     document.getElementById("canvas-container").appendChild(renderer.domElement)
 
     renderer.size = (window.innerWidth, window.innerHeight) 
+    
+    window.addEventListener("resize", onWindowResize, False)
+
+    onWindowResize(None)
 
 
 def tearDown():
