@@ -36,7 +36,8 @@ def discardCanvases():
         canvas.parentNode.removeChild(canvas)
 
 def setUp():
-    # Do nothing
+    print "Hello!"
+    print "This demonstration will end in 6 seconds."
     
 def tick(elapsed):
     mesh.rotation += movement
