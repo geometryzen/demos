@@ -4,7 +4,7 @@ def assertEqual(actual, expect):
     if expect == actual:
         pass
     else:
-        x = {"actual": actual,"expect", expect}
+        x = {"actual": 1,"expect", 2}
         pass
 
 try:
