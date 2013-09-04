@@ -1,11 +1,17 @@
 from units import *
 
+def assertEqual(actual, expect):
+    if expect == actual:
+        pass
+    else
+        print "{0},{1}".format(actual, expect)
+
 try:
     x = Rational(1,2,3)
 except AssertionError as e:
-    print e
+    assertEqual(str(e),"?")
 else:
-    print "Rational() takes exactly 2 arguments (3 given)"
+    print "Expecting error"
 
 try:
     Rational(1.1, 2)
