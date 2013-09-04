@@ -8,7 +8,7 @@ except AssertionError as e:
 else:
     print "Expecting a Rational constructed with three arguments to raise an error."
 
-try
+try:
     Rational(1.1, 1)
 except TypeError as e:
     print e
