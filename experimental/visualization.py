@@ -1,4 +1,3 @@
-# Under Construction
 from e3ga import *
 from three import *
 from browser import *
@@ -75,38 +74,24 @@ directionalLight = DirectionalLight(0x888888)
 directionalLight.position.set(0, 1, 0)
 scene.add(directionalLight)
 
-requestID = None
-progress = None
-progressEnd = 6000
-startTime =  None
+def setUp():
+    window.addEventListener("resize", onWindowResize, False)
+    onWindowResize(None)
 
-def render():
-        
+def tick(elapsed):
     renderer.render(scene, camera)
 
-def onWindowResize():
+def terminate(elapsed):
+    return elapsed > 6000
+
+def tearDown():
+    window.removeEventListener("resize", onWindowResize, False)
+    for canvas in document.getElementsByTagName("canvas"):
+        canvas.parentNode.removeChild(canvas)
+
+def onWindowResize(event):
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
     renderer.size = (window.innerWidth, window.innerHeight)
-    
-def animate(timestamp):
-    global requestID, progress, startTime
-    if (startTime):
-        progress = timestamp - startTime
-    else:
-        if (timestamp):
-            startTime = timestamp
-        else:
-            progress = 0
-        
-    if (progress < progressEnd):
-        requestID = window.requestAnimationFrame(animate)
-        render()
-    else:
-        window.cancelAnimationFrame(requestID)
 
-window.addEventListener("resize", onWindowResize, False)
-
-onWindowResize()
-
-animate(None)
+WindowAnimationRunner(window, tick, terminate, setUp).start()
