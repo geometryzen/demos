@@ -37,7 +37,7 @@ assertEqual(a.denom, 3)
 
 assertEqual(a, a)
 assertEqual(Fraction(16, -10).numer, -8)
-assertEqual(Fraction(16, -10).denom, Fraction(-8, 5).denom)
+assertEqual(Fraction(16, -10).denom, 5)
 
 print a
 b = Fraction(5,2)
