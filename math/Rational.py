@@ -28,7 +28,8 @@ else:
     print "Expecting error"
 
 a = Rational(1,3)
-assertEqual(str(a),"")
+assertEqual(str(a),"1/3")
+assertEqual(repr(a),"Rational(1,3)")
 print a
 b = Rational(5,2)
 print b
