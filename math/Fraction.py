@@ -52,3 +52,4 @@ assertEqual(a + b, Fraction(19, 6))
 assertEqual(a - b, Fraction(-11, 6))
 assertEqual(a * b, Fraction(5, 3))
 assertEqual(a / b, Fraction(4, 15))
+print "Done!"
