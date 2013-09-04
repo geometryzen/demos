@@ -25,7 +25,7 @@ try:
 except TypeError as e:
     assertEqual(str(e),"TypeError: denominator must be a int on line 24")
 else:
-    print "denominator must be an int."
+    print "Expecting error"
 
 a = Rational(1,3)
 print a
