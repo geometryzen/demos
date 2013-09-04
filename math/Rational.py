@@ -9,7 +9,7 @@ def assertEqual(actual, expect):
 try:
     x = Fraction(1,2,3)
 except AssertionError as e:
-    assertEqual(str(e),"AssertionError: Rational() takes exactly 2 arguments (3 given) on line 10")
+    assertEqual(str(e),"AssertionError: Fraction() takes exactly 2 arguments (3 given) on line 10")
 else:
     print "Expecting error"
 
