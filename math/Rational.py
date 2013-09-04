@@ -5,7 +5,8 @@ try:
 except AssertionError as e:
     print str(e)
     #print "I/O error({0}): {1}".format(e.errno, e.strerror)
-    pass
+else:
+    print "Expecting a Rational constructed with three arguments to raise an error."
 
 a = Rational(1,3)
 print a
