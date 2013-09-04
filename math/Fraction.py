@@ -28,6 +28,8 @@ else:
     print "Expecting error"
 
 a = Fraction(2,3)
+b = Fraction(5,2)
+
 assertEqual(str(a),"2/3")
 assertEqual(repr(a),"Fraction(2,3)")
 assertEqual(a.numerator, 2)
@@ -46,8 +48,7 @@ assertEqual(Fraction(123).denom, 1)
 assertEqual(Fraction().numer, 0)
 assertEqual(Fraction().denom, 1)
 
-print a
-b = Fraction(5,2)
+assertEquals(a + b, Fraction(19, 6))
 print b
 print a + b
 print a - b
