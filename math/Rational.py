@@ -4,6 +4,7 @@ try:
     x = Rational(1,2,3)
 except AssertionError as e:
     print type(e)
+    print e.args
     print str(e)
     #print "I/O error({0}): {1}".format(e.errno, e.strerror)
 else:
