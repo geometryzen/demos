@@ -1,4 +1,3 @@
-# CircleGeometry.py
 from three import *
 from browser import *
 from math import pi
@@ -32,35 +31,25 @@ progressEnd = 6000
 startTime =  None
 movement = Vector3(0.02, 0.02, 0.02)
 
-def render():
+def setUp():
+    window.addEventListener("resize", onWindowResize, False)
+    onWindowResize(None)
+
+def tick(elapsed):
     mesh.rotation += movement
-        
     renderer.render(scene, camera)
 
+def terminate(elapsed):
+    return elapsed > 6000
+
+def tearDown():
+    window.removeEventListener("resize", onWindowResize, False)
+    for canvas in document.getElementsByTagName("canvas"):
+        canvas.parentNode.removeChild(canvas)
+    
 def onWindowResize(event):
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
     renderer.size = (window.innerWidth, window.innerHeight)
     
-def step(timestamp):
-    global requestID, progress, startTime
-    if (startTime):
-        progress = timestamp - startTime
-    else:
-        if (timestamp):
-            startTime = timestamp
-        else:
-            progress = 0
-        
-    if (progress < progressEnd):
-        requestID = window.requestAnimationFrame(step)
-        render()
-    else:
-        window.cancelAnimationFrame(requestID)
-        # container.removeChild(renderer.domElement)
-
-window.addEventListener("resize", onWindowResize, False)
-
-onWindowResize(None)
-
-step(None)
+WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
