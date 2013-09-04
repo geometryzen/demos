@@ -1,6 +1,6 @@
 from units import *
 
-raise Exception('spam', 'eggs')
+#raise Exception('spam', 'eggs')
 
 # If the denominator is defined, Rational requires exactly two arguments.
 try:
