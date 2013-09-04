@@ -8,7 +8,13 @@ except AssertionError as e:
 else:
     print "Expecting a Rational constructed with three arguments to raise an error."
 
-Rational(1.1, 1)
+try
+    Rational(1.1, 1)
+except TypeError as e:
+    print e
+else
+    print "The numerator must be an int."
+
 a = Rational(1,3)
 print a
 b = Rational(5,2)
