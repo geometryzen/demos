@@ -30,7 +30,7 @@ else:
 try:
     Fraction(1, 0)
 except ZeroDivisionError as e:
-    assertEqual(str(e),"???")
+    assertEqual(str(e),"ZeroDivisionError: division by zero on line 31")
 else:
     print "Expecting ZeroDivisionError"
 
