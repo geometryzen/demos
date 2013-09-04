@@ -83,4 +83,11 @@ except ZeroDivisionError as e:
 else:
     print "Expecting ZeroDivisionError"
 
+try:
+    2 / Fraction(0, 1)
+except ZeroDivisionError as e:
+    assertEqual(str(e),"ZeroDivisionError: division by zero on line 87")
+else:
+    print "Expecting ZeroDivisionError"
+
 print "Done!"
