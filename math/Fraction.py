@@ -49,8 +49,7 @@ assertEqual(Fraction().numer, 0)
 assertEqual(Fraction().denom, 1)
 
 assertEqual(a + b, Fraction(19, 6))
-print b
-print a + b
-print a - b
+assertEqual(a - b, Fraction(-11, 6))
+
 print a * b
 print a / b
