@@ -35,6 +35,6 @@ def approximate_fraction(x, e):
     from x by no more than e."""
     return simplest_fraction_in_interval(x - e, x + e)
 
-assertEqual(approximate_fraction(6.75, 0.01), Fraction(27,5))
+assertEqual(approximate_fraction(6.75, 0.01), Fraction(27,4))
 print approximate_fraction(pi, 0.00001) # 355/113
 print approximate_fraction((1 + sqrt(5)) / 2, 0.00001) #377/233
