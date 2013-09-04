@@ -3,7 +3,7 @@ from units import *
 def assertEqual(actual, expect):
     if expect == actual:
         pass
-    else
+    else:
         print "{0},{1}".format(actual, expect)
 
 try:
