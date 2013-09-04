@@ -1,3 +1,3 @@
 from units import *
-a = Rational(1,2)
+a = Rational(1.1,2)
 print a
