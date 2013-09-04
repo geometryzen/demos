@@ -10,4 +10,4 @@ dv = g * dt
 
 print "dv => " + repr(dv)
 
-#print g * "hello"
+print g * "hello"
