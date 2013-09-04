@@ -1,7 +1,4 @@
 # Vector3 demonstration.
-# Aug 29, 2103.
-# THIS IS TEMPORARILY BROKEN WHILE WE DECOUPLE the three module from e3ga.
-# SORRY FOR THE INCONVENIENCE
 from three import *
 
 a = Vector3(1,1,1)
