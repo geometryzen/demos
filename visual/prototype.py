@@ -4,7 +4,6 @@ from browser import *
 scene = world()
 
 shape = cylinder()
-
 scene.add(shape)
 
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
@@ -39,7 +38,6 @@ def setUp():
     renderer.size = (window.innerWidth, window.innerHeight)
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
-
 
 def tearDown():
     discardCanvasElements()
