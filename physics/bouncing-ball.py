@@ -52,7 +52,7 @@ def integrate(n, t, dt):
     v += a * dt
     r += v * dt
     if r.z < 0:
-        # Why is this wrong?
+        # Why is this wrong? Hint: Consider sideways motion.
         # v = -v
         # The non-geometric solution.
         # v.z = -v.z
