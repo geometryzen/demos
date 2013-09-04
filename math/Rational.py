@@ -16,7 +16,7 @@ else:
 try:
     Rational(1.1, 2)
 except TypeError as e:
-    print e
+    assertEqual(str(e),"AssertionError: Rational() takes exactly 2 arguments (3 given) on line 10")
 else:
     print "numerator must be an int."
 
