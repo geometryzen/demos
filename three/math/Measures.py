@@ -11,5 +11,6 @@ dv = g * dt
 print "dv => " + repr(dv)
 
 print g * meter / second ** 2
+a = meter / second **2
 print repr(meter / second ** 2)
 print (meter / second ** 2) * g
