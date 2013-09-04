@@ -1,7 +1,5 @@
 from units import *
 
-raise Exception('spam', 'eggs')
-
 try:
     x = Rational(1,2,3)
 except AssertionError as e:
