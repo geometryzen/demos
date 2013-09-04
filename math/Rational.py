@@ -32,8 +32,8 @@ assertEqual(str(a),"2/3")
 assertEqual(repr(a),"Rational(2,3)")
 assertEqual(a.numerator, 2)
 assertEqual(a.denominator, 3)
-print a
 b = Rational(5,2)
+
 print b
 print a + b
 print a - b
