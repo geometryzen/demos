@@ -11,4 +11,4 @@ dv = g * dt
 print "dv => " + repr(dv)
 
 print g * meter / second ** 2
-print meter / second ** 2
+print (meter / second ** 2) * g
