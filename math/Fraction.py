@@ -27,6 +27,13 @@ except TypeError as e:
 else:
     print "Expecting error"
 
+try:
+    Fraction(1, 0)
+except TypeError as e:
+    assertEqual(str(e),"???")
+else:
+    print "Expecting ZeroDivisionError"
+
 a = Fraction(2,3)
 b = Fraction(5,2)
 
