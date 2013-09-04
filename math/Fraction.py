@@ -30,7 +30,7 @@ else:
 try:
     Fraction(1, 0)
 except ZeroDivisionError as e:
-    assertEqual(str(e),"ZeroDivisionError: division by zero on line 31")
+    assertEqual(str(e),"ZeroDivisionError: denominator must not be zero on line 31")
 else:
     print "Expecting ZeroDivisionError"
 
@@ -72,21 +72,21 @@ assertEqual(2 / a, Fraction(3, 1))
 try:
     a / 0
 except ZeroDivisionError as e:
-    assertEqual(str(e),"ZeroDivisionError: division by zero on line 73")
+    assertEqual(str(e),"ZeroDivisionError: denominator must not be zero on line 73")
 else:
     print "Expecting ZeroDivisionError"
 
 try:
     a / Fraction(0, 1)
 except ZeroDivisionError as e:
-    assertEqual(str(e),"ZeroDivisionError: division by zero on line 80")
+    assertEqual(str(e),"ZeroDivisionError: denominator must not be zero on line 80")
 else:
     print "Expecting ZeroDivisionError"
 
 try:
     2 / Fraction(0, 1)
 except ZeroDivisionError as e:
-    assertEqual(str(e),"ZeroDivisionError: division by zero on line 87")
+    assertEqual(str(e),"ZeroDivisionError: denominator must not be zero on line 87")
 else:
     print "Expecting ZeroDivisionError"
 
