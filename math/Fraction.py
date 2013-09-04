@@ -29,7 +29,7 @@ else:
 
 try:
     Fraction(1, 0)
-except TypeError as e:
+except ZeroDivisionError as e:
     assertEqual(str(e),"???")
 else:
     print "Expecting ZeroDivisionError"
