@@ -8,7 +8,14 @@ else:
     print "Expecting a Rational constructed with three arguments to raise an error."
 
 try:
-    Rational(1.1, 1)
+    Rational(1.1, 2)
+except TypeError as e:
+    print e
+else:
+    print "The numerator must be an int."
+
+try:
+    Rational(1, 2.2)
 except TypeError as e:
     print e
 else:
