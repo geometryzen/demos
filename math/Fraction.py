@@ -7,14 +7,14 @@ def assertEqual(actual, expect):
         print {"actual": actual, "expect": expect}
 
 try:
-    x = Fraction(1,2,3)
+    x = Rational(1,2,3)
 except AssertionError as e:
-    assertEqual(str(e),"AssertionError: Fraction() takes exactly 2 arguments (3 given) on line 10")
+    assertEqual(str(e),"AssertionError: Rational() takes exactly 2 arguments (3 given) on line 10")
 else:
     print "Expecting error"
 
 try:
-    Fraction(1.1, 2)
+    Rational(1.1, 2)
 except TypeError as e:
     assertEqual(str(e),"TypeError: numerator must be a int on line 17")
 else:
@@ -27,12 +27,12 @@ except TypeError as e:
 else:
     print "Expecting error"
 
-a = Fraction(2,3)
+a = Rational(2,3)
 assertEqual(str(a),"2/3")
-assertEqual(repr(a),"Fraction(2,3)")
+assertEqual(repr(a),"Rational(2,3)")
 assertEqual(a.numer, 2)
 print a
-b = Fraction(5,2)
+b = Rational(5,2)
 print b
 print a + b
 print a - b
