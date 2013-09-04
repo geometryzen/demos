@@ -69,4 +69,11 @@ assertEqual(2 * a, Fraction(4, 3))
 assertEqual(a / 2, Fraction(1, 3))
 assertEqual(2 / a, Fraction(3, 1))
 
+try:
+    a / Fraction(0, 1)
+except ZeroDivisionError as e:
+    assertEqual(str(e),"ZeroDivisionError: division by zero on line 73")
+else:
+    print "Expecting ZeroDivisionError"
+
 print "Done!"
