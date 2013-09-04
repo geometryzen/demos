@@ -1,4 +1,3 @@
-# OrthographicCamera demonstration.
 from three import *
 from browser import *
 from math import cos, sin, floor
