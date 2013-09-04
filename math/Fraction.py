@@ -32,10 +32,12 @@ assertEqual(str(a),"2/3")
 assertEqual(repr(a),"Fraction(2,3)")
 assertEqual(a.numerator, 2)
 assertEqual(a.denominator, 3)
+assertEqual(a.numer, 2)
+assertEqual(a.denom, 3)
 
 assertEqual(a, a)
-assertEqual(Fraction(16, -10).numerator, Fraction(-8, 5).numerator)
-assertEqual(Fraction(16, -10).denominator, Fraction(-8, 5).denominator)
+assertEqual(Fraction(16, -10).numer, Fraction(-8, 5).numer)
+assertEqual(Fraction(16, -10).denom, Fraction(-8, 5).denom)
 
 print a
 b = Fraction(5,2)
