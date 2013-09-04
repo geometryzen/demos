@@ -5,21 +5,21 @@ try:
 except AssertionError as e:
     print e
 else:
-    print "Expecting a Rational constructed with three arguments to raise an error."
+    print "Rational() takes exactly 2 arguments (3 given)"
 
 try:
     Rational(1.1, 2)
 except TypeError as e:
     print e
 else:
-    print "The numerator must be an int."
+    print "numerator must be an int."
 
 try:
     Rational(1, 2.2)
 except TypeError as e:
     print e
 else:
-    print "The numerator must be an int."
+    print "denominator must be an int."
 
 a = Rational(1,3)
 print a
