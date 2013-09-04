@@ -5,7 +5,7 @@ from math import pi
 for canvas in document.getElementsByTagName("canvas"):
     canvas.parentNode.removeChild(canvas)
 
-scene = world()
+scene = Scene()
 
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 100
