@@ -4,7 +4,7 @@ def assertEqual(actual, expect):
     if expect == actual:
         pass
     else:
-        x = {"actual": 1,"expect", 2}
+        x = {"wireframe":True, "wireframeLinewidth":3}
         pass
 
 try:
