@@ -28,6 +28,7 @@ else:
     print "Expecting error"
 
 a = Rational(1,3)
+assertEqual(str(a,"")
 print a
 b = Rational(5,2)
 print b
