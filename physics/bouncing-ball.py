@@ -49,6 +49,9 @@ def integrate(n, t, dt):
     global r, v
     print "dt => " + repr(dt)
     a = F(r, v, t)/m
+    print "F => " + repr(F(r, v, t))
+    print "m => " + repr(m)
+    print "a => " + repr(a)
     v += a * dt
     print a * dt
     r += v * dt
