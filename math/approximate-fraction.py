@@ -1,6 +1,12 @@
 from fractions import Fraction
 from math import modf, pi, sqrt
 
+def assertEqual(actual, expect):
+    if expect == actual:
+        pass
+    else:
+        print {"actual": actual, "expect": expect}
+
 def simplest_fraction_in_interval(x, y):
     """Return the fraction with the lowest denominator in [x,y]."""
     if x == y:
@@ -29,6 +35,6 @@ def approximate_fraction(x, e):
     from x by no more than e."""
     return simplest_fraction_in_interval(x - e, x + e)
 
-print approximate_fraction(6.75, 0.01) # 27/4
+assertEqual(approximate_fraction(6.75, 0.01), Fraction(27,5))
 print approximate_fraction(pi, 0.00001) # 355/113
 print approximate_fraction((1 + sqrt(5)) / 2, 0.00001) #377/233
