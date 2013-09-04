@@ -5,3 +5,4 @@ b = Rational(5,2)
 print b
 print a + b
 print a - b
+print a * b
