@@ -1,4 +1,5 @@
 from units import *
+
 try
     x = Rational(1,2,3)
 except AssertionError
