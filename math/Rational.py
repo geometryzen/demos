@@ -8,6 +8,7 @@ except AssertionError as e:
 else:
     print "Expecting a Rational constructed with three arguments to raise an error."
 
+# The numerator must be an int.
 try:
     Rational(1.1, 1)
 except TypeError as e:
