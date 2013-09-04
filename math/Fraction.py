@@ -34,7 +34,8 @@ assertEqual(a.numerator, 2)
 assertEqual(a.denominator, 3)
 
 assertEqual(a, a)
-assertEqual(Fraction(16, -10).numerator, Fraction(4, 6).numerator)
+assertEqual(Fraction(16, -10).numerator, Fraction(-8, 5).numerator)
+assertEqual(Fraction(16, -10).denominator, Fraction(-8, 5).denominator)
 
 print a
 b = Fraction(5,2)
