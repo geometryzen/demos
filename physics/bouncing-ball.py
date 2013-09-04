@@ -59,6 +59,7 @@ def integrate(n, t, dt):
         # The geometric solution
         v = - k * v * k
         r.z = -r.z
+    print r
     particle.position.set(r.x, r.y, r.z)
 
 renderer = WebGLRenderer()
