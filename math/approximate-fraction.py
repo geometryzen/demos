@@ -38,3 +38,4 @@ def approximate_fraction(x, e):
 assertEqual(approximate_fraction(6.75, 0.01), Fraction(27,4))
 assertEqual(approximate_fraction(pi, 0.00001), Fraction(355, 113))
 assertEqual(approximate_fraction((1 + sqrt(5)) / 2, 0.00001), Fraction(377, 233))
+print "Done!"
