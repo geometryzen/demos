@@ -1,5 +1,5 @@
 from fractions import Fraction
-from math import modf
+from math import modf, pi, sqrt
 
 def simplest_fraction_in_interval(x, y):
     """Return the fraction with the lowest denominator in [x,y]."""
@@ -30,5 +30,5 @@ def approximate_fraction(x, e):
     return simplest_fraction_in_interval(x - e, x + e)
 
 print approximate_fraction(6.75, 0.01) # 27/4
-print approximate_fraction(math.pi, 0.00001) # 355/113
-print approximate_fraction((1 + math.sqrt(5)) / 2, 0.00001) #377/233
+print approximate_fraction(pi, 0.00001) # 355/113
+print approximate_fraction((1 + sqrt(5)) / 2, 0.00001) #377/233
