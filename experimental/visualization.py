@@ -94,4 +94,4 @@ def onWindowResize(event):
     camera.updateProjectionMatrix()
     renderer.size = (window.innerWidth, window.innerHeight)
 
-WindowAnimationRunner(window, tick, terminate, setUp).start()
+WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
