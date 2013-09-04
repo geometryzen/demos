@@ -23,7 +23,7 @@ else:
 try:
     Rational(1, 2.2)
 except TypeError as e:
-    print e
+    assertEqual(str(e),"TypeError: numerator must be a int on line 17")
 else:
     print "denominator must be an int."
 
