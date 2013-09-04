@@ -21,7 +21,7 @@ else:
     print "Expecting error"
 
 try:
-    Fraction(1, 2.2)
+    Rational(1, 2.2)
 except TypeError as e:
     assertEqual(str(e),"TypeError: denominator must be a int on line 24")
 else:
