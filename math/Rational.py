@@ -27,9 +27,10 @@ except TypeError as e:
 else:
     print "Expecting error"
 
-a = Rational(1,3)
-assertEqual(str(a),"1/3")
-assertEqual(repr(a),"Rational(1,3)")
+a = Rational(2,3)
+assertEqual(str(a),"2/3")
+assertEqual(repr(a),"Rational(2,3)")
+assertEqual(a.numer, 2)
 print a
 b = Rational(5,2)
 print b
