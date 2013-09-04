@@ -1,4 +1,3 @@
-# RegExp.py
 import re
 s = 'aggatcgtaggcatgctgggcctatactggactc'
 p = 'gga'
