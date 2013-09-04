@@ -12,7 +12,7 @@ try:
     Rational(1.1, 1)
 except TypeError as e:
     print e
-else
+else:
     print "The numerator must be an int."
 
 a = Rational(1,3)
