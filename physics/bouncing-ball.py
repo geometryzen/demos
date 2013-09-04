@@ -48,13 +48,7 @@ def integrate(n, t, dt):
     # TODO: Otherwise, the ball will gain/lose energy.
     global r, v
     a = F(r, v, t)/m
-    print "F  => " + repr(F(r, v, t))
-    print "m  => " + repr(m)
-    print "a  => " + repr(a)
-    print "dt => " + repr(dt)
-    print "a * dt => " + repr(a * dt)
     v += a * dt
-    print "v  => " + repr(v)
     r += v * dt
     if r.z < 0:
         # Why is this wrong? Hint: Consider sideways motion.
