@@ -1,15 +1,14 @@
 # Vector3 demonstration.
 # Aug 29, 2103.
 # THIS IS TEMPORARILY BROKEN WHILE WE DECOUPLE the three module from e3ga.
-# SORRY FOR THE INCONVENIENCE.
+# SORRY FOR THE INCONVENIENCE
 from three import *
 
 a = Vector3(1,1,1)
 
 print str(a)
 print repr(a)
-print str(type(a))
-print repr(type(a))
+print type(a)
 
 a.x = 7
 a.y = 6
