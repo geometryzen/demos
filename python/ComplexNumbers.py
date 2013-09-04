@@ -1,4 +1,3 @@
-# Complex Numbers
 from cmath import *
 
 z = complex(11.0, 7.0)
