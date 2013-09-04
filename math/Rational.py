@@ -1,5 +1,7 @@
 from units import *
 
+raise Exception('spam', 'eggs')
+
 # If the denominator is defined, Rational requires exactly two arguments.
 try:
     x = Rational(1,2,3)
