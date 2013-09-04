@@ -29,4 +29,6 @@ def approximate_fraction(x, e):
     from x by no more than e."""
     return simplest_fraction_in_interval(x - e, x + e)
 
-print approximate_fraction(6.75, 0.01)
+print approximate_fraction(6.75, 0.01) # 27/4
+print approximate_fraction(math.pi, 0.00001) # 355/113
+print approximate_fraction((1 + math.sqrt(5)) / 2, 0.00001) #377/233
