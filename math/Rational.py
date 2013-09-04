@@ -4,7 +4,7 @@ def assertEqual(actual, expect):
     if expect == actual:
         pass
     else:
-        print {"actual": actual,"expect", expect}
+        print str({"actual": actual,"expect", expect})
 
 try:
     x = Rational(1,2,3)
