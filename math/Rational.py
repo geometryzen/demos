@@ -4,8 +4,7 @@ def assertEqual(actual, expect):
     if expect == actual:
         pass
     else:
-        x = {"actual":actual, "wireframeLinewidth":3}
-        pass
+        print {"actual":actual, "wireframeLinewidth":3}
 
 try:
     x = Rational(1,2,3)
