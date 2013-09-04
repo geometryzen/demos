@@ -16,9 +16,9 @@ else:
 try:
     Rational(1.1, 2)
 except TypeError as e:
-    assertEqual(str(e),"AssertionError: Rational() takes exactly 2 arguments (3 given) on line 10")
+    assertEqual(str(e),"TypeError: numerator must be a int on line 17")
 else:
-    print "numerator must be an int."
+    print "Expecting error"
 
 try:
     Rational(1, 2.2)
