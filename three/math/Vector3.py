@@ -60,7 +60,7 @@ print i
 print j
 print k
 print i + j
-print i + 3
+print i + 3,7
 print 3 + i
 print i - j
 print i - 3
