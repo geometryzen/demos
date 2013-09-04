@@ -2,7 +2,6 @@ from units import *
 
 raise Exception('spam', 'eggs')
 
-# If the denominator is defined, Rational requires exactly two arguments.
 try:
     x = Rational(1,2,3)
 except AssertionError as e:
@@ -10,7 +9,6 @@ except AssertionError as e:
 else:
     print "Expecting a Rational constructed with three arguments to raise an error."
 
-# The numerator must be an int.
 try:
     Rational(1.1, 1)
 except TypeError as e:
