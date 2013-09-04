@@ -1,4 +1,3 @@
-# Vector3 demonstration.
 from three import *
 
 a = Vector3(1,1,1)
