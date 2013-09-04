@@ -47,7 +47,7 @@ def integrate(n, t, dt):
     # TODO: The accuracy should be improved using interpolation on impact.
     # TODO: Otherwise, the ball will gain/lose energy.
     global r, v
-    print "dt => " + str(dt)
+    print "dt => " + repr(dt)
     a = F(r, v, t)/m
     v += a * dt
     print a * dt
