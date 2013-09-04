@@ -45,7 +45,7 @@ def integrate(n, t, dt):
     a = F(x, v, t) / m
     v += a * dt
     x += v * dt
-    particle.position = x
+    particle.position.set(x.x, x.y, x.z)
 
 renderer = WebGLRenderer()
 renderer.setClearColor(0x080808, 1.0)
