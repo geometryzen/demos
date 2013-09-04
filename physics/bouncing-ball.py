@@ -52,8 +52,9 @@ def integrate(n, t, dt):
     print "F => " + repr(F(r, v, t))
     print "m => " + repr(m)
     print "a => " + repr(a)
+    print "a * dt => " + repr(a * dt)
     v += a * dt
-    print a * dt
+    print "v => " + repr(v)
     r += v * dt
     if r.z < 0:
         # Why is this wrong? Hint: Consider sideways motion.
@@ -63,7 +64,6 @@ def integrate(n, t, dt):
         # The geometric solution
         v = - k * v * k
         r.z = -r.z
-    print r
     particle.position.set(r.x, r.y, r.z)
 
 renderer = WebGLRenderer()
