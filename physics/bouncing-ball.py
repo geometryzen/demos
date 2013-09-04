@@ -50,7 +50,7 @@ def integrate(n, t, dt):
 
     a = F(r, v, t)/m
     v += a * dt
-    print v
+    print a * dt
     r += v * dt
     if r.z < 0:
         # Why is this wrong? Hint: Consider sideways motion.
