@@ -33,7 +33,8 @@ assertEqual(repr(a),"Fraction(2,3)")
 assertEqual(a.numerator, 2)
 assertEqual(a.denominator, 3)
 
-assertEqual(a,a)
+assertEqual(a, a)
+assertEqual(a, Fraction(4, 6))
 
 print a
 b = Fraction(5,2)
