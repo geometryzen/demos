@@ -30,7 +30,8 @@ else:
 a = Fraction(2,3)
 assertEqual(str(a),"2/3")
 assertEqual(repr(a),"Fraction(2,3)")
-assertEqual(a.numer, 2)
+assertEqual(a.numerator, 2)
+assertEqual(a.denominator, 2)
 print a
 b = Fraction(5,2)
 print b
