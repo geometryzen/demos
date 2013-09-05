@@ -21,7 +21,7 @@ def discardCanvasElements():
         element.parentNode.removeChild(element)
 
 def tick(elapsed):
-    shape.rotation += movement
+    shape.rotation += 3#movement
     renderer.render(scene, camera)
     
 def terminate(elapsed):
