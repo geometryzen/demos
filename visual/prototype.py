@@ -5,7 +5,7 @@ scene = world()
 
 shape = cylinder()
 shape.name = "rod"
-shape.matrixAutoUpdate = True
+shape.matrixAutoUpdate = 1
 scene.add(shape)
 
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
