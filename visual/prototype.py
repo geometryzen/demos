@@ -5,6 +5,7 @@ scene = world()
 
 shape = cylinder()
 shape.name = "rod"
+shape.overdraw = 23
 scene.add(shape)
 
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
