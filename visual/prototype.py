@@ -5,7 +5,7 @@ scene = world()
 
 shape = cylinder()
 shape.name = "rod"
-shape.visible = True
+shape.visible = 123
 scene.add(shape)
 
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
