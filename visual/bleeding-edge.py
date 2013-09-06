@@ -3,7 +3,7 @@ from geometry import Scene, CartesianSpace, world, cylinder, PerspectiveCamera, 
 from browser import document, window, WindowAnimationRunner
 
 scene = world()
-space = CartesianSpace()
+space = CartesianSpace(scene)
 
 shape = cylinder()
 scene.add(shape)
