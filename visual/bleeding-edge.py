@@ -17,7 +17,8 @@ def discardCanvasElements():
 
 def tick(elapsed):
     shape.rotation += movement
-    space.renderer.render(space.scene, space.camera)
+    space.render()
+    #space.renderer.render(space.scene, space.camera)
     
 def terminate(elapsed):
     return elapsed > 6000
