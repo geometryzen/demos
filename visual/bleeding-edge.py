@@ -1,4 +1,3 @@
-# TODO: We don't want world and shapes to come from three anymore.
 from geometry import Scene, CartesianSpace, world, cylinder, PerspectiveCamera, WebGLRenderer, Color, Vector3
 from browser import document, window, WindowAnimationRunner
 
@@ -18,7 +17,6 @@ def discardCanvasElements():
 def tick(elapsed):
     shape.rotation += movement
     space.render()
-    #space.renderer.render(space.scene, space.camera)
     
 def terminate(elapsed):
     return elapsed > 6000
