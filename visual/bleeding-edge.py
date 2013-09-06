@@ -1,9 +1,9 @@
-from geometry import CartesianSpace, cube
+from geometry import CartesianSpace, cylinder
 from browser import document, window, WindowAnimationRunner
 
 space = CartesianSpace()
 
-space.add(cube())
+space.add(cylinder())
 
 container = None
 
