@@ -7,8 +7,7 @@ space = CartesianSpace(world())
 shape = cylinder()
 space.add(shape)
 
-renderer = WebGLRenderer()
-renderer.setClearColor(Color(0x080808), 1.0)
+space.renderer.setClearColor(Color(0x080808), 1.0)
 container = None
 
 movement = Vector3(0.02, 0.02, 0.02)
@@ -19,7 +18,7 @@ def discardCanvasElements():
 
 def tick(elapsed):
     shape.rotation += movement
-    renderer.render(space.scene, space.camera)
+    space.renderer.render(space.scene, space.camera)
     
 def terminate(elapsed):
     return elapsed > 6000
@@ -30,7 +29,7 @@ def setUp():
     discardCanvasElements()
 
     document.body.insertBefore(renderer.domElement, document.body.firstChild)
-    renderer.size = (window.innerWidth, window.innerHeight)
+    space.renderer.size = (window.innerWidth, window.innerHeight)
     space.camera.aspect = window.innerWidth / window.innerHeight
     space.camera.updateProjectionMatrix()
 
