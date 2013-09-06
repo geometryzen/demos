@@ -1,5 +1,5 @@
 # TODO: We don't want world and shapes to come from three anymore.
-from visual import EuclideanGeometry3, world, cylinder, PerspectiveCamera, WebGLRenderer, Color, Vector3
+from visual import EuclideanMetric3, world, cylinder, PerspectiveCamera, WebGLRenderer, Color, Vector3
 from browser import document, window, WindowAnimationRunner
 
 metric = EuclideanMetric3()
