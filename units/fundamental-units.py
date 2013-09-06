@@ -1,7 +1,7 @@
 from units import *
 
 # Construct the Plank units for Length, Mass and Time.
-c = 3e+8 * meter / second
+c = 2.998e+8 * meter / second
 print "speed of light, c=" + str(c)
 
 h = 6.6e-34 * joule * second
