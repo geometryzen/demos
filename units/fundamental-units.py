@@ -4,8 +4,8 @@ from units import *
 c = 2.998e+8 * meter / second
 print "speed of light, c=" + str(c)
 
-h = 1.054e-34 * joule * second
-print "Planck's constant, h=" + str(h)
+hbar = 1.054e-34 * joule * second
+print "Planck's constant, hbar=" + str(hbar)
 
 G = 6.67e-11 * newton * (meter ** 2) / (kilogram ** 2)
 print "Universal gravitational constant, G=" + str(G)
