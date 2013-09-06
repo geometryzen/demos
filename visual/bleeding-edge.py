@@ -2,9 +2,7 @@
 from geometry import Scene, CartesianSpace, world, cylinder, PerspectiveCamera, WebGLRenderer, Color, Vector3
 from browser import document, window, WindowAnimationRunner
 
-scene = world()
-
-space = CartesianSpace(scene)
+space = CartesianSpace(world())
 
 shape = cylinder()
 space.add(shape)
@@ -20,7 +18,7 @@ def discardCanvasElements():
 
 def tick(elapsed):
     shape.rotation += movement
-    renderer.render(scene, space.camera)
+    renderer.render(space.scene, space.camera)
     
 def terminate(elapsed):
     return elapsed > 6000
