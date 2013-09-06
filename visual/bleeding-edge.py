@@ -7,7 +7,6 @@ space = CartesianSpace(world())
 shape = cylinder()
 space.add(shape)
 
-space.renderer.setClearColor(Color(0x080808), 1.0)
 container = None
 
 movement = Vector3(0.02, 0.02, 0.02)
