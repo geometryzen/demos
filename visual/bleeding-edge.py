@@ -2,7 +2,7 @@
 from geometry import Scene, CartesianSpace, cylinder, PerspectiveCamera, WebGLRenderer, Color, Vector3
 from browser import document, window, WindowAnimationRunner
 
-scene = Scene()
+scene = world()
 space = CartesianSpace()
 
 shape = cylinder()
