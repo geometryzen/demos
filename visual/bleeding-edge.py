@@ -1,7 +1,7 @@
 from geometry import CartesianSpace, world, cylinder, Color, Vector3
 from browser import document, window, WindowAnimationRunner
 
-space = CartesianSpace(world())
+space = CartesianSpace()
 
 shape = cylinder()
 space.add(shape)
