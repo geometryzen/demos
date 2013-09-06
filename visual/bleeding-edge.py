@@ -2,14 +2,14 @@
 from geometry import CartesianSpace, cylinder, PerspectiveCamera, WebGLRenderer, Color, Vector3
 from browser import document, window, WindowAnimationRunner
 
-scene = CartesianSpace()
+space = CartesianSpace()
 
 shape = cylinder()
-scene.add(shape)
+space.add(shape)
 
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.set(8, 8, 8)
-camera.lookAt(scene.origin)
+camera.lookAt(space.origin)
 
 renderer = None
 container = None
