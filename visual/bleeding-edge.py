@@ -3,8 +3,7 @@ from browser import document, window, WindowAnimationRunner
 
 space = CartesianSpace()
 
-shape = cylinder()
-space.add(shape)
+space.add(cube())
 
 container = None
 
