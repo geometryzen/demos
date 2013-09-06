@@ -7,7 +7,7 @@ print "speed of light, c=" + str(c)
 h = 6.6e-34 * joule * second
 print "Planck's constant, h=" + str(h)
 
-G = 6.7e-11 * newton * (meter ** 2) / (kilogram ** 2)
+G = 6.67e-11 * newton * (meter ** 2) / (kilogram ** 2)
 print "Universal gravitational constant, G=" + str(G)
 
 print ""
