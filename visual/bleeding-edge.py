@@ -7,7 +7,8 @@ space = CartesianSpace(world())
 shape = cylinder()
 space.add(shape)
 
-renderer = None
+renderer = WebGLRenderer()
+renderer.setClearColor(Color(0x080808), 1.0)
 container = None
 
 movement = Vector3(0.02, 0.02, 0.02)
@@ -27,9 +28,6 @@ def setUp():
     global renderer
 
     discardCanvasElements()
-
-    renderer = WebGLRenderer()
-    renderer.setClearColor(Color(0x080808), 1.0)
 
     document.body.insertBefore(renderer.domElement, document.body.firstChild)
     renderer.size = (window.innerWidth, window.innerHeight)
