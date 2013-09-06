@@ -11,11 +11,11 @@ G = 6.67e-11 * newton * (meter ** 2) / (kilogram ** 2)
 print "Universal gravitational constant, G=" + str(G)
 
 print ""
-lp = (h * G / c ** 3) ** 0.5
+lp = (hbar * G / c ** 3) ** 0.5
 print "Planck length: " + str(lp)
 
-mp = (h * c / G) ** 0.5
+mp = (hbar * c / G) ** 0.5
 print "Planck mass:   " + str(mp)
 
-tp = (h * G / c ** 5) ** 0.5
+tp = (hbar * G / c ** 5) ** 0.5
 print "Planck time:   " + str(tp)
