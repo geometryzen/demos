@@ -1,4 +1,4 @@
-from three import world, cylinder, PerspectiveCamera, WebGLRenderer, Vector3
+from three import world, cylinder, PerspectiveCamera, WebGLRenderer, Color, Vector3
 from browser import *
 
 scene = world()
