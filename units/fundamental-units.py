@@ -23,6 +23,7 @@ print "Planck length: " + str(lp/cm) + " cm"
 mp = (hbar * c / G) ** 0.5
 print "Planck mass:   " + str(mp)
 print "Planck mass:   " + str(mp/gram) + " gram"
+print "Planck mass:   " + str(mp/milligram) + " milligram"
 print "Planck mass:   " + str(mp/mosquito) + " mosquito"
 
 tp = (hbar * G / c ** 5) ** 0.5
