@@ -1,4 +1,4 @@
-from geometry import CartesianSpace, cylinder
+from geometry import CartesianSpace, cube
 from browser import document, window, WindowAnimationRunner
 
 space = CartesianSpace()
