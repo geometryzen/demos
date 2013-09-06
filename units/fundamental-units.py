@@ -20,7 +20,7 @@ print "Planck length: " + str(lp/cm) + " cm"
 
 mp = (hbar * c / G) ** 0.5
 print "Planck mass:   " + str(mp)
-print "Planck mass:   " + str(mp/gram)
+print "Planck mass:   " + str(mp/gram) + " grams"
 
 tp = (hbar * G / c ** 5) ** 0.5
 print "Planck time:   " + str(tp)
