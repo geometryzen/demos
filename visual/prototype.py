@@ -1,3 +1,4 @@
+# TODO: We don't want world and cylinder to come from three anymore.
 from three import world, cylinder, PerspectiveCamera, WebGLRenderer, Color, Vector3
 from browser import document, window, WindowAnimationRunner
 
