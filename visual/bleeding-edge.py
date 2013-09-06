@@ -3,13 +3,15 @@ from geometry import Scene, CartesianSpace, world, cylinder, PerspectiveCamera, 
 from browser import document, window, WindowAnimationRunner
 
 scene = world()
-space = CartesianSpace(scene)
+
+camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
+camera.position.set(8, 8, 8)
+
+space = CartesianSpace(scene, camera)
 
 shape = cylinder()
 space.add(shape)
 
-camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
-camera.position.set(8, 8, 8)
 camera.lookAt(space.origin)
 
 renderer = None
