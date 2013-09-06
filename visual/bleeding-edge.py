@@ -5,7 +5,7 @@ space = CartesianSpace()
 
 space.add(cylinder())
 
-container = None
+#container = None
 
 def discardCanvasElements():
     for element in document.getElementsByTagName("canvas"):
