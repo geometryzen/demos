@@ -3,6 +3,7 @@ from visual import EuclideanGeometry3, world, cylinder, PerspectiveCamera, WebGL
 from browser import document, window, WindowAnimationRunner
 
 world = EuclideanGeometry3()
+
 scene = world()
 
 shape = cylinder()
