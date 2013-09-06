@@ -1,10 +1,8 @@
 # TODO: We don't want world and shapes to come from three anymore.
-from geometry import CartesianSpace, world, cylinder, PerspectiveCamera, WebGLRenderer, Color, Vector3
+from geometry import CartesianSpace, cylinder, PerspectiveCamera, WebGLRenderer, Color, Vector3
 from browser import document, window, WindowAnimationRunner
 
-metric = CartesianSpace()
-
-scene = world()
+scene = CartesianSpace()
 
 shape = cylinder()
 scene.add(shape)
