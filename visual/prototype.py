@@ -17,7 +17,7 @@ container = None
 movement = Vector3(0.02, 0.02, 0.02)
 
 def discardCanvasElements():
-    for element in document.getElementsByTagName(123):#"canvas"):
+    for element in document.getElementsByTagName("canvas"):
         element.parentNode.removeChild(element)
 
 def tick(elapsed):
