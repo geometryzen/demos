@@ -2,7 +2,7 @@
 from visual import EuclideanGeometry3, world, cylinder, PerspectiveCamera, WebGLRenderer, Color, Vector3
 from browser import document, window, WindowAnimationRunner
 
-world = EuclideanGeometry3()
+metric = EuclideanGeometry3()
 
 scene = world()
 
