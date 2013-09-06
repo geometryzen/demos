@@ -12,7 +12,7 @@ space = CartesianSpace(scene, camera)
 shape = cylinder()
 space.add(shape)
 
-camera.lookAt(space.origin)
+#camera.lookAt(space.origin)
 
 renderer = None
 container = None
