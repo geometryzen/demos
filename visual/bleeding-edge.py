@@ -7,7 +7,7 @@ scene = world()
 cam = PerspectiveCamera(45, 1.0, 0.1, 10000)
 cam.position.set(8, 8, 8)
 
-space = CartesianSpace(scene, cam)
+space = CartesianSpace(scene)
 
 shape = cylinder()
 space.add(shape)
