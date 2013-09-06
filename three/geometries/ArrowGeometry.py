@@ -1,7 +1,7 @@
 # ArrowGeometry is not a standard Geometry in the Three.js library.
 # It is created from the LatheGeometry using a set of points that create the cone and shaft
 # of an arrow.
-from three import Scene, PerspectiveCamera, ArrowGeometry, MeshNormalMaterial, Mesh, AmbientLight, PointLight
+from three import Scene, PerspectiveCamera, ArrowGeometry, MeshNormalMaterial, Mesh, AmbientLight, PointLight, DirectionalLight
 from browser import document, window, WindowAnimationRunner
 
 scene = Scene()
