@@ -4,10 +4,10 @@ from browser import document, window, WindowAnimationRunner
 
 scene = world()
 
-camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
-camera.position.set(8, 8, 8)
+cam = PerspectiveCamera(45, 1.0, 0.1, 10000)
+cam.position.set(8, 8, 8)
 
-space = CartesianSpace(scene, camera)
+space = CartesianSpace(scene, cam)
 
 shape = cylinder()
 space.add(shape)
@@ -25,7 +25,7 @@ def discardCanvasElements():
 
 def tick(elapsed):
     shape.rotation += movement
-    renderer.render(scene, camera)
+    renderer.render(scene, space.camera)
     
 def terminate(elapsed):
     return elapsed > 6000
@@ -40,8 +40,8 @@ def setUp():
 
     document.body.insertBefore(renderer.domElement, document.body.firstChild)
     renderer.size = (window.innerWidth, window.innerHeight)
-    camera.aspect = window.innerWidth / window.innerHeight
-    camera.updateProjectionMatrix()
+    space.camera.aspect = window.innerWidth / window.innerHeight
+    space.camera.updateProjectionMatrix()
 
 def tearDown():
     discardCanvasElements()
