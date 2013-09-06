@@ -4,7 +4,6 @@ cm = 0.01 * meter
 gram = 0.001 * kilogram
 milligram = 0.001 * gram
 mosquito = 10 * milligram
-print mosquito
 
 # Construct the Plank units for Length, Mass and Time.
 c = 2.998e+8 * meter / second
