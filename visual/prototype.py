@@ -1,4 +1,4 @@
-from three import world, Vector3
+from three import world, cylinder, Vector3
 from browser import *
 
 scene = world()
