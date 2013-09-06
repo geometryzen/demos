@@ -1,4 +1,4 @@
-from geometry import Scene, CartesianSpace, world, cylinder, PerspectiveCamera, WebGLRenderer, Color, Vector3
+from geometry import Scene, CartesianSpace, world, cylinder, Color, Vector3
 from browser import document, window, WindowAnimationRunner
 
 space = CartesianSpace(world())
