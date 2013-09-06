@@ -1,4 +1,4 @@
-from units import *
+from units import meter
 
 # Construct the Plank units for Length, Mass and Time.
 c = 2.998e+8 * meter / second
