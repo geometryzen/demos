@@ -2,6 +2,7 @@
 from visual import world, cylinder, PerspectiveCamera, WebGLRenderer, Color, Vector3
 from browser import document, window, WindowAnimationRunner
 
+world = World();
 scene = world()
 
 shape = cylinder()
