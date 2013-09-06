@@ -2,6 +2,7 @@ from units import kilogram, meter, second, joule, newton
 
 cm = 0.01 * meter
 gram = 0.001 * kilogram
+mosquito = 10 * 0.001 * gram
 
 # Construct the Plank units for Length, Mass and Time.
 c = 2.998e+8 * meter / second
@@ -20,7 +21,8 @@ print "Planck length: " + str(lp/cm) + " cm"
 
 mp = (hbar * c / G) ** 0.5
 print "Planck mass:   " + str(mp)
-print "Planck mass:   " + str(mp/gram) + " g"
+print "Planck mass:   " + str(mp/gram) + " gram"
+print "Planck mass:   " + str(mp/mosquito) + " mosquito"
 
 tp = (hbar * G / c ** 5) ** 0.5
 print "Planck time:   " + str(tp)
