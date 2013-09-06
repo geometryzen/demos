@@ -1,4 +1,4 @@
-from geometry import CartesianSpace, world, cylinder, Color, Vector3
+from geometry import CartesianSpace, cylinder, Vector3
 from browser import document, window, WindowAnimationRunner
 
 space = CartesianSpace()
@@ -15,7 +15,6 @@ def discardCanvasElements():
         element.parentNode.removeChild(element)
 
 def tick(elapsed):
-    shape.rotation += movement
     space.render()
     
 def terminate(elapsed):
