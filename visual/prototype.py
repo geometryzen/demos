@@ -1,5 +1,5 @@
 from three import world, cylinder, PerspectiveCamera, WebGLRenderer, Color, Vector3
-from browser import window, WindowAnimationRunner
+from browser import document, window, WindowAnimationRunner
 
 scene = world()
 
