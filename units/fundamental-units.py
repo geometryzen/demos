@@ -3,6 +3,7 @@ from units import kilogram, meter, second, joule, newton
 cm = 0.01 * meter
 gram = 0.001 * kilogram
 mosquito = 10 * 0.001 * gram
+print mosquito
 
 # Construct the Plank units for Length, Mass and Time.
 c = 2.998e+8 * meter / second
