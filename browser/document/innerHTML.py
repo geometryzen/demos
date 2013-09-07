@@ -5,3 +5,4 @@ print repr(pre)
 pre.innerHTML = '''
 <h1>Hello!</h1>
 '''
+pre.innerHTML = 6
