@@ -5,8 +5,6 @@ space = CartesianSpace()
 
 space.add(cylinder())
 
-#container = None
-
 def discardCanvasElements():
     for element in document.getElementsByTagName("canvas"):
         element.parentNode.removeChild(element)
@@ -22,7 +20,7 @@ def setUp():
     discardCanvasElements()
 
     document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
-    space.renderer.size = (window.innerWidth, window.innerHeight)
+    space.renderer.setSize(window.innerWidth, window.innerHeight)
     space.camera.aspect = window.innerWidth / window.innerHeight
     space.camera.updateProjectionMatrix()
 
