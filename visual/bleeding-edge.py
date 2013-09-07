@@ -18,9 +18,7 @@ def setUp():
     discardCanvasElements()
 
     document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
-    space.viewSize(window.innerWidth, window.innerHeight);
-    space.camera.aspect = window.innerWidth / window.innerHeight
-    space.camera.updateProjectionMatrix()
+    space.viewSize(window.innerWidth, window.innerHeight)
 
 def tearDown():
     discardCanvasElements()
