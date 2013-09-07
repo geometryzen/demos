@@ -16,14 +16,14 @@ else:
 try:
     Rational(1.1, 2)
 except TypeError as e:
-    assertEqual(str(e),"TypeError: numerator must be a int on line 17")
+    assertEqual(str(e),"TypeError: numerator must be a <type 'int'> on line 17")
 else:
     print "Expecting error"
 
 try:
     Rational(1, 2.2)
 except TypeError as e:
-    assertEqual(str(e),"TypeError: denominator must be a int on line 24")
+    assertEqual(str(e),"TypeError: denominator must be a <type 'int'> on line 24")
 else:
     print "Expecting error"
 
