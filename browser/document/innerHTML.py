@@ -8,5 +8,5 @@ print repr(pre)
 pre.innerHTML = '''
 <h1>Hello!</h1>
 '''
-print type(ddd)
+print type(pre)
 pre.innerHTML = 6
