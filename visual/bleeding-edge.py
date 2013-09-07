@@ -1,9 +1,7 @@
-from geometry import CartesianSpace, cylinder
+from geometry import CartesianSpace
 from browser import document, window, WindowAnimationRunner
 
 space = CartesianSpace()
-
-space.add(cylinder())
 
 def discardCanvasElements():
     for element in document.getElementsByTagName("canvas"):
