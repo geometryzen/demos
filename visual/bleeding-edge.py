@@ -4,10 +4,6 @@ from browser import *
 space = CartesianSpace()
 space.add(cylinder())
 
-def discardCanvasElements():
-    for element in document.getElementsByTagName("canvas"):
-        element.parentNode.removeChild(element)
-
 def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
 
