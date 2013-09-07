@@ -16,7 +16,7 @@ else:
 try:
     Fraction(1.1, 2)
 except TypeError as e:
-    assertEqual(str(e),"TypeError: numerator must be a int on line 17")
+    assertEqual(str(e),"TypeError: numerator must be a <type 'int'> on line 17")
 else:
     print "Expecting error"
 
