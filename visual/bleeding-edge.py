@@ -20,7 +20,7 @@ def setUp():
     discardCanvasElements()
 
     document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
-    space.renderer.setSize(window.innerWidth, window.innerHeight)
+    #space.renderer.setSize(window.innerWidth, window.innerHeight)
     space.camera.aspect = window.innerWidth / window.innerHeight
     space.camera.updateProjectionMatrix()
 
