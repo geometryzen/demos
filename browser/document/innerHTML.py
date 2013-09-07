@@ -5,5 +5,5 @@ print repr(pre)
 pre.innerHTML = '''
 <h1>Hello!</h1>
 '''
-print type(11111111111111111111111111111111111111111111111111111111111111)
+print type(None)
 pre.innerHTML = 6
