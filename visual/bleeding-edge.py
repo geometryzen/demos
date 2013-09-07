@@ -3,7 +3,7 @@ from browser import *
 
 space = CartesianSpace()
 space.add(cylinder())
-space.add(cube())
+space.add(sphere())
 
 def discardCanvasElements():
     for element in document.getElementsByTagName("canvas"):
