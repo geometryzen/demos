@@ -23,7 +23,7 @@ else:
 try:
     Fraction(1, 2.2)
 except TypeError as e:
-    assertEqual(str(e),"TypeError: denominator must be a int on line 24")
+    assertEqual(str(e),"TypeError: denominator must be a <type 'int'> on line 24")
 else:
     print "Expecting error"
 
