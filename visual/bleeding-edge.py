@@ -14,7 +14,6 @@ def terminate(elapsed):
     return elapsed > 6000
 
 def setUp():
-
     discardCanvasElements()
 
     document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
