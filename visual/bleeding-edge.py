@@ -12,7 +12,7 @@ def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
 
 def setUp():
-    discardCanvasElements()
+    document.removeElementsByTagName("canvas")
     document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize(None)
@@ -25,6 +25,6 @@ def terminate(elapsed):
 
 def tearDown():
     window.removeEventListener("resize", onWindowResize, False)
-    discardCanvasElements()
+    document.removeElementsByTagName("canvas")
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
