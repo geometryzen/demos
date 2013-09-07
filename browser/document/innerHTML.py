@@ -1,12 +1,7 @@
 from browser import document
 
-def ddd(x):
-    return x
-
+# Hint: The magic number GUID is the id for the pre element used for printer output.
 pre = document.getElementById('a5f435e0-c92e-11e2-8b8b-0800200c9a66')
-print repr(pre)
 pre.innerHTML = '''
 <h1>Hello!</h1>
 '''
-print type(pre)
-pre.innerHTML = 6
