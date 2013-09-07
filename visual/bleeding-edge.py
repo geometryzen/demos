@@ -17,7 +17,7 @@ def tick(elapsed):
     space.render()
     
 def terminate(elapsed):
-    return elapsed > 6000
+    return elapsed > 10000
 
 def tearDown():
     window.removeEventListener("resize", onWindowResize, False)
