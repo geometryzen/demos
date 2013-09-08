@@ -12,7 +12,9 @@ progressEnd = 6000
 
 def onDocumentKeyDown(event):
     if event.keyCode == 27:
+        # TODO: Implement stop, pause, resume?
         war.stop()
+        pass
 
 def onDocumentMouseDown(event):
     global screenX, screenY, clientX, clientY
@@ -29,9 +31,9 @@ def onDocumentMouseDown(event):
         print "SHIFT"
     event.stopPropagation()
     event.stopImmediatePropagation()
-    print {"cancelable": event.cancelable}
-    print event.bubbles
-    print event.defaultPrevented
+    print {"event.cancelable": event.cancelable}
+    print {"event.bubbles": event.bubbles}
+    print {"event.defaultPrevented": event.defaultPrevented}
 
 def setUp():
     print "Hello!"
