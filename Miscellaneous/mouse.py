@@ -34,7 +34,7 @@ def onDocumentMouseDown(event):
         print "SHIFT"
     event.stopPropagation()
     event.stopImmediatePropagation()
-    print event.cancelable
+    print {"cancelable": event.cancelable}
     print event.bubbles
     print event.defaultPrevented
 
