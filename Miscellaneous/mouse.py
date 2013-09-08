@@ -8,10 +8,13 @@ clientY = 0
 button = 0
 
 progressEnd = 6000
-    
+
+
+war = WindowAnimationRunner(window, tick, terminate, setUp, tearDown)
+
 def onDocumentKeyDown(event):
     if event.keyCode == 27:
-        terminate()
+        war.stop()
 
 def onDocumentMouseDown(event):
     global screenX, screenY, clientX, clientY
@@ -51,4 +54,4 @@ def tearDown():
     document.removeEventListener('mousedown', onDocumentMouseDown, False)
     print "Goodbye."
 
-WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
+war.start()
