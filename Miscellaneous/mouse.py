@@ -68,10 +68,10 @@ def init():
         container = document.getElementById("canvas-container")
         container.appendChild(canvas)
     
-    document.addEventListener("keydown", onDocumentKeyDown, False)
+    document.addEventListener('keydown', onDocumentKeyDown, False)
     document.addEventListener('mousedown', onDocumentMouseDown, False)
 
-    window.addEventListener("resize", onWindowResize, False)
+    window.addEventListener('resize', onWindowResize, False)
     onWindowResize()
 
 def render():
@@ -96,7 +96,8 @@ def animate(timestamp):
 def terminate():
     window.cancelAnimationFrame(requestID)
     discardCanvases()
-    document.removeEventListener("keydown", onDocumentKeyDown, False)
+    window.removeEventListener('resize', onWindowResize, False)
+    document.removeEventListener('keydown', onDocumentKeyDown, False)
     document.removeEventListener('mousedown', onDocumentMouseDown, False)
     print "Goodbye."
 
