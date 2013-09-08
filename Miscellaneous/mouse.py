@@ -7,7 +7,7 @@ clientX = 0
 clientY = 0
 button = 0
 
-progressEnd = 6000
+progressEnd = 10000
 
 
 def onDocumentKeyDown(event):
@@ -17,6 +17,7 @@ def onDocumentKeyDown(event):
         pass
 
 def onDocumentMouseDown(event):
+    event.preventDefault()
     global screenX, screenY, clientX, clientY
     screenX = event.screenX
     screenY = event.screenY
