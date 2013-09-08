@@ -1,5 +1,5 @@
 # Under Construction
-from browser import *
+from browser import WindowAnimationRunner
 
 useLargeCanvas = False
 
