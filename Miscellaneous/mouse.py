@@ -6,6 +6,8 @@ screenY = 0
 clientX = 0
 clientY = 0
 button = 0
+
+progressEnd = 6000
     
 def onDocumentKeyDown(event):
     if event.keyCode == 27:
@@ -52,7 +54,7 @@ def tick(elapsed):
     pass
     
 def terminate(elasped):
-    return elapsed > 6000
+    return elapsed > progressEnd
         
 def tearDown():
     window.cancelAnimationFrame(requestID)
