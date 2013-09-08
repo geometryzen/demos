@@ -38,9 +38,9 @@ def onDocumentMouseDown(event):
 def setUp():
     print "Hello!"
     print "This program demonstrates the use of the Mouse."        
-    print "Press ESC to terminate."
+    # print "Press ESC to terminate."
     print "This program will 'self-terminate' in "+str(progressEnd/1000)+" seconds!"
-    document.addEventListener('keydown', onDocumentKeyDown, False)
+    # document.addEventListener('keydown', onDocumentKeyDown, False)
     document.addEventListener('mousedown', onDocumentMouseDown, False)
 
 def tick(elapsed):
@@ -50,7 +50,7 @@ def terminate(elapsed):
     return elapsed > progressEnd
         
 def tearDown():
-    document.removeEventListener('keydown', onDocumentKeyDown, False)
+    # document.removeEventListener('keydown', onDocumentKeyDown, False)
     document.removeEventListener('mousedown', onDocumentMouseDown, False)
     print "Goodbye."
 
