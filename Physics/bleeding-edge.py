@@ -1,6 +1,6 @@
 '''
-This example represents efforts to provide convenient abstractions ot the Three.js API.
-It will be used as the basis for Physics simulations.
+This example represents efforts to provide convenient abstractions
+of the Three.js WebGL Computer Graphics API for use with Physics simulations.
 '''
 from geometry import *
 from browser import *
