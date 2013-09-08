@@ -1,14 +1,6 @@
 # Under Construction
 from browser import document, window, WindowAnimationRunner
 
-useLargeCanvas = False
-
-canvas = document.createElement("canvas")
-canvas.height = 400
-canvas.width = 400
-
-context = canvas.getContext("2d")
-
 screenX = 0
 screenY = 0
 clientX = 0
@@ -38,25 +30,7 @@ def onDocumentMouseDown(event):
     print event.bubbles
     print event.defaultPrevented
 
-def onWindowResize():
-    if (useLargeCanvas):
-        canvas.width = window.innerWidth
-        canvas.height = window.innerHeight
-    else:
-        container = document.getElementById("canvas-container")
-        canvas.width = container.clientWidth
-        canvas.height = container.clientHeight
-    
-def discardCanvases():
-    for cs in document.getElementsByTagName("canvas"):
-        cs.parentNode.removeChild(cs)
-        
-requestID = None
-progress = None
-progressEnd = 60000
-startTime =  None
-
-def init():
+def setUp():
     print "Hello!"
     print "This program demonstrates the use of the Mouse."        
     print "Press ESC to terminate."
@@ -74,32 +48,16 @@ def init():
     window.addEventListener('resize', onWindowResize, False)
     onWindowResize()
 
-def render():
-    context.strokeStyle = "#808080" 
+def tick(elapsed):
+    pass
     
-def animate(timestamp):
-    global requestID, progress, startTime
-    if startTime:
-        progress = timestamp - startTime
-    else:
-        if timestamp:
-            startTime = timestamp
-        else:
-            progress = 0
+def terminate(elasped):
+    return elapsed > 6000
         
-    if progress < progressEnd:
-        requestID = window.requestAnimationFrame(animate)
-        render()
-    else:
-        terminate()
-        
-def terminate():
+def tearDown():
     window.cancelAnimationFrame(requestID)
-    discardCanvases()
-    window.removeEventListener('resize', onWindowResize, False)
     document.removeEventListener('keydown', onDocumentKeyDown, False)
     document.removeEventListener('mousedown', onDocumentMouseDown, False)
     print "Goodbye."
 
-init()
-animate(None)
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
