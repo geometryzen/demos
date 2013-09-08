@@ -1,3 +1,7 @@
+'''
+This example represents efforts to provide convenient abstractions ot the Three.js API.
+It will be used as the basis for Physics simulations.
+'''
 from geometry import *
 from browser import *
 
@@ -7,17 +11,17 @@ space.add(cylinder())
 def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
 
-def setUp():
-    document.removeElementsByTagName("canvas")
-    document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
-    window.addEventListener("resize", onWindowResize, False)
-    onWindowResize(None)
-
 def tick(elapsed):
     space.render()
     
 def terminate(elapsed):
     return elapsed > 6000
+
+def setUp():
+    document.removeElementsByTagName("canvas")
+    document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
+    window.addEventListener("resize", onWindowResize, False)
+    onWindowResize(None)
 
 def tearDown():
     window.removeEventListener("resize", onWindowResize, False)
