@@ -8,6 +8,7 @@ def onDocumentMouseDown(event):
     raycaster = projector.pickingRay(mouseVector.clone(), camera)
     intersects = raycaster.intersectObject(objects)
     if (intersects.length > 0):
+        # intersects record includes object,face,faceIndex,distance,point
         intersects[0].object.material.color.setRGB(random(), random(), random())
         
         sphere = Mesh(sphereGeom, sphereMaterial)
