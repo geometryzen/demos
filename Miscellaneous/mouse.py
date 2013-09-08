@@ -47,7 +47,6 @@ def terminate(elapsed):
     return elapsed > progressEnd
         
 def tearDown():
-    window.cancelAnimationFrame(requestID)
     document.removeEventListener('keydown', onDocumentKeyDown, False)
     document.removeEventListener('mousedown', onDocumentMouseDown, False)
     print "Goodbye."
