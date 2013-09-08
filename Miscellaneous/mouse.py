@@ -37,18 +37,8 @@ def setUp():
     print "This program demonstrates the use of the Mouse."        
     print "Press ESC to terminate."
     print "This program will 'self-terminate' in "+str(progressEnd/1000)+" seconds!"
-    discardCanvases()
-    if useLargeCanvas:
-        document.body.insertBefore(canvas, document.body.firstChild)
-    else:
-        container = document.getElementById("canvas-container")
-        container.appendChild(canvas)
-    
     document.addEventListener('keydown', onDocumentKeyDown, False)
     document.addEventListener('mousedown', onDocumentMouseDown, False)
-
-    window.addEventListener('resize', onWindowResize, False)
-    onWindowResize()
 
 def tick(elapsed):
     pass
