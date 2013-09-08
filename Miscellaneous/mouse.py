@@ -43,7 +43,7 @@ def setUp():
 def tick(elapsed):
     pass
     
-def terminate(elasped):
+def terminate(elapsed):
     return elapsed > progressEnd
         
 def tearDown():
