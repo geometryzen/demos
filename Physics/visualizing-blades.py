@@ -10,7 +10,7 @@ origin = VectorE3(0, 0, 0)
 space = CartesianSpace()
 shape = cylinder()
 print shape.position
-shape.position.set(origin)
+shape.position.set(origin.x, origin.y, origin.z)
 space.add(shape)
 
 def onWindowResize(event):
