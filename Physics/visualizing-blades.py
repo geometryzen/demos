@@ -5,6 +5,7 @@ of the Three.js WebGL Computer Graphics API for use with Physics simulations.
 from geometry import *
 from e3ga import *
 from browser import *
+from math import pi
 
 origin = VectorE3(0, 0, 0)
 i = VectorE3(1,0,0)
@@ -13,7 +14,7 @@ shape = cylinder()
 # The Graphics Library uses Vector3, but Geometric Algebra uses Euclidean3.
 # We'd like to have a way of not experiencing this mismatch.
 shape.position.set(origin.x, origin.y, origin.z)
-shape.translateOnAxis(Vector3(1,1,1),1)
+shape.rotateX(pi/2)
 space.add(shape)
 
 def onWindowResize(event):
