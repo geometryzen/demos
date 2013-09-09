@@ -14,6 +14,7 @@ shape = cylinder()
 print space.camera.up
 print space.camera.position
 #space.scene.rotateX(-pi/2)
+space.camera.up.set(0,0,1)
 space.camera.position.set(8,-8,8)
 space.camera.lookAt(space.origin)
 space.add(shape)
