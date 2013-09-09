@@ -13,6 +13,7 @@ shape = cylinder()
 # We'd like to have a way of not experiencing this mismatch.
 print space.camera.up
 print space.camera.position
+space.scene.rotateX(-pi/2)
 space.camera.position.set(8,-8,8)
 space.camera.lookAt(space.origin)
 space.add(shape)
