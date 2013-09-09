@@ -14,7 +14,7 @@ print shape.position
 # The Graphics Library uses Vector3, but Geometric Algebra uses Euclidean3.
 # We'd like to have a way of not experiencing this mismatch.
 shape.position.set(origin.x, origin.y, origin.z)
-shape.translateX(2)
+shape.translateY(2)
 #shape.translateOnAxis(Vector3(1,0,0),1)
 space.add(shape)
 
