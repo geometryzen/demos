@@ -7,7 +7,7 @@ from e3ga import *
 from browser import *
 
 origin = VectorE3(0, 0, 0)
-i = VectorE3(1,0,0)
+i = VectorE3(2,0,0)
 space = CartesianSpace()
 shape = cylinder()
 # The Graphics Library uses Vector3, but Geometric Algebra uses Euclidean3.
