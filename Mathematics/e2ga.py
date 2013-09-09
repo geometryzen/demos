@@ -10,11 +10,11 @@ def showValue(name, x):
     return x
 
 zero = explain(Euclidean2(0,0,0,0))
-one  = explain(Scalar2(1))
-two  = explain(Scalar2(2))
+one  = explain(ScalarE2(1))
+two  = explain(ScalarE2(2))
 three= explain(3)
-i    = explain(Vector2(1, 0))
-j    = explain(Vector2(0, 1))
+i    = explain(VectorE2(1, 0))
+j    = explain(VectorE2(0, 1))
 I    = explain(Pseudoscalar2(1))
 
 blades = [zero, one, two, three, i, j, I]
