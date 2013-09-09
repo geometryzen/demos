@@ -15,7 +15,7 @@ two  = explain(ScalarE2(2))
 three= explain(3)
 i    = explain(VectorE2(1, 0))
 j    = explain(VectorE2(0, 1))
-I    = explain(Pseudoscalar2(1))
+I    = explain(PseudoscalarE2(1))
 
 blades = [zero, one, two, three, i, j, I]
 
