@@ -12,6 +12,8 @@ shape = cylinder()
 # The Graphics Library uses Vector3, but Geometric Algebra uses Euclidean3.
 # We'd like to have a way of not experiencing this mismatch.
 print space.camera.up
+print space.camera.position
+space.camera.position.set(8,-8,8)
 space.add(shape)
 
 def onWindowResize(event):
