@@ -6,6 +6,7 @@ from geometry import *
 from e3ga import *
 from browser import *
 
+origin = VectorE3(0, 0, 0)
 space = CartesianSpace()
 shape = cylinder()
 print shape.position
