@@ -8,7 +8,7 @@ from browser import *
 from math import pi
 
 space = CartesianSpace()
-shape = cylinder()
+shape = cube()
 # The Graphics Library uses Vector3, but Geometric Algebra uses Euclidean3.
 # We'd like to have a way of not experiencing this mismatch.
 print space.camera.up
