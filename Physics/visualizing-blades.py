@@ -3,10 +3,12 @@ This example represents efforts to provide convenient abstractions
 of the Three.js WebGL Computer Graphics API for use with Physics simulations.
 '''
 from geometry import *
+from e3ga import *
 from browser import *
 
 space = CartesianSpace()
-space.add(cylinder())
+shape = cylinder()
+space.add(shape)
 
 def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
