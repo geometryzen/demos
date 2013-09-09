@@ -11,7 +11,7 @@ space = CartesianSpace()
 shape = cylinder()
 # The Graphics Library uses Vector3, but Geometric Algebra uses Euclidean3.
 # We'd like to have a way of not experiencing this mismatch.
-shape.rotateOnAxis(Vector3(1,1,1).normalize(), pi/2)
+shape.rotateOnAxis(Vector3(1,1,1).normalize(), pi/8)
 space.add(shape)
 
 def onWindowResize(event):
