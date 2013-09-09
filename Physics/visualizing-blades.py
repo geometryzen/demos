@@ -10,7 +10,6 @@ origin = VectorE3(0, 0, 0)
 i = VectorE3(1,0,0)
 space = CartesianSpace()
 shape = cylinder()
-print shape.position
 # The Graphics Library uses Vector3, but Geometric Algebra uses Euclidean3.
 # We'd like to have a way of not experiencing this mismatch.
 shape.position.set(origin.x, origin.y, origin.z)
