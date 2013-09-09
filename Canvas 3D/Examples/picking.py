@@ -1,3 +1,5 @@
+# This sample is under construction.
+# Please come back later.
 from three import *
 
 projector = Projector();
