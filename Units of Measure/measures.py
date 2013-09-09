@@ -4,7 +4,7 @@ from units import *
 velocity = VectorE3(1,0,0) * meter / second ** 2
 mass = ScalarE3(10) * kilogram
 print repr(kilogram)
-mass = kilogram * ScalarE3(10)
+#mass = kilogram * ScalarE3(10)
 
 print velocity
 
