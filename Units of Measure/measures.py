@@ -26,5 +26,7 @@ print "meter * second => " + str(meter * second)
 # The following operation raises
 try:
     meter + second
-except AssertionError e:
+except AssertionError as e:
     print e
+else:
+    pass
