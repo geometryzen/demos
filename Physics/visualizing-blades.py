@@ -14,6 +14,7 @@ shape = cylinder()
 print space.camera.up
 print space.camera.position
 space.camera.position.set(8,-8,8)
+space.camera.lookAt(space.origin)
 space.add(shape)
 
 def onWindowResize(event):
