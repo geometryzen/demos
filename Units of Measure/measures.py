@@ -23,7 +23,6 @@ print "meter * meter  => " + str(meter * meter)
 print "meter + meter  => " + str(meter + meter)
 print "meter * second => " + str(meter * second)
 
-# The following operation raises
 try:
     meter + second
 except AssertionError as e:
