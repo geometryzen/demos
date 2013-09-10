@@ -15,13 +15,11 @@ space.add(s1)
 s2 = cube()
 s2.translateX(2.5)
 s2.translateY(2.5)
-s2.translateZ(0.5)
 space.add(s2)
 
 s3 = sphere()
 s3.translateX(-2.5)
 s3.translateY(+2.5)
-s3.translateZ(1)
 space.add(s3)
 
 def onWindowResize(event):
