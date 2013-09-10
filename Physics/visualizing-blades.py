@@ -7,8 +7,8 @@ from e3ga import *
 from browser import *
 
 space = CartesianSpace()
-#shape = cylinder()
-#space.add(shape)
+shape = cylinder()
+space.add(shape)
 
 def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
