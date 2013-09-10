@@ -17,7 +17,7 @@ def tick(elapsed):
     space.render()
     
 def terminate(elapsed):
-    return elapsed > 16000
+    return elapsed > 5000
 
 def setUp():
     document.removeElementsByTagName("canvas")
