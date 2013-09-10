@@ -6,7 +6,6 @@ from geometry import *
 from browser import *
 
 space = CartesianSpace()
-space.add(cylinder())
 
 def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
