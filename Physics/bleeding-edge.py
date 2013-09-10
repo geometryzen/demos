@@ -9,7 +9,7 @@ from math import pi
 
 space = CartesianSpace()
 
-space.add(cylinder().translateX(-2.5).translateY(-2.5).rotateX(pi/2).translateZ(0.5))
+space.add(CylinderBuilder().build().translateX(-2.5).translateY(-2.5).rotateX(pi/2).translateZ(0.5))
 space.add(CubeBuilder().color("blue").build().translateX(2.5).translateY(2.5).translateZ(0.5))
 space.add(SphereBuilder().volume(1).color("red").build().translateX(+2.5).translateY(-2.5))
 
