@@ -44,33 +44,18 @@ progressEnd = 10000
 startTime =  None
 movement = Vector3(0.02, 0.02, 0.02)
 
-def render():
+def tick(elapsed):
     mesh.rotation += movement
-        
     renderer.render(scene, camera)
+    
+def terminate(elapsed):
+    return elapsed > progressEnd
 
 def onWindowResize(event):
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
     renderer.size = (window.innerWidth, window.innerHeight)
     
-def step(timestamp):
-    global requestID, progress, startTime
-    if (startTime):
-        progress = timestamp - startTime
-    else:
-        if (timestamp):
-            startTime = timestamp
-        else:
-            progress = 0
-        
-    if (progress < progressEnd):
-        requestID = window.requestAnimationFrame(step)
-        render()
-    else:
-        window.cancelAnimationFrame(requestID)
-        # container.removeChild(renderer.domElement)
-
 window.addEventListener("resize", onWindowResize, False)
 
 onWindowResize(None)
