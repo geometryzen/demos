@@ -30,7 +30,7 @@ def setUp():
     openEnded = False
 #    mesh = CylinderBuilder().radiusTop(radiusTop).radiusBottom(radiusBottom).height(height).build()
 #    cylinder = mesh.geometry
-    cylinder = CylinderGeometry(radiusTop, radiusBottom, height, radiusSegments, heightSegments, openEnded)
+    cylinder = CylinderGeometry(radiusTop, radiusBottom, height, radiusSegments, heightSegments)#, openEnded)
 
     print repr(cylinder)
     print "radiusTop:      " + str(cylinder.radiusTop)
