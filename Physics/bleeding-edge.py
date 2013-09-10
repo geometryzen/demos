@@ -10,7 +10,7 @@ from math import pi
 space = CartesianSpace()
 
 space.add(cylinder().translateX(-2.5).translateY(-2.5).rotateX(pi/2))
-space.add(cube().translateX(2.5).translateY(2.5))
+space.add(cube().translateX(2.5).translateY(2.5).translateZ(0.5))
 space.add(sphere().translateX(+2.5).translateY(-2.5))
 
 space.add(ConeBuilder().axis(Vector3(1,0,0)).volume(1).color("yellow").build())
