@@ -9,11 +9,6 @@ from math import pi
 
 space = CartesianSpace()
 shape = cylinder()
-# The Graphics Library uses Vector3, but Geometric Algebra uses Euclidean3.
-# We'd like to have a way of not experiencing this mismatch.
-space.camera.up.set(0,0,1)
-space.camera.position.set(8,-8,8)
-space.camera.lookAt(space.origin)
 space.add(shape)
 
 def onWindowResize(event):
