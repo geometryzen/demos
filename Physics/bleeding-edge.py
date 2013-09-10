@@ -15,7 +15,7 @@ space.add(sphere().translateX(+2.5).translateY(-2.5))
 
 space.add(ConeBuilder().axis(Vector3(1,0,0)).volume(1).color("yellow").build())
 
-timeout = 60000
+timeout = 600000
 
 def onDocumentKeyDown(event):
     global timeout
