@@ -39,6 +39,8 @@ except AttributeError as e:
     print e
 print cylinder
 
+cylinder.bogus = 23
+
 mesh = Mesh(cylinder, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
 scene.add(mesh)
 
