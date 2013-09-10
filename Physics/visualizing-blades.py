@@ -8,11 +8,15 @@ from browser import *
 from math import pi
 
 space = CartesianSpace()
-shape = cylinder()
-shape.translateX(-2.5)
-shape.translateY(-2.5)
-shape.rotateX(pi/2)
-space.add(shape)
+s1 = cylinder()
+s1.translateX(-2.5)
+s1.translateY(-2.5)
+s1.rotateX(pi/2)
+space.add(s1)
+s2 = cube()
+s2.translateX(2.5)
+s2.translateY(2.5)
+space.add(s2)
 
 def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
