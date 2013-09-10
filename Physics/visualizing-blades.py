@@ -9,9 +9,9 @@ from math import pi
 
 space = CartesianSpace()
 shape = cylinder()
-shape.translateX(-5)
-shape.translateY(-5)
 shape.rotateX(pi/2)
+shape.translateX(-2.5)
+shape.translateY(-2.5)
 space.add(shape)
 
 def onWindowResize(event):
