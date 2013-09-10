@@ -8,7 +8,7 @@ from browser import *
 
 space = CartesianSpace()
 shape = cylinder()
-shape.translateX(-5)
+shape.translateX(-5).translateY(-5)
 space.add(shape)
 
 def onWindowResize(event):
