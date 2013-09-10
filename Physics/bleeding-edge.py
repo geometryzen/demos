@@ -9,21 +9,9 @@ from math import pi
 
 space = CartesianSpace()
 
-s1 = cylinder()
-s1.translateX(-2.5)
-s1.translateY(-2.5)
-s1.rotateX(pi/2)
-space.add(s1)
-
-s2 = cube()
-s2.translateX(2.5)
-s2.translateY(2.5)
-space.add(s2)
-
-s3 = sphere()
-s3.translateX(+2.5)
-s3.translateY(-2.5)
-space.add(s3)
+space.add(cylinder().translateX(-2.5).translateY(-2.5).rotateX(pi/2))
+space.add(cube().translateX(2.5).translateY(2.5))
+space.add(sphere().translateX(+2.5).translateY(-2.5))
 
 def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
