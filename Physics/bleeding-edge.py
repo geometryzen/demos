@@ -21,8 +21,8 @@ s2.translateY(2.5)
 space.add(s2)
 
 s3 = sphere()
-s3.translateX(-2.5)
-s3.translateY(+2.5)
+s3.translateX(+2.5)
+s3.translateY(-2.5)
 space.add(s3)
 
 def onWindowResize(event):
