@@ -10,7 +10,7 @@ progressEnd = 10000
 movement = Vector3(0.02, 0.02, 0.02)
 
 def setUp():
-    global camera, renderer
+    global camera, renderer, mesh
     document.removeElementsByTagName('canvas')
     renderer = WebGLRenderer({"antialias": True})
     renderer.setClearColor(Color(0x080808), 1.0)
@@ -42,6 +42,7 @@ def setUp():
 
     mesh = Mesh(cylinder, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
     scene.add(mesh)
+
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize(None)
 
