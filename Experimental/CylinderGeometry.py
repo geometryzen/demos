@@ -1,6 +1,6 @@
 # The purpose of this experiment is to see if the details of a general example can be reproduced using convenience functions.
 from three import *
-from browser import document, window
+from browser import document, window, WindowAnimationRunner
 from math import pi
 
 # Discard the old canvas if it exists. 
@@ -75,5 +75,4 @@ window.addEventListener("resize", onWindowResize, False)
 
 onWindowResize(None)
 
-step(None)
 WindowAnimationRunner().start()
