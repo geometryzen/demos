@@ -44,6 +44,9 @@ progressEnd = 10000
 startTime =  None
 movement = Vector3(0.02, 0.02, 0.02)
 
+def setUp():
+    document.removeElementsByTagName('canvas')
+
 def tick(elapsed):
     mesh.rotation += movement
     renderer.render(scene, camera)
