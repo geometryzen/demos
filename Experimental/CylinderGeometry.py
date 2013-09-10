@@ -75,4 +75,4 @@ window.addEventListener("resize", onWindowResize, False)
 
 onWindowResize(None)
 
-WindowAnimationRunner().start()
+WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
