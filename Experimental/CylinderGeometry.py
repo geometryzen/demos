@@ -1,5 +1,6 @@
 # The purpose of this experiment is to see if the details of a general example can be reproduced using convenience functions.
 from three import *
+from geometry import CylinderBuilder
 from browser import document, window, WindowAnimationRunner
 from math import pi
 
