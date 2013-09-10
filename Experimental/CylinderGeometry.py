@@ -28,7 +28,7 @@ def setUp():
     radiusSegments = 32
     heightSegments = 1
     openEnded = False
-    mesh = CylinderBuilder().build()
+    mesh = CylinderBuilder().radiusTop(radiusTop).radiusBottom(radiusBottom).height(height).build()
     cylinder = mesh.geometry
 #    cylinder = CylinderGeometry(radiusTop, radiusBottom, height, radiusSegments, heightSegments, openEnded)
 
