@@ -13,6 +13,8 @@ space.add(cylinder().translateX(-2.5).translateY(-2.5).rotateX(pi/2))
 space.add(cube().translateX(2.5).translateY(2.5))
 space.add(sphere().translateX(+2.5).translateY(-2.5))
 
+coneBuilder = ConeBuilder()
+
 timeout = 20000
 
 def onDocumentKeyDown(event):
