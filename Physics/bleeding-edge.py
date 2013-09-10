@@ -9,7 +9,10 @@ from math import pi
 
 space = CartesianSpace()
 
-s1 = cylinder().translateX(-2.5).translateY(-2.5).rotateX(pi/2)
+s1 = cylinder()
+s1.translateX(-2.5)
+s1.translateY(-2.5)
+s1.rotateX(pi/2)
 space.add(s1)
 
 s2 = cube()
