@@ -5,11 +5,13 @@ of the Three.js WebGL Computer Graphics API for use with Physics simulations.
 from geometry import *
 from e3ga import *
 from browser import *
+from math import pi
 
 space = CartesianSpace()
 shape = cylinder()
 shape.translateX(-5)
 shape.translateY(-5)
+shape.rotateX(pi/2)
 space.add(shape)
 
 def onWindowResize(event):
