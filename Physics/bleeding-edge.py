@@ -9,10 +9,10 @@ from math import pi
 
 space = CartesianSpace()
 
-space.add(CylinderBuilder().radius(3).color(0x00FF00).volume(1).build())#.translateX(-2.5).translateY(-2.5).rotateX(pi/2).translateZ(0.5))
-#space.add(CubeBuilder().color(0x0000FF).volume(1).build())#.translateX(2.5).translateY(2.5).translateZ(0.5))
-#space.add(SphereBuilder().volume(1).color(0xFF0000).build())#.translateX(+2.5).translateY(-2.5))
-#space.add(ConeBuilder().volume(1).color(0xFFFF00).build())#.rotateX(pi/2).translateY(0.7816).translateX(-2.5).translateZ(-2.5))
+space.add(CylinderBuilder().color(0x00FF00).volume(1).build().translateX(-2.5).translateY(-2.5).rotateX(pi/2).translateZ(0.5))
+#space.add(CubeBuilder().color(0x0000FF).volume(1).build().translateX(2.5).translateY(2.5).translateZ(0.5))
+#space.add(SphereBuilder().volume(1).color(0xFF0000).build().translateX(+2.5).translateY(-2.5))
+#space.add(ConeBuilder().volume(1).color(0xFFFF00).build().rotateX(pi/2).translateY(0.7816).translateX(-2.5).translateZ(-2.5))
 
 timeout = 600000
 
