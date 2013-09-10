@@ -1,4 +1,5 @@
 # The purpose of this experiment is to see if the details of a general example can be reproduced using convenience functions.
+# TODO: Allow material to be replaced so that the cylinder is visible without illumination.
 from three import *
 from geometry import CylinderBuilder
 from browser import document, window, WindowAnimationRunner
@@ -28,9 +29,9 @@ def setUp():
     radialSegments = 32
     heightSegments = 1
     openEnded = False
-    mesh = CylinderBuilder().radiusTop(radiusTop).radiusBottom(radiusBottom).height(height).build()
-    cylinder = mesh.geometry
-#    cylinder = CylinderGeometry(radiusTop, radiusBottom, height, radialSegments, heightSegments, openEnded)
+#    mesh = CylinderBuilder().radiusTop(radiusTop).radiusBottom(radiusBottom).height(height).build()
+#    cylinder = mesh.geometry
+    cylinder = CylinderGeometry(radiusTop, radiusBottom, height, radialSegments, heightSegments, openEnded)
 
     print repr(cylinder)
     print "radiusTop:      " + str(cylinder.radiusTop)
@@ -41,7 +42,7 @@ def setUp():
     print "openEnded:      " + str(cylinder.openEnded)
     print cylinder
 
-#    mesh = Mesh(cylinder, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
+    mesh = Mesh(cylinder, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
     scene.add(mesh)
 
     window.addEventListener("resize", onWindowResize, False)
