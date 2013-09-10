@@ -3,6 +3,7 @@ from three import *
 from browser import document, window, WindowAnimationRunner
 from math import pi
 
+scene = Scene()
 camera = None
 renderer = None
 mesh = None
@@ -11,14 +12,13 @@ movement = Vector3(0.02, 0.02, 0.02)
 
 def setUp():
     global camera, renderer, mesh
+
     document.removeElementsByTagName('canvas')
     renderer = WebGLRenderer({"antialias": True})
     renderer.setClearColor(Color(0x080808), 1.0)
 
     container = document.getElementById("canvas-container")
     container.appendChild(renderer.domElement)
-
-    scene = Scene()
 
     camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
     camera.position.z = 100
