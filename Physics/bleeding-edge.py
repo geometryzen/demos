@@ -13,6 +13,9 @@ space.add(cylinder().translateX(-2.5).translateY(-2.5).rotateX(pi/2))
 space.add(cube().translateX(2.5).translateY(2.5))
 space.add(sphere().translateX(+2.5).translateY(-2.5))
 
+def onDocumentKeyDown(event):
+    pass
+
 def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
 
@@ -25,11 +28,13 @@ def terminate(elapsed):
 def setUp():
     document.removeElementsByTagName("canvas")
     document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
+    document.addEventListener("keydown", onDocumentKeyDown, False)
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize(None)
 
 def tearDown():
     window.removeEventListener("resize", onWindowResize, False)
+    document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeElementsByTagName("canvas")
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
