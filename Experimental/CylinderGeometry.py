@@ -40,6 +40,8 @@ def setUp():
 
     mesh = Mesh(cylinder, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
     scene.add(mesh)
+    window.addEventListener("resize", onWindowResize, False)
+    onWindowResize(None)
 
 def tick(elapsed):
     mesh.rotation += movement
@@ -49,6 +51,7 @@ def terminate(elapsed):
     return elapsed > progressEnd
 
 def tearDown():
+    window.removeEventListener("resize", onWindowResize, False)
     document.removeElementsByTagName('canvas')
 
 def onWindowResize(event):
@@ -56,8 +59,6 @@ def onWindowResize(event):
     camera.updateProjectionMatrix()
     renderer.size = (window.innerWidth, window.innerHeight)
     
-window.addEventListener("resize", onWindowResize, False)
 
-onWindowResize(None)
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
