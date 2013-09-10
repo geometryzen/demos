@@ -13,8 +13,12 @@ space.add(cylinder().translateX(-2.5).translateY(-2.5).rotateX(pi/2))
 space.add(cube().translateX(2.5).translateY(2.5))
 space.add(sphere().translateX(+2.5).translateY(-2.5))
 
+timeout = 5000
+
 def onDocumentKeyDown(event):
-    pass
+    global timeout
+    if event.keyCode == 27:
+        timeout = 0
 
 def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
@@ -23,7 +27,7 @@ def tick(elapsed):
     space.render()
     
 def terminate(elapsed):
-    return elapsed > 15000
+    return elapsed > timeout
 
 def setUp():
     document.removeElementsByTagName("canvas")
