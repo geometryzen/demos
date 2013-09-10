@@ -33,7 +33,10 @@ print "height:         " + str(cylinder.height)
 print "radialSegments: " + str(cylinder.radialSegments)
 print "heightSegments: " + str(cylinder.heightSegments)
 print "openEnded:      " + str(cylinder.openEnded)
-print "bogus:          " + str(cylinder.bogus)
+try:
+    print "bogus:          " + str(cylinder.bogus)
+except AttributeError as e:
+    print e
 print cylinder
 
 mesh = Mesh(cylinder, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
