@@ -9,7 +9,6 @@ from math import pi
 
 space = CartesianSpace()
 shape = cylinder()
-shape.rotateX(pi/2)
 # The Graphics Library uses Vector3, but Geometric Algebra uses Euclidean3.
 # We'd like to have a way of not experiencing this mismatch.
 space.camera.up.set(0,0,1)
