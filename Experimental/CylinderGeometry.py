@@ -25,18 +25,18 @@ def setUp():
     radiusTop = 20
     radiusBottom = 20
     height = 100
-    radiusSegments = 32
+    radialSegments = 32
     heightSegments = 1
     openEnded = False
 #    mesh = CylinderBuilder().radiusTop(radiusTop).radiusBottom(radiusBottom).height(height).build()
 #    cylinder = mesh.geometry
-    cylinder = CylinderGeometry(radiusTop, radiusBottom, height, radiusSegments, heightSegments, openEnded)
+    cylinder = CylinderGeometry(radiusTop, radiusBottom, height, radialSegments, heightSegments, openEnded)
 
     print repr(cylinder)
     print "radiusTop:      " + str(cylinder.radiusTop)
     print "radiusBottom:   " + str(cylinder.radiusBottom)
     print "height:         " + str(cylinder.height)
-    print "radiusSegments: " + str(cylinder.radiusSegments)
+    print "radialSegments: " + str(cylinder.radialSegments)
     print "heightSegments: " + str(cylinder.heightSegments)
     print "openEnded:      " + str(cylinder.openEnded)
     print cylinder
