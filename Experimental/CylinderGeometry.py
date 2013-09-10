@@ -5,6 +5,7 @@ from math import pi
 
 camera = None
 renderer = None
+mesh = None
 progressEnd = 10000
 movement = Vector3(0.02, 0.02, 0.02)
 
