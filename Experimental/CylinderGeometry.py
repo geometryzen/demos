@@ -3,6 +3,7 @@ from three import *
 from browser import document, window, WindowAnimationRunner
 from math import pi
 
+camera = None
 progressEnd = 10000
 movement = Vector3(0.02, 0.02, 0.02)
 
