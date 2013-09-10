@@ -29,6 +29,7 @@ def setUp():
     heightSegments = 1
     openEnded = False
     mesh = CylinderBuilder().build()
+    cylinder = mesh.geometry
 #    cylinder = CylinderGeometry(radiusTop, radiusBottom, height, radiusSegments, heightSegments, openEnded)
 
     print repr(cylinder)
