@@ -4,23 +4,21 @@ from browser import document, window, WindowAnimationRunner
 from math import pi
 
 scene = Scene()
-camera = None
-renderer = None
+camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
+renderer = WebGLRenderer({"antialias": True})
 mesh = None
 progressEnd = 10000
 movement = Vector3(0.02, 0.02, 0.02)
 
 def setUp():
-    global camera, renderer, mesh
+    global mesh
 
     document.removeElementsByTagName('canvas')
-    renderer = WebGLRenderer({"antialias": True})
     renderer.setClearColor(Color(0x080808), 1.0)
 
     container = document.getElementById("canvas-container")
     container.appendChild(renderer.domElement)
 
-    camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
     camera.position.z = 100
 
     radiusTop = 20
@@ -61,7 +59,5 @@ def onWindowResize(event):
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
     renderer.size = (window.innerWidth, window.innerHeight)
-    
-
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
