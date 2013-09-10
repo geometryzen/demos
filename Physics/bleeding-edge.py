@@ -13,7 +13,7 @@ space.add(cylinder().translateX(-2.5).translateY(-2.5).rotateX(pi/2))
 space.add(cube().translateX(2.5).translateY(2.5))
 space.add(sphere().translateX(+2.5).translateY(-2.5))
 
-cone = ConeBuilder().build()
+space.add(ConeBuilder().build())
 
 timeout = 20000
 
