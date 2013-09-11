@@ -125,17 +125,17 @@ print "----------"
 print "phase"
 print "----------"
 print "phase(complex(-1,0)) => " + str(computePhase(constructor(-1.0, 0.0)))
-print computePhase(+1)
+print computePhase(+one)
 print computePhase(+i)
-print computePhase(-1)
+print computePhase(-one)
 print computePhase(-i)
 print "----------"
 print "polar"
 print "----------"
 print "polar(complex(-1,0)) => " + str(computePolar(constructor(-1.0, 0.0)))
-print computePolar(+1)
+print computePolar(+one)
 print computePolar(+i)
-print computePolar(-1)
+print computePolar(-one)
 print computePolar(-i)
 print "----------"
 print "~"
