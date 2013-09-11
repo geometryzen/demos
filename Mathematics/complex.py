@@ -24,7 +24,7 @@ print "----------"
 print "properties"
 print "----------"
 print Re(z1)
-print z1.imag
+print Im(z1)
 print "----------"
 print "representations"
 print "----------"
