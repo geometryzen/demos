@@ -20,8 +20,8 @@ def toRadians(deg):
 
 def towards(a, b, angle):
     denom = 1 + b << a
-    print 1 + (b << a)
-    R = (1 + a * b) / sqrt(1 + (a << b))
+    print repr(denom)
+    R = (1 + a * b) / sqrt(denom)
     return fromVector
 
 showValue("east towards south by 30 degrees", towards(east, south, toRadians(30)))
