@@ -12,9 +12,13 @@ print q1
 print q2
 print q3
 
-vs = [e1, e2, e3]
+es = [e1, e2, e3]
 qs = [q1, q2, q3]
 
+for e in es:
+    for q in qs:
+        showValue(str(a) + " + " + str(b), a + b)
+    print ""
 
 print "i => " + str(e1.applyQuaternion(q1))
 print e2.applyQuaternion(q1)
