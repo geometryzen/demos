@@ -13,3 +13,4 @@ print q2
 print q3
 
 print e1.applyQuaternion(q1)
+print e1.applyQuaternion(q2)
