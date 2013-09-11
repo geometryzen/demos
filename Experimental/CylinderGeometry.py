@@ -23,9 +23,6 @@ def setUp():
 
     camera.position.z = 100
 
-    radialSegments = 32
-    heightSegments = 1
-    openEnded = False
     material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
     mesh = CylinderBuilder().radius(20).height(100).material(material).build()
     cylinder = mesh.geometry
