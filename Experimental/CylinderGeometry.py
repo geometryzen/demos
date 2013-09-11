@@ -4,7 +4,8 @@ from geometry import CylinderBuilder
 from browser import document, window, WindowAnimationRunner
 from math import pi
 
-scene = Scene()
+#scene = Scene()
+space = CartesianSpace()
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 renderer = WebGLRenderer({"antialias": True})
 mesh = None
