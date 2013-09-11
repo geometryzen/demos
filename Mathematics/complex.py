@@ -1,3 +1,4 @@
+# The complex number algebra is isomorphic to the even sub-algebra of the Euclidean Plane.
 from cmath import *
 
 print "----------"
