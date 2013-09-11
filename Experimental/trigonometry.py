@@ -19,7 +19,8 @@ def toRadians(deg):
     return deg * pi / 180
 
 def towards(a, b, angle):
-    R = (1 + a * b) / sqrt(1 * a << b)
+    print 1 + b << a
+    R = (1 + a * b) / sqrt(1 + a << b)
     return fromVector
 
 showValue("east towards south by 30 degrees", towards(east, south, toRadians(30)))
