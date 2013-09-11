@@ -21,4 +21,4 @@ def toRadians(deg):
 def towards(fromVector, toVector, angle):
     return fromVector
 
-showValue("west", towards(east, south, toRadians(30)))
+showValue("east towards south by 30 degrees", towards(east, south, toRadians(30)))
