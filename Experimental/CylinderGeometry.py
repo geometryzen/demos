@@ -18,8 +18,6 @@ def setUp():
     container = document.getElementById("canvas-container")
     container.appendChild(space.renderer.domElement)
 
-    space.camera.position.z = 5
-
     material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
     mesh = CylinderBuilder().radius(1).height(5).material(material).build()
 
