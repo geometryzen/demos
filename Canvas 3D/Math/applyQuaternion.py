@@ -1,5 +1,6 @@
 # The Quaternion approach to rotation of vectors.
-# 
+# The Geometric Algebra approach illuminates the fact that Quaternions are isomorphic to 
+# the even sub-algebra of Euclidean 3D space.
 from three import *
 
 def showValue(name, m):
