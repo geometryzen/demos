@@ -13,3 +13,6 @@ showValue("north", north)
 showValue("south", south)
 showValue("east", east)
 showValue("west", west)
+
+def towards(fromVector, toVector, angle):
+    return fromVector
