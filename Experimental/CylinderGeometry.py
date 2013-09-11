@@ -16,7 +16,7 @@ def setUp():
     document.removeElementsByTagName('canvas')
 
     container = document.getElementById("canvas-container")
-    container.appendChild(renderer.domElement)
+    container.appendChild(space.renderer.domElement)
 
     camera.position.z = 100
 
