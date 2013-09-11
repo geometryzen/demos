@@ -18,7 +18,7 @@ def setUp():
     container = document.getElementById("canvas-container")
     container.appendChild(space.renderer.domElement)
 
-    material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
+    material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":1})
     mesh = CylinderBuilder().radius(1).height(2).material(material).build()
 
     space.add(mesh)
