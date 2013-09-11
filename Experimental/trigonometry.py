@@ -1,3 +1,4 @@
+# Work in progress to solve geometry problems easily.
 from e2ga import *
 from math import pi, sqrt
 
