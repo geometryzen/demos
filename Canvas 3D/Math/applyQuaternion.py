@@ -12,6 +12,10 @@ print q1
 print q2
 print q3
 
+vs = [e1, e2, e3]
+qs = [q1, q2, q3]
+
+
 print "i => " + str(e1.applyQuaternion(q1))
 print e2.applyQuaternion(q1)
 
