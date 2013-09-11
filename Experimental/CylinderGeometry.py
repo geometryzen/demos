@@ -6,9 +6,7 @@ from math import pi
 
 #scene = Scene()
 space = CartesianSpace()
-mesh = None
 progressEnd = 10000
-movement = Vector3(0.02, 0.02, 0.02)
 
 def setUp():
     global mesh
@@ -27,7 +25,6 @@ def setUp():
     onWindowResize(None)
 
 def tick(elapsed):
-    mesh.rotation += movement
     space.render()
     
 def terminate(elapsed):
