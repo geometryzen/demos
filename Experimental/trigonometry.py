@@ -20,9 +20,9 @@ def toRadians(deg):
 
 # TODO: We want to return a vector that represents the semantics
 def towards(a, b, theta):
-'''
-Returns a vector which is the result of rotating a towards b by and angle theta.
-'''
+    '''
+    Returns a vector which is the result of rotating a towards b by and angle theta.
+    '''
     denom = 2 * (1 + (b << a)).w
     print repr(denom)
     R = (1 + a * b) / sqrt(denom)
