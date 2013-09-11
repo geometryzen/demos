@@ -3,7 +3,8 @@
 from cmath import *
 from e2ga import *
 
-useComplex = False
+# Try changing this variable to False to perform the operations using the e2ga sub-algebra.
+useComplex = True
 
 def constructor(x, y):
     if useComplex:
