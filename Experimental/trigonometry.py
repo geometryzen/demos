@@ -22,6 +22,7 @@ def towards(a, b, angle):
     denom = 2 * (1 + (b << a)).w
     print repr(denom)
     R = (1 + a * b) / sqrt(denom)
+    print repr(R)
     return b
 
 showValue("east towards south by 30 degrees", towards(east, south, toRadians(30)))
