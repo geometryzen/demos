@@ -19,7 +19,7 @@ def toRadians(deg):
     return deg * pi / 180
 
 def towards(a, b, angle):
-    print 1 + b << a
+    print 1 + (b << a)
     R = (1 + a * b) / sqrt(1 + a << b)
     return fromVector
 
