@@ -11,7 +11,7 @@ space = CartesianSpace()
 
 space.add(CylinderBuilder().name("A").color(0x00FF00).volume(1).build().translateX(-2.5).translateY(-2.5))
 space.add(CubeBuilder().name("B").color(0x0000FF).volume(1).build().translateX(2.5).translateY(2.5))
-space.add(SphereBuilder().name("C")color(0xFF0000).volume(1).build().translateX(+2.5).translateY(-2.5))
+space.add(SphereBuilder().name("C").color(0xFF0000).volume(1).build().translateX(+2.5).translateY(-2.5))
 space.add(ConeBuilder().color(0xFFFF00).volume(1).build().translateX(-2.5).translateY(+2.5))
 
 timeout = 600000
