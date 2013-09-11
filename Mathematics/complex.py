@@ -3,7 +3,7 @@
 from cmath import *
 from e2ga import *
 
-useComplex = True
+useComplex = False
 
 def constructor(x, y):
     if useComplex:
