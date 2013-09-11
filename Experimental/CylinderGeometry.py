@@ -42,7 +42,8 @@ def setUp():
     print "openEnded:      " + str(cylinder.openEnded)
     print cylinder
 
-    mesh = Mesh(cylinder, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
+    material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
+    mesh = Mesh(cylinder, material)
     scene.add(mesh)
 
     window.addEventListener("resize", onWindowResize, False)
