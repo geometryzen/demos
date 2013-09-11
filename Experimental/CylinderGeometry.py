@@ -26,7 +26,7 @@ def setUp():
     material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
     mesh = CylinderBuilder().radius(20).height(100).material(material).build()
 
-    scene.add(mesh)
+    space.scene.add(mesh)
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize(None)
