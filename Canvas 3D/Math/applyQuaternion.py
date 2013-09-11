@@ -7,3 +7,5 @@ e3 = Vector3(0,0,1)
 q1 = Quaternion(1,0,0,1).normalize()
 
 print q1
+
+print e1.applyQuaternion(q1)
