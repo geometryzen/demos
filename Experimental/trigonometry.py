@@ -10,3 +10,6 @@ south = -north
 west = -east
 
 showValue("north", north)
+showValue("south", south)
+showValue("east", east)
+showValue("west", west)
