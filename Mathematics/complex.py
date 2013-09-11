@@ -3,14 +3,14 @@
 from cmath import *
 from e2ga import *
 
-def construct(x, y):
+def constructor(x, y):
     return Euclidean2(x, 0, 0, y)
     # return complex(x,y)
 
 print "----------"
 print "construction"
 print "----------"
-z1 = complex(11.0, 7.0)
+z1 = constructor(11.0, 7.0)
 print repr(z1)
 print "----------"
 print "properties"
@@ -29,10 +29,10 @@ print type(z1)
 print str(type(z1))
 print repr(type(z1))
 
-z2 = complex(5, 3)
-one = complex(1, 0)
+z2 = constructor(5, 3)
+one = constructor(1, 0)
 two = 2
-i = complex(0, 1)
+i = constructor(0, 1)
 zs = [one, two, i, z1, z2]
 print "----------"
 print "Addition (+)"
@@ -43,7 +43,7 @@ for a in zs:
 print "----------"
 print "+="
 print "----------"
-x = complex(0, 0)
+x = constructor(0, 0)
 print x
 x += 1
 print x
@@ -58,7 +58,7 @@ for a in zs:
 print "----------"
 print "-="
 print "----------"
-x = complex(0, 0)
+x = constructor(0, 0)
 print x
 x -= 1
 print x
@@ -73,7 +73,7 @@ for a in zs:
 print "----------"
 print "*="
 print "----------"
-x = complex(1, 0)
+x = constructor(1, 0)
 print x
 x *= 1
 print x
@@ -91,7 +91,7 @@ for a in zs:
 print "----------"
 print "*="
 print "----------"
-x = complex(1, 0)
+x = constructor(1, 0)
 print x
 x /= 1
 print x
@@ -108,7 +108,7 @@ print z1 != z2
 print "----------"
 print "phase"
 print "----------"
-print "phase(complex(-1,0)) => " + str(phase(complex(-1.0, 0.0)))
+print "phase(complex(-1,0)) => " + str(phase(constructor(-1.0, 0.0)))
 print phase(+1)
 print phase(+i)
 print phase(-1)
@@ -116,7 +116,7 @@ print phase(-i)
 print "----------"
 print "polar"
 print "----------"
-print "polar(complex(-1,0)) => " + str(polar(complex(-1.0, 0.0)))
+print "polar(complex(-1,0)) => " + str(polar(constructor(-1.0, 0.0)))
 print polar(+1)
 print polar(+i)
 print polar(-1)
