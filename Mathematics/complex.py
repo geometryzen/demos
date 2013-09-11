@@ -14,6 +14,10 @@ def Re(z):
 def Im(z):
     return z.xy
     # return z.imag
+    
+def computePhase(z):
+    return pi
+    #return phase(z);
 
 print "----------"
 print "construction"
@@ -116,11 +120,11 @@ print z1 != z2
 print "----------"
 print "phase"
 print "----------"
-print "phase(complex(-1,0)) => " + str(phase(constructor(-1.0, 0.0)))
-print phase(+1)
-print phase(+i)
-print phase(-1)
-print phase(-i)
+print "phase(complex(-1,0)) => " + str(computePhase(constructor(-1.0, 0.0)))
+print computePhase(+1)
+print computePhase(+i)
+print computePhase(-1)
+print computePhase(-i)
 print "----------"
 print "polar"
 print "----------"
