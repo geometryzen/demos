@@ -27,7 +27,7 @@ def setUp():
     heightSegments = 1
     openEnded = False
     material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
-    mesh = CylinderBuilder().radiusTop(radiusTop).radiusBottom(radiusBottom).height(height).material(material).build()
+    mesh = CylinderBuilder().material(material).build()
     cylinder = mesh.geometry
 
     print repr(cylinder)
