@@ -47,7 +47,7 @@ print repr(type(z1))
 
 z2 = constructor(5, 3)
 one = constructor(1, 0)
-two = 2
+two = constructor(2, 0)
 i = constructor(0, 1)
 zs = [one, two, i, z1, z2]
 print "----------"
