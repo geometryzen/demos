@@ -1,5 +1,5 @@
 from e2ga import *
-from math import pi
+from math import pi, sqrt
 
 def showValue(name, m):
     print name + " => " + str(m)
