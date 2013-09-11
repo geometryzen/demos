@@ -15,6 +15,7 @@ q3 = Quaternion(0, 0, 1, 1).normalize()
 print q1
 print q2
 print q3
+print ""
 
 es = [e1, e2, e3]
 qs = [q1, q2, q3]
