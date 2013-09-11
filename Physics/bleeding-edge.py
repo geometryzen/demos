@@ -9,7 +9,7 @@ from math import pi
 
 space = CartesianSpace()
 
-a = CylinderBuilder().name("a").color(0x00FF00).volume(1).build().translateX(-2.5).translateY(-2.5)
+a = CylinderBuilder().name("A").color(0x00FF00).volume(1).build().translateX(-2.5).translateY(-2.5)
 print "a.name => " + a.name
 space.add(a)
 space.add(CubeBuilder().name("B").color(0x0000FF).volume(1).build().translateX(2.5).translateY(2.5))
