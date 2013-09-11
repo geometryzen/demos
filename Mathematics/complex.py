@@ -16,8 +16,12 @@ def Im(z):
     # return z.imag
     
 def computePhase(z):
-    return pi
+    return phase(complex(z.w,z.xy))
     #return phase(z);
+
+def computePolar(z):
+    return polar(complex(z.w,z.xy))
+    #return polar(z);
 
 print "----------"
 print "construction"
@@ -128,11 +132,11 @@ print computePhase(-i)
 print "----------"
 print "polar"
 print "----------"
-print "polar(complex(-1,0)) => " + str(polar(constructor(-1.0, 0.0)))
-print polar(+1)
-print polar(+i)
-print polar(-1)
-print polar(-i)
+print "polar(complex(-1,0)) => " + str(computePolar(constructor(-1.0, 0.0)))
+print computePolar(+1)
+print computePolar(+i)
+print computePolar(-1)
+print computePolar(-i)
 print "----------"
 print "~"
 print "----------"
