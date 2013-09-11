@@ -6,7 +6,7 @@ from math import pi
 
 #scene = Scene()
 space = CartesianSpace()
-progressEnd = 10000
+progressEnd = 15000
 
 def setUp():
     global mesh
