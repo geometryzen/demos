@@ -26,13 +26,14 @@ def setUp():
     material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
     mesh = CylinderBuilder().radius(20).height(100).material(material).build()
 
-    space.scene.add(mesh)
+    space.add(mesh)
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize(None)
 
 def tick(elapsed):
     mesh.rotation += movement
+    space.render()
     renderer.render(scene, camera)
     
 def terminate(elapsed):
