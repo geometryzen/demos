@@ -1,4 +1,5 @@
 from e2ga import *
+from math import pi
 
 def showValue(name, m):
     print name + " => " + str(m)
@@ -16,3 +17,5 @@ showValue("west", west)
 
 def towards(fromVector, toVector, angle):
     return fromVector
+
+showValue("west", towards(east, south, ))
