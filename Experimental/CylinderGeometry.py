@@ -34,7 +34,6 @@ def setUp():
 def tick(elapsed):
     mesh.rotation += movement
     space.render()
-    renderer.render(scene, camera)
     
 def terminate(elapsed):
     return elapsed > progressEnd
