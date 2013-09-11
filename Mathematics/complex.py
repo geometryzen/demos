@@ -1,5 +1,11 @@
 # The complex number algebra is isomorphic to the even sub-algebra of the Euclidean Plane.
+# This program demonstrates this fact.
 from cmath import *
+from e2ga import *
+
+def construct(x, y):
+    return Euclidean2(x, 0, 0, y)
+    # return complex(x,y)
 
 print "----------"
 print "construction"
