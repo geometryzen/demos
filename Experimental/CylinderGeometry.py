@@ -23,9 +23,6 @@ def setUp():
 
     camera.position.z = 100
 
-    radiusTop = 20
-    radiusBottom = 20
-    height = 100
     radialSegments = 32
     heightSegments = 1
     openEnded = False
