@@ -6,8 +6,6 @@ from math import pi
 
 #scene = Scene()
 space = CartesianSpace()
-camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-renderer = WebGLRenderer({"antialias": True})
 mesh = None
 progressEnd = 10000
 movement = Vector3(0.02, 0.02, 0.02)
