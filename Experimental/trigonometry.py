@@ -18,7 +18,6 @@ showValue("west", west)
 def toRadians(deg):
     return deg * pi / 180
 
-# TODO: We want to return a vector that represents the semantics
 def towards(a, b, theta):
     '''
     Returns a vector which is the result of rotating a towards b by and angle theta.
