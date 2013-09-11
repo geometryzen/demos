@@ -15,7 +15,10 @@ showValue("south", south)
 showValue("east", east)
 showValue("west", west)
 
+def toRadians(deg):
+    return deg * pi / 180
+
 def towards(fromVector, toVector, angle):
     return fromVector
 
-showValue("west", towards(east, south, ))
+showValue("west", towards(east, south, toRadians(30)))
