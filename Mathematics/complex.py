@@ -6,6 +6,10 @@ from e2ga import *
 def constructor(x, y):
     return Euclidean2(x, 0, 0, y)
     # return complex(x,y)
+    
+def Re(z):
+    return z.w
+    # return z.real
 
 print "----------"
 print "construction"
@@ -15,7 +19,7 @@ print repr(z1)
 print "----------"
 print "properties"
 print "----------"
-print z1.real
+print Re(z1)
 print z1.imag
 print "----------"
 print "representations"
