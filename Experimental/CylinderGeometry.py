@@ -19,7 +19,7 @@ def setUp():
     container.appendChild(space.renderer.domElement)
 
     material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
-    mesh = CylinderBuilder().radius(0.5).height(1).material(material).build()
+    mesh = CylinderBuilder().radius(1).height(2).material(material).build()
 
     space.add(mesh)
 
