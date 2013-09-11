@@ -12,5 +12,7 @@ print q1
 print q2
 print q3
 
-print e1.applyQuaternion(q1)
+print "i => " + e1.applyQuaternion(q1)
+print e2.applyQuaternion(q1)
+
 print e1.applyQuaternion(q2)
