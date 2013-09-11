@@ -11,6 +11,10 @@ def Re(z):
     return z.w
     # return z.real
 
+def Im(z):
+    return z.xy
+    # return z.imag
+
 print "----------"
 print "construction"
 print "----------"
