@@ -3,25 +3,37 @@
 from cmath import *
 from e2ga import *
 
+useComplex = true
+
 def constructor(x, y):
-    return Euclidean2(x, 0, 0, y)
-    # return complex(x,y)
+    if useComplex:
+        return complex(x,y)
+    else:
+        return Euclidean2(x, 0, 0, y)
     
 def Re(z):
-    return z.w
-    # return z.real
+    if useComplex:
+        return z.real
+    else:
+        return z.w
 
 def Im(z):
-    return z.xy
-    # return z.imag
+    if useComplex:
+        return z.imag
+    else:
+        return z.xy
     
 def computePhase(z):
-    return phase(complex(z.w,z.xy))
-    #return phase(z);
+    if useComplex:
+        return phase(z);
+    else:
+        return phase(complex(z.w,z.xy))
 
 def computePolar(z):
-    return polar(complex(z.w,z.xy))
-    #return polar(z);
+    if useComplex:
+        return polar(z);
+    else:
+        return polar(complex(z.w,z.xy))
 
 print "----------"
 print "construction"
