@@ -40,8 +40,6 @@ def tearDown():
     document.removeElementsByTagName('canvas')
 
 def onWindowResize(event):
-    camera.aspect = window.innerWidth / window.innerHeight
-    camera.updateProjectionMatrix()
-    renderer.size = (window.innerWidth, window.innerHeight)
+    space.viewSize(window.innerWidth, window.innerHeight)
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
