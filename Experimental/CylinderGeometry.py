@@ -30,9 +30,9 @@ def setUp():
     heightSegments = 1
     openEnded = False
     material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
-    mesh = CylinderBuilder().radiusTop(radiusTop).radiusBottom(radiusBottom).height(height).build()
+    mesh = CylinderBuilder().radiusTop(radiusTop).radiusBottom(radiusBottom).height(height).material(material).build()
     cylinder = mesh.geometry
-    cylinder = CylinderGeometry(radiusTop, radiusBottom, height, radialSegments, heightSegments, openEnded)
+    #cylinder = CylinderGeometry(radiusTop, radiusBottom, height, radialSegments, heightSegments, openEnded)
 
     print repr(cylinder)
     print "radiusTop:      " + str(cylinder.radiusTop)
@@ -43,7 +43,7 @@ def setUp():
     print "openEnded:      " + str(cylinder.openEnded)
     print cylinder
 
-    mesh = Mesh(cylinder, material)
+    #mesh = Mesh(cylinder, material)
     scene.add(mesh)
 
     window.addEventListener("resize", onWindowResize, False)
