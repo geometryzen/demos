@@ -17,7 +17,9 @@ b = CubeBuilder().name("B").color(0x0000FF).volume(1).build().translateX(2.5).tr
 print "b.name => " + b.name
 space.add(b)
 
-space.add(SphereBuilder().name("C").color(0xFF0000).volume(1).build().translateX(+2.5).translateY(-2.5))
+c = SphereBuilder().name("C").color(0xFF0000).volume(1).build().translateX(+2.5).translateY(-2.5)
+print "c.name => " + c.name
+space.add(c)
 
 d = ConeBuilder().name("D").color(0xFFFF00).volume(1).build().translateX(-2.5).translateY(+2.5)
 print "d.name => " + d.name
