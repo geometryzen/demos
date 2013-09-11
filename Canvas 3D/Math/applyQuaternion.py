@@ -8,5 +8,6 @@ q1 = Quaternion(1, 0, 0, 1).normalize()
 q2 = Quaternion(0, 1, 0, 1).normalize()
 
 print q1
+print q2
 
 print e1.applyQuaternion(q1)
