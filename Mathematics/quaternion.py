@@ -55,13 +55,13 @@ target = Quaternion()
 source = Quaternion(4, 3, 2, 1)
 print target.copy(source)
 print repr(target)
-print "----------"
-print "setFromEuler(vector, order) Quaternion"
-print "----------"
-vector = Vector3(0.5, 1.0, 2.0)
-target = Quaternion()
-print target.setFromEuler(vector)
-print repr(target)
+#print "----------"
+#print "setFromEuler(vector, order) Quaternion"
+#print "----------"
+#vector = Vector3(0.5, 1.0, 2.0)
+#target = Quaternion()
+#print target.setFromEuler(vector)
+#print repr(target)
 print "----------"
 print "setFromAxisAngle(axis, angle) Quaternion"
 print "----------"
