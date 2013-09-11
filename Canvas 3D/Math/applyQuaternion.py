@@ -21,5 +21,5 @@ qs = [q1, q2, q3]
 
 for e in es:
     for q in qs:
-        showValue(str(e) + " applyQuaternion " + str(q), e.applyQuaternion(q))
+        showValue(str(e) + " applyQuaternion " + str(q), e.clone().applyQuaternion(q))
     print ""
