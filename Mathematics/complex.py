@@ -1,4 +1,6 @@
 # The complex number algebra is isomorphic to the even sub-algebra of the Euclidean Plane.
+# The complex real part corresponds to the multivector scalar part.
+# The complex imag part corresponds to the multivector bivector part.
 # This program demonstrates this fact.
 from cmath import *
 from e2ga import *
