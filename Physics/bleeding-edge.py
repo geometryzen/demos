@@ -10,9 +10,7 @@ from math import pi
 space = CartesianSpace()
 
 space.add(CylinderBuilder().color(0x00FF00).volume(1).build().translateX(-2.5).translateY(-2.5))
-ball = CubeBuilder().name("B").color(0x0000FF).volume(1).build().translateX(2.5).translateY(2.5)
-print "name: " + ball.name
-space.add(ball)
+space.add(CubeBuilder().name("B").color(0x0000FF).volume(1).build().translateX(2.5).translateY(2.5))
 space.add(SphereBuilder().color(0xFF0000).volume(1).build().translateX(+2.5).translateY(-2.5))
 space.add(ConeBuilder().color(0xFFFF00).volume(1).build().translateX(-2.5).translateY(+2.5))
 
