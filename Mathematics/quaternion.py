@@ -1,4 +1,5 @@
 # The quaternions are isomorphic to the even sub-algebra of Euclidean Space (e3ga).
+# TODO: division; Quaternions are after all a division algebra! 
 from three import *
 from math import pi
 
