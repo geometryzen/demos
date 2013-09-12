@@ -29,10 +29,10 @@ showRepr("north", north)
 east = VectorE2(1, 0)
 
 
-south = north - north # Avoid issue with unimplemented unary minus!
+south = zero - north # Avoid issue with unimplemented unary minus!
 
 
-west = -east
+west = zero - east
 
 def toRadians(deg):
     return deg * pi / 180
