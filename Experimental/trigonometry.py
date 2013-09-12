@@ -90,7 +90,7 @@ def towards(a, b, theta):
     c = cos(theta)
     s = sin(theta)
     x = (c - B * s) * a * (c + B * s)
-    print repr(x)
+    showValue("x", x)
     return x
 
 showValue("east towards south by 30 degrees", towards(east, south, toRadians(30)))
