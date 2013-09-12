@@ -9,7 +9,7 @@ def showValue(name, m):
     return m
 
 # Create a few unit vectors to match the "compass" terminology in the question:
-north = VectorE2(0, 1)
+north = VectorE2(0, 1) * meter
 east = VectorE2(1, 0)
 south = -north
 west = -east
