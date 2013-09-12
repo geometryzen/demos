@@ -15,9 +15,9 @@ def showRepr(name, m):
 # Create a few unit vectors to match the "compass" terminology in the question:
 # Let's experiment with mixing the units in here...
 zero = VectorE2(0,0) * meter
-print repr(zero)
-print zero
+showRepr("zero", zero)
 showRepr("zero.quantity", zero.quantity)
+showRepr("zero.uom", zero.uom)
 
 north = VectorE2(0, 1) * meter
 showRepr("north", north)
