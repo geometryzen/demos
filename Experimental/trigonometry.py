@@ -80,6 +80,7 @@ def toRadians(deg):
     return deg * pi / 180
 
 # This is the most complex function that we must write.
+# Not very general yet.
 def towards(a, b, theta):
     '''
     Returns a vector which is the result of rotating a towards b by and angle theta.
@@ -93,6 +94,8 @@ def towards(a, b, theta):
     x = (c - B * s) * a * (c + B * s)
     showValue("x", x)
     return x
+
+showValue("test", towards(east, north), toRadians(0))
 
 d1 = 100 * east
 d2 = 300 * south
