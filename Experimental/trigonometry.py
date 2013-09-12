@@ -17,7 +17,7 @@ def showRepr(name, m):
 zero = VectorE2(0,0) * meter
 print repr(zero)
 print zero
-print repr(zero.quantity)
+showRepr("zero.quantity", zero.quantity)
 
 north = VectorE2(0, 1) * meter
 showRepr("north", north)
