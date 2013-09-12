@@ -30,7 +30,8 @@ def towards(a, b, theta):
     # Should generalize for non-orthogonal case?
     # Find a more elegant way to not have to mess with units?
     # Dropping the units on the floor seems a bit extreme.
-    magnitudeA = a * a
+    magA = a * a
+    showRepr("a*a", magA)
     B =  a.quantity ^ b.quantity
     c = cos(theta/2)
     s = sin(theta/2)
