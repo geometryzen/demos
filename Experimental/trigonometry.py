@@ -1,5 +1,3 @@
-# Work In Progress.
-# TODO: Arranging things so that the order of units, multivectors does not matter.
 from e2ga import *
 from math import pi, sqrt, cos, sin
 from units import *
@@ -13,7 +11,6 @@ def showRepr(name, m):
     return m
 
 # Create a few unit vectors to match the "compass" terminology in the question:
-# Let's experiment with mixing the units in here...
 zero  = VectorE2(0, 0) * meter
 north = VectorE2(0, 1) * meter
 east  = VectorE2(1, 0) * meter
@@ -32,6 +29,8 @@ def towards(a, b, theta):
     # In fact, if don't normalize then the dimensions would be wrong.
     # Should generalize for non-orthogonal case?
     # Find a more elegant way to not have to mess with units?
+    # Dropping the units on the floor seems a bit extreme.
+    magnitudeA = a.length()
     B =  a.quantity ^ b.quantity
     c = cos(theta/2)
     s = sin(theta/2)
