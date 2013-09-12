@@ -31,6 +31,7 @@ def towards(a, b, theta):
     # Perhaps should normalize the vectors a and b?
     # In fact, if don't normalize then the dimensions would be wrong.
     # Should generalize for non-orthogonal case?
+    # Find a more elegant way to not have to mess with units?
     B =  a.quantity ^ b.quantity
     c = cos(theta/2)
     s = sin(theta/2)
