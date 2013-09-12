@@ -12,6 +12,7 @@ def showValue(name, m):
 # Let's experiment with mixing the units in here...
 print repr(VectorE2(0,0))
 print repr(VectorE2(0,0) * meter)
+zero = VectorE2(0,0) * meter
 north = VectorE2(0, 1) * meter
 east = VectorE2(1, 0)
 south = (VectorE2(0,0) * meter) - north # Avoid issue with unimplemented unary minus
