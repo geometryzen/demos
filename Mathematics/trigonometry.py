@@ -92,7 +92,7 @@ def towards(a, b, theta):
     s = sin(theta/2)
     return (c - B * s) * a * (c + B * s)
 
-d1 = 100 * (meter * east)
+d1 = ScalarE2(100) * meter * east
 d2 = 300 * south
 d3 = 150 * towards(west, south, toRadians(30))
 d4 = 200 * towards(west, north, toRadians(60))
