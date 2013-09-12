@@ -64,7 +64,7 @@
 # So the example below will be a solution of the trig problem using GA to rotate some of the 
 # vectors. We then just sum the vectors to get the total displacement.
 from e2ga import *
-from math import pi, sqrt
+from math import pi, sqrt, cos, sin
 
 def showValue(name, m):
     print name + " => " + str(m)
@@ -79,6 +79,7 @@ west = -east
 def toRadians(deg):
     return deg * pi / 180
 
+# This is the most complex function that we must write.
 def towards(a, b, theta):
     '''
     Returns a vector which is the result of rotating a towards b by and angle theta.
