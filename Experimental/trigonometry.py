@@ -85,8 +85,7 @@ def towards(a, b, theta):
     Returns a vector which is the result of rotating a towards b by and angle theta.
     '''
     # TODO: Must be a more elegant way of converting the ScalarE2 to a float!
-    denom = 2 * (1 + (b << a)).w
-    B = (1 + a * b) / sqrt(denom)
+    B =  a ^ b
     showValue("B", B)
     showValue("B*(~B)", B*(~B))
     c = cos(theta)
