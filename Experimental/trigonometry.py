@@ -17,7 +17,7 @@ print zero
 north = VectorE2(0, 1) * meter
 print repr(north)
 east = VectorE2(1, 0)
-south = zero - north # Avoid issue with unimplemented unary minus
+south = zero - north # Avoid issue with unimplemented unary minus!
 west = -east
 
 def toRadians(deg):
