@@ -8,6 +8,10 @@ def showValue(name, m):
     print name + " => " + str(m)
     return m
 
+def showRepr(name, m):
+    print name + " => " + repr(m)
+    return m
+
 # Create a few unit vectors to match the "compass" terminology in the question:
 # Let's experiment with mixing the units in here...
 zero = VectorE2(0,0) * meter
@@ -16,7 +20,7 @@ print zero
 print repr(zero.quantity)
 
 north = VectorE2(0, 1) * meter
-print repr(north)
+ShowRepr("north", north)
 east = VectorE2(1, 0)
 south = zero - north # Avoid issue with unimplemented unary minus!
 west = -east
