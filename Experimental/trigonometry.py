@@ -95,4 +95,12 @@ def towards(a, b, theta):
     showValue("x", x)
     return x
 
-showValue("west towards south by 30 degrees", towards(west, south, toRadians(30)))
+d1 = 100 * east
+d2 = 300 * south
+d3 = towards(west, south, toRadians(30))
+d4 = towards(west, north, toRadians(60))
+
+showValue("d1", d1)
+showValue("d2", d2)
+showValue("d3", d3)
+showValue("d4", d4)
