@@ -36,7 +36,7 @@
 #
 # My conviction is that a better trajectory would be to develop a curriculum with the following trajectory:
 #
-# Start in the lower-left-ront corner them move to the right:
+# Start in the lower-left-front corner them move to the right:
 #
 # 1a) Start with 2D, coordinates, Euclidean space.
 # 1b) Move left-to-right in the cube to introduce vectors, Geometric Algebra, scalars and bivector.
@@ -65,6 +65,7 @@
 # vectors. We then just sum the vectors to get the total displacement.
 from e2ga import *
 from math import pi, sqrt, cos, sin
+from units import * # See if we can perform the calculations using measures?
 
 def showValue(name, m):
     print name + " => " + str(m)
@@ -82,7 +83,10 @@ def toRadians(deg):
 def towards(a, b, theta):
     '''
     Returns a vector which is the result of rotating a towards b by an angle theta.
+    A fluid function rotate(a).towards(b).by(theta) would be interesting?
     '''
+    # Perhaps should normalize the vectors a and b?
+    # Should generalize for non-orthogonal case?
     B =  a ^ b
     c = cos(theta/2)
     s = sin(theta/2)
