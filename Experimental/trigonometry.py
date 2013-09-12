@@ -26,7 +26,7 @@ north = VectorE2(0, 1) * meter
 showRepr("north", north)
 
 
-east = VectorE2(1, 0)
+east = VectorE2(1, 0) * meter
 
 x = meter.compatible(meter)
 south = zero - north # Avoid issue with unimplemented unary minus!
