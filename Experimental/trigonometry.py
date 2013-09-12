@@ -45,7 +45,7 @@ def towards(a, b, theta):
     # Perhaps should normalize the vectors a and b?
     # In fact, if don't normalize then the dimensions would be wrong.
     # Should generalize for non-orthogonal case?
-    B =  a ^ b
+    B =  a.quantity ^ b.quantity
     showValue("B", B)
     c = cos(theta/2)
     s = sin(theta/2)
