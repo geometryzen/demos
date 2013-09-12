@@ -30,6 +30,8 @@ east = VectorE2(1, 0)
 
 
 south = zero - north # Avoid issue with unimplemented unary minus!
+
+
 west = -east
 
 def toRadians(deg):
