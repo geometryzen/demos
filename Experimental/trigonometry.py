@@ -20,7 +20,7 @@ print zero
 print repr(zero.quantity)
 
 north = VectorE2(0, 1) * meter
-ShowRepr("north", north)
+showRepr("north", north)
 east = VectorE2(1, 0)
 south = zero - north # Avoid issue with unimplemented unary minus!
 west = -east
