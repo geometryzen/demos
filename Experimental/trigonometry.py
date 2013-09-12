@@ -95,7 +95,7 @@ def towards(a, b, theta):
     showValue("x", x)
     return x
 
-showValue("test", towards(east, north, toRadians(0)))
+showValue("test", towards(east, north, toRadians(45)))
 
 d1 = 100 * east
 d2 = 300 * south
