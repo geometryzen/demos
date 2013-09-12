@@ -28,7 +28,7 @@ showRepr("north", north)
 
 east = VectorE2(1, 0)
 
-
+x = meter - meter
 south = zero - north # Avoid issue with unimplemented unary minus!
 
 
