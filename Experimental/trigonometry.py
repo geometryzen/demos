@@ -23,6 +23,7 @@ def towards(a, b, theta):
     A fluid function rotate(a).towards(b).by(theta) would be interesting?
     '''
     # Perhaps should normalize the vectors a and b?
+    # In fact, if don't normalize then the dimensions would be wrong.
     # Should generalize for non-orthogonal case?
     B =  a ^ b
     c = cos(theta/2)
