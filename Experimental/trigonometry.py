@@ -89,8 +89,8 @@ def towards(a, b, theta):
     B =  a ^ b
     showValue("B", B)
     showValue("B*B", B*B)
-    c = cos(theta)
-    s = sin(theta)
+    c = cos(theta/2)
+    s = sin(theta/2)
     x = (c - B * s) * a * (c + B * s)
     showValue("x", x)
     return x
