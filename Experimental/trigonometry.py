@@ -24,7 +24,11 @@ showRepr("zero.uom.labels", zero.uom.labels)
 
 north = VectorE2(0, 1) * meter
 showRepr("north", north)
+
+
 east = VectorE2(1, 0)
+
+
 south = zero - north # Avoid issue with unimplemented unary minus!
 west = -east
 
