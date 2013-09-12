@@ -16,7 +16,7 @@ def showRepr(name, m):
 # Let's experiment with mixing the units in here...
 zero  = VectorE2(0, 0) * meter
 north = VectorE2(0, 1) * meter
-east  = VectorE2(1, 0) * meter
+east  = VectorE2(1, 0) * second
 south = zero - north # Avoid issue with unimplemented unary minus!
 west  = zero - east
 
