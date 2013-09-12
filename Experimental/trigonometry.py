@@ -34,11 +34,12 @@ d2 = 300 * south
 d3 = 150 * towards(west, south, toRadians(30))
 d4 = 200 * towards(west, north, toRadians(60))
 
-#x1 = 100 * east * meter
-#showValue("x1", x1)
-#d2 = ScalarE2(300) * south * meter
+x1 = 100 * east * meter
+x2 = ScalarE2(300) * south * meter
 #d3 = ScalarE2(150) * meter * towards(west, south, toRadians(30))
 #d4 = ScalarE2(200) * meter * towards(west, north, toRadians(60))
+showValue("x1", x1)
+showValue("x2", x2)
 
 d = d1 + d2 + d3 + d4
 
