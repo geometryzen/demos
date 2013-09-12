@@ -48,7 +48,8 @@ def towards(a, b, theta):
     B =  a ^ b
     c = cos(theta/2)
     s = sin(theta/2)
-    return (c - B * s) * a * (c + B * s)
+    Bs = B * s
+    return (c - Bs) * a * (c + Bs)
 
 d1 = 100 * east
 d2 = 300 * south
