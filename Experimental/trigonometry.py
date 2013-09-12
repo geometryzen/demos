@@ -13,6 +13,7 @@ def showValue(name, m):
 print repr(VectorE2(0,0))
 print repr(VectorE2(0,0) * meter)
 zero = VectorE2(0,0) * meter
+print repr(zero)
 north = VectorE2(0, 1) * meter
 east = VectorE2(1, 0)
 south = zero - north # Avoid issue with unimplemented unary minus
