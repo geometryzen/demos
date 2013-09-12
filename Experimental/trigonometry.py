@@ -36,7 +36,7 @@ d4 = 200 * towards(west, north, toRadians(60))
 
 x1 = 100 * east * meter
 x2 = ScalarE2(300) * south * meter
-#d3 = ScalarE2(150) * meter * towards(west, south, toRadians(30))
+x3 = ScalarE2(150) * towards(west, south, toRadians(30)) * meter
 #d4 = ScalarE2(200) * meter * towards(west, north, toRadians(60))
 showValue("x1", x1)
 showValue("x2", x2)
