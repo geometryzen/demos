@@ -1,3 +1,5 @@
+# Work In Progress.
+# TODO: Arranging things so that the order of units, multivectors does not matter.
 from e2ga import *
 from math import pi, sqrt, cos, sin
 from units import * # See if we can perform the calculations using measures?
