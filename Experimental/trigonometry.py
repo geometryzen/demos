@@ -79,11 +79,9 @@ west = -east
 def toRadians(deg):
     return deg * pi / 180
 
-# This is the most complex function that we must write.
-# Not very general yet.
 def towards(a, b, theta):
     '''
-    Returns a vector which is the result of rotating a towards b by and angle theta.
+    Returns a vector which is the result of rotating a towards b by an angle theta.
     '''
     B =  a ^ b
     c = cos(theta/2)
