@@ -13,6 +13,7 @@ def showValue(name, m):
 zero = VectorE2(0,0) * meter
 print repr(zero)
 print zero
+print repr(zero.quantity)
 
 north = VectorE2(0, 1) * meter
 print repr(north)
