@@ -90,7 +90,7 @@ def towards(a, b, theta):
 
 d1 = 100 * east
 d2 = 300 * south
-d3 = 150 * towards(west, south, toRadians(30.01))
+d3 = 150 * towards(west, south, toRadians(30))
 d4 = 200 * towards(west, north, toRadians(60))
 
 d = d1 + d2 + d3 + d4
