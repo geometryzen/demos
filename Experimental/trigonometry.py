@@ -46,6 +46,7 @@ def towards(a, b, theta):
     # In fact, if don't normalize then the dimensions would be wrong.
     # Should generalize for non-orthogonal case?
     B =  a ^ b
+    showValue("B", B)
     c = cos(theta/2)
     s = sin(theta/2)
     Bs = B * s
