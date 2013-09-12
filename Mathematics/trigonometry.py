@@ -28,7 +28,7 @@
 # My sense is that we hang out on the left plane of this cube with coordinate approaches, matrices
 # and finally tensors. We do a lot of Linear algebra, S.R. with coordinates emphasizing transformations,
 # and maybe touch quaternions for rotations.
-# We start with 2 dimensional spaces and progress to 3 and 4+. This low-dimensional aspect makes sense, we have some intuition
+# We start with 2 dimensional spaces and progress to 3 and 4. This low-dimensional aspect makes sense, we have some intuition
 # for two dimensions, can graph it easily, can play with complex numbers and matrix rotations.
 #
 # But this learning trajectory sacrifices the rewards of a more geometric approach that allows our intuition to be developed
@@ -61,7 +61,7 @@
 # 3c) Introduce curved spaces for General Relativity.
 # 3d) Conformal GA for Computer Graphics.
 #
-# So the example below will be a solution of the trig problem using GA to rotate some of the 
+# The example below is the (rough) solution of the trig problem using GA to rotate some of the 
 # vectors. We then just sum the vectors to get the total displacement.
 from e2ga import *
 from math import pi, sqrt, cos, sin
