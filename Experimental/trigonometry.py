@@ -41,6 +41,8 @@ x3 = ScalarE2(150) * towards(west, south, toRadians(30)) * meter
 x4 = ScalarE2(200) * towards(west, north, toRadians(60)) * meter
 showValue("x1", x1)
 showValue("x2", x2)
+showValue("x3", x3)
+showValue("x4", x4)
 
 d = d1 + d2 + d3 + d4
 
