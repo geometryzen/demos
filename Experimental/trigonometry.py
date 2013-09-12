@@ -87,7 +87,7 @@ def towards(a, b, theta):
     # TODO: Must be a more elegant way of converting the ScalarE2 to a float!
     B =  a ^ b
     showValue("B", B)
-    showValue("B*(~B)", B*(~B))
+    showValue("B*B", B*B)
     c = cos(theta)
     s = sin(theta)
     x = (c - B * s) * a * (c + B * s)
