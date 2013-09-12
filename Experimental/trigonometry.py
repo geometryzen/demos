@@ -95,7 +95,10 @@ d2 = 300 * south
 d3 = 150 * towards(west, south, toRadians(30))
 d4 = 200 * towards(west, north, toRadians(60))
 
+d = d1 + d2 + d3 + d4
+
 showValue("d1", d1)
 showValue("d2", d2)
 showValue("d3", d3)
 showValue("d4", d4)
+showValue("answer", d)
