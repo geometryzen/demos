@@ -12,7 +12,7 @@ def showValue(name, m):
 # Let's experiment with mixing the units in here...
 north = VectorE2(0, 1) * meter
 east = VectorE2(1, 0)
-south = -north
+south = VectorE2(0,0) - north # Avoid issue with unimplemented unary minus
 west = -east
 
 def toRadians(deg):
