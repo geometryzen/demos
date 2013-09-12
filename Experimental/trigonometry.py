@@ -18,6 +18,7 @@ zero = VectorE2(0,0) * meter
 showRepr("zero", zero)
 showRepr("zero.quantity", zero.quantity)
 showRepr("zero.uom", zero.uom)
+showRepr("zero.uom.scale", zero.uom.scale)
 
 north = VectorE2(0, 1) * meter
 showRepr("north", north)
