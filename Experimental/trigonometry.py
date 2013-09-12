@@ -86,11 +86,11 @@ def towards(a, b, theta):
     '''
     # TODO: Must be a more elegant way of converting the ScalarE2 to a float!
     denom = 2 * (1 + (b << a)).w
-    R = (1 + a * b) / sqrt(denom)
+    B = (1 + a * b) / sqrt(denom)
     c = cos(theta)
     s = sin(theta)
-    print repr(R)
-    print R * (~R)
-    return b
+    x = (c - B * s) * a * (c + B * s)
+    print repr(x)
+    return x
 
 showValue("east towards south by 30 degrees", towards(east, south, toRadians(30)))
