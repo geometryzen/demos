@@ -85,17 +85,10 @@ def towards(a, b, theta):
     '''
     Returns a vector which is the result of rotating a towards b by and angle theta.
     '''
-    # TODO: Must be a more elegant way of converting the ScalarE2 to a float!
     B =  a ^ b
-    showValue("B", B)
-    showValue("B*B", B*B)
     c = cos(theta/2)
     s = sin(theta/2)
-    x = (c - B * s) * a * (c + B * s)
-    showValue("x", x)
-    return x
-
-showValue("test", towards(east, north, toRadians(45)))
+    return (c - B * s) * a * (c + B * s)
 
 d1 = 100 * east
 d2 = 300 * south
