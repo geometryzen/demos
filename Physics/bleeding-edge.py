@@ -9,16 +9,7 @@ from math import pi
 
 space = CartesianSpace()
 
-a = CylinderBuilder().name("Cylinder").color(0x00FF00).volume(1).build().translateX(-2.5).translateY(-2.5)
-space.add(a)
-
-b = CubeBuilder().name("Cube").color(0x0000FF).volume(1).build().translateX(2.5).translateY(2.5)
-space.add(b)
-
-c = SphereBuilder().name("Sphere").color(0xFF0000).volume(1).build().translateX(+2.5).translateY(-2.5)
-space.add(c)
-
-d = ConeBuilder().name("Cone").color(0xFFFF00).volume(1).build().translateX(-2.5).translateY(+2.5)
+cone = ConeBuilder().name("Cone").color(0xFFFF00).volume(1).build().translateX(-2.5).translateY(+2.5)
 space.add(d)
 
 timeout = 600000
@@ -32,7 +23,7 @@ def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
 
 def tick(elapsed):
-    d.position.set(0,0,0)
+    cone.position.set(0,0,0)
     space.render()
     
 def terminate(elapsed):
