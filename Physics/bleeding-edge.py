@@ -6,6 +6,7 @@ from geometry import *
 from e3ga import *
 from browser import *
 from math import pi, sin, cos
+from unit import *
 
 space = CartesianSpace()
 
@@ -15,7 +16,7 @@ space.add(cone)
 i = VectorE3(1, 0, 0)
 j = VectorE3(0, 1, 0)
 I = i * j
-omega = 2 * pi / 10
+omega = 2 * pi / (10 * second)
 
 timeout = 600000
 
