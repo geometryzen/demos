@@ -1,5 +1,6 @@
+from math import *
 from units import *
-print repr(second)
-print second
-print repr(2 / (10 * second))
-print 2 / second
+
+omega = 2 * pi / (10 * second)
+
+print repr(omega)
