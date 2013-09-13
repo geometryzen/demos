@@ -18,5 +18,6 @@ angle = omega * t
 print repr(angle)
 print angle
 
+c = angle.cos()
 c = cos(angle)
 
