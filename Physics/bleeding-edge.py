@@ -10,7 +10,7 @@ from math import pi
 space = CartesianSpace()
 
 cone = ConeBuilder().name("Cone").color(0xFFFF00).volume(1).build().translateX(-2.5).translateY(+2.5)
-space.add(d)
+space.add(cone)
 
 timeout = 600000
 
