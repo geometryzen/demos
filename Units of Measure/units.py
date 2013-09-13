@@ -1,2 +1,2 @@
 from units import *
-print 1 / second
+print repr(1 / second)
