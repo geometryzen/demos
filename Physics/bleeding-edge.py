@@ -12,6 +12,8 @@ space = CartesianSpace()
 cone = ConeBuilder().name("Cone").color(0xFFFF00).volume(1).build().translateX(-2.5).translateY(+2.5)
 space.add(cone)
 
+i = VectorE2(1,0)
+
 timeout = 600000
 
 def onDocumentKeyDown(event):
@@ -23,7 +25,7 @@ def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
 
 def tick(elapsed):
-    cone.position.set(0,0,0)
+    cone.position.set(i.x, i.y, 0)
     space.render()
     
 def terminate(elapsed):
