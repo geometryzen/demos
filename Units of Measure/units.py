@@ -13,4 +13,8 @@ t = elapsed * second / 1000
 print repr(t)
 print t
 
+radians = omega * t
+
+print repr(radians)
+print radians
 
