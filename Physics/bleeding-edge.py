@@ -17,7 +17,7 @@ i = VectorE3(1, 0, 0)
 j = VectorE3(0, 1, 0)
 I = i * j
 # This would be more geometric as a bivector
-omega = (2 * pi / (16 * second)) * I
+omega = I * (2 * pi / (16 * second))
 
 timeout = 600000
 
