@@ -32,7 +32,8 @@ def tick(elapsed):
     t = elapsed * second / 1000
     c = cos(omega * t)
     s = sin(omega * t)
-    r = (c - I * s) * i * (c + I * s)
+    Is = I * s
+    r = (c - Is) * i * (c + Is)
     cone.position.set(r.x, r.y, r.z)
     space.render()
     
