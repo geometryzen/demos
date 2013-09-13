@@ -13,6 +13,8 @@ cone = ConeBuilder().name("Cone").color(0xFFFF00).volume(1).build().translateX(-
 space.add(cone)
 
 i = VectorE3(1, 0, 0)
+j = VectorE3(0, 1, 0)
+I = i * j
 
 timeout = 600000
 
@@ -24,8 +26,11 @@ def onDocumentKeyDown(event):
 def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
 
-def tick(elapsed):
-    cone.position.set(i.x, i.y, i.z)
+def tick(t):
+    c = cos(t)
+    s = sint(t)
+    r = (c - I * s) * i * (c + I * s)
+    cone.position.set(r.x, r.y, r.z)
     space.render()
     
 def terminate(elapsed):
