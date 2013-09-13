@@ -3,9 +3,9 @@ This example represents efforts to provide convenient abstractions
 of the Three.js WebGL Computer Graphics API for use with Physics simulations.
 '''
 from geometry import *
-from e3ga import *
+from e2ga import *
 from browser import *
-from math import pi
+from math import pi, sin, cos
 
 space = CartesianSpace()
 
