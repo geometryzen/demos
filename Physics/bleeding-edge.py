@@ -28,7 +28,7 @@ def onWindowResize(event):
 
 def tick(t):
     c = cos(t)
-    s = sint(t)
+    s = sin(t)
     r = (c - I * s) * i * (c + I * s)
     cone.position.set(r.x, r.y, r.z)
     space.render()
