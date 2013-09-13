@@ -32,6 +32,7 @@ def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
 
 def tick(elapsed):
+    a.position.set(0,0,0)
     space.render()
     
 def terminate(elapsed):
