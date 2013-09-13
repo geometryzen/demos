@@ -20,4 +20,5 @@ print angle
 
 c = cos(angle)
 print repr(c)
+s = sin(angle)
 
