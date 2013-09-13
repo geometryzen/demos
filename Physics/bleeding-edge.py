@@ -16,7 +16,9 @@ space.add(cone)
 i = VectorE3(1, 0, 0)
 j = VectorE3(0, 1, 0)
 I = i * j
-# This would be more geometric as a bivector
+# We seek to describe the angular velocity geometrically and then apply it to rotate the object.
+# This will probably require looking at the generator of the rotation and then using the exponential
+# function to get the finite rotation.
 omega = I * (2 * pi / (16 * second))
 
 timeout = 600000
@@ -31,6 +33,7 @@ def onWindowResize(event):
 
 def tick(elapsed):
     t = elapsed * second / 1000
+    # TODO: Measure needs to support cosine and sine.
     c = cos(omega * t)
     s = sin(omega * t)
     Is = I * s
