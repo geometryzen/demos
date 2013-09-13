@@ -28,8 +28,8 @@ def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
 
 def tick(t):
-    c = cos(omega * t)
-    s = sin(omega * t)
+    c = cos(omega * t / 1000)
+    s = sin(omega * t / 1000)
     r = (c - I * s) * i * (c + I * s)
     cone.position.set(r.x, r.y, r.z)
     space.render()
