@@ -3,7 +3,7 @@ This example represents efforts to provide convenient abstractions
 of the Three.js WebGL Computer Graphics API for use with Physics simulations.
 '''
 from geometry import *
-from e2ga import *
+from e3ga import *
 from browser import *
 from math import pi, sin, cos
 
@@ -12,7 +12,7 @@ space = CartesianSpace()
 cone = ConeBuilder().name("Cone").color(0xFFFF00).volume(1).build().translateX(-2.5).translateY(+2.5)
 space.add(cone)
 
-i = VectorE2(1,0)
+i = VectorE3(1, 0, 0)
 
 timeout = 600000
 
@@ -25,7 +25,7 @@ def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
 
 def tick(elapsed):
-    cone.position.set(i.x, i.y, 0)
+    cone.position.set(i.x, i.y, i.z)
     space.render()
     
 def terminate(elapsed):
