@@ -34,8 +34,8 @@ def onWindowResize(event):
 def tick(elapsed):
     t = elapsed / 1000
     # TODO: Measure needs to support cosine and sine.
-    c = cos(omega * t)
-    s = sin(omega * t)
+    c = cos(omega * t / 2)
+    s = sin(omega * t / 2)
     Is = I * s
     # This looks like exp(I omega)
     r = (c - Is) * i * (c + Is)
