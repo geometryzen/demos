@@ -6,7 +6,7 @@ from geometry import *
 from e3ga import *
 from browser import *
 from math import pi, sin, cos
-from unit import *
+from units import *
 
 space = CartesianSpace()
 
