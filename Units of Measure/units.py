@@ -20,4 +20,5 @@ print angle
 
 c = angle.cos()
 #c = cos(angle)
+print repr(c)
 
