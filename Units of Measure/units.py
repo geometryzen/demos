@@ -13,8 +13,10 @@ t = elapsed * second / 1000
 print repr(t)
 print t
 
-radians = omega * t
+angle = omega * t
 
-print repr(radians)
-print radians
+print repr(angle)
+print angle
+
+c = cos(angle)
 
