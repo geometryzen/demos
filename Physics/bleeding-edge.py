@@ -15,6 +15,7 @@ space.add(cone)
 i = VectorE3(1, 0, 0)
 j = VectorE3(0, 1, 0)
 I = i * j
+omega = 2 * pi / 10
 
 timeout = 600000
 
@@ -27,8 +28,8 @@ def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
 
 def tick(t):
-    c = cos(t)
-    s = sin(t)
+    c = cos(omega * t)
+    s = sin(omega * t)
     r = (c - I * s) * i * (c + I * s)
     cone.position.set(r.x, r.y, r.z)
     space.render()
