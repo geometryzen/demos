@@ -19,7 +19,7 @@ I = i * j
 # We seek to describe the angular velocity geometrically and then apply it to rotate the object.
 # This will probably require looking at the generator of the rotation and then using the exponential
 # function to get the finite rotation.
-omega = I * (2 * pi / (16 * second))
+omega = 2 * pi / 10
 
 timeout = 600000
 
