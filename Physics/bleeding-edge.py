@@ -16,7 +16,8 @@ space.add(cone)
 i = VectorE3(1, 0, 0)
 j = VectorE3(0, 1, 0)
 I = i * j
-omega = 2 * pi / (16 * second)
+# This would be more geometric as a bivector
+omega = (2 * pi / (16 * second)) * I
 
 timeout = 600000
 
@@ -33,6 +34,7 @@ def tick(elapsed):
     c = cos(omega * t)
     s = sin(omega * t)
     Is = I * s
+    # This looks like exp(I omega)
     r = (c - Is) * i * (c + Is)
     cone.position.set(r.x, r.y, r.z)
     space.render()
