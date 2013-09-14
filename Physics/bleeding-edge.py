@@ -19,8 +19,7 @@ I = i * j
 # We seek to describe the angular velocity geometrically and then apply it to rotate the object.
 # This will probably require looking at the generator of the rotation and then using the exponential
 # function to get the finite rotation.
-omega = 2 * pi / 10
-omegaGeo = 2 * pi * I /10
+omega = 2 * pi * I /10
 
 timeout = 600000
 
@@ -35,13 +34,9 @@ def onWindowResize(event):
 def tick(elapsed):
     t = elapsed / 1000
     # TODO: Measure needs to support cosine and sine.
-    c = cos(omega * t / 2)
-    s = sin(omega * t / 2)
-    Is = I * s
-    e = omegaGeo.exp()
-    e = exp(omegaGeo * t / 2)
-    # This looks like exp(I omega)
-    r = (c - Is) * i * (c + Is)
+    angle = omega * t / 2
+    R = exp(-angle)
+    r = R * i * (~R)
     cone.position.set(r.x, r.y, r.z)
     space.render()
     
