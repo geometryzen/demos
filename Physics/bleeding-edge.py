@@ -20,6 +20,7 @@ I = i * j
 # This will probably require looking at the generator of the rotation and then using the exponential
 # function to get the finite rotation.
 omega = 2 * pi / 10
+omegaGeo = 2 * pi * I /10
 
 timeout = 600000
 
