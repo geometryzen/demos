@@ -5,5 +5,5 @@ i = VectorE3(1,0,0)
 j = VectorE3(0,1,0)
 I = i * j
 
-print exp(I * pi  / 4)
+print repr(exp(I * pi  / 4))
 
