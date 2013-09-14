@@ -38,6 +38,7 @@ def tick(elapsed):
     c = cos(omega * t / 2)
     s = sin(omega * t / 2)
     Is = I * s
+    e = omegaGeo.exp()
     e = exp(omegaGeo * t / 2)
     # This looks like exp(I omega)
     r = (c - Is) * i * (c + Is)
