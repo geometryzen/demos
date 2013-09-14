@@ -16,10 +16,10 @@ space.add(cone)
 i = VectorE3(1, 0, 0)
 j = VectorE3(0, 1, 0)
 k = VectorE3(0, 0, 1)
-I = j * k
+B = j * i
 
 # The geometric angular velocity.
-omega = 2 * pi * I / 10
+omega = 2 * pi * B / 10
 
 timeout = 600000
 
