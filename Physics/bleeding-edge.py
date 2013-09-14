@@ -36,7 +36,7 @@ def tick(elapsed):
     # TODO: Measure needs to support cosine and sine.
     angle = omega * t / 2
     R = exp(-angle)
-    r = R * i * (~R)
+    r = R * k * (~R)
     cone.position.set(r.x, r.y, r.z)
     space.render()
     
