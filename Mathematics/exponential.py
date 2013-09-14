@@ -19,5 +19,7 @@ print "exp(theta * -1) => " + str(exp(theta * -1))
 # print "exp(theta * 1)  => " + str(exp(-theta))
 
 R = exp(theta * -1)
-r = R * (5 * i * meter) * (~R)
+# TODO: Measure does not support reversion.
+S = exp(theta * +1) # ~R
+r = R * (5 * i * meter) * S
 
