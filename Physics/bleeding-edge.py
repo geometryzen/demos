@@ -38,7 +38,7 @@ def tick(elapsed):
     S = exp(angle) # ~R not yet supported
     r = R * (5 * i * meter) * S
     position = r.quantity
-    print position
+    print angle
     shape.position.set(position.x, position.y, position.z)
     space.render()
     
