@@ -21,9 +21,6 @@ B = i * j
 # The geometric angular velocity.
 omega = 2 * pi * B / (10 * second)
 
-print repr(B / (10 * second))
-print repr(omega)
-
 timeout = 600000
 
 def onDocumentKeyDown(event):
