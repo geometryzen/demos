@@ -8,5 +8,6 @@ theta = pi / 3
 B = i * j
 
 # TODO: exp(B * theta) => cos(theta) + B * sin(theta)
+t = second
 print repr(exp(B * theta))
 
