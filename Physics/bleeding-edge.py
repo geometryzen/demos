@@ -16,7 +16,7 @@ space.add(cone)
 i = VectorE3(1, 0, 0)
 j = VectorE3(0, 1, 0)
 k = VectorE3(0, 0, 1)
-B = j * k
+B = i * j
 
 # The geometric angular velocity.
 omega = 2 * pi * B / 10
@@ -36,7 +36,7 @@ def tick(elapsed):
     # TODO: Measure needs to support cosine and sine.
     angle = omega * t / 2
     R = exp(-angle)
-    r = R * k * (~R)
+    r = R * i * (~R)
     cone.position.set(r.x, r.y, r.z)
     space.render()
     
