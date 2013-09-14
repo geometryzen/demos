@@ -35,7 +35,8 @@ def tick(elapsed):
     t = (elapsed / 1000) * second
     angle = omega * t / 2
     R = exp(angle * -1)
-    r = R * (5 * i * meter) * (~R)
+    S = exp(angle) # ~R not yet supported
+    r = R * (5 * i * meter) * S
     shape.position.set(r.x, r.y, r.z)
     space.render()
     
