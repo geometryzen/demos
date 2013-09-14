@@ -7,7 +7,7 @@ j = VectorE3(0,1,0)
 theta = (pi / 3) * i * j
 omega = theta * (1 / second)
 
-t = second
+t = 3 * second
 theta = omega * t
 print "omega      => " + str(omega)
 print "theta      => " + str(theta)
