@@ -24,4 +24,5 @@ S = exp(theta * +1) # ~R
 r = R * (5 * i * meter) * S
 
 print r
+print r.quantity
 
