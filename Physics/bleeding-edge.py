@@ -19,7 +19,7 @@ k = VectorE3(0, 0, 1)
 B = i * j
 
 # The geometric angular velocity.
-omega = 2 * pi * B / (10 * second)
+omega = 2 * pi * B / (10)
 
 timeout = 600000
 
@@ -32,8 +32,7 @@ def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
 
 def tick(elapsed):
-    t = (elapsed / 1000) * second
-    # TODO: Measure needs to support cosine and sine.
+    t = (elapsed / 1000)
     angle = omega * t / 2
     R = exp(-angle)
     r = R * 5 * i * (~R)
