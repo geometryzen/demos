@@ -20,6 +20,7 @@ B = i * j
 
 # The geometric angular velocity.
 omega = 2 * pi * B / (10 * second)
+zero = omega * 0
 
 timeout = 600000
 
