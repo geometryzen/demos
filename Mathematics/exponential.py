@@ -13,5 +13,8 @@ print "omega       => " + str(omega)
 print "theta       => " + str(theta)
 print "exp(theta)  => " + str(exp(theta))
 # TODO: Measure does not support unary minus
-print "exp(-theta) => " + str(exp(theta * -1))
+# TODO: And multiplication by a number 
+print "exp(theta * +1) => " + str(exp(theta * +1))
+print "exp(theta * -1) => " + str(exp(theta * -1))
+print "exp(theta * 1)  => " + str(exp(-theta))
 
