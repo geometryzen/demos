@@ -19,5 +19,5 @@ print "exp(theta * -1) => " + str(exp(theta * -1))
 # print "exp(theta * 1)  => " + str(exp(-theta))
 
 R = exp(theta * -1)
-r = R * 5 * i * (~R)
+r = R * 5 * meter * i * (~R)
 
