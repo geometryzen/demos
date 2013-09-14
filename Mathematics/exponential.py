@@ -3,7 +3,7 @@ from math import exp, pi
 
 i = VectorE3(1,0,0)
 j = VectorE3(0,1,0)
-theta = pi / 4
+theta = pi / 2
 I = i * j
 
 # TODO: exp(B * theta) => cos(theta) + B * sin(theta)
