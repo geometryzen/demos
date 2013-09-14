@@ -11,5 +11,6 @@ t = second
 theta = omega * t
 print "omega      => " + str(omega)
 print "theta      => " + str(theta)
+# TODO: Compute the exponential of a dimensionless measure.
 print "exp(theta) => " + str(exp(theta))
 
