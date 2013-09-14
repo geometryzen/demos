@@ -35,7 +35,7 @@ def onWindowResize(event):
 def tick(elapsed):
     t = (elapsed / 1000) * second
     angle = omega * t / 2
-    R = exp(-angle)
+    R = exp(zero-angle)
     r = R * 5 * i * (~R)
     shape.position.set(r.x, r.y, r.z)
     space.render()
