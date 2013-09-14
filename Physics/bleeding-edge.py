@@ -15,11 +15,11 @@ space.add(cone)
 
 i = VectorE3(1, 0, 0)
 j = VectorE3(0, 1, 0)
-I = i * j
-# We seek to describe the angular velocity geometrically and then apply it to rotate the object.
-# This will probably require looking at the generator of the rotation and then using the exponential
-# function to get the finite rotation.
-omega = 2 * pi * I /10
+k = VectorE3(0, 0, 1)
+I = i * k
+
+# The geometric angular velocity.
+omega = 2 * pi * I / 10
 
 timeout = 600000
 
