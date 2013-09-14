@@ -9,7 +9,6 @@ omega = theta * (1 / second)
 
 t = second
 theta = omega * t
-print repr(theta)
 print "omega => " + str(omega)
 print "theta => " + str(theta)
 print repr(exp(theta))
