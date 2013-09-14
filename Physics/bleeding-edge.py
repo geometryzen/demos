@@ -20,7 +20,6 @@ B = i * j
 
 # The geometric angular velocity.
 omega = 2 * pi * B / (10 * second)
-zero = omega * 0
 
 timeout = 600000
 
@@ -35,7 +34,7 @@ def onWindowResize(event):
 def tick(elapsed):
     t = (elapsed / 1000) * second
     angle = omega * t / 2
-    R = exp(zero-angle)
+    R = exp(angle * -1)
     r = R * 5 * i * (~R)
     shape.position.set(r.x, r.y, r.z)
     space.render()
