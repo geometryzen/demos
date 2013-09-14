@@ -32,7 +32,7 @@ def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
 
 def tick(elapsed):
-    t = elapsed / 1000
+    t = (elapsed / 1000) * second
     # TODO: Measure needs to support cosine and sine.
     angle = omega * t / 2
     R = exp(-angle)
