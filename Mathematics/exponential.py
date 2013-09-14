@@ -10,5 +10,6 @@ omega = theta * (1 / second)
 t = second
 theta = omega * t
 print repr(theta)
+print theta
 print repr(exp(theta))
 
