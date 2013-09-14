@@ -4,10 +4,9 @@ from units import *
 
 i = VectorE3(1,0,0)
 j = VectorE3(0,1,0)
-theta = pi / 3
-B = i * j
+theta = (pi / 3) * B
+omega = 
 
-# TODO: exp(B * theta) => cos(theta) + B * sin(theta)
 t = second
-print repr(exp(B * theta))
+print repr(exp(theta))
 
