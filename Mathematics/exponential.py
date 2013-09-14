@@ -23,3 +23,5 @@ R = exp(theta * -1)
 S = exp(theta * +1) # ~R
 r = R * (5 * i * meter) * S
 
+print s
+
