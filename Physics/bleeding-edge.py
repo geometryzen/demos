@@ -18,7 +18,7 @@ j = VectorE3(0, 1, 0)
 k = VectorE3(0, 0, 1)
 B = i * j
 
-# The geometric angular velocity.
+# The geometric angular velocity wit units.
 omega = 2 * pi * B / (10 * second)
 
 timeout = 600000
@@ -36,6 +36,7 @@ def tick(elapsed):
     angle = omega * t / 2
     R = exp(angle * -1)
     S = exp(angle) # ~R not yet supported
+    # Got some associativity problems to solve, but this combination works...
     r = R * (5 * i * meter) * S
     position = r.quantity
     shape.position.set(position.x, position.y, position.z)
