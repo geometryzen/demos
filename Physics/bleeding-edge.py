@@ -38,6 +38,7 @@ def tick(elapsed):
     c = cos(omega * t / 2)
     s = sin(omega * t / 2)
     Is = I * s
+    e = exp(omegaG * t / 2)
     # This looks like exp(I omega)
     r = (c - Is) * i * (c + Is)
     cone.position.set(r.x, r.y, r.z)
