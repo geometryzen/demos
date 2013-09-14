@@ -20,6 +20,7 @@ B = i * j
 
 # The geometric angular velocity.
 omega = 2 * pi * B / (10 * second)
+print repr(omega)
 
 timeout = 600000
 
@@ -38,7 +39,6 @@ def tick(elapsed):
     S = exp(angle) # ~R not yet supported
     r = R * (5 * i * meter) * S
     position = r.quantity
-    print omega
     shape.position.set(position.x, position.y, position.z)
     space.render()
     
