@@ -10,7 +10,7 @@ omega = theta * (1 / second)
 t = 1 * second
 theta = omega * t
 print "omega       => " + str(omega)
-print "theta       => " + str(theta * -1)
+print "theta       => " + str(theta)
 print "exp(theta)  => " + str(exp(theta))
 # TODO: Measure does not support unary minus
 # TODO: And multiplication by a number is broken.
