@@ -1,6 +1,5 @@
 '''
-This example represents efforts to provide convenient abstractions
-of the Three.js WebGL Computer Graphics API for use with Physics simulations.
+This example demonstrates coloring shapes and normalizing their volumes to unity.
 '''
 from geometry import *
 from e3ga import *
