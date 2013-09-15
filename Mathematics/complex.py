@@ -164,4 +164,4 @@ print abs(i)
 print "----------"
 print "exp"
 print "----------"
-print exp(i)
+print exp(i * pi)
