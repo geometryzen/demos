@@ -1,5 +1,6 @@
 '''
 This example illustrates the builder pattern for creating meshes with a specific geometry.
+The shapes are drawn with their default linear dimensions and colored white.
 '''
 from geometry import *
 from e3ga import *
