@@ -156,7 +156,7 @@ print "----------"
 print "~"
 print "----------"
 print ~i
-#print "----------"
-#print "abs"
-#print "----------"
-#print abs(i)
+print "----------"
+print "abs"
+print "----------"
+print abs(i)
