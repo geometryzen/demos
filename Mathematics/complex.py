@@ -159,5 +159,4 @@ print ~i
 print "----------"
 print "abs"
 print "----------"
-print i.abs()
 print abs(i)
