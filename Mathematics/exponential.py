@@ -4,7 +4,7 @@ from units import *
 
 i = VectorE3(1,0,0)
 j = VectorE3(0,1,0)
-theta = (pi / 3) * i * j
+theta = (2 * pi) * i * j
 omega = theta * (1 / second)
 
 t = ScalarE3(1) * second
