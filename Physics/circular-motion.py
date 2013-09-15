@@ -21,7 +21,7 @@ B = i * j
 # The angular velocity describes a motion of one revolution every 12 seconds in the x-y plane, counterclockwise.
 omega = 2 * pi * B / (12 * second)
 
-timeout = 24000
+timeout = 12000
 
 def onDocumentKeyDown(event):
     global timeout
