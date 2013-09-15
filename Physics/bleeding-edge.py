@@ -18,7 +18,7 @@ j = VectorE3(0, 1, 0)
 k = VectorE3(0, 0, 1)
 B = i * j
 
-# The geometric angular velocity wit units.
+# The geometric angular velocity with units.
 omega = 2 * pi * B / (10 * second)
 
 timeout = 600000
