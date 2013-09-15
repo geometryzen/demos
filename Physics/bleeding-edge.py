@@ -34,7 +34,7 @@ def onWindowResize(event):
 def tick(elapsed):
     t = ScalarE3(elapsed / 1000) * second
     angle = omega * t / 2
-    R = exp(-angle)
+    R = exp(angle * -1)
     S = exp(angle) # ~R not yet supported
     r = R * (4 * i * meter) * S
     position = r.quantity
