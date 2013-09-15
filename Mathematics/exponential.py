@@ -16,7 +16,7 @@ print "exp(+theta) => " + str(exp(+theta))
 print "exp(-theta) => " + str(exp(-theta))
 
 R = exp(-theta/2)
-r = R * (5 * i * meter) * ~R
+r = R * (1 * i * meter) * ~R
 
 print r
 print r.quantity
