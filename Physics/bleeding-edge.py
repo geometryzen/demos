@@ -36,7 +36,6 @@ def tick(elapsed):
     angle = omega * t / 2
     R = exp(angle * -1)
     S = exp(angle) # ~R not yet supported
-    # Got some associativity problems to solve, but this combination works...
     r = R * (4 * i * meter) * S
     position = r.quantity
     shape.position.set(position.x, position.y, position.z)
