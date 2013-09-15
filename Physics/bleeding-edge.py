@@ -19,7 +19,7 @@ k = VectorE3(0, 0, 1)
 B = i * j
 
 # The geometric angular velocity measure (quantity with unit-of-measure).
-omega = 2 * pi * B / (10 * second)
+omega = 2 * pi * B / (1 * second)
 
 timeout = 600000
 
