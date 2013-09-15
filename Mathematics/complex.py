@@ -160,3 +160,7 @@ print "----------"
 print "abs"
 print "----------"
 print abs(i)
+print "----------"
+print "exp"
+print "----------"
+print exp(i)
