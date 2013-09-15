@@ -10,7 +10,7 @@ from units import *
 
 space = CartesianSpace()
 
-shape = SphereBuilder().color(0x0000FF).radius(0.1).build().translateX(-2.5).translateY(+2.5)
+shape = SphereBuilder().color(0xFFFF00).radius(0.1).build().translateX(-2.5).translateY(+2.5)
 space.add(shape)
 
 i = VectorE3(1, 0, 0)
