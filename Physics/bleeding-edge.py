@@ -36,7 +36,7 @@ def tick(elapsed):
     t = ScalarE3(elapsed / 1000) * second
     angle = omega * t / 2
     R = exp(-angle)
-    r = R * (4 * i * meter) * (~R)
+    r = R * (4 * i * meter) * ~R
     position = r.quantity
     shape.position.set(position.x, position.y, position.z)
     space.render()
