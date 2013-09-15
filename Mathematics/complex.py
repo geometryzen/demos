@@ -162,6 +162,6 @@ print "abs"
 print "----------"
 print abs(i)
 print "----------"
-print "exp"
+print "exp(i * pi) + 1"
 print "----------"
-print exp(i * pi)
+print exp(i * pi) + 1
