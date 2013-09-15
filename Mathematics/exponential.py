@@ -12,11 +12,8 @@ theta = omega * t
 print "omega       => " + str(omega)
 print "theta       => " + str(theta)
 print "exp(theta)  => " + str(exp(theta))
-# TODO: Measure does not support unary minus
-# TODO: And multiplication by a number is broken.
-print "exp(theta * +1) => " + str(exp(theta * +1))
-print "exp(theta * -1) => " + str(exp(theta * -1))
-# print "exp(theta * 1)  => " + str(exp(-theta))
+print "exp(+theta) => " + str(exp(+theta))
+print "exp(-theta) => " + str(exp(-theta))
 
 R = exp(theta * -1)
 # TODO: Measure does not support reversion.
