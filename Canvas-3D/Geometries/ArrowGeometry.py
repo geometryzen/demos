@@ -9,7 +9,7 @@ scene = Scene()
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 1.3
 
-renderer = None
+renderer = WebGLRenderer()
 
 # All arguments are optional and the defaults are as follows.
 length = 1
@@ -36,6 +36,8 @@ scene.add(directionalLight)
 
 movement = Vector3(0.02, 0.02, 0.02)
 
+workbench = Workbench(renderer, camera)
+
 def onWindowResize(event):
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
@@ -58,7 +60,6 @@ def setUp():
 
     removeElementsByTagName("canvas")
 
-    renderer = WebGLRenderer()
     renderer.autoClear = True
     renderer.gammaInput = True
     renderer.gammaOutput = True
