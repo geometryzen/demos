@@ -15,7 +15,8 @@ e3 = ArrowBuilder().color(0x0000FF).build()
 workbench = Workbench(space.renderer, space.camera)
 
 def escKey(downFlag):
-    terminate()
+    global timeOut
+    timeOut = 0
 
 keyHandlers = {
  27: escKey
