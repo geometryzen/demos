@@ -23,7 +23,7 @@ omega = 2 * pi * i * j / (12 * second)
 
 timeout = 12 * kilo# * milli * second
 
-workbench = Workbench(space.renderer)
+workbench = Workbench(space.renderer, space.camera)
 
 def onDocumentKeyDown(event):
     global timeout
@@ -49,7 +49,6 @@ def terminate(elapsed):
 
 def setUp():
     workbench.setUp()
-#    document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
     document.addEventListener("keydown", onDocumentKeyDown, False)
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize(None)
