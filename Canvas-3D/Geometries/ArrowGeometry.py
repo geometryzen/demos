@@ -15,13 +15,13 @@ renderer.gammaInput = True
 renderer.gammaOutput = True
 renderer.setClearColor(Color(0x080808), 1.0)
 
-# All arguments are optional and the defaults are as follows.
+# All arguments are optional and the defaults, in order, are as follows.
 length = 1
 segments = 5
 radiusShaft = 0.01
 radiusCone = 0.08
 lengthCone = 0.2
-arrow = ArrowGeometry(length, segments, radiusShaft, radiusCone, lengthCone)
+arrow = ArrowGeometry()
 
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3})
 mesh = Mesh(arrow,material)
