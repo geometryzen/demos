@@ -24,7 +24,10 @@ keyHandlers = {
     
 def onDocumentKeyDown(event):
     event.preventDefault()
-    keyHandlers[event.keyCode](True)
+    try:
+        keyHandlers[event.keyCode](True)
+    except:
+        pass
 
 def setUp():
     document.addEventListener("keydown", onDocumentKeyDown, False)
