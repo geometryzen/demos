@@ -35,7 +35,7 @@ def onWindowResize(event):
 def tick(elapsed):
     t = ScalarE3(elapsed) * milli * second
     angle = omega * t / 2
-    R = exp(-angle)
+    R = exp(+angle)
     rotor = R.quantity
     shape.quaternion.set(rotor.yz, rotor.zx, rotor.xy, rotor.w)
     space.render()
