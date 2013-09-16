@@ -9,7 +9,7 @@ from units import *
 
 space = CartesianSpace()
 
-shape = SphereBuilder().radius(0.1).build().translateX(-2.5).translateY(+2.5)
+shape = ConeBuilder().color(0xFFFF00).volume(0.1).build()
 space.add(shape)
 
 i = VectorE3(1, 0, 0)
@@ -21,7 +21,7 @@ B = i * j
 # The angular velocity describes a motion of one revolution every 12 seconds in the x-y plane, counterclockwise.
 omega = 2 * pi * B / (12 * second)
 
-timeout = 12 * kilo
+timeout = 12 * kilo# * milli * second
 
 def onDocumentKeyDown(event):
     global timeout
@@ -37,7 +37,11 @@ def tick(elapsed):
     R = exp(-angle)
     r = R * (4 * i * meter) * ~R
     position = r.quantity
+    rotor = R.quantity
+    # To convert a Euclidean3 rotor to a Quaternion, use the 'dual' parts with a sign change.
+    # The quaternion property of the mesh is what we would call the attitude - a spinor.
     shape.position.set(position.x, position.y, position.z)
+    shape.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     space.render()
     
 def terminate(elapsed):
