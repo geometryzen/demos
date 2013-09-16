@@ -38,7 +38,7 @@ def tick(elapsed):
     R = exp(-halfAngle)
     r = R * (4 * i * meter) * ~R
     position = r.quantity
-    shape.position.set(position.x, position.y, position.z)
+    shape.rotation.set(position.x, position.y, position.z)
     space.render()
     
 def terminate(elapsed):
