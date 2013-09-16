@@ -49,7 +49,7 @@ def terminate(elapsed):
 
 def setUp():
     workbench.setUp()
-    document.removeElementsByTagName("canvas")
+    #document.removeElementsByTagName("canvas")
     document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
     document.addEventListener("keydown", onDocumentKeyDown, False)
     window.addEventListener("resize", onWindowResize, False)
@@ -59,6 +59,6 @@ def tearDown():
     workbench.tearDown()
     window.removeEventListener("resize", onWindowResize, False)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
-    document.removeElementsByTagName("canvas")
+    #document.removeElementsByTagName("canvas")
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
