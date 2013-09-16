@@ -23,7 +23,7 @@ radiusCone = 0.08
 lengthCone = 0.2
 arrow = ArrowGeometry(length, segments, radiusShaft, radiusCone, lengthCone)
 
-material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
+material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3})
 mesh = Mesh(arrow,material)
 scene.add(mesh)
 
@@ -51,7 +51,6 @@ def terminate(elapsed):
 
 def setUp():
     workbench.setUp()
-
 
 def tearDown():
     workbench.tearDown()
