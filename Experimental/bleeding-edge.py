@@ -5,13 +5,15 @@ from browser import *
 space = CartesianSpace()
 timeOut = 3000
 
-e3 = ArrowBuilder().length(1).color(0x0000FF).build()
+e1 = ArrowBuilder().color(0xFF0000).build()
+e3 = ArrowBuilder().color(0x0000FF).build()
 
 workbench = Workbench(space.renderer, space.camera)
 
 def setUp():
     workbench.setUp()
 
+    space.add(e1)
     space.add(e3)
 
 def tick(elapsed):
