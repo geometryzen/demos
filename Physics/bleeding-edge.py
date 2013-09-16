@@ -49,7 +49,7 @@ def terminate(elapsed):
 
 def setUp():
     workbench.setUp()
-    document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
+#    document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
     document.addEventListener("keydown", onDocumentKeyDown, False)
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize(None)
