@@ -30,7 +30,6 @@ def onDocumentKeyDown(event):
         pass
 
 def setUp():
-    document.addEventListener("keydown", onDocumentKeyDown, False)
     workbench.setUp()
 
     space.add(e1)
@@ -40,6 +39,8 @@ def setUp():
     space.camera.position.set(2,2,2)
     space.camera.lookAt(Vector3(0,0,0))
 
+    document.addEventListener("keydown", onDocumentKeyDown, False)
+
 def tick(elapsed):
     space.render()
     
@@ -47,7 +48,7 @@ def terminate(elapsed):
     return elapsed > timeOut
 
 def tearDown():
-    workbench.tearDown()
     document.removeEventListener("keydown", onDocumentKeyDown, False)
+    workbench.tearDown()
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
