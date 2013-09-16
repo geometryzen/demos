@@ -33,7 +33,7 @@ def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
 
 def tick(elapsed):
-    t = ScalarE3(elapsed / 1000) * second
+    t = ScalarE3(elapsed) * milli * second
     angle = omega * t / 2
     R = exp(-angle)
     r = R * (4 * i * meter) * ~R
