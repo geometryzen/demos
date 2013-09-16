@@ -4,7 +4,7 @@ from browser import *
 from math import pi
 
 space = CartesianSpace()
-timeOut = 3000
+timeOut = 6000
 
 e1 = ArrowBuilder().color(0xFF0000).build()
 e1.quaternion.setFromAxisAngle(Vector3(0,1,0), +pi/2)
