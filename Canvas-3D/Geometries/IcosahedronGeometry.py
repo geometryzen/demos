@@ -32,35 +32,22 @@ movement = Vector3(0.02, 0.02, 0.02)
 
 workbench = Workbench(renderer, camera)
 
-def render():
+def setUp():
+    workbench.setUp();
+
+def tick(elapsed):
     mesh.rotation += movement
-        
     renderer.render(scene, camera)
+    
+def terminate(elapsed):
+    return elapsed > progressEnd
+
+def tearDown():
+    workbench.tearDown();
 
 def onWindowResize(event):
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
     renderer.size = (window.innerWidth, window.innerHeight)
-    
-def step(timestamp):
-    global requestID, progress, startTime
-    if (startTime):
-        progress = timestamp - startTime
-    else:
-        if (timestamp):
-            startTime = timestamp
-        else:
-            progress = 0
-        
-    if (progress < progressEnd):
-        requestID = window.requestAnimationFrame(step)
-        render()
-    else:
-        window.cancelAnimationFrame(requestID)
-        # container.removeChild(renderer.domElement)
 
-window.addEventListener("resize", onWindowResize, False)
-
-onWindowResize(None)
-workbench.setUp()
-step(None)
+WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
