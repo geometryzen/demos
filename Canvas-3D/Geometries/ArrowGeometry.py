@@ -2,7 +2,7 @@
 # It is created from the LatheGeometry using a set of points that create the cone and shaft
 # of an arrow.
 from three import Scene, PerspectiveCamera, ArrowGeometry, MeshNormalMaterial, Mesh, AmbientLight, PointLight, DirectionalLight, Vector3, WebGLRenderer, Color
-from browser import document, window, WindowAnimationRunner
+from browser import document, window, Workbench, WindowAnimationRunner
 
 scene = Scene()
 
