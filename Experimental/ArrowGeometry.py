@@ -7,9 +7,6 @@ i = Vector3(1,0,0)
 j = Vector3(0,1,0)
 k = Vector3(0,0,1)
 
-for canvas in document.getElementsByTagName("canvas"):
-    canvas.parentNode.removeChild(canvas)
-
 scene = Scene()
 
 camera  = PerspectiveCamera(45, 1.0, 0.1, 1000)
@@ -22,9 +19,6 @@ renderer.autoClear = True
 renderer.gammaInput = True
 renderer.gammaOutput = True
 renderer.setClearColor(Color(0x080808), 1.0)
-
-container = document.getElementById("canvas-container")
-container.appendChild(renderer.domElement)
 
 redWire = MeshLambertMaterial({"color":0xFF0000})
 grnWire = MeshLambertMaterial({"color":0x00FF00})
@@ -69,10 +63,18 @@ scene.add(directionalLight)
 
 progressEnd = 6000
 
+workbench = Workbench(renderer, camera)
+
+def setUp():
+    workbench.setUp()
+
 def tick():
     renderer.render(scene, camera)
     
 def terminate(elapsed):
     return elapsed > progressEnd
+
+def tearDown():
+    workbench.tearDown()
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
