@@ -35,7 +35,7 @@ def onWindowResize(event):
 def tick(elapsed):
     t = ScalarE3(elapsed) * milli * second
     halfAngle = omega * t / 2
-    R = exp(-angle)
+    R = exp(-halfAngle)
     r = R * (4 * i * meter) * ~R
     position = r.quantity
     shape.position.set(position.x, position.y, position.z)
