@@ -23,7 +23,7 @@ omega = 2 * pi * i * j / (12 * second)
 
 timeout = 12 * kilo# * milli * second
 
-workbench = Workbench()
+workbench = Workbench(space.renderer)
 
 def onDocumentKeyDown(event):
     global timeout
