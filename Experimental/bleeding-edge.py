@@ -1,45 +1,26 @@
-'''
-This example represents efforts to provide convenient abstractions
-of the Three.js WebGL Computer Graphics API for use with Physics simulations.
-'''
-from geometry import *
-from e3ga import *
-from browser import *
-from math import pi
+from three import *
+from geometry import CartesianSpace, CylinderBuilder
+from browser import document, window, Workbench, WindowAnimationRunner
 
 space = CartesianSpace()
+progressEnd = 6000
 
-space.add(CylinderBuilder().color(0x00FF00).volume(1).build().translateX(-2.5).translateY(-2.5))
-space.add(CubeBuilder().color(0x0000FF).volume(1).build().translateX(2.5).translateY(2.5))
-space.add(SphereBuilder().color(0xFF0000).volume(1).build().translateX(+2.5).translateY(-2.5))
-space.add(ConeBuilder().color(0xFFFF00).volume(1).build().translateX(-2.5).translateY(+2.5))
+workbench = Workbench(space.renderer, space.camera)
 
-timeout = 600000
+def setUp():
+    workbench.setUp()
 
-def onDocumentKeyDown(event):
-    global timeout
-    if event.keyCode == 27:
-        timeout = 0
+    mesh = CylinderBuilder().radius(1).height(4).build()
 
-def onWindowResize(event):
-    space.viewSize(window.innerWidth, window.innerHeight)
+    space.add(mesh)
 
 def tick(elapsed):
     space.render()
     
 def terminate(elapsed):
-    return elapsed > timeout
-
-def setUp():
-    document.removeElementsByTagName("canvas")
-    document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
-    document.addEventListener("keydown", onDocumentKeyDown, False)
-    window.addEventListener("resize", onWindowResize, False)
-    onWindowResize(None)
+    return elapsed > progressEnd
 
 def tearDown():
-    window.removeEventListener("resize", onWindowResize, False)
-    document.removeEventListener("keydown", onDocumentKeyDown, False)
-    document.removeElementsByTagName("canvas")
+    workbench.tearDown()
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
