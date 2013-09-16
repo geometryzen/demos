@@ -10,7 +10,7 @@ workbench = Workbench(space.renderer, space.camera)
 def setUp():
     workbench.setUp()
 
-    mesh = CylinderBuilder().build()
+    mesh = ArrowBuilder().build()
 
     space.add(mesh)
 
