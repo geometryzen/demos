@@ -56,6 +56,7 @@ def setUp():
     onWindowResize(None)
 
 def tearDown():
+    workbench.tearDown()
     window.removeEventListener("resize", onWindowResize, False)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeElementsByTagName("canvas")
