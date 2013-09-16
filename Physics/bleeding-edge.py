@@ -8,7 +8,7 @@ from browser import *
 from math import pi, exp
 from units import *
 
-#workbench = Workbench()
+workbench = Workbench()
 
 space = CartesianSpace()
 
