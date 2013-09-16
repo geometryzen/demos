@@ -47,7 +47,7 @@ def tick(elapsed):
     renderer.render(scene, camera)
     
 def terminate(elapsed):
-    return elapsed > 4000
+    return elapsed > 12000
 
 def setUp():
     workbench.setUp()
