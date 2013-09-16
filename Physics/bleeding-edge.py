@@ -45,4 +45,6 @@ def setUp():
 def tearDown():
     workbench.tearDown()
 
+print workbench.setUp
+    
 WindowAnimationRunner(window, tick, terminate, workbench.setUp, tearDown).start()
