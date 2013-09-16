@@ -19,5 +19,3 @@ R = exp(-theta/2)
 r = R * (1 * i * meter) * ~R
 
 print r
-print r.quantity
-
