@@ -2,9 +2,7 @@
 from three import *
 from geometry import CartesianSpace, CylinderBuilder
 from browser import document, window, Workbench, WindowAnimationRunner
-from math import pi
 
-#scene = Scene()
 space = CartesianSpace()
 progressEnd = 6000
 
