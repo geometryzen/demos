@@ -8,6 +8,8 @@ from math import pi
 space = CartesianSpace()
 progressEnd = 6000
 
+workbench = Workbench(space.renderer, space.camera)
+
 def setUp():
     global mesh
 
