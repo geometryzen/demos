@@ -8,8 +8,6 @@ from browser import *
 from math import pi, exp
 from units import *
 
-workbench = Workbench()
-
 space = CartesianSpace()
 
 shape = ConeBuilder().color(0xFFFF00).volume(0.1).build()
@@ -24,6 +22,8 @@ k = VectorE3(0, 0, 1)
 omega = 2 * pi * i * j / (12 * second)
 
 timeout = 12 * kilo# * milli * second
+
+workbench = Workbench()
 
 def onDocumentKeyDown(event):
     global timeout
@@ -49,7 +49,6 @@ def terminate(elapsed):
 
 def setUp():
     workbench.setUp()
-    #document.removeElementsByTagName("canvas")
     document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
     document.addEventListener("keydown", onDocumentKeyDown, False)
     window.addEventListener("resize", onWindowResize, False)
@@ -59,6 +58,5 @@ def tearDown():
     workbench.tearDown()
     window.removeEventListener("resize", onWindowResize, False)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
-    #document.removeElementsByTagName("canvas")
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
