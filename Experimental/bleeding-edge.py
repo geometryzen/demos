@@ -3,7 +3,7 @@ from geometry import *
 from browser import *
 
 space = CartesianSpace()
-timeOut = 6000
+timeOut = 3000
 
 workbench = Workbench(space.renderer, space.camera)
 
