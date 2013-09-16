@@ -36,7 +36,7 @@ def tick(elapsed):
     t = ScalarE3(elapsed) * milli * second
     angle = omega * t
     rotation = angle.quantity
-    shape.rotation.set(rotation.xy, rotation.yz, rotation.zx)
+    shape.quaternion.set(rotation.yz, rotation.zx, rotation.xy, rotation.w)
     space.render()
     
 def terminate(elapsed):
