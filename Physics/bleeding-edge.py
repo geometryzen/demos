@@ -8,6 +8,8 @@ from browser import *
 from math import pi, exp
 from units import *
 
+workbench = GeometryZenWorkbench()
+
 space = CartesianSpace()
 
 shape = ConeBuilder().color(0xFFFF00).volume(0.1).build()
