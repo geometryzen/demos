@@ -20,6 +20,8 @@ def setUp():
     space.add(e1)
     space.add(e2)
     space.add(e3)
+    
+    space.camera.position.set(2,2,2)
 
 def tick(elapsed):
     space.render()
