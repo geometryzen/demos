@@ -37,6 +37,7 @@ def tick(elapsed):
     angle = omega * t / 2
     R = exp(-angle)
     rotor = R.quantity
+    # To convert a Euclidean3 rotor to a Quaternion, use the 'dual' parts with a sign change.
     shape.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     space.render()
     
