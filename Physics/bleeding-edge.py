@@ -30,9 +30,6 @@ def onDocumentKeyDown(event):
     if event.keyCode == 27:
         timeout = 0
 
-def onWindowResize(event):
-    space.viewSize(window.innerWidth, window.innerHeight)
-
 def tick(elapsed):
     t = ScalarE3(elapsed) * milli * second
     angle = omega * t / 2
@@ -50,12 +47,9 @@ def terminate(elapsed):
 def setUp():
     workbench.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
-    window.addEventListener("resize", onWindowResize, False)
-    onWindowResize(None)
 
 def tearDown():
     workbench.tearDown()
-    window.removeEventListener("resize", onWindowResize, False)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
