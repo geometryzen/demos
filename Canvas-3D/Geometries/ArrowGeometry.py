@@ -21,7 +21,7 @@ segments = 5
 radiusShaft = 0.01
 radiusCone = 0.08
 lengthCone = 0.2
-arrow = ArrowGeometry()
+arrow = ArrowGeometry(length, segments)
 
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3})
 mesh = Mesh(arrow,material)
