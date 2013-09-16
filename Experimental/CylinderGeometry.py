@@ -1,7 +1,7 @@
 # The purpose of this experiment is to see if the details of a general example can be reproduced using convenience functions.
 from three import *
 from geometry import CartesianSpace, CylinderBuilder
-from browser import document, window, WindowAnimationRunner
+from browser import document, window, Workbench, WindowAnimationRunner
 from math import pi
 
 #scene = Scene()
