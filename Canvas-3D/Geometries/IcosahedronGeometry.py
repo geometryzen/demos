@@ -24,10 +24,8 @@ print icosa
 mesh = Mesh(icosa, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
 scene.add(mesh)
 
-requestID = None
-progress = None
 progressEnd = 10000
-startTime =  None
+
 movement = Vector3(0.02, 0.02, 0.02)
 
 workbench = Workbench(renderer, camera)
@@ -44,10 +42,5 @@ def terminate(elapsed):
 
 def tearDown():
     workbench.tearDown();
-
-def onWindowResize(event):
-    camera.aspect = window.innerWidth / window.innerHeight
-    camera.updateProjectionMatrix()
-    renderer.size = (window.innerWidth, window.innerHeight)
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
