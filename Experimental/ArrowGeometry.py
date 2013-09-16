@@ -68,7 +68,7 @@ workbench = Workbench(renderer, camera)
 def setUp():
     workbench.setUp()
 
-def tick():
+def tick(elapsed):
     renderer.render(scene, camera)
     
 def terminate(elapsed):
