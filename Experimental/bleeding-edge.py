@@ -18,6 +18,7 @@ def setUp():
     workbench.setUp()
 
     space.add(e1)
+    space.add(e2)
     space.add(e3)
 
 def tick(elapsed):
