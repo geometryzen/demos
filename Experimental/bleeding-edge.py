@@ -3,7 +3,7 @@ from geometry import CartesianSpace, CylinderBuilder
 from browser import document, window, Workbench, WindowAnimationRunner
 
 space = CartesianSpace()
-progressEnd = 6000
+timeOut = 6000
 
 workbench = Workbench(space.renderer, space.camera)
 
@@ -18,7 +18,7 @@ def tick(elapsed):
     space.render()
     
 def terminate(elapsed):
-    return elapsed > progressEnd
+    return elapsed > timeOut
 
 def tearDown():
     workbench.tearDown()
