@@ -36,6 +36,8 @@ def tick(elapsed):
     t = ScalarE3(elapsed) * milli * second
     angle = omega * t / 2
     R = exp(-angle)
+    r = R * (4 * i * meter) * ~R
+    position = r.quantity
     rotor = R.quantity
     # To convert a Euclidean3 rotor to a Quaternion, use the 'dual' parts with a sign change.
     # The quaternion property of the mesh is what we would call the attitude - a spinor.
