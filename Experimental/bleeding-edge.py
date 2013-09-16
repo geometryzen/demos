@@ -1,6 +1,6 @@
 from three import *
-from geometry import CartesianSpace, ArrowBuilder
-from browser import document, window, Workbench, WindowAnimationRunner
+from geometry import *
+from browser import *
 
 space = CartesianSpace()
 timeOut = 6000
