@@ -43,11 +43,11 @@ movement = Vector3(0.02, 0.02, 0.02)
 workbench = Workbench(renderer, camera)
 
 def tick(elapsed):
-    #mesh.rotation += movement
+    mesh.rotation += movement
     renderer.render(scene, camera)
     
 def terminate(elapsed):
-    return elapsed > 10000
+    return elapsed > 4000
 
 def setUp():
     workbench.setUp()
