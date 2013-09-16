@@ -48,6 +48,7 @@ def terminate(elapsed):
     return elapsed > timeout
 
 def setUp():
+    workbench.setUp()
     document.removeElementsByTagName("canvas")
     document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
     document.addEventListener("keydown", onDocumentKeyDown, False)
