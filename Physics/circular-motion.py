@@ -15,11 +15,10 @@ space.add(shape)
 i = VectorE3(1, 0, 0)
 j = VectorE3(0, 1, 0)
 k = VectorE3(0, 0, 1)
-B = i * j
 
 # The geometric angular velocity measure (quantity with unit-of-measure).
 # The angular velocity describes a motion of one revolution every 12 seconds in the x-y plane, counterclockwise.
-omega = 2 * pi * B / (12 * second)
+omega = 2 * pi * i * j / (12 * second)
 
 timeout = 12 * kilo# * milli * second
 
