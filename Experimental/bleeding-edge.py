@@ -1,5 +1,5 @@
 from three import *
-from geometry import CartesianSpace, CylinderBuilder
+from geometry import CartesianSpace, ArrowBuilder
 from browser import document, window, Workbench, WindowAnimationRunner
 
 space = CartesianSpace()
