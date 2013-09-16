@@ -36,6 +36,8 @@ progressEnd = 10000
 startTime =  None
 movement = Vector3(0.02, 0.02, 0.02)
 
+workbench = Workbench(renderer, camera)
+
 def render():
     mesh.rotation += movement
         
