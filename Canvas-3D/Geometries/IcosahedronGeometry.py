@@ -62,5 +62,5 @@ def step(timestamp):
 window.addEventListener("resize", onWindowResize, False)
 
 onWindowResize(None)
-workbech.setUp()
+workbench.setUp()
 step(None)
