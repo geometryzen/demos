@@ -9,7 +9,7 @@ from units import *
 
 space = CartesianSpace()
 
-shape = CylinderBuilder().color(0xFFFF00).volume(0.1).build()
+shape = ConeBuilder().color(0xFFFF00).volume(0.1).build()
 space.add(shape)
 
 i = VectorE3(1, 0, 0)
