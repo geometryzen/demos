@@ -21,7 +21,7 @@ B = i * j
 # The angular velocity describes a motion of one revolution every 12 seconds in the x-y plane, counterclockwise.
 omega = 2 * pi * B / (12 * second)
 
-timeout = 12000
+timeout = 12 * kilo
 
 def onDocumentKeyDown(event):
     global timeout
@@ -32,7 +32,7 @@ def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
 
 def tick(elapsed):
-    t = ScalarE3(elapsed / 1000) * second
+    t = ScalarE3(elapsed) * milli * second
     angle = omega * t / 2
     R = exp(-angle)
     r = R * (4 * i * meter) * ~R
