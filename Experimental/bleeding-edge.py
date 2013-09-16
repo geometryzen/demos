@@ -14,7 +14,19 @@ e3 = ArrowBuilder().color(0x0000FF).build()
 
 workbench = Workbench(space.renderer, space.camera)
 
+def escKey(downFlag):
+    terminate()
+
+keyHandlers = {
+ 27: escKey
+}
+    
+def onDocumentKeyDown(event):
+    event.preventDefault()
+    keyHandlers[event.keyCode](True)
+
 def setUp():
+    document.addEventListener("keydown", onDocumentKeyDown, False)
     workbench.setUp()
 
     space.add(e1)
@@ -32,5 +44,6 @@ def terminate(elapsed):
 
 def tearDown():
     workbench.tearDown()
+    document.removeEventListener("keydown", onDocumentKeyDown, False)
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
