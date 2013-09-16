@@ -11,7 +11,6 @@ progressEnd = 6000
 workbench = Workbench(space.renderer, space.camera)
 
 def setUp():
-    global mesh
 
     document.removeElementsByTagName('canvas')
 
