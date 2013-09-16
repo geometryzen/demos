@@ -10,6 +10,10 @@ camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 1.3
 
 renderer = WebGLRenderer()
+renderer.autoClear = True
+renderer.gammaInput = True
+renderer.gammaOutput = True
+renderer.setClearColor(Color(0x080808), 1.0)
 
 # All arguments are optional and the defaults are as follows.
 length = 1
@@ -38,44 +42,18 @@ movement = Vector3(0.02, 0.02, 0.02)
 
 workbench = Workbench(renderer, camera)
 
-def onWindowResize(event):
-    camera.aspect = window.innerWidth / window.innerHeight
-    camera.updateProjectionMatrix()
-    renderer.size = (window.innerWidth, window.innerHeight)
-    
-def removeElementsByTagName(tagName):
-    for element in document.getElementsByTagName(tagName):
-        element.parentNode.removeChild(element)
-
 def tick(elapsed):
     mesh.rotation += movement
-        
     renderer.render(scene, camera)
     
 def terminate(elapsed):
     return elapsed > 10000
 
 def setUp():
-    global renderer
-
-    removeElementsByTagName("canvas")
-
-    renderer.autoClear = True
-    renderer.gammaInput = True
-    renderer.gammaOutput = True
-    renderer.setClearColor(Color(0x080808), 1.0)
-
-    document.getElementById("canvas-container").appendChild(renderer.domElement)
-
-    renderer.size = (window.innerWidth, window.innerHeight) 
-    
-    window.addEventListener("resize", onWindowResize, False)
-
-    onWindowResize(None)
+    workbench.setUp()
 
 
 def tearDown():
-    removeElementsByTagName("canvas")
-    window.removeEventListener("resize", onWindowResize, False)
+    workbench.tearDown()
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
