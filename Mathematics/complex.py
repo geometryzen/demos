@@ -7,7 +7,7 @@ from math import exp
 from e2ga import *
 
 # Try changing this variable to False to perform the operations using the e2ga sub-algebra.
-useComplex = False
+useComplex = True
 
 def constructor(x, y):
     if useComplex:
