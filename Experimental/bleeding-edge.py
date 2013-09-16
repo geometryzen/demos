@@ -22,6 +22,7 @@ def setUp():
     space.add(e3)
     
     space.camera.position.set(2,2,2)
+    space.camera.lookAt(Vector3(0,0,0))
 
 def tick(elapsed):
     space.render()
