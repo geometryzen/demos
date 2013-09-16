@@ -14,7 +14,8 @@ e3 = ArrowBuilder().color(0x0000FF).build()
 
 workbench = Workbench(space.renderer, space.camera)
 
-def escKey(downFlag):
+def escKey(event, downFlag):
+    event.preventDefault()
     global timeOut
     timeOut = 0
 
@@ -23,9 +24,8 @@ keyHandlers = {
 }
     
 def onDocumentKeyDown(event):
-    event.preventDefault()
     try:
-        keyHandlers[event.keyCode](True)
+        keyHandlers[event.keyCode](event, True)
     except:
         pass
 
