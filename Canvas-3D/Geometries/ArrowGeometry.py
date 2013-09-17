@@ -21,6 +21,15 @@ radiusCone = 0.08
 lengthCone = 0.2
 arrow = ArrowGeometry(length, segments)
 
+print repr(arrow)
+#print "width:          " + str(cube.width)
+#print "height:         " + str(cube.height)
+#print "depth:          " + str(cube.depth)
+#print "widthSegments:  " + str(cube.widthSegments)
+#print "heightSegments: " + str(cube.heightSegments)
+#print "depthSegments:  " + str(cube.depthSegments)
+print arrow
+
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3})
 mesh = Mesh(arrow, material)
 scene.add(mesh)
