@@ -1,7 +1,6 @@
 from units import kilogram, meter, second, joule, newton
 
 cm = 0.01 * meter
-gram = 0.001 * kilogram
 milligram = 0.001 * gram
 mosquito = 10 * milligram
 
