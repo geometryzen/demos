@@ -19,7 +19,7 @@ c = Vector3(radiusShaft, 0, lengthShaft)
 d = Vector3(radiusShaft, 0, 0)
 e = Vector3(0, 0, 0)
 points = [a, b, c, d, e]
-arrow = RevolutionGeometry(points, 3, 0, 2 * pi - 0.01)
+arrow = RevolutionGeometry(points, 3, 0, 2 * pi)
 
 material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":2})
 mesh = Mesh(arrow, material)
