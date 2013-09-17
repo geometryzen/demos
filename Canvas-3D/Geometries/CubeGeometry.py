@@ -13,8 +13,8 @@ width = 10
 height = 10
 depth = 10
 widthSegments = 1
-heightSegments = 1
-depthSegments = 2
+heightSegments = 2
+depthSegments = 3
 cube = CubeGeometry(width, height, depth, widthSegments, heightSegments, depthSegments)
 
 print repr(cube)
@@ -29,7 +29,7 @@ print cube
 mesh = Mesh(cube, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
 scene.add(mesh)
 
-timeOut = 20000
+timeOut = 6000
 movement = 0.02 * Vector3(1, 1, 1)
 
 workbench = Workbench(renderer, camera)
