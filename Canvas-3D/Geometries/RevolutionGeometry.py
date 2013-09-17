@@ -24,12 +24,9 @@ material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
 mesh = Mesh(arrow, material)
 space.add(mesh)
 
-movement = Vector3(0.02, 0.02, 0.0)
-
 workbench = Workbench(space.renderer, space.camera)
 
 def tick(elapsed):
-#    mesh.rotation += movement
     space.render()
     
 def terminate(elapsed):
