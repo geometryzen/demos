@@ -2,7 +2,6 @@
 This program may not work for you because I am working on it right now!
 '''
 from geometry import *
-from e3ga import *
 from browser import *
 
 space = CartesianSpace()
@@ -21,7 +20,7 @@ def tick(elapsed):
     space.render()
     
 def terminate(elapsed):
-    return elapsed > timeout
+    return elapsed > 6000
 
 def tearDown():
     workbench.tearDown()
