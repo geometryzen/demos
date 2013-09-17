@@ -6,9 +6,7 @@ omega = 2 * pi / (10 * second)
 print repr(omega)
 print omega
 
-elapsed = 5000 # % milliseconds
-
-t = elapsed * milli * second
+t = 5000 * milli * second
 
 print repr(t)
 print t
