@@ -8,7 +8,7 @@ print omega
 
 elapsed = 5000 # % milliseconds
 
-t = elapsed * second / 1000
+t = elapsed * milli * second
 
 print repr(t)
 print t
