@@ -16,7 +16,7 @@ thetaStart = 0
 thetaLength = 2 * pi
 circle = CircleGeometry(radius, segments, thetaStart, thetaLength)
 
-mesh = Mesh(circle, MeshBasicMaterial({"color": 0xFF00FF,"wireframe": True, "wireframeLinewidth": 3}))
+mesh = Mesh(circle, MeshBasicMaterial({"wireframe": True, "wireframeLinewidth": 3}))
 scene.add(mesh)
 
 timeOut = 6000
