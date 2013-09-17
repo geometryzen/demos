@@ -9,7 +9,7 @@ from units import *
 
 space = CartesianSpace()
 
-shape = ConeBuilder().color(0xFFFF00).volume(0.2).build()
+shape = ArrowBuilder().color(0xFFFF00).build()
 space.add(shape)
 
 i = VectorE3(1, 0, 0)
@@ -38,6 +38,7 @@ def tick(elapsed):
     angle = omega * t / 2
     R = exp(-angle)
     position = (R * (4 * i * meter) * ~R).quantity
+    # TODO: When Euclidean3 has been consolidated with Vector3 and Quaternion, this will be much easier.
     shape.position.set(position.x, position.y, position.z)
     # To convert a Euclidean3 rotor to a Quaternion, use the 'dual' parts with a sign change.
     # The quaternion property of the mesh is what we would call the attitude - a spinor.
