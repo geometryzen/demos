@@ -26,7 +26,7 @@ space.add(mesh)
 
 movement = Vector3(0.02, 0.02, 0.02)
 
-workbench = Workbench(renderer, camera)
+workbench = Workbench(space.renderer, space.camera)
 
 def tick(elapsed):
     mesh.rotation += movement
