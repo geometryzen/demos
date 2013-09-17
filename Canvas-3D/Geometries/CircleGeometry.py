@@ -20,12 +20,6 @@ circle.name = "Foo"
 print repr(circle)
 print "uuid:            " + str(circle.uuid)
 print "name:            " + str(circle.name)
-print "radius:          " + str(circle.radius)
-#print "height:         " + str(cube.height)
-#print "depth:          " + str(cube.depth)
-#print "widthSegments:  " + str(cube.widthSegments)
-#print "heightSegments: " + str(cube.heightSegments)
-#print "depthSegments:  " + str(cube.depthSegments)
 print circle
 
 mesh = Mesh(circle, MeshBasicMaterial({"wireframe": True, "wireframeLinewidth": 3}))
