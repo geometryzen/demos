@@ -16,6 +16,15 @@ thetaStart = 0
 thetaLength = 2 * pi
 circle = CircleGeometry(radius, segments, thetaStart, thetaLength)
 
+print repr(circle)
+#print "width:          " + str(cube.width)
+#print "height:         " + str(cube.height)
+#print "depth:          " + str(cube.depth)
+#print "widthSegments:  " + str(cube.widthSegments)
+#print "heightSegments: " + str(cube.heightSegments)
+#print "depthSegments:  " + str(cube.depthSegments)
+print circle
+
 mesh = Mesh(circle, MeshBasicMaterial({"wireframe": True, "wireframeLinewidth": 3}))
 scene.add(mesh)
 
