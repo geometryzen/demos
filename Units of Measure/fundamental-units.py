@@ -1,4 +1,4 @@
-from units import kilogram, meter, second, joule, newton
+from units import kilogram, meter, second, joule, newton, gram
 
 cm = 0.01 * meter
 milligram = 0.001 * gram
