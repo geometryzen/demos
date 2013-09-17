@@ -35,7 +35,7 @@ try:
 except AttributeError as e:
     print e
 
-mesh = Mesh(cylinder, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
+mesh = Mesh(cylinder, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3}))
 scene.add(mesh)
 
 movement = Vector3(0.02, 0.02, 0.02)
