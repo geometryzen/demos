@@ -1,4 +1,3 @@
-# OctahedronGeometry demonstration.
 from three import *
 from browser import *
 
