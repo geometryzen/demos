@@ -1,12 +1,5 @@
-# TetrahedronGeometry demonstration.
 from three import *
-# We will control the horizontal. We will control the vertical.
 from browser import *
-from math import pi
-
-# Discard the old canvas if it exists. 
-for canvas in document.getElementsByTagName("canvas"):
-    canvas.parentNode.removeChild(canvas)
 
 scene = Scene()
 
@@ -16,9 +9,6 @@ camera.position.z = 2
 
 renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
-
-container = document.getElementById("canvas-container")
-container.appendChild(renderer.domElement)
 
 radius = 1
 detail = 0 # Must be an integer: 0,1,2,...
@@ -33,43 +23,19 @@ print tetra
 mesh = Mesh(tetra, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
 scene.add(mesh)
 
-requestID = None
-progress = None
-progressEnd = 6000
-startTime =  None
+workbench = Workbench(renderer, camera)
 
-def render():
-    mesh.rotation.x = mesh.rotation.x + 0.02
-    mesh.rotation.y = mesh.rotation.y + 0.02
-    mesh.rotation.z = mesh.rotation.z + 0.02
-        
+def setUp():
+    workbench.setUp()
+
+def tick(elapsed):
+    mesh.rotation += movement    
     renderer.render(scene, camera)
-
-def onWindowResize(event):
-    camera.aspect = window.innerWidth / window.innerHeight
-    camera.updateProjectionMatrix()
-    renderer.size = (window.innerWidth, window.innerHeight)
     
-def step(timestamp):
-    global requestID, progress, startTime
-    if (startTime):
-        progress = timestamp - startTime
-    else:
-        if (timestamp):
-            startTime = timestamp
-        else:
-            progress = 0
-        
-    if (progress < progressEnd):
-        requestID = window.requestAnimationFrame(step)
-        render()
-    else:
-        window.cancelAnimationFrame(requestID)
-        # container.removeChild(renderer.domElement)
-        # TODO: Remove the "resize" event listener
+def terminate(elapsed):
+    return elapsed > 6000
 
-window.addEventListener("resize", onWindowResize, False)
+def tearDown():
+    workbench.tearDown()
 
-onWindowResize(None)
-
-step(None)
+WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
