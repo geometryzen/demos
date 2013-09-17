@@ -12,7 +12,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 width = 10
 height = 10
 depth = 10
-widthSegments = 1
+widthSegments = 1.0
 heightSegments = 2
 depthSegments = 3
 cube = CubeGeometry(width, height, depth, widthSegments, heightSegments, depthSegments)
