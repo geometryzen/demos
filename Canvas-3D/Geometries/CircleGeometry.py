@@ -19,8 +19,7 @@ circle = CircleGeometry(radius, segments, thetaStart, thetaLength)
 mesh = Mesh(circle, MeshBasicMaterial({"wireframe": True, "wireframeLinewidth": 3}))
 scene.add(mesh)
 
-timeOut = 6000
-movement = Vector3(0.02, 0.02, 0.02)
+movement = 0.02 * Vector3(1, 1, 1)
 
 workbench = Workbench(renderer, camera)
 
@@ -32,7 +31,7 @@ def tick(elapsed):
     renderer.render(scene, camera)
 
 def terminate(elapsed):
-    return elapsed > timeOut
+    return elapsed > 6000
 
 def tearDown():
     workbench.tearDown()
