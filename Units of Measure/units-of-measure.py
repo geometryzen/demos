@@ -1,7 +1,7 @@
 from e3ga import *
 from units import *
  
-m = ScalarE3(10) * kilo * gram
+m = ScalarE3(10) * kilogram
  
 print "m => " + str(m)
  
