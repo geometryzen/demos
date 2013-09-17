@@ -10,7 +10,7 @@ from units import *
 space = CartesianSpace()
 
 # TODO: This will be simplified by consolidating Euclidean3 and Vector3, Quaternion.
-shape = ConeBuilder().color(0xFFFF00).scale(1).axis(Vector3(1,0,0)).build()
+shape = ConeBuilder().color(0xFFFF00).build()#.scale(1).axis(Vector3(1,0,0)).build()
 space.add(shape)
 
 i = VectorE3(1, 0, 0)
