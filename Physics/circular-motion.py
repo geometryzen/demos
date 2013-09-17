@@ -9,7 +9,7 @@ from units import *
 
 space = CartesianSpace()
 
-shape = ArrowBuilder().color(0xFFFF00).build()
+shape = ArrowBuilder().color(0xFFFF00).length(3).build()
 space.add(shape)
 
 i = VectorE3(1, 0, 0)
