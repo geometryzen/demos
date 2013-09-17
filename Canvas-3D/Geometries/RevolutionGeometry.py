@@ -38,6 +38,7 @@ def terminate(elapsed):
 def setUp():
     workbench.setUp()
     space.camera.position.set(2,2,2)
+    space.camera.lookAt(space.origin)
 
 def tearDown():
     workbench.tearDown()
