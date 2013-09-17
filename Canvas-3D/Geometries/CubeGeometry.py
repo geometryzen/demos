@@ -14,8 +14,8 @@ height = 10
 depth = 10
 widthSegments = 1
 heightSegments = 1
-depthSegments = 1
-cube = CubeGeometry(width, height, depth, widthSegments, heightSegments)#, depthSegments)
+depthSegments = 2
+cube = CubeGeometry(width, height, depth, widthSegments, heightSegments, depthSegments)
 
 print repr(cube)
 print "width:          " + str(cube.width)
