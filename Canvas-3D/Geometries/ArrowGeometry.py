@@ -25,11 +25,6 @@ arrow.name = 'Foo'
 print repr(arrow)
 print "uuid:            " + str(arrow.uuid)
 print "name:            " + str(arrow.name)
-#print "height:         " + str(cube.height)
-#print "depth:          " + str(cube.depth)
-#print "widthSegments:  " + str(cube.widthSegments)
-#print "heightSegments: " + str(cube.heightSegments)
-#print "depthSegments:  " + str(cube.depthSegments)
 print arrow
 
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3})
