@@ -9,7 +9,7 @@ from units import *
 
 space = CartesianSpace()
 
-shape = ConeBuilder().color(0xFFFF00).volume(0.1).build()
+shape = ConeBuilder().color(0xFFFF00).volume(1).build()
 space.add(shape)
 
 i = VectorE3(1, 0, 0)
@@ -20,24 +20,18 @@ k = VectorE3(0, 0, 1)
 # The angular velocity describes a motion of one revolution every 12 seconds in the x-y plane, counterclockwise.
 omega = 2 * pi * i * j / (12 * second)
 
-timeout = 12 * kilo# * milli * second
+timeOut = 12 * kilo# * milli * second
 
 workbench = Workbench(space.renderer, space.camera)
 
 def onDocumentKeyDown(event):
     global timeout
     if event.keyCode == 27:
-        timeout = 0
-
-def onWindowResize(event):
-    space.viewSize(window.innerWidth, window.innerHeight)
+        timeOut = 0
 
 def setUp():
-    document.removeElementsByTagName("canvas")
-    document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
+    workbench.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
-    window.addEventListener("resize", onWindowResize, False)
-    onWindowResize(None)
 
 def tick(elapsed):
     t = ScalarE3(elapsed) * milli * second
@@ -51,11 +45,10 @@ def tick(elapsed):
     space.render()
     
 def terminate(elapsed):
-    return elapsed > timeout
+    return elapsed > timeOut
 
 def tearDown():
-    window.removeEventListener("resize", onWindowResize, False)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
-    document.removeElementsByTagName("canvas")
+    workbench.tearDown()
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
