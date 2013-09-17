@@ -22,6 +22,8 @@ omega = 2 * pi * i * j / (12 * second)
 
 timeout = 12 * kilo# * milli * second
 
+workbench = Workbench(space.renderer, space.camera)
+
 def onDocumentKeyDown(event):
     global timeout
     if event.keyCode == 27:
@@ -29,6 +31,13 @@ def onDocumentKeyDown(event):
 
 def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
+
+def setUp():
+    document.removeElementsByTagName("canvas")
+    document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
+    document.addEventListener("keydown", onDocumentKeyDown, False)
+    window.addEventListener("resize", onWindowResize, False)
+    onWindowResize(None)
 
 def tick(elapsed):
     t = ScalarE3(elapsed) * milli * second
@@ -43,13 +52,6 @@ def tick(elapsed):
     
 def terminate(elapsed):
     return elapsed > timeout
-
-def setUp():
-    document.removeElementsByTagName("canvas")
-    document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
-    document.addEventListener("keydown", onDocumentKeyDown, False)
-    window.addEventListener("resize", onWindowResize, False)
-    onWindowResize(None)
 
 def tearDown():
     window.removeEventListener("resize", onWindowResize, False)
