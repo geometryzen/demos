@@ -27,7 +27,7 @@ yloWire = MeshBasicMaterial({"color":0xFFFF00,"wireframe":True})
 redGeom = ArrowGeometry()
 grnGeom = ArrowGeometry()
 bluGeom = ArrowGeometry(0.5)
-yloGeom = ArrowGeometry(1.5)
+yloGeom = ArrowGeometry(0.5)
 
 redMesh = Mesh(redGeom, redWire)
 grnMesh = Mesh(grnGeom, grnWire)
