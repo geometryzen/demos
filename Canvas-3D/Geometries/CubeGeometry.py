@@ -1,12 +1,6 @@
-# CubeGeometry demonstration.
 from e3ga import *
 from three import *
 from browser import *
-from math import pi
-
-# Discard the old canvas if it exists. 
-for canvas in document.getElementsByTagName("canvas"):
-    canvas.parentNode.removeChild(canvas)
 
 scene = Scene()
 
@@ -15,9 +9,6 @@ camera.position.z = 20
 
 renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
-
-container = document.getElementById("canvas-container")
-container.appendChild(renderer.domElement)
 
 width = 10
 height = 10
@@ -42,8 +33,10 @@ scene.add(mesh)
 timeOut = 10000
 movement = 0.02 * Vector3(1, 1, 1)
 
+workbench = Workbench(renderer, camera)
+
 def setUp():
-    pass
+    workbench.setUp()
 
 def tick(elapsed):
     mesh.rotation += movement
@@ -53,6 +46,6 @@ def terminate(elapsed):
     return elapsed > timeOut
 
 def tearDown():
-    pass
+    workbench.tearDown()
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
