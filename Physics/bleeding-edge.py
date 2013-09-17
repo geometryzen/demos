@@ -6,7 +6,7 @@ from browser import *
 
 space = CartesianSpace()
 
-builder = ArrowBuilder().color(0xFFFF00).axis(Vector3(0,1,0))
+builder = ArrowBuilder().color(0xFFFF00).axis(Vector3(0,0,1))
 shape = builder.build()
 space.add(shape)
 
