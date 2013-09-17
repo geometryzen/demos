@@ -15,10 +15,11 @@ renderer.gammaOutput = True
 renderer.setClearColor(Color(0x080808), 1.0)
 
 # All arguments are optional and the defaults, in order, are as follows.
-radiusCone = 20
-radiusShaft = 10
-length = 80
-lengthShaft = 60
+radiusCone = 0.08
+lengthCone = 0.2
+radiusShaft = 0.01
+length = 1
+lengthShaft = 1 - lengthCone
 a = Vector3(0, 0, length)
 b = Vector3(radiusCone, 0, lengthShaft)
 c = Vector3(radiusShaft, 0, lengthShaft)
