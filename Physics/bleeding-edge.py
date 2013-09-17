@@ -6,7 +6,7 @@ from browser import *
 
 space = CartesianSpace()
 
-shape = ArrowBuilder().build()
+shape = ArrowBuilder().color(0xFFFF00).build()
 space.add(shape)
 
 workbench = Workbench(space.renderer, space.camera)
@@ -20,7 +20,7 @@ def tick(elapsed):
     space.render()
     
 def terminate(elapsed):
-    return elapsed > 10000
+    return elapsed > 5000
 
 def tearDown():
     workbench.tearDown()
