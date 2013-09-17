@@ -23,7 +23,7 @@ arrow = ArrowGeometry(length, segments)
 arrow.name = 'Foo'
 
 print repr(arrow)
-print "id:              " + str(arrow.id)
+print "uuid:            " + str(arrow.uuid)
 print "name:            " + str(arrow.name)
 #print "height:         " + str(cube.height)
 #print "depth:          " + str(cube.depth)
