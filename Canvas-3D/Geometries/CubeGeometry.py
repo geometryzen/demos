@@ -1,4 +1,3 @@
-from e3ga import *
 from three import *
 from browser import *
 
