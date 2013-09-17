@@ -35,8 +35,7 @@ startTime =  None
 movement = Vector3(0.02, 0.02, 0.02)
 
 def render():
-    mesh.rotation += movement
-        
+    mesh.rotation += movement    
     renderer.render(scene, camera)
 
 def onWindowResize(event):
