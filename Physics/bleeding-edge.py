@@ -1,6 +1,7 @@
 '''
-This example represents efforts to provide convenient abstractions
-of the Three.js WebGL Computer Graphics API for use with Physics simulations.
+This program may not work for you because I am working on it right now!
+However, you will see my intent and it will soon become an example.
+Comments are welcome!
 '''
 from geometry import *
 from e3ga import *
