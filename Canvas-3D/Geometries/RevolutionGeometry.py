@@ -3,6 +3,7 @@
 from geometry import *
 from three import *
 from browser import *
+from math import pi
 
 space = CartesianSpace()
 
@@ -18,7 +19,7 @@ c = Vector3(radiusShaft, 0, lengthShaft)
 d = Vector3(radiusShaft, 0, 0)
 e = Vector3(0, 0, 0)
 points = [a, b, c, d, e]
-arrow = RevolutionGeometry(points, 6)
+arrow = RevolutionGeometry(points, 6, 0)
 
 material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":2})
 mesh = Mesh(arrow, material)
