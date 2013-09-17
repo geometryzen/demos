@@ -16,6 +16,7 @@ segments = 12
 radiusShaft = 0.01
 radiusCone = 0.08
 lengthCone = 0.2
+# TODO: This will be fixed soon. Tue Sep 17
 arrow = ArrowGeometry(length, segments)
 arrow.name = 'Foo'
 
