@@ -1,7 +1,7 @@
 # RevolutionGeometry is not a standard Geometry in the Three.js library.
 # It is an experimental enhancement to LatheGeometry for closed surfaces of revolution.
-from three import Scene, PerspectiveCamera, ArrowGeometry, MeshNormalMaterial, Mesh, AmbientLight, PointLight, DirectionalLight, Vector3, WebGLRenderer, Color
-from browser import document, window, Workbench, WindowAnimationRunner
+from three import *
+from browser import *
 
 scene = Scene()
 
