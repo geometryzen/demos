@@ -20,7 +20,7 @@ segments = 10
 radiusShaft = 0.01
 radiusCone = 0.08
 lengthCone = 0.2
-arrow = RevolutionGeometry(length, segments)
+arrow = ArrowGeometry(length, segments)
 
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3})
 mesh = Mesh(arrow,material)
