@@ -22,7 +22,7 @@ arrow = RevolutionGeometry(points, 25)
 
 material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
 mesh = Mesh(arrow, material)
-scene.add(mesh)
+space.add(mesh)
 
 movement = Vector3(0.02, 0.02, 0.02)
 
