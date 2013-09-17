@@ -23,6 +23,7 @@ arrow = ArrowGeometry(length, segments)
 
 print repr(arrow)
 print "id:              " + str(arrow.id)
+print "name:            " + str(arrow.name)
 #print "height:         " + str(cube.height)
 #print "depth:          " + str(cube.depth)
 #print "widthSegments:  " + str(cube.widthSegments)
@@ -43,7 +44,7 @@ def tick(elapsed):
     renderer.render(scene, camera)
     
 def terminate(elapsed):
-    return elapsed > 12000
+    return elapsed > 3000
 
 def setUp():
     workbench.setUp()
