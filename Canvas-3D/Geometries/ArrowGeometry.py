@@ -8,9 +8,6 @@ camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 1.3
 
 renderer = WebGLRenderer()
-renderer.autoClear = True
-renderer.gammaInput = True
-renderer.gammaOutput = True
 renderer.setClearColor(Color(0x080808), 1.0)
 
 # All arguments are optional and the defaults, in order, are as follows.
