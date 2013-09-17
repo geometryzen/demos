@@ -15,6 +15,7 @@ segments = 32
 thetaStart = 0
 thetaLength = 2 * pi
 circle = CircleGeometry(radius, segments, thetaStart, thetaLength)
+circle.name = "Foo"
 
 print repr(circle)
 print "id:              " + str(circle.id)
