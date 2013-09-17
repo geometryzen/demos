@@ -1,4 +1,5 @@
-# LatheGeometry demonstration.
+# Note: There is currently a bug in the Three.JS LatheGeometry that causes segments to be omitted.
+# Use RevolutionGeometry as a temporary workaround.
 from three import *
 from browser import *
 
