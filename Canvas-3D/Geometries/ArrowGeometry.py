@@ -22,7 +22,7 @@ lengthCone = 0.2
 arrow = ArrowGeometry(length, segments)
 
 print repr(arrow)
-#print "width:          " + str(cube.width)
+print "id:              " + str(arrow.id)
 #print "height:         " + str(cube.height)
 #print "depth:          " + str(cube.depth)
 #print "widthSegments:  " + str(cube.widthSegments)
