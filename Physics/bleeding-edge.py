@@ -20,7 +20,7 @@ def tick(elapsed):
     space.render()
     
 def terminate(elapsed):
-    return elapsed > 10000
+    return elapsed > 5000
 
 def tearDown():
     workbench.tearDown()
