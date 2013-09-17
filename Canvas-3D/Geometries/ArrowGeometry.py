@@ -22,10 +22,10 @@ lengthCone = 0.2
 arrow = ArrowGeometry(length, segments)
 
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3})
-mesh = Mesh(arrow,material)
+mesh = Mesh(arrow, material)
 scene.add(mesh)
 
-movement = Vector3(0.02, 0.02, 0.02)
+movement = 0.02 * Vector3(1, 1, 1)
 
 workbench = Workbench(renderer, camera)
 
