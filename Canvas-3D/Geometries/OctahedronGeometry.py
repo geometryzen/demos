@@ -1,9 +1,6 @@
 from three import *
 from browser import *
 
-for canvas in document.getElementsByTagName("canvas"):
-    canvas.parentNode.removeChild(canvas)
-
 scene = Scene()
 
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
@@ -11,9 +8,6 @@ camera.position.z = 2
 
 renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
-
-container = document.getElementById("canvas-container")
-container.appendChild(renderer.domElement)
 
 radius = 1
 detail = 0 # Must be an integer: 0,1,2,...
@@ -25,43 +19,24 @@ print "radius:         " + str(octah.radius)
 print "detail:         " + str(octah.detail)
 print octah
 
-mesh = Mesh(octah, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
+mesh = Mesh(octah, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3}))
 scene.add(mesh)
 
-requestID = None
-progress = None
-progressEnd = 6000
-startTime =  None
 movement = Vector3(0.02, 0.02, 0.02)
 
-def render():
+workbench = Workbench(renderer, camera)
+
+def setUp():
+    workbench.setUp()
+
+def tick(elapsed):
     mesh.rotation += movement    
     renderer.render(scene, camera)
-
-def onWindowResize(event):
-    camera.aspect = window.innerWidth / window.innerHeight
-    camera.updateProjectionMatrix()
-    renderer.size = (window.innerWidth, window.innerHeight)
     
-def step(timestamp):
-    global requestID, progress, startTime
-    if (startTime):
-        progress = timestamp - startTime
-    else:
-        if (timestamp):
-            startTime = timestamp
-        else:
-            progress = 0
-        
-    if (progress < progressEnd):
-        requestID = window.requestAnimationFrame(step)
-        render()
-    else:
-        window.cancelAnimationFrame(requestID)
-        # container.removeChild(renderer.domElement)
+def terminate(elapsed):
+    return elapsed > 6000
 
-window.addEventListener("resize", onWindowResize, False)
+def tearDown():
+    workbench.tearDown()
 
-onWindowResize(None)
-
-step(None)
+WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
