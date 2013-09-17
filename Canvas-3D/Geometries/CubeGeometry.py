@@ -29,7 +29,7 @@ print cube
 mesh = Mesh(cube, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
 scene.add(mesh)
 
-timeOut = 10000
+timeOut = 20000
 movement = 0.02 * Vector3(1, 1, 1)
 
 workbench = Workbench(renderer, camera)
