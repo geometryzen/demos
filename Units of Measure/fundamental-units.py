@@ -1,4 +1,4 @@
-from units import kilogram, meter, second, joule, newton, gram
+from units import kilogram, meter, second, joule, newton, gram, cm
 
 milligram = 0.001 * gram
 mosquito = 10 * milligram
