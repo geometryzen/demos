@@ -32,7 +32,7 @@ movement = Vector3(0.02, 0.02, 0.02)
 
 workbench = Workbench(renderer, camera)
 
-def setUp();
+def setUp():
     workbench.setUp()
 
 def tick(elapsed):
