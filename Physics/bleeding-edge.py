@@ -26,6 +26,11 @@ timeout = 12 * kilo# * milli * second
 
 workbench = Workbench(space.renderer, space.camera)
 
+def setUp():
+    space.camera.position.set(1.5, 1.5, 1.5)
+    space.camera.lookAt(space.origin)
+    workbench.setUp()
+
 def tick(elapsed):
     t = ScalarE3(elapsed) * milli * second
     angle = omega * t / 2
@@ -39,9 +44,6 @@ def tick(elapsed):
     
 def terminate(elapsed):
     return elapsed > timeout
-
-def setUp():
-    workbench.setUp()
 
 def tearDown():
     workbench.tearDown()
