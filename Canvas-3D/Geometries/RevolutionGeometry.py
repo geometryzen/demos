@@ -15,15 +15,20 @@ renderer.gammaOutput = True
 renderer.setClearColor(Color(0x080808), 1.0)
 
 # All arguments are optional and the defaults, in order, are as follows.
-length = 1
-segments = 10
-radiusShaft = 0.01
-radiusCone = 0.08
-lengthCone = 0.2
-arrow = ArrowGeometry(length, segments)
+radiusCone = 20
+radiusShaft = 10
+length = 80
+lengthShaft = 60
+a = Vector3(0, 0, length)
+b = Vector3(radiusCone, 0, lengthShaft)
+c = Vector3(radiusShaft, 0, lengthShaft)
+d = Vector3(radiusShaft, 0, 0)
+e = Vector3(0, 0, 0)
+points = [a, b, c, d, e]
+arrow = LatheGeometry(points, 25)
 
-material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3})
-mesh = Mesh(arrow,material)
+material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
+mesh = Mesh(arrow, material)
 scene.add(mesh)
 
 ambientLight = AmbientLight(0x222222)
