@@ -25,7 +25,7 @@ bluWire = MeshLambertMaterial({"color":0x0000FF})
 yloWire = MeshBasicMaterial({"color":0xFFFF00,"wireframe":True})
 
 redGeom = ArrowGeometry()
-grnGeom = ArrowGeometry()
+grnGeom = ArrowGeometry(1, 24, 0.5)
 bluGeom = ArrowGeometry(0.5)
 yloGeom = ArrowGeometry(0.5)
 
