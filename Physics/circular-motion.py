@@ -9,6 +9,7 @@ from units import *
 
 space = CartesianSpace()
 
+# TODO: This will be simplified by consolidating Euclidean3 and Vector3, Quaternion.
 shape = ArrowBuilder().color(0xFFFF00).scale(1).axis(Vector3(1,0,0)).build()
 space.add(shape)
 
