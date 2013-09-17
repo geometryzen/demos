@@ -17,7 +17,7 @@ thetaLength = 2 * pi
 circle = CircleGeometry(radius, segments, thetaStart, thetaLength)
 
 print repr(circle)
-#print "width:          " + str(cube.width)
+print "radius:          " + str(circle.radius)
 #print "height:         " + str(cube.height)
 #print "depth:          " + str(cube.depth)
 #print "widthSegments:  " + str(cube.widthSegments)
