@@ -6,7 +6,7 @@ from browser import *
 
 space = CartesianSpace()
 
-shape = CylinderBuilder().build()
+shape = SphereBuilder().build()
 space.add(shape)
 
 workbench = Workbench(space.renderer, space.camera)
