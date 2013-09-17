@@ -18,6 +18,7 @@ circle = CircleGeometry(radius, segments, thetaStart, thetaLength)
 
 print repr(circle)
 print "id:              " + str(circle.id)
+print "name:            " + str(circle.name)
 print "radius:          " + str(circle.radius)
 #print "height:         " + str(cube.height)
 #print "depth:          " + str(cube.depth)
