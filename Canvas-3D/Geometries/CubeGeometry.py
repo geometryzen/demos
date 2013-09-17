@@ -55,4 +55,4 @@ def terminate(elapsed):
 def tearDown():
     pass
 
-WindowAnimationFrame(window, tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
