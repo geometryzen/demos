@@ -20,7 +20,7 @@ e = Vector3(0, 0, 0)
 points = [a, b, c, d, e]
 arrow = RevolutionGeometry(points, 12)
 
-material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":1})
+material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":2})
 mesh = Mesh(arrow, material)
 space.add(mesh)
 
