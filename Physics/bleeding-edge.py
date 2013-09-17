@@ -6,7 +6,7 @@ from browser import *
 
 space = CartesianSpace()
 
-shape = ArrowBuilder().color(0xFFFF00).build()
+shape = ArrowBuilder().color(0xFFFF00).length(0.5).build()
 space.add(shape)
 
 workbench = Workbench(space.renderer, space.camera)
