@@ -7,7 +7,7 @@ from browser import *
 space = CartesianSpace()
 
 # TODO: This doesn't quite work when the axis is nearly anti-parrallel to e3.
-builder = ArrowBuilder().color(0xFFFF00).axis(Vector3(1,0,0).normalize())
+builder = ArrowBuilder().color(0xFFFF00).axis(Vector3(1,1,0).normalize())
 shape = builder.build()
 space.add(shape)
 
