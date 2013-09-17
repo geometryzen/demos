@@ -39,41 +39,20 @@ print cube
 mesh = Mesh(cube, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
 scene.add(mesh)
 
-requestID = None
-progress = None
-progressEnd = 10000
-startTime =  None
+timeOut = 10000
 movement = 0.02 * Vector3(1, 1, 1)
 
-def render():
+def setUp():
+    pass
+
+def tick(elapsed):
     mesh.rotation += movement
-        
     renderer.render(scene, camera)
-
-def onWindowResize(event):
-    camera.aspect = window.innerWidth / window.innerHeight
-    camera.updateProjectionMatrix()
-    renderer.size = (window.innerWidth, window.innerHeight)
     
-def step(timestamp):
-    global requestID, progress, startTime
-    if (startTime):
-        progress = timestamp - startTime
-    else:
-        if (timestamp):
-            startTime = timestamp
-        else:
-            progress = 0
-        
-    if (progress < progressEnd):
-        requestID = window.requestAnimationFrame(step)
-        render()
-    else:
-        window.cancelAnimationFrame(requestID)
-        # container.removeChild(renderer.domElement)
+def terminate(elapsed):
+    return elapsed > timeOut
 
-window.addEventListener("resize", onWindowResize, False)
+def tearDown():
+    pass
 
-onWindowResize(None)
-
-step(None)
+WindowAnimationFrame(window, tick, terminate, setUp, tearDown).start()
