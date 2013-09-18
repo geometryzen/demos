@@ -3,6 +3,7 @@ from e3ga import *
 from units import *
  
 m = ScalarE3(10) * kilogram
+r = VectorE3(1,0,0) * meter
  
 print "m => " + str(m)
  
@@ -13,7 +14,7 @@ F = m * g
  
 print "F => " + str(F)
  
-a = F / m
+T = F ^ r
  
-print "a => " + repr(a)
-print "a => " + str(a)
+print "a => " + repr(T)
+print "a => " + str(T)
