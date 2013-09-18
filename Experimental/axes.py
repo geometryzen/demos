@@ -140,10 +140,7 @@ addAxes(scene)
 addMainGrid(scene, 60)
 addFadingGrid(scene, 60, 50)
 
-requestID = None
-progress = None
 progressEnd = 6000
-startTime =  None
 
 lastCameraPosition = Vector3(0,0,0)
 distance = 1000
