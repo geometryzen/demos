@@ -188,6 +188,5 @@ def terminate(elapsed):
 
 def tearDown():
     workbench.tearDown()
-dow.innerWidth, window.innerHeight)
     
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
