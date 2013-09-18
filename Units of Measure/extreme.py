@@ -21,3 +21,4 @@ print "T => " + str(T)
 
 print "T >> r => " + repr(T >> r)
 print "T >> r => " + str(T >> r)
+print "(T >> r)/(r*r) => " + str((T >> r)/(r*r))
