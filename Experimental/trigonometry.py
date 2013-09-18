@@ -31,6 +31,7 @@ def towards(a, b, theta):
     # Find a more elegant way to not have to mess with units?
     # Dropping the units on the floor seems a bit extreme.
     B =  a.quantity ^ b.quantity
+    showRepr("B", B)
     c = cos(theta/2)
     s = sin(theta/2)
     Bs = B * s
