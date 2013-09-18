@@ -16,5 +16,5 @@ print "F => " + str(F)
  
 T = F ^ r
  
-print "a => " + repr(T)
-print "a => " + str(T)
+print "T => " + repr(T)
+print "T => " + str(T)
