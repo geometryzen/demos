@@ -96,7 +96,7 @@ def onDocumentKeyUp(event):
     event.preventDefault()
     keyHandlers[event.keyCode](False)
 
-def onWindowResize():
+def onWindowResize(event):
     if (useLargeCanvas):
         camera.aspect = window.innerWidth / window.innerHeight
         camera.updateProjectionMatrix()
