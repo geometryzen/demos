@@ -7,8 +7,7 @@ space = CartesianSpace()
 timeOut = 5000
 
 e1 = ArrowBuilder().color(0xFF0000).axis(Vector3(1,0,0)).build()
-e2 = ArrowBuilder().color(0x00FF00).build()
-e2.quaternion.setFromAxisAngle(Vector3(1,0,0), -pi/2)
+e2 = ArrowBuilder().color(0x00FF00).axis(vector3(0,1,0)).build()
 e3 = ArrowBuilder().color(0x0000FF).build()
 
 workbench = Workbench(space.renderer, space.camera)
