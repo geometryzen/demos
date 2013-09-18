@@ -7,6 +7,7 @@ print "i           => " + repr(i)
 j = VectorE3(0,1,0)
 print "j           => " + repr(j)
 theta = (2 * pi) * i * j
+print "theta       => " + repr(theta)
 omega = theta * (1 / second)
 
 t = ScalarE3(1) * second
