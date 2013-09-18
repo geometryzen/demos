@@ -63,7 +63,7 @@
 #
 # The example below is the (rough) solution of the trig problem using GA to rotate some of the 
 # vectors. We then just sum the vectors to get the total displacement.
-from e2ga import *
+from e3ga import *
 from math import pi, sqrt, cos, sin
 from units import * # See if we can perform the calculations using measures?
 
@@ -72,8 +72,8 @@ def showValue(name, m):
     return m
 
 # Create a few unit vectors to match the "compass" terminology in the question:
-north = VectorE2(0, 1)
-east = VectorE2(1, 0)
+north = VectorE3(0, 1, 0)
+east = VectorE3(1, 0, 0)
 south = -north
 west = -east
 
