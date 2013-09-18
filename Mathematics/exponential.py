@@ -12,6 +12,7 @@ omega = theta * (1 / second)
 print "omega       => " + repr(omega)
 
 t = ScalarE3(1) * second
+print "t           => " + repr(t)
 theta = omega * t
 print "omega       => " + str(omega)
 print "theta       => " + str(theta)
