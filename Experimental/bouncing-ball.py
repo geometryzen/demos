@@ -141,7 +141,7 @@ def run():
     document.addEventListener("keyup", onDocumentKeyUp, False)
 
     window.addEventListener("resize", onWindowResize, False)
-    onWindowResize()
+    onWindowResize(None)
     window.requestAnimationFrame(frameZero)
 
 def frameZero(timestamp):
