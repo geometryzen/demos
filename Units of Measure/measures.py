@@ -19,6 +19,8 @@ x = momentum * velocity
 print "meter => " + str(meter)
 print "meter * meter  => " + str(meter * meter)
 print "meter + meter  => " + str(meter + meter)
+print "meter / meter  => " + str(meter / meter)
+print "meter - meter  => " + str(meter - meter)
 print "meter * second => " + str(meter * second)
 
 try:
