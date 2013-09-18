@@ -41,6 +41,7 @@ def towards(a, b, theta):
     return (c - Bs) * a.quantity * (c + Bs) * a.uom
 
 d1 = 100 * east
+showRepr("d1", d1)
 d2 = 300 * south
 d3 = 150 * towards(west, south, toRadians(30))
 d4 = 200 * towards(west, north, toRadians(60))
