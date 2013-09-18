@@ -9,6 +9,7 @@ print "j           => " + repr(j)
 theta = (2 * pi) * i * j
 print "theta       => " + repr(theta)
 omega = theta * (1 / second)
+print "omega       => " + repr(omega)
 
 t = ScalarE3(1) * second
 theta = omega * t
