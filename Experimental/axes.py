@@ -117,10 +117,6 @@ def addFadingGridTile(x, y, size, sceneObject):
     line.position.y = y - 10 if (y > 0) else y
     line.rotation.z = 90 * pi / 180
     sceneObject.add(line)
-    
-# Discard the old canvas if it exists. 
-for canvas in document.getElementsByTagName("canvas"):
-    canvas.parentNode.removeChild(canvas)
 
 scene = Scene()
 
@@ -139,9 +135,6 @@ renderer.gammaOutput = True
 renderer.setClearColor(Color(0x080808), 1.0)
 renderer.sortObjects = False
 
-container = document.getElementById("canvas-container")
-container.appendChild(renderer.domElement)
-
 addLights(scene)
 addAxes(scene)
 addMainGrid(scene, 60)
@@ -159,9 +152,10 @@ azimuthAngle = 10 * pi / 180
 target = {"distance": 300, "polarAngle": polarAngle, "azimuthAngle": azimuthAngle}
 targetScenePosition = Vector3(0,0,0)
 
+workbench = Workbench(renderer, camera)
+
 def setUp():
-    window.addEventListener("resize", onWindowResize, False)
-    onWindowResize(None)
+    workbench.setUp()
     
 def tick(elapsed):
     global distance, polarAngle, azimuthAngle
@@ -193,11 +187,7 @@ def terminate(elapsed):
     return elapsed > progressEnd
 
 def tearDown():
-    window.removeEventListener("resize", onWindowResize, False)
-
-def onWindowResize(event):
-    camera.aspect = window.innerWidth / window.innerHeight
-    camera.updateProjectionMatrix()
-    renderer.size = (window.innerWidth, window.innerHeight)
+    workbench.tearDown()
+dow.innerWidth, window.innerHeight)
     
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
