@@ -17,7 +17,7 @@ radiusShaft = 0.01
 radiusCone = 0.08
 lengthCone = 0.2
 # TODO: This will be fixed soon. Tue Sep 17, Sep 18...
-axis = VectorE3(1, 0, 0)
+axis = Vector3(1, 0, 0)
 arrow = ArrowGeometry(length, axis, segments)
 arrow.name = 'Foo'
 
