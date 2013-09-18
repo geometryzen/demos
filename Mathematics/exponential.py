@@ -10,11 +10,11 @@ theta = (2 * pi) * i * j
 print "theta       => " + repr(theta)
 omega = theta * (1 / second)
 print "omega       => " + repr(omega)
+print "omega       => " + str(omega)
 
 t = ScalarE3(1) * second
 print "t           => " + repr(t)
 theta = omega * t
-print "omega       => " + str(omega)
 print "theta       => " + str(theta)
 print "exp(theta)  => " + str(exp(theta))
 print "exp(+theta) => " + str(exp(+theta))
