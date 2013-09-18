@@ -16,7 +16,10 @@ north = VectorE2(0, 1) * meter
 east  = VectorE2(1, 0) * meter
 south = zero - north # Avoid issue with unimplemented unary minus!
 west  = zero - east
+showRepr("north", north)
 showRepr("south", south)
+showRepr("east", east)
+showRepr("west", west)
 
 def toRadians(deg):
     return deg * pi / 180
