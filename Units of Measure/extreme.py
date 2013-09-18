@@ -20,3 +20,4 @@ print "T => " + repr(T)
 print "T => " + str(T)
 
 print "T >> r => " + repr(T >> r)
+print "T >> r => " + str(T >> r)
