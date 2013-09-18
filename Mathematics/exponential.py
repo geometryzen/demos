@@ -16,6 +16,7 @@ t = ScalarE3(1) * second
 print "t           => " + repr(t)
 print "t           => " + str(t)
 theta = omega * t
+print "theta       => " + repr(theta)
 print "theta       => " + str(theta)
 print "exp(theta)  => " + str(exp(theta))
 print "exp(+theta) => " + str(exp(+theta))
