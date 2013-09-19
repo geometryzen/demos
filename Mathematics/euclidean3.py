@@ -226,6 +226,8 @@ assertEqual(R.yz, 0)
 assertEqual(R.zx, 0)
 assertEqual(R.xyz, 0)
 assertEqual(True, R.mutable)
+R.constantify()
+assertEqual(False, R.mutable)
 
 # The reversion of a multivector is the multivector obtained by reversing the vectors.
 # We use the Python ~ unary operator to perform reversion.  
@@ -241,7 +243,7 @@ assertEqual(revA.yz, -A.yz)
 assertEqual(revA.zx, -A.zx)
 assertEqual(revA.xyz, -A.xyz)
 
+# Rotors do their job of rotation by being applied on either side of their operand.
 
-# Rotors do their job of rotation by being 
 
 print "I hope you enjoyed the tour of Euclidean3!"
