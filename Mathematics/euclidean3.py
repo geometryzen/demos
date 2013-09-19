@@ -91,9 +91,22 @@ assertEqual(mass.xy, 0)
 assertEqual(mass.yz, 0)
 assertEqual(mass.zx, 0)
 assertEqual(mass.xyz, 0)
+assertEqual(True, mass.mutable)
 
-# There is a shortcut for constructing a scalar quantity - ScalarE3
-one = ScalarE3(1)
+# There is a shortcut for constructing a scalar quantity - ScalarE3(value [,mutable]}
+mass = ScalarE3(23)
+assertEqual(mass.w, 1)
+assertEqual(mass.x, 0)
+assertEqual(mass.y, 0)
+assertEqual(mass.z, 0)
+assertEqual(mass.xy, 0)
+assertEqual(mass.yz, 0)
+assertEqual(mass.zx, 0)
+assertEqual(mass.xyz, 0)
+assertEqual(True, mass.mutable)
+
+# You can create scalar constants by setting the mutable flag on construction.
+one = ScalarE3(1, False)
 assertEqual(one.w, 1)
 assertEqual(one.x, 0)
 assertEqual(one.y, 0)
