@@ -13,6 +13,5 @@ F = m * g
 print "F => " + str(F)
  
 a = F / m
- 
-print "a => " + repr(a)
+
 print "a => " + str(a)
