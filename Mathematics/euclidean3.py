@@ -260,8 +260,12 @@ assertTrue(isCloseTo(R * e1 * ~R, e2))
 assertTrue(isCloseTo(e1, e1))
 assertFalse(isCloseTo(e1, e2))
 
+# Rotors can be thought of as geometric angles because they contain all the information for the rotation -
+# The magnitude, the aspect and the orientation.
+
 # Finally, we come to the Pseudoscalar, geometrically interpreted as an oriented and weighted volume element.
 I = e1 ^ e2 ^ e3
 assertEqual(Euclidean3(0,0,0,0,0,0,0,1), I)
+assertEqual(PseudoscalarE3(1), I)
 
 print "I hope you enjoyed the tour of Euclidean3!"
