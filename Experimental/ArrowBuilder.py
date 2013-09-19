@@ -5,6 +5,7 @@ Instead of Vector3 and Quaternion we use Euclidean3 (and constructors ScalarE3, 
 '''
 from geometry import *
 from browser import *
+from math import exp, pi
 
 space = CartesianSpace()
 
