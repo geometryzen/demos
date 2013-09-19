@@ -10,7 +10,8 @@ from math import exp, pi
 space = CartesianSpace()
 
 # Specify an attitude as the rotor that rotates e3(k) onto e1(i)
-shape = ArrowBuilder().color(0xFFFF00).attitude(exp(-BivectorE3(0,0,1)*pi/4)).build()
+rotor = exp(-BivectorE3(0,0,1)*pi/4)
+shape = ArrowBuilder().color(0xFFFF00).attitude(rotor).build()
 space.add(shape)
 
 workbench = Workbench(space.renderer, space.camera)
