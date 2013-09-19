@@ -54,7 +54,7 @@ assertEqual(a.xyz, 19)
 try:
     a.w = "You can't do this"
 except TypeError as e:
-    assertEqual(str(e),"AssertionError: Fraction() takes exactly 2 arguments (3 given) on line 10")
+    assertEqual(str(e),"TypeError: w must be a <type 'float'> or <type 'int'> or type 'long'> on line 55")
 else:
     print "Expecting error when assigning a non-number to a coordinate."
 
