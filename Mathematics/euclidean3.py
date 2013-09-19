@@ -154,5 +154,6 @@ assertEqual(e1.yz, 0)
 assertEqual(e1.zx, 0)
 assertEqual(e1.xyz, 0)
 assertEqual(False, e1.mutable)
+assertEqual("", str(e1))
 
 print "I hope you enjoyed the tour of Euclidean3!"
