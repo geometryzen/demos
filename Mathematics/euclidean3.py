@@ -64,7 +64,7 @@ a.constantify()
 assertEqual(False, a.mutable)
 try:
     a.w = 1
-except TypeError as e:
+except AssertionError as e:
     assertEqual(str(e),"???")
 else:
     print "Expecting error when assigning to an immutable Euclidean3."
