@@ -2,9 +2,9 @@ from three import *
 from browser import *
 from math import pi
 
-i = Vector3(1,0,0)
-j = Vector3(0,1,0)
-k = Vector3(0,0,1)
+i = VectorE3(1,0,0)
+j = VectorE3(0,1,0)
+k = VectorE3(0,0,1)
 
 scene = Scene()
 
