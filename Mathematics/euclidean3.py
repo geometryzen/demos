@@ -301,11 +301,13 @@ assertEqual(e31 * I, -e2)
 assertEqual(I * I, -one)
 
 # We've been assuming the geometric product all along using the standard Python operator for multiplication.
-# Between vectors we have the following identity
+# Between vectors we have the following identity.
 a = VectorE3(2,3,5)
 b = VectorE3(7,11,13)
 assertEqual(a * b, (a % b) + (a ^ b))
+# Notice the need for parenthesis because of Python precedence rules.
 assertEqual(a * b, a % b + (a ^ b))
+assertEqual(a * b, a % (b + a) ^ b)
 
 # There's also the left- and right-contraction which are represented by the Python bitshift operators << and >>.
 assertEqual(one << e12, e12)
