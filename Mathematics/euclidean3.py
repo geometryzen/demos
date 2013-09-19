@@ -164,5 +164,7 @@ assertEqual("2*i+3*j+5*k", str(VectorE3(2, 3, 5)))
 # TODO: Not sure whether to use length or something else.
 assertEqual(13, len(VectorE3(3, 4, 12)))
 
+print e1 % e1
+
 
 print "I hope you enjoyed the tour of Euclidean3!"
