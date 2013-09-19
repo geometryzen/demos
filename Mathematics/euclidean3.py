@@ -205,7 +205,18 @@ assertEqual(e12.xyz, 0)
 assertEqual(True, e12.mutable)
 e12.constantify()
 assertEqual(False, e12.mutable)
+
+# Let's prepare the other basis bivectors.
 e23 = (e2 ^ e3).constantify()
+assertEqual(e23.w, 0)
+assertEqual(e23.x, 0)
+assertEqual(e23.y, 0)
+assertEqual(e23.z, 0)
+assertEqual(e23.xy, 1)
+assertEqual(e23.yz, 0)
+assertEqual(e23.zx, 0)
+assertEqual(e23.xyz, 0)
+assertEqual(False, e23.mutable)
 
 assertEqual("ij", str(e12))
 # We can create the same bivector directly from it's components.
