@@ -182,7 +182,8 @@ assertEqual(12, e3 % VectorE3(3, 4, 12))
 # Things get a bit more interesting when we extend the vectors using the outer product.
 e12 = e1 ^ e2
 assertEqual("ij", str(e12))
-assertEqual("??", repr(e12))
+assertEqual(e12, BivectorE3(1, 0, 0))
+assertEqual(repr(e12), "BivectorE3(1, 0, 0)")
 
 
 print "I hope you enjoyed the tour of Euclidean3!"
