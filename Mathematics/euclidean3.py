@@ -304,7 +304,7 @@ assertEqual(I * I, -one)
 # Between vectors we have the following identity
 a = VectorE3(2,3,5)
 b = VectorE3(7,11,13)
-assertEqual(a * b, (a % b) + a ^ b)
+assertEqual(a * b, (a % b) + (a ^ b))
 
 # There's also the left- and right-contraction which are represented by the Python bitshift operators << and >>.
 assertEqual(one << e12, e12)
