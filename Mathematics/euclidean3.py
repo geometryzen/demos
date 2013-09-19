@@ -82,8 +82,8 @@ assertEqual(False, zero.mutable)
 # Most of the time, you will want to construct scalars, vectors or rotors.
 
 # Constructing a scalar, such as an inertial mass, involves only the 'w' component of the Euclidean3. 
-mass = Euclidean3(1, 0, 0, 0, 0, 0, 0, 0)
-assertEqual(mass.w, 1)
+mass = Euclidean3(19, 0, 0, 0, 0, 0, 0, 0)
+assertEqual(mass.w, 19)
 assertEqual(mass.x, 0)
 assertEqual(mass.y, 0)
 assertEqual(mass.z, 0)
@@ -95,7 +95,7 @@ assertEqual(True, mass.mutable)
 
 # There is a shortcut for constructing a scalar quantity - ScalarE3(value [,mutable]}
 mass = ScalarE3(23)
-assertEqual(mass.w, 1)
+assertEqual(mass.w, 23)
 assertEqual(mass.x, 0)
 assertEqual(mass.y, 0)
 assertEqual(mass.z, 0)
