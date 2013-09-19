@@ -22,9 +22,6 @@ def onDocumentKeyDown(event):
     if event.keyCode == 27:
         timeout = 0
 
-def onWindowResize(event):
-    space.viewSize(window.innerWidth, window.innerHeight)
-
 def tick(elapsed):
     space.render()
     
@@ -32,15 +29,11 @@ def terminate(elapsed):
     return elapsed > timeout
 
 def setUp():
-    document.removeElementsByTagName("canvas")
-    document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
+    workbench.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
-    window.addEventListener("resize", onWindowResize, False)
-    onWindowResize(None)
 
 def tearDown():
-    window.removeEventListener("resize", onWindowResize, False)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
-    document.removeElementsByTagName("canvas")
+    workbench.tearDown()
 
 WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
