@@ -12,7 +12,6 @@ def showValue(name, m):
 zero = explain(Euclidean3(0, 0, 0, 0, 0, 0, 0, 0))
 one  = explain(ScalarE3(1))
 two  = explain(ScalarE3(2))
-three= explain(3)
 e1   = explain(VectorE3(1, 0, 0))
 e2   = explain(VectorE3(0, 1, 0))
 e3   = explain(VectorE3(0, 0, 1))
@@ -21,7 +20,7 @@ e23  = explain(BivectorE3(0, 1, 0))
 e31  = explain(BivectorE3(0, 0, 1))
 I    = explain(PseudoscalarE3(1))
 
-blades = [zero, one, two, three, e1, e2, e3, e12, e23, e31, I]
+blades = [zero, one, two, e1, e2, e3, e12, e23, e31, I]
 
 # Skulpt bug? The string representation of the list does not recurse.
 # print str(blades)
