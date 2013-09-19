@@ -33,7 +33,7 @@ a = Euclidean3(1, 2, 3, 4, 5, 6, 7, 8)
 #assertEqual(a.xyz, 8)
 
 # Most of the time, you will want to construct scalars, vectors or rotors.
-# Constructing a scalar, like an inertial mass involves only the 'w' component of the Euclidean3. 
+# Constructing a scalar, such as an inertial mass, involves only the 'w' component of the Euclidean3. 
 mass = Euclidean3(1, 0, 0, 0, 0, 0, 0, 0)
 assertEqual(mass.w, 1)
 assertEqual(mass.x, 0)
