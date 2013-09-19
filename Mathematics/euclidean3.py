@@ -74,6 +74,10 @@ except AssertionError as e:
     assertEqual(str(e),"AssertionError: Quantity is not mutable on line 72")
 else:
     print "Expecting error when assigning to an immutable Euclidean3."
+    
+# You can also make a Euclidean3 immutable upon construction by setting the mutable flag.
+zero = Euclidean3(0, 0, 0, 0, 0, 0, 0, 0, False)
+assertEqual(False, zero.mutable)
 
 # Most of the time, you will want to construct scalars, vectors or rotors.
 
