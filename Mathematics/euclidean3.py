@@ -303,6 +303,7 @@ assertEqual(I * I, -one)
 # We've been assuming the geometric product all along using the standard Python operator for multiplication.
 
 # There's also the left- and right-contraction which are represented by the Python bitshift operators << and >>.
+assertEqual(one << e12, e2)
 assertEqual(e1 << e12, e2)
 assertEqual(e2 << e12, -e1)
 assertEqual(e3 << e12, zero)
