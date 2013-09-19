@@ -43,3 +43,5 @@ assertEqual(mass.xy, 0)
 assertEqual(mass.yz, 0)
 assertEqual(mass.zx, 0)
 assertEqual(mass.xyz, 0)
+
+print "I hope you enjoyed the journey!"
