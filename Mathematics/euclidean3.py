@@ -304,6 +304,7 @@ assertEqual(I * I, -one)
 
 # There's also the left- and right-contraction which are represented by the Python bitshift operators << and >>.
 assertEqual(e1 << e12, e2)
+assertEqual(e2 << e12, e1)
 
 
 print "I hope you enjoyed the tour of Euclidean3!"
