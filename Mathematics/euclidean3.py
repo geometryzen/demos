@@ -143,5 +143,16 @@ assertEqual(True, position.mutable)
 
 # Lets take a look at the basis vectors for Euclidean3 by setting up some constant unit vectors.
 e1 = VectorE3(1, 0, 0, False)
+e2 = VectorE3(0, 1, 0, False)
+e3 = VectorE3(0, 0, 1, False)
+assertEqual(e1.w, 1)
+assertEqual(e1.x, 2)
+assertEqual(e1.y, 3)
+assertEqual(e1.z, 4)
+assertEqual(e1.xy, 5)
+assertEqual(e1.yz, 6)
+assertEqual(e1.zx, 7)
+assertEqual(e1.xyz, 8)
+assertEqual(True, e1.mutable)
 
 print "I hope you enjoyed the tour of Euclidean3!"
