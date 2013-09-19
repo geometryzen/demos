@@ -93,7 +93,7 @@ assertEqual(mass.zx, 0)
 assertEqual(mass.xyz, 0)
 
 # There is a shortcut for constructing a scalar quantity - ScalarE3
-mass = ScalarE3(23, 0, 0, 0, 0, 0, 0, 0)
+mass = ScalarE3(23)
 assertEqual(mass.w, 23)
 assertEqual(mass.x, 0)
 assertEqual(mass.y, 0)
