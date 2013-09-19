@@ -14,7 +14,7 @@ space.add(CubeBuilder().build().translateX(2.5).translateY(2.5))
 space.add(SphereBuilder().build().translateX(+2.5).translateY(-2.5))
 space.add(ConeBuilder().build().translateX(-2.5).translateY(+2.5))
 
-timeout = 600000
+timeout = 6000
 
 def onDocumentKeyDown(event):
     global timeout
