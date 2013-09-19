@@ -40,14 +40,14 @@ a.xy = 11
 a.yz = 13
 a.zx = 17
 a.xyz = 19
-assertEqual(a.w, 1)
-assertEqual(a.x, 2)
-assertEqual(a.y, 3)
-assertEqual(a.z, 4)
-assertEqual(a.xy, 5)
-assertEqual(a.yz, 6)
-assertEqual(a.zx, 7)
-assertEqual(a.xyz, 8)
+assertEqual(a.w, 2)
+assertEqual(a.x, 3)
+assertEqual(a.y, 5)
+assertEqual(a.z, 7)
+assertEqual(a.xy, 11)
+assertEqual(a.yz, 13)
+assertEqual(a.zx, 17)
+assertEqual(a.xyz, 19)
 
 # Most of the time, you will want to construct scalars, vectors or rotors.
 # Constructing a scalar, such as an inertial mass, involves only the 'w' component of the Euclidean3. 
