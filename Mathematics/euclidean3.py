@@ -33,6 +33,7 @@ assertEqual(a.zx, 7)
 assertEqual(a.xyz, 8)
 
 # By default, Euclidean3 is mutable.
+assertEqual(True, a.mutable)
 a.w = 2
 a.x = 3
 a.y = 5
