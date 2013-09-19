@@ -15,6 +15,8 @@ space.add(ConeBuilder().color(0xFFFF00).volume(1).build().translateX(-2.5).trans
 
 timeout = 6000
 
+workbench = Workbench(space.renderer, space.camera)
+
 def onDocumentKeyDown(event):
     global timeout
     if event.keyCode == 27:
