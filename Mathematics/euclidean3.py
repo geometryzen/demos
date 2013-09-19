@@ -49,9 +49,7 @@ assertEqual(a.yz, 13)
 assertEqual(a.zx, 17)
 assertEqual(a.xyz, 19)
 # You can't assign anything other than a number to a coordinate of Euclidean3.
-try:
-    a.w = "You can't do this"
-except 
+a.w = "You can't do this"
 
 # Most of the time, you will want to construct scalars, vectors or rotors.
 # Constructing a scalar, such as an inertial mass, involves only the 'w' component of the Euclidean3. 
