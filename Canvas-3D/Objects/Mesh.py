@@ -65,7 +65,7 @@ requestID = None
 progress = None
 progressEnd = 6000
 startTime =  None
-movement = Vector3(0.02, 0.02, 0.02)
+movement = VectorE3(0.02, 0.02, 0.02)
 
 def render():
     grnMesh.position.set(0.5,0,0);
