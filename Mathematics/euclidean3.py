@@ -5,7 +5,7 @@
 # However, mutability is generally not desirable and so a mutable latch is provided to prevent mutation.
 # It should be obvious from the context whether a quantity is expected to be constant.
 from e3ga import *
-from math import exp, cos, sin, pi
+from math import exp, cos, sin, sqrt, pi
 
 # The following functions are provided for testing purposes.
 def assertEqual(actual, expect):
