@@ -65,7 +65,7 @@ assertEqual(False, a.mutable)
 try:
     a.w = 1
 except AssertionError as e:
-    assertEqual(str(e),"???")
+    assertEqual(str(e),"AssertionError: Quantity is not mutable on line 66")
 else:
     print "Expecting error when assigning to an immutable Euclidean3."
 
