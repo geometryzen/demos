@@ -295,6 +295,9 @@ assertEqual(one * I, I)
 assertEqual(e1 * I, e23)
 assertEqual(e2 * I, e31)
 assertEqual(e3 * I, e12)
+assertEqual(e12 * I, -e3)
+assertEqual(e23 * I, -e1)
+assertEqual(e31 * I, -e2)
 assertEqual(I * I, -one)
 
 
