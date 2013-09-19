@@ -10,11 +10,11 @@ def showValue(name, m):
     return m
 
 zero = explain(Euclidean3(0, 0, 0, 0, 0, 0, 0, 0, False))
-one  = explain(ScalarE3(1))
-two  = explain(ScalarE3(2))
-e1   = explain(VectorE3(1, 0, 0))
-e2   = explain(VectorE3(0, 1, 0))
-e3   = explain(VectorE3(0, 0, 1))
+one  = explain(ScalarE3(1, False))
+two  = explain(ScalarE3(2).constantify())
+e1   = explain(VectorE3(1, 0, 0, False))
+e2   = explain(VectorE3(0, 1, 0, False))
+e3   = explain(VectorE3(0, 0, 1).constantify())
 e12  = explain(BivectorE3(1, 0, 0))
 e23  = explain(BivectorE3(0, 1, 0))
 e31  = explain(BivectorE3(0, 0, 1))
