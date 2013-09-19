@@ -55,7 +55,7 @@ assertEqual(a.xyz, 19)
 try:
     a.w = "You can't do this"
 except TypeError as e:
-    assertEqual(str(e),"TypeError: w must be a <type 'float'> or <type 'int'> or <type 'long'> on line 55")
+    assertEqual(str(e),"TypeError: w must be a <type 'float'> or <type 'int'> or <type 'long'> on line 56")
 else:
     print "Expecting error when assigning a non-number to a coordinate."
 
