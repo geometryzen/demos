@@ -22,7 +22,7 @@ print octah
 mesh = Mesh(octah, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3}))
 scene.add(mesh)
 
-movement = Vector3(0.02, 0.02, 0.02)
+movement = VectorE3(0.02, 0.02, 0.02)
 
 workbench = Workbench(renderer, camera)
 
