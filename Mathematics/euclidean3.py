@@ -254,7 +254,7 @@ assertEqual(revA.xyz, -A.xyz)
 # The angle, theta was pi / 2, and the half-angle used in generating R was theta / 2, or pi / 4.
 # So we expect R to produce a rotation of theta = pi /2 in the xy-plane.
 assertTrue(isCloseTo(R * e1 * ~R, e2))
-assertTrue(e1, e1)
-assertFalse(e1, e2)
+assertTrue(isCloseTo(e1, e1))
+assertFalse(isCloseTo(e1, e2))
 
 print "I hope you enjoyed the tour of Euclidean3!"
