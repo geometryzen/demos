@@ -265,7 +265,10 @@ assertFalse(isCloseTo(e1, e2))
 
 # Finally, we come to the Pseudoscalar, geometrically interpreted as an oriented and weighted volume element.
 I = e1 ^ e2 ^ e3
+# Here are some other ways of constructing the pseudoscalar.
 assertEqual(Euclidean3(0,0,0,0,0,0,0,1), I)
 assertEqual(PseudoscalarE3(1), I)
+
+# The pseudoscalar has lots of interesting properties, some of which depend upon the dimensionality of the linear space.
 
 print "I hope you enjoyed the tour of Euclidean3!"
