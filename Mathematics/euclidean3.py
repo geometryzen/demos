@@ -215,6 +215,14 @@ assertFalse(e12 * e12 == -1)
 # Bivectors, like e12, that square to -1 are the generators of rotations.
 # A rotor can be constructed from normalized bivector using the exponential function.
 R = exp(-e12 * pi / 2)
-print R
+assertEqual(R.w, 0)
+assertEqual(R.x, 0)
+assertEqual(R.y, 0)
+assertEqual(R.z, 0)
+assertEqual(R.xy, 1)
+assertEqual(R.yz, 0)
+assertEqual(R.zx, 0)
+assertEqual(R.xyz, 0)
+assertEqual(True, R.mutable)
 
 print "I hope you enjoyed the tour of Euclidean3!"
