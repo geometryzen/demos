@@ -21,7 +21,7 @@ def onDocumentKeyDown(event):
 def setUp():
     # TODO: Need to fix the entire graphics API now we are moving from Vector3, Quaternion to Euclidean3.
 #    space.camera.position.set(1.5, 1.5, 1.5)
-    space.camera.lookAt()#space.origin)
+    space.camera.lookAt(space.origin)
     workbench.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
 
