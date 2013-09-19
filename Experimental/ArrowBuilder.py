@@ -16,7 +16,7 @@ space.add(shape)
 workbench = Workbench(space.renderer, space.camera)
 
 def setUp():
-    space.camera.position = VectorE3(1.5, 1.5, 1.5)
+    space.camera.position = Vector3(1.5, 1.5, 1.5)
     space.camera.lookAt(space.origin)
     workbench.setUp()
 
