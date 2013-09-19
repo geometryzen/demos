@@ -3,6 +3,7 @@
 # It is also part of the three module where it unifies the Vector3 and Quaternion numbers.
 from three import *
 
-# Euclidean3 forms a Linear Space of 8=2*2*2= dimensions.
-mass = Euclidean3(1,0,0,0,0,0,0,0)
-print 2**3
+# Euclidean3 forms a Linear or Vector Space of 2**3=8 dimensions.
+
+# Most of the time, you will want to construct scalars, vectors or rotors.
+mass = Euclidean3(1, 0, 0, 0, 0, 0, 0, 0)
