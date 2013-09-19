@@ -60,7 +60,7 @@ else:
     print "Expecting error when assigning a non-number to a coordinate."
     
 # You can make a Euclidean3 immutable by setting the mutable latch to False.
-a.freeze()
+a.constantify()
 
 # Most of the time, you will want to construct scalars, vectors or rotors.
 
