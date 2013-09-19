@@ -18,7 +18,7 @@ radiusCone = 0.08
 lengthCone = 0.2
 # TODO: This will be fixed soon. Tue Sep 17, Sep 18...
 axis = Vector3(0, 0, 1)
-arrow = ArrowGeometry(length, axis, segments)
+arrow = ArrowGeometry(length)
 arrow.name = 'Foo'
 
 print repr(arrow)
