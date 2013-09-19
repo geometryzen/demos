@@ -23,14 +23,14 @@ def showValue(name, m):
 
 # Euclidean3 forms a Linear or Vector Space of 2**3=8 dimensions.
 a = Euclidean3(1, 2, 3, 4, 5, 6, 7, 8)
-#assertEqual(a.w, 1)
-#assertEqual(a.x, 2)
-#assertEqual(a.y, 3)
-#assertEqual(a.z, 4)
-#assertEqual(a.xy, 5)
-#assertEqual(a.yz, 6)
-#assertEqual(a.zx, 7)
-#assertEqual(a.xyz, 8)
+assertEqual(a.w, 1)
+assertEqual(a.x, 2)
+assertEqual(a.y, 3)
+assertEqual(a.z, 4)
+assertEqual(a.xy, 5)
+assertEqual(a.yz, 6)
+assertEqual(a.zx, 7)
+assertEqual(a.xyz, 8)
 
 # Most of the time, you will want to construct scalars, vectors or rotors.
 # Constructing a scalar, such as an inertial mass, involves only the 'w' component of the Euclidean3. 
