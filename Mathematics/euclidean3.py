@@ -60,7 +60,7 @@ else:
     print "Expecting error when assigning a non-number to a coordinate."
     
 # You can chain assignments.
-a.w = a.x = 23
+foo = a.w = 23
 assertEqual(a.w, 23)
 assertEqual(a.x, 23)
     
