@@ -11,6 +11,7 @@ space = CartesianSpace()
 
 # Specify an attitude as the rotor that rotates e3(k) onto e1(i)
 rotor = exp(-BivectorE3(0,0,1)*pi/4)
+print rotor.quaternion
 shape = ArrowBuilder().color(0xFFFF00).attitude(rotor).build()
 space.add(shape)
 
