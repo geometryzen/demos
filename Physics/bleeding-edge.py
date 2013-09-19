@@ -15,8 +15,8 @@ space.add(shape)
 workbench = Workbench(space.renderer, space.camera)
 
 def setUp():
-    space.camera.position.set(1.5, 1.5, 1.5)
-    space.camera.lookAt(space.origin)
+#    space.camera.position.set(1.5, 1.5, 1.5)
+#    space.camera.lookAt(space.origin)
     workbench.setUp()
 
 def tick(elapsed):
