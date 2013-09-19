@@ -93,14 +93,14 @@ assertEqual(mass.zx, 0)
 assertEqual(mass.xyz, 0)
 
 # There is a shortcut for constructing a scalar quantity - ScalarE3
-mass = ScalarE3(23)
-assertEqual(mass.w, 23)
-assertEqual(mass.x, 0)
-assertEqual(mass.y, 0)
-assertEqual(mass.z, 0)
-assertEqual(mass.xy, 0)
-assertEqual(mass.yz, 0)
-assertEqual(mass.zx, 0)
-assertEqual(mass.xyz, 0)
+one = ScalarE3(1)
+assertEqual(one.w, 23)
+assertEqual(one.x, 0)
+assertEqual(one.y, 0)
+assertEqual(one.z, 0)
+assertEqual(one.xy, 0)
+assertEqual(one.yz, 0)
+assertEqual(one.zx, 0)
+assertEqual(one.xyz, 0)
 
 print "I hope you enjoyed the tour of Euclidean3!"
