@@ -166,6 +166,11 @@ assertEqual(13, len(VectorE3(3, 4, 12)))
 
 # The scalar product is available using the Python % operator.
 assertEqual(1, e1 % e1)
+assertEqual(1, e2 % e2)
+assertEqual(1, e3 % e3)
+assertEqual(0, e1 % e2)
+assertEqual(1, e2 % e3)
+assertEqual(0, e1 % e3)
 
 
 print "I hope you enjoyed the tour of Euclidean3!"
