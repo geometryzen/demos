@@ -31,6 +31,7 @@ assertEqual(a.xy, 5)
 assertEqual(a.yz, 6)
 assertEqual(a.zx, 7)
 assertEqual(a.xyz, 8)
+
 # By default, Euclidean3 is mutable.
 a.w = 2
 a.x = 3
@@ -48,10 +49,17 @@ assertEqual(a.xy, 11)
 assertEqual(a.yz, 13)
 assertEqual(a.zx, 17)
 assertEqual(a.xyz, 19)
+
 # You can't assign anything other than a number to a coordinate of Euclidean3.
-a.w = "You can't do this"
+try:
+    a.w = "You can't do this"
+except TypeError as e:
+    assertEqual(str(e),"AssertionError: Fraction() takes exactly 2 arguments (3 given) on line 10")
+else:
+    print "Expecting error when assigning a non-number to a coordinate."
 
 # Most of the time, you will want to construct scalars, vectors or rotors.
+
 # Constructing a scalar, such as an inertial mass, involves only the 'w' component of the Euclidean3. 
 mass = Euclidean3(1, 0, 0, 0, 0, 0, 0, 0)
 assertEqual(mass.w, 1)
