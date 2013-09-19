@@ -13,6 +13,12 @@ def assertEqual(actual, expect):
     else:
         print {"actual": actual, "expect": expect}
 
+def assertTrue(actual):
+    return assertEqual(actual, True)
+
+def assertFalse(actual):
+    return assertEqual(actual, False)
+
 def explain(m):
     print str(m) + " is " + repr(m)
     return m
@@ -197,9 +203,15 @@ assertEqual("ij", str(e12))
 assertEqual(e12, BivectorE3(1, 0, 0))
 assertEqual(repr(e12), "BivectorE3(1, 0, 0)")
 
-# Pure bivectors, like e12, that square to -1 are the generators of rotations.
+# e12 squares to -1, but notice that the result is a Euclidean3, not a float.
+assertEqual(e12 * e12, ScalarE3(-1.0))
 assertEqual(e12 * e12, ScalarE3(-1))
-assertEqual(e12 * e12 == ScalarE3(-1), True)
-assertEqual(e12 * e12 == -1, False)
+assertTrue(e12 * e12 == ScalarE3(-1.0))
+assertTrue(e12 * e12 == ScalarE3(-1))
+assertFalse(e12 * e12 == -1.0)
+assertFalse(e12 * e12 == -1)
+
+# Bivectors, like e12, that square to -1 are the generators of rotations.
+# A rotor can be constructed from a 
 
 print "I hope you enjoyed the tour of Euclidean3!"
