@@ -61,6 +61,7 @@ else:
     
 # You can chain assignments.
 foo = a.w = 23
+assertEqual(foo, 23)
 assertEqual(a.w, 23)
 assertEqual(a.x, 23)
     
