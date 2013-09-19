@@ -28,23 +28,23 @@ def addLights(scene):
 
 def addAxes(scene):
     axes = [Geometry(),Geometry(),Geometry(),Geometry(),Geometry(),Geometry()]
-    axes[0].vertices.append(Vector3(0,0,0))
-    axes[0].vertices.append(Vector3(1000,0,0))
+    axes[0].vertices.append(VectorE3(0,0,0))
+    axes[0].vertices.append(VectorE3(1000,0,0))
     
-    axes[1].vertices.append(Vector3(0,0,0))
-    axes[1].vertices.append(Vector3(0,1000,0))
+    axes[1].vertices.append(VectorE3(0,0,0))
+    axes[1].vertices.append(VectorE3(0,1000,0))
     
-    axes[2].vertices.append(Vector3(0,0,0))
-    axes[2].vertices.append(Vector3(0,0,1000))
+    axes[2].vertices.append(VectorE3(0,0,0))
+    axes[2].vertices.append(VectorE3(0,0,1000))
     
-    axes[3].vertices.append(Vector3(0,0,0))
-    axes[3].vertices.append(Vector3(-1000,0,0))
+    axes[3].vertices.append(VectorE3(0,0,0))
+    axes[3].vertices.append(VectorE3(-1000,0,0))
     
-    axes[4].vertices.append(Vector3(0,0,0))
-    axes[4].vertices.append(Vector3(0,-1000,0))
+    axes[4].vertices.append(VectorE3(0,0,0))
+    axes[4].vertices.append(VectorE3(0,-1000,0))
     
-    axes[5].vertices.append(Vector3(0,0,0))
-    axes[5].vertices.append(Vector3(0,0,-1000))
+    axes[5].vertices.append(VectorE3(0,0,0))
+    axes[5].vertices.append(VectorE3(0,0,-1000))
     
     sceneObject = Object3D()
     sceneObject.add(Line(axes[0], LineBasicMaterial({"color":COLOR_X_AXIS, "opacity":0.5,"transparent":True})))
@@ -93,8 +93,8 @@ def isInsideY(y, size):
 
 def addFadingGridTile(x, y, size, sceneObject):
     fadingGridLineGeometry = Geometry()
-    fadingGridLineGeometry.vertices.append(Vector3(0,0,0))
-    fadingGridLineGeometry.vertices.append(Vector3(10,0,0))
+    fadingGridLineGeometry.vertices.append(VectorE3(0,0,0))
+    fadingGridLineGeometry.vertices.append(VectorE3(10,0,0))
     dx = 0
     if (x < -size):
         dx = -size - x
@@ -142,7 +142,7 @@ addFadingGrid(scene, 60, 50)
 
 progressEnd = 6000
 
-lastCameraPosition = Vector3(0,0,0)
+lastCameraPosition = VectorE3(0,0,0)
 distance = 1000
 polarAngle = 60 * pi / 180
 azimuthAngle = 10 * pi / 180
