@@ -292,6 +292,8 @@ assertEqual(I * e1, e1 * I)
 assertEqual(I * e12, e12 * I)
 # It can be use to compute the Hodge dual.
 assertEqual(e1 * I, e23)
+assertEqual(e2 * I, e31)
+assertEqual(e3 * I, e23)
 
 
 print "I hope you enjoyed the tour of Euclidean3!"
