@@ -117,4 +117,16 @@ assertEqual(one.zx, 0)
 assertEqual(one.xyz, 0)
 assertEqual(False, one.mutable)
 
+# Constructing a vector, such as a position, involves the x,y,z components of the Euclidean3.
+position = Euclidean3(0, 2, 3, 5, 0, 0, 0, 0)
+assertEqual(position.w, 0)
+assertEqual(position.x, 0)
+assertEqual(position.y, 0)
+assertEqual(position.z, 0)
+assertEqual(position.xy, 0)
+assertEqual(position.yz, 0)
+assertEqual(position.zx, 0)
+assertEqual(position.xyz, 0)
+assertEqual(True, position.mutable)
+
 print "I hope you enjoyed the tour of Euclidean3!"
