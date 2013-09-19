@@ -154,6 +154,10 @@ assertEqual(e1.yz, 0)
 assertEqual(e1.zx, 0)
 assertEqual(e1.xyz, 0)
 assertEqual(False, e1.mutable)
-assertEqual("", str(e1))
+
+# Euclidean3 adopts Hamilton's notation for basis vectors - i,j,k.
+assertEqual("i", str(e1))
+assertEqual("j", str(e2))
+assertEqual("k", str(e3))
 
 print "I hope you enjoyed the tour of Euclidean3!"
