@@ -260,4 +260,7 @@ assertTrue(isCloseTo(R * e1 * ~R, e2))
 assertTrue(isCloseTo(e1, e1))
 assertFalse(isCloseTo(e1, e2))
 
+# Finally, we come to the Pseudoscalar, geometrically interpreted as an oriented and weighted volume element.
+I = e1 ^ e2 ^ e3
+
 print "I hope you enjoyed the tour of Euclidean3!"
