@@ -25,7 +25,7 @@ print circle
 mesh = Mesh(circle, MeshBasicMaterial({"wireframe": True, "wireframeLinewidth": 3}))
 scene.add(mesh)
 
-movement = 0.02 * Vector3(1, 1, 1)
+movement = 0.02 * VectorE3(1, 1, 1)
 
 workbench = Workbench(renderer, camera)
 
