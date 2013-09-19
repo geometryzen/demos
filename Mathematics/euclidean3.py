@@ -65,7 +65,7 @@ assertEqual(foo, 23)
 assertEqual(a.w, 23)
 assertEqual(a.x, 23)
     
-# You can make a Euclidean3 immutable by setting the mutable latch to False.
+# You can make a Euclidean3 immutable after construction by setting the mutable latch to False.
 a.constantify()
 assertEqual(False, a.mutable)
 try:
