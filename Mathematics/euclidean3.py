@@ -58,6 +58,9 @@ except TypeError as e:
     assertEqual(str(e),"TypeError: w must be a <type 'float'> or <type 'int'> or <type 'long'> on line 56")
 else:
     print "Expecting error when assigning a non-number to a coordinate."
+    
+# You can make a Euclidean3 immutable by setting the mutable latch to False.
+a.freeze()
 
 # Most of the time, you will want to construct scalars, vectors or rotors.
 
