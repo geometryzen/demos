@@ -191,7 +191,7 @@ assertEqual(e12.zx, 0)
 assertEqual(e12.xyz, 0)
 assertEqual(True, e12.mutable)
 e12.constantify()
-assertEqual(True, e12.mutable)
+assertEqual(False, e12.mutable)
 
 assertEqual("ij", str(e12))
 assertEqual(e12, BivectorE3(1, 0, 0))
