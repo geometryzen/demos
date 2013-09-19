@@ -31,6 +31,15 @@ assertEqual(a.xy, 5)
 assertEqual(a.yz, 6)
 assertEqual(a.zx, 7)
 assertEqual(a.xyz, 8)
+# By default, Euclidean3 is mutable.
+a.w = 2
+a.x = 3
+a.y = 5
+a.z = 7
+a.xy = 11
+a.yz = 13
+a.zx = 17
+a.xyz = 19
 
 # Most of the time, you will want to construct scalars, vectors or rotors.
 # Constructing a scalar, such as an inertial mass, involves only the 'w' component of the Euclidean3. 
