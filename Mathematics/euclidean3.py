@@ -271,5 +271,7 @@ assertEqual(PseudoscalarE3(1), I)
 assertEqual(e1 * e2 * e3, I)
 
 # The pseudoscalar has lots of interesting properties, some of which depend upon the dimensionality of the linear space.
+assertEqual(I * I, -1)
+
 
 print "I hope you enjoyed the tour of Euclidean3!"
