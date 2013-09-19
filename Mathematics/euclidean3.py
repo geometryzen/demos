@@ -161,4 +161,8 @@ assertEqual("j", str(e2))
 assertEqual("k", str(e3))
 assertEqual("2*i+3*j+5*k", str(VectorE3(2, 3, 5)))
 
+# The magnitude and length.
+print len(VectorE3(2, 3, 5))
+
+
 print "I hope you enjoyed the tour of Euclidean3!"
