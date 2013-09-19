@@ -100,7 +100,7 @@ startTime =  None
 frameTime = None
 endTime = None
 
-particle.position = Vector3(-400,0,0)
+particle.position = VectorE3(-400,0,0)
 v = VectorE3(75,75,0)
 mass = 1
 g = VectorE3(0, -9.81, 0)
