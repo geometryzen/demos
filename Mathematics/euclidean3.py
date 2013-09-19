@@ -182,10 +182,10 @@ assertEqual(12, e3 % VectorE3(3, 4, 12))
 # Things get a bit more interesting when we extend the vectors using the outer product.
 e12 = e1 ^ e2
 assertEqual(e12.w, 0)
-assertEqual(e12.x, 1)
+assertEqual(e12.x, 0)
 assertEqual(e12.y, 0)
 assertEqual(e12.z, 0)
-assertEqual(e12.xy, 0)
+assertEqual(e12.xy, 1)
 assertEqual(e12.yz, 0)
 assertEqual(e12.zx, 0)
 assertEqual(e12.xyz, 0)
