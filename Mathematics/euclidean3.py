@@ -88,4 +88,15 @@ assertEqual(mass.yz, 0)
 assertEqual(mass.zx, 0)
 assertEqual(mass.xyz, 0)
 
+# There is a shortcut for constructing a scalar quantity.
+mass = Euclidean3(23, 0, 0, 0, 0, 0, 0, 0)
+assertEqual(mass.w, 23)
+assertEqual(mass.x, 0)
+assertEqual(mass.y, 0)
+assertEqual(mass.z, 0)
+assertEqual(mass.xy, 0)
+assertEqual(mass.yz, 0)
+assertEqual(mass.zx, 0)
+assertEqual(mass.xyz, 0)
+
 print "I hope you enjoyed the tour of Euclidean3!"
