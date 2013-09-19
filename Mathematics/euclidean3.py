@@ -300,5 +300,10 @@ assertEqual(e23 * I, -e1)
 assertEqual(e31 * I, -e2)
 assertEqual(I * I, -one)
 
+# We've been assuming the geometric product all along using the standard Python operator for multiplication.
+
+# There's also the left- and right-contraction which are represented by the Python bitshift operators << and >>.
+assertEqual(e1 << e12, e2)
+
 
 print "I hope you enjoyed the tour of Euclidean3!"
