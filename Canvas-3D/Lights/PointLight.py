@@ -24,7 +24,7 @@ mesh = Mesh(CubeGeometry(5, 5, 5), material)
 
 scene.add(mesh)
 
-movement = Vector3(0.02, 0.02, 0.02)
+movement = VectorE3(0.02, 0.02, 0.02)
 
 def discardCanvases():
     for canvas in document.getElementsByTagName("canvas"):
