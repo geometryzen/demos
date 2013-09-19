@@ -6,9 +6,6 @@ from browser import *
 
 space = CartesianSpace()
 
-# TODO: This doesn't quite work when the axis is nearly anti-parrallel to e3.
-# The correct solution is not to supply an axis. but instead to supply an attitude.
-# The type of this parameter will be a Quaternion or Euclidean3 rotor (as appropriate).
 shape = ArrowBuilder().color(0xFFFF00).build()
 space.add(shape)
 
