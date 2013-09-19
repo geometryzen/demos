@@ -94,7 +94,7 @@ assertEqual(mass.xyz, 0)
 
 # There is a shortcut for constructing a scalar quantity - ScalarE3
 one = ScalarE3(1)
-assertEqual(one.w, 23)
+assertEqual(one.w, 1)
 assertEqual(one.x, 0)
 assertEqual(one.y, 0)
 assertEqual(one.z, 0)
@@ -102,5 +102,6 @@ assertEqual(one.xy, 0)
 assertEqual(one.yz, 0)
 assertEqual(one.zx, 0)
 assertEqual(one.xyz, 0)
+assertEqual(False, one.mutable)
 
 print "I hope you enjoyed the tour of Euclidean3!"
