@@ -5,7 +5,7 @@
 # However, mutability is generally not desirable and so a mutable latch is provided to prevent mutation.
 # It should be obvious from the context whether a quantity is expected to be constant.
 from e3ga import *
-from math import exp, pi
+from math import exp, cos, sin, pi
 
 # The following functions are provided for testing purposes.
 def assertEqual(actual, expect):
@@ -215,7 +215,7 @@ assertFalse(e12 * e12 == -1)
 # Bivectors, like e12, that square to -1 are the generators of rotations.
 # A rotor can be constructed from normalized bivector using the exponential function.
 R = exp(-e12 * pi / 2)
-assertEqual(R.w, 0)
+assertEqual(R.w, cos(pi / 2))
 assertEqual(R.x, 0)
 assertEqual(R.y, 0)
 assertEqual(R.z, 0)
