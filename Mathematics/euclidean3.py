@@ -217,6 +217,7 @@ assertEqual(e23.yz, 1)
 assertEqual(e23.zx, 0)
 assertEqual(e23.xyz, 0)
 assertEqual(False, e23.mutable)
+e31 = (e3 ^ e1).constantify()
 
 assertEqual("ij", str(e12))
 # We can create the same bivector directly from it's components.
@@ -290,7 +291,7 @@ assertEqual(I * one, one * I)
 assertEqual(I * e1, e1 * I)
 assertEqual(I * e12, e12 * I)
 # It can be use to compute the Hodge dual.
-assertEqual(e1 * I, e12)
+assertEqual(e1 * I, e23)
 
 
 print "I hope you enjoyed the tour of Euclidean3!"
