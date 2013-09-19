@@ -24,7 +24,7 @@ scene.add(mesh)
 
 progressEnd = 10000
 
-movement = Vector3(0.02, 0.02, 0.02)
+movement = VectorE3(0.02, 0.02, 0.02)
 
 workbench = Workbench(renderer, camera)
 
