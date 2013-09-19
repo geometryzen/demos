@@ -28,6 +28,12 @@ def showValue(name, m):
     print name + " => " + str(m)
     return m
 
+def isCloseTo(actual, expect):
+    epsilon = 1e-10
+    error = actual - expect
+    quadrance = error % error
+    return sqrt(quadrance[0]) < epsilon
+
 # Euclidean3 forms a Linear or Vector Space of 2**3=8 dimensions.
 a = Euclidean3(1, 2, 3, 4, 5, 6, 7, 8)
 assertEqual(a.w, 1)
