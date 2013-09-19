@@ -16,8 +16,6 @@ segments = 12
 radiusShaft = 0.01
 radiusCone = 0.08
 lengthCone = 0.2
-# TODO: This will be fixed soon. Tue Sep 17, Sep 18...
-axis = Vector3(0, 0, 1)
 arrow = ArrowGeometry(length)
 arrow.name = 'Foo'
 
@@ -30,7 +28,7 @@ material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3})
 mesh = Mesh(arrow, material)
 scene.add(mesh)
 
-movement = 0.02 * Vector3(1, 1, 1)
+movement = 0.02 * VectorE3(1, 1, 1)
 
 workbench = Workbench(renderer, camera)
 
