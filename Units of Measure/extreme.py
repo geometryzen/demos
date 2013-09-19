@@ -1,4 +1,3 @@
-# Work In Progress
 from e3ga import *
 from units import *
  
