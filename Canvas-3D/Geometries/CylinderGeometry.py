@@ -38,7 +38,7 @@ except AttributeError as e:
 mesh = Mesh(cylinder, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3}))
 scene.add(mesh)
 
-movement = Vector3(0.02, 0.02, 0.02)
+movement = VectorE3(0.02, 0.02, 0.02)
 
 workbench = Workbench(renderer, camera)
 
