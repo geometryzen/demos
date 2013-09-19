@@ -36,11 +36,11 @@ yloMesh = Mesh(yloGeom, yloWire)
 # lookAt is an alternate way of performing a rotation.
 # lookAt aligns the arrow with the specified vector.
 # It depends on the position of the arrow.
-redMesh.lookAt(Vector3(1,0,0))
-grnMesh.lookAt(Vector3(0,1,0))
+redMesh.lookAt(VectorE3(1,0,0))
+grnMesh.lookAt(VectorE3(0,1,0))
 grnMesh.visible = True
-yloMesh.lookAt(Vector3(1,0,0))
-yloMesh.position = Vector3(0,1,1)
+yloMesh.lookAt(VectorE3(1,0,0))
+yloMesh.position = VectorE3(0,1,1)
 
 print "position   => " + str(bluMesh.position)
 print "rotation   => " + str(bluMesh.rotation)
