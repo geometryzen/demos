@@ -159,6 +159,6 @@ assertEqual(False, e1.mutable)
 assertEqual("i", str(e1))
 assertEqual("j", str(e2))
 assertEqual("k", str(e3))
-assertEqual("", str(VectorE3(2, 3, 5)))
+assertEqual("2*i+3*j+5*k", str(VectorE3(2, 3, 5)))
 
 print "I hope you enjoyed the tour of Euclidean3!"
