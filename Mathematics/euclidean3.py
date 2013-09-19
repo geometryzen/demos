@@ -198,7 +198,6 @@ assertEqual(e12, BivectorE3(1, 0, 0))
 assertEqual(repr(e12), "BivectorE3(1, 0, 0)")
 
 # Pure bivectors, like e12, that square to -1 are the generators of rotations.
-print repr(e12 * e12)
-
+assertEqual(e12 * e12, ScalarE3(1))
 
 print "I hope you enjoyed the tour of Euclidean3!"
