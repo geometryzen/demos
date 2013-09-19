@@ -17,7 +17,7 @@ workbench = Workbench(space.renderer, space.camera)
 timeOut = 6000
 
 def onDocumentKeyDown(event):
-    global timeout
+    global timeOut
     if event.keyCode == 27:
         timeOut = 0
 
