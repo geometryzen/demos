@@ -213,13 +213,15 @@ assertFalse(e12 * e12 == -1.0)
 assertFalse(e12 * e12 == -1)
 
 # Bivectors, like e12, that square to -1 are the generators of rotations.
-# A rotor can be constructed from normalized bivector using the exponential function.
-R = exp(-e12 * pi / 4)
-assertEqual(R.w, cos(pi / 4))
+# A rotor can be constructed from a normalized bivector using the exponential function.
+# Notice how a rotation through theta is expressed as a half-angle in the rotor, R
+theta = pi / 2
+R = exp(-e12 * theta / 2)
+assertEqual(R.w, cos(theta / 2))
 assertEqual(R.x, 0)
 assertEqual(R.y, 0)
 assertEqual(R.z, 0)
-assertEqual(R.xy, 1)
+assertEqual(R.xy, -sin(theta / 2))
 assertEqual(R.yz, 0)
 assertEqual(R.zx, 0)
 assertEqual(R.xyz, 0)
