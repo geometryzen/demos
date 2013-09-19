@@ -7,3 +7,4 @@ from three import *
 
 # Most of the time, you will want to construct scalars, vectors or rotors.
 mass = Euclidean3(1, 0, 0, 0, 0, 0, 0, 0)
+print mass
