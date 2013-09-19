@@ -93,7 +93,7 @@ assertEqual(mass.zx, 0)
 assertEqual(mass.xyz, 0)
 assertEqual(True, mass.mutable)
 
-# There is a shortcut for constructing a scalar quantity - ScalarE3(value [,mutable]}
+# There is a handy abbreviation for constructing a scalar quantity - ScalarE3(value [,mutable]}
 mass = ScalarE3(23)
 assertEqual(mass.w, 23)
 assertEqual(mass.x, 0)
@@ -119,6 +119,18 @@ assertEqual(False, one.mutable)
 
 # Constructing a vector, such as a position, involves the x,y,z components of the Euclidean3.
 position = Euclidean3(0, 2, 3, 5, 0, 0, 0, 0)
+assertEqual(position.w, 0)
+assertEqual(position.x, 2)
+assertEqual(position.y, 3)
+assertEqual(position.z, 5)
+assertEqual(position.xy, 0)
+assertEqual(position.yz, 0)
+assertEqual(position.zx, 0)
+assertEqual(position.xyz, 0)
+assertEqual(True, position.mutable)
+
+# There is a handy abbreviation for constructing a vector quantity - VectorE3(x, y, z [,mutable]}
+position = VectorE3(2, 3, 5)
 assertEqual(position.w, 0)
 assertEqual(position.x, 2)
 assertEqual(position.y, 3)
