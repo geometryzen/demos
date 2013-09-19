@@ -61,7 +61,7 @@ assertEqual(a.xyz, 19)
 try:
     a.w = "You can't do this"
 except TypeError as e:
-    assertEqual(str(e),"TypeError: w must be a <type 'float'> or <type 'int'> or <type 'long'> on line 56")
+    assertEqual(str(e),"TypeError: w must be a <type 'float'> or <type 'int'> or <type 'long'> on line 62")
 else:
     print "Expecting error when assigning a non-number to a coordinate."
     
@@ -77,7 +77,7 @@ assertEqual(False, a.mutable)
 try:
     a.w = 1
 except AssertionError as e:
-    assertEqual(str(e),"AssertionError: Quantity is not mutable on line 72")
+    assertEqual(str(e),"AssertionError: Quantity is not mutable on line 78")
 else:
     print "Expecting error when assigning to an immutable Euclidean3."
     
