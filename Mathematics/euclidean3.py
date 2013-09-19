@@ -209,6 +209,7 @@ assertEqual(False, e12.mutable)
 assertEqual("ij", str(e12))
 # We can create the same bivector directly from it's components.
 assertEqual(e12, Euclidean3(0, 0, 0, 0, 1, 0, 0, 0))
+# Again, there is a shorter and more descriptive constructor function.
 assertEqual(e12, BivectorE3(1, 0, 0))
 assertEqual(repr(e12), "BivectorE3(1, 0, 0)")
 
