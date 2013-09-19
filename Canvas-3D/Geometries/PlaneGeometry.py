@@ -29,7 +29,7 @@ requestID = None
 progress = None
 progressEnd = 12000
 startTime =  None
-movement = Vector3(0.02, 0.02, 0.02)
+movement = VectorE3(0.02, 0.02, 0.02)
 
 workbench = Workbench(renderer, camera)
 
