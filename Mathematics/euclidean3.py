@@ -59,6 +59,11 @@ except TypeError as e:
 else:
     print "Expecting error when assigning a non-number to a coordinate."
     
+# You can chain assignments.
+a.w = a.x = 23
+assertEqual(a.w, 23)
+assertEqual(a.x, 23)
+    
 # You can make a Euclidean3 immutable by setting the mutable latch to False.
 a.constantify()
 assertEqual(False, a.mutable)
