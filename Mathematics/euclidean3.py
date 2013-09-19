@@ -252,5 +252,6 @@ rotated = R * e1 * ~R
 error = rotated - e2
 print repr(error)
 quadrance = error % error
+print repr(quadrance)
 
 print "I hope you enjoyed the tour of Euclidean3!"
