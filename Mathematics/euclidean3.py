@@ -274,7 +274,9 @@ assertEqual(e1 * e2 * e3, I)
 # I squares to -1
 assertEqual(I * I, ScalarE3(-1))
 # It commutes with other elements.
+assertEqual(I * one, one * I)
 assertEqual(I * e1, e1 * I)
+assertEqual(I * e12, e12 * I)
 
 
 print "I hope you enjoyed the tour of Euclidean3!"
