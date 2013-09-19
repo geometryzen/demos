@@ -307,6 +307,7 @@ b = VectorE3(7,11,13)
 assertEqual(a * b, (a % b) + (a ^ b))
 # Notice the need for parenthesis because of Python precedence rules.
 assertEqual(a * b, a % b + (a ^ b))
+# This is what Python does without the parenthesis.
 assertEqual(((a % b) + a) ^ b, a % b + a ^ b)
 
 # There's also the left- and right-contraction which are represented by the Python bitshift operators << and >>.
