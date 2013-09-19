@@ -3,12 +3,20 @@
 # It is also part of the three module where it unifies the Vector3 and Quaternion numbers.
 from three import *
 
-# The following function is provided for testing purposes.
+# The following functions are provided for testing purposes.
 def assertEqual(actual, expect):
     if expect == actual:
         pass
     else:
         print {"actual": actual, "expect": expect}
+
+def explain(m):
+    print str(m) + " is " + repr(m)
+    return m
+
+def showValue(name, m):
+    print name + " => " + str(m)
+    return m
 
 # Euclidean3 forms a Linear or Vector Space of 2**3=8 dimensions.
 
