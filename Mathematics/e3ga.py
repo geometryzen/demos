@@ -11,13 +11,13 @@ def showValue(name, m):
 
 zero = explain(Euclidean3(0, 0, 0, 0, 0, 0, 0, 0, False))
 one  = explain(ScalarE3(1, False))
-two  = explain(ScalarE3(2).constantify())
+two  = explain(ScalarE3(2, False))
 e1   = explain(VectorE3(1, 0, 0, False))
 e2   = explain(VectorE3(0, 1, 0, False))
-e3   = explain(VectorE3(0, 0, 1).constantify())
+e3   = explain(VectorE3(0, 0, 1, False))
 e12  = explain(BivectorE3(1, 0, 0, False))
-e23  = explain(BivectorE3(0, 1, 0, True))
-e31  = explain(BivectorE3(0, 0, 1))
+e23  = explain(BivectorE3(0, 1, 0, False))
+e31  = explain(BivectorE3(0, 0, 1, False))
 I    = explain(PseudoscalarE3(1))
 
 blades = [zero, one, two, e1, e2, e3, e12, e23, e31, I]
