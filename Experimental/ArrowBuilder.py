@@ -9,13 +9,8 @@ from math import exp, pi
 
 space = CartesianSpace()
 
-# TODO: This doesn't quite work when the axis is nearly anti-parrallel to e3.
-# The correct solution is not to supply an axis. but instead to supply an attitude.
-# The type of this parameter will be a Quaternion or Euclidean3 rotor (as appropriate).
-rotor = exp(-BivectorE3(0,0,1)*pi/4)
-print rotor
-builder = ArrowBuilder().color(0xFFFF00).axis(Vector3(1,0,0).normalize())
-shape = builder.build()
+# Specify an attitude as the rotor that rotates e3(k) onto e1(i)
+shape = ArrowBuilder().color(0xFFFF00).attitude(exp(-BivectorE3(0,0,1)*pi/4)).build()
 space.add(shape)
 
 workbench = Workbench(space.renderer, space.camera)
