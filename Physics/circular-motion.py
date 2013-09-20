@@ -35,10 +35,8 @@ def setUp():
 
 def tick(elapsed):
     t = ScalarE3(elapsed) * milli
-    angle = omega * t / 2
-    R = exp(-angle)
-    position = (R * (4 * i) * ~R)
-    shape.position = position
+    R = exp(-omega * t / 2)
+    shape.position = (R * (4 * i) * ~R)
     shape.attitude = R
     space.render()
     
