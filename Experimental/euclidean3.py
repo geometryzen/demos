@@ -1,5 +1,6 @@
 # euclidean3.py
-from e3ga import *
+from three import *
 
 e1 = VectorE3(1,0,0)
 print e1
+print e1.vector
