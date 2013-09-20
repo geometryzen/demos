@@ -35,7 +35,7 @@ def setUp():
     space.add(e3)
     
     space.camera.position.set(2,2,2)
-    space.camera.lookAt(Vector3(0,0,0))
+    space.camera.lookAt(VectorE3(0,0,0))
 
     document.addEventListener("keydown", onDocumentKeyDown, False)
 
