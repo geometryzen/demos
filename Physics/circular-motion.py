@@ -44,7 +44,7 @@ def tick(elapsed):
     shape.position.set(position.x, position.y, position.z)
     # To convert a Euclidean3 rotor to a Quaternion, use the 'dual' parts with a sign change.
     # The quaternion property of the mesh is what we would call the attitude - a spinor.
-    print repr(R.quantity)
+    print repr(R.quantity.vector)
 #   shape.attitude = R.quantity
 #    shape.quaternion.set(-R.quantity.yz, -R.quantity.zx, -R.quantity.xy, R.quantity.w)
     space.render()
