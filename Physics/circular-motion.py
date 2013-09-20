@@ -17,9 +17,9 @@ k = VectorE3(0, 0, 1)
 
 # The geometric angular velocity quantity.
 # The angular velocity describes a motion of one revolution every 12 seconds in the x-y plane, counterclockwise.
-omega = 2 * pi * i * j / 12
+omega = 2 * pi * i * j / 6
 
-timeOut = 12
+timeOut = 6
 
 workbench = Workbench(space.renderer, space.camera)
 
