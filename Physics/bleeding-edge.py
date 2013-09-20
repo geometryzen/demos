@@ -1,27 +1,45 @@
 '''
 This program may not work for you because I am working on it right now!
 '''
+from three import *
 from geometry import *
 from browser import *
+from math import pi, exp
 
 space = CartesianSpace()
+timeOut = 10
 
-shape = ArrowBuilder().color(0xFFFF00).build()
-space.add(shape)
+e1 = ArrowBuilder().color(0xFF0000).attitude(exp(-BivectorE3(0, 0,+1)*pi/4)).build()
+e2 = ArrowBuilder().color(0x00FF00).attitude(exp(-BivectorE3(0,-1, 0)*pi/4)).build()
+e3 = ArrowBuilder().color(0x0000FF).attitude(exp(-BivectorE3(0, 0, 0)*pi/4)).build()
 
 workbench = Workbench(space.renderer, space.camera)
 
-timeOut = 3
-
-def onDocumentKeyDown(event):
+def escKey(event, downFlag):
+    event.preventDefault()
     global timeOut
-    if event.keyCode == 27:
-        timeOut = 0
+    timeOut = 0
+
+keyHandlers = {
+ 27: escKey
+}
+    
+def onDocumentKeyDown(event):
+    try:
+        keyHandlers[event.keyCode](event, True)
+    except:
+        pass
 
 def setUp():
-    space.camera.position.set(1.5, 1.5, 1.5)
-    space.camera.lookAt(space.origin)
     workbench.setUp()
+
+    space.add(e1)
+    space.add(e2)
+    space.add(e3)
+    
+    space.camera.position.set(2,2,2)
+    space.camera.lookAt(VectorE3(0,0,0))
+
     document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(t):
@@ -33,5 +51,5 @@ def terminate(t):
 def tearDown():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench.tearDown()
-    
+
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
