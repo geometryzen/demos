@@ -54,7 +54,7 @@ def discardCanvases():
     for cs in document.getElementsByTagName("canvas"):
         cs.parentNode.removeChild(cs)
         
-progressEnd = 3000
+progressEnd = 3
 step = 0
 steps = 50
 addAngle = 2 * pi / steps
@@ -62,7 +62,7 @@ addScale = 1.0 / steps
 
 def setUp():
     print "Press ESC to terminate."
-    print "This program will 'self-terminate' in "+str(progressEnd/1000)+" seconds!"
+    print "This program will 'self-terminate' in "+str(progressEnd)+" seconds!"
     discardCanvases()
     if useLargeCanvas:
         document.body.insertBefore(canvas, document.body.firstChild)
@@ -75,7 +75,7 @@ def setUp():
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
 
-def tick(elapsed):
+def tick(t):
     global step
     if step < steps:
         step += 1
@@ -87,8 +87,8 @@ def tick(elapsed):
     context.fillText("Geometry Zen", 0, 0)
     context.restore()
 
-def terminate(elapsed):
-    return elapsed > progressEnd
+def terminate(t):
+    return t > progressEnd
     
 def tearDown():
     discardCanvases()
@@ -97,4 +97,4 @@ def tearDown():
     window.removeEventListener("resize", onWindowResize, False)
     print "Done."
 
-WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
