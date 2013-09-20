@@ -10,7 +10,7 @@ timeOut = 12
 
 space = CartesianSpace()
 
-shape = ConeBuilder().color(0xFFFF00).build()#.scale(1).axis(Vector3(1,0,0)).build()
+shape = ConeBuilder().color(0xFFFF00).build()
 space.add(shape)
 
 i = VectorE3(1, 0, 0)
