@@ -5,7 +5,6 @@ from geometry import *
 from e3ga import *
 from browser import *
 from math import pi, exp
-from units import *
 
 space = CartesianSpace()
 
@@ -19,9 +18,9 @@ k = VectorE3(0, 0, 1)
 
 # The geometric angular velocity measure (quantity with unit-of-measure).
 # The angular velocity describes a motion of one revolution every 12 seconds in the x-y plane, counterclockwise.
-omega = 2 * pi * i * j / (12 * second)
+omega = 2 * pi * i * j / 12
 
-timeOut = 12 * kilo# * milli * second
+timeOut = 12 * kilo
 
 workbench = Workbench(space.renderer, space.camera)
 
@@ -35,12 +34,12 @@ def setUp():
     document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(elapsed):
-    t = ScalarE3(elapsed) * milli * second
+    t = ScalarE3(elapsed) * milli
     angle = omega * t / 2
     R = exp(-angle)
-    position = (R * (4 * i * meter) * ~R).quantity
+    position = (R * (4 * i * meter) * ~R)
     shape.position = position
-    shape.attitude = R.quantity
+    shape.attitude = R
     space.render()
     
 def terminate(elapsed):
