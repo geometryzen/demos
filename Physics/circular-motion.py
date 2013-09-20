@@ -17,7 +17,6 @@ print shape.attitude
 i = VectorE3(1, 0, 0)
 j = VectorE3(0, 1, 0)
 k = VectorE3(0, 0, 1)
-print k.vector
 
 # The geometric angular velocity measure (quantity with unit-of-measure).
 # The angular velocity describes a motion of one revolution every 12 seconds in the x-y plane, counterclockwise.
