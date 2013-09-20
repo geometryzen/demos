@@ -20,7 +20,7 @@ k = VectorE3(0, 0, 1)
 # The angular velocity describes a motion of one revolution every 12 seconds in the x-y plane, counterclockwise.
 omega = 2 * pi * i * j / 12
 
-timeOut = 12 * kilo
+timeOut = 12
 
 workbench = Workbench(space.renderer, space.camera)
 
@@ -33,8 +33,7 @@ def setUp():
     workbench.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
 
-def tick(elapsed):
-    t = elapsed / kilo
+def tick(t):
     R = exp(-omega * t / 2)
     shape.position = R * (4 * i) * ~R
     shape.attitude = R
@@ -47,4 +46,4 @@ def tearDown():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench.tearDown()
 
-WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
