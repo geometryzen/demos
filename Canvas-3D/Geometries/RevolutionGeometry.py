@@ -27,11 +27,11 @@ space.add(mesh)
 
 workbench = Workbench(space.renderer, space.camera)
 
-def tick(elapsed):
+def tick(t):
     space.render()
     
-def terminate(elapsed):
-    return elapsed > 6000
+def terminate(t):
+    return t > 6
 
 def setUp():
     workbench.setUp()
@@ -41,4 +41,4 @@ def setUp():
 def tearDown():
     workbench.tearDown()
 
-WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
