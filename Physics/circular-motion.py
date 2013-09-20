@@ -39,8 +39,7 @@ def tick(elapsed):
     angle = omega * t / 2
     R = exp(-angle)
     position = (R * (4 * i * meter) * ~R).quantity
-    # TODO: When Euclidean3 has been consolidated with Vector3 and Quaternion, this will be much easier.
-    shape.position.set(position.x, position.y, position.z)
+    shape.position = position
     shape.attitude = R.quantity
     space.render()
     
