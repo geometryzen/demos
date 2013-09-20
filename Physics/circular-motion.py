@@ -12,6 +12,7 @@ space = CartesianSpace()
 # TODO: This will be simplified by consolidating Euclidean3 and Vector3, Quaternion.
 shape = ConeBuilder().color(0xFFFF00).build()#.scale(1).axis(Vector3(1,0,0)).build()
 space.add(shape)
+print shape.quaternion
 
 i = VectorE3(1, 0, 0)
 j = VectorE3(0, 1, 0)
@@ -43,6 +44,7 @@ def tick(elapsed):
     shape.position.set(position.x, position.y, position.z)
     # To convert a Euclidean3 rotor to a Quaternion, use the 'dual' parts with a sign change.
     # The quaternion property of the mesh is what we would call the attitude - a spinor.
+    shape.attitude = R
     shape.quaternion.set(-R.quantity.yz, -R.quantity.zx, -R.quantity.xy, R.quantity.w)
     space.render()
     
