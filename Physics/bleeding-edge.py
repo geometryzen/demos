@@ -11,7 +11,7 @@ space.add(shape)
 
 workbench = Workbench(space.renderer, space.camera)
 
-timeOut = 6
+timeOut = 3
 
 def onDocumentKeyDown(event):
     global timeOut
