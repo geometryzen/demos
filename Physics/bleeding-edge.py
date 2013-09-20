@@ -11,7 +11,7 @@ space.add(shape)
 
 workbench = Workbench(space.renderer, space.camera)
 
-timeOut = 6000
+timeOut = 6
 
 def onDocumentKeyDown(event):
     global timeOut
@@ -24,14 +24,14 @@ def setUp():
     workbench.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
 
-def tick(elapsed):
+def tick(t):
     space.render()
     
-def terminate(elapsed):
-    return elapsed > timeOut
+def terminate(t):
+    return t > timeOut
 
 def tearDown():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench.tearDown()
     
-WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
