@@ -60,20 +60,20 @@ directionalLight = DirectionalLight(0x888888)
 directionalLight.position.set(0, 1, 0)
 scene.add(directionalLight)
 
-progressEnd = 6000
+progressEnd = 6
 
 workbench = Workbench(renderer, camera)
 
 def setUp():
     workbench.setUp()
 
-def tick(elapsed):
+def tick(t):
     renderer.render(scene, camera)
     
-def terminate(elapsed):
-    return elapsed > progressEnd
+def terminate(t):
+    return t > progressEnd
 
 def tearDown():
     workbench.tearDown()
 
-WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
