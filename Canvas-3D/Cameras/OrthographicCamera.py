@@ -15,7 +15,7 @@ renderer = WebGLRenderer({"antialias": True})
 renderer.setClearColor(Color(0xFFFFFF), 1.0)
 scene = Scene()
 view = document.getElementById("view")
-progressEnd = 6000
+progressEnd = 5
 
 def onWindowResize(event):
     if (useLargeCanvas):
