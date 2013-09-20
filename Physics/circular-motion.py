@@ -24,7 +24,7 @@ omega = 2 * pi * i * j / timeOut
 workbench = Workbench(space.renderer, space.camera)
 
 def onDocumentKeyDown(event):
-    global timeout
+    global timeOut
     if event.keyCode == 27:
         timeOut = 0
 
