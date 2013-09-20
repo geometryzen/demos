@@ -17,8 +17,6 @@ print icosa
 mesh = Mesh(icosa, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 2}))
 space.add(mesh)
 
-progressEnd = 10000
-
 movement = VectorE3(0.02, 0.02, 0.02)
 
 workbench = Workbench(space.renderer, space.camera)
@@ -26,14 +24,14 @@ workbench = Workbench(space.renderer, space.camera)
 def setUp():
     workbench.setUp();
 
-def tick(elapsed):
+def tick(t):
     mesh.rotation += movement
     space.render()
     
-def terminate(elapsed):
-    return elapsed > progressEnd
+def terminate(t):
+    return t > 5
 
 def tearDown():
     workbench.tearDown();
 
-WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
