@@ -17,6 +17,7 @@ print shape.attitude
 i = VectorE3(1, 0, 0)
 j = VectorE3(0, 1, 0)
 k = VectorE3(0, 0, 1)
+print k.vector
 
 # The geometric angular velocity measure (quantity with unit-of-measure).
 # The angular velocity describes a motion of one revolution every 12 seconds in the x-y plane, counterclockwise.
@@ -44,7 +45,6 @@ def tick(elapsed):
     shape.position.set(position.x, position.y, position.z)
     # To convert a Euclidean3 rotor to a Quaternion, use the 'dual' parts with a sign change.
     # The quaternion property of the mesh is what we would call the attitude - a spinor.
-    print R.quantity.vector
 #   shape.attitude = R.quantity
 #    shape.quaternion.set(-R.quantity.yz, -R.quantity.zx, -R.quantity.xy, R.quantity.w)
     space.render()
