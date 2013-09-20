@@ -13,7 +13,7 @@ space.add(CubeBuilder().color(0x0000FF).volume(1).build().translateX(2.5).transl
 space.add(SphereBuilder().color(0xFF0000).volume(1).build().translateX(+2.5).translateY(-2.5))
 space.add(ConeBuilder().color(0xFFFF00).volume(1).build().translateX(-2.5).translateY(+2.5))
 
-timeOut = 3
+timeOut = 6
 
 workbench = Workbench(space.renderer, space.camera)
 
