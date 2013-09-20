@@ -16,13 +16,12 @@ space.add(ConeBuilder().build().translateX(-2.5).translateY(+2.5))
 
 timeout = 3
 
+workbench = Workbench(space.renderer, space.camera)
+
 def onDocumentKeyDown(event):
     global timeout
     if event.keyCode == 27:
         timeout = 0
-
-def onWindowResize(event):
-    space.viewSize(window.innerWidth, window.innerHeight)
 
 def tick(t):
     space.render()
@@ -32,15 +31,11 @@ def terminate(t):
 
 def setUp():
     print "Press Esc to exit"
-    document.removeElementsByTagName("canvas")
-    document.body.insertBefore(space.renderer.domElement, document.body.firstChild)
+    workbench.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
-    window.addEventListener("resize", onWindowResize, False)
-    onWindowResize(None)
 
 def tearDown():
-    window.removeEventListener("resize", onWindowResize, False)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
-    document.removeElementsByTagName("canvas")
+    workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
