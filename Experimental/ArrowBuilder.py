@@ -21,13 +21,13 @@ def setUp():
     space.camera.lookAt(space.origin)
     workbench.setUp()
 
-def tick(elapsed):
+def tick(t):
     space.render()
     
-def terminate(elapsed):
-    return elapsed > 5000
+def terminate(t):
+    return t > 5
 
 def tearDown():
     workbench.tearDown()
     
-WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
