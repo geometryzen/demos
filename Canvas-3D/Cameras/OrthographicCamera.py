@@ -1,7 +1,6 @@
 from three import *
 from browser import *
 from math import cos, sin, floor
-from time import time
 from random import random
 
 useLargeCanvas = True
@@ -103,8 +102,8 @@ def setUp():
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize(None)
 
-def tick(elapsed):
-    theta = time() * 0.1
+def tick(t):
+    theta = t * 0.1
     
     camera.position.x = cos(theta) * 200
     camera.position.z = sin(theta) * 200
@@ -112,11 +111,11 @@ def tick(elapsed):
     
     renderer.render(scene, camera)
 
-def terminate(elapsed):
-    return elapsed > progressEnd
+def terminate(t):
+    return t > progressEnd
 
 def tearDown():
     discardCanvases()
     print "Goodbye!"
 
-WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
