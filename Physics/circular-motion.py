@@ -12,7 +12,7 @@ space = CartesianSpace()
 # TODO: This will be simplified by consolidating Euclidean3 and Vector3, Quaternion.
 shape = ConeBuilder().color(0xFFFF00).build()#.scale(1).axis(Vector3(1,0,0)).build()
 space.add(shape)
-print shape.quaternion
+print shape.attitude
 
 i = VectorE3(1, 0, 0)
 j = VectorE3(0, 1, 0)
