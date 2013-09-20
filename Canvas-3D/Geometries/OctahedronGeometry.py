@@ -29,14 +29,14 @@ workbench = Workbench(renderer, camera)
 def setUp():
     workbench.setUp()
 
-def tick(elapsed):
+def tick(t):
     mesh.rotation += movement    
     renderer.render(scene, camera)
     
-def terminate(elapsed):
-    return elapsed > 6000
+def terminate(t):
+    return t > 6
 
 def tearDown():
     workbench.tearDown()
 
-WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
