@@ -14,7 +14,7 @@ space.add(CubeBuilder().build().translateX(2.5).translateY(2.5))
 space.add(SphereBuilder().build().translateX(+2.5).translateY(-2.5))
 space.add(ConeBuilder().build().translateX(-2.5).translateY(+2.5))
 
-timeout = 6000
+timeout = 3
 
 def onDocumentKeyDown(event):
     global timeout
@@ -24,11 +24,11 @@ def onDocumentKeyDown(event):
 def onWindowResize(event):
     space.viewSize(window.innerWidth, window.innerHeight)
 
-def tick(elapsed):
+def tick(t):
     space.render()
     
-def terminate(elapsed):
-    return elapsed > timeout
+def terminate(t):
+    return t > timeout
 
 def setUp():
     print "Press Esc to exit"
@@ -43,4 +43,4 @@ def tearDown():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeElementsByTagName("canvas")
 
-WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
