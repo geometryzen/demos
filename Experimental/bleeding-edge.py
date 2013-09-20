@@ -1,7 +1,7 @@
 from three import *
 from geometry import *
 from browser import *
-from math import pi
+from math import pi, exp
 
 space = CartesianSpace()
 timeOut = 5
