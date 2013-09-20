@@ -13,9 +13,9 @@ space = CartesianSpace()
 shape = ConeBuilder().color(0xFFFF00).build()#.scale(1).axis(Vector3(1,0,0)).build()
 space.add(shape)
 
-i = VectorE3(1, 0, 0)
-j = VectorE3(0, 1, 0)
-k = VectorE3(0, 0, 1)
+i = VectorE3(1, 0, 0, False)
+j = VectorE3(0, 1, 0, False)
+k = VectorE3(0, 0, 1, False)
 
 # The geometric angular velocity quantity.
 # The angular velocity describes a motion of one revolution every timeOut seconds in the x-y plane, counterclockwise.
