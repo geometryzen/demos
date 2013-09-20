@@ -4,7 +4,7 @@ from browser import *
 
 space = CartesianSpace()
 
-radius = 1
+radius = 2
 detail = 0 # Must be an integer: 0,1,2,...
 
 icosa = IcosahedronGeometry(radius, detail)
