@@ -26,7 +26,7 @@ def tick(t):
     space.render()
     
 def terminate(t):
-    return t > timeout
+    return t > timeOut
 
 def setUp():
     workbench.setUp()
