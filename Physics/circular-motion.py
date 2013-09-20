@@ -34,8 +34,7 @@ def setUp():
     document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(elapsed):
-    t = elapsed * milli
-    R = exp(-omega * t / 2)
+    R = exp(-omega * (elapsed / kilo) / 2)
     shape.position = (R * (4 * i) * ~R)
     shape.attitude = R
     space.render()
