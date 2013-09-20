@@ -140,7 +140,7 @@ addAxes(scene)
 addMainGrid(scene, 60)
 addFadingGrid(scene, 60, 50)
 
-progressEnd = 6000
+progressEnd = 6
 
 lastCameraPosition = VectorE3(0,0,0)
 distance = 1000
@@ -154,7 +154,7 @@ workbench = Workbench(renderer, camera)
 def setUp():
     workbench.setUp()
     
-def tick(elapsed):
+def tick(t):
     global distance, polarAngle, azimuthAngle
     azimuthAngle += (target["azimuthAngle"] - azimuthAngle) * 0.2
     polarAngle += (target["polarAngle"] - polarAngle) * 0.3
@@ -180,10 +180,10 @@ def tick(elapsed):
 
     renderer.render(scene, camera)
 
-def terminate(elapsed):
-    return elapsed > progressEnd
+def terminate(t):
+    return t > progressEnd
 
 def tearDown():
     workbench.tearDown()
     
-WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
