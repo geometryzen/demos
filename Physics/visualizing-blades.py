@@ -13,20 +13,20 @@ space.add(CubeBuilder().color(0x0000FF).volume(1).build().translateX(2.5).transl
 space.add(SphereBuilder().color(0xFF0000).volume(1).build().translateX(+2.5).translateY(-2.5))
 space.add(ConeBuilder().color(0xFFFF00).volume(1).build().translateX(-2.5).translateY(+2.5))
 
-timeout = 6000
+timeOut = 3
 
 workbench = Workbench(space.renderer, space.camera)
 
 def onDocumentKeyDown(event):
-    global timeout
+    global timeOut
     if event.keyCode == 27:
-        timeout = 0
+        timeOut = 0
 
-def tick(elapsed):
+def tick(t):
     space.render()
     
-def terminate(elapsed):
-    return elapsed > timeout
+def terminate(t):
+    return t > timeout
 
 def setUp():
     workbench.setUp()
@@ -36,4 +36,4 @@ def tearDown():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench.tearDown()
 
-WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
