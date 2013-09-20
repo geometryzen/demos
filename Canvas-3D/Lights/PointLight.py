@@ -41,16 +41,16 @@ def setUp():
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize(None)
     
-def tick(elapsed):
+def tick(t):
     mesh.rotation += movement
     renderer.render(scene, camera)
     
-def terminate(elapsed):
-    return elapsed > 6000
+def terminate(t):
+    return t > 6
 
 def tearDown():
     discardCanvases()
     window.removeEventListener("resize", onWindowResize, False)
     print "Goodbye!"
 
-WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
