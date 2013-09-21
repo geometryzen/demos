@@ -75,14 +75,16 @@ def onWindowResize():
         
 timeOut = 10
 
-workbench = Workbench(renderer, camera)
+workbench2D = Workbench2D(graph)
+workbench3D = Workbench(renderer, camera)
 
 def setUp():
     print "Hello!"
     print "This program is a demonstration of mixing the HTML5 2d and WebGL 3D Canvases."        
     print "Press ESC to terminate, Arrow keys to move the 3D cube Left, Right, Forward, Backward."
     print "This program will 'self-terminate' in "+str(timeOut)+" seconds!"
-    workbench.setUp()
+    workbench2D.setUp()
+    workbench3D.setUp()
     document.body.insertBefore(graph, document.body.firstChild)
 
     mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
@@ -138,7 +140,8 @@ def terminate(t):
 def tearDown():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
-    workbench.tearDown()
+    workbench2D.tearDown()
+    workbench3D.tearDown()
     print "Goodbye."
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
