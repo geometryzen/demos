@@ -24,22 +24,27 @@ graph.style.left = "0px"
 context = graph.getContext("2d")
 
 def escKey(downFlag):
+    event.preventDefault()
     global timeOut
     timeOut = 0
 
 def leftArrowKey(downFlag):
+    event.preventDefault()
     global moveLeft
     moveLeft = downFlag
 
 def upArrowKey(downFlag):
+    event.preventDefault()
     global moveForward
     moveForward = downFlag
     
 def rightArrowKey(downFlag):
+    event.preventDefault()
     global moveRight
     moveRight = downFlag
 
 def downArrowKey(downFlag):
+    event.preventDefault()
     global moveBackward
     moveBackward = downFlag
 
@@ -52,18 +57,22 @@ keyHandlers = {
 }
     
 def onDocumentKeyDown(event):
-    event.preventDefault()
-    keyHandlers[event.keyCode](True)
+    try:
+        keyHandlers[event.keyCode](True, event)
+    except:
+        pass
 
 def onDocumentKeyUp(event):
-    event.preventDefault()
-    keyHandlers[event.keyCode](False)
+    try:
+        keyHandlers[event.keyCode](False, event)
+    except:
+        pass
 
 def onWindowResize():
     graph.width = window.innerWidth
     graph.height = window.innerHeight
         
-timeOut = 30
+timeOut = 
 
 workbench = Workbench(renderer, camera)
 
