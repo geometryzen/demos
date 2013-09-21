@@ -7,7 +7,7 @@ camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.set(10, 10, 10)
 camera.lookAt(scene.position)
 
-pointLight = PointLight(0xFFFFFF)
+pointLight = PointLight(0xFFFFFF, 1, 100)
 pointLight.position.set(20, 20, 20)
 scene.add(pointLight)
 
