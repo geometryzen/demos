@@ -174,3 +174,4 @@ def terminate():
 
 init()
 animate(None)
+WindowAnimationRunner(tick).start()
