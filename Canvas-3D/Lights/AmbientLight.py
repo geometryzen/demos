@@ -11,6 +11,7 @@ camera.position.set(10, 10, 10)
 camera.lookAt(scene.position)
 
 ambientLight = AmbientLight(0x0000FF)
+ambientLight.color = 0xFFFFFF
 scene.add(ambientLight)
 
 renderer = WebGLRenderer()
