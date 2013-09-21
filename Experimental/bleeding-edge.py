@@ -1,5 +1,5 @@
 '''
-Experiment to combine 2D and 3D graphics to support demos.
+Experiment to combine HTML5 2D and 3D graphics to support demos.
 '''
 from three import *
 from browser import *
@@ -63,7 +63,7 @@ def onWindowResize():
     graph.width = window.innerWidth
     graph.height = window.innerHeight
         
-timeOut = 10
+timeOut = 30
 
 workbench = Workbench(renderer, camera)
 
