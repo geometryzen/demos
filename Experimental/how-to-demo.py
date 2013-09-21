@@ -5,8 +5,8 @@ wb2 = Workbench2D()
 
 def setUp():
     print "Hello"
-    wb2.setUp()
     canvas = document.createElement("canvas")
+    wb2.setUp(canvas)
     canvas.width = 960
     canvas.height = 400
     container = document.getElementById("canvas-container")
