@@ -40,13 +40,13 @@ def setUp():
     ball.y = 100
 
     tween = Tween.get(ball, {"loop": False})
-    tween.to({"x":ball.x,"y":canvas.height - 55, "rotation":-360}, 1500, Ease.bounceOut)
+    tween.to({"x":ball.x,"y":canvas2D.height - 55, "rotation":-360}, 1500, Ease.bounceOut)
     tween.wait(1000)
-    tween.to({"x":canvas.width - 55, "rotation":360}, 2500, Ease.bounceOut)
+    tween.to({"x":canvas2D.width - 55, "rotation":360}, 2500, Ease.bounceOut)
     tween.wait(1000)
-    tween.to({"scaleX":2, "scaleY":2, "x":canvas.width-110, "y":canvas.height-110}, 2500, Ease.bounceOut)
+    tween.to({"scaleX":2, "scaleY":2, "x":canvas2D.width-110, "y":canvas2D.height-110}, 2500, Ease.bounceOut)
     tween.wait(1000)
-    tween.to({"scaleX":0.5, "scaleY":0.5, "x":30, "y":canvas.height-30, "rotation":-360}, 2500, Ease.bounceOut)
+    tween.to({"scaleX":0.5, "scaleY":0.5, "x":30, "y":canvas2D.height-30, "rotation":-360}, 2500, Ease.bounceOut)
 
     stage.addChild(ball)
     Ticker.addEventListener("tick", stage)
