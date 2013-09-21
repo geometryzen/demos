@@ -8,7 +8,7 @@ space = CartesianSpace()
         
 canvas = document.createElement("canvas")
 workbench2D = Workbench2D(canvas)
-workbench3D = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
+workbench3D = Workbench(space.renderer, space.camera)
 
 def setUp():
     print "Hello"
