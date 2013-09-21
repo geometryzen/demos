@@ -74,19 +74,12 @@ def onWindowResize():
         renderer.setSize(container.clientWidth, container.clientHeight)
         graph.width = container.clientWidth
         graph.height = container.clientHeight
-    
-def discardCanvases():
-    for cs in document.getElementsByTagName("canvas"):
-        cs.parentNode.removeChild(cs)
         
-requestID = None
-progress = None
-progressEnd = 60000
-startTime =  None
+timeOut = 60
 
 workbench = Workbench(renderer, camera)
 
-def init():
+def setUp():
     print "Hello!"
     print "This program is a demonstration of mixing the HTML5 2d and WebGL Canvases."        
     print "Press ESC to terminate, Arrow keys to move the 3D cube Left, Right, Forward, Backward."
@@ -110,7 +103,7 @@ def init():
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize()
 
-def render():
+def tick(t):
     if moveForward:
         camera.position.z -= 0.02
     if moveBackward:
@@ -151,29 +144,13 @@ def render():
 
     renderer.render(scene, camera)
     
-def animate(timestamp):
-    global requestID, progress, startTime
-    if startTime:
-        progress = timestamp - startTime
-    else:
-        if timestamp:
-            startTime = timestamp
-        else:
-            progress = 0
-        
-    if progress < progressEnd:
-        requestID = window.requestAnimationFrame(animate)
-        render()
-    else:
-        terminate()
-        
-def terminate():
-    window.cancelAnimationFrame(requestID)
-    discardCanvases()
+def terminate(t):
+    return t > timeOut
+    
+def tearDown():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
+    workbench.tearDown()
     print "Goodbye."
 
-init()
-animate(None)
-WindowAnimationRunner(tick).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
