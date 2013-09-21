@@ -1,8 +1,6 @@
 from three import *
 from browser import *
 
-useLargeCanvas = False
-
 moveForward = False
 moveBackward = False
 moveLeft = False
@@ -13,10 +11,9 @@ camera.position.z = 2
 renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
 
-view = document.getElementById("view")
-
 def escKey(downFlag):
-    terminate()
+    global timeOut
+    timeOut = 0
 
 def leftArrowKey(downFlag):
     global moveLeft
@@ -50,38 +47,16 @@ def onDocumentKeyUp(event):
     event.preventDefault()
     keyHandlers[event.keyCode](False)
 
-def onWindowResize():
-    if (useLargeCanvas):
-        camera.aspect = window.innerWidth / window.innerHeight
-        camera.updateProjectionMatrix()
-        renderer.size = (window.innerWidth, window.innerHeight)
-    else:
-        container = document.getElementById("canvas-container")
-        camera.aspect = container.clientWidth / container.clientHeight
-        camera.updateProjectionMatrix()
-        renderer.setSize(container.clientWidth, container.clientHeight)
-    
-def discardCanvases():
-    for cs in document.getElementsByTagName("canvas"):
-        cs.parentNode.removeChild(cs)
-        
-requestID = None
-progress = None
-progressEnd = 60000
-startTime =  None
+timeOut = 10
 
-def init():
+workbench = Workbench(renderer, camera)
+
+def setUp():
     print "Hello!"
     print "This program is a demonstration of the HTML5 WebGL Canvas."        
     print "Press ESC to terminate, Arrow keys to move the 3D cube Left, Right, Forward, Backward."
     print "This program will 'self-terminate' in "+str(progressEnd/1000)+" seconds!"
-    print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
-    discardCanvases()
-    if useLargeCanvas:
-        document.body.insertBefore(renderer.domElement, document.body.firstChild)
-    else:
-        container = document.getElementById("canvas-container")
-        container.appendChild(renderer.domElement)
+    workbench.setUp()
 
     mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
     scene.add(mesh)
@@ -89,10 +64,7 @@ def init():
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
 
-    window.addEventListener("resize", onWindowResize, False)
-    onWindowResize()
-
-def render():
+def tick(t):
     if moveForward:
         camera.position.z -= 0.02
     if moveBackward:
@@ -104,28 +76,13 @@ def render():
 
     renderer.render(scene, camera)
     
-def animate(timestamp):
-    global requestID, progress, startTime
-    if startTime:
-        progress = timestamp - startTime
-    else:
-        if timestamp:
-            startTime = timestamp
-        else:
-            progress = 0
-        
-    if progress < progressEnd:
-        requestID = window.requestAnimationFrame(animate)
-        render()
-    else:
-        terminate()
-        
-def terminate():
-    window.cancelAnimationFrame(requestID)
-    discardCanvases()
+def terminate(t):
+    return t > timeOut
+
+def tearDown():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
+    workbench.tearDown()
     print "Goodbye."
 
-init()
-animate(None)
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
