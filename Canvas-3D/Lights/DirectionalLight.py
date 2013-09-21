@@ -19,7 +19,6 @@ renderer.gammaOutput = True
 renderer.setClearColor(Color(0x080808), 1.0)
 
 material = MeshLambertMaterial({"color":0x0000FF})
-material.name = "bluecube"
 
 mesh = Mesh(CubeGeometry(5, 5, 5), material)
 
