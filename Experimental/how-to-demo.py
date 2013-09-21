@@ -31,7 +31,7 @@ def tick(t):
     pass
 
 def terminate(t):
-    return t > 15
+    return t > 6
 
 def tearDown():
     print "Goodbye"
