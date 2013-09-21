@@ -6,8 +6,11 @@ from geometry import *
 
 space = CartesianSpace()
         
-canvas = document.createElement("canvas")
-workbench2D = Workbench2D(canvas)
+canvas2D = document.createElement("canvas")
+canvas2D.style.position = "absolute"
+canvas2D.style.top = "0px"
+canvas2D.style.left = "0px"
+workbench2D = Workbench2D(canvas2D)
 workbench3D = Workbench(space.renderer, space.camera)
 
 def setUp():
@@ -15,7 +18,7 @@ def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
 
-    stage = Stage(canvas)
+    stage = Stage(canvas2D)
     stage.autoClear = True
 
     ball = Shape()
