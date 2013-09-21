@@ -15,14 +15,12 @@ camera.position.z = 2
 renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
 
-graph = document.createElement("canvas")
-graph.height = window.innerHeight
-graph.width = window.innerWidth
-graph.style.position = "absolute"
-graph.style.top = "0px"
-graph.style.left = "0px"
+canvas2D = document.createElement("canvas")
+canvas2D.style.position = "absolute"
+canvas2D.style.top = "0px"
+canvas2D.style.left = "0px"
 
-context = graph.getContext("2d")
+context = canvas2D.getContext("2d")
 
 def escKey(downFlag, event):
     event.preventDefault()
@@ -71,7 +69,7 @@ def onDocumentKeyUp(event):
 
 timeOut = 10
 
-workbench2D = Workbench2D(graph)
+workbench2D = Workbench2D(canvas2D)
 workbench3D = Workbench(renderer, camera)
 
 def setUp():
