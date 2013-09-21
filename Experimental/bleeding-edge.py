@@ -1,52 +1,176 @@
+'''
+Experiment to combine 2D and 3D graphics to support demos.
+'''
 from three import *
-from geometry import *
 from browser import *
-from math import pi, exp
 
-space = CartesianSpace()
-timeOut = 5
+useLargeCanvas = False
 
-e1 = ArrowBuilder().color(0xFF0000).attitude(exp(-BivectorE3(0,0,1)*pi/4)).build()
-e2 = ArrowBuilder().color(0x00FF00).attitude(exp(-BivectorE3(0,1,0)*pi/4)).build()
-e3 = ArrowBuilder().color(0x0000FF).attitude(exp(-BivectorE3(0,0,0)*pi/4)).build()
+moveForward = False
+moveBackward = False
+moveLeft = False
+moveRight = False
 
-workbench = Workbench(space.renderer, space.camera)
+camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
+camera.position.z = 2
+renderer = WebGLRenderer({"antialias": True})
+scene = Scene()
 
-def escKey(event, downFlag):
-    event.preventDefault()
-    global timeOut
-    timeOut = 0
+graph = document.createElement("canvas")
+graph.height = 400
+graph.width = 400
+graph.style.position = "absolute"
+graph.style.top = "0px"
+graph.style.left = "0px"
+
+context = graph.getContext("2d")
+
+def escKey(downFlag):
+    terminate()
+
+def leftArrowKey(downFlag):
+    global moveLeft
+    moveLeft = downFlag
+
+def upArrowKey(downFlag):
+    global moveForward
+    moveForward = downFlag
+    
+def rightArrowKey(downFlag):
+    global moveRight
+    moveRight = downFlag
+
+def downArrowKey(downFlag):
+    global moveBackward
+    moveBackward = downFlag
 
 keyHandlers = {
- 27: escKey
+ 27: escKey,
+ 37: leftArrowKey,
+ 38: upArrowKey,
+ 39: rightArrowKey,
+ 40: downArrowKey
 }
     
 def onDocumentKeyDown(event):
-    try:
-        keyHandlers[event.keyCode](event, True)
-    except:
-        pass
+    event.preventDefault()
+    keyHandlers[event.keyCode](True)
 
-def setUp():
-    workbench.setUp()
+def onDocumentKeyUp(event):
+    event.preventDefault()
+    keyHandlers[event.keyCode](False)
 
-    space.add(e1)
-    space.add(e2)
-    space.add(e3)
+def onWindowResize():
+    if (useLargeCanvas):
+        camera.aspect = window.innerWidth / window.innerHeight
+        camera.updateProjectionMatrix()
+        renderer.size = (window.innerWidth, window.innerHeight)
+        graph.width = window.innerWidth
+        graph.height = window.innerHeight
+    else:
+        container = document.getElementById("canvas-container")
+        camera.aspect = container.clientWidth / container.clientHeight
+        camera.updateProjectionMatrix()
+        renderer.setSize(container.clientWidth, container.clientHeight)
+        graph.width = container.clientWidth
+        graph.height = container.clientHeight
     
-    space.camera.position.set(2,2,2)
-    space.camera.lookAt(VectorE3(0,0,0))
+def discardCanvases():
+    for cs in document.getElementsByTagName("canvas"):
+        cs.parentNode.removeChild(cs)
+        
+requestID = None
+progress = None
+progressEnd = 60000
+startTime =  None
 
+def init():
+    print "Hello!"
+    print "This program is a demonstration of mixing the HTML5 2d and WebGL Canvases."        
+    print "Press ESC to terminate, Arrow keys to move the 3D cube Left, Right, Forward, Backward."
+    print "This program will 'self-terminate' in "+str(progressEnd/1000)+" seconds!"
+    print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
+    discardCanvases()
+    if useLargeCanvas:
+        document.body.insertBefore(graph, document.body.firstChild)
+        document.body.insertBefore(renderer.domElement, document.body.firstChild)
+    else:
+        container = document.getElementById("canvas-container")
+        container.appendChild(graph)
+        container.appendChild(renderer.domElement)
+
+    mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
+    scene.add(mesh)
+    
     document.addEventListener("keydown", onDocumentKeyDown, False)
+    document.addEventListener("keyup", onDocumentKeyUp, False)
 
-def tick(t):
-    space.render()
+    window.addEventListener("resize", onWindowResize, False)
+    onWindowResize()
+
+def render():
+    if moveForward:
+        camera.position.z -= 0.02
+    if moveBackward:
+        camera.position.z += 0.02
+    if moveLeft:
+        camera.position.x -= 0.02
+    if moveRight:
+        camera.position.x += 0.02
+        
+    context.setTransform(1, 0, 0, 1, 0, 0)
+    context.fillStyle = "#FF66CC"
+    context.strokeStyle = "#808080" 
+
+    context.clearRect(-200, -200, 400, 400)
+
+    context.fillRect(0, 0, 50, 50)
+    context.fillRect(100, 100, 50, 50)
+    context.strokeRect(75, 75, 50, 50)
+
+    context.beginPath()
+    context.moveTo(0,30)
+    context.lineTo(0,100)
+    # center
+    context.moveTo(-10, 0)
+    context.lineTo(10, 0)
+    context.moveTo(0, -10)
+    context.lineTo(0, 10)
+    context.fill()
+    context.rect(0,0,100,100)
+    context.rect(0,0,200,200)
+    context.rect(0,0,300,300)
+    context.rect(10, 10, 50, 50)
+
+    context.strokeText("Hello, Canvas", 60, 60)
+
+    context.closePath()
+    context.stroke()
+
+    renderer.render(scene, camera)
     
-def terminate(t):
-    return t > timeOut
-
-def tearDown():
+def animate(timestamp):
+    global requestID, progress, startTime
+    if startTime:
+        progress = timestamp - startTime
+    else:
+        if timestamp:
+            startTime = timestamp
+        else:
+            progress = 0
+        
+    if progress < progressEnd:
+        requestID = window.requestAnimationFrame(animate)
+        render()
+    else:
+        terminate()
+        
+def terminate():
+    window.cancelAnimationFrame(requestID)
+    discardCanvases()
     document.removeEventListener("keydown", onDocumentKeyDown, False)
-    workbench.tearDown()
+    document.removeEventListener("keyup", onDocumentKeyUp, False)
+    print "Goodbye."
 
-WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
+init()
+animate(None)
