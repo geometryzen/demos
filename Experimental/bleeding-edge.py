@@ -63,7 +63,7 @@ def onWindowResize():
     graph.width = window.innerWidth
     graph.height = window.innerHeight
         
-timeOut = 60
+timeOut = 10
 
 workbench = Workbench(renderer, camera)
 
