@@ -1,5 +1,5 @@
 from three import *
-#from browser import *
+from browser import *
 
 scene = Scene()
 
