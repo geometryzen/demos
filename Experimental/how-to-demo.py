@@ -35,7 +35,7 @@ def setUp():
     Ticker.addEventListener("tick", stage)
 
 def tick(t):
-    pass
+    space.render()
 
 def terminate(t):
     return t > 6
