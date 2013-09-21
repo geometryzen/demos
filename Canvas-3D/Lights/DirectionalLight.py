@@ -8,7 +8,7 @@ camera.position.set(10, 10, 10)
 camera.lookAt(scene.position)
 
 # White directional light at half intensity shining from the top.
-directionalLight = DirectionalLight(0xFFFFFF, "Hello")
+directionalLight = DirectionalLight(0xFFFFFF, 0.5)
 directionalLight.position.set(0, 1, 0)
 scene.add(directionalLight)
 
