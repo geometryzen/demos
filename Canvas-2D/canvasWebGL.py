@@ -55,7 +55,7 @@ def setUp():
     print "Hello!"
     print "This program is a demonstration of the HTML5 WebGL Canvas."        
     print "Press ESC to terminate, Arrow keys to move the 3D cube Left, Right, Forward, Backward."
-    print "This program will 'self-terminate' in "+str(progressEnd/1000)+" seconds!"
+    print "This program will 'self-terminate' in "+str(timeOut)+" seconds!"
     workbench.setUp()
 
     mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
