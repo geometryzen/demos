@@ -4,8 +4,6 @@ Experiment to combine 2D and 3D graphics to support demos.
 from three import *
 from browser import *
 
-useLargeCanvas = False
-
 moveForward = False
 moveBackward = False
 moveLeft = False
@@ -61,19 +59,8 @@ def onDocumentKeyUp(event):
     keyHandlers[event.keyCode](False)
 
 def onWindowResize():
-    if (useLargeCanvas):
-        camera.aspect = window.innerWidth / window.innerHeight
-        camera.updateProjectionMatrix()
-        renderer.size = (window.innerWidth, window.innerHeight)
-        graph.width = window.innerWidth
-        graph.height = window.innerHeight
-    else:
-        container = document.getElementById("canvas-container")
-        camera.aspect = container.clientWidth / container.clientHeight
-        camera.updateProjectionMatrix()
-        renderer.setSize(container.clientWidth, container.clientHeight)
-        graph.width = container.clientWidth
-        graph.height = container.clientHeight
+    graph.width = window.innerWidth
+    graph.height = window.innerHeight
         
 timeOut = 60
 
@@ -83,25 +70,15 @@ def setUp():
     print "Hello!"
     print "This program is a demonstration of mixing the HTML5 2d and WebGL Canvases."        
     print "Press ESC to terminate, Arrow keys to move the 3D cube Left, Right, Forward, Backward."
-    print "This program will 'self-terminate' in "+str(progressEnd/1000)+" seconds!"
-    print "Try setting the useLargeCanvas variable to True. Then scroll down to see what is going on."
-    discardCanvases()
-    if useLargeCanvas:
-        document.body.insertBefore(graph, document.body.firstChild)
-        document.body.insertBefore(renderer.domElement, document.body.firstChild)
-    else:
-        container = document.getElementById("canvas-container")
-        container.appendChild(graph)
-        container.appendChild(renderer.domElement)
+    print "This program will 'self-terminate' in "+str(timeOut)+" seconds!"
+    workbench.setUp()
+    document.body.insertBefore(graph, document.body.firstChild)
 
     mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
     scene.add(mesh)
     
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
-
-    window.addEventListener("resize", onWindowResize, False)
-    onWindowResize()
 
 def tick(t):
     if moveForward:
