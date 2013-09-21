@@ -79,7 +79,6 @@ def setUp():
     print "This program will 'self-terminate' in "+str(timeOut)+" seconds!"
     workbench2D.setUp()
     workbench3D.setUp()
-    document.body.insertBefore(graph, document.body.firstChild)
 
     mesh = Mesh(CubeGeometry(1.0, 1.0, 1.0), MeshNormalMaterial())
     scene.add(mesh)
