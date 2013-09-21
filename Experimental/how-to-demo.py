@@ -42,7 +42,7 @@ tween.to({"scaleX":0.5, "scaleY":0.5, "x":30, "y":canvas.height-30, "rotation":-
 
 stage.addChild(ball)
 
-Ticker.addEventListener("tick", stage)
+#Ticker.addEventListener("tick", stage)
 
 def setUp():
     print "Hello"
@@ -52,7 +52,7 @@ def tick(t):
     pass
 
 def terminate(t):
-    return t > 10
+    return t > 15
 
 def tearDown():
     print "Goodbye"
