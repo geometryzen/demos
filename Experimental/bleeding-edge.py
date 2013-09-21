@@ -23,27 +23,27 @@ graph.style.left = "0px"
 
 context = graph.getContext("2d")
 
-def escKey(downFlag):
+def escKey(downFlag, event):
     event.preventDefault()
     global timeOut
     timeOut = 0
 
-def leftArrowKey(downFlag):
+def leftArrowKey(downFlag, event):
     event.preventDefault()
     global moveLeft
     moveLeft = downFlag
 
-def upArrowKey(downFlag):
+def upArrowKey(downFlag, event):
     event.preventDefault()
     global moveForward
     moveForward = downFlag
     
-def rightArrowKey(downFlag):
+def rightArrowKey(downFlag, event):
     event.preventDefault()
     global moveRight
     moveRight = downFlag
 
-def downArrowKey(downFlag):
+def downArrowKey(downFlag, event):
     event.preventDefault()
     global moveBackward
     moveBackward = downFlag
