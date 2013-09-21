@@ -12,6 +12,8 @@ canvas2D.style.top = "0px"
 canvas2D.style.left = "0px"
 workbench2D = Workbench2D(canvas2D)
 
+canvas3D = space.renderer.domElement
+print canvas3D
 workbench3D = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 
 def setUp():
