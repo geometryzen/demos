@@ -14,32 +14,18 @@ scene.add(pointLight)
 renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
 
-container = document.getElementById("canvas-container")
-container.appendChild(renderer.domElement)
-
-material = MeshLambertMaterial({"color":0x0000FF})
-material.name = "bluecube"
-
-mesh = Mesh(CubeGeometry(5, 5, 5), material)
+mesh = Mesh(CubeGeometry(5, 5, 5), MeshLambertMaterial({"color":0x0000FF}))
 
 scene.add(mesh)
 
 movement = VectorE3(0.02, 0.02, 0.02)
 
-def discardCanvases():
-    for canvas in document.getElementsByTagName("canvas"):
-        canvas.parentNode.removeChild(canvas)
-
-def onWindowResize(event):
-    camera.aspect = window.innerWidth / window.innerHeight
-    camera.updateProjectionMatrix()
-    renderer.size = (window.innerWidth, window.innerHeight)
+workbench = Workbench(renderer, camera)
 
 def setUp():
     print "Hello!"
     print "This demonstration will end in 6 seconds."
-    window.addEventListener("resize", onWindowResize, False)
-    onWindowResize(None)
+    workbench.setUp()
     
 def tick(t):
     mesh.rotation += movement
@@ -49,8 +35,7 @@ def terminate(t):
     return t > 6
 
 def tearDown():
-    discardCanvases()
-    window.removeEventListener("resize", onWindowResize, False)
+    workbench.tearDown()
     print "Goodbye!"
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
