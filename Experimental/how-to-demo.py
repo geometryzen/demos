@@ -13,6 +13,7 @@ workbench3D = Workbench(space.renderer, space.camera)
 def setUp():
     print "Hello"
     workbench2D.setUp()
+    workbench3D.setUp()
 
     stage = Stage(canvas)
     stage.autoClear = True
@@ -41,6 +42,7 @@ def terminate(t):
 
 def tearDown():
     print "Goodbye"
+    workbench3D.tearDown()
     workbench2D.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
