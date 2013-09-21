@@ -2,6 +2,9 @@ from easel import *
 from three import *
 from browser import *
 from workbench import *
+
+scene3D = Scene()
+renderer = WebGLRenderer()
         
 canvas = document.createElement("canvas")
 workbench2D = Workbench2D(canvas)
