@@ -14,7 +14,7 @@ workbench2D = Workbench2D(canvas2D)
 
 canvas3D = space.renderer.domElement
 print canvas3D
-workbench3D = Workbench3D(canvas2D, space.renderer, space.camera)
+workbench3D = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 
 def setUp():
     print "Hello"
