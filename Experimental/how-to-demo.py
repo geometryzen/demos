@@ -1,8 +1,11 @@
 from easel import *
+from three import *
 from browser import *
+from workbench import *
         
 canvas = document.createElement("canvas")
 workbench2D = Workbench2D(canvas)
+workbench3D = Workbench3D()
 
 def setUp():
     print "Hello"
