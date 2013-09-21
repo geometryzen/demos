@@ -3,12 +3,11 @@ from three import *
 from browser import *
 from workbench import *
 
-scene3D = Scene()
-renderer = WebGLRenderer()
+space = CartesianSpace()
         
 canvas = document.createElement("canvas")
 workbench2D = Workbench2D(canvas)
-workbench3D = Workbench3D()
+workbench3D = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 
 def setUp():
     print "Hello"
