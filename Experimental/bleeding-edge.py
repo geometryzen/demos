@@ -84,6 +84,8 @@ progress = None
 progressEnd = 60000
 startTime =  None
 
+workbench = Workbench(renderer, camera)
+
 def init():
     print "Hello!"
     print "This program is a demonstration of mixing the HTML5 2d and WebGL Canvases."        
