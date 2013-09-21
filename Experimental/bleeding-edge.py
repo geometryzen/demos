@@ -15,8 +15,8 @@ renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
 
 graph = document.createElement("canvas")
-graph.height = 400
-graph.width = 400
+graph.height = window.innerHeight
+graph.width = window.innerWidth
 graph.style.position = "absolute"
 graph.style.top = "0px"
 graph.style.left = "0px"
