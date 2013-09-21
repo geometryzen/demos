@@ -68,14 +68,9 @@ def onDocumentKeyUp(event):
     except:
         pass
 
-# TODO: Resizing the HTML5 2d canvas
-def onWindowResize():
-    graph.width = window.innerWidth
-    graph.height = window.innerHeight
-        
 timeOut = 10
 
-#workbench2D = Workbench2D(graph)
+workbench2D = Workbench2D(graph)
 workbench3D = Workbench(renderer, camera)
 
 def setUp():
@@ -83,7 +78,7 @@ def setUp():
     print "This program is a demonstration of mixing the HTML5 2d and WebGL 3D Canvases."        
     print "Press ESC to terminate, Arrow keys to move the 3D cube Left, Right, Forward, Backward."
     print "This program will 'self-terminate' in "+str(timeOut)+" seconds!"
-#    workbench2D.setUp()
+    workbench2D.setUp()
     workbench3D.setUp()
     document.body.insertBefore(graph, document.body.firstChild)
 
@@ -140,7 +135,7 @@ def terminate(t):
 def tearDown():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
-#    workbench2D.tearDown()
+    workbench2D.tearDown()
     workbench3D.tearDown()
     print "Goodbye."
 
