@@ -33,7 +33,7 @@ def tick(t):
     stage.update()
     
 def terminate(t):
-    return t > 6
+    return t > 10
 
 def tearDown():
     workbench2D.tearDown()
