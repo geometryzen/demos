@@ -1,3 +1,5 @@
+# How to move the camera using the keboard.
+# This is really a 3D graphics example.
 from three import *
 from browser import *
 
