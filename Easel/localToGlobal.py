@@ -7,11 +7,11 @@ canvas = document.createElement("canvas")
 stage = Stage(canvas)
 
 target = stage.addChild(Shape())
-target.graphics.beginFill("blue").drawCircle(0, 0, 100).endFill()
-target.graphics.beginFill("white").drawCircle(0, 0, 60).endFill()
-target.graphics.beginFill("red").drawCircle(0, 0, 20).endFill()
-target.x = 200
-target.y = 360
+target.graphics.beginFill("blue").drawCircle(0, 0, 50).endFill()
+target.graphics.beginFill("white").drawCircle(0, 0, 30).endFill()
+target.graphics.beginFill("red").drawCircle(0, 0, 10).endFill()
+target.x = 100
+target.y = 180
 
 arm = stage.addChild(Shape())
 arm.graphics.beginFill("black").drawRect(-2, -2, 100, 4).endFill()
