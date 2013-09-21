@@ -1,5 +1,5 @@
 '''
-Experiment to combine HTML5 2D and 3D graphics to support demos.
+Experiment to combine HTML5 2d and WebGL 3D graphics to support demos.
 '''
 from three import *
 from browser import *
@@ -69,7 +69,7 @@ workbench = Workbench(renderer, camera)
 
 def setUp():
     print "Hello!"
-    print "This program is a demonstration of mixing the HTML5 2d and WebGL Canvases."        
+    print "This program is a demonstration of mixing the HTML5 2d and WebGL 3D Canvases."        
     print "Press ESC to terminate, Arrow keys to move the 3D cube Left, Right, Forward, Backward."
     print "This program will 'self-terminate' in "+str(timeOut)+" seconds!"
     workbench.setUp()
