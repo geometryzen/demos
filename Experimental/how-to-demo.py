@@ -2,11 +2,11 @@ from easel import *
 from browser import *
         
 canvas = document.createElement("canvas")
-wb2 = Workbench2D(canvas)
+workbench2D = Workbench2D(canvas)
 
 def setUp():
     print "Hello"
-    wb2.setUp()
+    workbench2D.setUp()
 
     stage = Stage(canvas)
     stage.autoClear = True
@@ -44,6 +44,6 @@ def terminate(t):
 
 def tearDown():
     print "Goodbye"
-    wb2.tearDown()
+    workbench2D.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
