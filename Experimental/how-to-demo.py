@@ -2,6 +2,7 @@ from easel import *
 from three import *
 from browser import *
 from workbench import *
+from geometry import *
 
 space = CartesianSpace()
         
