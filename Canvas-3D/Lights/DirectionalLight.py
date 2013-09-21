@@ -36,10 +36,20 @@ progressEnd = 6000
 startTime = None
 movement = VectorE3(0.02, 0.02, 0.02)
 
-def render():
+workbench = Workbench(renderer, camera)
+
+def setUp():
+    pass
+
+def tick(t):
     mesh.rotation += movement
-        
     renderer.render(scene, camera)
+    
+def terminate(t):
+    return t > 6
+
+def tearDown():
+    pass
 
 def onWindowResize(event):
     camera.aspect = window.innerWidth / window.innerHeight
@@ -69,4 +79,4 @@ onWindowResize(None)
 
 animate(None)
 
-WindowAnimationRunner().start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
