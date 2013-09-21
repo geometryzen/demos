@@ -68,6 +68,7 @@ def onDocumentKeyUp(event):
     except:
         pass
 
+# TODO: Resizing the HTML5 2d canvas
 def onWindowResize():
     graph.width = window.innerWidth
     graph.height = window.innerHeight
