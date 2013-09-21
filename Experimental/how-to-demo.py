@@ -55,7 +55,7 @@ def tick(t):
     space.render()
 
 def terminate(t):
-    return t > 6
+    return t > 10
 
 def tearDown():
     print "Goodbye"
