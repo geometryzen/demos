@@ -24,8 +24,8 @@ graph.style.left = "0px"
 context = graph.getContext("2d")
 
 def escKey(downFlag):
-    
-    terminate()
+    global timeOut
+    timeOut = 0
 
 def leftArrowKey(downFlag):
     global moveLeft
