@@ -9,8 +9,6 @@ def setUp():
     wb2.setUp(canvas)
     canvas.width = 960
     canvas.height = 400
-    container = document.getElementById("canvas-container")
-    container.appendChild(canvas)
 
     stage = Stage(canvas)
     stage.autoClear = True
