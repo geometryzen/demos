@@ -1,14 +1,12 @@
 from easel import *
 from browser import *
         
-wb2 = Workbench2D()
+canvas = document.createElement("canvas")
+wb2 = Workbench2D(canvas)
 
 def setUp():
     print "Hello"
-    canvas = document.createElement("canvas")
-    wb2.setUp(canvas)
-    canvas.width = 960
-    canvas.height = 400
+    wb2.setUp()
 
     stage = Stage(canvas)
     stage.autoClear = True
