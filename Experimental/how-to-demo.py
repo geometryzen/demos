@@ -13,13 +13,9 @@ canvas2D.style.left = "0px"
 workbench2D = Workbench2D(canvas2D)
 
 canvas3D = space.renderer.domElement
-print space
-print space.renderer
-print canvas3D
 workbench3D = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 
 def setUp():
-    print "Hello"
     workbench2D.setUp()
     workbench3D.setUp()
 
@@ -58,7 +54,6 @@ def terminate(t):
     return t > 15
 
 def tearDown():
-    print "Goodbye"
     workbench3D.tearDown()
     workbench2D.tearDown()
 
