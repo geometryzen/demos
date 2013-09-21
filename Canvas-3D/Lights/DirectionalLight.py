@@ -68,3 +68,5 @@ window.addEventListener("resize", onWindowResize, False)
 onWindowResize(None)
 
 animate(None)
+
+WindowAnimationRunner().start()
