@@ -3,6 +3,7 @@ Combining the (raw) HTML5 2d canvas API and WebGL 3D graphics to support demos.
 '''
 from three import *
 from browser import *
+from workbench import *
 
 moveForward = False
 moveBackward = False
