@@ -42,9 +42,11 @@ tween.to({"scaleX":0.5, "scaleY":0.5, "x":30, "y":canvas.height-30, "rotation":-
 
 stage.addChild(ball)
 
+wb2 = Workbench2D()
 
 def setUp():
     print "Hello"
+    wb2.setUp()
     Ticker.addEventListener("tick", stage)
 
 def tick(t):
@@ -55,6 +57,6 @@ def terminate(t):
 
 def tearDown():
     print "Goodbye"
-    pass
+    wb2.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
