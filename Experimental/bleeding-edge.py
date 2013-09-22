@@ -3,6 +3,7 @@ Experiment to combine HTML5 2d and WebGL 3D graphics to support demos.
 '''
 from three import *
 from browser import *
+from workbench import *
 
 moveForward = False
 moveBackward = False
