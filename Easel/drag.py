@@ -2,10 +2,6 @@ from easel import *
 from browser import *
 from workbench import *
 
-def discardCanvases():
-    for cs in document.getElementsByTagName("canvas"):
-        cs.parentNode.removeChild(cs)
-
 def onMouseDown(event):
     x = event.target.x - event.stageX
     y = event.target.y - event.stageY
@@ -14,8 +10,6 @@ def onMouseDown(event):
         event.target.y = event.stageY + y
         stage.update()
     event.addEventListener("mousemove", onMouseMove)
-
-discardCanvases()
 
 canvas = document.createElement("canvas")
 
@@ -46,7 +40,6 @@ def tick(t):
 
 def terminate(t):
     return t > 6
-
 
 def tearDown():
     dragger.removeEventListener("mousedown", onMouseDown)
