@@ -36,7 +36,7 @@ def tick(t):
     space2D.update()
 
 def terminate(t):
-    return t > 5
+    return t > 15
 
 def tearDown():
     workbench3D.tearDown()
