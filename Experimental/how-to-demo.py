@@ -10,7 +10,10 @@ from geometry import *
 
 space3D = CartesianSpace()
 canvas3D = space3D.renderer.domElement
-workbench3D = Workbench3D(space3D.renderer.domElement, space3D.renderer, space3D.camera)
+canvas3D.style.position = "absolute"
+canvas3D.style.top = "0px"
+canvas3D.style.left = "0px"
+workbench3D = Workbench3D(canvas3D, space3D.renderer, space3D.camera)
    
 canvas2D = document.createElement("canvas")
 canvas2D.style.position = "absolute"
