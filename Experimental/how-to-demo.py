@@ -25,7 +25,7 @@ output = Text("Mouse Events Demonstration", "20px Helvetica", "white")
 output.x = output.y = 10
 space2D.addChild(output)
 
-quantity = Scalar(0)
+quantity = ScalarE3(0)
 
 def setUp():
     workbench2D.setUp()
