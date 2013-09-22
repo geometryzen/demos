@@ -12,7 +12,7 @@ from workbench import *
 from geometry import *
 
 space = CartesianSpace()
-arrow = ConeBuilder().color(0xFFFF00).build()
+arrow = ArrowBuilder().build()
 space.add(arrow)
    
 canvas2D = document.createElement("canvas")
@@ -50,7 +50,7 @@ def tick(t):
     stage.update()
 
 def terminate(t):
-    return t > 15
+    return t > 5
 
 def tearDown():
     workbench3D.tearDown()
