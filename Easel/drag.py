@@ -42,3 +42,5 @@ stage.addChild(dragger)
 dragger.addEventListener("mousedown", onMouseDown)
 
 stage.update()
+
+WindowAnimationRunner().start()
