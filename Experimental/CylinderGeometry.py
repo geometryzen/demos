@@ -7,7 +7,7 @@ from browser import document, window, Workbench, WindowAnimationRunner
 space = CartesianSpace()
 progressEnd = 6
 
-workbench = Workbench(space.renderer, space.camera)
+workbench = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 
 def setUp():
     workbench.setUp()
