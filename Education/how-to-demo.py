@@ -49,7 +49,7 @@ def setUp():
     tween.to({"scaleX":0.5, "scaleY":0.5, "x":30, "y":canvas2D.height-30, "rotation":-360}, 2500, Ease.bounceOut)
 
     stage.addChild(ball)
-    Ticker.addEventListener("tick", stage)
+#   Ticker.addEventListener("tick", stage)
 
 def tick(t):
     space.render()
