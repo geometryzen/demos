@@ -4,6 +4,7 @@ This example demonstrates coloring shapes and normalizing their volumes to unity
 from geometry import *
 from e3ga import *
 from browser import *
+from workbench import *
 from math import pi
 
 space = CartesianSpace()
