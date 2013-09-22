@@ -52,7 +52,7 @@ a = k # from vector
 b = (k + j) / sqrt(2)
 R = (1 + b * a)/(a + b).length()
 print "R => " + repr(R)
-yloMesh.attitude.set(R.yz, R.zx, R.xy, R.w)
+yloMesh.attitude = R
 
 print "position   => " + str(bluMesh.position)
 print "quaternion => " + str(bluMesh.quaternion)
