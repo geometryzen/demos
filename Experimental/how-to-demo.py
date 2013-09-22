@@ -20,10 +20,11 @@ workbench2D = Workbench2D(canvas2D)
 space2D = Stage(canvas2D)
 space2D.autoClear = True
 
+arrow = ArrowBuilder().scale(3).build()
+
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
-    arrow = ArrowBuilder().scale(3).build()
     space3D.add(arrow)
 
 def tick(t):
