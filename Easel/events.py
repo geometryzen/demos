@@ -1,17 +1,7 @@
 from easel import *
 from browser import *
 
-def discardCanvases():
-    for cs in document.getElementsByTagName("canvas"):
-        cs.parentNode.removeChild(cs)
-
-discardCanvases()
-
 canvas = document.createElement("canvas")
-canvas.width = 500
-canvas.height = 200
-container = document.getElementById("canvas-container")
-container.appendChild(canvas)
 
 stage = Stage(canvas)
 stage.enableMouseOver()
@@ -37,16 +27,29 @@ def handleMouseEvent(event):
     output.text = str({"target": event.target, "type": event.type})
     stage.update()
 
-circle.addEventListener("click", handleMouseEvent)
-circle.addEventListener("dblclick", handleMouseEvent)
-circle.addEventListener("mouseover", handleMouseEvent)
-circle.addEventListener("mouseout", handleMouseEvent)
 
-square.addEventListener("click", handleMouseEvent)
-square.addEventListener("dblclick", handleMouseEvent)
-square.addEventListener("mouseover", handleMouseEvent)
-square.addEventListener("mouseout", handleMouseEvent)
 
-stage.update()
+workbench = Workbemch2D(canvas)
+
+def setUp():
+    workbench.setUp()
+    circle.addEventListener("click", handleMouseEvent)
+    circle.addEventListener("dblclick", handleMouseEvent)
+    circle.addEventListener("mouseover", handleMouseEvent)
+    circle.addEventListener("mouseout", handleMouseEvent)
+
+    square.addEventListener("click", handleMouseEvent)
+    square.addEventListener("dblclick", handleMouseEvent)
+    square.addEventListener("mouseover", handleMouseEvent)
+    square.addEventListener("mouseout", handleMouseEvent)
+
+def tick(t):
+    stage.update()
+
+def terminate(t):
+    return t > 6
+
+def tearDown():
+    workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
