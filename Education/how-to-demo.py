@@ -37,7 +37,7 @@ def tick(t):
     output.text = str(quantity)
 
 def terminate(t):
-    return False
+    return t > 5
 
 def tearDown():
     workbench3D.tearDown()
