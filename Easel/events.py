@@ -7,7 +7,7 @@ canvas = document.createElement("canvas")
 stage = Stage(canvas)
 stage.enableMouseOver()
 
-output = Text("Mouse Events Demonstration", "14px Arial")
+output = Text("Mouse Events Demonstration", "14px Helvetica")
 output.x = output.y = 10
 stage.addChild(output)
 
