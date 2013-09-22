@@ -55,7 +55,7 @@ print "R => " + repr(R)
 yloMesh.attitude = R
 
 print "position   => " + str(bluMesh.position)
-print "quaternion => " + str(bluMesh.quaternion)
+print "attitude   => " + str(bluMesh.attitude)
 print "rotation   => " + str(bluMesh.rotation)
 print "eulerOrder => " + str(bluMesh.eulerOrder)
 print "scale      => " + str(bluMesh.scale)
