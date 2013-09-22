@@ -32,6 +32,7 @@ def setUp():
     space3D.add(arrow)
 
 def tick(t):
+    arrow.scale = 2
     space3D.render()
     space2D.update()
     output.text = str(quantity)
