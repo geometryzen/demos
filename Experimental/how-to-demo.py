@@ -26,7 +26,7 @@ output.x = window.innerWidth / 2
 output.y = window.innerHeight / 2
 space2D.addChild(output)
 
-quantity = ScalarE3(0)
+quantity = VectorE3(0,0,1)
 
 def setUp():
     workbench2D.setUp()
