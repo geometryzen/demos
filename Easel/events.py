@@ -48,3 +48,5 @@ square.addEventListener("mouseover", handleMouseEvent)
 square.addEventListener("mouseout", handleMouseEvent)
 
 stage.update()
+
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
