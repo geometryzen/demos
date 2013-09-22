@@ -8,7 +8,7 @@ def discardCanvases():
 def onComplete(args):
     print "The tween is complete"
     print args
-    print "There could be a bug in the TweenJS library?"
+    print "Not all the args come through. Could be a bug in the TweenJS library?"
         
 discardCanvases()
 canvas = document.createElement("canvas")
