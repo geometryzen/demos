@@ -16,7 +16,7 @@ workbench2D = Workbench2D(canvas2D)
 space2D = Stage(canvas2D)
 space2D.autoClear = True
 
-arrow = ArrowBuilder().scale(3).build()
+arrow = ArrowBuilder().build()
 
 output = Text("", "20px Helvetica", "white")
 output.x = window.innerWidth / 2
