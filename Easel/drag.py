@@ -17,10 +17,6 @@ def onMouseDown(event):
 discardCanvases()
 
 canvas = document.createElement("canvas")
-canvas.width = 400
-canvas.height = 300
-container = document.getElementById("canvas-container")
-container.appendChild(canvas)
 
 stage = Stage(canvas)
 stage.mouseMoveOutside = True
@@ -43,7 +39,10 @@ dragger.addEventListener("mousedown", onMouseDown)
 
 stage.update()
 
+workbench2D = Workbench2D(canvas)
+
 def setUp():
+    workbench2D.setUp()
     pass
 
 def tick(t):
@@ -54,6 +53,7 @@ def terminate(t):
 
 
 def tearDown():
+    workbench2D.tearDown()
     pass
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
