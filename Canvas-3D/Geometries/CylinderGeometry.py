@@ -1,5 +1,6 @@
 from three import *
 from browser import *
+from workbench import *
 
 renderer = WebGLRenderer({"antialias": True})
 renderer.setClearColor(Color(0x080808), 1.0)
