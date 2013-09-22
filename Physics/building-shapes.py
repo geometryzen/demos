@@ -5,6 +5,7 @@ The shapes are drawn with their default linear dimensions and colored white.
 from geometry import *
 from e3ga import *
 from browser import *
+from workbench import *
 from math import pi
 
 space = CartesianSpace()
