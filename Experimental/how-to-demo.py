@@ -34,7 +34,7 @@ def setUp():
 def tick(t):
     space3D.render()
     space2D.update()
-    outut.text = str(Euclidean3(1,2,3,4,5,6,7,8))
+    output.text = str(Euclidean3(1,2,3,4,5,6,7,8))
 
 def terminate(t):
     return t > 5
