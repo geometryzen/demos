@@ -8,7 +8,7 @@ from workbench import *
 from math import pi, exp
 
 space = CartesianSpace()
-timeOut = 10
+timeOut = 5
 
 e1 = ArrowBuilder().color(0xFF0000).attitude(exp(-BivectorE3(0, 0,+1)*pi/4)).build()
 e2 = ArrowBuilder().color(0x00FF00).attitude(exp(-BivectorE3(0,-1, 0)*pi/4)).build()
