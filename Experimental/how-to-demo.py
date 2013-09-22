@@ -21,7 +21,7 @@ space2D.autoClear = True
 
 arrow = ArrowBuilder().scale(3).build()
 
-output = Text("Mouse Events Demonstration", "20px Arial", "white")
+output = Text("Mouse Events Demonstration", "20px Helvetica", "white")
 output.x = output.y = 10
 space2D.addChild(output)
 
