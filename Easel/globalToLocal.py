@@ -1,5 +1,6 @@
 from easel import *
 from browser import *
+from workbench import *
 from random import random
 
 canvas = document.createElement("canvas")
