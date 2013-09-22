@@ -33,7 +33,7 @@ def setUp():
 
 def tick(t):
     m = quantity.length()
-    arrow.scale = VectorE3(m,m,m)
+    arrow.scale = VectorE3(m, m, m)
     space3D.render()
     space2D.update()
     output.text = str(quantity)
