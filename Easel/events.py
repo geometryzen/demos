@@ -30,7 +30,7 @@ def handleMouseEvent(event):
 
 
 
-workbench = Workbemch2D(canvas)
+workbench = Workbench2D(canvas)
 
 def setUp():
     workbench.setUp()
