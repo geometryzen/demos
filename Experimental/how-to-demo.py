@@ -12,8 +12,6 @@ from workbench import *
 from geometry import *
 
 space3D = CartesianSpace()
-arrow = ArrowBuilder().scale(3).build()
-space3D.add(arrow)
 canvas3D = space3D.renderer.domElement
 workbench3D = Workbench3D(space3D.renderer.domElement, space3D.renderer, space3D.camera)
    
@@ -22,16 +20,18 @@ canvas2D.style.position = "absolute"
 canvas2D.style.top = "0px"
 canvas2D.style.left = "0px"
 workbench2D = Workbench2D(canvas2D)
-stage = Stage(canvas2D)
-stage.autoClear = True
+space2D = Stage(canvas2D)
+space2D.autoClear = True
 
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
+    arrow = ArrowBuilder().scale(3).build()
+    space3D.add(arrow)
 
 def tick(t):
     space3D.render()
-    stage.update()
+    space2D.update()
 
 def terminate(t):
     return t > 5
