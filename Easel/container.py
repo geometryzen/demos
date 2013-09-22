@@ -22,7 +22,7 @@ button.addChild(label)
 stage.addChild(button)
 
 def handleClick(event):
-    print "Clicked on: " + str(event.target)
+    window.alert("Clicked on: " + str(event.target))
 
 workbench = Workbench2D(canvas)
 
