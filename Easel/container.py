@@ -38,3 +38,5 @@ label.addEventListener("click", handleClick)
 button.addEventListener("click", handleClick)
 
 stage.update()
+
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
