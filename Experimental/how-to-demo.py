@@ -1,6 +1,13 @@
 from easel import *
 from three import *
 from browser import *
+'''
+Demonstrates combining the 2D Easel API and 3D Three Graphics API for building demonstrations.
+This is probably going to be the most effective way to build interactive demonstrations.
+'''
+from easel import *
+from three import *
+from browser import *
 from workbench import *
 from geometry import *
 
@@ -14,13 +21,12 @@ workbench2D = Workbench2D(canvas2D)
 
 canvas3D = space.renderer.domElement
 workbench3D = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
+stage = Stage(canvas2D)
+stage.autoClear = True
 
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
-
-    stage = Stage(canvas2D)
-    stage.autoClear = True
 
     ball = Shape()
     ball.graphics.setStrokeStyle(5, "round", "round")
@@ -45,10 +51,11 @@ def setUp():
     tween.to({"scaleX":0.5, "scaleY":0.5, "x":30, "y":canvas2D.height-30, "rotation":-360}, 2500, Ease.bounceOut)
 
     stage.addChild(ball)
-    Ticker.addEventListener("tick", stage)
+#   Ticker.addEventListener("tick", stage)
 
 def tick(t):
     space.render()
+    stage.update()
 
 def terminate(t):
     return t > 15
