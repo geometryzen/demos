@@ -26,7 +26,7 @@ def setUp():
     workbench2D.setUp()
 
 def tick(t):
-    arm.rotation = (360 * t/2)
+    arm.rotation = 180 * t
     target.alpha = 0.2
     point = arm.localToLocal(100, 0, target)
     if target.hitTest(point.x, point.y):
