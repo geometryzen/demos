@@ -3,6 +3,7 @@
 # It probably also makes sense to consider convenience functions to do this.
 from three import *
 from browser import *
+from workbench import *
 from math import pi, sin, cos, sqrt
 
 COLOR_X_AXIS = 0xff0000
