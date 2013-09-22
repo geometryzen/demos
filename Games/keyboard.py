@@ -1,6 +1,7 @@
 # How to move the camera using the keyboard events.
 from three import *
 from browser import *
+from workbench import *
 
 moveForward = False
 moveBackward = False
