@@ -20,7 +20,7 @@ stage.addChild(circle)
 square = Shape()
 square.graphics.beginFill("green").drawRect(-50, -50, 100, 100).endFill()
 square.x = 250
-square.y = 100
+square.y = "100"
 square.name = "square"
 stage.addChild(square)
 
