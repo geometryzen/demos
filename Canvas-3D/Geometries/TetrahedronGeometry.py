@@ -39,4 +39,4 @@ def terminate(elapsed):
 def tearDown():
     workbench.tearDown()
 
-WindowAnimationRunner(window, tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
