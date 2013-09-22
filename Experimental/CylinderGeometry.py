@@ -1,6 +1,7 @@
 # The purpose of this experiment is to see if the details of a general example can be reproduced using convenience functions.
 from three import *
 from geometry import CartesianSpace, CylinderBuilder
+from workbench import *
 from browser import document, window, Workbench, WindowAnimationRunner
 
 space = CartesianSpace()
