@@ -1,6 +1,7 @@
 from easel import *
 from browser import *
 from workbench import *
+from math import pi
 
 canvas = document.createElement("canvas")
 
@@ -25,7 +26,7 @@ def setUp():
     workbench2D.setUp()
 
 def tick(t):
-    arm.rotation += 5
+    arm.rotation = (360 * t/5)
     target.alpha = 0.2
     point = arm.localToLocal(100, 0, target)
     if target.hitTest(point.x, point.y):
