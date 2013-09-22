@@ -24,13 +24,13 @@ stage.addChild(button)
 def handleClick(event):
     print "Clicked on: " + str(event.target)
 
-workbench2D = Workbench2D(canvas)
+workbench = Workbench2D(canvas)
 
 def setUp():
+    workbench.setUp()
     circle.addEventListener("click", handleClick)
     label.addEventListener("click", handleClick)
     button.addEventListener("click", handleClick)
-    pass
 
 def tick(t):
     stage.update()
@@ -42,6 +42,6 @@ def tearDown():
     circle.removeEventListener("click", handleClick)
     label.removeEventListener("click", handleClick)
     button.removeEventListener("click", handleClick)
-    pass
+    workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
