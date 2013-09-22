@@ -36,7 +36,7 @@ def tick(t):
     arrow.scale = VectorE3(m, m, m)
     space3D.render()
     space2D.update()
-    output.text = str(quantity)
+    output.text = repr(quantity)
 
 def terminate(t):
     return t > 10
