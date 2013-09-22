@@ -1,18 +1,8 @@
 from easel import *
 from browser import *
-from random import random 
-
-def discardCanvases():
-    for cs in document.getElementsByTagName("canvas"):
-        cs.parentNode.removeChild(cs)
-        
-discardCanvases()
+from random import random
 
 canvas = document.createElement("canvas")
-canvas.width = 300
-canvas.height = 300
-container = document.getElementById("canvas-container")
-container.appendChild(canvas)
 
 stage = Stage(canvas)
 
@@ -25,8 +15,13 @@ for i in range(0, 25):
     shape.x = random() * 300 - 150
     shape.y = random() * 300 - 150
     holder.addChild(shape)
+    
+workbench = Workbench2D(canvas)
+    
+def setUp():
+    workbench.setUp()
 
-def tick():
+def tick(t):
     holder.rotation += 5
     n = holder.getNumChildren()
     for i in range(0, n):
@@ -37,4 +32,10 @@ def tick():
             child.alpha = 1 
     stage.update()
     
-Ticker.addEventListener("tick", tick)
+def terminate(t):
+    return t > 5
+
+def tearDown():
+    workbench.tearDown()
+
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
