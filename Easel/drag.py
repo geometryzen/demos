@@ -26,7 +26,6 @@ workbench2D = Workbench2D(canvas)
 
 def setUp():
     workbench2D.setUp()
-    dragger.addEventListener("mousedown", onMouseDown)
     circle = Shape()
     circle.graphics.beginFill("#000000").drawCircle(0, 0, 50).endFill()
     circle.name = "circle"
@@ -40,6 +39,7 @@ def setUp():
     dragger.addChild(circle)
     dragger.addChild(label)
     stage.addChild(dragger)
+    dragger.addEventListener("mousedown", onMouseDown)
 
 def tick(t):
     stage.update()
