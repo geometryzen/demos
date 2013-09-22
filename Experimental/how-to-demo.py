@@ -25,7 +25,7 @@ output = Text("Mouse Events Demonstration", "20px Helvetica", "white")
 output.x = output.y = 10
 space2D.addChild(output)
 
-quantity = Euclidean3()
+quantity = Scalar(0)
 
 def setUp():
     workbench2D.setUp()
@@ -36,7 +36,7 @@ def setUp():
 def tick(t):
     space3D.render()
     space2D.update()
-    output.text = str(Euclidean3(1,2,3,4,5,6,7,8))
+    output.text = str(quantity)
 
 def terminate(t):
     return t > 5
