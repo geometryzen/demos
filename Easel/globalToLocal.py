@@ -34,7 +34,7 @@ def tick(t):
     stage.update()
     
 def terminate(t):
-    return t > 5
+    return t > 10
 
 def tearDown():
     workbench.tearDown()
