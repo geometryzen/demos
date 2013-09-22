@@ -1,7 +1,3 @@
-'''
-Demonstrates combining the 2D Easel API and 3D Three Graphics API for building demonstrations.
-This is probably going to be the most effective way to build interactive demonstrations.
-'''
 from easel import *
 from three import *
 from browser import *
