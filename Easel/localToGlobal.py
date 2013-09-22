@@ -28,7 +28,7 @@ def tick(t):
     arm.rotation += 5
     target.alpha = 0.2
     point = arm.localToLocal(100, 0, target)
-    if (target.hitTest(point.x, point.y)):
+    if target.hitTest(point.x, point.y):
         target.alpha = 1
     stage.update()
     
