@@ -12,7 +12,7 @@ from workbench import *
 from geometry import *
 
 space = CartesianSpace()
-arrow = ArrowBuilder().build()
+arrow = ArrowBuilder().scale(3).build()
 space.add(arrow)
 canvas3D = space.renderer.domElement
 workbench3D = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
