@@ -21,6 +21,7 @@ canvas = document.createElement("canvas")
 
 stage = Stage(canvas)
 stage.mouseMoveOutside = True
+dragger = Container()
 
 workbench2D = Workbench2D(canvas)
 
@@ -34,7 +35,6 @@ def setUp():
     label.textAlign = "center"
     label.y = -7
 
-    dragger = Container()
     dragger.x = dragger.y = 100
     dragger.addChild(circle)
     dragger.addChild(label)
