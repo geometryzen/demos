@@ -49,6 +49,15 @@ def terminate(t):
     return t > 6
 
 def tearDown():
+    circle.removeEventListener("click", handleMouseEvent)
+    circle.removeEventListener("dblclick", handleMouseEvent)
+    circle.removeEventListener("mouseover", handleMouseEvent)
+    circle.removeEventListener("mouseout", handleMouseEvent)
+
+    square.removeEventListener("click", handleMouseEvent)
+    square.removeEventListener("dblclick", handleMouseEvent)
+    square.removeEventListener("mouseover", handleMouseEvent)
+    square.removeEventListener("mouseout", handleMouseEvent)
     workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
