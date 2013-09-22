@@ -26,7 +26,6 @@ stage.addChild(square)
 
 def handleMouseEvent(event):
     output.text = str({"target": event.target, "type": event.type})
-    stage.update()
 
 workbench = Workbench2D(canvas)
 
