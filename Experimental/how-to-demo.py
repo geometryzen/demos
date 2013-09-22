@@ -25,6 +25,7 @@ arrow = ArrowBuilder().scale(3).build()
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
+
     space3D.add(arrow)
 
 def tick(t):
