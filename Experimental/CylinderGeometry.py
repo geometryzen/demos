@@ -2,7 +2,7 @@
 from three import *
 from geometry import CartesianSpace, CylinderBuilder
 from workbench import *
-from browser import document, window, Workbench, WindowAnimationRunner
+from browser import document, window, Workbench3D, WindowAnimationRunner
 
 space = CartesianSpace()
 progressEnd = 6
