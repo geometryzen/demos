@@ -1,5 +1,6 @@
 from easel import *
 from browser import *
+from workbench import *
 
 def discardCanvases():
     for cs in document.getElementsByTagName("canvas"):
