@@ -53,6 +53,7 @@ def setUp():
 
 def tick(t):
     space.render()
+    stage.update()
 
 def terminate(t):
     return t > 15
