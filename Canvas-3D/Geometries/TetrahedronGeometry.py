@@ -34,7 +34,7 @@ def tick(elapsed):
     renderer.render(scene, camera)
     
 def terminate(elapsed):
-    return elapsed > 6000
+    return elapsed > 6
 
 def tearDown():
     workbench.tearDown()
