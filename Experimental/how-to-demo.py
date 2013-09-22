@@ -25,6 +25,8 @@ output = Text("Mouse Events Demonstration", "20px Helvetica", "white")
 output.x = output.y = 10
 space2D.addChild(output)
 
+quantity = Euclidean3()
+
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
