@@ -39,7 +39,7 @@ def tick(t):
     output.text = str(quantity)
 
 def terminate(t):
-    return t > 5
+    return t > 10
 
 def tearDown():
     workbench3D.tearDown()
