@@ -11,11 +11,11 @@ from browser import *
 from workbench import *
 from geometry import *
 
-space = CartesianSpace()
+space3D = CartesianSpace()
 arrow = ArrowBuilder().scale(3).build()
-space.add(arrow)
-canvas3D = space.renderer.domElement
-workbench3D = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
+space3D.add(arrow)
+canvas3D = space3D.renderer.domElement
+workbench3D = Workbench3D(space3D.renderer.domElement, space3D.renderer, space3D.camera)
    
 canvas2D = document.createElement("canvas")
 canvas2D.style.position = "absolute"
@@ -30,7 +30,7 @@ def setUp():
     workbench3D.setUp()
 
 def tick(t):
-    space.render()
+    space3D.render()
     stage.update()
 
 def terminate(t):
