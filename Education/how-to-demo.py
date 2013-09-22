@@ -18,13 +18,12 @@ workbench2D = Workbench2D(canvas2D)
 
 canvas3D = space.renderer.domElement
 workbench3D = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
+stage = Stage(canvas2D)
+stage.autoClear = True
 
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
-
-    stage = Stage(canvas2D)
-    stage.autoClear = True
 
     ball = Shape()
     ball.graphics.setStrokeStyle(5, "round", "round")
