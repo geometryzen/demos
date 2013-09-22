@@ -1,5 +1,6 @@
 from easel import *
 from browser import *
+from workbench import *
 
 def handleClick(event):
     window.alert("click => " + str(event))
