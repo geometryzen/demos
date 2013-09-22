@@ -1,6 +1,7 @@
 from three import *
 from geometry import *
 from browser import *
+from workbench import *
 from math import pi, exp
 
 space = CartesianSpace()
