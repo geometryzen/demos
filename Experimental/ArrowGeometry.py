@@ -1,5 +1,6 @@
 from three import *
 from browser import *
+from workbench import *
 from math import pi
 
 i = VectorE3(1,0,0)
