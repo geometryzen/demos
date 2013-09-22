@@ -12,7 +12,9 @@ from workbench import *
 from geometry import *
 
 space = CartesianSpace()
-        
+arrow = ConeBuilder().color(0xFFFF00).build()
+arrow.add(shape)
+   
 canvas2D = document.createElement("canvas")
 canvas2D.style.position = "absolute"
 canvas2D.style.top = "0px"
