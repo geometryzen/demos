@@ -4,6 +4,7 @@ This example demonstrates circular motion using geometric angles and rotors.
 from geometry import *
 from e3ga import *
 from browser import *
+from workbench import *
 from math import pi, exp
 
 timeOut = 12
