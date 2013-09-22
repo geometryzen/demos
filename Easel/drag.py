@@ -43,4 +43,17 @@ dragger.addEventListener("mousedown", onMouseDown)
 
 stage.update()
 
-WindowAnimationRunner().start()
+def setUp():
+    pass
+
+def tick(t):
+    pass
+
+def terminate(t):
+    return t > 6
+
+
+def tearDown():
+    pass
+
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
