@@ -13,7 +13,7 @@ from geometry import *
 
 space = CartesianSpace()
 arrow = ConeBuilder().color(0xFFFF00).build()
-arrow.add(shape)
+space.add(arrow)
    
 canvas2D = document.createElement("canvas")
 canvas2D.style.position = "absolute"
