@@ -24,8 +24,8 @@ space2D.addChild(output)
 
 quantity = Euclidean3(0, 0, +3, 0, 0, 0, 0, 0)
 rotor  = exp(-BivectorE3(0,0,0)*pi/4)
-sphere = SphereBuilder().color(0xFFFF00).attitude(rotor).build()
-arrow  = ArrowBuilder().color(0xFFFF00).attitude(rotor).build()
+sphere = SphereBuilder().color(0xFFFF00).build()
+arrow  = ArrowBuilder().color(0xFFFF00).build()
 probe  = ProbeE3(sphere, arrow)
 
 space3D.add(probe.grade0)
