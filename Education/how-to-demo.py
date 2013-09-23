@@ -18,7 +18,7 @@ workbench2D = Workbench2D(canvas2D)
 space2D = Stage(canvas2D)
 space2D.autoClear = True
 
-arrow = ArrowBuilder().build()
+arrow = ArrowBuilder().segments(12).build()
 space3D.add(arrow)
 
 output = Text("", "20px Helvetica", "white")
