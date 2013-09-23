@@ -24,7 +24,7 @@ space2D.addChild(output)
 
 quantity = VectorE3(3, -3, 0)
 sphere = SphereBuilder().color(0xFFFF00).build()
-arrow  = ArrowBuilder().color(0xFFFF00).segments(6).build()
+arrow  = ArrowBuilder().color(0xFFFF00).segments(3).build()
 probe  = ProbeE3(sphere, arrow)
 
 #space3D.add(probe.grade0)
@@ -41,7 +41,7 @@ def tick(t):
     space2D.update()
 
 def terminate(t):
-    return t > 10
+    return t > 60
 
 def tearDown():
     workbench3D.tearDown()
