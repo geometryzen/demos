@@ -33,7 +33,7 @@ exit.x = 200
 exit.y = 50
 exit.name = "square"
 space2D.addChild(exit)
-exitText = Text("", "20px Helvetica", "white")
+exitText = Text("Exit", "20px Helvetica", "white")
 exitText.x = exit.x
 exitText.y = exit.y
 space2D.addChild(exitText)
