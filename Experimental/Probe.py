@@ -28,8 +28,8 @@ sphere = SphereBuilder().wireframe(True).color(0xFFFF00).attitude(rotor).build()
 arrow  = ArrowBuilder().wireframe(True).color(0xFFFF00).attitude(rotor).build()
 probe  = ProbeE3(sphere, arrow)
 
-space3D.add(probe.sphere)
-space3D.add(probe.arrow)
+space3D.add(probe.grade0)
+space3D.add(probe.grade1)
 
 def setUp():
     workbench2D.setUp()
