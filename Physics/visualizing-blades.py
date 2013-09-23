@@ -13,6 +13,7 @@ space.add(CylinderBuilder().color(0x00FF00).volume(1).build().translateX(-2.5).t
 space.add(CubeBuilder().color(0x0000FF).volume(1).build().translateX(2.5).translateY(2.5))
 space.add(SphereBuilder().color(0xFF0000).volume(1).build().translateX(+2.5).translateY(-2.5))
 space.add(ConeBuilder().color(0xFFFF00).volume(1).build().translateX(-2.5).translateY(+2.5))
+space.add(ArrowBuilder().color(0xFFFFFF).volume(1).build())
 
 timeOut = 6
 
