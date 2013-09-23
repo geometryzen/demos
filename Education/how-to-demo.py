@@ -4,7 +4,7 @@ from browser import *
 from workbench import *
 from geometry import *
 
-
+done = False
 
 space3D = CartesianSpace()
 canvas3D = space3D.renderer.domElement
@@ -47,10 +47,15 @@ quantity = VectorE3(0, 0, 3)
 def handleMouseEvent(event):
     quantity.x += 0.1
 
+def onClickExit(event):
+    global done
+    done = True
+
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
     square.addEventListener("click", handleMouseEvent)
+    exit.addEventListener("click", onClickExit)
 
 def tick(t):
     m = quantity.length()
@@ -60,9 +65,10 @@ def tick(t):
     output.text = repr(quantity)
 
 def terminate(t):
-    return t > 10
+    return done
 
 def tearDown():
+    exit.removeEventListener("click", onClickExit)
     square.removeEventListener("click", handleMouseEvent)
     workbench3D.tearDown()
     workbench2D.tearDown()
