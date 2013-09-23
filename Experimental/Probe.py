@@ -23,13 +23,12 @@ output.y = window.innerHeight / 2
 space2D.addChild(output)
 
 quantity = Euclidean3(1, 2, 3, 4, 5, 6, 7, 8)
-sphere = SphereBuilder.wireframe(True).build()
-rotor = exp(-BivectorE3(0,0,1)*pi/4)
-arrow = ArrowBuilder().wireframe(True).color(0xFFFF00).attitude(rotor).build()
-arrow = ArrowBuilder().wireframe(True).color(0xFFFF00).attitude(rotor).build()
-probe = ProbeE3(sphere, arrow)
+rotor  = exp(-BivectorE3(0,0,1)*pi/4)
+sphere = SphereBuilder().wireframe(True).color(0xFFFF00).attitude(rotor).build()
+arrow  = ArrowBuilder().wireframe(True).color(0xFFFF00).attitude(rotor).build()
+probe  = ProbeE3(sphere, arrow)
 
-#space3D.add(probe.sphere)
+space3D.add(probe.sphere)
 space3D.add(probe.arrow)
 
 def setUp():
