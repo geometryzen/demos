@@ -24,7 +24,7 @@ space2D.addChild(output)
 quantity = Euclidean3(1, 2, 3, 4, 5, 6, 7, 8)
 sphere = SphereBuilder.build()
 arrow  = ArrowBuilder.build()
-probe = ProbeE3(sphere)
+probe = ProbeE3(sphere, arrow)
 
 def setUp():
     workbench2D.setUp()
@@ -37,7 +37,7 @@ def tick(t):
     space2D.update()
 
 def terminate(t):
-    return False
+    return t > 10
 
 def tearDown():
     workbench3D.tearDown()
