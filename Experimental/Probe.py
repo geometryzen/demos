@@ -23,11 +23,13 @@ space2D.addChild(output)
 
 quantity = Euclidean3(1, 2, 3, 4, 5, 6, 7, 8)
 sphere = SphereBuilder.wireframe(True).build()
-arrow  = ArrowBuilder.wireframe(True).build()
+rotor = exp(-BivectorE3(0,0,1)*pi/4)
+arrow = ArrowBuilder().wireframe(False).color(0xFFFF00).attitude(rotor).build()
+#arrow  = ArrowBuilder.wireframe(True).build()
 probe = ProbeE3(sphere, arrow)
 
-space3D.add(probe.sphere)
-#space3D.add(probe.arrow)
+#space3D.add(probe.sphere)
+space3D.add(probe.arrow)
 
 def setUp():
     workbench2D.setUp()
