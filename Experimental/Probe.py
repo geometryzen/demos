@@ -23,7 +23,7 @@ space2D.addChild(output)
 
 quantity = Euclidean3(1, 2, 3, 4, 5, 6, 7, 8)
 sphere = SphereBuilder.wireframe(True).build()
-arrow  = ArrowBuilder.build()
+arrow  = ArrowBuilder.wireframe(True).build()
 probe = ProbeE3(sphere, arrow)
 
 #space3D.add(probe.sphere)
