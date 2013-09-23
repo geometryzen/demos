@@ -22,7 +22,7 @@ output.x = window.innerWidth / 2
 output.y = window.innerHeight / 2
 space2D.addChild(output)
 
-quantity = VectorE3(0, 0, 1)
+quantity = VectorE3(0, 1, 0)
 sphere = SphereBuilder().color(0xFFFF00).build()
 arrow  = ConeBuilder().color(0xFFFF00).build()
 probe  = ProbeE3(sphere, arrow)
