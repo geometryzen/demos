@@ -24,7 +24,7 @@ space2D.addChild(output)
 
 quantity = VectorE3(3, 0, 0)
 sphere = SphereBuilder().color(0xFFFF00).build()
-arrow  = CylinderBuilder().color(0xFFFF00).height(0.2).segments(24).build()
+arrow  = ConeBuilder().color(0xFFFF00).height(0.2).segments(24).build()
 probe  = ProbeE3(sphere, arrow)
 
 #space3D.add(probe.grade0)
