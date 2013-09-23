@@ -17,6 +17,7 @@ space2D = Stage(canvas2D)
 space2D.autoClear = True
 
 arrow = ArrowBuilder().build()
+space3D.add(arrow)
 
 output = Text("", "20px Helvetica", "white")
 output.x = window.innerWidth / 2
@@ -38,8 +39,6 @@ quantity = VectorE3(0, 0, 3)
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
-
-    space3D.add(arrow)
 
 def tick(t):
     m = quantity.length()
