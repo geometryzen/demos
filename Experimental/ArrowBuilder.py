@@ -12,7 +12,7 @@ space = CartesianSpace()
 
 # Specify an attitude as the rotor that rotates e2(j) onto e3(k)
 rotor = exp(-BivectorE3(0,1,0)*pi/4)
-shape = ArrowBuilder().wireframe(False).color(0xFFFF00).attitude(rotor).build()
+shape = ArrowBuilder().wireframe(False).color(0x0000FF).attitude(rotor).build()
 space.add(shape)
 
 workbench = Workbench(space.renderer, space.camera)
