@@ -35,7 +35,7 @@ exit.name = "square"
 space2D.addChild(exit)
 exitText = Text("Exit", "9pt Helvetica", "white")
 exitText.x = exit.x + 10
-exitText.y = exit.y + 10
+exitText.y = exit.y + 11
 space2D.addChild(exitText)
 
 square = Shape()
