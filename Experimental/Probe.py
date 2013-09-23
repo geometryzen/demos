@@ -26,7 +26,8 @@ sphere = SphereBuilder.wireframe(True).build()
 arrow  = ArrowBuilder.build()
 probe = ProbeE3(sphere, arrow)
 
-space3D.add(probe.sphere)
+#space3D.add(probe.sphere)
+space3D.add(probe.arrow)
 
 def setUp():
     workbench2D.setUp()
