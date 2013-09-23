@@ -29,7 +29,7 @@ space2D.addChild(output)
 square = Shape()
 square.graphics.beginFill("black").drawRoundRect(0, 0, 100, 40, 6).endFill()
 square.graphics.beginStroke("white").drawRoundRect(0, 0, 100, 40, 6).endStroke()
-square.x = 250
+square.x = 200
 square.y = 100
 square.name = "square"
 space2D.addChild(square)
