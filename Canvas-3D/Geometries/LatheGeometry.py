@@ -17,11 +17,11 @@ radiusCone = 20
 radiusShaft = 10
 length = 80
 lengthShaft = 60
-a = Vector3(0, 0, length)
-b = Vector3(radiusCone, 0, lengthShaft)
-c = Vector3(radiusShaft, 0, lengthShaft)
-d = Vector3(radiusShaft, 0, 0)
-e = Vector3(0, 0, 0)
+a = VectorE3(0, 0, length)
+b = VectorE3(radiusCone, 0, lengthShaft)
+c = VectorE3(radiusShaft, 0, lengthShaft)
+d = VectorE3(radiusShaft, 0, 0)
+e = VectorE3(0, 0, 0)
 points = [a, b, c, d, e]
 arrow = LatheGeometry(points, 25)
 
