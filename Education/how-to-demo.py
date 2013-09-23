@@ -23,6 +23,16 @@ output.x = window.innerWidth / 2
 output.y = window.innerHeight / 2
 space2D.addChild(output)
 
+square = Shape()
+square.graphics.beginFill("green").drawRect(-50, -50, 100, 100).endFill()
+square.x = 250
+square.y = 100
+square.name = "square"
+space2D.addChild(square)
+
+def handleMouseEvent(event):
+    output.text = str({"target": event.target, "type": event.type})
+
 quantity = VectorE3(0, 0, 3)
 
 def setUp():
