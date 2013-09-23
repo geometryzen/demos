@@ -29,7 +29,7 @@ def setUp():
     workbench3D.setUp()
 
 def tick(t):
-    probe.quantity = quantity
+#    probe.quantity = quantity
     output.text = repr(probe.quantity)
     space3D.render()
     space2D.update()
