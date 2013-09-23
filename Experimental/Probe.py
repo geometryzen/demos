@@ -21,7 +21,7 @@ output.x = window.innerWidth / 2
 output.y = window.innerHeight / 2
 space2D.addChild(output)
 
-quantity = VectorE3(1, 2, 3)
+quantity = Euclidean3(1, 2, 3, 4, 5, 6, 7, 8)
 probe = ProbeE3()
 
 def setUp():
@@ -29,7 +29,7 @@ def setUp():
     workbench3D.setUp()
 
 def tick(t):
-#    probe.quantity = quantity
+    probe.quantity = quantity
     output.text = repr(probe.quantity)
     space3D.render()
     space2D.update()
