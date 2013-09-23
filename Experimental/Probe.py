@@ -27,7 +27,7 @@ sphere = SphereBuilder().color(0xFFFF00).build()
 arrow  = CylinderBuilder().color(0xFFFF00).build()
 probe  = ProbeE3(sphere, arrow)
 
-//space3D.add(probe.grade0)
+#space3D.add(probe.grade0)
 space3D.add(probe.grade1)
 
 def setUp():
