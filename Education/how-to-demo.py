@@ -33,6 +33,10 @@ exit.x = 200
 exit.y = 50
 exit.name = "square"
 space2D.addChild(exit)
+exitText = Text("", "20px Helvetica", "white")
+exitText.x = exit.x
+exitText.y = exit.y
+space2D.addChild(exitText)
 
 square = Shape()
 square.graphics.beginFill("black").drawRoundRect(0, 0, 40, 40, 6).endFill()
