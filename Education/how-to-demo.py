@@ -60,9 +60,10 @@ def setUp():
 def tick(t):
     m = quantity.length()
     arrow.scale = VectorE3(m, m, m)
+    output.text = repr(quantity)
+
     space3D.render()
     space2D.update()
-    output.text = repr(quantity)
 
 def terminate(t):
     return done
