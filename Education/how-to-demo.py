@@ -32,7 +32,7 @@ exit.graphics.beginStroke("white").drawRoundRect(0, 0, 40, 40, 6).endStroke()
 exit.x = window.innerWidth - 200
 exit.y = 100
 exit.name = "square"
-space2D.addChild(square)
+space2D.addChild(exit)
 
 square = Shape()
 square.graphics.beginFill("black").drawRoundRect(0, 0, 40, 40, 6).endFill()
