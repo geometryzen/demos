@@ -31,10 +31,11 @@ square.y = 100
 square.name = "square"
 space2D.addChild(square)
 
-def handleMouseEvent(event):
-    output.text = str({"target": event.target, "type": event.type})
-
 quantity = VectorE3(0, 0, 3)
+
+def handleMouseEvent(event):
+    quantity.x += 0.1
+
 
 def setUp():
     workbench2D.setUp()
