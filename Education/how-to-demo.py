@@ -25,7 +25,7 @@ output.y = window.innerHeight / 2
 space2D.addChild(output)
 
 square = Shape()
-square.graphics.beginFill("white").drawRect(-10, -10, 10, 10).endFill()
+square.graphics.beginFill("white").drawRect(-20, -20, 20, 20).endFill()
 square.x = 250
 square.y = 100
 square.name = "square"
