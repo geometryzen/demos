@@ -39,6 +39,7 @@ quantity = VectorE3(0, 0, 3)
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
+    square.addEventListener("click", handleMouseEvent)
 
 def tick(t):
     m = quantity.length()
@@ -51,6 +52,7 @@ def terminate(t):
     return t > 10
 
 def tearDown():
+    square.removeEventListener("click", handleMouseEvent)
     workbench3D.tearDown()
     workbench2D.tearDown()
 
