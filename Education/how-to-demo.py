@@ -45,7 +45,7 @@ space2D.addChild(square)
 quantity = VectorE3(0, 0, 3)
 
 def handleMouseEvent(event):
-    quantity.x += 0.1
+    quantity.z += 0.1
 
 def onClickExit(event):
     global done
