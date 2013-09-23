@@ -3,6 +3,7 @@ from three import *
 from browser import *
 from workbench import *
 from geometry import *
+from math import exp, pi
 
 space3D = CartesianSpace()
 canvas3D = space3D.renderer.domElement
