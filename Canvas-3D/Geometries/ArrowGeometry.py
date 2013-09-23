@@ -1,4 +1,3 @@
-# ArrowGeometry is not a standard Geometry in the Three.js library.
 from three import *
 from browser import *
 from workbench import *
