@@ -22,7 +22,7 @@ output.y = window.innerHeight / 2
 space2D.addChild(output)
 
 quantity = VectorE3(1, 2, 3)
-probe = Probe()
+probe = ProbeE3()
 
 def setUp():
     workbench2D.setUp()
