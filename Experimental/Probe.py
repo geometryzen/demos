@@ -22,7 +22,7 @@ output.x = window.innerWidth / 2
 output.y = window.innerHeight / 2
 space2D.addChild(output)
 
-quantity = Euclidean3(0.2, 0, 1, 0, 0, 0, 0, 0)
+quantity = Euclidean3(0.2, 0, -3, 0, 0, 0, 0, 0)
 rotor  = exp(-BivectorE3(0,0,0)*pi/4)
 sphere = SphereBuilder().color(0xFFFF00).attitude(rotor).build()
 arrow  = ArrowBuilder().color(0xFFFF00).attitude(rotor).build()
