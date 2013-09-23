@@ -30,6 +30,7 @@ def setUp():
 
 def tick(t):
     probe.quantity = quantity
+    output.text = repr(quantity)
     space3D.render()
     space2D.update()
 
