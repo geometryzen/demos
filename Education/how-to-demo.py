@@ -29,8 +29,8 @@ space2D.addChild(output)
 exit = Shape()
 exit.graphics.beginFill("black").drawRoundRect(0, 0, 40, 40, 6).endFill()
 exit.graphics.beginStroke("white").drawRoundRect(0, 0, 40, 40, 6).endStroke()
-exit.x = window.innerWidth - 200
-exit.y = 100
+exit.x = 200
+exit.y = 50
 exit.name = "square"
 space2D.addChild(exit)
 
