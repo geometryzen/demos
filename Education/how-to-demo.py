@@ -4,6 +4,8 @@ from browser import *
 from workbench import *
 from geometry import *
 
+
+
 space3D = CartesianSpace()
 canvas3D = space3D.renderer.domElement
 workbench3D = Workbench3D(canvas3D, space3D.renderer, space3D.camera)
@@ -25,7 +27,7 @@ output.y = window.innerHeight / 2
 space2D.addChild(output)
 
 square = Shape()
-square.graphics.beginFill("white").drawRoundRect(0, 0, 20, 20, 6).endFill()
+square.graphics.beginStroke("white").drawRoundRect(0, 0, 20, 20, 6).endStroke()
 square.x = 250
 square.y = 100
 square.name = "square"
