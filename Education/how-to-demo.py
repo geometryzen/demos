@@ -46,10 +46,10 @@ square.y = 100
 square.name = "square"
 space2D.addChild(square)
 
-quantity = VectorE3(0, 0, 3)
+quantity = VectorE3(0, 3, 0)
 
 def handleMouseEvent(event):
-    quantity.z += 0.1
+    quantity.y += 0.1
 
 def onClickExit(event):
     global done
