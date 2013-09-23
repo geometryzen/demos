@@ -26,6 +26,14 @@ output.x = window.innerWidth / 2
 output.y = window.innerHeight / 2
 space2D.addChild(output)
 
+exit = Shape()
+exit.graphics.beginFill("black").drawRoundRect(0, 0, 40, 40, 6).endFill()
+exit.graphics.beginStroke("white").drawRoundRect(0, 0, 40, 40, 6).endStroke()
+exit.x = window.innerWidth - 200
+exit.y = 100
+exit.name = "square"
+exit.addChild(square)
+
 square = Shape()
 square.graphics.beginFill("black").drawRoundRect(0, 0, 40, 40, 6).endFill()
 square.graphics.beginStroke("white").drawRoundRect(0, 0, 40, 40, 6).endStroke()
