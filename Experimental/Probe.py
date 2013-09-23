@@ -22,8 +22,9 @@ output.y = window.innerHeight / 2
 space2D.addChild(output)
 
 quantity = Euclidean3(1, 2, 3, 4, 5, 6, 7, 8)
-arrow = ArrowBuilder.build()
-probe = ProbeE3()
+sphere = SphereBuilder.build()
+arrow  = ArrowBuilder.build()
+probe = ProbeE3(sphere)
 
 def setUp():
     workbench2D.setUp()
