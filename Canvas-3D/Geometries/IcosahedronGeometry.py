@@ -20,7 +20,7 @@ space.add(mesh)
 
 movement = VectorE3(0.02, 0.02, 0.02)
 
-workbench = Workbench3D(space.renderer, space.camera)
+workbench = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 
 def setUp():
     workbench.setUp();
