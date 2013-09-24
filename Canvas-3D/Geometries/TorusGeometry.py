@@ -41,7 +41,7 @@ def tick(elapsed):
     renderer.render(scene, camera)
     
 def terminate(elapsed):
-    return elapsed > 10000
+    return elapsed > 10
 
 def tearDown():
     workbench.tearDown()
