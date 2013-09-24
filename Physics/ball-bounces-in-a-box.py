@@ -6,7 +6,7 @@ def setUp():
 def tick(t):
     print "tick"
 
-def terminate(t)
+def terminate(t):
     return t > 5
 
 def tearDown():
