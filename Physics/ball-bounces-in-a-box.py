@@ -17,7 +17,7 @@ scene.add(pointLight)
 workbench3D = Workbench(renderer, camera)
 
 ball = SphereBuilder().color("green").radius(0.8).build()
-ball.mass = 1.0
+ball.mass = ScalarE3(1.0)
 print ball.mass
 ball.momentum = VectorE3(-0.15, -0.23, +0.27)
 scene.add(ball)
