@@ -5,7 +5,7 @@ scene = Scene()
 
 renderer = WebGLRenderer()
 
-camera = PrespectiveCamera()
+camera = PerspectiveCamera()
 
 def setUp():
     print "setUp"
