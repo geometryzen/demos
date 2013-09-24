@@ -31,6 +31,8 @@ probe  = ProbeE3(sphere, grade1, grade2, grade3)
 
 #space3D.add(probe.grade0)
 space3D.add(probe.grade1)
+space3D.add(probe.grade2)
+space3D.add(probe.grade3)
 
 def setUp():
     workbench2D.setUp()
