@@ -54,7 +54,7 @@ def setUp():
 
 def tick(t):
     ball.position = ball.position + (ball.momentum/ball.mass)*dt
-    if ball.position.x <= -side or ball.position.x >= side:
+    if ball.position.x <= -side or abs(ball.position.x) >= side:
         ball.momentum = - i * ball.momentum * i
 
     if ball.position.y <= -side or ball.position.y >= side:
