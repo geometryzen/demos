@@ -21,6 +21,9 @@ thk = 0.3
 s2 = 2 * side - thk
 s3 = 2 * side + thk
 
+wallR = CubeBuilder().build()
+scene.add(wallR)
+
 ball = SphereBuilder().color("green").radius(0.8).build()
 ball.mass     = ScalarE3(1.0)
 ball.momentum = VectorE3(-0.15, -0.23, +0.27)
