@@ -36,6 +36,20 @@ scene.add(dwarf)
 G = 6.7e-11
 dt = 0.05
 
+canvas2D = document.createElement("canvas")
+canvas2D.style.position = "absolute"
+canvas2D.style.top = "0px"
+canvas2D.style.left = "0px"
+workbench2D = Workbench2D(canvas2D)
+space2D = Stage(canvas2D)
+space2D.autoClear = True
+
+
+output = Text("", "20px Helvetica", "white")
+output.x = window.innerWidth / 2
+output.y = window.innerHeight / 2
+space2D.addChild(output)
+
 def setUp():
     workbench3D.setUp()
 
