@@ -57,10 +57,10 @@ def tick(t):
     if abs(ball.position % i) >= side:
         ball.momentum = - i * ball.momentum * i
 
-    if ball.position.y <= -side or ball.position.y >= side:
+    if abs(ball.position % y) >= side:
         ball.momentum = - j * ball.momentum * j
         
-    if ball.position.z <= -side or ball.position.z >= side:
+    if abs(ball.position % k) >= side:
         ball.momentum = - k * ball.momentum * k
 
     renderer.render(scene, camera)
