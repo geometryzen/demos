@@ -28,7 +28,7 @@ scene.add(ball)
 
 #print ball.geometry
 
-side = side - thk * 0.5 - ball.size.x / 2
+#side = side - thk * 0.5 - ball.size.x / 2
 
 def setUp():
     workbench3D.setUp()
