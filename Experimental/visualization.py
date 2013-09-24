@@ -9,7 +9,7 @@ space3D = CartesianSpace()
 
 workbench3D = Workbench(space3D.renderer, space3D.camera)
 
-giant = SphereBuilder().color("red").radius(0.4).build()
+giant = ConeBuilder().color("red").radius(0.4).build()
 giant.position = VectorE3(1, 0, 0)
 giant.mass     = ScalarE3(2)
 giant.momentum = VectorE3(0, -0.5, 0) * giant.mass
