@@ -47,13 +47,13 @@ ball.momentum = VectorE3(-0.15, -0.23, +0.27)
 scene.add(ball)
 
 side = side - thk * 0.5 - ball.geometry.radius
-dt = 0.3
+dt = 0.5
 
 def setUp():
     workbench3D.setUp()
 
 def tick(t):
-    ball.position += (ball.momentum/ball.mass)* t * 5
+    ball.position += (ball.momentum/ball.mass) * dt
     if abs(ball.position % i) >= side:
         ball.momentum = - i * ball.momentum * i
 
