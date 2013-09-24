@@ -7,7 +7,7 @@ scene = Scene()
 renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
 
-camera = PerspectiveCamera(50, 1, 0.7)
+camera = PerspectiveCamera(50, 1, "abc")
 print camera
 camera.position.z = 5
 
