@@ -14,8 +14,9 @@ space.add(CylinderBuilder().build().translateX(-2.5).translateY(-2.5))
 space.add(CubeBuilder().build().translateX(2.5).translateY(2.5))
 space.add(SphereBuilder().build().translateX(+2.5).translateY(-2.5))
 space.add(ConeBuilder().build().translateX(-2.5).translateY(+2.5))
+space.add(ArrowBuilder().build())
 
-timeout = 3
+timeout = 6
 
 workbench = Workbench(space.renderer, space.camera)
 
