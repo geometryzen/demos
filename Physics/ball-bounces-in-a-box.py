@@ -26,6 +26,7 @@ wallR.position.x = side
 wallL = CubeBuilder().width(thk).height(s2).depth(s3).color("red").build()
 wallL.position.x = -side
 scene.add(wallR)
+scene.add(wallL)
 
 ball = SphereBuilder().color("green").radius(0.8).build()
 ball.mass     = ScalarE3(1.0)
