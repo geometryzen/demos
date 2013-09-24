@@ -5,7 +5,7 @@ from workbench import *
 scene = Scene()
 
 renderer = WebGLRenderer()
-renderer.setClearColor(0x000000,1)
+renderer.setClearColor(Color(0x000000), 1.0)
 
 camera = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 5
