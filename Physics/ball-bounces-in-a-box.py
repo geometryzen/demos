@@ -3,6 +3,8 @@ from three import *
 
 scene = Scene()
 
+renderer = WebGLRenderer()
+
 def setUp():
     print "setUp"
 
