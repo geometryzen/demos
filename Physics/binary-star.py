@@ -10,7 +10,7 @@ scene = Scene()
 renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
 
-camera = PerspectiveCamera(50,1,0.1,1e20)
+camera = PerspectiveCamera(50,1,0.1, 1e30)
 camera.position.z = 15
 
 pointLight = PointLight(0xFFFFFF);
@@ -18,10 +18,6 @@ pointLight.position = camera.position
 scene.add(pointLight)
 
 workbench3D = Workbench(renderer, camera)
-
-i = VectorE3(1, 0, 0)
-j = VectorE3(0, 1, 0)
-k = VectorE3(0, 0, 1)
 
 giant = SphereBuilder().color("red").radius(4e10).build()
 giant.position = VectorE3(-1e11, 0, 0)
@@ -44,7 +40,6 @@ def setUp():
 def tick(t):
     r = dwarf.position - giant.position
     F = G * giant.mass * dwarf.mass * r / pow(r % r, 3/2)
-    print f
     giant.momentum += F * dt
     dwarf.momentum -= F * dt
     
