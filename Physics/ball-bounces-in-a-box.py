@@ -1,5 +1,7 @@
 from browser import *
 
+scene = Scene()
+
 def setUp():
     print "setUp"
 
