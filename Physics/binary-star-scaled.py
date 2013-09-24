@@ -58,11 +58,11 @@ def setUp():
 def tick(t):
     r = dwarf.position - giant.position
     F = giant.mass * dwarf.mass * r / pow(r % r, 3/2)
-    giant.momentum += F * dt
-    dwarf.momentum -= F * dt
+    giant.momentum = giant.momentum + F * dt
+    dwarf.momentum = dwarf.momentum - F * dt
     
     for star in [giant, dwarf]:
-        star.position += (star.momentum / star.mass) * dt
+        star.position = star.position + (star.momentum / star.mass) * dt
     
     output.text = repr(F)
     
