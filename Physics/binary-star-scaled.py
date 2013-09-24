@@ -8,32 +8,21 @@ from workbench import *
 from math import pow
 from random import random
 
-scene = Scene()
+space = CartesianSpace()
 
-renderer = WebGLRenderer()
-renderer.setClearColor(Color(0x080808), 1.0)
-
-camera = PerspectiveCamera()
-camera.position.z = 10
-camera.lookAt(VectorE3(0,0,0))
-
-pointLight = PointLight(0xFFFFFF);
-pointLight.position = camera.position
-scene.add(pointLight)
-
-workbench3D = Workbench(renderer, camera)
+workbench3D = Workbench(space.renderer, space.camera)
 
 giant = SphereBuilder().color("red").radius(0.4).build()
 giant.position = VectorE3(-1, 0, 0)
 giant.mass     = ScalarE3(2)
 giant.momentum = VectorE3(0, 0, -1) * giant.mass
-scene.add(giant)
+space.add(giant)
 
 dwarf = SphereBuilder().color("yellow").radius(0.2).build()
 dwarf.position = VectorE3(1.5, 0, 0)
 dwarf.mass     = ScalarE3(1)
 dwarf.momentum = -giant.momentum
-scene.add(dwarf)
+space.add(dwarf)
 
 dt = 0.01
 
@@ -66,7 +55,7 @@ def tick(t):
     
     output.text = repr(F)
     
-    renderer.render(scene, camera)
+    space.render()
     space2D.update()
 
 def terminate(t):
