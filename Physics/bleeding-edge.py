@@ -30,9 +30,10 @@ space2D.addChild(output)
 quantity = ScalarE3(1) + VectorE3(2, 4, 0) + BivectorE3(5,0,0) + PseudoscalarE3(8)
 
 # Define the Meshes that you want to represent each grade of the quantity.
+# Another way of doing this will be to create a ProbeBuilderE3.
 grade0 = SphereBuilder().wireframe(True).color(0x808080).segments(12).build()
 grade1 = ArrowBuilder().color(0x808080).wireframe(True).segments(12).build()
-grade2 = PlaneBuilder().wireframe(True).color(0xFFFFFF).segments(5).build()
+grade2 = PlaneBuilder().wireframe(True).color(0xFFFF00).segments(5).build()
 grade3 = CubeBuilder().wireframe(True).color(0xFFFFFF).segments(1).build()
 
 probe  = ProbeE3(grade0, grade1, grade2, grade3)
