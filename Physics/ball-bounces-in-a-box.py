@@ -36,6 +36,10 @@ def tick(t):
     ball.position = ball.position + (ball.momentum/ball.mass)*dt
     if ball.position.x <= -side or ball.position.x >= side:
         ball.momentum.x = -ball.momentum.x
+    if ball.position.y <= -side or ball.position.y >= side:
+        ball.momentum.y = -ball.momentum.y
+    if ball.position.z <= -side or ball.position.z >= side:
+        ball.momentum.z = -ball.momentum.z
 
     renderer.render(scene, camera)
 
