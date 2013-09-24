@@ -23,6 +23,8 @@ s3 = 2 * side + thk
 
 wallR = CubeBuilder().width(thk).height(s2).depth(s3).color("red").build()
 wallR.position.x = side
+wallL = CubeBuilder().width(thk).height(s2).depth(s3).color("red").build()
+wallL.position.x = -side
 scene.add(wallR)
 
 ball = SphereBuilder().color("green").radius(0.8).build()
