@@ -16,7 +16,9 @@ scene.add(pointLight)
 
 workbench3D = Workbench(renderer, camera)
 
-i = VectorE3(1, 0, 0, False)
+i = VectorE3(1, 0, 0)
+j = VectorE3(0, 1, 0)
+k = VectorE3(0, 0, 1)
 
 side = 4.0
 thk = 0.3
@@ -56,10 +58,10 @@ def tick(t):
         ball.momentum = - i * ball.momentum * i
 
     if ball.position.y <= -side or ball.position.y >= side:
-        ball.momentum.y = -ball.momentum.y
+        ball.momentum = - j * ball.momentum * j
         
     if ball.position.z <= -side or ball.position.z >= side:
-        ball.momentum.z = -ball.momentum.z
+        ball.momentum = - k * ball.momentum * k
 
     renderer.render(scene, camera)
 
