@@ -24,8 +24,8 @@ space2D.addChild(output)
 
 quantity = ScalarE3(1) + VectorE3(2, 4, 0) + BivectorE3(6,0,0) + PseudoscalarE3(0.1)
 sphere = SphereBuilder().wireframe(True).color(0x808080).segments(12).build()
-grade1 = ArrowBuilder().color(0xFFFF00).segments(12).build()
-grade2 = ArrowBuilder().color(0xFFFF00).segments(12).build()
+grade1 = ArrowBuilder().color(0x808080).segments(12).build()
+grade2 = ArrowBuilder().color(0x808080).segments(12).build()
 grade3 = CubeBuilder().wireframe(True).color(0xFFFFFF).segments(12).build()
 probe  = ProbeE3(sphere, grade1, grade2, grade3)
 
