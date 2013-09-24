@@ -10,7 +10,7 @@ from random import random
 
 space3D = CartesianSpace()
 
-workbench3D = Workbench(space.renderer, space.camera)
+workbench3D = Workbench(space3D.renderer, space3D.camera)
 
 giant = SphereBuilder().color("red").radius(0.4).build()
 giant.position = VectorE3(-1, 0, 0)
