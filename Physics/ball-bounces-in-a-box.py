@@ -7,7 +7,7 @@ def tick(t):
     print "tick"
 
 def terminate(t):
-    return t > 5
+    return t > 1
 
 def tearDown():
     print "tearDown"
