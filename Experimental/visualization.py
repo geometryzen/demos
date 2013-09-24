@@ -9,19 +9,19 @@ space3D = CartesianSpace()
 
 workbench3D = Workbench(space3D.renderer, space3D.camera)
 
-giant = ConeBuilder().color("red").radius(0.4).build()
+giant = ConeBuilder().color("red").volume(0.1).build()
 giant.position = VectorE3(1, 0, 0)
 giant.mass     = ScalarE3(2)
 giant.momentum = VectorE3(0, -0.5, 0) * giant.mass
 space3D.add(giant)
 
-dwarf = CubeBuilder().color("yellow").volume(1).build()
+dwarf = CubeBuilder().color("yellow").volume(0.1).build()
 dwarf.position = VectorE3(4, 0, 0)
 dwarf.mass     = ScalarE3(1)
 dwarf.momentum = -giant.momentum
 space3D.add(dwarf)
 
-blob = CylinderBuilder().color("blue").volume(1).build()
+blob = CylinderBuilder().color("blue").volume(0.11).build()
 space3D.add(blob)
 
 dt = 0.02
