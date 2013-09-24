@@ -11,7 +11,7 @@ def setUp():
     print "setUp"
 
 def tick(t):
-    pass
+    renderer.render(scene, camera)
 
 def terminate(t):
     return t > 1
