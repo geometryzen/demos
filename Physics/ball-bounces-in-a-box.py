@@ -21,7 +21,8 @@ thk = 0.3
 s2 = 2 * side - thk
 s3 = 2 * side + thk
 
-wallR = CubeBuilder().build()
+wallR = CubeBuilder().color("red").build()
+wallR.position.x = side
 scene.add(wallR)
 
 ball = SphereBuilder().color("green").radius(0.8).build()
