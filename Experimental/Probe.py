@@ -29,7 +29,7 @@ grade2 = ArrowBuilder().color(0xFFFF00).segments(12).build()
 grade3 = ArrowBuilder().color(0xFFFF00).segments(12).build()
 probe  = ProbeE3(sphere, grade1, grade2, grade3)
 
-#space3D.add(probe.grade0)
+space3D.add(probe.grade0)
 space3D.add(probe.grade1)
 space3D.add(probe.grade2)
 space3D.add(probe.grade3)
