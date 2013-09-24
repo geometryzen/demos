@@ -54,7 +54,7 @@ def onDocumentKeyDown(event):
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
-    document.addEventHandler("keydown", onDocumentKeyDown, False)
+    document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(t):
     probe.quantity = quantity
@@ -66,7 +66,7 @@ def terminate(t):
     return t > timeOut
 
 def tearDown():
-    document.removeEventHandler("keydown", onDocumentKeyDown, False)
+    document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench3D.tearDown()
     workbench2D.tearDown()
 
