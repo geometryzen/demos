@@ -18,7 +18,7 @@ renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
 
 camera = PerspectiveCamera()
-camera.position.z = 5
+camera.position.z = 10
 camera.lookAt(VectorE3(0,0,0))
 
 pointLight = PointLight(0xFFFFFF);
@@ -40,7 +40,7 @@ dwarf.momentum = -giant.momentum
 scene.add(dwarf)
 
 G = 6.7e-11
-dt = 0.01
+dt = 0.1
 
 canvas2D = document.createElement("canvas")
 canvas2D.style.position = "absolute"
