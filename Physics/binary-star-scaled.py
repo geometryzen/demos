@@ -24,7 +24,7 @@ dwarf.mass     = ScalarE3(1)
 dwarf.momentum = -giant.momentum
 space3D.add(dwarf)
 
-dt = 0.01
+dt = 0.02
 
 canvas2D = document.createElement("canvas")
 canvas2D.style.position = "absolute"
