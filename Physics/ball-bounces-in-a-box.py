@@ -18,12 +18,10 @@ workbench3D = Workbench(renderer, camera)
 
 ball = SphereBuilder().color("green").radius(0.8).build()
 ball.mass = 1.0
-print ball.mass
 scene.add(ball)
 
 def setUp():
     workbench3D.setUp()
-    print "setUp"
 
 def tick(t):
     renderer.render(scene, camera)
@@ -32,7 +30,6 @@ def terminate(t):
     return t > 3
 
 def tearDown():
-    print "tearDown"
     workbench3D.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
