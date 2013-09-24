@@ -15,7 +15,7 @@ scene.add(pointLight)
 
 workbench3D = Workbench3D(renderer.domElement, renderer, camera)
 
-ball = SphereBuilder().build()
+ball = CubeBuilder().build()
 scene.add(ball)
 
 def setUp():
