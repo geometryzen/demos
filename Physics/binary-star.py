@@ -24,11 +24,13 @@ j = VectorE3(0, 1, 0)
 k = VectorE3(0, 0, 1)
 
 giant = SphereBuilder().color("red").radius(0.8).build()
+giant.position = VectorE3(-1e11, 0, 0)
 giant.mass     = ScalarE3(2e30)
 giant.momentum = VectorE3(0, 0, -1e4) * giant.mass
 #scene.add(giant)
 
 dwarf = SphereBuilder().color("yellow").radius(0.8).build()
+dwarf.position = VectorE3(1.5e11, 0, 0)
 dwarf.mass     = ScalarE3(1e30)
 dwarf.momentum = -giant.momentum
 scene.add(dwarf)
