@@ -1,7 +1,7 @@
 from browser import *
 from three import *
 from workbench import *
-from math import random
+from random import random
 
 scene = Scene()
 
