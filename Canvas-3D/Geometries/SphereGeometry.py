@@ -21,7 +21,7 @@ thetaLength = pi
 sphere = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
 
 print repr(sphere)
-#print "id:             " + str(sphere.id)
+print "id:             " + str(sphere.id)
 print "radius:         " + str(sphere.radius)
 print "widthSegments:  " + str(sphere.widthSegments)
 print "heightSegments: " + str(sphere.heightSegments)
