@@ -29,7 +29,7 @@ scene.add(ball)
 #print ball.material
 print ball.geometry.uuid
 
-#side = side - thk * 0.5 - ball.size.x / 2
+side = side - thk * 0.5 - ball.geometry.radius
 
 def setUp():
     workbench3D.setUp()
