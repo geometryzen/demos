@@ -52,6 +52,7 @@ output.y = window.innerHeight / 2
 space2D.addChild(output)
 
 def setUp():
+    workbench2D.setUp()
     workbench3D.setUp()
 
 def tick(t):
@@ -63,6 +64,8 @@ def tick(t):
     for star in [giant, dwarf]:
         star.position += (star.momentum / star.mass) * dt
     
+    output.text = repr(r)
+    
     renderer.render(scene, camera)
 
 def terminate(t):
@@ -70,5 +73,6 @@ def terminate(t):
 
 def tearDown():
     workbench3D.tearDown()
+    workbench2D.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
