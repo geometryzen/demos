@@ -15,7 +15,8 @@ scene.add(pointLight)
 
 workbench3D = Workbench(renderer, camera)
 
-ball = CubeBuilder().volume(1).build()
+material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3})
+ball = CubeBuilder().volume(1).material(material).build()
 scene.add(ball)
 
 def setUp():
