@@ -13,7 +13,7 @@ renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
 
 camera = PerspectiveCamera(50,1,0.1, 1e30)
-camera.position.z = 1e12
+camera.position.z = 1e13
 
 pointLight = PointLight(0xFFFFFF);
 pointLight.position = camera.position
@@ -51,7 +51,7 @@ def tick(t):
     renderer.render(scene, camera)
 
 def terminate(t):
-    return t > 10
+    return t > 100
 
 def tearDown():
     workbench3D.tearDown()
