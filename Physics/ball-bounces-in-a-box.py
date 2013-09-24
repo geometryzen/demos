@@ -1,15 +1,15 @@
 
 
 def setUp():
-    pass
+    print "setUp"
 
 def tick(t):
-    pass
+    print "tick"
 
 def terminate(t)
     return t > 5
 
 def tearDown():
-    pass
+    print "tearDown"
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
