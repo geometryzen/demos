@@ -15,7 +15,7 @@ giant.mass     = ScalarE3(2)
 giant.momentum = VectorE3(0, -0.5, 0) * giant.mass
 space3D.add(giant)
 
-dwarf = SphereBuilder().color("yellow").radius(0.2).build()
+dwarf = CubeBuilder().color("yellow").radius(0.2).build()
 dwarf.position = VectorE3(4, 0, 0)
 dwarf.mass     = ScalarE3(1)
 dwarf.momentum = -giant.momentum
