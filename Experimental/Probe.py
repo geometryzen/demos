@@ -23,11 +23,11 @@ output.y = window.innerHeight / 2
 space2D.addChild(output)
 
 quantity = ScalarE3(1) + VectorE3(2, 4, 0) + BivectorE3(6,0,0) + PseudoscalarE3(0.1)
-sphere = SphereBuilder().wireframe(True).color(0x808080).segments(12).build()
+grade0 = SphereBuilder().wireframe(True).color(0x808080).segments(12).build()
 grade1 = ArrowBuilder().color(0x808080).segments(12).build()
 grade2 = ArrowBuilder().color(0x808080).segments(12).build()
 grade3 = CubeBuilder().wireframe(True).color(0xFFFFFF).segments(1).build()
-probe  = ProbeE3(sphere, grade1, grade2, grade3)
+probe  = ProbeE3(grade0, grade1, grade2, grade3)
 
 space3D.add(probe.grade0)
 space3D.add(probe.grade1)
