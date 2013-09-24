@@ -4,7 +4,7 @@ def setUp():
     print "setUp"
 
 def tick(t):
-    print "tick"
+    pass
 
 def terminate(t):
     return t > 1
