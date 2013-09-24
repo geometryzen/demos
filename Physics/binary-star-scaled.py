@@ -1,6 +1,3 @@
-'''
-The binary star problem with scaling.
-'''
 from browser import *
 from easel import *
 from three import *
