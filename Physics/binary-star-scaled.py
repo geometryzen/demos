@@ -26,7 +26,7 @@ workbench3D = Workbench(renderer, camera)
 giant = SphereBuilder().color("red").radius(0.4).build()
 giant.position = VectorE3(-1, 0, 0)
 giant.mass     = ScalarE3(2)
-giant.momentum = VectorE3(0, 0, 0.01) * giant.mass
+giant.momentum = VectorE3(0, 0, -0.1) * giant.mass
 scene.add(giant)
 
 dwarf = SphereBuilder().color("yellow").radius(0.2).build()
