@@ -34,7 +34,7 @@ dwarf.momentum = -giant.momentum
 scene.add(dwarf)
 
 G = 6.7e-11
-dt = 0.1
+dt = 0.05
 
 def setUp():
     workbench3D.setUp()
