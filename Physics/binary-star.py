@@ -22,35 +22,17 @@ i = VectorE3(1, 0, 0)
 j = VectorE3(0, 1, 0)
 k = VectorE3(0, 0, 1)
 
-side = 4.0
-thk = 0.3
-s2 = 2 * side - thk
-s3 = 2 * side + thk
+giant = SphereBuilder().color("red").radius(0.8).build()
+giant.mass     = ScalarE3(1e30)
+giant.momentum = VectorE3(0, 0, -1e4) * giant.mass
+scene.add(giant)
 
-ball = SphereBuilder().color("green").radius(0.8).build()
-# This could equally well be done by using the velocity as the variable to describe the motion.
-ball.mass     = ScalarE3(1.0)
-ball.momentum = VectorE3(random(), random(), random())
-scene.add(ball)
-
-side = side - thk * 0.5 - ball.geometry.radius
 dt = 0.3
 
 def setUp():
     workbench3D.setUp()
 
 def tick(t):
-    ball.position += (ball.momentum / ball.mass) * dt
-    # Use a scalar product to project the ball position.
-    # Use a geometric vector sandwich to compute the reflection. 
-    if abs(ball.position % i) >= side:
-        ball.momentum = - i * ball.momentum * i
-
-    if abs(ball.position % j) >= side:
-        ball.momentum = - j * ball.momentum * j
-        
-    if abs(ball.position % k) >= side:
-        ball.momentum = - k * ball.momentum * k
 
     renderer.render(scene, camera)
 
