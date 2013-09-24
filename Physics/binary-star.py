@@ -34,7 +34,7 @@ dwarf.momentum = -giant.momentum
 scene.add(dwarf)
 
 G = 6.7e-11
-dt = 1e5
+dt = 0.1
 
 def setUp():
     workbench3D.setUp()
@@ -51,7 +51,7 @@ def tick(t):
     renderer.render(scene, camera)
 
 def terminate(t):
-    return t > 100
+    return t > 10
 
 def tearDown():
     workbench3D.tearDown()
