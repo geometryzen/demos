@@ -2,6 +2,7 @@
 Looks like we may have some scaling problems here.
 '''
 from browser import *
+from easel import *
 from three import *
 from workbench import *
 from math import pow
