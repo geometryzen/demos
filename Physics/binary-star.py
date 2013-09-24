@@ -2,7 +2,7 @@
 from browser import *
 from three import *
 from workbench import *
-from marh import pow
+from math import pow
 from random import random
 
 scene = Scene()
