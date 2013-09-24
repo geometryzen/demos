@@ -53,7 +53,7 @@ def setUp():
     workbench3D.setUp()
 
 def tick(t):
-    ball.position += (ball.momentum/ball.mass)* t * 60
+    ball.position += (ball.momentum/ball.mass)* t * 5
     if abs(ball.position % i) >= side:
         ball.momentum = - i * ball.momentum * i
 
