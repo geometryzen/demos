@@ -10,7 +10,7 @@ scene = Scene()
 renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
 
-camera = PerspectiveCamera()
+camera = PerspectiveCamera(50,1,0.1,1e20)
 camera.position.z = 15
 
 pointLight = PointLight(0xFFFFFF);
