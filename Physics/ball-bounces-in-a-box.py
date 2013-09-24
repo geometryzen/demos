@@ -1,5 +1,6 @@
 from browser import *
 from three import *
+from geomerty import *
 
 scene = Scene()
 
