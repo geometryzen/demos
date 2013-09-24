@@ -1,6 +1,7 @@
 from browser import *
 from three import *
 from workbench import *
+from math import random
 
 scene = Scene()
 
@@ -43,7 +44,7 @@ scene.add(wallZ)
 
 ball = SphereBuilder().color("green").radius(0.8).build()
 ball.mass     = ScalarE3(1.0)
-ball.momentum = VectorE3(-0.15, -0.23, +0.27)
+ball.momentum = VectorE3(random(), random(), random())
 scene.add(ball)
 
 side = side - thk * 0.5 - ball.geometry.radius
