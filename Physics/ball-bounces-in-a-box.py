@@ -27,7 +27,7 @@ ball.momentum = VectorE3(-0.15, -0.23, +0.27)
 scene.add(ball)
 
 #print ball.material
-print ball.geometry
+print ball.geometry.uuid
 
 #side = side - thk * 0.5 - ball.size.x / 2
 
