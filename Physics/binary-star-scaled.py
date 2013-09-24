@@ -1,9 +1,5 @@
 '''
-The binary star problem with the following scaling:
-mass unit is 1e30 kg
-length unit is 1e11 m
-time unit is 1e11 sec
-speed unit is then 1e-19
+The binary star problem with scaling.
 '''
 from browser import *
 from easel import *
@@ -30,7 +26,7 @@ workbench3D = Workbench(renderer, camera)
 giant = SphereBuilder().color("red").radius(0.4).build()
 giant.position = VectorE3(-1, 0, 0)
 giant.mass     = ScalarE3(2)
-giant.momentum = VectorE3(0, 0, -1e-7) * giant.mass
+giant.momentum = VectorE3(0, 0, 0) * giant.mass
 scene.add(giant)
 
 dwarf = SphereBuilder().color("yellow").radius(0.2).build()
@@ -39,7 +35,6 @@ dwarf.mass     = ScalarE3(1)
 dwarf.momentum = -giant.momentum
 scene.add(dwarf)
 
-G = 6.7e-11
 dt = 0.01
 
 canvas2D = document.createElement("canvas")
