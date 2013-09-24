@@ -1,4 +1,6 @@
-# binary-star.py
+'''
+Looks like we may have some scaling problems here.
+'''
 from browser import *
 from three import *
 from workbench import *
