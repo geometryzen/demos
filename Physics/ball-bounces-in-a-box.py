@@ -48,7 +48,7 @@ ball.momentum = VectorE3(random(), random(), random())
 scene.add(ball)
 
 side = side - thk * 0.5 - ball.geometry.radius
-dt = 0.1
+dt = 0.2
 
 def setUp():
     workbench3D.setUp()
