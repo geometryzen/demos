@@ -43,6 +43,7 @@ scene.add(wallT)
 scene.add(wallZ)
 
 ball = SphereBuilder().color("green").radius(0.8).build()
+# This could equally well be done by using the velocity as the variable to describe the motion.
 ball.mass     = ScalarE3(1.0)
 ball.momentum = VectorE3(random(), random(), random())
 scene.add(ball)
@@ -54,7 +55,9 @@ def setUp():
     workbench3D.setUp()
 
 def tick(t):
-    ball.position += (ball.momentum/ball.mass) * dt
+    ball.position += (ball.momentum / ball.mass) * dt
+    # Use a scalar product to project the ball position.
+    # Use a geometric vector sandwich to compute the reflection. 
     if abs(ball.position % i) >= side:
         ball.momentum = - i * ball.momentum * i
 
