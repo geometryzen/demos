@@ -22,7 +22,7 @@ output.x = window.innerWidth / 2
 output.y = window.innerHeight / 2
 space2D.addChild(output)
 
-quantity = VectorE3(2, 4, 0) + BivectorE3(1,0,0)
+quantity = VectorE3(2, 4, 0) + BivectorE3(6,0,0)
 sphere = SphereBuilder().color(0xFFFF00).build()
 grade1 = ArrowBuilder().color(0xFFFF00).segments(12).build()
 grade2 = ArrowBuilder().color(0xFFFF00).segments(12).build()
