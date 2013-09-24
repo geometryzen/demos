@@ -8,7 +8,7 @@ from workbench import *
 from math import pow
 from random import random
 
-space = CartesianSpace()
+space3D = CartesianSpace()
 
 workbench3D = Workbench(space.renderer, space.camera)
 
@@ -16,13 +16,13 @@ giant = SphereBuilder().color("red").radius(0.4).build()
 giant.position = VectorE3(-1, 0, 0)
 giant.mass     = ScalarE3(2)
 giant.momentum = VectorE3(0, -0.5, 0) * giant.mass
-space.add(giant)
+space3D.add(giant)
 
 dwarf = SphereBuilder().color("yellow").radius(0.2).build()
 dwarf.position = VectorE3(1.5, 0, 0)
 dwarf.mass     = ScalarE3(1)
 dwarf.momentum = -giant.momentum
-space.add(dwarf)
+space3D.add(dwarf)
 
 dt = 0.01
 
@@ -53,9 +53,7 @@ def tick(t):
     for star in [giant, dwarf]:
         star.position = star.position + (star.momentum / star.mass) * dt
     
-    output.text = repr(F)
-    
-    space.render()
+    space3D.render()
     space2D.update()
 
 def terminate(t):
