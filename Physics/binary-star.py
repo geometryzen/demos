@@ -64,7 +64,7 @@ def tick(t):
     for star in [giant, dwarf]:
         star.position += (star.momentum / star.mass) * dt
     
-    output.text = repr(r)
+    output.text = repr(F)
     
     renderer.render(scene, camera)
     space2D.update()
