@@ -15,7 +15,7 @@ camera.position.z = 5
 
 workbench3D = Workbench(renderer, camera)
 
-ball = SphereBuilder().material(material).build()
+ball = SphereBuilder().build()
 scene.add(ball)
 
 def setUp():
