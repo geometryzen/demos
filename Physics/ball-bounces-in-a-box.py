@@ -15,7 +15,7 @@ camera.position.z = 5
 
 workbench3D = Workbench(renderer, camera)
 
-ball = SphereBuilder().wireframe(True).wireframeLinewidth(1).build()
+ball = SphereBuilder().build()
 scene.add(ball)
 
 def setUp():
