@@ -44,7 +44,7 @@ def tick(t):
     renderer.render(scene, camera)
 
 def terminate(t):
-    return t > 60
+    return t > 10
 
 def tearDown():
     workbench3D.tearDown()
