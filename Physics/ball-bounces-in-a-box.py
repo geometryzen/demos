@@ -29,10 +29,13 @@ wallB = CubeBuilder().width(s3).height(thk).depth(s3).color("blue").build()
 wallB.position.y = -side
 wallT = CubeBuilder().width(s3).height(thk).depth(s3).color("blue").build()
 wallT.position.y = +side
+wallZ = CubeBuilder().width(s2).height(s2).depth(thk).color("gray").build()
+wallZ.position.z = -side
 scene.add(wallR)
 scene.add(wallL)
 scene.add(wallB)
 scene.add(wallT)
+scene.add(wallZ)
 
 ball = SphereBuilder().color("green").radius(0.8).build()
 ball.mass     = ScalarE3(1.0)
