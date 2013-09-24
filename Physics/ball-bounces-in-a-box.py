@@ -11,6 +11,7 @@ camera = PerspectiveCamera()
 camera.position.z = 5
 
 pointLight = PointLight(0xFFFFFF);
+pointLight.position = camera.position
 scene.add(pointLight)
 
 workbench3D = Workbench(renderer, camera)
