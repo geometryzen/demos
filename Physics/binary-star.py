@@ -67,6 +67,7 @@ def tick(t):
     output.text = repr(r)
     
     renderer.render(scene, camera)
+    space2D.update()
 
 def terminate(t):
     return t > 60
