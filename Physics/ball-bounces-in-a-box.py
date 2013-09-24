@@ -5,7 +5,7 @@ from workbench import *
 scene = Scene()
 
 renderer = WebGLRenderer()
-renderer.setClearColor(Color(0x080808), 1.0)
+renderer.setClearColor(Color(0x080808), 1.0, 0.7)
 
 camera = PerspectiveCamera(50, 1)
 print camera
