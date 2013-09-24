@@ -7,7 +7,10 @@ renderer = WebGLRenderer()
 
 camera = PerspectiveCamera()
 
+workbench3D = Workbench3D(renderer.domElement, renderer, camera)
+
 def setUp():
+    workbench3D.setUp()
     print "setUp"
 
 def tick(t):
@@ -18,5 +21,6 @@ def terminate(t):
 
 def tearDown():
     print "tearDown"
+    workbench3D.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
