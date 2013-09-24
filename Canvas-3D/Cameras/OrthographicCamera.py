@@ -46,7 +46,7 @@ def discardCanvases():
 
 def setUp():
     print "Hello!"
-    print "This example will end automatically in "+str(progressEnd/1000)+" seconds."
+    print "This example will end automatically in "+str(progressEnd)+" seconds."
     discardCanvases()
     if (useLargeCanvas):
         document.body.insertBefore(renderer.domElement, document.body.firstChild)
