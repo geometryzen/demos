@@ -42,10 +42,16 @@ def setUp():
 def tick(t):
     r = dwarf.position - giant.position
     F = G * giant.mass * dwarf.mass * r / pow(r % r, 3/2)
+    giant.momentum += F * dt
+    dwarf.momentum -= F * dt
+    
+    for star in [giant, dwarf]:
+        star.position += (star.momentum / star.mass) * dt
+    
     renderer.render(scene, camera)
 
 def terminate(t):
-    return t > 10
+    return t > 1
 
 def tearDown():
     workbench3D.tearDown()
