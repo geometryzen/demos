@@ -9,6 +9,8 @@ renderer.setClearColor(0x000000,1)
 
 camera = PerspectiveCamera()
 
+pointLight = PointLight();
+
 workbench3D = Workbench3D(renderer.domElement, renderer, camera)
 
 ball = SphereBuilder().build()
