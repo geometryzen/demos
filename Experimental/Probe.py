@@ -20,8 +20,8 @@ space2D = Stage(canvas2D)
 space2D.autoClear = True
 
 output = Text("", "20px Helvetica", "white")
-output.x = window.innerWidth / 2
-output.y = window.innerHeight / 2
+output.x = 100
+output.y = 100
 space2D.addChild(output)
 
 quantity = ScalarE3(1) + VectorE3(2, 4, 0) + BivectorE3(5,0,0) + PseudoscalarE3(8)
