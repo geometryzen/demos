@@ -1,4 +1,4 @@
-
+from browser import *
 
 def setUp():
     print "setUp"
