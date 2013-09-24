@@ -13,7 +13,7 @@ camera.position.z = 5
 pointLight = PointLight(0xFFFFFF);
 scene.add(pointLight)
 
-workbench3D = Workbench3D(renderer.domElement, renderer, camera)
+workbench3D = Workbench(renderer, camera)
 
 ball = CubeBuilder().volume(1).build()
 scene.add(ball)
