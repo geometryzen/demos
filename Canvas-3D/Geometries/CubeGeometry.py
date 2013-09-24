@@ -28,7 +28,7 @@ print "depthSegments:  " + str(cube.depthSegments)
 print cube
 
 mesh = Mesh(cube, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3}))
-mesh = CubeBuilder().build()
+mesh = CubeBuilder().width(width).height(height).depth(depth).wireframe(True).build()
 scene.add(mesh)
 
 timeOut = 6
