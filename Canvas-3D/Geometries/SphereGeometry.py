@@ -19,7 +19,7 @@ phiLength = 2 * pi
 thetaStart = 0
 thetaLength = pi
 sphere = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength)
-#sphere.name = "xyz"
+sphere.name = "xyz"
 
 print repr(sphere)
 print "id:             " + str(sphere.id)
