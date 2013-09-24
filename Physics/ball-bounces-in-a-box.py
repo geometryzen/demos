@@ -1,6 +1,6 @@
 from browser import *
 from three import *
-from geometry import *
+from workbench import *
 
 scene = Scene()
 
