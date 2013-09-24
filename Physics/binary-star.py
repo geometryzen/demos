@@ -47,6 +47,7 @@ def tick(t):
     
     for star in [giant, dwarf]:
         star.position += (star.momentum / star.mass) * dt
+        print star.position
     
     renderer.render(scene, camera)
 
