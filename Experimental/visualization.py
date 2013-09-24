@@ -1,97 +1,68 @@
-from e3ga import *
-from three import *
 from browser import *
-from math import pi,sqrt
+from easel import *
+from three import *
+from workbench import *
+from math import pow
+from random import random
 
-i = VectorE3(1,0,0)
-j = VectorE3(0,1,0)
-k = VectorE3(0,0,1)
+space3D = CartesianSpace()
 
-for canvas in document.getElementsByTagName("canvas"):
-    canvas.parentNode.removeChild(canvas)
+workbench3D = Workbench(space3D.renderer, space3D.camera)
 
-scene = Scene()
+giant = SphereBuilder().color("red").radius(0.4).build()
+giant.position = VectorE3(1, 0, 0)
+giant.mass     = ScalarE3(2)
+giant.momentum = VectorE3(0, -0.5, 0) * giant.mass
+space3D.add(giant)
 
-camera  = PerspectiveCamera(45, 1.0, 0.1, 1000)
-camera.up.set(0, 0, 1)
-camera.position.set(3, 3, 3)
-camera.lookAt(scene.position)
+dwarf = SphereBuilder().color("yellow").radius(0.2).build()
+dwarf.position = VectorE3(4, 0, 0)
+dwarf.mass     = ScalarE3(1)
+dwarf.momentum = -giant.momentum
+space3D.add(dwarf)
 
-renderer = WebGLRenderer()
-renderer.autoClear = True
-renderer.gammaInput = True
-renderer.gammaOutput = True
-renderer.setClearColor(Color(0x080808), 1.0)
+blob = SphereBuilder().color("blue").radius(0.1).build()
+space3D.add(blob)
 
-container = document.getElementById("canvas-container")
-container.appendChild(renderer.domElement)
+dt = 0.02
 
-redWire = MeshLambertMaterial({"color":0xFF0000})
-grnWire = MeshLambertMaterial({"color":0x00FF00})
-bluWire = MeshLambertMaterial({"color":0x0000FF})
-yloWire = MeshBasicMaterial({"color":0xFFFF00,"wireframe":True, "wireframeLinewidth":2})
+canvas2D = document.createElement("canvas")
+canvas2D.style.position = "absolute"
+canvas2D.style.top = "0px"
+canvas2D.style.left = "0px"
+workbench2D = Workbench2D(canvas2D)
+space2D = Stage(canvas2D)
+space2D.autoClear = True
 
-redGeom = ArrowGeometry()
-grnGeom = ArrowGeometry()
-bluGeom = ArrowGeometry()
-quarters = 2
-yloGeom = CircleGeometry(1, 8 * quarters, 0, pi*quarters/2)
 
-redMesh = Mesh(redGeom, redWire)
-grnMesh = Mesh(bluGeom, grnWire)
-bluMesh = Mesh(grnGeom, bluWire)
-yloMesh = Mesh(yloGeom, yloWire)
-# lookAt is an alternate way of performing a rotation.
-# lookAt aligns the arrow with the specified vector.
-# It depends on the position of the arrow.
-redMesh.lookAt(VectorE3(1,0,0))
-grnMesh.lookAt(VectorE3(0,1,0))
-grnMesh.visible = True
-yloMesh.useQuaternion = True
-a = k # from vector
-b = (k + j) / sqrt(2)
-R = (1 + b * a)/(a + b).length()
-print "R => " + repr(R)
-yloMesh.attitude = R
-
-print "position   => " + str(bluMesh.position)
-print "attitude   => " + str(bluMesh.attitude)
-print "rotation   => " + str(bluMesh.rotation)
-print "eulerOrder => " + str(bluMesh.eulerOrder)
-print "scale      => " + str(bluMesh.scale)
-print "visible    => " + str(bluMesh.visible)
-
-scene.add(redMesh)
-scene.add(bluMesh)
-scene.add(grnMesh)
-scene.add(yloMesh)
-
-pointLight = PointLight(0x888888)
-pointLight.position.set(20, 20, 20)
-scene.add(pointLight)
-
-directionalLight = DirectionalLight(0x888888)
-directionalLight.position.set(0, 1, 0)
-scene.add(directionalLight)
+output = Text("", "20px Helvetica", "white")
+output.x = window.innerWidth / 2
+output.y = window.innerHeight / 2
+space2D.addChild(output)
 
 def setUp():
-    window.addEventListener("resize", onWindowResize, False)
-    onWindowResize(None)
+    workbench2D.setUp()
+    workbench3D.setUp()
 
-def tick(elapsed):
-    renderer.render(scene, camera)
+def tick(t):
+    r = dwarf.position - giant.position
+    F = giant.mass * dwarf.mass * r / pow(r % r, 3/2)
+    giant.momentum = giant.momentum + F * dt
+    dwarf.momentum = dwarf.momentum - F * dt
+    
+    for star in [giant, dwarf]:
+        star.position = star.position + (star.momentum / star.mass) * dt
 
-def terminate(elapsed):
-    return elapsed > 6000
+    blob.position = (giant.position * giant.mass + dwarf.position * dwarf.mass) / (giant.mass + dwarf.mass)
+    
+    space3D.render()
+    space2D.update()
+
+def terminate(t):
+    return t > 120
 
 def tearDown():
-    window.removeEventListener("resize", onWindowResize, False)
-    for canvas in document.getElementsByTagName("canvas"):
-        canvas.parentNode.removeChild(canvas)
-
-def onWindowResize(event):
-    camera.aspect = window.innerWidth / window.innerHeight
-    camera.updateProjectionMatrix()
-    renderer.size = (window.innerWidth, window.innerHeight)
+    workbench3D.tearDown()
+    workbench2D.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
