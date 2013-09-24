@@ -24,8 +24,8 @@ dwarf.mass     = ScalarE3(1)
 dwarf.momentum = -giant.momentum
 space3D.add(dwarf)
 
-blob = SphereBuilder().color("blue").radius(0.1).build()
-space3D.add(blob)
+com = SphereBuilder().color("white").radius(0.1).build()
+space3D.add(com)
 
 dt = 0.02
 
@@ -56,7 +56,7 @@ def tick(t):
     for star in [giant, dwarf]:
         star.position = star.position + (star.momentum / star.mass) * dt
 
-    blob.position = (giant.position * giant.mass + dwarf.position * dwarf.mass) / (giant.mass + dwarf.mass)
+    com.position = (giant.position * giant.mass + dwarf.position * dwarf.mass) / (giant.mass + dwarf.mass)
     
     space3D.render()
     space2D.update()
