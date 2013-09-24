@@ -22,6 +22,7 @@ sphere = SphereGeometry(radius, widthSegments, heightSegments, phiStart, phiLeng
 
 print repr(sphere)
 print "id:             " + str(sphere.id)
+print "uuid:           " + str(sphere.uuid)
 print "radius:         " + str(sphere.radius)
 print "widthSegments:  " + str(sphere.widthSegments)
 print "heightSegments: " + str(sphere.heightSegments)
