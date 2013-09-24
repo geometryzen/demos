@@ -17,6 +17,7 @@ scene.add(pointLight)
 workbench3D = Workbench(renderer, camera)
 
 ball = SphereBuilder().color("green").radius(0.8).build()
+ball.mass = 1.0
 scene.add(ball)
 
 def setUp():
