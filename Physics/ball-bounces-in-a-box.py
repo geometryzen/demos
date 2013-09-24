@@ -34,6 +34,9 @@ def setUp():
 
 def tick(t):
     ball.position = ball.position + (ball.momentum/ball.mass)*dt
+    if ball.position.x <= -side || ball.position.x >= side:
+        ball.momentum.x = -ball.momentum.x
+
     renderer.render(scene, camera)
 
 def terminate(t):
