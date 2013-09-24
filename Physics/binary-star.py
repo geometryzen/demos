@@ -35,7 +35,7 @@ dwarf.momentum = -giant.momentum
 scene.add(dwarf)
 
 G = 6.7e-11
-dt = 0.05
+dt = 1
 
 canvas2D = document.createElement("canvas")
 canvas2D.style.position = "absolute"
