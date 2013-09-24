@@ -2,6 +2,7 @@
 from browser import *
 from three import *
 from workbench import *
+from marh import pow
 from random import random
 
 scene = Scene()
@@ -32,13 +33,15 @@ dwarf.mass     = ScalarE3(1e30)
 dwarf.momentum = -giant.momentum
 scene.add(dwarf)
 
+G = 6.7e-11
 dt = 0.3
 
 def setUp():
     workbench3D.setUp()
 
 def tick(t):
-
+    r = dwarf.position - giant.position
+    F = G * giant.mass * dwarf.mass * r / pow(r % r, 3/2)
     renderer.render(scene, camera)
 
 def terminate(t):
