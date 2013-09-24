@@ -9,7 +9,7 @@ renderer.setClearColor(0x000000,1)
 
 camera = PerspectiveCamera()
 
-pointLight = PointLight();
+pointLight = PointLight(0xFFFFFF);
 
 workbench3D = Workbench3D(renderer.domElement, renderer, camera)
 
