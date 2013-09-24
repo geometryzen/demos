@@ -11,6 +11,9 @@ camera = PerspectiveCamera()
 
 workbench3D = Workbench3D(renderer.domElement, renderer, camera)
 
+ball = SphereBuilder().build()
+scene.add(ball)
+
 def setUp():
     workbench3D.setUp()
     print "setUp"
