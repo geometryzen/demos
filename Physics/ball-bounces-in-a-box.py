@@ -26,15 +26,14 @@ ball.mass     = ScalarE3(1.0)
 ball.momentum = VectorE3(-0.15, -0.23, +0.27)
 scene.add(ball)
 
-#print ball.material
-print ball.geometry.uuid
-
 side = side - thk * 0.5 - ball.geometry.radius
+dt = 0.3
 
 def setUp():
     workbench3D.setUp()
 
 def tick(t):
+    ball.position = ball.position + (ball.momentum/ball.mass)*dt
     renderer.render(scene, camera)
 
 def terminate(t):
