@@ -24,8 +24,10 @@ space2D.addChild(output)
 
 quantity = VectorE3(2, 4, 0)
 sphere = SphereBuilder().color(0xFFFF00).build()
-arrow  = ArrowBuilder().color(0xFFFF00).segments(12).build()
-probe  = ProbeE3(sphere, arrow)
+grade1 = ArrowBuilder().color(0xFFFF00).segments(12).build()
+grade2 = ArrowBuilder().color(0xFFFF00).segments(12).build()
+grade3 = ArrowBuilder().color(0xFFFF00).segments(12).build()
+probe  = ProbeE3(sphere, grade1, grade2, grade3)
 
 #space3D.add(probe.grade0)
 space3D.add(probe.grade1)
