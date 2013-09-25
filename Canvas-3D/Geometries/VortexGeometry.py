@@ -14,7 +14,7 @@ radiusShaft = 0.1
 radialSegments = 32
 arrowSegments = 8
 
-vortex = VortexGeometry(radius, radiusShaft, radialSegments, arrowSegments)
+vortex = VortexGeometry(radius, radiusCone, radiusShaft, radialSegments, arrowSegments)
 vortex.name = "Maxwell"
 
 print repr(vortex)
