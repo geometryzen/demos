@@ -2,16 +2,7 @@ from three import *
 from browser import *
 from workbench import *
 
-scene = Scene()
-
-camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-camera.position.z = 100
-
-renderer = WebGLRenderer()
-renderer.autoClear = True
-renderer.gammaInput = True
-renderer.gammaOutput = True
-renderer.setClearColor(Color(0x080808), 1.0)
+space = CartesianSpace()
 
 radiusCone = 20
 radiusShaft = 10
@@ -27,9 +18,9 @@ arrow = LatheGeometry(points, 25)
 
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3})
 mesh = Mesh(arrow, material)
-scene.add(mesh)
+space.add(mesh)
 
-workbench = Workbench(renderer, camera)
+workbench = Workbench(space.renderer, space.camera)
 
 def setUp():
     workbench.setUp()
