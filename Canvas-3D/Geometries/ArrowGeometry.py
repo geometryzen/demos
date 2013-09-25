@@ -10,7 +10,8 @@ segments = 12
 radiusShaft = 0.01
 radiusCone = 0.08
 lengthCone = 0.2
-arrow = ArrowGeometry(length)
+material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1})
+arrow = ArrowBuilder().build()
 arrow.name = 'Foo'
 
 print repr(arrow)
@@ -18,9 +19,7 @@ print "uuid:            " + str(arrow.uuid)
 print "name:            " + str(arrow.name)
 print arrow
 
-material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1})
-mesh = Mesh(arrow, material)
-space.add(mesh)
+space.add(arrow)
 
 workbench = Workbench(space.renderer, space.camera)
 
