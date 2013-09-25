@@ -6,6 +6,8 @@ from browser import *
 from workbench import *
 from math import pi
 
+timeOut = 60
+
 space = CartesianSpace()
 
 radius = 4
@@ -33,8 +35,24 @@ space.add(mesh)
 
 workbench = Workbench3D(space.renderer.canvas, space.renderer, space.camera)
 
+def escKey(event, downFlag):
+    event.preventDefault()
+    global timeOut
+    timeOut = 0
+
+keyHandlers = {
+ 27: escKey
+}
+    
+def onDocumentKeyDown(event):
+    try:
+        keyHandlers[event.keyCode](event, True)
+    except:
+        pass
+
 def setUp():
     workbench.setUp()
+    document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(elapsed):
     space.render()
@@ -43,6 +61,7 @@ def terminate(elapsed):
     return elapsed > 3
 
 def tearDown():
+    document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
