@@ -11,10 +11,10 @@ depthSegments = 8
 plane = PlaneGeometry(width, depth, widthSegments, depthSegments)
 
 print repr(plane)
-print "width:          " + str(plane.width)
-print "depth:          " + str(plane.depth)
-print "widthSegments:  " + str(plane.widthSegments)
-print "heightSegments: " + str(plane.heightSegments)
+print "width:         " + str(plane.width)
+print "depth:         " + str(plane.depth)
+print "widthSegments: " + str(plane.widthSegments)
+print "depthSegments: " + str(plane.depthSegments)
 print plane
 
 mesh = Mesh(plane, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
