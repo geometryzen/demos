@@ -2,13 +2,7 @@ from three import *
 from browser import *
 from workbench import *
 
-scene = Scene()
-
-camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-camera.position.z = 1.3
-
-renderer = WebGLRenderer()
-renderer.setClearColor(Color(0x080808), 1.0)
+space = CartesianSpace()
 
 # All arguments are optional and the defaults, in order, are as follows.
 length = 1
@@ -26,12 +20,12 @@ print arrow
 
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3})
 mesh = Mesh(arrow, material)
-scene.add(mesh)
+space.add(mesh)
 
-workbench = Workbench(renderer, camera)
+workbench = Workbench(space.renderer, space.camera)
 
 def tick(t):
-    renderer.render(scene, camera)
+    space.render()
     
 def terminate(t):
     return t > 10
