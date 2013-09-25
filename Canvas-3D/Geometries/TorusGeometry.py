@@ -7,7 +7,7 @@ space = CartesianSpace()
 
 radius = 2
 tube = 0.5
-radialSegments = 32
+radialSegments = 32.0
 tubularSegments = 24
 arc = 2.0 * pi
 
