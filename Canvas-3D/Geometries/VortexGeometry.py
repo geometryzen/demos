@@ -9,7 +9,8 @@ from math import pi
 space = CartesianSpace()
 
 radius = 2
-radiusShaft = 0.3
+radiusCone = 0.08
+radiusShaft = 0.01
 radialSegments = 32
 tubularSegments = 24
 arc = pi / 2
