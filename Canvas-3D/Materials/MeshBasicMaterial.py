@@ -1,7 +1,5 @@
-# MeshBasicMaterial demonstration.
 from three import *
 from browser import *
-from math import pi
 
 for canvas in document.getElementsByTagName("canvas"):
     canvas.parentNode.removeChild(canvas)
@@ -42,42 +40,26 @@ mesh = Mesh(SphereGeometry(50, 32, 24), material)
 
 scene.add(mesh)
 
-requestID = None
-progress = None
-progressEnd = 6000
-startTime = None
+timeOut = 6
 
-def render():
+def setUp():
+    window.addEventListener("resize", onWindowResize, False)
+
+def tick(t):
     mesh.rotation.x = mesh.rotation.x + 0.02
     mesh.rotation.y = mesh.rotation.y + 0.02
     mesh.rotation.z = mesh.rotation.z + 0.02
-        
     renderer.render(scene, camera)
+    
+def terminate(t):
+    return t > timeOut
+
+def tearDown():
+    window.removeEventListener("resize", onWindowResize, False)
 
 def onWindowResize(event):
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
     renderer.size = (window.innerWidth, window.innerHeight)
-    
-def step(timestamp):
-    global requestID, progress, startTime
-    if (startTime):
-        progress = timestamp - startTime
-    else:
-        if (timestamp):
-            startTime = timestamp
-        else:
-            progress = 0
-        
-    if (progress < progressEnd):
-        requestID = window.requestAnimationFrame(step)
-        render()
-    else:
-        window.cancelAnimationFrame(requestID)
-        # container.removeChild(renderer.domElement)
 
-window.addEventListener("resize", onWindowResize, False)
-
-onWindowResize(None)
-
-step(None)
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
