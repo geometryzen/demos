@@ -11,8 +11,8 @@ timeOut = 60
 space = CartesianSpace()
 
 radius = 4
-radiusCone = 0.8
-radiusShaft = 0.1
+radiusCone = 0.08
+radiusShaft = 0.01
 radialSegments = 32
 arrowSegments = 8
 
