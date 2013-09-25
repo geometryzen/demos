@@ -67,7 +67,7 @@ def tick(t):
     output.text = repr(quantity)
 
     space3D.render()
-    space2D.update()
+    space2D.render()
 
 def terminate(t):
     return done
