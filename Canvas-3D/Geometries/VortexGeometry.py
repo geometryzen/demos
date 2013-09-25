@@ -14,21 +14,21 @@ radialSegments = 32
 tubularSegments = 24
 arc = pi / 2
 
-torus = VortexGeometry(radius, radiusShaft, radialSegments, tubularSegments, arc)
-torus.name = "Maxwell"
+vortex = VortexGeometry(radius, radiusShaft, radialSegments, tubularSegments, arc)
+vortex.name = "Maxwell"
 
-print repr(torus)
-print "id:             " + str(torus.id)
-print "name:           " + str(torus.name)
-print "uuid:           " + str(torus.uuid)
+print repr(vortex)
+print "id:             " + str(vortex.id)
+print "name:           " + str(vortex.name)
+print "uuid:           " + str(vortex.uuid)
 #print "radius:         " + str(torus.radius)
 #print "tube:           " + str(torus.tube)
 #print "radialSegments: " + str(torus.radialSegments)
 #print "tubularSegments:" + str(torus.tubularSegments)
 #print "arc:            " + str(torus.arc)
-print torus
+print vortex
 
-mesh = Mesh(torus, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1}))
+mesh = Mesh(vortex, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1}))
 space.add(mesh)
 
 workbench = Workbench3D(space.renderer.canvas, space.renderer, space.camera)
