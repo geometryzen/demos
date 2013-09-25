@@ -30,12 +30,10 @@ def tick(t):
     space.render()
     
 def terminate(t):
-    return t > 3
+    return t > 10
 
 def setUp():
     workbench.setUp()
-    space.camera.position.set(1.5, 1.5, 1.5)
-    space.camera.lookAt(space.origin)
 
 def tearDown():
     workbench.tearDown()
