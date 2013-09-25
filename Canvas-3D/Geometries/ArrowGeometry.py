@@ -18,7 +18,7 @@ print "uuid:            " + str(arrow.uuid)
 print "name:            " + str(arrow.name)
 print arrow
 
-material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3})
+material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 2})
 mesh = Mesh(arrow, material)
 space.add(mesh)
 
