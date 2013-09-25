@@ -20,7 +20,7 @@ print "radialSegments: " + str(cylinder.radialSegments)
 print "heightSegments: " + str(cylinder.heightSegments)
 print "openEnded:      " + str(cylinder.openEnded)
 
-mesh = Mesh(cylinder, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3}))
+mesh = Mesh(cylinder, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1}))
 space.add(mesh)
 
 workbench = Workbench3D(space.renderer.canvas, space.renderer, space.camera)
