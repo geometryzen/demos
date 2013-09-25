@@ -9,7 +9,7 @@ radius = 2
 tube = 0.5
 radialSegments = 32
 tubularSegments = 24
-arc = 2.0 * pi
+arc = pi
 
 torus = TorusGeometry(radius, tube, radialSegments, tubularSegments, arc)
 torus.name = "coffee-cup"
