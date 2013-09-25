@@ -63,7 +63,7 @@ def tick(t):
     probe.quantity = quantity
     output.text = str(probe.quantity)
     space3D.render()
-    space2D.update()
+    space2D.render()
 
 def terminate(t):
     return t > timeOut
