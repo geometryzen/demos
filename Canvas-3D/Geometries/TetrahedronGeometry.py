@@ -15,7 +15,7 @@ print "detail:         " + str(tetra.detail)
 print tetra
 
 mesh = Mesh(tetra, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3}))
-scene.add(mesh)
+space.add(mesh)
 
 workbench = Workbench3D(space.renderer.canvas, space.renderer, space.camera)
 
