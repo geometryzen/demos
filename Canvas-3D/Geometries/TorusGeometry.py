@@ -12,6 +12,7 @@ tubularSegments = 24
 arc = 2.0 * pi
 
 torus = TorusGeometry(radius, tube, radialSegments, tubularSegments, arc)
+torus.name = "coffee-cup"
 
 print repr(torus)
 print "id:             " + str(torus.id)
