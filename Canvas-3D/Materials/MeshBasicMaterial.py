@@ -21,7 +21,7 @@ container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
 material = MeshBasicMaterial({"color":0x00FF00, "wireframe":True})
-material.wireframeLinewidth = 2
+material.wireframeLinewidth = 1
 material.name = "greenie"
 
 print "repr(material) => " + repr(material)
