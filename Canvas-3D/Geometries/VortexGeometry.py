@@ -20,7 +20,7 @@ print "name:           " + str(torus.name)
 print "uuid:           " + str(torus.uuid)
 #print "radius:         " + str(torus.radius)
 #print "tube:           " + str(torus.tube)
-print "radialSegments: " + str(torus.radialSegments)
+#print "radialSegments: " + str(torus.radialSegments)
 print "tubularSegments:" + str(torus.tubularSegments)
 print "arc:            " + str(torus.arc)
 print torus
