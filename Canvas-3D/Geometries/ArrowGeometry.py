@@ -15,12 +15,12 @@ radiusCone = 0.08
 lengthCone = 0.2
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1})
 arrow = ArrowBuilder().scale(length).segments(segments).material(material).build()
-arrow.name = 'Foo'
+arrow.geometry.name = 'Foo'
 
-print repr(arrow)
-print "uuid:            " + str(arrow.uuid)
-print "name:            " + str(arrow.name)
-print arrow
+print repr(arrow.geometry)
+print "uuid:            " + str(arrow.geometry.uuid)
+print "name:            " + str(arrow.geometry.name)
+print arrow.geometry
 
 space.add(arrow)
 
