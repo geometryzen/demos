@@ -8,7 +8,7 @@ from math import pi
 
 space = CartesianSpace()
 
-radius = 2
+radius = 4
 radiusCone = 0.8
 radiusShaft = 0.1
 radialSegments = 32
