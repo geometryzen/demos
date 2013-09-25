@@ -37,7 +37,6 @@ def setUp():
     workbench.setUp()
 
 def tick(elapsed):
-    mesh.rotation += VectorE3(0.02, 0.02, 0.02)    
     renderer.render(scene, camera)
     
 def terminate(elapsed):
