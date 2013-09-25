@@ -14,6 +14,9 @@ arc = 2.0 * pi
 torus = TorusGeometry(radius, tube, radialSegments, tubularSegments, arc)
 
 print repr(torus)
+print "id:             " + str(torus.id)
+print "name:           " + str(torus.name)
+print "uuid:           " + str(torus.uuid)
 print "radius:         " + str(torus.radius)
 print "tube:           " + str(torus.tube)
 print "radialSegments: " + str(torus.radialSegments)
