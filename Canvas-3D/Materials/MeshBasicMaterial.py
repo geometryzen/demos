@@ -1,9 +1,6 @@
 from three import *
 from browser import *
 
-for canvas in document.getElementsByTagName("canvas"):
-    canvas.parentNode.removeChild(canvas)
-
 scene = Scene()
 
 camera = PerspectiveCamera(75, 1.0, 0.1, 1000)
@@ -14,9 +11,6 @@ renderer.autoClear = True
 renderer.gammaInput = True
 renderer.gammaOutput = True
 renderer.setClearColor(Color(0x080808), 1.0)
-
-container = document.getElementById("canvas-container")
-container.appendChild(renderer.domElement)
 
 material = MeshBasicMaterial({"color":0x00FF00, "wireframe":True})
 material.wireframeLinewidth = 1
@@ -42,7 +36,10 @@ scene.add(mesh)
 
 timeOut = 6
 
+workbench = Workbench(renderer, camera)
+
 def setUp():
+    workbench.setUp()
     window.addEventListener("resize", onWindowResize, False)
 
 def tick(t):
@@ -56,10 +53,6 @@ def terminate(t):
 
 def tearDown():
     window.removeEventListener("resize", onWindowResize, False)
-
-def onWindowResize(event):
-    camera.aspect = window.innerWidth / window.innerHeight
-    camera.updateProjectionMatrix()
-    renderer.size = (window.innerWidth, window.innerHeight)
+    workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
