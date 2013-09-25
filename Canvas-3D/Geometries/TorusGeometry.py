@@ -3,14 +3,7 @@ from browser import *
 from workbench import *
 from math import pi
 
-scene = Scene()
-
-# Aspect ratio will be reset in onWindowResize
-camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-camera.position.z = 200
-
-renderer = WebGLRenderer()
-renderer.setClearColor(Color(0x080808), 1.0)
+space = CartesianSpace()
 
 radius = 100
 tube = 40
@@ -31,13 +24,13 @@ print torus
 mesh = Mesh(torus, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
 scene.add(mesh)
 
-workbench = Workbench(renderer, camera)
+workbench = Workbench3D(space.renderer.canvas, space.renderer, space.camera)
 
 def setUp():
     workbench.setUp()
 
 def tick(elapsed):
-    renderer.render(scene, camera)
+    space.render()
     
 def terminate(elapsed):
     return elapsed > 10
