@@ -1,11 +1,10 @@
-# The purpose of this experiment is to see if the details of a general example can be reproduced using convenience functions.
 from three import *
-from geometry import CartesianSpace, CylinderBuilder
+from geometry import *
 from workbench import *
-from browser import document, window, WindowAnimationRunner
+from browser import *
 
 space = CartesianSpace()
-progressEnd = 6
+timeOut = 6
 
 workbench = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 
@@ -21,7 +20,7 @@ def tick(t):
     space.render()
     
 def terminate(t):
-    return t > progressEnd
+    return t > timeOut
 
 def tearDown():
     workbench.tearDown()
