@@ -14,7 +14,7 @@ c = VectorE3(radiusShaft, 0, lengthShaft)
 d = VectorE3(radiusShaft, 0, 0)
 e = VectorE3(0, 0, 0)
 points = [a, b, c, d, e]
-arrow = LatheGeometry(points, 25)
+arrow = LatheGeometry(points, 12)
 
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1})
 mesh = Mesh(arrow, material)
