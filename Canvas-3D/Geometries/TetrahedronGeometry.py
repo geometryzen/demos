@@ -4,7 +4,7 @@ from workbench import *
 
 space = CartesianSpace()
 
-radius = 1
+radius = 5
 detail = 0 # Must be an integer: 0,1,2,...
 
 tetra = TetrahedronGeometry(radius, detail)
@@ -14,7 +14,7 @@ print "radius:         " + str(tetra.radius)
 print "detail:         " + str(tetra.detail)
 print tetra
 
-mesh = Mesh(tetra, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3}))
+mesh = Mesh(tetra, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1}))
 space.add(mesh)
 
 workbench = Workbench3D(space.renderer.canvas, space.renderer, space.camera)
