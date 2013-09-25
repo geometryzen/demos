@@ -33,7 +33,7 @@ def tick(elapsed):
     space.render()
     
 def terminate(elapsed):
-    return elapsed > 4
+    return elapsed > 10
 
 def tearDown():
     workbench.tearDown()
