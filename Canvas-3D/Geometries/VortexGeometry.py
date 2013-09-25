@@ -58,7 +58,7 @@ def tick(elapsed):
     space.render()
     
 def terminate(elapsed):
-    return elapsed > 3
+    return elapsed > timeOut
 
 def tearDown():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
