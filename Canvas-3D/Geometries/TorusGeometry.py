@@ -25,7 +25,7 @@ print "tubularSegments:" + str(torus.tubularSegments)
 print "arc:            " + str(torus.arc)
 print torus
 
-mesh = Mesh(torus, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth": 1}))
+mesh = Mesh(torus, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1}))
 space.add(mesh)
 
 workbench = Workbench3D(space.renderer.canvas, space.renderer, space.camera)
