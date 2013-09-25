@@ -6,7 +6,7 @@ from browser import *
 space = CartesianSpace()
 timeOut = 6
 
-workbench = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
+workbench = Workbench3D(space.renderer.canvas, space.renderer, space.camera)
 
 def setUp():
     workbench.setUp()
