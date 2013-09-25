@@ -7,8 +7,8 @@ space = CartesianSpace()
 width = 4
 depth = 4
 widthSegments = 8
-heightSegments = 8
-plane = PlaneGeometry(width, depth, widthSegments, heightSegments)
+depthSegments = 8
+plane = PlaneGeometry(width, depth, widthSegments, depthSegments)
 
 print repr(plane)
 print "width:          " + str(plane.width)
