@@ -9,12 +9,12 @@ from math import pi
 space = CartesianSpace()
 
 radius = 2
-tube = 0.5
+radiusShaft = 0.3
 radialSegments = 32
 tubularSegments = 24
 arc = pi / 2
 
-torus = VortexGeometry(radius, tube, radialSegments, tubularSegments, arc)
+torus = VortexGeometry(radius, radiusShaft, radialSegments, tubularSegments, arc)
 torus.name = "Maxwell"
 
 print repr(torus)
