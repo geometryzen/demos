@@ -15,7 +15,7 @@ tubularSegments = 24
 arc = pi / 2
 
 torus = VortexGeometry(radius, tube, radialSegments, tubularSegments, arc)
-torus.name = "coffee-cup"
+torus.name = "Maxwell"
 
 print repr(torus)
 print "id:             " + str(torus.id)
