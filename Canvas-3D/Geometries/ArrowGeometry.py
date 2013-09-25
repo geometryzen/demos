@@ -14,7 +14,7 @@ radiusShaft = 0.01
 radiusCone = 0.08
 lengthCone = 0.2
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1})
-arrow = ArrowBuilder().scale(length).segments(segments).build()
+arrow = ArrowBuilder().scale(length).segments(segments).material(material).build()
 arrow.name = 'Foo'
 
 print repr(arrow)
