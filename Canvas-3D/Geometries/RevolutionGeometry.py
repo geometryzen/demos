@@ -6,11 +6,11 @@ from workbench import *
 space = CartesianSpace()
 
 # All arguments are optional and the defaults, in order, are as follows.
-radiusCone = 0.40
-lengthCone = 1
-radiusShaft = 0.05
-length = 5
-lengthShaft = length - lengthCone
+radiusCone = 1
+radiusShaft = 0.5
+length = 4
+lengthShaft = 3
+
 a = VectorE3(0, 0, length)
 b = VectorE3(radiusCone, 0, lengthShaft)
 c = VectorE3(radiusShaft, 0, lengthShaft)
