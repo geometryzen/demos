@@ -70,7 +70,7 @@ def onDocumentKeyUp(event):
 timeOut = 10
 
 workbench2D = Workbench2D(canvas2D)
-workbench3D = Workbench(renderer, camera)
+workbench3D = Workbench3D(renderer.canvas, renderer, camera)
 
 def setUp():
     print "Hello!"
