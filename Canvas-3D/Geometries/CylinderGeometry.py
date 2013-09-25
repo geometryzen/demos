@@ -4,9 +4,9 @@ from workbench import *
 
 space = CartesianSpace()
 
-radiusTop = 20
-radiusBottom = 20
-height = 100
+radiusTop = 2
+radiusBottom = 2
+height = 10
 radialSegments = 32
 heightSegments = 5
 openEnded = False
