@@ -4,10 +4,10 @@ from workbench import *
 
 space = CartesianSpace()
 
-radiusCone = 0.20
-radiusShaft = 0.10
-length = 0.80
-lengthShaft = 0.60
+radiusCone = 2
+radiusShaft = 1
+length = 8
+lengthShaft = 6
 a = VectorE3(0, 0, length)
 b = VectorE3(radiusCone, 0, lengthShaft)
 c = VectorE3(radiusShaft, 0, lengthShaft)
