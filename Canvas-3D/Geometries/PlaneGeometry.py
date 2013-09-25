@@ -18,7 +18,7 @@ print "heightSegments: " + str(plane.heightSegments)
 print plane
 
 mesh = Mesh(plane, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
-scene.add(mesh)
+space.add(mesh)
 
 workbench = Workbench(space.renderer, space.camera)
 
