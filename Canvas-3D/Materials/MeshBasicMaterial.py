@@ -41,7 +41,6 @@ workbench = Workbench(renderer, camera)
 
 def setUp():
     workbench.setUp()
-    window.addEventListener("resize", onWindowResize, False)
 
 def tick(t):
     mesh.rotation.x = mesh.rotation.x + 0.02
@@ -53,7 +52,6 @@ def terminate(t):
     return t > timeOut
 
 def tearDown():
-    window.removeEventListener("resize", onWindowResize, False)
     workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
