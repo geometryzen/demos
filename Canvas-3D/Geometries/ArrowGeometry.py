@@ -5,7 +5,7 @@ from workbench import *
 space = CartesianSpace()
 
 # All arguments are optional and the defaults, in order, are as follows.
-length = 6
+length = 8
 segments = 12
 radiusShaft = 0.01
 radiusCone = 0.08
