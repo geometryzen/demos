@@ -12,10 +12,10 @@ radius = 2
 radiusCone = 0.08
 radiusShaft = 0.08
 radialSegments = 32
-tubularSegments = 24
+arrowSegments = 24
 arc = pi / 2
 
-vortex = VortexGeometry(radius, radiusShaft, radialSegments, tubularSegments, arc)
+vortex = VortexGeometry(radius, radiusShaft, radialSegments, arrowSegments, arc)
 vortex.name = "Maxwell"
 
 print repr(vortex)
