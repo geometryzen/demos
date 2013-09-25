@@ -5,8 +5,8 @@ from math import pi
 
 space = CartesianSpace()
 
-radius = 100
-tube = 40
+radius = 10
+tube = 4
 radialSegments = 32
 tubularSegments = 24
 arc = 2.0 * pi
@@ -33,7 +33,7 @@ def tick(elapsed):
     space.render()
     
 def terminate(elapsed):
-    return elapsed > 10
+    return elapsed > 4
 
 def tearDown():
     workbench.tearDown()
