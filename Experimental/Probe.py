@@ -24,7 +24,7 @@ output.x = 100
 output.y = 100
 space2D.addChild(output)
 
-quantity = ScalarE3(1) + VectorE3(0, 0, 4) + BivectorE3(4,0,0) + PseudoscalarE3(1)
+quantity = ScalarE3(1) + VectorE3(0, 0, -4) + BivectorE3(4,0,0) + PseudoscalarE3(1)
 
 # Define the Meshes that you want to represent each grade of the quantity.
 grade0 = SphereBuilder().wireframe(True).color(0xFFFF00).segments(12).build()
