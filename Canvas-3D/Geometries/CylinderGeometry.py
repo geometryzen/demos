@@ -2,13 +2,7 @@ from three import *
 from browser import *
 from workbench import *
 
-renderer = WebGLRenderer({"antialias": True})
-renderer.setClearColor(Color(0x080808), 1.0)
-
-scene = Scene()
-
-camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-camera.position.z = 100
+space = CartesianSpace()
 
 radiusTop = 20
 radiusBottom = 20
@@ -27,15 +21,15 @@ print "heightSegments: " + str(cylinder.heightSegments)
 print "openEnded:      " + str(cylinder.openEnded)
 
 mesh = Mesh(cylinder, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3}))
-scene.add(mesh)
+space.add(mesh)
 
-workbench = Workbench(renderer, camera)
+workbench = Workbench3D(space.renderer.canvas, space.renderer, space.camera)
 
 def setUp():
     workbench.setUp()
 
 def tick(t):
-    renderer.render(scene, camera)
+    space.render()
 
 def terminate(t):
     return t > 3
