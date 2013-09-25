@@ -25,21 +25,9 @@ print "height:         " + str(cylinder.height)
 print "radialSegments: " + str(cylinder.radialSegments)
 print "heightSegments: " + str(cylinder.heightSegments)
 print "openEnded:      " + str(cylinder.openEnded)
-try:
-    print "bogus:          " + str(cylinder.bogus)
-except AttributeError as e:
-    print e
-print cylinder
-
-try:
-    cylinder.bogus = 23
-except AttributeError as e:
-    print e
 
 mesh = Mesh(cylinder, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3}))
 scene.add(mesh)
-
-movement = VectorE3(0.02, 0.02, 0.02)
 
 workbench = Workbench(renderer, camera)
 
@@ -47,7 +35,6 @@ def setUp():
     workbench.setUp()
 
 def tick(t):
-    mesh.rotation += movement
     renderer.render(scene, camera)
 
 def terminate(t):
