@@ -22,7 +22,7 @@ print "uuid:           " + str(torus.uuid)
 #print "tube:           " + str(torus.tube)
 #print "radialSegments: " + str(torus.radialSegments)
 #print "tubularSegments:" + str(torus.tubularSegments)
-print "arc:            " + str(torus.arc)
+#print "arc:            " + str(torus.arc)
 print torus
 
 mesh = Mesh(torus, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1}))
