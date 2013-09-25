@@ -5,14 +5,14 @@ from workbench import *
 space = CartesianSpace()
 
 width = 4
-height = 4
+depth = 4
 widthSegments = 8
 heightSegments = 8
-plane = PlaneGeometry(width, height, widthSegments, heightSegments)
+plane = PlaneGeometry(width, depth, widthSegments, heightSegments)
 
 print repr(plane)
 print "width:          " + str(plane.width)
-print "height:         " + str(plane.height)
+print "depth:          " + str(plane.depth)
 print "widthSegments:  " + str(plane.widthSegments)
 print "heightSegments: " + str(plane.heightSegments)
 print plane
