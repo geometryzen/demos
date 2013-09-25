@@ -4,10 +4,10 @@ from workbench import *
 
 space = CartesianSpace()
 
-radiusCone = 2
-radiusShaft = 1
-length = 8
-lengthShaft = 6
+radiusCone = 1
+radiusShaft = 0.5
+length = 4
+lengthShaft = 3
 a = VectorE3(0, 0, length)
 b = VectorE3(radiusCone, 0, lengthShaft)
 c = VectorE3(radiusShaft, 0, lengthShaft)
@@ -16,7 +16,7 @@ e = VectorE3(0, 0, 0)
 points = [a, b, c, d, e]
 arrow = LatheGeometry(points, 25)
 
-material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3})
+material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1})
 mesh = Mesh(arrow, material)
 space.add(mesh)
 
