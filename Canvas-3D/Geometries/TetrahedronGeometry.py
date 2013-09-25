@@ -23,7 +23,7 @@ def setUp():
     workbench.setUp()
 
 def tick(elapsed):   
-    renderer.render(scene, camera)
+    space.render()
     
 def terminate(elapsed):
     return elapsed > 6
