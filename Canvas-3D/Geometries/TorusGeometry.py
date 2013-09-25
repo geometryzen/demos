@@ -6,7 +6,7 @@ from math import pi
 space = CartesianSpace()
 
 radius = 5
-tube = 2
+tube = 1
 radialSegments = 32
 tubularSegments = 24
 arc = 2.0 * pi
