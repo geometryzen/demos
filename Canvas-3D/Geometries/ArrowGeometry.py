@@ -5,7 +5,7 @@ from workbench import *
 space = CartesianSpace()
 
 # All arguments are optional and the defaults, in order, are as follows.
-length = 1
+length = 6
 segments = 12
 radiusShaft = 0.01
 radiusCone = 0.08
@@ -28,7 +28,7 @@ def tick(t):
     space.render()
     
 def terminate(t):
-    return t > 10
+    return t > 6
 
 def setUp():
     workbench.setUp()
