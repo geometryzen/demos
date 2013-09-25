@@ -28,7 +28,7 @@ def tick(t):
     space.render()
     
 def terminate(t):
-    return t > 6
+    return t > 4
 
 def setUp():
     workbench.setUp()
