@@ -26,7 +26,7 @@ def setUp():
     workbench.setUp()
 
 def tick(t):
-    renderer.render(scene, camera)
+    space.render()
     
 def terminate(t):
     return t > 10
