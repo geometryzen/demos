@@ -6,7 +6,7 @@ from math import pi
 space = CartesianSpace()
 
 radius = 2
-tube = 0.2
+tube = 0.5
 radialSegments = 32
 tubularSegments = 24
 arc = 2.0 * pi
@@ -21,7 +21,7 @@ print "tubularSegments:" + str(torus.tubularSegments)
 print "arc:            " + str(torus.arc)
 print torus
 
-mesh = Mesh(torus, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
+mesh = Mesh(torus, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth": 2}))
 space.add(mesh)
 
 workbench = Workbench3D(space.renderer.canvas, space.renderer, space.camera)
