@@ -22,7 +22,7 @@ print "arc:            " + str(torus.arc)
 print torus
 
 mesh = Mesh(torus, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
-scene.add(mesh)
+space.add(mesh)
 
 workbench = Workbench3D(space.renderer.canvas, space.renderer, space.camera)
 
