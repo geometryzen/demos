@@ -20,7 +20,7 @@ points = [a, b, c, d, e]
 # The points are to be rotated in the xy-plane to generate the geometry.
 arrow = RevolutionGeometry(points, BivectorE3(1, 0, 0), 12)
 
-material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
+material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth": 1})
 mesh = Mesh(arrow, material)
 space.add(mesh)
 
