@@ -27,13 +27,13 @@ output.x = 100
 output.y = 100
 space2D.addChild(output)
 
-quantity = ScalarE3(1) + VectorE3(2, 4, 0) + BivectorE3(5,0,0) + PseudoscalarE3(8)
+quantity = ScalarE3(1) + VectorE3(3, 4, 0) + BivectorE3(4,3,0) + PseudoscalarE3(1)
 
 # Define the Meshes that you want to represent each grade of the quantity.
-# Another way of doing this will be to create a ProbeBuilderE3.
+wireframe = False
 grade0 = SphereBuilder().wireframe(True).color(0xFFFF00).segments(12).build()
-grade1 = ArrowBuilder().color(0x0000FF).wireframe(True).segments(12).build()
-grade2 = PlaneBuilder().wireframe(True).wireframeLinewidth(1).color(0x0000FF).segments(1).build()
+grade1 = ArrowBuilder().color(0x0000FF).wireframe(wireframe).segments(32).build()
+grade2 = VortexBuilder().wireframe(wireframe).color(0x0000FF).build()
 grade3 = CubeBuilder().wireframe(True).color(0xFFFF00).segments(1).build()
 
 probe  = ProbeE3(grade0, grade1, grade2, grade3)
@@ -65,9 +65,9 @@ def setUp():
 
 def tick(t):
     probe.quantity = quantity
-    output.text = repr(probe.quantity)
+    output.text = str(probe.quantity)
     space3D.render()
-    space2D.update()
+    space2D.render()
 
 def terminate(t):
     return t > timeOut
