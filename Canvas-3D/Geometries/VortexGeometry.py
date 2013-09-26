@@ -13,10 +13,12 @@ space = CartesianSpace()
 radius = 4
 radiusCone = 0.08
 radiusShaft = 0.01
+lengthCone = 0.2
+lengthShaft = 0.8
 arrowSegments = 8
 radialSegments = 32
 
-vortex = VortexGeometry(radius, radiusCone, radiusShaft, arrowSegments, radialSegments)
+vortex = VortexGeometry(radius, radiusCone, radiusShaft, lengthCone, lengthShaft, arrowSegments, radialSegments)
 vortex.name = "Maxwell"
 
 print repr(vortex)
