@@ -20,7 +20,7 @@ particle.mass     = ScalarE3(1)
 particle.velocity = VectorE3(0, -1, 0)
 space3D.add(particle)
 
-dt = 0.05
+dt = 0.02
 
 canvas2D = document.createElement("canvas")
 canvas2D.style.position = "absolute"
