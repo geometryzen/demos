@@ -20,7 +20,7 @@ particle.position = VectorE3(0, 1, 0)
 particle.velocity = VectorE3(0, -1, 0)
 space3D.add(particle)
 
-for x in [0 to 5]
+for x in range[-5, 5]
     print x
 
 #wire = CylinderBuilder().radius(0.1).height(100).color("blue").build()
