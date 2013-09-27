@@ -3,6 +3,15 @@ from three import *
 from workbench import *
 from geometry import *
 
+def wireB(position):
+    x = position.x
+    y = position.y
+    quadrance = x * x + y * y
+    return VectorE3(-y/quadrance, x/quadrance, 0)
+
+def constantB(position):
+    return VectorE3(1, 0, 0)
+
 timeOut = 60
 
 space3D = CartesianSpace()
@@ -59,15 +68,6 @@ def onDocumentKeyDown(event):
         keyHandlers[event.keyCode](event, True)
     except:
         pass
-
-def wireB(position):
-    x = position.x
-    y = position.y
-    quadrance = x * x + y * y
-    return VectorE3(-y/quadrance, x/quadrance, 0)
-
-def constantB(position):
-    return VectorE3(1, 0, 0)
 
 def outsideCube(position, size):
     if (abs(particle.position % i) > size):
