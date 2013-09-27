@@ -30,12 +30,18 @@ output.x = window.innerWidth / 2
 output.y = window.innerHeight / 2
 space2D.addChild(output)
 
+deg wireB(position):
+    x = position.x
+    y = position.y
+    quadrance = x * x + y * y
+    return VectorE3(-y/quadrance, x/quadrance)
+
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
 
 def tick(t):
-    F = VectorE3(0,0,0)
+    F = wireB(particle.position)
     particle.momentum = particle.momentum + F * dt
     particle.position = particle.position + (particle.momentum / particle.mass) * dt
     
