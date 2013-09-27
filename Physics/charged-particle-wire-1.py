@@ -67,14 +67,14 @@ def setUp():
 def tick(t):
     B = constantB(particle.position)
     F = particle.velocity.cross(B)
-    output.text = str(particle.velocity.magnitude())
-    # Seem to have a problem here that F.v is not close to zero.
+
     magnitudeBefore = particle.velocity.magnitude()
     particle.velocity = particle.velocity + (F * dt / particle.mass)
     magnitudeAfter = particle.velocity.magnitude()
+
     # This is a bit of a hack to compensate for innacuracy in the simulation.
-    # Could be the time interval?
-    # particle.velocity = particle.velocity * magnitudeBefore / magnitudeAfter
+
+    particle.velocity = particle.velocity * magnitudeBefore / magnitudeAfter
     particle.position += particle.velocity * dt
     
     space3D.render()
