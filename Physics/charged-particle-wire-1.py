@@ -24,10 +24,12 @@ space3D.add(particle)
 probeV = ProbeBuilderE3().build()
 space3D.add(probeV.grade1)
 
-probeB  = ProbeE3(SphereBuilder().build(), ArrowBuilder().color(0xFF0000).segments(32).build(), VortexBuilder().color(0xFF0000).build(), CubeBuilder().build())
+probeB = ProbeBuilderE3().build()
+CubeBuilder().build())
 space3D.add(probeB.grade1)
 
-probeF  = ProbeE3(SphereBuilder().build(), ArrowBuilder().color(0x0000FF).segments(32).build(), VortexBuilder().color(0x0000FF).build(), CubeBuilder().build())
+probeF = ProbeBuilderE3().build()
+CubeBuilder().build())
 space3D.add(probeF.grade1)
 
 dt = 0.02
