@@ -29,6 +29,7 @@ particle.position = VectorE3(0, 1, 0)
 particle.velocity = VectorE3(0, -1, 0)
 space3D.add(particle)
 
+'''
 for x in range(-5, 6):
     for y in range(-5, 6):
         if x != 0 and y != 0:
@@ -39,7 +40,7 @@ for x in range(-5, 6):
             probe.position = position
             space3D.add(probe.grade1)
             space3D.add(probe.grade2)
-
+'''
 
 #wire = CylinderBuilder().radius(0.1).height(100).color("blue").build()
 #space3D.add(wire)
