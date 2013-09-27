@@ -30,6 +30,7 @@ space3D.add(probeV.grade1)
 # Probe to show the magnetic field at the particle position.
 probeB = ProbeBuilderE3().color(0xFF0000).build()
 space3D.add(probeB.grade1)
+space3D.add(probeB.grade2)
 
 # Probe to show the Lorentz force on the charged particle.
 probeF = ProbeBuilderE3().color(0xFFFF00).build()
