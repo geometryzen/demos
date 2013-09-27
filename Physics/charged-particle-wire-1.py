@@ -27,7 +27,7 @@ space3D.add(probeV.grade1)
 probeB = ProbeBuilderE3().color(0xFF0000).build()
 space3D.add(probeB.grade1)
 
-probeF = ProbeBuilderE3().color(0xFFFF00).build()
+probeF = ProbeBuilderE3().color("yellow").build()
 space3D.add(probeF.grade1)
 
 dt = 0.02
