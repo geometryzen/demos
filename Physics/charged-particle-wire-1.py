@@ -9,7 +9,7 @@ from geometry import *
 from math import pow
 from random import random
 
-timeOut = 30
+timeOut = 60
 
 space3D = CartesianSpace()
 
