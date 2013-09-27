@@ -70,7 +70,8 @@ def tick(t):
     particle.velocity = particle.velocity + (F * dt / particle.mass)
     magnitudeAfter = particle.velocity.magnitude()
     # This is a bit of a hack to compensate for innacuracy in the simulation.
-    particle.velocity = particle.velocity * magnitudeBefore / magnitudeAfter
+    # Could be the time interval?
+    # particle.velocity = particle.velocity * magnitudeBefore / magnitudeAfter
     particle.position += particle.velocity * dt
     
     space3D.render()
