@@ -5,6 +5,8 @@ from workbench import *
 from math import pow
 from random import random
 
+timeOut = 60
+
 space3D = CartesianSpace()
 
 workbench3D = Workbench(space3D.renderer, space3D.camera)
@@ -66,7 +68,7 @@ def tick(t):
     space2D.update()
 
 def terminate(t):
-    return t > 120
+    return t > timeOut
 
 def tearDown():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
