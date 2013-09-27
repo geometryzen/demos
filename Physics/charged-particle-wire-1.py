@@ -34,14 +34,15 @@ def wireB(position):
     x = position.x
     y = position.y
     quadrance = x * x + y * y
-    return VectorE3(-y/quadrance, x/quadrance)
+    return VectorE3(-y/quadrance, x/quadrance, 0)
 
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
 
 def tick(t):
-    F = wireB(particle.position)
+    velocity = particle.momentum / particle.mass
+    F = velocity.cross(wireB(particle.position))
     particle.momentum = particle.momentum + F * dt
     particle.position = particle.position + (particle.momentum / particle.mass) * dt
     
