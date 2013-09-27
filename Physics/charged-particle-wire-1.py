@@ -62,6 +62,7 @@ def tick(t):
     velocity = particle.momentum / particle.mass
 
     F = velocity.cross(wireB(particle.position))
+    # Seem to have a problem here that F.v is not close to zero.
     output.text = str(F % velocity)
     particle.momentum = particle.momentum + F * dt
     particle.position = particle.position + (particle.momentum / particle.mass) * dt
