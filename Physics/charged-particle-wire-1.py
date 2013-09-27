@@ -93,7 +93,7 @@ def tick(t):
     probeF.quantity = F
     probeF.grade1.position = particle.position
     
-    if outsideCube(particle.position, 10):
+    if outsideCube(particle.position, 5):
         timeOut = 0
         
     space3D.camera.position.z = particle.position.z
