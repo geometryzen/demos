@@ -66,7 +66,7 @@ def tick(t):
     F = particle.velocity.cross(B)
     # Seem to have a problem here that F.v is not close to zero.
     particle.velocity = particle.velocity + (F * dt / particle.mass)
-    output.text = repr(F << partoicle.velocity)
+    output.text = repr(F << particle.velocity)
     particle.position = particle.position + particle.velocity * dt
     
     space3D.render()
