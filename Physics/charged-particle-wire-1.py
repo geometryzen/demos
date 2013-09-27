@@ -21,7 +21,7 @@ particle.mass     = ScalarE3(1)
 particle.velocity = VectorE3(0, -1, 0)
 space3D.add(particle)
 
-probeV = ProbeBuilderE3().color(Color(0x0000FF)).build()
+probeV = ProbeBuilderE3().color(0x0000FF).build()
 space3D.add(probeV.grade1)
 
 probeB = ProbeBuilderE3().color(0xFF0000).build()
