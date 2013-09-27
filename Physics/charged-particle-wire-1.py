@@ -65,7 +65,7 @@ def setUp():
     document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(t):
-    B = wireB(particle.position)
+    B = constantB(particle.position)
     F = particle.velocity.cross(B)
     output.text = str(particle.velocity.magnitude())
     # Seem to have a problem here that F.v is not close to zero.
