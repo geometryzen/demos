@@ -95,14 +95,13 @@ def tick(t):
     particle.position += particle.velocity * dt
     
     probeV.quantity = particle.velocity
-    probeV.grade1.position = particle.position
+    probeV.position = particle.position
 
     probeB.quantity = B
-    probeB.grade1.position = particle.position
-    probeB.grade2.position = particle.position
+    probeB.position = particle.position
 
     probeF.quantity = F
-    probeF.grade1.position = particle.position
+    probeF.position = particle.position
     
     if outsideCube(particle.position, 5):
         timeOut = 0
