@@ -27,6 +27,9 @@ space3D.add(probeV.grade1)
 probeB  = ProbeE3(SphereBuilder().build(), ArrowBuilder().color(0x0000FF).segments(32).build(), VortexBuilder().color(0x0000FF).build(), CubeBuilder().build())
 space3D.add(probeB.grade1)
 
+probeF  = ProbeE3(SphereBuilder().build(), ArrowBuilder().color(0x0000FF).segments(32).build(), VortexBuilder().color(0x0000FF).build(), CubeBuilder().build())
+space3D.add(probeF.grade1)
+
 dt = 0.02
 
 canvas2D = document.createElement("canvas")
@@ -89,6 +92,9 @@ def tick(t):
 
     probeB.quantity = B
     probeB.grade1.position = particle.position
+
+    probeF.quantity = F
+    probeF.grade1.position = particle.position
     
     space3D.render()
     space2D.update()
