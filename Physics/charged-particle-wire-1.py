@@ -95,7 +95,8 @@ def tick(t):
     
     if outsideCube(particle.position, 5):
         timeOut = 0
-        
+
+    # Track the particle with the camera.        
     space3D.camera.position.z = particle.position.z
     space3D.camera.lookAt(particle.position)
     
