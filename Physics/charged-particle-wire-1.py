@@ -28,10 +28,10 @@ grade3 = CubeBuilder().wireframe(True).color(0xFFFF00).segments(1).build()
 
 probeB  = ProbeE3(grade0, grade1, grade2, grade3)
 
-space3D.add(probe.grade0)
-space3D.add(probe.grade1)
-space3D.add(probe.grade2)
-space3D.add(probe.grade3)
+space3D.add(probeB.grade0)
+space3D.add(probeB.grade1)
+space3D.add(probeB.grade2)
+space3D.add(probeB.grade3)
 
 dt = 0.02
 
