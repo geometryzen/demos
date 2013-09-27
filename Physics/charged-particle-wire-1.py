@@ -25,11 +25,9 @@ probeV = ProbeBuilderE3().build()
 space3D.add(probeV.grade1)
 
 probeB = ProbeBuilderE3().build()
-CubeBuilder().build())
 space3D.add(probeB.grade1)
 
 probeF = ProbeBuilderE3().build()
-CubeBuilder().build())
 space3D.add(probeF.grade1)
 
 dt = 0.02
