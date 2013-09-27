@@ -96,8 +96,8 @@ def tick(t):
     if outsideCube(particle.position, 4):
         timeOut = 0
         
-    space.camera.position.z = particle.position.z
-    space.camera.lookAt(particle.position)
+    space3D.camera.position.z = particle.position.z
+    space3D.camera.lookAt(particle.position)
     
     space3D.render()
 
