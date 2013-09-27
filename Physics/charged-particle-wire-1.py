@@ -21,6 +21,9 @@ particle.mass     = ScalarE3(1)
 particle.velocity = VectorE3(0, -1, 0)
 space3D.add(particle)
 
+probeV  = ProbeE3(SphereBuilder().build(), ArrowBuilder().color(0x0000FF).segments(32).build(), VortexBuilder().color(0x0000FF).build(), CubeBuilder().build())
+space3D.add(probeV.grade1)
+
 probeB  = ProbeE3(SphereBuilder().build(), ArrowBuilder().color(0x0000FF).segments(32).build(), VortexBuilder().color(0x0000FF).build(), CubeBuilder().build())
 space3D.add(probeB.grade1)
 
@@ -81,6 +84,9 @@ def tick(t):
     particle.velocity = particle.velocity * magnitudeBefore / magnitudeAfter
     particle.position += particle.velocity * dt
     
+    probeV.quantity = particle.velocity
+    probeV.grade1.position = particle.position
+
     probeB.quantity = B
     probeB.grade1.position = particle.position
     
