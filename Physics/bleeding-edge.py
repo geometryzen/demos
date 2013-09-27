@@ -15,7 +15,7 @@ k = VectorE3(0,0,1)
 
 workbench3D = Workbench(space3D.renderer, space3D.camera)
 
-particle = SphereBuilder().color(0x0000FF).radius(0.1).build()
+particle = SphereBuilder().color("blue").radius(0.1).build()
 particle.position = VectorE3(0, 1, 0)
 particle.mass     = ScalarE3(1)
 particle.velocity = VectorE3(0, -1, 0)
@@ -24,12 +24,15 @@ space3D.add(particle)
 wire = CylinderBuilder().radius(0.1).height(100).color("blue").build()
 space3D.add(wire)
 
+# Probe to show the velocity of the particle.
 probeV = ProbeBuilderE3().color(particle.material.color.getHex()).build()
 space3D.add(probeV.grade1)
 
+# Probe to show the magnetic field at the particle position.
 probeB = ProbeBuilderE3().color(0xFF0000).build()
 space3D.add(probeB.grade1)
 
+# Probe to show the Lorentz force on the charged particle.
 probeF = ProbeBuilderE3().color(0xFFFF00).build()
 space3D.add(probeF.grade1)
 
