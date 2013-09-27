@@ -86,7 +86,7 @@ def tick(t):
 
     # This is a bit of a hack to compensate for innacuracy in the simulation.
     # It's only going to work for magnetic fields but we could split momentum change contributions for electric fields.
-    particle.velocity = particle.velocity * speedBefore / speedAfter
+    particle.velocity *= speedBefore / speedAfter
 
     # Integrate the position of the particle.    
     particle.position += particle.velocity * dt
