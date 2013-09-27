@@ -27,7 +27,7 @@ output.x = 100
 output.y = 100
 space2D.addChild(output)
 
-quantity = ScalarE3(0.001) + VectorE3(3, 4, 0) + BivectorE3(4,3,0) + PseudoscalarE3(0.000001)
+quantity = ScalarE3(0.000001) + VectorE3(3, 4, 0) + BivectorE3(4,3,0) + PseudoscalarE3(0.000001)
 
 # Define the Meshes that you want to represent each grade of the quantity.
 wireframe = False
