@@ -58,6 +58,8 @@ def setUp():
     document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(t):
+    global timeOut
+    
     B = wireB(particle.position)
     F = particle.velocity.cross(B)
 
@@ -82,7 +84,7 @@ def tick(t):
     probeF.quantity = F
     probeF.grade1.position = particle.position
     
-    if (abs(particle.position % k) > 5):
+    if (abs(particle.position % k) > 4):
         timeOut = 0
     
     space3D.render()
