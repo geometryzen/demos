@@ -15,7 +15,7 @@ space3D = CartesianSpace()
 workbench3D = Workbench(space3D.renderer, space3D.camera)
 
 particle = SphereBuilder().color("blue").radius(0.1).build()
-particle.position = VectorE3(0, 1, -5)
+particle.position = VectorE3(0, 1, 0)
 particle.mass     = ScalarE3(1)
 particle.velocity = VectorE3(0, -1, 0)
 space3D.add(particle)
