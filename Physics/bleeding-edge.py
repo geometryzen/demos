@@ -1,47 +1,36 @@
 '''
 This program may not work for you because I am working on it right now!
 '''
-from easel import *
-from three import *
 from browser import *
+from three import *
 from workbench import *
 from geometry import *
-from math import exp, pi
 
-timeOut = 600
+timeOut = 60
 
 space3D = CartesianSpace()
-canvas3D = space3D.renderer.domElement
-workbench3D = Workbench3D(canvas3D, space3D.renderer, space3D.camera)
-   
-canvas2D = document.createElement("canvas")
-canvas2D.style.position = "absolute"
-canvas2D.style.top = "0px"
-canvas2D.style.left = "0px"
-workbench2D = Workbench2D(canvas2D)
-space2D = Stage(canvas2D)
-space2D.autoClear = True
+i = VectorE3(1,0,0)
+j = VectorE3(0,0,1)
+k = VectorE3(0,0,1)
 
-output = Text("", "20px Helvetica", "white")
-output.x = 100
-output.y = 100
-space2D.addChild(output)
+workbench3D = Workbench(space3D.renderer, space3D.camera)
 
-quantity = ScalarE3(0.000001) + VectorE3(3, 4, 0) + BivectorE3(0,0,0) + PseudoscalarE3(0.000001)
+particle = SphereBuilder().color(0x0000FF).radius(0.1).build()
+particle.position = VectorE3(0, 1, 0)
+particle.mass     = ScalarE3(1)
+particle.velocity = VectorE3(0, -1, 0)
+space3D.add(particle)
 
-# Define the Meshes that you want to represent each grade of the quantity.
-wireframe = False
-grade0 = SphereBuilder().wireframe(True).color(0xFFFF00).segments(12).build()
-grade1 = ArrowBuilder().color(0x0000FF).wireframe(wireframe).segments(32).build()
-grade2 = VortexBuilder().wireframe(wireframe).color(0x0000FF).build()
-grade3 = CubeBuilder().wireframe(True).color(0xFFFF00).segments(1).build()
+probeV = ProbeBuilderE3().color(0x0000FF).build()
+space3D.add(probeV.grade1)
 
-probe  = ProbeE3(grade0, grade1, grade2, grade3)
+probeB = ProbeBuilderE3().color(0xFF0000).build()
+space3D.add(probeB.grade1)
 
-space3D.add(probe.grade0)
-space3D.add(probe.grade1)
-space3D.add(probe.grade2)
-space3D.add(probe.grade3)
+probeF = ProbeBuilderE3().color(0xFFFF00).build()
+space3D.add(probeF.grade1)
+
+dt = 0.02
 
 def escKey(event, downFlag):
     event.preventDefault()
@@ -58,16 +47,63 @@ def onDocumentKeyDown(event):
     except:
         pass
 
+def wireB(position):
+    x = position.x
+    y = position.y
+    quadrance = x * x + y * y
+    return VectorE3(-y/quadrance, x/quadrance, 0)
+
+def constantB(position):
+    return VectorE3(1, 0, 0)
+
+def outsideCube(position, size):
+    if (abs(particle.position % i) > size):
+        return True
+    if (abs(particle.position % j) > size):
+        return True
+    if (abs(particle.position % k) > size):
+        return True
+    return False
+
 def setUp():
-    workbench2D.setUp()
     workbench3D.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(t):
-    probe.quantity = quantity
-    output.text = str(probe.quantity)
+    global timeOut
+    
+    B = wireB(particle.position)
+    F = particle.velocity.cross(B)
+
+    speedBefore = particle.velocity.magnitude()
+    # Integrate the momentum of the particle.
+    particle.velocity = particle.velocity + (F * dt / particle.mass)
+    speedAfter = particle.velocity.magnitude()
+
+    # This is a bit of a hack to compensate for innacuracy in the simulation.
+    # It's only going to work for magnetic fields but we could split momentum change contributions for electric fields.
+    particle.velocity = particle.velocity * speedBefore / speedAfter
+
+    # Integrate the position of the particle.    
+    particle.position += particle.velocity * dt
+    
+    probeV.quantity = particle.velocity
+    probeV.grade1.position = particle.position
+
+    probeB.quantity = B
+    probeB.grade1.position = particle.position
+
+    probeF.quantity = F
+    probeF.grade1.position = particle.position
+    
+    if outsideCube(particle.position, 5):
+        timeOut = 0
+
+    # Track the particle with the camera.        
+    space3D.camera.position.z = particle.position.z
+    space3D.camera.lookAt(particle.position)
+    
     space3D.render()
-    space2D.render()
 
 def terminate(t):
     return t > timeOut
@@ -75,6 +111,5 @@ def terminate(t):
 def tearDown():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench3D.tearDown()
-    workbench2D.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
