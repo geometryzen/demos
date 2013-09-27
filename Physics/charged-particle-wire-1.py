@@ -91,6 +91,7 @@ def tick(t):
     particle.position += particle.velocity * dt
     
     probeB.quantity = B
+    probeB.position = particle.position
     
     space3D.render()
     space2D.update()
