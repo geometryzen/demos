@@ -23,7 +23,7 @@ space3D.add(particle)
 
 print particle.material.color.getHex()
 
-probeV = ProbeBuilderE3().color(0x0000FF).build()
+probeV = ProbeBuilderE3().color(particle.material.color.getHex()).build()
 space3D.add(probeV.grade1)
 
 probeB = ProbeBuilderE3().color(0xFF0000).build()
