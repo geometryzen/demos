@@ -10,7 +10,7 @@ space3D = CartesianSpace()
 workbench3D = Workbench(space3D.renderer, space3D.camera)
 
 particle = SphereBuilder().color("blue").radius(0.4).build()
-particle.position = VectorE3(0, 5, 0)
+particle.position = VectorE3(0, 5, 5)
 particle.mass     = ScalarE3(1)
 particle.momentum = VectorE3(0, -1, 0) * particle.mass
 space3D.add(particle)
@@ -30,6 +30,21 @@ output.x = window.innerWidth / 2
 output.y = window.innerHeight / 2
 space2D.addChild(output)
 
+def escKey(event, downFlag):
+    event.preventDefault()
+    global timeOut
+    timeOut = 0
+
+keyHandlers = {
+ 27: escKey
+}
+    
+def onDocumentKeyDown(event):
+    try:
+        keyHandlers[event.keyCode](event, True)
+    except:
+        pass
+
 def wireB(position):
     x = position.x
     y = position.y
@@ -39,6 +54,7 @@ def wireB(position):
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
+    document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(t):
     velocity = particle.momentum / particle.mass
@@ -53,6 +69,7 @@ def terminate(t):
     return t > 120
 
 def tearDown():
+    document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench3D.tearDown()
     workbench2D.tearDown()
 
