@@ -64,9 +64,9 @@ def setUp():
 def tick(t):
     B = wireB(particle.position)
     F = particle.velocity.cross(B)
+    output.text = repr(F << particle.velocity)
     # Seem to have a problem here that F.v is not close to zero.
     particle.velocity = particle.velocity + (F * dt / particle.mass)
-    output.text = repr(F << particle.velocity)
     particle.position += particle.velocity * dt
     
     space3D.render()
