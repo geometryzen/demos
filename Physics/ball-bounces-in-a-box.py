@@ -6,7 +6,7 @@ from random import random
 scene = Scene()
 
 renderer = WebGLRenderer()
-renderer.setClearColor(Color(0x080808), 1.0)
+renderer.setClearColor(Color(0x666666), 1.0)
 
 camera = PerspectiveCamera()
 camera.position.z = 15
