@@ -65,6 +65,7 @@ def tick(t):
     velocity = particle.momentum / particle.mass
 
     B = wireB(particle.position)
+    # TODO: It's ugly that we have to clone to avoid the side effects of the mutating cross product.
     F = velocity.clone().cross(B)
     # Seem to have a problem here that F.v is not close to zero.
     output.text = repr(len(velocity))
