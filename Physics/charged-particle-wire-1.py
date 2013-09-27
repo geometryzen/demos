@@ -69,7 +69,7 @@ def setUp():
 def tick(t):
     global timeOut
     
-    B = constantB(particle.position)
+    B = wireB(particle.position)
     F = particle.velocity.cross(B)
 
     speedBefore = particle.velocity.magnitude()
