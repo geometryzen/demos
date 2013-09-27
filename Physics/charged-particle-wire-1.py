@@ -17,7 +17,7 @@ workbench3D = Workbench(space3D.renderer, space3D.camera)
 particle = SphereBuilder().color("blue").radius(0.1).build()
 particle.position = VectorE3(0, 1, -5)
 particle.mass     = ScalarE3(1)
-particle.momentum = VectorE3(0, -1, 0) * particle.mass
+particle.velocity = VectorE3(0, -1, 0)
 space3D.add(particle)
 
 dt = 0.05
@@ -67,8 +67,8 @@ def tick(t):
     B = wireB(particle.position)
     F = velocity.cross(B)
     # Seem to have a problem here that F.v is not close to zero.
-    output.text = repr(F << velocity)
     particle.momentum = particle.momentum + F * dt
+    output.text = repr(F << velocity)
     particle.position = particle.position + (particle.momentum / particle.mass) * dt
     
     space3D.render()
