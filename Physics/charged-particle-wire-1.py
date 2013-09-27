@@ -53,6 +53,15 @@ def wireB(position):
 def constantB(position):
     return VectorE3(1, 0, 0)
 
+def outsideCube(position, size):
+    if (abs(particle.position % i) > size):
+        return True
+    if (abs(particle.position % j) > size):
+        return True
+    if (abs(particle.position % k) > size):
+        return True
+    return False
+
 def setUp():
     workbench3D.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
@@ -84,7 +93,7 @@ def tick(t):
     probeF.quantity = F
     probeF.grade1.position = particle.position
     
-    if (abs(particle.position % k) > 3):
+    if outsideCube(particle.position, 5):
         timeOut = 0
     
     space3D.render()
