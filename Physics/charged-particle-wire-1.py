@@ -84,7 +84,7 @@ def tick(t):
     probeF.quantity = F
     probeF.grade1.position = particle.position
     
-    if (abs(particle.position % k) > 4):
+    if (abs(particle.position % k) > 3):
         timeOut = 0
     
     space3D.render()
