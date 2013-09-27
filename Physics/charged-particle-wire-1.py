@@ -81,7 +81,7 @@ def tick(t):
 
     speedBefore = particle.velocity.magnitude()
     # Integrate the momentum of the particle.
-    particle.velocity = particle.velocity + (F * dt / particle.mass)
+    particle.velocity += (F * dt / particle.mass)
     speedAfter = particle.velocity.magnitude()
 
     # This is a bit of a hack to compensate for innacuracy in the simulation.
