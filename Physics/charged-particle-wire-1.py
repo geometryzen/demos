@@ -75,7 +75,7 @@ def setUp():
     document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(t):
-    B = wireB(particle.position)
+    B = constantB(particle.position)
     F = particle.velocity.cross(B)
 
     magnitudeBefore = particle.velocity.magnitude()
