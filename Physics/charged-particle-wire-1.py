@@ -24,7 +24,7 @@ space3D.add(particle)
 probeV  = ProbeE3(SphereBuilder().build(), ArrowBuilder().color("yellow").segments(32).build(), VortexBuilder().color(0x0000FF).build(), CubeBuilder().build())
 space3D.add(probeV.grade1)
 
-probeB  = ProbeE3(SphereBuilder().build(), ArrowBuilder().color(0x0000FF).segments(32).build(), VortexBuilder().color(0x0000FF).build(), CubeBuilder().build())
+probeB  = ProbeE3(SphereBuilder().build(), ArrowBuilder().color(0xFF0000).segments(32).build(), VortexBuilder().color(0xFF0000).build(), CubeBuilder().build())
 space3D.add(probeB.grade1)
 
 probeF  = ProbeE3(SphereBuilder().build(), ArrowBuilder().color(0x0000FF).segments(32).build(), VortexBuilder().color(0x0000FF).build(), CubeBuilder().build())
