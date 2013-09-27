@@ -77,7 +77,6 @@ def tick(t):
     probeF.grade1.position = particle.position
     
     space3D.render()
-    space2D.update()
 
 def terminate(t):
     return t > timeOut
