@@ -12,7 +12,7 @@ k = VectorE3(0,0,1)
 
 workbench3D = Workbench(space3D.renderer, space3D.camera)
 
-particle = SphereBuilder().color(0x0000FF).radius(0.1).build()
+particle = SphereBuilder().color(0x0000FF).radius(0.05).build()
 particle.position = VectorE3(0, 1, 0)
 particle.mass     = ScalarE3(1)
 particle.velocity = VectorE3(0, -1, 0)
