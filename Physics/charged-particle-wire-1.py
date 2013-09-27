@@ -21,7 +21,7 @@ particle.velocity = VectorE3(0, -1, 0)
 space3D.add(particle)
 
 for x in range(-5, 6):
-    for y in range(-5, 6)
+    for y in range(-5, 6):
         position = VectorE3(x, y, 0)
         B = wireB(position)
         probe = ProbeBuilderE3().color(0xFF0000).build()
