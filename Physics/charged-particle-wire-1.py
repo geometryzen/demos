@@ -73,7 +73,7 @@ def tick(t):
     magnitudeAfter = particle.velocity.magnitude()
 
     # This is a bit of a hack to compensate for innacuracy in the simulation.
-
+    # It's only going to work for magnetic fields but we could split momentum change contributions for electric fields.
     particle.velocity = particle.velocity * magnitudeBefore / magnitudeAfter
     particle.position += particle.velocity * dt
     
