@@ -2,10 +2,14 @@ from browser import *
 from three import *
 from workbench import *
 from geometry import *
+from math import abs
 
 timeOut = 60
 
 space3D = CartesianSpace()
+i = VectorE3(1,0,0)
+j = VectorE3(0,0,1)
+k = VectorE3(0,0,1)
 
 workbench3D = Workbench(space3D.renderer, space3D.camera)
 
@@ -78,6 +82,9 @@ def tick(t):
 
     probeF.quantity = F
     probeF.grade1.position = particle.position
+    
+    if (abs(particle.position % k) > 5):
+        timeOut = 0
     
     space3D.render()
 
