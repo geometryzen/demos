@@ -91,7 +91,7 @@ def tick(t):
     global timeOut
     
     B = wireB(particle.position)
-    F = particle.charge * (-I) * (particle.velocity ^ B)
+    F = particle.charge * particle.velocity.cross(B)
 
     speedBefore = particle.velocity.magnitude()
     # Integrate the momentum of the particle.
