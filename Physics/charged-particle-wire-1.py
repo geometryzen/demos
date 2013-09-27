@@ -17,7 +17,7 @@ particle.mass     = ScalarE3(0.5)
 particle.momentum = VectorE3(0, -1, 0) * particle.mass
 space3D.add(particle)
 
-dt = 0.001
+dt = 0.05
 
 canvas2D = document.createElement("canvas")
 canvas2D.style.position = "absolute"
@@ -51,7 +51,7 @@ def wireB(position):
     x = position.x
     y = position.y
     quadrance = x * x + y * y
-    return 2 * VectorE3(-y/quadrance, x/quadrance, 0)
+    return VectorE3(-y/quadrance, x/quadrance, 0)
 
 def setUp():
     workbench2D.setUp()
