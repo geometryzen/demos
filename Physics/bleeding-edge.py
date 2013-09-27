@@ -21,7 +21,7 @@ particle.mass     = ScalarE3(1)
 particle.velocity = VectorE3(0, -1, 0)
 space3D.add(particle)
 
-print particle.material.color.getHexString()
+print particle.material.color.getHex()
 
 probeV = ProbeBuilderE3().color(0x0000FF).build()
 space3D.add(probeV.grade1)
