@@ -24,10 +24,10 @@ space3D.add(particle)
 probeV = ProbeBuilderE3().color(0x0000FF).build()
 space3D.add(probeV.grade1)
 
-probeB = ProbeBuilderE3().build()
+probeB = ProbeBuilderE3().color(0xFF0000).build()
 space3D.add(probeB.grade1)
 
-probeF = ProbeBuilderE3().build()
+probeF = ProbeBuilderE3().color(0xFFFF00).build()
 space3D.add(probeF.grade1)
 
 dt = 0.02
