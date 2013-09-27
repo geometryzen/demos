@@ -61,9 +61,8 @@ def setUp():
 def tick(t):
     velocity = particle.momentum / particle.mass
 
-    output.text = str(len(velocity))
-
     F = velocity.cross(wireB(particle.position))
+    output.text = str(F % v)
     particle.momentum = particle.momentum + F * dt
     particle.position = particle.position + (particle.momentum / particle.mass) * dt
     
