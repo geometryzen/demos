@@ -37,7 +37,7 @@ space3D.add(probeB.grade1)
 probeF = ProbeBuilderE3().color(0xFFFF00).build()
 space3D.add(probeF.grade1)
 
-dt = 0.02
+dt = 0.01
 
 def escKey(event, downFlag):
     event.preventDefault()
