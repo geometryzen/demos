@@ -37,7 +37,7 @@ def setUp():
 def tick(t):
     F = VectorE3(0,0,0)
     particle.momentum = particle.momentum + F * dt
-    particel.position = particle.position + (particle.momentum / particle.mass) * dt
+    particle.position = particle.position + (particle.momentum / particle.mass) * dt
     
     space3D.render()
     space2D.update()
