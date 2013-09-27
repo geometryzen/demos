@@ -20,6 +20,14 @@ particle.mass     = ScalarE3(1)
 particle.velocity = VectorE3(0, -1, 0)
 space3D.add(particle)
 
+grade0 = SphereBuilder().wireframe(True).color(0xFFFF00).segments(12).build()
+grade1 = ArrowBuilder().color(0x0000FF).wireframe(wireframe).segments(32).build()
+grade2 = VortexBuilder().wireframe(wireframe).color(0x0000FF).build()
+grade3 = CubeBuilder().wireframe(True).color(0xFFFF00).segments(1).build()
+
+probeB  = ProbeE3(grade0, grade1, grade2, grade3)
+space3D.add(probeB)
+
 dt = 0.02
 
 canvas2D = document.createElement("canvas")
@@ -76,6 +84,8 @@ def tick(t):
     # It's only going to work for magnetic fields but we could split momentum change contributions for electric fields.
     particle.velocity = particle.velocity * magnitudeBefore / magnitudeAfter
     particle.position += particle.velocity * dt
+    
+    probeB.quantity = B
     
     space3D.render()
     space2D.update()
