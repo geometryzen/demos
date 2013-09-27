@@ -58,13 +58,16 @@ def tick(t):
     B = wireB(particle.position)
     F = particle.velocity.cross(B)
 
-    magnitudeBefore = particle.velocity.magnitude()
+    speedBefore = particle.velocity.magnitude()
+    # Integrate the momentum of the particle.
     particle.velocity = particle.velocity + (F * dt / particle.mass)
-    magnitudeAfter = particle.velocity.magnitude()
+    speedAfter = particle.velocity.magnitude()
 
     # This is a bit of a hack to compensate for innacuracy in the simulation.
     # It's only going to work for magnetic fields but we could split momentum change contributions for electric fields.
-    particle.velocity = particle.velocity * magnitudeBefore / magnitudeAfter
+    particle.velocity = particle.velocity * speedBefore / speedAfter
+
+    # Integrate the position of the particle.    
     particle.position += particle.velocity * dt
     
     probeV.quantity = particle.velocity
