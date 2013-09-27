@@ -30,7 +30,7 @@ output.x = window.innerWidth / 2
 output.y = window.innerHeight / 2
 space2D.addChild(output)
 
-deg wireB(position):
+def wireB(position):
     x = position.x
     y = position.y
     quadrance = x * x + y * y
