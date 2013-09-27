@@ -62,14 +62,12 @@ def setUp():
     document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(t):
-    velocity = particle.momentum / particle.mass
-
     B = wireB(particle.position)
-    F = velocity.cross(B)
+    F = particle.velocity.cross(B)
     # Seem to have a problem here that F.v is not close to zero.
-    particle.momentum = particle.momentum + F * dt
-    output.text = repr(F << velocity)
-    particle.position = particle.position + (particle.momentum / particle.mass) * dt
+    particle.velocity = particle.velocity + (F * dt / particle.mass)
+    output.text = repr(F << partoicle.velocity)
+    particle.position = particle.position + particle.velocity * dt
     
     space3D.render()
     space2D.update()
