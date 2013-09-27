@@ -21,6 +21,9 @@ particle.mass     = ScalarE3(1)
 particle.velocity = VectorE3(0, -1, 0)
 space3D.add(particle)
 
+wire = CylinderBuilder().color(0x0000FF).radius(0.1).build()
+space3D.add(wire)
+
 print particle.material.color.getHexString()
 
 probeV = ProbeBuilderE3().color(particle.material.color.getHex()).build()
