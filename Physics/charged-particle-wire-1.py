@@ -2,7 +2,6 @@ from browser import *
 from three import *
 from workbench import *
 from geometry import *
-from math import abs
 
 timeOut = 60
 
