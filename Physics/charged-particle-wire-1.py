@@ -96,6 +96,7 @@ def tick(t):
 
     probeB.quantity = B
     probeB.grade1.position = particle.position
+    probeB.grade2.position = particle.position
 
     probeF.quantity = F
     probeF.grade1.position = particle.position
