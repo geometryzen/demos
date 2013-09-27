@@ -12,7 +12,7 @@ space3D = CartesianSpace()
 workbench3D = Workbench(space3D.renderer, space3D.camera)
 
 particle = SphereBuilder().color("blue").radius(0.4).build()
-particle.position = VectorE3(0, 5, 5)
+particle.position = VectorE3(0, 5, 3)
 particle.mass     = ScalarE3(1)
 particle.momentum = VectorE3(0, -1, 0) * particle.mass
 space3D.add(particle)
@@ -51,7 +51,7 @@ def wireB(position):
     x = position.x
     y = position.y
     quadrance = x * x + y * y
-    return VectorE3(-y/quadrance, x/quadrance, 0)
+    return 2 * VectorE3(-y/quadrance, x/quadrance, 0)
 
 def setUp():
     workbench2D.setUp()
