@@ -33,6 +33,7 @@ space3D.add(probeV.grade1)
 # Probe to show the magnetic field at the particle position.
 probeB = ProbeBuilderE3().color(0xFF0000).build()
 space3D.add(probeB.grade1)
+space3D.add(probeB.grade2)
 
 # Probe to show the Lorentz force on the charged particle.
 probeF = ProbeBuilderE3().color(0xFFFF00).build()
@@ -59,10 +60,8 @@ def wireB(position):
     x = position.x
     y = position.y
     quadrance = x * x + y * y
-    return VectorE3(-y/quadrance, x/quadrance, 0)
-
-def constantB(position):
-    return VectorE3(1, 0, 0)
+    # Conver the traditional magnetic field to a bivector.
+    return -I * VectorE3(-y/quadrance, x/quadrance, 0)
 
 def outsideCube(position, size):
     if (abs(particle.position % i) > size):
@@ -81,16 +80,16 @@ def tick(t):
     global timeOut
     
     B = wireB(particle.position)
-    F = particle.charge * (-I) * (particle.velocity ^ B)
+    F = particle.charge * (particle.velocity << B)
 
     speedBefore = particle.velocity.magnitude()
     # Integrate the momentum of the particle.
-    particle.velocity = particle.velocity + (F * dt / particle.mass)
+    particle.velocity += (F * dt / particle.mass)
     speedAfter = particle.velocity.magnitude()
 
     # This is a bit of a hack to compensate for innacuracy in the simulation.
     # It's only going to work for magnetic fields but we could split momentum change contributions for electric fields.
-    particle.velocity = particle.velocity * speedBefore / speedAfter
+    particle.velocity *= speedBefore / speedAfter
 
     # Integrate the position of the particle.    
     particle.position += particle.velocity * dt
@@ -100,6 +99,7 @@ def tick(t):
 
     probeB.quantity = B
     probeB.grade1.position = particle.position
+    probeB.grade2.position = particle.position
 
     probeF.quantity = F
     probeF.grade1.position = particle.position
