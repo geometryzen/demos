@@ -13,7 +13,7 @@ pointLight.position.set(20, 20, 20)
 scene.add(pointLight)
 
 renderer = WebGLRenderer()
-renderer.setClearColor(Color(0xAAAAAA), 1.0)
+renderer.setClearColor(Color(0x888888), 1.0)
 
 mesh = Mesh(CubeGeometry(5, 5, 5), MeshLambertMaterial({"color":0x0000FF}))
 
