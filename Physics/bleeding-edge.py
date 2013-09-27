@@ -12,6 +12,7 @@ space3D = CartesianSpace()
 i = VectorE3(1,0,0)
 j = VectorE3(0,0,1)
 k = VectorE3(0,0,1)
+I = i * j * k
 
 workbench3D = Workbench(space3D.renderer, space3D.camera)
 
@@ -80,7 +81,7 @@ def tick(t):
     global timeOut
     
     B = wireB(particle.position)
-    F = particle.charge * particle.velocity.cross(B)
+    F = particle.charge * (particle.velocity ^ B) * I
 
     speedBefore = particle.velocity.magnitude()
     # Integrate the momentum of the particle.
