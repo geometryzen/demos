@@ -90,7 +90,7 @@ def tick(t):
     particle.velocity = particle.velocity * magnitudeBefore / magnitudeAfter
     particle.position += particle.velocity * dt
     
-    probeB.quantity = VectorE3(4,0,0)
+    probeB.quantity = B
     
     space3D.render()
     space2D.update()
