@@ -64,9 +64,13 @@ def setUp():
 def tick(t):
     B = wireB(particle.position)
     F = particle.velocity.cross(B)
-    output.text = str(F << particle.velocity)
+    output.text = str(particle.velocity.magnitude())
     # Seem to have a problem here that F.v is not close to zero.
+    magnitudeBefore = particle.velocity.magnitude()
     particle.velocity = particle.velocity + (F * dt / particle.mass)
+    magnitudeAfter = particle.velocity.magnitude()
+    # This is a bit of a hack to compensate for innacuracy in the simulation.
+    particle.velocity = particle.velocity * magnitudeBefore / magnitudeAfter
     particle.position += particle.velocity * dt
     
     space3D.render()
