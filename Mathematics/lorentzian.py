@@ -37,3 +37,5 @@ assertEqual(A.x, 0x1)
 assertEqual(A.y, 0x2)
 assertEqual(A.z, 0x4)
 assertEqual(A.t, 0x8)
+
+print "Done!"
