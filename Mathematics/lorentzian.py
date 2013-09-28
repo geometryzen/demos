@@ -3,8 +3,8 @@ UNDER CONSTRUCTION
 Lorentzian is a Geometric Algebra multivector (quantity) with a metric that is Lorentzian.
 '''
 from lorentz import *
-# The following functions are provided for testing purposes.
 
+# The following functions are provided for testing purposes.
 def assertEqual(actual, expect):
     if expect == actual:
         pass
