@@ -45,6 +45,9 @@ assertEqual(B.y, 0x2)
 assertEqual(B.z, 0x4)
 assertEqual(B.t, 0x8)
 
+A = VectorL4(2, 3, 5, 7)
+B = VectorL4(11,13,17,19)
 C = A + B
+assertEqual(C.x, 13)
 
 print "Done!"
