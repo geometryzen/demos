@@ -63,4 +63,11 @@ assertEqual(C.y, 3)
 assertEqual(C.z, 5)
 assertEqual(C.t, 7)
 
+C = 5 + A
+assertEqual(C.w, 5)
+assertEqual(C.x, 2)
+assertEqual(C.y, 3)
+assertEqual(C.z, 5)
+assertEqual(C.t, 7)
+
 print "Done!"
