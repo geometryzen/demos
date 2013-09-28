@@ -516,7 +516,7 @@ C = A * B
 assertEqual(C.w,    0)
 assertEqual(C.x,    0)
 assertEqual(C.y,    0)
-#assertEqual(C.xy,  -6)
+assertEqual(C.xy,  -6)
 assertEqual(C.z,    0)
 assertEqual(C.xz,   0)
 assertEqual(C.yz,   0)
