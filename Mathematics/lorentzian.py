@@ -31,8 +31,7 @@ def isCloseTo(actual, expect):
     quadrance = error % error
     return sqrt(quadrance) < epsilon
 
-A = VectorL4(2, 3, 5, 7)
-B = VectorL4(11,13,17,19)
+A = Lorentzian(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)
 
 assertEqual(A.x, 2)
 assertEqual(A.y, 3)
