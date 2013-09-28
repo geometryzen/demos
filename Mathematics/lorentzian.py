@@ -70,4 +70,6 @@ assertEqual(C.y, 3)
 assertEqual(C.z, 5)
 assertEqual(C.t, 7)
 
+w = ScalarL4(1)
+
 print "Done!"
