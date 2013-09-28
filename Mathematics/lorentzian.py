@@ -40,4 +40,9 @@ assertEqual(A.t, 0x8)
 
 B = VectorL4(0x1, 0x2, 0x4, 0x8)
 
+assertEqual(B.x, 0x1)
+assertEqual(B.y, 0x2)
+assertEqual(B.z, 0x4)
+assertEqual(B.t, 0x8)
+
 print "Done!"
