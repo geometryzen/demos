@@ -4,7 +4,7 @@ Lorentzian is a Geometric Algebra multivector (quantity) with a metric that is L
 '''
 from lorentz import *
 
-A = VectorL4(2,3,5,7)
+A = VectorL4(2, 3, 5, 7)
 B = VectorL4(11,13,17,19)
 
 print A.x
