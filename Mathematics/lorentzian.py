@@ -49,7 +49,7 @@ assertEqual(A.xt,  +0x9)
 assertEqual(A.tx,  -0x9)
 assertEqual(A.yt,  +0xA)
 assertEqual(A.ty,  -0xA)
-assertEqual(A.xyt, -0xB)
+assertEqual(A.xyt, +0xB)
 
 B = VectorL4(0x1, 0x2, 0x4, 0x8)
 
