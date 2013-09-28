@@ -50,7 +50,7 @@ B = VectorL4(11,13,17,19)
 C = A + B
 assertEqual(C.x, 13)
 assertEqual(C.y, 16)
-assertEqual(C.z, 16)
-assertEqual(C.t, 16)
+assertEqual(C.z, 22)
+assertEqual(C.t, 26)
 
 print "Done!"
