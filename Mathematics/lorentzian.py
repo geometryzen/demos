@@ -108,7 +108,7 @@ X = VectorL4(3, 4, 12, 13)
 assertEqual(X.quadrance(), 0)
 
 A = Lorentzian(1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
-B = VectorL4(11,13,17,19)
+B = Lorentzian(1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
 C = A * B
 assertEqual(C.w, 0)
 assertEqual(C.x, 0)
