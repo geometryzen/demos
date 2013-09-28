@@ -35,3 +35,4 @@ A = VectorL4(2, 3, 5, 7)
 B = VectorL4(11,13,17,19)
 
 assertEqual(A.x, 2)
+assertEqual(A.y, 3)
