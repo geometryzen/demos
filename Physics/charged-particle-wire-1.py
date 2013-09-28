@@ -113,7 +113,7 @@ def tick(t):
     probeF.quantity = F
     probeF.grade1.position = particle.position
     
-    if outsideCube(particle.position, 5):
+    if outsideCube(particle.position, 10):
         timeOut = 0
 
     # Track the particle with the camera.        
