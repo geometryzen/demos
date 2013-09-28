@@ -87,5 +87,6 @@ assertEqual(C.z, 5)
 assertEqual(C.t, 7)
 
 X = VectorL4(3, 4, 12, 13)
+quadrance = X.quadrance()
 
 print "Done!"
