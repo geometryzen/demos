@@ -107,10 +107,13 @@ assertEqual(C.t, 7)
 X = VectorL4(3, 4, 12, 13)
 assertEqual(X.quadrance(), 0)
 
+A = Lorentzian(0x0,0x1,0x2,0x3,0x4,0x5,0x6,0x7,0x8,0x9,0xA,0xB,0xC,0xD,0xE,0xF)
+assertEqual(A, A)
+
 A = Lorentzian(1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
 B = Lorentzian(1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
 C = A * B
-assertEqual(C.w, 0)
+assertEqual(C.w, 1)
 assertEqual(C.x, 0)
 
 print "Done!"
