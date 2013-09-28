@@ -36,3 +36,4 @@ B = VectorL4(11,13,17,19)
 
 assertEqual(A.x, 2)
 assertEqual(A.y, 3)
+assertEqual(A.z, 5)
