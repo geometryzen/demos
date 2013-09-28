@@ -70,6 +70,13 @@ assertEqual(C.y, 3)
 assertEqual(C.z, 5)
 assertEqual(C.t, 7)
 
-w = ScalarL4(1)
+five = ScalarL4(5)
+
+C = A + five
+assertEqual(C.w, 5)
+assertEqual(C.x, 2)
+assertEqual(C.y, 3)
+assertEqual(C.z, 5)
+assertEqual(C.t, 7)
 
 print "Done!"
