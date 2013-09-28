@@ -45,4 +45,6 @@ assertEqual(B.y, 0x2)
 assertEqual(B.z, 0x4)
 assertEqual(B.t, 0x8)
 
+C = A + B
+
 print "Done!"
