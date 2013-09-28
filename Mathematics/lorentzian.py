@@ -107,4 +107,8 @@ assertEqual(C.t, 7)
 X = VectorL4(3, 4, 12, 13)
 assertEqual(X.quadrance(), 0)
 
+A = VectorL4(2, 3, 5, 7)
+B = VectorL4(11,13,17,19)
+C = A * B
+
 print "Done!"
