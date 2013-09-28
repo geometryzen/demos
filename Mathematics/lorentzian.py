@@ -53,6 +53,7 @@ assertEqual(A.xyt, +0xB)
 assertEqual(A.zt,  +0xC)
 assertEqual(A.tz,  -0xC)
 assertEqual(A.xzt, +0xD)
+assertEqual(A.zxt, -0xD)
 
 B = VectorL4(0x1, 0x2, 0x4, 0x8)
 
