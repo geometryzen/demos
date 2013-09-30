@@ -18,3 +18,5 @@ print r2 << e2
 s = e2 - (e2 << e1) * e1 / (e1 * e1)
 
 print s
+
+print s * s
