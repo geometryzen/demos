@@ -1,7 +1,7 @@
 '''
 Reciprocal vectors in two dimensions.
 
-The purpose is to show that we can construct reciprocal vectors using geometric algebra.
+The purpose is to show that we can construct reciprocal vectors using Geometric Algebra.
 Note that the cross-product construction in 3 dimensions could be applied to two dimensions
 but we have to artificially introduce the 3rd dimension.
 But we couldn't do this trick if we want to go to more than three dimensions.
@@ -9,6 +9,7 @@ But we couldn't do this trick if we want to go to more than three dimensions.
 from e2ga import *
 from e3ga import *
 
+# First we compute in the plane using Geometric Algebra.
 i = VectorE2(1, 0)
 j = VectorE2(0, 1)
 e1 = 12 * i
