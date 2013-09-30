@@ -3,6 +3,7 @@ from three import *
 from browser import *
 from workbench import *
 from geometry import *
+from math import *
 
 done = False
 
@@ -62,7 +63,7 @@ def setUp():
     exit.addEventListener("click", onClickExit)
 
 def tick(t):
-    m = quantity.length()
+    m = sqrt(quantity.magnitude())
     arrow.scale = VectorE3(m, m, m)
     output.text = repr(quantity)
 
