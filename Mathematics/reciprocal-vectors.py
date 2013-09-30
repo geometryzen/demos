@@ -17,13 +17,13 @@ e2 = 3 * i + 4 * j
 r1 = e2 / (e1 ^ e2)
 r2 = -e1 / (e1 ^ e2)
 
-# Check the defining proprties are satisfied.
+# Check the defining properties are satisfied.
 print r1 << e1
 print r1 << e2
 print r2 << e1
 print r2 << e2
 
-# And now we do it using the 3-dimension formula.
+# And now we do it using the traditional 3-dimensional formula.
 i = VectorE3(1, 0, 0)
 j = VectorE3(0, 1, 0)
 k = VectorE3(0, 0, 1)
