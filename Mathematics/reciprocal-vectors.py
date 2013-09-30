@@ -11,3 +11,5 @@ r1 = e2 / (e1 ^ e2)
 r2 = -e1 / (e1 ^ e2)
 
 print r1 << e1
+print r1 << e2
+print r2 << e1
