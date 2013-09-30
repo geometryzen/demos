@@ -20,3 +20,5 @@ s = e2 - (e2 << e1) * e1 / (e1 * e1)
 print s
 
 print s * s
+
+print (e1 * e2) 
