@@ -2,7 +2,9 @@
 Reciprocal vectors in two dimensions.
 
 The purpose is to show that we can construct reciprocal vectors using geometric algebra.
-Note that the cross-product construction in 3 dimensions 
+Note that the cross-product construction in 3 dimensions could be applied to two dimensions
+but we have to artificially introduce the 3rd dimension.
+But we couldn't do this trick if we want to go to more than three dimensions.
 '''
 from e2ga import *
 from e3ga import *
@@ -19,7 +21,7 @@ print r1 << e2
 print r2 << e1
 print r2 << e2
 
-
+# And now we do it using the 3-dimension formula.
 i = VectorE3(1, 0, 0)
 j = VectorE3(0, 1, 0)
 k = VectorE3(0, 0, 1)
