@@ -39,5 +39,7 @@ print r1 << e2
 print r2 << e1
 print r2 << e2
 
-# Another interesting result is that the outer product of a basis vector and its reciprocal is generally non-zero:
+# Another interesting result is that the outer product of a basis vector and its reciprocal is generally non-zero, but when summed
+# over all basis vectors we get zero. This can be proved using symmetry arguments on the double summation.
 print r1 ^ e1
+print r2 ^ e2
