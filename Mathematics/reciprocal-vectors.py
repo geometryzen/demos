@@ -43,3 +43,4 @@ print r2 << e2
 # over all basis vectors we get zero. This can be proved using symmetry arguments on the double summation.
 print r1 ^ e1
 print r2 ^ e2
+print r1 ^ e1 + r2 ^ e2
