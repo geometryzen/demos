@@ -38,3 +38,6 @@ print r1 << e1
 print r1 << e2
 print r2 << e1
 print r2 << e2
+
+# Another interesting result is that the outer product of a basis vector and its reciprocal is generally non-zero:
+print r1 ^ e1
