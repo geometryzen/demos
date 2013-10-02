@@ -23,6 +23,10 @@ print r1 << e2
 print r2 << e1
 print r2 << e2
 
+print r1 ^ e1
+print r2 ^ e2
+print r1 ^ e1 + r2 ^ e2
+
 # And now we do it using the traditional 3-dimensional formula.
 i = VectorE3(1, 0, 0)
 j = VectorE3(0, 1, 0)
