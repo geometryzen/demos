@@ -1,3 +1,3 @@
 from browser import WindowAnimationRunner
 
-WindowAnimationRunner().start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
