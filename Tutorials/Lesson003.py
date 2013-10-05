@@ -1,6 +1,5 @@
 from browser import WindowAnimationRunner
-from e3ga import SphereBuilder
-from geometry import CartesianSpace
+from geometry import CartesianSpace, SphereBuilder
 from workbench import Workbench
 
 space = CartesianSpace()
