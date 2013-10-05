@@ -1,9 +1,13 @@
+'''
+This lesson demonstrates adding a simple object to a scene.
+'''
 from browser import WindowAnimationRunner
 from geometry import CartesianSpace, SphereBuilder
 from workbench import Workbench
 
 space = CartesianSpace()
 
+# The object is created using the builder pattern.
 sphere = SphereBuilder().color(0x0000FF).build()
 space.add(sphere)
 
