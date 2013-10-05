@@ -1,1 +1,1 @@
-# Tutorials/Lesson001.py
+WindowAnimationRunner().start()
