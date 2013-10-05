@@ -1,4 +1,4 @@
-from browser import WindowAnimationRunner
+from browser import document, WindowAnimationRunner
 from geometry import CartesianSpace, SphereBuilder
 from math import cos, sin, pi
 from workbench import Workbench
