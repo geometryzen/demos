@@ -1,3 +1,9 @@
+'''
+This lesson demonstrates creating a Scene from more primitive components in the three module.
+You would do this if you need more flexibility in defining the visualization.
+In other words, this lesson takes us a way from Physics animations towards more realistic rendering.
+Note that the object created by the SphereBuilder is really just a Mesh in the three module.
+'''
 from browser import document, WindowAnimationRunner
 from three import Scene, PerspectiveCamera, WebGLRenderer, Color, PointLight
 from geometry import SphereBuilder
@@ -21,8 +27,8 @@ pointLight = PointLight(0xFFFFFF, 1, 100)
 pointLight.position.set(0, 0, 10)
 scene.add(pointLight)
 
-sphere = SphereBuilder().color(0x0000FF).build()
-scene.add(sphere)
+mesh = SphereBuilder().color(0x0000FF).build()
+scene.add(mesh)
 
 workbench = Workbench(renderer, camera)
 
