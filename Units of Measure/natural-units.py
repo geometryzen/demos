@@ -13,8 +13,8 @@ print "speed of light, c=" + str(c)
 hbar = 1.054e-34 * joule * second
 print "Planck's constant, hbar=" + str(hbar)
 
-energyUnit = hbar
+energyUnit = hbar / second
 lengthUnit = 1 / c
 
-print "mosquito mass (SI) " + str(mosquitoMassSI)
-print "mosquito mass (GeV)" + str(mosquitoMassSI * c * c / energyUnit)
+print "mosquito mass (SI)  " + str(mosquitoMassSI)
+print "mosquito mass (GeV) " + str(mosquitoMassSI * c * c / energyUnit)
