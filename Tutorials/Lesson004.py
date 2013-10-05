@@ -5,6 +5,7 @@ from workbench import Workbench
 
 T = 5
 omega = 2 * pi / T
+R = 4
 
 space = CartesianSpace()
 
@@ -14,7 +15,7 @@ space.add(sphere)
 workbench = Workbench(space.renderer, space.camera)
 
 def tick(t):
-    sphere.position.set(cos(omega*t), sin(omega*t), 0)
+    sphere.position.set(R * cos(omega*t), R * sin(omega*t), 0)
     space.render()
 
 def terminate(t):
