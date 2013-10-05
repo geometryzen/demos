@@ -9,7 +9,7 @@ print "speed of light, c=" + str(c)
 hbar = 1.054e-34 * joule * second
 print "Planck's constant, hbar=" + str(hbar)
 
-eV = 1.6e-19 joule
+eV = 1.6e-19 * joule
 milligram = 0.001 * gram
 protonMass = 938.3 * mega * eV
 print "Proton mass " + str(protonMass)
