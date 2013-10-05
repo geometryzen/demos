@@ -16,7 +16,11 @@ camera.position.z = 2
 renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
 
-sphere = SphereBuilder().wireframe(True).color(0x0000FF).build()
+pointLight = PointLight(0xFFFFFF, 1, 100)
+pointLight.position.set(20, 20, 20)
+scene.add(pointLight)
+
+sphere = SphereBuilder().color(0x0000FF).build()
 scene.add(sphere)
 
 workbench = Workbench(renderer, camera)
