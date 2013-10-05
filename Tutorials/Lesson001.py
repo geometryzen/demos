@@ -1,17 +1,31 @@
+'''
+This lesson demonstrates the structure required to support animation.
+It will print to the Output area to show you what is happening.
+We don't actually render anything in 3D until the next lesson.
+'''
 from browser import WindowAnimationRunner
 
-def tick(t):
-    print "The time is now " + str(t)
+# The tick function is called repeatedly with a time parameter (in seconds).
+# You will be expected to move objects in your animation and then render them in this function.
+def tick(time):
+    print "The time is now " + str(time)
 
-def terminate(t):
-    done = t > 1
+# The terminate function is called repeatedly with a time parameter (in seconds).
+# It is used by the animation runner to determine whether the animation should end. 
+def terminate(time):
+    done = time > 1
     print "Are we done yet? " + str(done)
     return done
 
+# The setUp function is called once at the beginning of the animation.
 def setUp():
     pass
 
+# The tearDown function is called once at the end of the animation.
 def tearDown():
     pass
 
-WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
+# The animation starts when the start method is caled.
+war = WindowAnimationRunner(tick, terminate, setUp, tearDown)
+
+war.start()
