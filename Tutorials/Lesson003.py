@@ -5,16 +5,17 @@ from browser import WindowAnimationRunner
 from geometry import CartesianSpace, SphereBuilder
 from workbench import Workbench
 
-space = CartesianSpace()
+scene = CartesianSpace()
 
 # The object is created using the builder pattern.
 sphere = SphereBuilder().color(0x0000FF).build()
-space.add(sphere)
+# Once created, the object must be added to the scene in order to be rendered.
+scene.add(sphere)
 
-workbench = Workbench(space.renderer, space.camera)
+workbench = Workbench(scene.renderer, scene.camera)
 
 def tick(t):
-    space.render()
+    scene.render()
 
 def terminate(t):
     done = t > 4
