@@ -3,8 +3,11 @@ from geometry import *
 
 space = CartesianSpace()
 
+workbench = Workbench(space.renderer, space.camera)
+
 def tick(t):
     print "The time is now " + str(t)
+    space.render()
 
 def terminate(t):
     done = t > 1
@@ -12,9 +15,9 @@ def terminate(t):
     return done
 
 def setUp():
-    pass
+    workbench.setUp()
 
 def tearDown():
-    pass
+    workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
