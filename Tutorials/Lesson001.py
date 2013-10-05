@@ -5,7 +5,7 @@ def tick(t):
 
 def terminate(t):
     print "Are we done yet?"
-    return False
+    return t > 1
 
 def setUp():
     pass
