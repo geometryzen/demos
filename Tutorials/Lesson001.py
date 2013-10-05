@@ -1,3 +1,3 @@
-from browser import *
+from browser import WindowAnimationRunner
 
 WindowAnimationRunner().start()
