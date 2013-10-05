@@ -8,7 +8,7 @@ from workbench import Workbench
 scene = CartesianSpace()
 
 # The object is created using the builder pattern.
-sphere = SphereBuilder().color(0x0000FF).build()
+sphere = SphereBuilder().color(0x0000FF).position(0,0,1).build()
 # Once created, the object must be added to the scene in order to be rendered.
 scene.add(sphere)
 
