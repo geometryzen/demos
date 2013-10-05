@@ -18,7 +18,7 @@ renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
 
 pointLight = PointLight(0xFFFFFF, 1, 100)
-pointLight.position.set(2, 2, 2)
+pointLight.position.set(0, 0, 5)
 scene.add(pointLight)
 
 sphere = SphereBuilder().color(0x0000FF).build()
