@@ -1,3 +1,3 @@
-from workbench import *
+from browser import *
 
 WindowAnimationRunner().start()
