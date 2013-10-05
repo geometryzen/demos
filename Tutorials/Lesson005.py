@@ -1,3 +1,7 @@
+'''
+This lesson demonstrates adding a keyboard handler.
+We respond to the Escape key in order to end the animation.
+'''
 from browser import document, WindowAnimationRunner
 from geometry import CartesianSpace, SphereBuilder
 from math import cos, sin, pi
@@ -20,8 +24,10 @@ def tick(t):
     sphere.position.set(R * cos(omega*t), R * sin(omega*t), 0)
     space.render()
 
-def terminate(t):
-    done = t > timeOut
+def terminate(time):
+    # The animation ends when the time is greater than the timeOut.
+    # The animation may be ended prematurely by changing the timeOut value.
+    done = time > timeOut
     return done
 
 def setUp():
