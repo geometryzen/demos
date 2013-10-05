@@ -21,14 +21,15 @@ def tick(t):
     space.render()
 
 def terminate(t):
-    done = t > 20
+    done = t > timeOut
     return done
 
 def setUp():
-    document.addEventListener("keydown", onDocumentKeyDown, False)
     workbench.setUp()
+    document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tearDown():
+    document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench.tearDown()
     
 def escKey(event, downFlag):
