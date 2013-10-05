@@ -1,3 +1,8 @@
+'''
+This lesson demonstrates constructing a Mesh from a Geometry and Material.
+This gives you more control over the visual appearance of the Mesh objects in your scene.
+'''
+
 from browser import document, WindowAnimationRunner
 from three import Scene, PerspectiveCamera, WebGLRenderer, Color, PointLight, SphereGeometry, MeshNormalMaterial, Mesh
 from math import cos, sin, pi
