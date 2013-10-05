@@ -14,10 +14,11 @@ print "1 eV = electron volt = " + str(eV / joule) + " J"
 GeV = 1e9 * eV
 
 milligram = 0.001 * gram
-protonMass = 0.9383 * GeV
-print "Proton mass " + str(protonMass / GeV) + " GeV"
+protonMassEnergy = 0.9383 * GeV
+print "Proton mass " + str(protonMassEnergy / GeV) + " GeV"
 
 energyUnit = hbar / second
 lengthUnit = c / second
 
-print "Proton rest energy " + str(protonMass / joule) + " J"
+print "Proton rest energy " + str(protonMassEnergy / joule) + " J"
+print "Proton rest energy " + str(protonMassEnergy / joule) + " J"
