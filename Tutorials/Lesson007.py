@@ -21,7 +21,9 @@ pointLight = PointLight(0xFFFFFF, 1, 100)
 pointLight.position.set(0, 0, 5)
 scene.add(pointLight)
 
-sphere = SphereBuilder().color(0x0000FF).build()
+geometry = SphereGeometry(1)
+material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
+sphere = Mesh(geometry, material)
 scene.add(sphere)
 
 workbench = Workbench(renderer, camera)
