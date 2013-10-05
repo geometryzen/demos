@@ -1,5 +1,5 @@
 from browser import document, WindowAnimationRunner
-from three import Scene, PerspectiveCamera, WebGLRenderer, Color, PointLight, SphereGeometry
+from three import Scene, PerspectiveCamera, WebGLRenderer, Color, PointLight, SphereGeometry, MeshNormalMaterial, Mesh
 from math import cos, sin, pi
 from workbench import Workbench
 
