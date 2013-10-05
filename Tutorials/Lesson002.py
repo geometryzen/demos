@@ -1,5 +1,5 @@
 from browser import WindowAnimationRunner
-from e3ga import *
+from geometry import *
 
 space = CartesianSpace()
 
