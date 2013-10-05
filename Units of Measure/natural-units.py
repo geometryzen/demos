@@ -13,7 +13,6 @@ eV = 1.6e-19 * joule
 print "1 eV = electron volt = " + str(eV / joule) + " J"
 GeV = 1e9 * eV
 
-milligram = 0.001 * gram
 protonMassEnergy = 0.9383 * GeV
 print "Proton mass " + str(protonMassEnergy / GeV) + " GeV"
 
