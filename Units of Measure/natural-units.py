@@ -11,7 +11,7 @@ print "Planck's constant, hbar=" + str(hbar)
 
 eV = 1.6e-19 * joule
 milligram = 0.001 * gram
-protonMass = 938.3 * mega * eV
+protonMass = 938.3 * 1e6 * eV
 print "Proton mass " + str(protonMass)
 
 energyUnit = hbar / second
