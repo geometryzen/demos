@@ -1,5 +1,6 @@
 from browser import document, WindowAnimationRunner
-from geometry import CartesianSpace, SphereBuilder
+from three import Scene, PerspectiveCamera, WebGLRenderer
+from geometry import SphereBuilder
 from math import cos, sin, pi
 from workbench import Workbench
 
