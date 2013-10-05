@@ -1,5 +1,6 @@
 from browser import WindowAnimationRunner
-from geometry import *
+from geometry import CartesianSpace
+from workbench import Workbench
 
 space = CartesianSpace()
 
