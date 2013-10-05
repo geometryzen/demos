@@ -1,6 +1,6 @@
 '''
 This lesson demonstrates adding a keyboard handler.
-We respond to the Escape key in order to end the animation.
+We respond to the Escape key in order to end the animation prematurely.
 '''
 from browser import document, WindowAnimationRunner
 from geometry import CartesianSpace, SphereBuilder
