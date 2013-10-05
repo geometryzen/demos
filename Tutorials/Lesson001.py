@@ -4,8 +4,9 @@ def tick(t):
     print "The time is now " + str(t)
 
 def terminate(t):
-    print "Are we done yet?"
-    return t > 1
+    done = t > 1
+    print "Are we done yet? " + str(done)
+    return done
 
 def setUp():
     pass
