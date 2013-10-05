@@ -32,17 +32,21 @@ def terminate(time):
 
 def setUp():
     workbench.setUp()
+    # Finally, start listening for keyboard events.
     document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tearDown():
+    # Firstly, stop listening for keyboard events.
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench.tearDown()
-    
+
+# This function performs the required action for the Escape keyboard event.   
 def escKey(event, downFlag):
     event.preventDefault()
     global timeOut
     timeOut = 0
 
+# This variable maps keyboard codes to functions.
 keyHandlers = {
  27: escKey
 }
