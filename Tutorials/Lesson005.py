@@ -28,5 +28,8 @@ def setUp():
 
 def tearDown():
     workbench.tearDown()
+    
+def onDocumentKeyDown(event):
+    pass
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
