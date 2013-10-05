@@ -176,7 +176,7 @@ def tick(t):
     camera.position.z = distance * cos(polarAngle)
     camera.position = camera.position + scene.position
     dCameraPosition = camera.position - lastCameraPosition
-    if ((dScenePosition.length() > 0.1) or (dCameraPosition.length() > 0.1)):
+    if ((dScenePosition.magnitude() > 0.1) or (dCameraPosition.magnitude() > 0.1)):
         camera.lookAt(scene.position)
 
     renderer.render(scene, camera)
