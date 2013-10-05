@@ -16,4 +16,4 @@ print "Planck's constant, hbar=" + str(hbar)
 energyUnit = 1 / hbar
 lengthUnit = 1 / c
 
-print "mosquito mass " + str(mosquito / energy)
+print "mosquito mass " + str(mosquito / energyUnit)
