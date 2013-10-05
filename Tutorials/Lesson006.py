@@ -1,5 +1,5 @@
 from browser import document, WindowAnimationRunner
-from three import Scene, PerspectiveCamera, WebGLRenderer, Color
+from three import Scene, PerspectiveCamera, WebGLRenderer, Color, PointLight
 from geometry import SphereBuilder
 from math import cos, sin, pi
 from workbench import Workbench
@@ -17,7 +17,7 @@ renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
 
 pointLight = PointLight(0xFFFFFF, 1, 100)
-pointLight.position.set(20, 20, 20)
+pointLight.position.set(2, 2, 2)
 scene.add(pointLight)
 
 sphere = SphereBuilder().color(0x0000FF).build()
