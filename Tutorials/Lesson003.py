@@ -1,4 +1,5 @@
 from browser import WindowAnimationRunner
+from e3ga import SphereBuilder
 from geometry import CartesianSpace
 from workbench import Workbench
 
