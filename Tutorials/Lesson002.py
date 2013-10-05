@@ -1,5 +1,7 @@
 from browser import WindowAnimationRunner
 
+space = CartesianSpace()
+
 def tick(t):
     print "The time is now " + str(t)
 
