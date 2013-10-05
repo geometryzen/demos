@@ -1,3 +1,7 @@
+'''
+This lesson demonstrates animating an object.
+The sphere performs cirular motion with radius R and periodic time T.
+'''
 from browser import WindowAnimationRunner
 from geometry import CartesianSpace, SphereBuilder
 from math import cos, sin, pi
