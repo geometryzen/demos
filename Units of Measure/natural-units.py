@@ -15,7 +15,7 @@ GeV = 1e9 * eV
 
 milligram = 0.001 * gram
 protonMass = 0.9383 * GeV
-print "Proton mass " + str(protonMass)
+print "Proton mass " + str(protonMass / GeV) + " GeV"
 
 energyUnit = hbar / second
 lengthUnit = c / second
