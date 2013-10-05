@@ -1,5 +1,7 @@
 '''
 This lesson demonstrates rendering a pre-populated scene (CartesianSpace).
+The red-green-blue lines correspond to the x-axis, y-axis, and z-axis respectively.
+The bolder part of the axis lines represents the positive direction.
 '''
 from browser import WindowAnimationRunner
 from geometry import CartesianSpace
