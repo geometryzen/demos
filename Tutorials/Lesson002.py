@@ -7,12 +7,10 @@ space = CartesianSpace()
 workbench = Workbench(space.renderer, space.camera)
 
 def tick(t):
-    print "The time is now " + str(t)
     space.render()
 
 def terminate(t):
-    done = t > 1
-    print "Are we done yet? " + str(done)
+    done = t > 4
     return done
 
 def setUp():
