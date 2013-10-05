@@ -4,7 +4,7 @@ from workbench import Workbench
 
 space = CartesianSpace()
 
-sphere = SphereBuilder().build()
+sphere = SphereBuilder().color(0x0000FF).build()
 space.add(sphere)
 
 workbench = Workbench(space.renderer, space.camera)
