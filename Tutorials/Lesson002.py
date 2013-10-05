@@ -18,7 +18,7 @@ def tick(t):
     scene.render()
 
 def terminate(t):
-    done = t > 4
+    done = t > 10
     return done
 
 def setUp():
