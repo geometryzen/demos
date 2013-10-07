@@ -2,6 +2,7 @@
 The first thing we will do is create a linear space, axiom by axiom.
 Our space will have two kinds of elements we call vectors and scalars.
 With an eye to creating a unified geometric space, the underlying object is a Euclidean.
+We demonstrate that the objects f,g, and k are elements in the space.
 '''
 class Euclidean:
     def __init__(self):
@@ -21,6 +22,7 @@ g = Vector()
 k = Scalar()
 
 # It's not possible to distinguish scalars from vectors yet.
+# At least we can see that they are all the same type.
 print "f : " + repr(f)
 print "g : " + repr(g)
 print "k : " + repr(k)
