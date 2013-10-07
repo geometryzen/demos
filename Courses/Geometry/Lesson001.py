@@ -6,6 +6,9 @@ With an eye to creating a unified geometric space, the underlying object is a Eu
 class Euclidean:
     def __init__(self):
         pass
+    
+    def __repr__(self):
+        return "Euclidean()"
 
 def Vector():
     return Euclidean()
