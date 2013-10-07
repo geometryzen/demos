@@ -9,7 +9,7 @@ from math import sqrt
 from workbench import Workbench
 
 L = 50
-scale = 3.0 / L
+scale = 4.0 / L
 
 i = VectorE3(1, 0, 0, False)
 j = VectorE3(0, 1, 0, False)
