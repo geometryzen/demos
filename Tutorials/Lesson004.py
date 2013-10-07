@@ -7,8 +7,10 @@ from geometry import CartesianSpace, SphereBuilder
 from math import cos, sin, pi
 from workbench import Workbench
 
-x = -5
-y = -5
+L = 50
+scale = 5/L
+x = -L
+y = -L
 z = 0
 
 moveX = 0
@@ -27,16 +29,17 @@ def tick(t):
     x += moveX
     y += moveY
     z += moveZ
-    if x > 3:
-        x = 3
-    if y > 3:
-        y = 3
-    if x < -3:
-        x = -3
-    if y < -3:
-        y = -3
+    if x > L:
+        x = L
+    if y > L:
+        y = L
+        
+    if x < -L:
+        x = -L
+    if y < -L:
+        y = -L
 
-    sphere.position.set(x, y, z)
+    sphere.position.set(x * scale, y * scale, z * scale)
     space.render()
 
 def terminate(t):
