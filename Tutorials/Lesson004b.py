@@ -17,7 +17,7 @@ k = VectorE3(0, 0, 1, False)
 
 position = -L * i -L * j
 move = j.clone()
-R = (1 + ij) / sqrt(2)
+R = (1 + i * j) / sqrt(2)
 
 space = CartesianSpace()
 
