@@ -29,7 +29,7 @@ def tick(t):
     global position
     position += move
     if position % i > L:
-        position = position - (i << position) + (L * i)
+        position = position - (i << position) * i + (L * i)
         move.x = 0
         move.y = -1
         move.z = 0
