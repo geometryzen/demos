@@ -16,7 +16,7 @@ j = VectorE3(0, 1, 0, False)
 k = VectorE3(0, 0, 1, False)
 
 position = -L * i -L * j
-move = 2 * j
+move = 3 * j
 R = (1 + i * j) / sqrt(2)
 
 space = CartesianSpace()
