@@ -26,6 +26,7 @@ space.add(sphere)
 workbench = Workbench(space.renderer, space.camera)
 
 def tick(t):
+    global position
     position += move
     if position.x > L:
         position.x = L
