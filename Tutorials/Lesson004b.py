@@ -14,7 +14,9 @@ x = -L
 y = -L
 z = 0
 
-move = VectorE3(0,1,0)
+i = VectorE3(1,0,0, False)
+j = VectorE3(0,1,0, False)
+move = i
 
 space = CartesianSpace()
 
