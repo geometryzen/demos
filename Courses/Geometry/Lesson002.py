@@ -22,7 +22,7 @@ f = Vector()
 g = Vector()
 k = Scalar()
 
-# We want f + g to be in the vector space.
+# We want f + g to be in the vector space (a Euclidean vector).
 # Python allows us to do this using __add__.
 print "f : " + repr(f)
 print "g : " + repr(g)
