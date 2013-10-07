@@ -28,8 +28,8 @@ workbench = Workbench(space.renderer, space.camera)
 def tick(t):
     global position
     position += move
-    if position.x > L:
-        position.x = L
+    if position % i > L:
+        position = position - (i << position) + (L * i)
         move.x = 0
         move.y = -1
         move.z = 0
