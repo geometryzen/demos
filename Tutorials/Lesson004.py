@@ -31,6 +31,9 @@ def tick(t):
     z += moveZ
     if x > L:
         x = L
+        moveX = 0
+        moveY = -1
+        moveZ = 0
     if y > L:
         y = L
         moveX = 1
@@ -38,8 +41,14 @@ def tick(t):
         moveZ = 0
     if x < -L:
         x = -L
+        moveX = 0
+        moveY = 1
+        moveZ = 0
     if y < -L:
         y = -L
+        moveX = -1
+        moveY = 0
+        moveZ = 0
 
     sphere.position.set(x * scale, y * scale, z * scale)
     space.render()
