@@ -8,7 +8,7 @@ from math import cos, sin, pi
 from workbench import Workbench
 
 L = 50
-scale = 5.0/L
+scale = 3.0/L
 x = -L
 y = -L
 z = 0
