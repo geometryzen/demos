@@ -16,7 +16,7 @@ z = 0
 
 i = VectorE3(1,0,0, False)
 j = VectorE3(0,1,0, False)
-move = j
+move = j.clone()
 
 space = CartesianSpace()
 
