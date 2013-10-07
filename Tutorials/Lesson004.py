@@ -7,19 +7,23 @@ from geometry import CartesianSpace, SphereBuilder
 from math import cos, sin, pi
 from workbench import Workbench
 
-T = 5
-omega = 2 * pi / T
-R = 4
+x = -5
+y = -5
+z = 0
+
+moveX = 0
+moveY = 0
+moveZ = 0
 
 space = CartesianSpace()
 
-sphere = SphereBuilder().color(0x0000FF).build()
+sphere = SphereBuilder().radius(0.1).color(0xFFFF00).build()
 space.add(sphere)
 
 workbench = Workbench(space.renderer, space.camera)
 
 def tick(t):
-    sphere.position.set(R * cos(omega*t), R * sin(omega*t), 0)
+    sphere.position.set(x, y, z)
     space.render()
 
 def terminate(t):
