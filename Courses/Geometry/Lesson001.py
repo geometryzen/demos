@@ -20,5 +20,7 @@ f = Vector()
 g = Vector()
 k = Scalar()
 
+
 print repr(f)
+print repr(g)
 print repr(k)
