@@ -3,6 +3,7 @@ This lesson demonstrates animating an object.
 The sphere moves along a square path using geometric instructions.
 '''
 from browser import WindowAnimationRunner
+from e3ga import *
 from geometry import CartesianSpace, SphereBuilder
 from math import cos, sin, pi
 from workbench import Workbench
