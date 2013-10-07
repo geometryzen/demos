@@ -8,7 +8,7 @@ from math import cos, sin, pi
 from workbench import Workbench
 
 L = 50
-scale = 5/L
+scale = 5.0/L
 x = -L
 y = -L
 z = 0
@@ -33,7 +33,6 @@ def tick(t):
         x = L
     if y > L:
         y = L
-        
     if x < -L:
         x = -L
     if y < -L:
