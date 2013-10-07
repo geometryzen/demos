@@ -16,3 +16,6 @@ def Scalar():
 f = Vector()
 g = Vector()
 k = Scalar()
+
+print repr(f)
+print repr(k)
