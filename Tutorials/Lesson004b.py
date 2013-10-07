@@ -46,7 +46,7 @@ def tick(t):
     space.render()
 
 def terminate(t):
-    done = t > 10
+    done = t > 15
     return done
 
 def setUp():
