@@ -12,4 +12,6 @@ def Scalar():
     return Euclidean()
 
 f = Vector()
+g = Vector()
+k - Scalar()
     
