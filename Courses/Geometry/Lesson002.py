@@ -1,5 +1,6 @@
 '''
-
+A linear space, V, is a set endowed with a rule for addition.
+If f and g are in V, then so is f + g.
 '''
 class Euclidean:
     def __init__(self):
