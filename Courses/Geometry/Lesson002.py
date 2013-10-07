@@ -6,7 +6,7 @@ class Euclidean:
         pass
     
     def __add__(self, other):
-        pass
+        return Euclidean()
     
     def __repr__(self):
         return "Euclidean()"
