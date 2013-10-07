@@ -10,12 +10,11 @@ from workbench import Workbench
 
 L = 50
 scale = 3.0/L
-x = -L
-y = -L
-z = 0
 
 i = VectorE3(1,0,0, False)
 j = VectorE3(0,1,0, False)
+
+position = -L * i -L * j
 move = j.clone()
 
 space = CartesianSpace()
@@ -27,9 +26,9 @@ workbench = Workbench(space.renderer, space.camera)
 
 def tick(t):
     global x, y, z
-    x += move.x
-    y += move.y
-    z += move.z
+    position.x += move.x
+    position.y += move.y
+    position.z += move.z
     if x > L:
         x = L
         move.x = 0
