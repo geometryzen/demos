@@ -32,15 +32,19 @@ def tick(t):
     if position % i > L:
         position += L * i - (i << position) * i
         move = R * move * ~R
+        return
     if position % j > L:
         position = position - (j << position) * j + (L * j)
         move = R * move * ~R
+        return
     if position % i < -L:
         position = position - (i << position) * i - (L * i)
         move = R * move * ~R
+        return
     if position % j < -L:
         position = position - (j << position) * j - (L * j)
         move = R * move * ~R
+        return
 
     sphere.position = position * scale
     space.render()
