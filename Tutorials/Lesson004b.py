@@ -42,7 +42,7 @@ def tick(t):
         position = position - (j << position) * j - (L * j)
         move = R * move * ~R
 
-    sphere.position.set(position.x * scale, position.y * scale, position.z * scale)
+    sphere.position = position * scale
     space.render()
 
 def terminate(t):
