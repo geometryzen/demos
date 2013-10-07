@@ -1,5 +1,5 @@
 '''
-The first thing we will do is create a linear space 
+The first thing we will do is create a linear space, axiom by axiom.
 '''
 class Euclidean:
     def __init__(self):
