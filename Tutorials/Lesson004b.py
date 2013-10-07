@@ -5,7 +5,7 @@ The sphere moves along a square path using geometric instructions.
 from browser import WindowAnimationRunner
 from e3ga import *
 from geometry import CartesianSpace, SphereBuilder
-from math import cos, sin, pi
+from math import sqrt
 from workbench import Workbench
 
 L = 50
@@ -17,6 +17,7 @@ k = VectorE3(0, 0, 1, False)
 
 position = -L * i -L * j
 move = j.clone()
+R = (1 + ij) / sqrt(2)
 
 space = CartesianSpace()
 
@@ -30,9 +31,7 @@ def tick(t):
     position += move
     if position % i > L:
         position = position - (i << position) * i + (L * i)
-        move.x = 0
-        move.y = -1
-        move.z = 0
+        move = R * move * ~R
     if position.y > L:
         position.y = L
         move.x = 1
