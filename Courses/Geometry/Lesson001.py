@@ -20,7 +20,7 @@ f = Vector()
 g = Vector()
 k = Scalar()
 
-
-print repr(f)
-print repr(g)
-print repr(k)
+# It's not possible to distinguish scalars from vectors yet.
+print "f : " + repr(f)
+print "g : " + repr(g)
+print "k : " + repr(k)
