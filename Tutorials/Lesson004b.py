@@ -25,27 +25,26 @@ space.add(sphere)
 workbench = Workbench(space.renderer, space.camera)
 
 def tick(t):
-    global x, y, z
     position.x += move.x
     position.y += move.y
     position.z += move.z
-    if x > L:
-        x = L
+    if position.x > L:
+        position.x = L
         move.x = 0
         move.y = -1
         move.z = 0
-    if y > L:
-        y = L
+    if position.y > L:
+        position.y = L
         move.x = 1
         move.y = 0
         move.z = 0
-    if x < -L:
-        x = -L
+    if position.x < -L:
+        position.x = -L
         move.x = 0
         move.y = 1
         move.z = 0
-    if y < -L:
-        y = -L
+    if position.y < -L:
+        position.y = -L
         move.x = -1
         move.y = 0
         move.z = 0
