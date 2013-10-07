@@ -34,7 +34,7 @@ def tick(t):
     if x < -3:
         x = -3
     if y < -3:
-        x = 3
+        y = -3
 
     sphere.position.set(x, y, z)
     space.render()
