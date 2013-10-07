@@ -33,6 +33,9 @@ def tick(t):
         x = L
     if y > L:
         y = L
+        moveX = 1
+        moveY = 0
+        moveZ = 0
     if x < -L:
         x = -L
     if y < -L:
