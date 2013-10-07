@@ -1,6 +1,6 @@
 '''
 This lesson demonstrates animating an object.
-The sphere performs cirular motion with radius R and periodic time T.
+The sphere moves along a square path using coordinate instructions.
 '''
 from browser import WindowAnimationRunner
 from geometry import CartesianSpace, SphereBuilder
