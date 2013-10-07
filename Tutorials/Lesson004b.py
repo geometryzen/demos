@@ -35,11 +35,9 @@ def tick(t):
     if position % j > L:
         position = position - (j << position) * j + (L * j)
         move = R * move * ~R
-    if position.x < -L:
-        position.x = -L
-        move.x = 0
-        move.y = 1
-        move.z = 0
+    if position % i < -L:
+        position = position - (i << position) * i - (L * i)
+        move = R * move * ~R
     if position.y < -L:
         position.y = -L
         move.x = -1
