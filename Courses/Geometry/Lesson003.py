@@ -10,6 +10,9 @@ class Euclidean:
     
     def __add__(self, other):
         return Euclidean()
+
+    def __mul__(self, other):
+        return Euclidean()
     
     def __repr__(self):
         return "Euclidean()"
