@@ -9,10 +9,11 @@ from math import cos, sin, pi
 from workbench import Workbench
 
 L = 50
-scale = 3.0/L
+scale = 3.0 / L
 
-i = VectorE3(1,0,0, False)
-j = VectorE3(0,1,0, False)
+i = VectorE3(1, 0, 0, False)
+j = VectorE3(0, 1, 0, False)
+k = VectorE3(0, 0, 1, False)
 
 position = -L * i -L * j
 move = j.clone()
@@ -49,7 +50,7 @@ def tick(t):
         move.y = 0
         move.z = 0
 
-    sphere.position.set(x * scale, y * scale, z * scale)
+    sphere.position.set(position.x * scale, position.y * scale, position.z * scale)
     space.render()
 
 def terminate(t):
