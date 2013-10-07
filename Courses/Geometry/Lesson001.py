@@ -16,4 +16,3 @@ def Scalar():
 f = Vector()
 g = Vector()
 k = Scalar()
-    
