@@ -91,3 +91,4 @@ print f + g == g + f
 
 print f + n == f
 print n != f
+print n != n
