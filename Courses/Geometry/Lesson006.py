@@ -41,7 +41,7 @@ class Euclidean:
         return Vector(other * self.x, other * self.y)
     
     def __neg__(self):
-        return Vector(-self.x, -self.y)
+        return Vector(self.x, self.y)
 
     def __eq__(self, other):
         if not isinstance(other, Euclidean):
