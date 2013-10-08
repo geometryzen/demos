@@ -52,7 +52,8 @@ k = Scalar(4.0)
 scene = CartesianSpace()
 
 # TODO: Need axis function for the ArrowBuilder (attitude is too advanced). Or maybe coordinates?
-arrowF = ArrowBuilder().name("f").scale(2).color(0xFFFF00).build()#.axis(f.x, f.y, 0).build()
+magnitude = sqrt( f.quadrance() )
+arrowF = ArrowBuilder().name("f").scale(magnitude).color(0xFFFF00).build()#.axis(f.x, f.y, 0).build()
 scene.add(arrowF)
 
 workbench = Workbench(scene.renderer, scene.camera)
