@@ -17,7 +17,7 @@ class Euclidean:
         parts = []
         if self.w != 0:
             parts.append("Scalar()")
-        return parts;    
+        return reduce(+, parts,"");    
 #        return "Euclidean(" + str(self.w) + ", " + str(self.x) + ", "+ str(self.y) + ")"
 
 def Vector(x, y):
