@@ -72,4 +72,4 @@ print "repr(k) => " + repr(k)
 # We want f * g to be in the vector space (a Euclidean vector).
 # Python allows us to do this using __mul__.
 print "f + g => " + str(f + g)
-print "k * f => " + str(k * f)
+print str(k) + " * " + str(f) + " => " + str(k * f)
