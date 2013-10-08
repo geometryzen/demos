@@ -51,7 +51,7 @@ g = Vector(-3.0, 1.0)
 h = f + g
 print "f => " + str(f)
 print "g => " + str(g)
-print "f + g => " + str(f + g)
+print "f + g => " + str(h)
 
 scene = CartesianSpace()
 
