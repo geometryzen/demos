@@ -46,5 +46,5 @@ print "f + g : " + repr(f + g)
 print "k * f : " + repr(k * f)
 print (f + g) + h == f + (g + h)
 print f + g == g + f
-print vector + n == vector
+print f + n == f
 print n != f
