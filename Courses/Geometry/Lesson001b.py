@@ -47,7 +47,7 @@ def Scalar(w):
     return Euclidean(w, 0.0, 0.0)
 
 f = Vector(1.0, 2.0)
-g = Vector(-4.0, -3.0)
+g = Vector(4.0, -3.0)
 k = Scalar(4.0)
 
 scene = CartesianSpace()
