@@ -31,7 +31,10 @@ class Euclidean:
             parts.append(str(self.w))
         if self.x != 0 or self.y != 0 or self.z != 0:
             parts.append("+".join([str(self.x)+"*e1", str(self.y)+"*e2", str(self.z)+"*e3"]))
-        return "+".join(parts)
+        if len(parts) > 0:
+            return "+".join(parts)
+        else:
+            return "0"
     
     def __repr__(self):
         parts = []
