@@ -80,23 +80,6 @@ n = Vector(0.0, 0.0)
 
 print "f => " + str(f)
 print "g => " + str(g)
-print "k => " + str(k)
 print "n => " + str(n)
-print "repr(f) => " + repr(f)
-print "repr(g) => " + repr(g)
-print "repr(k) => " + repr(k)
-print "repr(n) => " + repr(n)
 
-
-# We want f * g to be in the vector space (a Euclidean vector).
-# Python allows us to do this using __mul__.
-print "f + g => " + str(f + g)
-print str(k) + " * " + str(f) + " => " + str(k * f)
-
-print (f + g) + h == f + (g + h)
-print f + g == g + f
-
-
-print f + n == f
-print n != f
-print n != n
+print "f + n => " + str(f + n)
