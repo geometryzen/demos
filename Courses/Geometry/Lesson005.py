@@ -56,9 +56,11 @@ n = Vector(0, 0, 0)
 print "f => " + str(f)
 print "g => " + str(g)
 print "k => " + str(k)
+print "n => " + str(n)
 print "repr(f) => " + repr(f)
 print "repr(g) => " + repr(g)
 print "repr(k) => " + repr(k)
+print "repr(n) => " + repr(n)
 
 
 # We want f * g to be in the vector space (a Euclidean vector).
