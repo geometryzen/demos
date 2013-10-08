@@ -61,7 +61,7 @@ def attitude(v):
 
 # TODO: Need axis function for the ArrowBuilder (attitude is too advanced). Or maybe coordinates?
 magnitude = sqrt( f.quadrance() )
-arrowF = ArrowBuilder().name("f").scale(magnitude).attitude( attitude(f) )color(0xFFFF00).build()#.axis(f.x, f.y, 0).build()
+arrowF = ArrowBuilder().name("f").scale(magnitude).attitude( attitude(f) ).color(0xFFFF00).build()#.axis(f.x, f.y, 0).build()
 scene.add(arrowF)
 
 workbench = Workbench(scene.renderer, scene.camera)
