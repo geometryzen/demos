@@ -18,8 +18,8 @@ class Euclidean:
             raise AssertionError("y must be a float")
             
     def __add__(self, other):
-        if not isinstance(y, float):
-            raise AssertionError("y must be a float")
+        if not isinstance(other, Euclidean):
+            raise AssertionError("other must be a Euclidean")
         return Vector(self.x + other.x, self.y + other.y)
     
     def __str__(self):
