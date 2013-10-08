@@ -37,7 +37,7 @@ class Euclidean:
         parts = []
         if self.w != 0:
             parts.append("Scalar(" + str(self.w) + ")")
-        if self.x != 0 or self.y != 0:
+        if self.x != 0 or self.y != 0 or self.z != 0:
             parts.append("Vector(" + ", ".join([str(self.x), str(self.y), str(self.z)]) + ")")
         return "+".join(parts)
 
