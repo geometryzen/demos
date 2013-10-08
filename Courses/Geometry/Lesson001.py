@@ -16,7 +16,7 @@ class Euclidean:
     def __repr__(self):
         parts = []
         if self.w != 0:
-            parts.append("Scalar()")
+            parts.append("Scalar(" + str(self.w) + ")")
         return "+".join(parts)   
 #        return "Euclidean(" + str(self.w) + ", " + str(self.x) + ", "+ str(self.y) + ")"
 
