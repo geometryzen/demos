@@ -31,7 +31,7 @@ class Euclidean:
         return "+".join(parts)
 
 def Vector(x, y):
-    return Euclidean(0, x, y)
+    return Euclidean(0.0, x, y)
 
 def Scalar(w):
     return Euclidean(w, 0, 0)
