@@ -47,7 +47,7 @@ def Scalar(w):
     return Euclidean(w, 0.0, 0.0)
 
 f = Vector(1.0, 2.0)
-g = Vector(5.0, 7.0)
+g = Vector(3.0, 4.0)
 k = Scalar(4.0)
 
 scene = CartesianSpace()
@@ -65,6 +65,9 @@ def attitude(v):
 
 arrowF = ArrowBuilder().name("f").scale( magnitude(f) ).attitude( attitude(f) ).color(0xFFFF00).build()#.axis(f.x, f.y, 0).build()
 scene.add(arrowF)
+
+arrowG = ArrowBuilder().name("g").scale( magnitude(g) ).attitude( attitude(g) ).color(0xFFFF00).build()#.axis(f.x, f.y, 0).build()
+scene.add(arrowG)
 
 workbench = Workbench(scene.renderer, scene.camera)
 
