@@ -30,7 +30,7 @@ class Euclidean:
     def __add__(self, other):
         if not isinstance(other, Euclidean):
             raise AssertionError("other must be a Euclidean")
-        return Vector(self.x + other.x, self.y + other.y)
+        return Euclidean(self.w + other.w, self.x + other.x, self.y + other.y)
 
     def __sub__(self, other):
         if not isinstance(other, Euclidean):
