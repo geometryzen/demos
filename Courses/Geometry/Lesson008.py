@@ -10,6 +10,7 @@ For al f,g,h in V and c,k scalars, the set also satisfies the following rules:
 This n is unique and denoted by 0.
 4. For each f in V there exists a g in V such that f + g = 0. This g is unique and denoted by (-f).
 5. k(f + g) = kf + kg
+6 (c + k)f = cf + kf
 '''
 class Euclidean:
     def __init__(self, w, x, y):
