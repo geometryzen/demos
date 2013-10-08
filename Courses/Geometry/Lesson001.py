@@ -34,7 +34,7 @@ def Scalar(w):
     return Euclidean(w, 0, 0, 0)
 
 f = Vector(1, 2, 3)
-g = Vector(3, 5, 7)
+g = Vector(0, 0, 7)
 k = Scalar(4)
 
 print "f => " + str(f)
