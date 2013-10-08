@@ -5,7 +5,7 @@ With an eye to creating a unified geometric space, the underlying object is a Eu
 We demonstrate that the objects f,g, and k are elements in the space.
 '''
 class Euclidean:
-    def __init__(self):
+    def __init__(self, w, x, y):
         pass
     
 #    def __str__(self):
@@ -20,9 +20,9 @@ def Vector():
 def Scalar():
     return Euclidean()
 
-f = Vector()
-g = Vector()
-k = Scalar()
+f = Vector(1,2)
+g = Vector(3,5)
+k = Scalar(4)
 
 # It's not possible to distinguish scalars from vectors yet.
 # At least we can see that they are all the same type.
