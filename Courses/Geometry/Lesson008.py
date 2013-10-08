@@ -94,3 +94,6 @@ print "k => " + str(k)
 print ""
 print "(c + k) * f   => " + str((c + k) * f)
 print "c * f + k * f => " + str(c * f + k * f)
+print ""
+print "(c - k) * f   => " + str((c - k) * f)
+print "c * f - k * f => " + str(c * f - k * f)
