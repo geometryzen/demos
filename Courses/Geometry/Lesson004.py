@@ -38,6 +38,9 @@ class Euclidean:
     def __mul__(self, other):
         return Euclidean(0, self.w * other.x, self.w * other.y, self.w * other.z)
     
+    def __eq__(self, other):
+        return self.w == other.w and self.x == other.x and self.y == other.y and self.z == other.z
+    
     def __str__(self):
         parts = []
         if self.w != 0:
