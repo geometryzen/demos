@@ -60,4 +60,4 @@ print "g => " + str(g)
 print "k => " + str(k)
 
 print "k * f => " + str(k * f)
-print "4 * f => " + str(k * f)
+print "4 * f => " + str(4 * f)
