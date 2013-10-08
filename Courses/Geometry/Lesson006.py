@@ -83,4 +83,4 @@ print "f => " + str(f)
 print "g => " + str(g)
 print "n => " + str(n)
 
-print "f + n => " + str(f + n)
+print "f + (-f) => " + str(f + (-f))
