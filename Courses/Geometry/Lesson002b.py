@@ -68,7 +68,7 @@ def attitude(v):
 
 arrowF = ArrowBuilder().scale( magnitude(f) ).attitude( attitude(f) ).color("red").build()
 scene.add(arrowF)
-arrowF.position.set(f.x / 2.0 + g.x, f.y / 2.0 + g.y)
+arrowF.position.set(f.x / 2.0 + g.x, f.y / 2.0 + g.y, 0.0)
 
 arrowG = ArrowBuilder().scale( magnitude(g) ).attitude( attitude(g) ).color("blue").build()
 scene.add(arrowG)
