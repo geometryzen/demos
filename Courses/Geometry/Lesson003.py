@@ -32,7 +32,7 @@ class Euclidean:
     def __rmul__(self, other):
         if not isinstance(other, float):
             raise AssertionError("other must be a Euclidean or float")
-        return Vector(self.w * other.x, self.w * other.y)
+        return Vector(other * self.w, other * self.w)
     
     def __str__(self):
         parts = []
