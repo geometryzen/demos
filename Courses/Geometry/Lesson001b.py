@@ -46,8 +46,8 @@ k = Scalar(4.0)
 scene = CartesianSpace()
 
 # TODO: Need axis function for the ArrowBuilder (attitude is too advanced).
-sphere = ArrowBuilder().name("f").color(0x0000FF).axis(f.x, f.y, 0).build()
-scene.add(sphere)
+arrowF = ArrowBuilder().name("f").color(0x0000FF).axis(f.x, f.y, 0).build()
+scene.add(arrowF)
 
 workbench = Workbench(scene.renderer, scene.camera)
 
