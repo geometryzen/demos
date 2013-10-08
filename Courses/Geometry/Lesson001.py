@@ -11,7 +11,10 @@ class Euclidean:
             self.w = w
         else:
             raise AssertionError("w must be a float")
-        self.x = x
+        if isinstance(x, float):
+            self.x = x
+        else:
+            raise AssertionError("x must be a float")
         self.y = y
     
     def __str__(self):
