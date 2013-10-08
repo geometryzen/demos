@@ -92,6 +92,7 @@ k = Scalar(4.0)
 print "f => " + str(f)
 print "c => " + str(c)
 print "k => " + str(k)
+print "k * f => " + str(k * f)
 print ""
 print "c * (k * f) => " + str(c * (k * f))
 print "(c * k) * f => " + str((c * k) * f)
