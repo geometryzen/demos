@@ -5,17 +5,18 @@ With an eye to creating a unified geometric space, the underlying object is a Eu
 We demonstrate that the objects f,g, and k are elements in the space.
 '''
 class Euclidean:
-    def __init__(self, w, x, y):
+    def __init__(self, w, x, y, z):
         self.w = w
         self.x = x
         self.y = y
+        self.z = z
     
     def __str__(self):
         parts = []
         if self.w != 0:
             parts.append(str(self.w))
-        if self.x != 0 or self.y != 0:
-            parts.append("[" + str(self.x) + ", " + str(self.y) + "]")
+        if self.x != 0 or self.y != 0 or self.z != 0:
+            parts.append("[" + str(self.x) + ", " + str(self.y) + str(self.z) + "]")
         return "+".join(parts)
     
     def __repr__(self):
@@ -23,17 +24,17 @@ class Euclidean:
         if self.w != 0:
             parts.append("Scalar(" + str(self.w) + ")")
         if self.x != 0 or self.y != 0:
-            parts.append("Vector(" + str(self.x) + ", " + str(self.y) + ")")
+            parts.append("Vector(" + str(self.x) + ", " + str(self.y) + str(self.z) + ")")
         return "+".join(parts)
 
-def Vector(x, y):
-    return Euclidean(0, x, y)
+def Vector(x, y, z):
+    return Euclidean(0, x, y, z)
 
 def Scalar(w):
-    return Euclidean(w, 0, 0)
+    return Euclidean(w, 0, 0, 0)
 
-f = Vector(1, 2)
-g = Vector(3, 5)
+f = Vector(1, 2, 3)
+g = Vector(3, 5, 7)
 k = Scalar(4)
 
 print "f => " + str(f)
