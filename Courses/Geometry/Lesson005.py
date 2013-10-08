@@ -10,7 +10,36 @@ For al f,g,h in V and c,k scalars, the set also satisfies the following rules:
 This n is unique and denoted by 0.
 4. For each f in
 '''
- * other.x, self.w * other.y, self.w * other.z)
+class Euclidean:
+    def __init__(self):
+        pass
+    
+    def __add__(self, other):
+        return Euclidean()
+
+    def __mul__(self, other):
+        return Euclidean()
+    
+    def __repr__(self):
+        return "Euclidean()"
+
+def Vector():
+    return Euclidean()
+
+def Scalar():
+    return Euclidean()
+class Euclidean:
+    def __init__(self, w, x, y, z):
+        self.w = w
+        self.x = x
+        self.y = y
+        self.z = z
+        
+    def __add__(self, other):
+        return Euclidean(self.w + other.w, self.x + other.x, self.y + other.y, self.z + other.z)
+
+    def __mul__(self, other):
+        return Euclidean(0, self.w * other.x, self.w * other.y, self.w * other.z)
     
     def __eq__(self, other):
         return self.w == other.w and self.x == other.x and self.y == other.y and self.z == other.z
@@ -57,6 +86,7 @@ print str(k) + " * " + str(f) + " => " + str(k * f)
 
 print (f + g) + h == f + (g + h)
 print f + g == g + f
+
 
 print f + n == f
 print n != f
