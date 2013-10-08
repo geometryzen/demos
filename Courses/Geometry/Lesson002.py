@@ -2,7 +2,7 @@
 A linear space, V, is a set endowed with a rule for addition.
 If f and g are in V, then so is f + g.
 '''
-cclass Euclidean:
+class Euclidean:
     def __init__(self, w, x, y, z):
         self.w = w
         self.x = x
