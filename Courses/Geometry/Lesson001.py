@@ -15,7 +15,10 @@ class Euclidean:
             self.x = x
         else:
             raise AssertionError("x must be a float")
-        self.y = y
+        if isinstance(y, float):
+            self.y = y
+        else:
+            raise AssertionError("y must be a float")
     
     def __str__(self):
         parts = []
