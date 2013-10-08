@@ -23,6 +23,6 @@ k = Scalar()
 
 # It's not possible to distinguish scalars from vectors yet.
 # At least we can see that they are all the same type.
-print "f : " + type(f)
-print "g : " + type(g)
+print "f : " + str(type(f))
+print "g : " + str(type(g))
 print "k : " + type(k)
