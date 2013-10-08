@@ -14,7 +14,7 @@ class Euclidean:
 #        return "[]"
     
     def __repr__(self):
-        return "Euclidean(" + str(self.w) + str(self.x) + str(self.y) + ")"
+        return "Euclidean(" + str(self.w) + ", " + str(self.x) + ", "+ str(self.y) + ")"
 
 def Vector(x, y):
     return Euclidean(0, x, y)
@@ -26,8 +26,6 @@ f = Vector(1,2)
 g = Vector(3,5)
 k = Scalar(4)
 
-# It's not possible to distinguish scalars from vectors yet.
-# At least we can see that they are all the same type.
 print "f : " + repr(f)
 print "g : " + repr(g)
 print "k : " + repr(k)
