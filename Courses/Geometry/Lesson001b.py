@@ -69,6 +69,7 @@ arrowF.position.set(f.x/2,f.y/2,0)
 
 arrowG = ArrowBuilder().name("g").scale( magnitude(g) ).attitude( attitude(g) ).color(0x0000FF).build()#.axis(f.x, f.y, 0).build()
 scene.add(arrowG)
+arrowG.position.set(g.x/2,g.y/2,0)
 
 workbench = Workbench(scene.renderer, scene.camera)
 
