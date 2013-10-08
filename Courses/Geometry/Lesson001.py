@@ -7,7 +7,10 @@ We demonstrate that the objects f, g, and k are elements in the space.
 '''
 class Euclidean:
     def __init__(self, w, x, y):
-        self.w = w
+        if isinstance(w, float):
+            self.w = w
+        else:
+            throw AssertionError("w must be a float")
         self.x = x
         self.y = y
     
