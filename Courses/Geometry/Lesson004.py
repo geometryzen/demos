@@ -71,8 +71,6 @@ h = Vector(7.0, 11.0)
 
 print "f => " + str(f)
 print "g => " + str(g)
-print "k => " + str(k)
-
 print "(f + g) + h => " + str((f + g) + h)
 print "f + (g + h) => " + str(f + (g + h))
 print "f + g => " + str(f + g)
