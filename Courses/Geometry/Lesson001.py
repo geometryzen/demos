@@ -25,4 +25,4 @@ k = Scalar()
 # At least we can see that they are all the same type.
 print "f : " + str(type(f))
 print "g : " + str(type(g))
-print "k : " + type(k)
+print "k : " + str(type(k))
