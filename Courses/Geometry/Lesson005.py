@@ -44,3 +44,4 @@ print "k * f : " + repr(k * f)
 print (f + g) + h == f + (g + h)
 print f + g == g + f
 print f + n == f
+print n != f
