@@ -74,7 +74,7 @@ arrowG = ArrowBuilder().name("g").scale( magnitude(g) ).attitude( attitude(g) ).
 scene.add(arrowG)
 arrowG.position.set(g.x/2,g.y/2,0)
 
-arrowH = ArrowBuilder().name("h").scale( magnitude(h) ).attitude( attitude(h) ).color(0xFF00FF).build()#.axis(f.x, f.y, 0).build()
+arrowH = ArrowBuilder().name("h").scale( magnitude(h) ).attitude( attitude(h) ).color("magenta").build()#.axis(f.x, f.y, 0).build()
 scene.add(arrowH)
 arrowH.position.set(h.x/2,h.y/2,0)
 
