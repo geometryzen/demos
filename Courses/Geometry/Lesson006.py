@@ -41,6 +41,8 @@ class Euclidean:
         return Vector(other * self.x, other * self.y)
     
     def __neg__(self):
+        # Possibly a bug requiring a cast to float.
+        print type(-self.x)
         return Vector(float(-self.x), float(-self.y))
 
     def __eq__(self, other):
