@@ -1,5 +1,5 @@
 from browser import WindowAnimationRunner
-from geometry import CartesianSpace, SphereBuilder
+from geometry import CartesianSpace, ArrowBuilder
 from workbench import Workbench
 
 class Euclidean:
