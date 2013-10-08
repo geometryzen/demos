@@ -2,22 +2,19 @@
 A linear space, V, is a set endowed with a rule for addition.
 If f and g are in V, then so is f + g.
 '''
-class Euclidean:
+cclass Euclidean:
     def __init__(self, w, x, y, z):
         self.w = w
         self.x = x
         self.y = y
         self.z = z
-        
-    def __add__(self, other):
-        return Euclidean(self.w + other.w, self.x + other.x, self.y + other.y, self.z + other.z)
     
     def __str__(self):
         parts = []
         if self.w != 0:
             parts.append(str(self.w))
         if self.x != 0 or self.y != 0 or self.z != 0:
-            parts.append("[" + ", ".join([str(self.x), str(self.y), str(self.z)]) + "]")
+            parts.append("+".join([str(self.x)+"*e1", str(self.y)+"*e2", str(self.z)+"*e3"]))
         return "+".join(parts)
     
     def __repr__(self):
