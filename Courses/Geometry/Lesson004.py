@@ -36,6 +36,11 @@ class Euclidean:
         if not isinstance(other, float):
             raise AssertionError("other must be a Euclidean or float")
         return Vector(other * self.x, other * self.y)
+
+    def __eq__(self, other):
+        if not isinstance(other, Euclidean):
+            return False
+        return self.w == other.w and self.x == other.x and self.y = other.y
     
     def __str__(self):
         parts = []
