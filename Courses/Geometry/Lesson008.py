@@ -85,12 +85,12 @@ def Scalar(w):
     return Euclidean(w, 0.0, 0.0)
 
 f = Vector(1.0, 2.0)
-g = Vector(3.0, 5.0)
+c = Scalar(2.0)
 k = Scalar(4.0)
 
 print "f => " + str(f)
-print "g => " + str(g)
+print "c => " + str(c)
 print "k => " + str(k)
 print ""
-print "k * (f + g)   => " + str(k * (f + g))
-print "k * f + k * g => " + str(k * f + k * g)
+print "(c + k) * f   => " + str((c + k) * f)
+print "c * f + k * f => " + str(c * f + k * f)
