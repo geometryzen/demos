@@ -16,6 +16,9 @@ class Euclidean:
             self.y = y
         else:
             raise AssertionError("y must be a float")
+            
+    def __add__(self, other):
+        return Vector(self.x + other.x, self.y + other.y)
     
     def __str__(self):
         parts = []
