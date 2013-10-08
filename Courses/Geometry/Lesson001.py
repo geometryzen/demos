@@ -1,7 +1,8 @@
 '''
-The first thing we will do is create a linear space, axiom by axiom.
-Our space will have two kinds of elements we call vectors and scalars.
+The first thing we will do is create a linear space.
+Our space will have two kinds of elements, one we call vectors, and the other scalars.
 With an eye to creating a unified geometric space, the underlying object is a Euclidean.
+We use a couple of wrapper functions as a convenience for the user.
 We demonstrate that the objects f, g, and k are elements in the space.
 '''
 class Euclidean:
