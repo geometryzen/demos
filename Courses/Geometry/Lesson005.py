@@ -10,24 +10,6 @@ For al f,g,h in V and c,k scalars, the set also satisfies the following rules:
 This n is unique and denoted by 0.
 '''
 class Euclidean:
-    def __init__(self):
-        pass
-    
-    def __add__(self, other):
-        return Euclidean()
-
-    def __mul__(self, other):
-        return Euclidean()
-    
-    def __repr__(self):
-        return "Euclidean()"
-
-def Vector():
-    return Euclidean()
-
-def Scalar():
-    return Euclidean()
-class Euclidean:
     def __init__(self, w, x, y, z):
         self.w = w
         self.x = x
