@@ -46,12 +46,12 @@ def Vector(x, y):
 def Scalar(w):
     return Euclidean(w, 0.0, 0.0)
 
-f = Vector(0.0, 4.0)
+v1 = Vector(0.0, 4.0)
 g = Vector(-3.0, 1.0)
-h = f + g
-print "f => " + str(f)
+h = v1 + g
+print "v1 => " + str(v1)
 print "g => " + str(g)
-print "f + g => " + str(h)
+print "v1 + g => " + str(h)
 
 scene = CartesianSpace()
 
@@ -66,13 +66,13 @@ def attitude(v):
     R = numer / denom
     return R
 
-arrowF = ArrowBuilder().scale( magnitude(f) ).attitude( attitude(f) ).color("red").build()
+arrowF = ArrowBuilder().scale( magnitude(v1) ).attitude( attitude(v1) ).color("red").build()
 scene.add(arrowF)
-arrowF.position.set(f.x / 2.0 + g.x, f.y / 2.0 + g.y, 0.0)
+arrowF.position.set(v1.x / 2.0, v1.y / 2.0, 0.0)
 
 arrowG = ArrowBuilder().scale( magnitude(g) ).attitude( attitude(g) ).color("blue").build()
 scene.add(arrowG)
-arrowG.position.set(g.x / 2.0, g.y / 2.0, 0.0)
+arrowG.position.set(g.x / 2.0 + v1.x, g.y / 2.0 + v1.y, 0.0)
 
 arrowH = ArrowBuilder().scale( magnitude(h) ).attitude( attitude(h) ).color("magenta").build()
 scene.add(arrowH)
