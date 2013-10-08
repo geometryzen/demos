@@ -27,8 +27,8 @@ def Vector(x, y):
 def Scalar(w):
     return Euclidean(w, 0, 0)
 
-f = Vector(1,2)
-g = Vector(3,5)
+f = Vector(1, 2)
+g = Vector(3, 5)
 k = Scalar(4)
 
 print "f : " + repr(f)
