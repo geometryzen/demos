@@ -12,6 +12,7 @@ This n is unique and denoted by 0.
 5. k(f + g) = kf + kg
 6 (c + k)f = cf + kf
 7. c(kf) = (ck)f
+8. 1f = f
 '''
 class Euclidean:
     def __init__(self, w, x, y):
