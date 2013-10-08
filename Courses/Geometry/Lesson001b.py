@@ -1,6 +1,7 @@
 from browser import WindowAnimationRunner
 from geometry import CartesianSpace, ArrowBuilder
 from workbench import Workbench
+from math import sqrt
 
 class Euclidean:
     def __init__(self, w, x, y):
@@ -16,6 +17,11 @@ class Euclidean:
             self.y = y
         else:
             raise AssertionError("y must be a float")
+            
+    def quadrance():
+        x = self.x
+        y = self.y
+        return x * x + y * y
     
     def __str__(self):
         parts = []
