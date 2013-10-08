@@ -2,7 +2,7 @@ from browser import WindowAnimationRunner
 from geometry import CartesianSpace, ArrowBuilder
 from workbench import Workbench
 from e3ga import *
-from math import sqrt
+from math import exp, sqrt, pi
 
 class Euclidean:
     def __init__(self, w, x, y):
@@ -57,7 +57,7 @@ def attitude(v):
     b = VectorE3(v.x, v.y, 0)
     numer = 1 + b * a
     denom = ScalarE3(sqrt(2))
-    return numer / denom
+    return numer / denom    
 
 # TODO: Need axis function for the ArrowBuilder (attitude is too advanced). Or maybe coordinates?
 magnitude = sqrt( f.quadrance() )
