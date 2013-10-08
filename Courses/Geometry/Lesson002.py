@@ -8,6 +8,9 @@ class Euclidean:
         self.x = x
         self.y = y
         self.z = z
+        
+    def __add__(self, other):
+        return Euclidean(self.w + other.w, self.x + other.x, self.y + other.y, self.z + other.z)
     
     def __str__(self):
         parts = []
@@ -45,6 +48,4 @@ print "repr(k) => " + repr(k)
 
 # We want f + g to be in the vector space (a Euclidean vector).
 # Python allows us to do this using __add__.
-print "f : " + repr(f)
-print "g : " + repr(g)
 print "f + g : " + repr(f + g)
