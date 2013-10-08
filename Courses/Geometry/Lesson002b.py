@@ -46,8 +46,8 @@ def Vector(x, y):
 def Scalar(w):
     return Euclidean(w, 0.0, 0.0)
 
-f = Vector(1.0, 2.0)
-g = Vector(-3.0, 1.0)
+f = Vector(0.0, 4.0)
+g = Vector(-3.0, 0.0)
 h = f + g
 print "f => " + str(f)
 print "g => " + str(g)
