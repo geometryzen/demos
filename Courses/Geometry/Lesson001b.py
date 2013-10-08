@@ -18,7 +18,7 @@ class Euclidean:
         else:
             raise AssertionError("y must be a float")
             
-    def quadrance():
+    def quadrance(self):
         x = self.x
         y = self.y
         return x * x + y * y
