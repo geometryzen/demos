@@ -42,6 +42,3 @@ print "k => " + str(k)
 print "repr(f) => " + repr(f)
 print "repr(g) => " + repr(g)
 print "repr(k) => " + repr(k)
-
-print isinstance(f, Euclidean)
-print isinstance(f, float)
