@@ -41,7 +41,7 @@ class Euclidean:
     def __mul__(self, other):
         if not isinstance(other, Euclidean):
             raise AssertionError("other must be a Euclidean")
-        return Vector(self.w * other.x, self.w * other.y)
+        return Euclidean(self.w * other.w, self.w * other.x, self.w * other.y)
 
     def __rmul__(self, other):
         if not isinstance(other, float):
