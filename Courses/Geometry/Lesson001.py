@@ -16,7 +16,7 @@ class Euclidean:
         if self.w != 0:
             parts.append(str(self.w))
         if self.x != 0 or self.y != 0 or self.z != 0:
-            parts.append("[" + ", ".join([str(self.x), str(self.y), str(self.z)]) + "]")
+            parts.append("[" + " + ".join([str(self.x)+"*e1", str(self.y)+"*e2", str(self.z)]+"*e3") + "]")
         return "+".join(parts)
     
     def __repr__(self):
