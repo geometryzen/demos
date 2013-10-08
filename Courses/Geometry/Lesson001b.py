@@ -1,7 +1,7 @@
 from browser import WindowAnimationRunner
 from geometry import CartesianSpace, ArrowBuilder
 from workbench import Workbench
-from e3ga import Euclidean3
+from e3ga import *
 from math import sqrt
 
 class Euclidean:
