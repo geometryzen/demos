@@ -48,6 +48,7 @@ def Scalar(w):
 
 f = Vector(1.0, 2.0)
 g = Vector(4.0, -3.0)
+h = f + g
 k = Scalar(4.0)
 
 scene = CartesianSpace()
@@ -70,6 +71,10 @@ arrowF.position.set(f.x/2,f.y/2,0)
 arrowG = ArrowBuilder().name("g").scale( magnitude(g) ).attitude( attitude(g) ).color(0x0000FF).build()#.axis(f.x, f.y, 0).build()
 scene.add(arrowG)
 arrowG.position.set(g.x/2,g.y/2,0)
+
+arrowH = ArrowBuilder().name("h").scale( magnitude(h) ).attitude( attitude(h) ).color(0xFF00FF).build()#.axis(f.x, f.y, 0).build()
+scene.add(arrowH)
+arrowH.position.set(h.x/2,h.y/2,0)
 
 workbench = Workbench(scene.renderer, scene.camera)
 
