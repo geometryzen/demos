@@ -70,6 +70,7 @@ f = Vector(1.0, 2.0)
 g = Vector(3.0, 5.0)
 k = Scalar(4.0)
 h = Vector(7.0, 11.0)
+n = Vector(0.0, 0.0)
 
 print "f => " + str(f)
 print "g => " + str(g)
