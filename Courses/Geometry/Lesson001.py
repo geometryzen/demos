@@ -14,7 +14,11 @@ class Euclidean:
 #        return "[]"
     
     def __repr__(self):
-        return "Euclidean(" + str(self.w) + ", " + str(self.x) + ", "+ str(self.y) + ")"
+        parts = []
+        if self.w != 0:
+            parts.append("Scalar()")
+        return parts;    
+#        return "Euclidean(" + str(self.w) + ", " + str(self.x) + ", "+ str(self.y) + ")"
 
 def Vector(x, y):
     return Euclidean(0, x, y)
