@@ -17,9 +17,6 @@ class Euclidean:
     def __mul__(self, other):
         return Euclidean()
     
-    def __eq__(self, other):
-        return True
-    
     def __repr__(self):
         return "Euclidean()"
 
@@ -28,15 +25,57 @@ def Vector():
 
 def Scalar():
     return Euclidean()
+class Euclidean:
+    def __init__(self, w, x, y, z):
+        self.w = w
+        self.x = x
+        self.y = y
+        self.z = z
+        
+    def __add__(self, other):
+        return Euclidean(self.w + other.w, self.x + other.x, self.y + other.y, self.z + other.z)
 
-f = Vector()
-g = Vector()
-h = Vector()
-k = Scalar()
+    def __mul__(self, other):
+        return Euclidean(0, self.w * other.x, self.w * other.y, self.w * other.z)
+    
+    def __str__(self):
+        parts = []
+        if self.w != 0:
+            parts.append(str(self.w))
+        if self.x != 0 or self.y != 0 or self.z != 0:
+            parts.append("+".join([str(self.x)+"*e1", str(self.y)+"*e2", str(self.z)+"*e3"]))
+        return "+".join(parts)
+    
+    def __repr__(self):
+        parts = []
+        if self.w != 0:
+            parts.append("Scalar(" + str(self.w) + ")")
+        if self.x != 0 or self.y != 0:
+            parts.append("Vector(" + ", ".join([str(self.x), str(self.y), str(self.z)]) + ")")
+        return "+".join(parts)
 
-print "f : " + repr(f)
-print "g : " + repr(g)
-print "f + g : " + repr(f + g)
-print "k * f : " + repr(k * f)
+def Vector(x, y, z):
+    return Euclidean(0, x, y, z)
+
+def Scalar(w):
+    return Euclidean(w, 0, 0, 0)
+
+f = Vector(1, 2, 3)
+g = Vector(3, 5, 7)
+k = Scalar(4)
+
+print "f => " + str(f)
+print "g => " + str(g)
+print "k => " + str(k)
+print "repr(f) => " + repr(f)
+print "repr(g) => " + repr(g)
+print "repr(k) => " + repr(k)
+
+
+# We want f * g to be in the vector space (a Euclidean vector).
+# Python allows us to do this using __mul__.
+print "f + g => " + str(f + g)
+print str(k) + " * " + str(f) + " => " + str(k * f)
+
 print (f + g) + h == f + (g + h)
 print f + g == g + f
