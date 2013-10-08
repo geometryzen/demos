@@ -91,5 +91,5 @@ print "f => " + str(f)
 print "g => " + str(g)
 print "k => " + str(k)
 
-print "k * (f + g) => " + str(k * (f + g))
+print "k * (f + g)   => " + str(k * (f + g))
 print "k * f + k * g => " + str(k * f + k * g)
