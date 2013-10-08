@@ -8,6 +8,7 @@ For al f,g,h in V and c,k scalars, the set also satisfies the following rules:
 2. f + g = g + f
 3. There exists a neutral element n in V such that f + n = f, for al f in V.
 This n is unique and denoted by 0.
+4. For each f in
 '''
 class Euclidean:
     def __init__(self):
@@ -37,11 +38,14 @@ h = Vector()
 k = Scalar()
 n = Vector()
 
+V = [f, g, h, n] 
+
 print "f : " + repr(f)
 print "g : " + repr(g)
 print "f + g : " + repr(f + g)
 print "k * f : " + repr(k * f)
 print (f + g) + h == f + (g + h)
 print f + g == g + f
-print f + n == f
-print n != f
+for vector in V:
+    print vector + n == vector
+    print n != f
