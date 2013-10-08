@@ -39,4 +39,4 @@ print "g : " + repr(g)
 print "f + g : " + repr(f + g)
 print "k * f : " + repr(k * f)
 print (f + g) + h == f + (g + h)
-pring f + g == g + f
+print f + g == g + f
