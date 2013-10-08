@@ -52,6 +52,9 @@ k = Scalar(4.0)
 
 scene = CartesianSpace()
 
+def magnitude(v):
+    return sqrt(v.x * v.x + v.y * v.y)
+
 def attitude(v):
     a = VectorE3(0, 0, 1)
     b = VectorE3(v.x, v.y, 0) / sqrt(v.quadrance())
@@ -60,9 +63,7 @@ def attitude(v):
     R = numer / denom
     return R
 
-# TODO: Need axis function for the ArrowBuilder (attitude is too advanced). Or maybe coordinates?
-magnitude = sqrt( f.quadrance() )
-arrowF = ArrowBuilder().name("f").scale(magnitude).attitude( attitude(f) ).color(0xFFFF00).build()#.axis(f.x, f.y, 0).build()
+arrowF = ArrowBuilder().name("f").scale( magnitude(f) ).attitude( attitude(f) ).color(0xFFFF00).build()#.axis(f.x, f.y, 0).build()
 scene.add(arrowF)
 
 workbench = Workbench(scene.renderer, scene.camera)
