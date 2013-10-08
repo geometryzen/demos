@@ -10,7 +10,7 @@ class Euclidean:
         if isinstance(w, float):
             self.w = w
         else:
-            throw AssertionError("w must be a float")
+            raise AssertionError("w must be a float")
         self.x = x
         self.y = y
     
@@ -38,7 +38,7 @@ def Scalar(w):
 
 f = Vector(1, 2)
 g = Vector(5, 7)
-k = Scalar(4)
+k = Scalar(4.0)
 
 print "f => " + str(f)
 print "g => " + str(g)
