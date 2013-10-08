@@ -86,7 +86,7 @@ def Scalar(w):
     return Euclidean(w, 0.0, 0.0)
 
 f = Vector(1.0, 2.0)
-one = Scalar(1)
+one = Scalar(1.0)
 
 print "f => " + str(f)
 print "one => " + str(one)
