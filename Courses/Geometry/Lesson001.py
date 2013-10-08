@@ -6,7 +6,9 @@ We demonstrate that the objects f,g, and k are elements in the space.
 '''
 class Euclidean:
     def __init__(self, w, x, y):
-        pass
+        self.w = w
+        self.x = x
+        self.y = y
     
 #    def __str__(self):
 #        return "[]"
