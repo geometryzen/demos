@@ -1,6 +1,7 @@
 from browser import WindowAnimationRunner
 from geometry import CartesianSpace, ArrowBuilder
 from workbench import Workbench
+from e3ga import Euclidean3
 from math import sqrt
 
 class Euclidean:
@@ -51,9 +52,16 @@ k = Scalar(4.0)
 
 scene = CartesianSpace()
 
+def attitude(v):
+    a = VectorE3(0, 0, 1)
+    b = VectorE3(v.x, v.y, 0)
+    numer = 1 + b * a
+    denom = ScalarE3(sqrt(2))
+    return numer / denom
+
 # TODO: Need axis function for the ArrowBuilder (attitude is too advanced). Or maybe coordinates?
 magnitude = sqrt( f.quadrance() )
-arrowF = ArrowBuilder().name("f").scale(magnitude).color(0xFFFF00).build()#.axis(f.x, f.y, 0).build()
+arrowF = ArrowBuilder().name("f").scale(magnitude).attitude( attitude(f) )color(0xFFFF00).build()#.axis(f.x, f.y, 0).build()
 scene.add(arrowF)
 
 workbench = Workbench(scene.renderer, scene.camera)
