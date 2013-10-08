@@ -14,11 +14,11 @@ class Euclidean:
     def __repr__(self):
         return "Euclidean()"
 
-def Vector():
-    return Euclidean()
+def Vector(x, y):
+    return Euclidean(0, x, y)
 
-def Scalar():
-    return Euclidean()
+def Scalar(w):
+    return Euclidean(w, 0, 0)
 
 f = Vector(1,2)
 g = Vector(3,5)
