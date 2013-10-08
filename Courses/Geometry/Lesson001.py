@@ -12,7 +12,7 @@ class Euclidean:
 #        return "[]"
     
     def __repr__(self):
-        return "Euclidean(" + str(w) + str(x) + str(y) + ")"
+        return "Euclidean(" + str(self.w) + str(self.x) + str(self.y) + ")"
 
 def Vector(x, y):
     return Euclidean(0, x, y)
