@@ -46,7 +46,7 @@ def Vector(x, y):
 def Scalar(w):
     return Euclidean(w, 0.0, 0.0)
 
-f = Vector(1.0, 2.0)
+f = Vector(1.0, 0.0)
 g = Vector(5.0, 7.0)
 k = Scalar(4.0)
 
