@@ -63,10 +63,10 @@ def attitude(v):
     R = numer / denom
     return R
 
-arrowF = ArrowBuilder().name("f").scale( magnitude(f) ).attitude( attitude(f) ).color(0xFFFF00).build()#.axis(f.x, f.y, 0).build()
+arrowF = ArrowBuilder().name("f").scale( magnitude(f) ).attitude( attitude(f) ).color(0xFF0000).build()#.axis(f.x, f.y, 0).build()
 scene.add(arrowF)
 
-arrowG = ArrowBuilder().name("g").scale( magnitude(g) ).attitude( attitude(g) ).color(0xFFFF00).build()#.axis(f.x, f.y, 0).build()
+arrowG = ArrowBuilder().name("g").scale( magnitude(g) ).attitude( attitude(g) ).color(0x0000FF).build()#.axis(f.x, f.y, 0).build()
 scene.add(arrowG)
 
 workbench = Workbench(scene.renderer, scene.camera)
