@@ -46,7 +46,7 @@ k = Scalar(4.0)
 scene = CartesianSpace()
 
 # The object is created using the builder pattern.
-sphere = ArrowBuilder().name("f").color(0x0000FF).build()
+sphere = ArrowBuilder().name("f").color(0x0000FF).axis(f.x, f.y, 0).build()
 # Once created, the object must be added to the scene in order to be rendered.
 scene.add(sphere)
 
