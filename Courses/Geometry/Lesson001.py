@@ -37,10 +37,10 @@ def Vector(x, y):
     return Euclidean(0.0, x, y)
 
 def Scalar(w):
-    return Euclidean(w, 0, 0)
+    return Euclidean(w, 0.0, 0)
 
-f = Vector(1, 2)
-g = Vector(5, 7)
+f = Vector(1.0, 2)
+g = Vector(5.0, 7)
 k = Scalar(4.0)
 
 print "f => " + str(f)
