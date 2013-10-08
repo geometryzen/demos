@@ -49,3 +49,46 @@ g = Vector(5.0, 7.0)
 print "f => " + str(f)
 print "g => " + str(g)
 print "f + g => " + str(f + g)
+
+scene = CartesianSpace()
+
+def magnitude(v):
+    return sqrt(v.x * v.x + v.y * v.y)
+
+def attitude(v):
+    a = VectorE3(0, 0, 1)
+    b = VectorE3(v.x, v.y, 0) / sqrt(v.quadrance())
+    numer = 1 + b * a
+    denom = ScalarE3(sqrt(2 + (a % b)))
+    R = numer / denom
+    return R
+
+arrowF = ArrowBuilder().name("f").scale( magnitude(f) ).attitude( attitude(f) ).color(0xFF0000).build()#.axis(f.x, f.y, 0).build()
+scene.add(arrowF)
+arrowF.position.set(f.x/2,f.y/2,0)
+
+arrowG = ArrowBuilder().name("g").scale( magnitude(g) ).attitude( attitude(g) ).color(0x0000FF).build()#.axis(f.x, f.y, 0).build()
+scene.add(arrowG)
+arrowG.position.set(g.x/2,g.y/2,0)
+
+arrowH = ArrowBuilder().name("h").scale( magnitude(h) ).attitude( attitude(h) ).color(0xFF00FF).build()#.axis(f.x, f.y, 0).build()
+scene.add(arrowH)
+arrowH.position.set(h.x/2,h.y/2,0)
+
+workbench = Workbench(scene.renderer, scene.camera)
+
+def tick(t):
+    scene.render()
+
+def terminate(t):
+    done = t > 4
+    return done
+
+def setUp():
+    workbench.setUp()
+
+def tearDown():
+    workbench.tearDown()
+
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
+
