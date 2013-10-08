@@ -48,4 +48,4 @@ print "repr(k) => " + repr(k)
 
 # We want f + g to be in the vector space (a Euclidean vector).
 # Python allows us to do this using __add__.
-print "f + g : " + repr(f + g)
+print "f + g : " + str(f + g)
