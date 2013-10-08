@@ -27,7 +27,7 @@ class Euclidean:
         if self.w != 0.0:
             parts.append(str(self.w))
         if self.x != 0.0 or self.y != 0.0:
-            parts.append("+".join([str(self.x)+"i", str(self.y)+"j"]))
+            parts.append(" + ".join([str(self.x)+"i", str(self.y)+"j"]))
         return "+".join(parts)
     
     def __repr__(self):
