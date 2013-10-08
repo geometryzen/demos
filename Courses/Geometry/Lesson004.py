@@ -30,10 +30,8 @@ g = Vector()
 h = Vector()
 k = Scalar()
 
-# We want k * f to be in the vector space (a Euclidean vector).
-# Python allows us to do this using __add__.
 print "f : " + repr(f)
 print "g : " + repr(g)
 print "f + g : " + repr(f + g)
 print "k * f : " + repr(k * f)
-pring 
+pringt (f + g) + h == f + (g + h)
