@@ -59,7 +59,7 @@ def magnitude(v):
 
 def attitude(v):
     a = VectorE3(0, 0, 1)
-    b = VectorE3(v.x, v.y, 0) / sqrt(v.quadrance())
+    b = VectorE3(v.x, v.y, 0) / magnitude(v)
     numer = 1 + b * a
     denom = ScalarE3(sqrt(2 + (a % b)))
     R = numer / denom
