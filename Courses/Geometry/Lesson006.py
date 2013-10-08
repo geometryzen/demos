@@ -88,3 +88,4 @@ print "g => " + str(g)
 print "n => " + str(n)
 
 print "f + (-f) => " + str(f + (-f))
+print "f - f => " + str(f - f)
