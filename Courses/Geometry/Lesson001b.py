@@ -1,4 +1,7 @@
-# Lesson001b.py
+from browser import WindowAnimationRunner
+from geometry import CartesianSpace, SphereBuilder
+from workbench import Workbench
+
 class Euclidean:
     def __init__(self, w, x, y):
         if isinstance(w, float):
@@ -39,3 +42,27 @@ def Scalar(w):
 f = Vector(1.0, 2.0)
 g = Vector(5.0, 7.0)
 k = Scalar(4.0)
+
+scene = CartesianSpace()
+
+# The object is created using the builder pattern.
+sphere = SphereBuilder().color(0x0000FF).build()
+# Once created, the object must be added to the scene in order to be rendered.
+scene.add(sphere)
+
+workbench = Workbench(scene.renderer, scene.camera)
+
+def tick(t):
+    scene.render()
+
+def terminate(t):
+    done = t > 4
+    return done
+
+def setUp():
+    workbench.setUp()
+
+def tearDown():
+    workbench.tearDown()
+
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
