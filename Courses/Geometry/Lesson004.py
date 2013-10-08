@@ -75,4 +75,5 @@ print "k => " + str(k)
 
 print "(f + g) + h => " + str((f + g) + h)
 print "f + (g + h) => " + str(f + (g + h))
-print f + g == g + f
+print "f + g => " + str(f + g)
+print "g + f => " + str(g + f)
