@@ -8,6 +8,9 @@ class Euclidean:
         self.x = x
         self.y = y
         self.z = z
+        
+    def __add__(self, other):
+        return Euclidean(self.w + other.w, self.x + other.x, self.y + other.y, self.z + other.z)
     
     def __str__(self):
         parts = []
