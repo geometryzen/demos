@@ -62,6 +62,7 @@ def Scalar(w):
 
 f = Vector(1, 2, 3)
 g = Vector(3, 5, 7)
+h = Vector(11, 13, 17)
 k = Scalar(4)
 
 print "f => " + str(f)
