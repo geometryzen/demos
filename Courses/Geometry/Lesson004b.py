@@ -89,23 +89,18 @@ def attitude(v):
     R = numer / denom
     return R
 
-probeF = ProbeBuilderE3().color(0xFF0000).build()
-scene.add(probeF.grade1)
+probeF0 = ProbeBuilderE3().color("red").build()
+scene.add(probeF0.grade1)
 
-probeG = ProbeBuilderE3().color("green").build()
-scene.add(probeG.grade1)
+probeG0 = ProbeBuilderE3().color("green").build()
+scene.add(probeG0.grade1)
 
-arrowG = ArrowBuilder().scale( magnitude(g) ).attitude( attitude(g) ).color("green").build()
-scene.add(arrowG)
-arrowG.position.set(g.x / 2.0, g.y / 2.0, 0.0)
+probeH0 = ProbeBuilderE3().color("blue").build()
+scene.add(probeH0.grade1)
 
 arrowG2 = ArrowBuilder().scale( magnitude(g) ).attitude( attitude(g) ).color("green").build()
 scene.add(arrowG2)
 arrowG2.position.set(g.x / 2.0 + f.x, g.y / 2.0 + f.y, 0.0)
-
-arrowH = ArrowBuilder().scale( magnitude(h) ).attitude( attitude(h) ).color("blue").build()
-scene.add(arrowH)
-arrowH.position.set(h.x /2.0, h.y / 2.0, 0.0)
 
 arrowH2 = ArrowBuilder().scale( magnitude(h) ).attitude( attitude(h) ).color("blue").build()
 scene.add(arrowH2)
@@ -183,10 +178,12 @@ def tick(t):
         f = f + Vector(-0.1, 0.0)
     if moveBackward:
         f = f + Vector(+0.1, 0.0)
-    probeF.quantity = VectorE3(f.x, f.y, 0)
-    probeF.grade1.position.set(f.x / 2.0, f.y / 2.0, 0.0)
-    probeG.quantity = VectorE3(g.x, g.y, 0)
-    probeG.grade1.position.set(g.x / 2.0, g.y / 2.0, 0.0)
+    probeF0.quantity = VectorE3(f.x, f.y, 0)
+    probeF0.grade1.position.set(f.x / 2.0, f.y / 2.0, 0.0)
+    probeG0.quantity = VectorE3(g.x, g.y, 0)
+    probeG0.grade1.position.set(g.x / 2.0, g.y / 2.0, 0.0)
+    probeH0.quantity = VectorE3(h.x, h.y, 0)
+    probeH0.grade1.position.set(h.x / 2.0, h.y / 2.0, 0.0)
     scene.render()
 
 def terminate(t):
