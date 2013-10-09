@@ -128,9 +128,28 @@ def terminate(t):
 
 def setUp():
     workbench.setUp()
+    document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tearDown():
+    document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
+
+# This function performs the required action for the Escape keyboard event.   
+def escKey(event, downFlag):
+    event.preventDefault()
+    global timeOut
+    timeOut = 0
+
+# This variable maps keyboard codes to functions.
+keyHandlers = {
+ 27: escKey
+}
+    
+def onDocumentKeyDown(event):
+    try:
+        keyHandlers[event.keyCode](event, True)
+    except:
+        pass
 
