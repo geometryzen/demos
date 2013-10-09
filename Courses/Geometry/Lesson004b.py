@@ -123,7 +123,7 @@ def tick(t):
     scene.render()
 
 def terminate(t):
-    done = t > 16
+    done = t > timeOut
     return done
     
 def onDocumentKeyDown(event):
