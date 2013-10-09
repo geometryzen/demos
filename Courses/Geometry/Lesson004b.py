@@ -14,17 +14,6 @@ h = i + j
 
 scene = CartesianSpace()
 
-def magnitude(v):
-    return sqrt(v.x * v.x + v.y * v.y)
-
-def attitude(v):
-    a = k
-    b = v / magnitude(v)
-    numer = 1 + b * a
-    denom = ScalarE3(sqrt(2 + (a % b)))
-    R = numer / denom
-    return R
-
 probeR = ProbeBuilderE3().color("red").build()
 scene.add(probeR.grade1)
 
