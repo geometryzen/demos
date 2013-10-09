@@ -4,7 +4,7 @@ from workbench import Workbench
 from e3ga import *
 from math import exp, sqrt, pi
 
-f = Vector(3.0, -2.0)
+f = VectorE3(3.0, -2.0)
 g = Vector(0.0, 2.0)
 h = Vector(1.0, 1.0)
 
