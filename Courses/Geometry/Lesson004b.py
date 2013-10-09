@@ -99,7 +99,8 @@ def tick(t):
     if moveForward:
         f = f + VectorE3(-0.1, 0.0, 0.0)
     if moveBackward:
-        f = f + Vector(+0.1, 0.0, 0.0)
+        f = f + VectorE3(+0.1, 0.0, 0.0)
+        
     u = f + g
     v = g + h
     
@@ -108,11 +109,14 @@ def tick(t):
     
     probeG.quantity = g
     probeG.grade1.position.set(g.x / 2.0 + f.x, g.y / 2.0 + f.y, 0.0)
-    probeB.quantity = VectorE3(h.x, h.y, 0)
+    
+    probeB.quantity = h
     probeB.grade1.position.set(h.x / 2.0 + u.x, h.y / 2.0 + u.y, 0.0)
-    probeY.quantity = VectorE3(u.x, u.y, 0)
+    
+    probeY.quantity = u
     probeY.grade1.position.set(u.x / 2.0, u.y / 2.0, 0.0)
-    probeC.quantity = VectorE3(v.x, v.y, 0)
+    
+    probeC.quantity = v
     probeC.grade1.position.set(v.x / 2.0 + f.x, v.y / 2.0 + f.y, 0.0)
     scene.render()
 
