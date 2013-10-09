@@ -172,6 +172,7 @@ def onDocumentKeyUp(event):
         pass
 
 def tick(t):
+    global f
     if moveLeft:
         f = f + Vector(-0.1,0.0)
     scene.render()
