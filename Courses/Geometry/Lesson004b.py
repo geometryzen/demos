@@ -125,6 +125,12 @@ def tick(t):
 def terminate(t):
     done = t > 16
     return done
+    
+def onDocumentKeyDown(event):
+    try:
+        keyHandlers[event.keyCode](event, True)
+    except:
+        pass
 
 def setUp():
     workbench.setUp()
@@ -146,10 +152,4 @@ def escKey(event, downFlag):
 keyHandlers = {
  27: escKey
 }
-    
-def onDocumentKeyDown(event):
-    try:
-        keyHandlers[event.keyCode](event, True)
-    except:
-        pass
 
