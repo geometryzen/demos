@@ -89,8 +89,8 @@ def attitude(v):
     R = numer / denom
     return R
 
-probeF0 = ProbeBuilderE3().color("red").build()
-scene.add(probeF0.grade1)
+probeR = ProbeBuilderE3().color("red").build()
+scene.add(probeR.grade1)
 
 probeG0 = ProbeBuilderE3().color("green").build()
 scene.add(probeG0.grade1)
@@ -178,8 +178,8 @@ def tick(t):
         f = f + Vector(-0.1, 0.0)
     if moveBackward:
         f = f + Vector(+0.1, 0.0)
-    probeF0.quantity = VectorE3(f.x, f.y, 0)
-    probeF0.grade1.position.set(f.x / 2.0, f.y / 2.0, 0.0)
+    probeR.quantity = VectorE3(f.x, f.y, 0)
+    probeR.grade1.position.set(f.x / 2.0, f.y / 2.0, 0.0)
     probeG0.quantity = VectorE3(g.x, g.y, 0)
     probeG0.grade1.position.set(g.x / 2.0, g.y / 2.0, 0.0)
     probeH0.quantity = VectorE3(h.x, h.y, 0)
