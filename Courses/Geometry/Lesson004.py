@@ -66,8 +66,8 @@ def Scalar(w):
 
 f = Vector(1.0, 2.0)
 g = Vector(3.0, 5.0)
-k = Scalar(4.0)
 h = Vector(7.0, 11.0)
+i = f + g + h
 
 print "f => " + str(f)
 print "g => " + str(g)
