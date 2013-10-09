@@ -121,34 +121,74 @@ workbench = Workbench(scene.renderer, scene.camera)
 
 timeOut = 20
 
-def tick(t):
-    scene.render()
+moveLeft = False
+moveForward = False
+moveRight = False
+moveBackward = False
 
-def terminate(t):
-    done = t > timeOut
-    return done
+def escKey(event, downFlag):
+    event.preventDefault()
+    global timeOut
+    timeOut = 0
+
+def leftArrowKey(event, downFlag):
+    event.preventDefault()
+    global moveLeft
+    moveLeft = downFlag
+
+def upArrowKey(event, downFlag):
+    event.preventDefault()
+    global moveForward
+    moveForward = downFlag
+    
+def rightArrowKey(event, downFlag):
+    event.preventDefault()
+    global moveRight
+    moveRight = downFlag
+
+def downArrowKey(event, downFlag):
+    event.preventDefault()
+    global moveBackward
+    moveBackward = downFlag
+
+keyHandlers = {
+ 27: escKey,
+ 37: leftArrowKey,
+ 38: upArrowKey,
+ 39: rightArrowKey,
+ 40: downArrowKey
+}
     
 def onDocumentKeyDown(event):
     try:
         keyHandlers[event.keyCode](event, True)
     except:
         pass
+    
+def onDocumentKeyUp(event):
+    try:
+        keyHandlers[event.keyCode](event, False)
+    except:
+        pass
+
+def tick(t):
+    scene.render()
+
+def terminate(t):
+    done = t > timeOut
+    return done
 
 def setUp():
     workbench.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
+    document.addEventListener("keyup",   onDocumentKeyUp, False)
 
 def tearDown():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
+    document.removeEventListener("keyup",   onDocumentKeyUp, False)
     workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
-
-# This function performs the required action for the Escape keyboard event.   
-def escKey(event, downFlag):
-    event.preventDefault()
-    global timeOut
-    timeOut = 0
 
 # This variable maps keyboard codes to functions.
 keyHandlers = {
