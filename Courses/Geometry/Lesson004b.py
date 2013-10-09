@@ -90,9 +90,9 @@ def tick(t):
     if moveRight:
         f += 0.1 * j
     if moveForward:
-        f = f + VectorE3(-0.1, 0.0, 0.0)
+        f -= 0.1 * i
     if moveBackward:
-        f = f + VectorE3(+0.1, 0.0, 0.0)
+        f += 0.1 * i
         
     u = f + g
     v = g + h
