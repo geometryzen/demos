@@ -6,6 +6,7 @@ from math import exp, sqrt, pi
 
 i = VectorE3(1, 0, 0)
 j = VectorE3(0, 1, 0)
+k = VectorE3(0, 0, 1)
 
 f = 3 * i - 2 * j
 g = 2 * j
@@ -17,8 +18,8 @@ def magnitude(v):
     return sqrt(v.x * v.x + v.y * v.y)
 
 def attitude(v):
-    a = VectorE3(0, 0, 1)
-    b = VectorE3(v.x, v.y, 0) / magnitude(v)
+    a = k
+    b = v / magnitude(v)
     numer = 1 + b * a
     denom = ScalarE3(sqrt(2 + (a % b)))
     R = numer / denom
