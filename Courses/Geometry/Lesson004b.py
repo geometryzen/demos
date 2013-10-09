@@ -31,7 +31,7 @@ scene.add(probeC.grade1)
 
 workbench = Workbench(scene.renderer, scene.camera)
 
-timeOut = 30
+timeOut = 60
 
 moveLeft = False
 moveForward = False
