@@ -173,7 +173,7 @@ def onDocumentKeyUp(event):
 
 def tick(t):
     if moveLeft:
-        f = f - Vector(0.1,0.0)
+        f = f + Vector(-0.1,0.0)
     scene.render()
 
 def terminate(t):
