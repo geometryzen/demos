@@ -95,16 +95,15 @@ scene.add(probeR.grade1)
 probeG = ProbeBuilderE3().color("green").build()
 scene.add(probeG.grade1)
 
-probeH0 = ProbeBuilderE3().color("blue").build()
-scene.add(probeH0.grade1)
+probeB = ProbeBuilderE3().color("blue").build()
+scene.add(probeB.grade1)
+
+probeY = ProbeBuilderE3().color("yellow").build()
+scene.add(probeY.grade1)
 
 arrowH2 = ArrowBuilder().scale( magnitude(h) ).attitude( attitude(h) ).color("blue").build()
 scene.add(arrowH2)
 arrowH2.position.set(h.x /2.0 + u.x, h.y / 2.0 + u.y, 0.0)
-
-arrowU = ArrowBuilder().scale( magnitude(u) ).attitude( attitude(u) ).color("yellow").build()
-scene.add(arrowU)
-arrowU.position.set(u.x /2.0 , u.y / 2.0, 0.0)
 
 arrowV = ArrowBuilder().scale( magnitude(v) ).attitude( attitude(v) ).color("cyan").build()
 scene.add(arrowV)
@@ -178,8 +177,10 @@ def tick(t):
     probeR.grade1.position.set(f.x / 2.0, f.y / 2.0, 0.0)
     probeG.quantity = VectorE3(g.x, g.y, 0)
     probeG.grade1.position.set(g.x / 2.0 + f.x, g.y / 2.0 + f.y, 0.0)
-    probeH0.quantity = VectorE3(h.x, h.y, 0)
-    probeH0.grade1.position.set(h.x / 2.0 + u.x, h.y / 2.0 + u.y, 0.0)
+    probeB.quantity = VectorE3(h.x, h.y, 0)
+    probeB.grade1.position.set(h.x / 2.0 + u.x, h.y / 2.0 + u.y, 0.0)
+    probeY.quantity = VectorE3(u.x, u.y, 0)
+    probeY.grade1.position.set(u.x / 2.0, u.y / 2.0, 0.0)
     scene.render()
 
 def terminate(t):
