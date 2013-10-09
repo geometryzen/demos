@@ -80,3 +80,43 @@ print "(f + g) + h => " + str((f + g) + h)
 print "f + (g + h) => " + str(f + (g + h))
 print "f + g => " + str(f + g)
 print "g + f => " + str(g + f)
+
+
+scene = CartesianSpace()
+
+def magnitude(v):
+    return sqrt(v.x * v.x + v.y * v.y)
+
+def attitude(v):
+    a = VectorE3(0, 0, 1)
+    b = VectorE3(v.x, v.y, 0) / magnitude(v)
+    numer = 1 + b * a
+    denom = ScalarE3(sqrt(2 + (a % b)))
+    R = numer / denom
+    return R
+
+arrowF = ArrowBuilder().scale( magnitude(f) ).attitude( attitude(f) ).color("red").build()
+scene.add(arrowF)
+arrowF.position.set(f.x / 2.0, f.y / 2.0, 0.0)
+
+arrowH = ArrowBuilder().scale( magnitude(h) ).attitude( attitude(h) ).color("magenta").build()
+scene.add(arrowH)
+arrowH.position.set(h.x/2,h.y/2,0)
+
+workbench = Workbench(scene.renderer, scene.camera)
+
+def tick(t):
+    scene.render()
+
+def terminate(t):
+    done = t > 16
+    return done
+
+def setUp():
+    workbench.setUp()
+
+def tearDown():
+    workbench.tearDown()
+
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
+
