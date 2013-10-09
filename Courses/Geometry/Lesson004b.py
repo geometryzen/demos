@@ -72,9 +72,6 @@ def Scalar(w):
 f = Vector(3.0, -2.0)
 g = Vector(0.0, 2.0)
 h = Vector(1.0, 1.0)
-u = f + g
-v = g + h
-i = f + g + h
 
 scene = CartesianSpace()
 
@@ -168,6 +165,8 @@ def tick(t):
         f = f + Vector(-0.1, 0.0)
     if moveBackward:
         f = f + Vector(+0.1, 0.0)
+    u = f + g
+    v = g + h
     probeR.quantity = VectorE3(f.x, f.y, 0)
     probeR.grade1.position.set(f.x / 2.0, f.y / 2.0, 0.0)
     probeG.quantity = VectorE3(g.x, g.y, 0)
