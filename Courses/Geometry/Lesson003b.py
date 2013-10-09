@@ -66,3 +66,45 @@ print "k => " + str(k)
 
 print "k * f => " + str(k * f)
 print "4 * f => " + str(4.0 * f)
+
+scene = CartesianSpace()
+
+def magnitude(v):
+    return sqrt(v.x * v.x + v.y * v.y)
+
+def attitude(v):
+    a = VectorE3(0, 0, 1)
+    b = VectorE3(v.x, v.y, 0) / magnitude(v)
+    numer = 1 + b * a
+    denom = ScalarE3(sqrt(2 + (a % b)))
+    R = numer / denom
+    return R
+
+arrowF = ArrowBuilder().scale( magnitude(v1) ).attitude( attitude(v1) ).color("red").build()
+scene.add(arrowF)
+arrowF.position.set(v1.x / 2.0, v1.y / 2.0, 0.0)
+
+arrowG = ArrowBuilder().scale( magnitude(g) ).attitude( attitude(g) ).color("blue").build()
+scene.add(arrowG)
+arrowG.position.set(g.x / 2.0 + v1.x, g.y / 2.0 + v1.y, 0.0)
+
+arrowH = ArrowBuilder().scale( magnitude(h) ).attitude( attitude(h) ).color("magenta").build()
+scene.add(arrowH)
+arrowH.position.set(h.x/2,h.y/2,0)
+
+workbench = Workbench(scene.renderer, scene.camera)
+
+def tick(t):
+    scene.render()
+
+def terminate(t):
+    done = t > 16
+    return done
+
+def setUp():
+    workbench.setUp()
+
+def tearDown():
+    workbench.tearDown()
+
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
