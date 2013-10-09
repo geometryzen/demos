@@ -64,6 +64,7 @@ def Scalar(w):
 f = Vector(1.0, 2.0)
 g = Vector(3.0, 5.0)
 k = Scalar(4.0)
+h = k * f
 
 print "f => " + str(f)
 print "g => " + str(g)
@@ -85,13 +86,9 @@ def attitude(v):
     R = numer / denom
     return R
 
-arrowF = ArrowBuilder().scale( magnitude(v1) ).attitude( attitude(v1) ).color("red").build()
+arrowF = ArrowBuilder().scale( magnitude(f) ).attitude( attitude(f) ).color("red").build()
 scene.add(arrowF)
-arrowF.position.set(v1.x / 2.0, v1.y / 2.0, 0.0)
-
-arrowG = ArrowBuilder().scale( magnitude(g) ).attitude( attitude(g) ).color("blue").build()
-scene.add(arrowG)
-arrowG.position.set(g.x / 2.0 + v1.x, g.y / 2.0 + v1.y, 0.0)
+arrowF.position.set(f.x / 2.0, f.y / 2.0, 0.0)
 
 arrowH = ArrowBuilder().scale( magnitude(h) ).attitude( attitude(h) ).color("magenta").build()
 scene.add(arrowH)
