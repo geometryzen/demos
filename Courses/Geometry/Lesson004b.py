@@ -101,10 +101,6 @@ scene.add(probeB.grade1)
 probeY = ProbeBuilderE3().color("yellow").build()
 scene.add(probeY.grade1)
 
-arrowH2 = ArrowBuilder().scale( magnitude(h) ).attitude( attitude(h) ).color("blue").build()
-scene.add(arrowH2)
-arrowH2.position.set(h.x /2.0 + u.x, h.y / 2.0 + u.y, 0.0)
-
 arrowV = ArrowBuilder().scale( magnitude(v) ).attitude( attitude(v) ).color("cyan").build()
 scene.add(arrowV)
 arrowV.position.set(v.x /2.0 + f.x, v.y / 2.0 + f.y, 0.0)
