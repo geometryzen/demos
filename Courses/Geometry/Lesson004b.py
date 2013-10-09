@@ -86,9 +86,9 @@ def onDocumentKeyUp(event):
 def tick(t):
     global f
     if moveLeft:
-        f = f - 0.1 * j
+        f -= 0.1 * j
     if moveRight:
-        f = f + VectorE3(0.0, +0.1, 0.0)
+        f += 0.1 * j
     if moveForward:
         f = f + VectorE3(-0.1, 0.0, 0.0)
     if moveBackward:
