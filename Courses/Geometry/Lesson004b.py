@@ -91,7 +91,6 @@ def attitude(v):
 
 arrowF = ArrowBuilder().scale( magnitude(f) ).attitude( attitude(f) ).color("red").build()
 scene.add(arrowF)
-arrowF.position.set(f.x / 2.0, f.y / 2.0, 0.0)
 
 arrowG = ArrowBuilder().scale( magnitude(g) ).attitude( attitude(g) ).color("green").build()
 scene.add(arrowG)
@@ -175,6 +174,7 @@ def tick(t):
     global f
     if moveLeft:
         f = f + Vector(-0.1,0.0)
+    arrowF.position.set(f.x / 2.0, f.y / 2.0, 0.0)
     scene.render()
 
 def terminate(t):
