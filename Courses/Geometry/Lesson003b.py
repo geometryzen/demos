@@ -1,4 +1,8 @@
-'''
+from browser import WindowAnimationRunner
+from geometry import CartesianSpace, ArrowBuilder
+from workbench import Workbench
+from e3ga import *
+from math import exp, sqrt, pi'''
 A linear space, V, is a set endowed with a rule for addition.
 If f and g are in V, then so is f + g.
 There is also a rule for scalar mutiplication.
