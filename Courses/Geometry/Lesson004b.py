@@ -92,9 +92,6 @@ def attitude(v):
 probeF = ProbeBuilderE3().color(0xFF0000).build()
 scene.add(probeF.grade1)
 
-#arrowF = ArrowBuilder().scale( magnitude(f) ).attitude( attitude(f) ).color("red").build()
-#scene.add(arrowF)
-
 arrowG = ArrowBuilder().scale( magnitude(g) ).attitude( attitude(g) ).color("green").build()
 scene.add(arrowG)
 arrowG.position.set(g.x / 2.0, g.y / 2.0, 0.0)
@@ -176,7 +173,9 @@ def onDocumentKeyUp(event):
 def tick(t):
     global f
     if moveLeft:
-        f = f + Vector(-0.1,0.0)
+        f = f + Vector(-0.1, 0.0)
+    if moveRight:
+        f = f + Vector(+0.1, 0.0)
     probeF.quantity = VectorE3(f.x, f.y, 0)
     probeF.grade1.position.set(f.x / 2.0, f.y / 2.0, 0.0)
     scene.render()
