@@ -103,7 +103,7 @@ arrowH.position.set(h.x /2.0 , h.y / 2.0, 0.0)
 
 arrowU = ArrowBuilder().scale( magnitude(u) ).attitude( attitude(u) ).color("yellow").build()
 scene.add(arrowU)
-arrowH.position.set(u.x /2.0 , u.y / 2.0, 0.0)
+arrowU.position.set(u.x /2.0 , u.y / 2.0, 0.0)
 
 workbench = Workbench(scene.renderer, scene.camera)
 
