@@ -93,10 +93,6 @@ arrowF = ArrowBuilder().scale( magnitude(f) ).attitude( attitude(f) ).color("red
 scene.add(arrowF)
 arrowF.position.set(f.x / 2.0, f.y / 2.0, 0.0)
 
-arrowF2 = ArrowBuilder().scale( magnitude(f) ).attitude( attitude(f) ).color("red").build()
-scene.add(arrowF2)
-arrowF2.position.set(f.x / 2.0 + v.x, f.y / 2.0 + v.y, 0.0)
-
 arrowG = ArrowBuilder().scale( magnitude(g) ).attitude( attitude(g) ).color("green").build()
 scene.add(arrowG)
 arrowG.position.set(g.x / 2.0, g.y / 2.0, 0.0)
@@ -120,10 +116,6 @@ arrowU.position.set(u.x /2.0 , u.y / 2.0, 0.0)
 arrowV = ArrowBuilder().scale( magnitude(v) ).attitude( attitude(v) ).color("cyan").build()
 scene.add(arrowV)
 arrowV.position.set(v.x /2.0 + f.x, v.y / 2.0 + f.y, 0.0)
-
-arrowV2 = ArrowBuilder().scale( magnitude(v) ).attitude( attitude(v) ).color("cyan").build()
-scene.add(arrowV2)
-arrowV2.position.set(v.x /2.0, v.y / 2.0, 0.0)
 
 workbench = Workbench(scene.renderer, scene.camera)
 
