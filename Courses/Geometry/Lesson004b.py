@@ -93,16 +93,16 @@ def onDocumentKeyUp(event):
 def tick(t):
     global f
     if moveLeft:
-        f = f + Vector(0.0, -0.1)
+        f = f + VectorE3(0.0, -0.1, 0.0)
     if moveRight:
-        f = f + Vector(0.0, +0.1)
+        f = f + VectorE3(0.0, +0.1, 0.0)
     if moveForward:
-        f = f + Vector(-0.1, 0.0)
+        f = f + VectorE3(-0.1, 0.0, 0.0)
     if moveBackward:
-        f = f + Vector(+0.1, 0.0)
+        f = f + Vector(+0.1, 0.0, 0.0)
     u = f + g
     v = g + h
-    probeR.quantity = VectorE3(f.x, f.y, 0)
+    probeR.quantity = f
     probeR.grade1.position.set(f.x / 2.0, f.y / 2.0, 0.0)
     probeG.quantity = VectorE3(g.x, g.y, 0)
     probeG.grade1.position.set(g.x / 2.0 + f.x, g.y / 2.0 + f.y, 0.0)
