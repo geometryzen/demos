@@ -108,7 +108,7 @@ def tick(t):
     v = g + h
     
     probeR.quantity = f
-    probeR.grade1.position = f
+    probeR.grade1.position = f / 2
     
     probeG.quantity = g
     probeG.grade1.position = g / 2 + f
