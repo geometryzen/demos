@@ -5,7 +5,7 @@ from e3ga import *
 from math import exp, sqrt, pi
 
 f = VectorE3(3.0, -2.0, 0.0)
-g = VectorE3(0.0, 2.0)
+g = VectorE3(0.0, 2.0, 0)
 h = Vector(1.0, 1.0)
 
 scene = CartesianSpace()
