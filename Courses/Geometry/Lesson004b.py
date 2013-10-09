@@ -178,7 +178,7 @@ def tick(t):
     if moveLeft:
         f = f + Vector(-0.1,0.0)
     probeF.quantity = VectorE3(f.x, f.y, 0)
-    probeF.position.set(f.x / 2.0, f.y / 2.0, 0.0)
+    probeF.grade1.position.set(f.x / 2.0, f.y / 2.0, 0.0)
     scene.render()
 
 def terminate(t):
