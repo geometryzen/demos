@@ -119,6 +119,8 @@ arrowV.position.set(v.x /2.0 + f.x, v.y / 2.0 + f.y, 0.0)
 
 workbench = Workbench(scene.renderer, scene.camera)
 
+timeOut = 20
+
 def tick(t):
     scene.render()
 
@@ -152,4 +154,3 @@ def escKey(event, downFlag):
 keyHandlers = {
  27: escKey
 }
-
