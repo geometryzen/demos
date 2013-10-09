@@ -4,9 +4,12 @@ from workbench import Workbench
 from e3ga import *
 from math import exp, sqrt, pi
 
-f = VectorE3(3.0, -2.0, 0.0)
-g = VectorE3(0.0, 2.0, 0.0)
-h = VectorE3(1.0, 1.0, 0.0)
+i = VectorE3(1, 0, 0)
+j = VectorE3(0, 1, 0)
+
+f = 3 * i - 2 * j
+g = 2 * j
+h = i + j
 
 scene = CartesianSpace()
 
@@ -105,10 +108,10 @@ def tick(t):
     v = g + h
     
     probeR.quantity = f
-    probeR.grade1.position.set(f.x / 2.0, f.y / 2.0, 0.0)
+    probeR.grade1.position = f
     
     probeG.quantity = g
-    probeG.grade1.position.set(g.x / 2.0 + f.x, g.y / 2.0 + f.y, 0.0)
+    probeG.grade1.position = g / 2 + f
     
     probeB.quantity = h
     probeB.grade1.position = h / 2 + u
