@@ -76,14 +76,6 @@ u = f + g
 v = g + h
 i = f + g + h
 
-print "f => " + str(f)
-print "g => " + str(g)
-print "(f + g) + h => " + str((f + g) + h)
-print "f + (g + h) => " + str(f + (g + h))
-print "f + g => " + str(f + g)
-print "g + f => " + str(g + f)
-
-
 scene = CartesianSpace()
 
 def magnitude(v):
