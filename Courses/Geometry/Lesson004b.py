@@ -92,6 +92,9 @@ def attitude(v):
 probeF = ProbeBuilderE3().color(0xFF0000).build()
 scene.add(probeF.grade1)
 
+probeG = ProbeBuilderE3().color("green").build()
+scene.add(probeG.grade1)
+
 arrowG = ArrowBuilder().scale( magnitude(g) ).attitude( attitude(g) ).color("green").build()
 scene.add(arrowG)
 arrowG.position.set(g.x / 2.0, g.y / 2.0, 0.0)
