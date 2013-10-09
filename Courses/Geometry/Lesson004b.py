@@ -69,7 +69,7 @@ def Vector(x, y):
 def Scalar(w):
     return Euclidean(w, 0.0, 0.0)
 
-f = Vector(3.0, 1.0)
+f = Vector(3.0, -2.0)
 g = Vector(0.0, 2.0)
 h = Vector(1.0, 1.0)
 u = f + g
