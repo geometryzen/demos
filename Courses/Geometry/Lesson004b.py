@@ -1,4 +1,4 @@
-from browser import WindowAnimationRunner
+from browser import WindowAnimationRunner, document
 from geometry import CartesianSpace, ArrowBuilder
 from workbench import Workbench
 from e3ga import *
