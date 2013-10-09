@@ -191,8 +191,3 @@ def tearDown():
     workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
-
-# This variable maps keyboard codes to functions.
-keyHandlers = {
- 27: escKey
-}
