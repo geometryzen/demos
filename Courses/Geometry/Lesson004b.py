@@ -95,7 +95,7 @@ arrowF.position.set(f.x / 2.0, f.y / 2.0, 0.0)
 
 arrowF2 = ArrowBuilder().scale( magnitude(f) ).attitude( attitude(f) ).color("red").build()
 scene.add(arrowF2)
-arrowF2.position.set(f.x / 2.0, f.y / 2.0, 0.0)
+arrowF2.position.set(f.x / 2.0 + v.x, f.y / 2.0 + v.y, 0.0)
 
 arrowG = ArrowBuilder().scale( magnitude(g) ).attitude( attitude(g) ).color("green").build()
 scene.add(arrowG)
