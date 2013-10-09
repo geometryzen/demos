@@ -105,6 +105,10 @@ arrowU = ArrowBuilder().scale( magnitude(u) ).attitude( attitude(u) ).color("yel
 scene.add(arrowU)
 arrowU.position.set(u.x /2.0 , u.y / 2.0, 0.0)
 
+arrowV = ArrowBuilder().scale( magnitude(v) ).attitude( attitude(v) ).color("cyan").build()
+scene.add(arrowV)
+arrowV.position.set(v.x /2.0 , v.y / 2.0, 0.0)
+
 workbench = Workbench(scene.renderer, scene.camera)
 
 def tick(t):
