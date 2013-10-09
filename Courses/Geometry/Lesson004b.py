@@ -101,9 +101,8 @@ scene.add(probeB.grade1)
 probeY = ProbeBuilderE3().color("yellow").build()
 scene.add(probeY.grade1)
 
-arrowV = ArrowBuilder().scale( magnitude(v) ).attitude( attitude(v) ).color("cyan").build()
-scene.add(arrowV)
-arrowV.position.set(v.x /2.0 + f.x, v.y / 2.0 + f.y, 0.0)
+probeC = ProbeBuilderE3().color("cyan").build()
+scene.add(probeC.grade1)
 
 workbench = Workbench(scene.renderer, scene.camera)
 
@@ -177,6 +176,8 @@ def tick(t):
     probeB.grade1.position.set(h.x / 2.0 + u.x, h.y / 2.0 + u.y, 0.0)
     probeY.quantity = VectorE3(u.x, u.y, 0)
     probeY.grade1.position.set(u.x / 2.0, u.y / 2.0, 0.0)
+    probeC.quantity = VectorE3(v.x, v.y, 0)
+    probeC.grade1.position.set(v.x / 2.0 + f.x, v.y / 2.0 + f.y, 0.0)
     scene.render()
 
 def terminate(t):
