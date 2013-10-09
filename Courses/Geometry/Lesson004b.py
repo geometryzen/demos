@@ -101,9 +101,13 @@ arrowF = ArrowBuilder().scale( magnitude(f) ).attitude( attitude(f) ).color("red
 scene.add(arrowF)
 arrowF.position.set(f.x / 2.0, f.y / 2.0, 0.0)
 
-arrowH = ArrowBuilder().scale( magnitude(h) ).attitude( attitude(h) ).color("magenta").build()
+arrowG = ArrowBuilder().scale( magnitude(g) ).attitude( attitude(g) ).color("green").build()
+scene.add(arrowF)
+arrowF.position.set(g.x / 2.0, g.y / 2.0, 0.0)
+
+arrowH = ArrowBuilder().scale( magnitude(h) ).attitude( attitude(h) ).color("blue").build()
 scene.add(arrowH)
-arrowH.position.set(h.x/2,h.y/2,0)
+arrowH.position.set(h.x /2.0 , h.y / 2.0, 0.0)
 
 workbench = Workbench(scene.renderer, scene.camera)
 
