@@ -92,8 +92,8 @@ def attitude(v):
 probeR = ProbeBuilderE3().color("red").build()
 scene.add(probeR.grade1)
 
-probeG0 = ProbeBuilderE3().color("green").build()
-scene.add(probeG0.grade1)
+probeG = ProbeBuilderE3().color("green").build()
+scene.add(probeG.grade1)
 
 probeH0 = ProbeBuilderE3().color("blue").build()
 scene.add(probeH0.grade1)
@@ -176,10 +176,10 @@ def tick(t):
         f = f + Vector(+0.1, 0.0)
     probeR.quantity = VectorE3(f.x, f.y, 0)
     probeR.grade1.position.set(f.x / 2.0, f.y / 2.0, 0.0)
-    probeG0.quantity = VectorE3(g.x, g.y, 0)
-    probeG0.grade1.position.set(g.x / 2.0 + f.x, g.y / 2.0 + f.y, 0.0)
+    probeG.quantity = VectorE3(g.x, g.y, 0)
+    probeG.grade1.position.set(g.x / 2.0 + f.x, g.y / 2.0 + f.y, 0.0)
     probeH0.quantity = VectorE3(h.x, h.y, 0)
-    probeH0.grade1.position.set(h.x / 2.0, h.y / 2.0, 0.0)
+    probeH0.grade1.position.set(h.x / 2.0 + u.x, h.y / 2.0 + u.y, 0.0)
     scene.render()
 
 def terminate(t):
