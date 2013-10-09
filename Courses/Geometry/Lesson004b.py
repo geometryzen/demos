@@ -105,6 +105,10 @@ arrowH = ArrowBuilder().scale( magnitude(h) ).attitude( attitude(h) ).color("blu
 scene.add(arrowH)
 arrowH.position.set(h.x /2.0 , h.y / 2.0, 0.0)
 
+arrowH2 = ArrowBuilder().scale( magnitude(h) ).attitude( attitude(h) ).color("blue").build()
+scene.add(arrowH2)
+arrowH2.position.set(h.x /2.0 + u.x, h.y / 2.0 + u.y, 0.0)
+
 arrowU = ArrowBuilder().scale( magnitude(u) ).attitude( attitude(u) ).color("yellow").build()
 scene.add(arrowU)
 arrowU.position.set(u.x /2.0 , u.y / 2.0, 0.0)
