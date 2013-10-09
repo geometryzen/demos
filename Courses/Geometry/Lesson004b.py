@@ -117,7 +117,8 @@ def tick(t):
     probeY.grade1.position.set(u.x / 2.0, u.y / 2.0, 0.0)
     
     probeC.quantity = v
-    probeC.grade1.position.set(v.x / 2.0 + f.x, v.y / 2.0 + f.y, 0.0)
+    probeC.grade1.position = v / 2 + f
+    
     scene.render()
 
 def terminate(t):
