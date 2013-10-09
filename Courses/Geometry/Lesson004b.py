@@ -1,5 +1,5 @@
 from browser import WindowAnimationRunner, document
-from geometry import CartesianSpace, ArrowBuilder
+from geometry import CartesianSpace, ArrowBuilder, ProbeBuilderE3
 from workbench import Workbench
 from e3ga import *
 from math import exp, sqrt, pi
