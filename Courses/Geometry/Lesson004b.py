@@ -89,6 +89,9 @@ def attitude(v):
     R = numer / denom
     return R
 
+probeF = ProbeBuilderE3().color(0xFF0000).build()
+scene.add(probeF.grade1)
+
 arrowF = ArrowBuilder().scale( magnitude(f) ).attitude( attitude(f) ).color("red").build()
 scene.add(arrowF)
 
@@ -174,7 +177,8 @@ def tick(t):
     global f
     if moveLeft:
         f = f + Vector(-0.1,0.0)
-    arrowF.position.set(f.x / 2.0, f.y / 2.0, 0.0)
+    probeF.quantity = VectorE3(f.x, f.y, 0)
+    #probeFarrowF.position.set(f.x / 2.0, f.y / 2.0, 0.0)
     scene.render()
 
 def terminate(t):
