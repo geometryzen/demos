@@ -111,10 +111,10 @@ def tick(t):
     probeG.grade1.position.set(g.x / 2.0 + f.x, g.y / 2.0 + f.y, 0.0)
     
     probeB.quantity = h
-    probeB.grade1.position.set(h.x / 2.0 + u.x, h.y / 2.0 + u.y, 0.0)
+    probeB.grade1.position = h / 2 + u
     
     probeY.quantity = u
-    probeY.grade1.position.set(u.x / 2.0, u.y / 2.0, 0.0)
+    probeY.grade1.position = u / 2
     
     probeC.quantity = v
     probeC.grade1.position = v / 2 + f
