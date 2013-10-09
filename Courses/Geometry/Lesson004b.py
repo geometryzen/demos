@@ -172,6 +172,8 @@ def onDocumentKeyUp(event):
         pass
 
 def tick(t):
+    if moveLeft:
+        f.y -= 0.1
     scene.render()
 
 def terminate(t):
