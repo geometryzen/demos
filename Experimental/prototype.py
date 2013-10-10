@@ -8,7 +8,7 @@ omega = 2 * pi / T # Angular Velocity
 R = 4 # radius
 
 container = document.getElementById("canvas-container")
-canvas = document.createElement(23)
+canvas = document.createElement("canvas")
 print repr(container)
 
 space = CartesianSpace()
