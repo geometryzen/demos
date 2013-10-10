@@ -7,6 +7,8 @@ T = 5 # Periodic Time
 omega = 2 * pi / T # Angular Velocity
 R = 4 # radius
 
+container = document.getElementById(23)
+
 space = CartesianSpace()
 
 sphere = SphereBuilder().color(0x0000FF).build()
