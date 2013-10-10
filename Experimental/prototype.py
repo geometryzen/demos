@@ -9,7 +9,7 @@ R = 4 # radius
 
 scene = Scene()
 
-space = CartesianSpace()
+space = CartesianSpace(scene)
 
 sphere = SphereBuilder().color(0x0000FF).build()
 space.add(sphere)
