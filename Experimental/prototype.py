@@ -9,6 +9,8 @@ R = 4 # radius
 
 scene = Scene()
 
+renderer = WebGLRenderer()
+
 space = CartesianSpace(scene)
 
 sphere = SphereBuilder().color(0x0000FF).build()
