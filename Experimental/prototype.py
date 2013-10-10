@@ -9,7 +9,7 @@ R = 4 # radius
 
 container = document.getElementById("canvas-container")
 canvas = document.createElement("canvas")
-container.appendChild(123)
+container.appendChild(canvas)
 print repr(container)
 
 space = CartesianSpace()
