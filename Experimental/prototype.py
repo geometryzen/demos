@@ -9,7 +9,7 @@ R = 4 # radius
 
 scene = Scene()
 
-renderer = WebGLRenderer()
+renderer = WebGLRenderer({"antialias":True})
 
 space = CartesianSpace(scene, renderer)
 
