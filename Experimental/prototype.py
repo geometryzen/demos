@@ -7,7 +7,7 @@ T = 5 # Periodic Time
 omega = 2 * pi / T # Angular Velocity
 R = 4 # radius
 
-container = document.getElementById(23)
+container = document.getElementById("canvas-container")
 
 space = CartesianSpace()
 
