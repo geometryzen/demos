@@ -7,10 +7,7 @@ T = 5 # Periodic Time
 omega = 2 * pi / T # Angular Velocity
 R = 4 # radius
 
-container = document.getElementById("canvas-container")
-canvas = document.createElement("canvas")
-# There is a bug in Chrome (up to version 29) that stops this from working...
-container.appendChild(canvas)
+scene = Scene()
 
 space = CartesianSpace()
 
