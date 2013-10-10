@@ -11,7 +11,7 @@ scene = Scene()
 
 renderer = WebGLRenderer()
 
-space = CartesianSpace(scene)
+space = CartesianSpace(scene, renderer)
 
 sphere = SphereBuilder().color(0x0000FF).build()
 space.add(sphere)
