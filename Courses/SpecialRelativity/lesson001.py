@@ -62,7 +62,7 @@ print ""
 print "X : " + str(X)
 print "ct: " + str(X[0])
 print "r : " + str(X[1])
-print "Interval : " + str(X * cliffordConjugate(X))
+print "Interval Quadrance : " + str(X * cliffordConjugate(X))
 
 xPrimed = Lcc * X * Lcc
 
@@ -70,4 +70,4 @@ print ""
 print "X' : " + str(xPrimed)
 print "ct': " + str(xPrimed[0])
 print "r' : " + str(xPrimed[1])
-print "Interval : " + str(xPrimed * cliffordConjugate(xPrimed))
+print "Interval Quadrance : " + str(xPrimed * cliffordConjugate(xPrimed))
