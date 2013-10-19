@@ -24,4 +24,4 @@ x = ScalarE3(4) + VectorE3(3, 0, 0)
 
 print "x: " + repr(x)
 
-Lc = conjugate(L)
+Lc = cliffordConjugate(L)
