@@ -43,7 +43,7 @@ print "L * cliffordConjugate(L): " + str(L * Lcc)
 print "Lcc * Lcc: " + str(Lcc * Lcc)
 
 X = ScalarE2(4) + VectorE2(3, 1)
-XPerp = VectorE2(3, 0)
+XPerp = VectorE2(0, 1)
 
 print ""
 print "X : " + str(X)
@@ -52,7 +52,7 @@ print "r : " + str(X[1])
 print "Interval Quadrance : " + str(X * cliffordConjugate(X))
 
 xPrimed = Lcc * X * Lcc
-#xPrimed = Lcc2 * (X - XPerp) + XPerp
+xPrimed = Lcc2 * (X - XPerp) + XPerp
 
 print ""
 print "X' : " + str(xPrimed)
