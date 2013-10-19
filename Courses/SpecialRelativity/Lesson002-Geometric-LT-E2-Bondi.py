@@ -19,6 +19,8 @@ B = (k * k - 1) / (k * k + 1)
 
 i = VectorE2(1, 0)
 
+beta = B * i
+
 print "beta: " + str(beta)
 
 g = gamma(beta)
@@ -28,7 +30,7 @@ print "gamma: " + str(g)
 Lcc2 = LccSquared(k, i)
 
 print ""
-print "Lcc2: " + str(Lcc2)
+print "L: " + str(L)
 
 Lcc = cliffordConjugate(L)
 
