@@ -9,4 +9,7 @@ def boost(velocity):
 beta = VectorE3(3.0/5.0, 0, 0)
 
 print "beta: " + str(beta)
-print beta
+
+gamma = gamma(beta)
+
+print "gamma: " + str(beta)
