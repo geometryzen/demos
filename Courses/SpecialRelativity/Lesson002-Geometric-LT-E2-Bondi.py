@@ -27,7 +27,7 @@ g = gamma(beta)
 
 print "gamma: " + str(g)
 
-Lcc2 = LccSquared(k, i)
+Lcc2 = LccSquared(k, beta)
 
 print ""
 print "Lcc2: " + str(Lcc2)
