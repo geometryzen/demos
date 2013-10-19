@@ -19,7 +19,13 @@ from math import *
 def gamma(beta):
     return 1 / sqrt(1 - beta * beta)
 
-def boostBeta(beta):
+def boost(beta):
+    g = gamma(beta)
+    return (1 + g + g * beta) / sqrt(2 * (1 + g))
+
+# TODO: Complete
+# TODO: I wonder if the 
+def boostSquared(k, direction):
     g = gamma(beta)
     return (1 + g + g * beta) / sqrt(2 * (1 + g))
 
@@ -39,7 +45,7 @@ g = gamma(beta)
 
 print "gamma: " + str(g)
 
-L = boostBeta(beta)
+L = boost(beta)
 
 print ""
 print "L: " + str(L)
