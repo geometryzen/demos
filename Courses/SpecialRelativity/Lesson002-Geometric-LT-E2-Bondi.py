@@ -8,8 +8,8 @@ def boost(beta):
     g = gamma(beta)
     return (1 + g + g * beta) / sqrt(2 * (1 + g))
 
-def LccSquared(k, direction):
-    return (k * k + 1) * (1 - direction) / (2 * k)
+def LccSquared(k, beta):
+    return (k * k + 1) * (1 - beta) / (2 * k)
 
 k = ScalarE2(2.0)
 
