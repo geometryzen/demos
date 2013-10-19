@@ -26,11 +26,6 @@ print "x: " + repr(x)
 
 Lcc = cliffordConjugate(L)
 
-print "Lcc: " + repr(Lcc)
-
-print L * Lcc
-print Lcc * L
-
 xPrimed = Lcc * x * Lcc
 
 print "x': " + repr(xPrimed)
