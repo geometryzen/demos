@@ -1,4 +1,5 @@
 from e3ga import *
+from math import *
 
 def gamma(beta):
     return (1 + beta * beta)
