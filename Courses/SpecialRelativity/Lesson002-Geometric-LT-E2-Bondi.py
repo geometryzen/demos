@@ -50,6 +50,7 @@ print "r : " + str(X[1])
 print "Interval Quadrance : " + str(X * cliffordConjugate(X))
 
 xPrimed = Lcc * X * Lcc
+xPrimed = Lcc2 * (X - XPerp) + XPerp
 
 print ""
 print "X' : " + str(xPrimed)
