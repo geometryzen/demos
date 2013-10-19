@@ -7,7 +7,7 @@ It does demonstrate the Geometric Algebra approach and a Geometric (coordinate-f
 The next steps will be:
 1. Perform the same calculation using Spacetime Algebra.
 2. Experiment with an arbitrary field. e.g. Rational or Complex (prelude to symbolic calculation and accurate calculation).
-3. Visualization technigues. Should be able to show and improve upon Spacetime diagrams.
+3. Visualization techniques. Should be able to show and improve upon Spacetime diagrams.
 
 References... 
 Hestenes: New Foundations for Classical Mechanics
