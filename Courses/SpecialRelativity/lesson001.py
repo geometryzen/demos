@@ -29,3 +29,4 @@ Lcc = cliffordConjugate(L)
 print "Lcc: " + repr(Lcc)
 
 print L * Lcc
+print Lcc * L
