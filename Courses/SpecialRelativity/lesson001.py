@@ -23,6 +23,7 @@ print "L: " + str(L)
 x = ScalarE2(4) + VectorE2(3, 1)
 
 print "x: " + str(x)
+print "t: " + str(x[0])
 
 Lcc = cliffordConjugate(L)
 
