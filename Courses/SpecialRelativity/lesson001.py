@@ -14,7 +14,7 @@ print "beta: " + repr(beta)
 
 g = gamma(beta)
 
-print "g: " + repr(g)
+print "gamma: " + repr(g)
 
 L = boost(beta)
 
