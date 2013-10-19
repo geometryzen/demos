@@ -28,4 +28,4 @@ Lcc = cliffordConjugate(L)
 
 xPrimed = Lcc * x * Lcc
 
-print "x': " + repr(xPrimed)
+print "x': " + str(xPrimed)
