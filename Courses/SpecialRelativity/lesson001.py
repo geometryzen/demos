@@ -11,7 +11,7 @@ The next steps will be:
 
 References... 
 Hestenes: New Foundations for Classical Mechanics
-Bondi: Relativity and Common Sense (k-calculus)
+Bondi: Relativity and Common Sense
 '''
 from e2ga import *
 from math import *
