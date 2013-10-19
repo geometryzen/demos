@@ -67,7 +67,7 @@ print "Interval : " + str(X * cliffordConjugate(X))
 xPrimed = Lcc * X * Lcc
 
 print ""
-print "x' : " + str(xPrimed)
+print "X' : " + str(xPrimed)
 print "ct': " + str(xPrimed[0])
 print "r' : " + str(xPrimed[1])
 print "Interval : " + str(xPrimed * cliffordConjugate(xPrimed))
