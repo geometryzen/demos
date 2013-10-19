@@ -19,7 +19,7 @@ from math import *
 def gamma(beta):
     return 1 / sqrt(1 - beta * beta)
 
-def boost(beta):
+def boostBeta(beta):
     g = gamma(beta)
     return (1 + g + g * beta) / sqrt(2 * (1 + g))
 
