@@ -23,7 +23,7 @@ def boost(beta):
     g = gamma(beta)
     return (1 + g + g * beta) / sqrt(2 * (1 + g))
 
-k = 2
+k = 2.0
 
 B = (k * k - 1) / (k * k + 1)
 
