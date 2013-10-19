@@ -4,7 +4,7 @@ It's fascinating to see this work using just the Euclidean2 numbers.
 Obviously this requires the invariant interval to be calculated as X * cliffordConjugate(X).
 The next steps will be:
 1. Perform the same calculation using Spacetime Algebra.
-2. Experiment with an arbitrary field. e.g. Rational or Complex (prelude to symbolic calculation).
+2. Experiment with an arbitrary field. e.g. Rational or Complex (prelude to symbolic calculation and accurate calculation).
 3. Visualization technigues. Should be able to show and improve upon Spacetime diagrams.
 '''
 from e2ga import *
@@ -33,7 +33,7 @@ Lcc = cliffordConjugate(L)
 
 print "cliffordConjugate(L): " + str(Lcc)
 
-X = ScalarE2(4) + VectorE2(3, 1)
+X = ScalarE2(4) + VectorE2(3, 0)
 
 print ""
 print "X : " + str(X)
