@@ -20,17 +20,17 @@ L = boost(beta)
 
 print "L: " + str(L)
 
-x = ScalarE2(4) + VectorE2(3, 1)
+X = ScalarE2(4) + VectorE2(3, 1)
 
-print "x : " + str(x)
-print "ct: " + str(x[0])
-print "r : " + str(x[1])
+print "X : " + str(X)
+print "ct: " + str(X[0])
+print "r : " + str(X[1])
 
 Lcc = cliffordConjugate(L)
 
 print "cliffordConjugate(L): " + str(Lcc)
 
-xPrimed = Lcc * x * Lcc
+xPrimed = Lcc * X * Lcc
 
 print "x' : " + str(xPrimed)
 print "ct': " + str(xPrimed[0])
