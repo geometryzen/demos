@@ -30,7 +30,9 @@ print "gamma: " + str(g)
 Lcc2 = LccSquared(k, i)
 
 print ""
-print "L: " + str(L)
+print "Lcc2: " + str(Lcc2)
+
+L = boost(beta)
 
 Lcc = cliffordConjugate(L)
 
