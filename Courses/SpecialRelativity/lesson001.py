@@ -23,7 +23,7 @@ def boost(beta):
     g = gamma(beta)
     return (1 + g + g * beta) / sqrt(2 * (1 + g))
 
-# TODO: Complete
+# TODO: Complete - get rid of those square roots and make it an entirely Rational field.
 # TODO: I wonder if the direction can be incorporated with k into something geometric?
 def boostSquared(k, direction):
     g = gamma(beta)
