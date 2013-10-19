@@ -12,4 +12,4 @@ print "beta: " + str(beta)
 
 gamma = gamma(beta)
 
-print "gamma: " + str(beta)
+print "gamma: " + str(gamma)
