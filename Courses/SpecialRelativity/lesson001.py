@@ -20,7 +20,7 @@ L = boost(beta)
 
 print "L: " + repr(L)
 
-x = ScalarE2(4) + VectorE2(3, 1)
+x = ScalarE2(4) + VectorE2(3, 0)
 
 print "x: " + repr(x)
 
