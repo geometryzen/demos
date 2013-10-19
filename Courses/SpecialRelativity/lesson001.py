@@ -30,3 +30,7 @@ print "Lcc: " + repr(Lcc)
 
 print L * Lcc
 print Lcc * L
+
+xPrimed = Lcc * x * Lcc
+
+print "x': " + repr(xPrimed)
