@@ -23,7 +23,9 @@ def boost(beta):
     g = gamma(beta)
     return (1 + g + g * beta) / sqrt(2 * (1 + g))
 
-k = 2.0
+k = ScalarE2(2.0)
+
+print "k: " + str(k)
 
 B = (k * k - 1) / (k * k + 1)
 
