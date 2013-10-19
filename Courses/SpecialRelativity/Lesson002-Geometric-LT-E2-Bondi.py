@@ -31,7 +31,7 @@ print "beta: " + str(beta)
 
 gamma = (k * k - 1) / (k * k + 1)
 
-print "gamma: " + str(g)
+print "gamma: " + str(gamma)
 
 Lcc2 = LccSquared(k, i)
 
