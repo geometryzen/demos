@@ -1,3 +1,9 @@
+'''
+Instead of using the double-sided formula for the Lorentz Transformation, we
+break out the part of the transformation perpendicular to beta which is unchanged.
+This allows us to use a one-sided transformation which is the square of the original.
+We keep the original boost calculation for comparison purposes. 
+'''
 from e2ga import *
 from math import *
 
