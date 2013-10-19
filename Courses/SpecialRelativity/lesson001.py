@@ -19,3 +19,7 @@ print "g: " + repr(g)
 L = boost(beta)
 
 print "L: " + repr(L)
+
+x = ScalarE3(4) + VectorE3(3, 0, 0)
+
+print "x: " + repr(x)
