@@ -9,7 +9,7 @@ The next steps will be:
 2. Experiment with an arbitrary field. e.g. Rational or Complex (prelude to symbolic calculation and accurate calculation).
 3. Visualization technigues. Should be able to show and improve upon Spacetime diagrams.
 
-See... 
+References... 
 Hestenes: New Foundations for Classical Mechanics
 Bondi: Relativity and Common Sense (k-calculus)
 '''
