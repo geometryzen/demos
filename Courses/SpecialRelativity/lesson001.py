@@ -39,7 +39,7 @@ g = gamma(beta)
 
 print "gamma: " + str(g)
 
-L = boost(beta)
+L = boostBeta(beta)
 
 print ""
 print "L: " + str(L)
