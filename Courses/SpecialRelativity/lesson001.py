@@ -29,6 +29,7 @@ print "gamma: " + str(g)
 
 L = boost(beta)
 
+print ""
 print "L: " + str(L)
 
 Lcc = cliffordConjugate(L)
