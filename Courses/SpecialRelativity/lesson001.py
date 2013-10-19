@@ -6,7 +6,7 @@ def gamma(beta):
 
 def boost(beta):
     g = gamma(beta)
-    return 1 + g + g + beta
+    return 1 + g + g * beta
 
 beta = VectorE3(3.0/5.0, 0, 0)
 
