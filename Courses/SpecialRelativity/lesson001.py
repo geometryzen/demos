@@ -4,3 +4,5 @@ def boost(v):
     return v
 
 v = VectorE3(3/5,0,0)
+
+print v
