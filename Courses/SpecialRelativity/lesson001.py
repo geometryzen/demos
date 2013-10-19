@@ -8,7 +8,7 @@ def boost(beta):
     g = gamma(beta)
     return (1 + g + g * beta) / sqrt(2 * (1 + g))
 
-beta = VectorE2(3.0/5.0, 0)
+beta = VectorE2(3.0/5.0, 3.0/5.0)
 
 print "beta: " + str(beta)
 
