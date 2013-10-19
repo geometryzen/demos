@@ -12,9 +12,9 @@ beta = VectorE3(3.0/5.0, 0, 0)
 
 print "beta: " + repr(beta)
 
-gamma = gamma(beta)
+g = gamma(beta)
 
-print "gamma: " + repr(gamma)
+print "g: " + repr(g)
 
 L = boost(beta)
 
