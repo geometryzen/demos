@@ -33,6 +33,7 @@ print "r : " + str(X[1])
 
 xPrimed = Lcc * X * Lcc
 
+print ""
 print "x' : " + str(xPrimed)
 print "ct': " + str(xPrimed[0])
 print "r' : " + str(xPrimed[1])
