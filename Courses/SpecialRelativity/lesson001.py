@@ -4,8 +4,9 @@ from math import *
 def gamma(beta):
     return 1 / sqrt(1 - beta * beta)
 
-def boost(velocity):
-    return velocity
+def boost(beta):
+    g = gamma(beta)
+    return 1 + g + g + beta
 
 beta = VectorE3(3.0/5.0, 0, 0)
 
