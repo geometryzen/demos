@@ -10,7 +10,7 @@ def boost(beta):
 
 beta = VectorE2(3.0/5.0, 0)
 
-print "beta: " + repr(beta)
+print "beta: " + str(beta)
 
 g = gamma(beta)
 
