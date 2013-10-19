@@ -32,4 +32,6 @@ print "cliffordConjugate(L): " + str(Lcc)
 
 xPrimed = Lcc * x * Lcc
 
-print "x': " + str(xPrimed)
+print "x' : " + str(xPrimed)
+print "ct': " + str(xPrimed[0])
+print "r' : " + str(xPrimed[1])
