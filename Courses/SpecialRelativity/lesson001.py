@@ -2,6 +2,8 @@
 I'm starting here with the representation in which time is the scalar part of a multivector.
 It's fascinating to see this work using just the Euclidean2 numbers.
 Obviously this requires the invariant interval to be calculated as X * cliffordConjugate(X).
+It does demonstrate the Geometric Algebra approach.
+
 The next steps will be:
 1. Perform the same calculation using Spacetime Algebra.
 2. Experiment with an arbitrary field. e.g. Rational or Complex (prelude to symbolic calculation and accurate calculation).
@@ -32,6 +34,8 @@ print "L: " + str(L)
 Lcc = cliffordConjugate(L)
 
 print "cliffordConjugate(L): " + str(Lcc)
+
+print "L * cliffordConjugate(L): " + str(L * Lcc)
 
 X = ScalarE2(4) + VectorE2(3, 1)
 
