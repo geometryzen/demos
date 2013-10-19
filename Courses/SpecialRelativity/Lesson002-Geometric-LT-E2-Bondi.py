@@ -29,7 +29,7 @@ beta = B * i
 
 print "beta: " + str(beta)
 
-g = gamma(beta)
+gamma = (k * k - 1) / (k * k + 1)
 
 print "gamma: " + str(g)
 
