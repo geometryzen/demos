@@ -2,7 +2,7 @@ from e3ga import *
 from math import *
 
 def gamma(beta):
-    return sqrt(1 + beta * beta)
+    return 1 / sqrt(1 + beta * beta)
 
 def boost(velocity):
     return velocity
