@@ -24,7 +24,7 @@ def boost(beta):
     return (1 + g + g * beta) / sqrt(2 * (1 + g))
 
 # TODO: Complete
-# TODO: I wonder if the 
+# TODO: I wonder if the direction can be incorporated with k into something geometric?
 def boostSquared(k, direction):
     g = gamma(beta)
     return (1 + g + g * beta) / sqrt(2 * (1 + g))
