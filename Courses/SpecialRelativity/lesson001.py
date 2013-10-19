@@ -22,7 +22,7 @@ print "L: " + str(L)
 
 x = ScalarE2(4) + VectorE2(3, 1)
 
-print "x: " + repr(x)
+print "x: " + str(x)
 
 Lcc = cliffordConjugate(L)
 
