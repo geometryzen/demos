@@ -29,9 +29,9 @@ beta = B * i
 
 print "beta: " + str(beta)
 
-gamma = (k * k + 1) / (2 * k)
+g = (k * k + 1) / (2 * k)
 
-print "gamma: " + str(gamma)
+print "gamma: " + str(g)
 
 Lcc2 = LccSquared(k, i)
 
