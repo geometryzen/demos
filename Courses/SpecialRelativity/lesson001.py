@@ -1,4 +1,4 @@
-from e3ga import *
+from e2ga import *
 from math import *
 
 def gamma(beta):
@@ -8,7 +8,7 @@ def boost(beta):
     g = gamma(beta)
     return (1 + g + g * beta) / sqrt(2 * (1 + g))
 
-beta = VectorE3(3.0/5.0, 0, 0)
+beta = VectorE2(3.0/5.0, 0)
 
 print "beta: " + repr(beta)
 
