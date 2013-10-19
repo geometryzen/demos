@@ -18,7 +18,7 @@ print "gamma: " + repr(g)
 
 L = boost(beta)
 
-print "L: " + repr(L)
+print "L: " + str(L)
 
 x = ScalarE2(4) + VectorE2(3, 1)
 
