@@ -8,6 +8,10 @@ The next steps will be:
 1. Perform the same calculation using Spacetime Algebra.
 2. Experiment with an arbitrary field. e.g. Rational or Complex (prelude to symbolic calculation and accurate calculation).
 3. Visualization technigues. Should be able to show and improve upon Spacetime diagrams.
+
+See... 
+Hestenes: New Foundations for Classical Mechanics
+Bondi: Relativity and Common Sense (k-calculus)
 '''
 from e2ga import *
 from math import *
@@ -19,7 +23,13 @@ def boost(beta):
     g = gamma(beta)
     return (1 + g + g * beta) / sqrt(2 * (1 + g))
 
-beta = VectorE2(3.0/5.0, 0.0)
+k = 2
+
+B = (k * k - 1) / (k * k + 1)
+
+i = VectorE2(1, 0)
+
+beta = B * i
 
 print "beta: " + str(beta)
 
