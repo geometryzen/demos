@@ -1,6 +1,6 @@
 '''
 I'm starting here with the representation in which time is the scalar part of a multivector.
-It's fascinating to see this work using just the Euclidean2 numbers.
+It's fascinating to see this work using just the Euclidean2 numbers - no Lorentzian metric yet but still geometric.
 Obviously this requires the invariant interval to be calculated as X * cliffordConjugate(X).
 It does demonstrate the Geometric Algebra approach and a Geometric (coordinate-free) calculation.
 
