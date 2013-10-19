@@ -40,6 +40,8 @@ print "cliffordConjugate(L): " + str(Lcc)
 
 print "L * cliffordConjugate(L): " + str(L * Lcc)
 
+print "Lcc * Lcc: " + str(Lcc * Lcc)
+
 X = ScalarE2(4) + VectorE2(3, 1)
 XPerp = VectorE2(3, 0)
 
