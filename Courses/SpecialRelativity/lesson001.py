@@ -26,6 +26,7 @@ print "cliffordConjugate(L): " + str(Lcc)
 
 X = ScalarE2(4) + VectorE2(3, 1)
 
+print ""
 print "X : " + str(X)
 print "ct: " + str(X[0])
 print "r : " + str(X[1])
