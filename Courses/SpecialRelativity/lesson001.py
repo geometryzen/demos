@@ -1,6 +1,6 @@
 from e3ga import *
 
-dev gamma(beta):
+def gamma(beta):
     return (1 + beta * beta)
 
 def boost(velocity):
