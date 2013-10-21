@@ -17,3 +17,4 @@ print (a2 - a1) * (0.8 / 2.0) + a1
 print ((a ^ a2) * a1 - (a ^ a1) * a2) / (a1 ^ a2)
 print a1 ^ a2
 print a ^ a1
+print a ^ a2
