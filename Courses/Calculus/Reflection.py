@@ -12,7 +12,7 @@ k = VectorE3(0,0,1)
 I = i * j * k
 
 v = -j + k
-n = k
+n = 2 * k
 r = -n * v * n
 
 workbench3D = Workbench(space3D.renderer, space3D.camera)
