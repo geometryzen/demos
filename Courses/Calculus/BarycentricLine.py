@@ -10,6 +10,8 @@ a2 = 3 * i + 4 * j
 t1 = 0.6
 t2 = 0.4
 
+print t2 * a2
+
 a = t1 * a1 + t2 * a2
 
 print a
