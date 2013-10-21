@@ -13,4 +13,4 @@ t2 = 0.4
 a = t1 * a1 + t2 * a2
 
 print a
-print a2 - a1
+print (a2 - a1) * (1.8 / 2.0) + a1
