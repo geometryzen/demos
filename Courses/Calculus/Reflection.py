@@ -18,7 +18,7 @@ r = -v * n * v
 workbench3D = Workbench(space3D.renderer, space3D.camera)
 
 # Probe to show the initial vector.
-probeV = ProbeBuilderE3().color(particle.material.color.getHex()).build()
+probeV = ProbeBuilderE3().color(0x0000FF).build()
 probeV.quantity = v
 space3D.add(probeV.grade1)
 
