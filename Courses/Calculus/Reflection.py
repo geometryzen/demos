@@ -12,7 +12,7 @@ k = VectorE3(0,0,1)
 I = i * j * k
 
 v = -j + k
-n = 2 * k
+n = 3 * k
 r = -n * v * n / (n * n)
 
 workbench3D = Workbench(space3D.renderer, space3D.camera)
@@ -23,7 +23,7 @@ probeV.quantity = v
 space3D.add(probeV.grade1)
 
 # Probe to show the reflecting vector.
-probeN = ProbeBuilderE3().color(0x00FF00).build()
+probeN = ProbeBuilderE3().color(0x0000FF).build()
 probeN.quantity = n
 space3D.add(probeN.grade1)
 
