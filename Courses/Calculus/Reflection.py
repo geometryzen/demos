@@ -13,7 +13,7 @@ I = i * j * k
 
 v = -j + k
 n = 3 * k
-r = -n * v * n / (n * n)
+r = n * v * n / (n * n)
 
 workbench3D = Workbench(space3D.renderer, space3D.camera)
 
