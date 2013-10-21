@@ -28,7 +28,7 @@ probeN.quantity = n
 space3D.add(probeN.grade1)
 
 # Probe to show the reflected vector.
-probeR = ProbeBuilderE3().color(0xFFFF00).build()
+probeR = ProbeBuilderE3().color(0xFF00FF).build()
 probeR.quantity = r
 space3D.add(probeR.grade1)
 
