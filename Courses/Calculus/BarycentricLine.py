@@ -16,6 +16,8 @@ t2 = 0.4
 a = t1 * a1 + t2 * a2
 
 print a
+# Verify theat a does actually lie on the line.
 print (a2 - a1) * (0.8 / 2.0) + a1
+print a ^ a1 ^ a2
 
 print ((a ^ a2)/(a1 ^ a2)) * a1 - ((a ^ a1)/(a1 ^ a2)) * a2
