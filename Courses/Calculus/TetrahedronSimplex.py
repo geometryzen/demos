@@ -36,5 +36,3 @@ d = +0.5 * (x2 - x1) ^ (x3 - x1)
 print "directed measure of face (x0, x1, x3): " + str(d)
 print ""
 print "directed measure of surface of tetrahedron: " + str(a+b+c+d)
-print "(You will probably get a small bivector measure owing to rounding errors)"
-print "The point is that it is actually zero."
