@@ -28,5 +28,5 @@ b = +0.5 * (x1 - x0) ^ (x3 - x0)
 print "directed measure of face (x0, x1, x3): " + str(b)
 c = -0.5 * (x2 - x0) ^ (x3 - x0)
 print "directed measure of face (x0, x1, x3): " + str(c)
-d = +0.5
+d = +0.5 * (x2 - x1) ^ (x3 - x1)
 print "directed measure of face (x0, x1, x3): " + str(d)
