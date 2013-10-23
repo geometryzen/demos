@@ -19,7 +19,7 @@ k = VectorE3(0,0,1)
 
 x0 = randomInt() * i + randomInt() * j + randomInt() * k
 x1 = randomInt() * i + randomInt() * j + randomInt() * k
-x2 = random() * i + random() * j + random() * k
+x2 = randomInt() * i + randomInt() * j + randomInt() * k
 x3 = random() * i + random() * j + random() * k
 
 volume = (x1 - x0) ^ (x2 - x0) ^ (x3 - x0) / factorial(3)
