@@ -6,6 +6,7 @@ Finally, it would be nice to prove the result symbolically.
 '''
 from e3ga import *
 from math import *
+from random import *
 
 # Let the tetrahedron be described by 4 points.
 # Set up some basis vectors.
