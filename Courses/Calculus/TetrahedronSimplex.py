@@ -8,14 +8,17 @@ from e3ga import *
 from math import *
 from random import *
 
+def randomInt():
+    return int(random() * 100)
+
 # Let the tetrahedron be described by 4 points.
 # Set up some basis vectors.
 i = VectorE3(1,0,0)
 j = VectorE3(0,1,0)
 k = VectorE3(0,0,1)
 
-x0 = random() * i + random() * j + random() * k
-x1 = random() * i + random() * j + random() * k
+x0 = randomInt() * i + randomInt() * j + randomInt() * k
+x1 = randomInt() * i + randomInt() * j + randomInt() * k
 x2 = random() * i + random() * j + random() * k
 x3 = random() * i + random() * j + random() * k
 
