@@ -24,3 +24,9 @@ print "directed volume measure of tetrahedron: " + str(volume)
 # Now we calculate the directed measure of each of the faces.
 a = -0.5 * (x1 - x0) ^ (x2 - x0)
 print "directed measure of face (x0, x1, x2): " + str(a)
+b = +0.5
+print "directed measure of face (x0, x1, x3): " + str(b)
+c = +0.5
+print "directed measure of face (x0, x1, x3): " + str(c)
+d = +0.5
+print "directed measure of face (x0, x1, x3): " + str(d)
