@@ -13,7 +13,7 @@ i = VectorE3(1,0,0)
 j = VectorE3(0,1,0)
 k = VectorE3(0,0,1)
 
-x0 = i + 2 * j + 3 * k
+x0 = random() * i + 2 * j + 3 * k
 x1 = i + 3 * j
 x2 = j + 4 * k
 x3 = i + j + k
