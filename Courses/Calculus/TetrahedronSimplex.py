@@ -19,3 +19,4 @@ x2 = j
 x3 = k
 
 volume = (x1 - x0) ^ (x2 - x0) ^ (x3 - x0) / factorial(3)
+print "directed volume measure of tetrahedron: " + str(volume)
