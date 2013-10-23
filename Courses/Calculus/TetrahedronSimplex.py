@@ -16,8 +16,8 @@ k = VectorE3(0,0,1)
 
 x0 = random() * i + random() * j + random() * k
 x1 = random() * i + random() * j + random() * k
-x2 = j + 4 * k
-x3 = i + j + k
+x2 = random() * i + random() * j + random() * k
+x3 = random() * i + random() * j + random() * k
 
 volume = (x1 - x0) ^ (x2 - x0) ^ (x3 - x0) / factorial(3)
 print "directed volume measure of tetrahedron: " + str(volume)
