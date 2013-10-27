@@ -12,7 +12,8 @@ print "g => " + str(g)
 F = m * g
  
 print "F => " + str(F)
- 
+print repr(F)
+print repr(r)
 T = F ^ r
  
 print "T => " + str(T)
