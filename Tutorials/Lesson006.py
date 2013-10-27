@@ -27,8 +27,8 @@ pointLight = PointLight(0xFFFFFF, 1, 100)
 pointLight.position.set(0, 0, 10)
 scene.add(pointLight)
 
-mesh = SphereBuilder().color(0x0000FF).build()
-scene.add(mesh)
+sphere = SphereBuilder().color(0x0000FF).build()
+scene.add(sphere)
 
 workbench = Workbench(renderer, camera)
 
