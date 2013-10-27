@@ -6,7 +6,7 @@ from browser import *
 from workbench import *
 from math import pi
 
-timeOut = 60
+timeOut = 5
 
 space = CartesianSpace()
 
