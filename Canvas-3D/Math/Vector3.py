@@ -42,7 +42,7 @@ b = a.clone()
 a.set(4,7,9)
 print b
 print a
-print a.length()
+print a.magnitude()
 print a.normalize()
 print a
 print a.length()
