@@ -45,7 +45,7 @@ print a
 print a.magnitude()
 print a.normalize()
 print a
-print a.length()
+print a.magnitude()
 
 # Linear Algebra
 i = Vector3(1,0,0)
