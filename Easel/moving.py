@@ -10,9 +10,7 @@ canvas = document.createElement("canvas")
 canvas.width = 500
 canvas.height = 200
 container = document.getElementById("canvas-container")
-print repr(canvas)
 container.appendChild(canvas)
-print "Done"
 
 stage = Stage(canvas)
 circle = Shape()
