@@ -79,10 +79,10 @@ print "----------"
 source = Quaternion(4, 3, 2, 1)
 print source.magnitude()
 print "----------"
-print "lengthSq()"
+print "quadrance()"
 print "----------"
 source = Quaternion(4, 3, 2, 1)
-print source.lengthSq()
+print source.quadrance()
 print "----------"
 print "normalize()"
 print "----------"
