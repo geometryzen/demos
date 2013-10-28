@@ -74,10 +74,10 @@ print "----------"
 print Quaternion(4, 3, 2, 1).inverse()
 print Quaternion(4, 3, 2, 1) * Quaternion(4, 3, 2, 1).inverse()
 print "----------"
-print "length()"
+print "magnitude()"
 print "----------"
 source = Quaternion(4, 3, 2, 1)
-print source.length()
+print source.magnitude()
 print "----------"
 print "lengthSq()"
 print "----------"
