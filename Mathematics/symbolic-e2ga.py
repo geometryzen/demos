@@ -8,7 +8,7 @@ i = VectorE2(1, 0)
 j = VectorE2(0, 1)
 
 x = Variable("x")
-expr = 2 * i
+expr = x * i
 print expr
 b = Binding("x", 2)
 print b
