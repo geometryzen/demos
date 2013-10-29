@@ -8,12 +8,7 @@ x = Variable("x")
 y = Variable("y")
 z = x + 2
 print z
-env = Environment()
-binding = Binding("x", 3)
-print 3
-print repr(3)
-print binding
-print repr(binding)
+env = Environment() + Binding("x", 3)
 print env
 print env.evaluate(z)
 
