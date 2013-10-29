@@ -12,7 +12,7 @@ x = Variable("x")
 y = Variable("y")
 s = Variable("s")
 
-p = Euclidean2(w, x, y, s)
+p = Euclidean2(1, x, y, s)
 print repr(p)
 expr = p
 env = Environment() + Binding("x", 2) + Binding("y", 3)
