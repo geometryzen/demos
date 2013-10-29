@@ -9,7 +9,7 @@ y = Variable("y")
 z = Add(x, y)
 print z
 
-p = PointE2(x, z)
+p = PointE2(x, y)
 print p
 print repr(p)
 A = PointE2(2, 3)
