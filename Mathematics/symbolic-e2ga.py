@@ -6,5 +6,5 @@ from symbolic import *
 
 x = Variable("x")
 expr = x + int(2)
-env = Environment(None, Binding("x", int(2)))
+env = Environment(None, Binding("x", float(2)))
 print Binding(str(expr), expr.evaluate(env))
