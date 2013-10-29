@@ -5,7 +5,7 @@ from e2ga import *
 from symbolic import *
 
 x = Variable("x")
-expr = 3 * x + 2
+expr = x * 3
 print repr(expr)
 b = Binding("x", 2)
 print b
