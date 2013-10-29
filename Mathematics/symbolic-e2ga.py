@@ -5,3 +5,4 @@ from e2ga import *
 
 p = PointE2(2,3)
 print p
+print repr(p)
