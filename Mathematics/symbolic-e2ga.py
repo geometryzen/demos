@@ -5,7 +5,9 @@ from e2ga import *
 from symbolic import *
 
 x = Variable("x")
+y = Variable("y")
 
+p = PointE3(x, y)
 A = PointE2(2, 3)
 B = PointE2(5, 2)
 print A
