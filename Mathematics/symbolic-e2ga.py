@@ -8,4 +8,4 @@ x = Variable("x")
 y = Variable("y")
 s = Variable("s")
 
-print x * x
+print x + x
