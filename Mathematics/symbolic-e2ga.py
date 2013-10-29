@@ -4,3 +4,4 @@ x = VectorE2(1, 2)
 print x
 
 p = PointE2(1, 2)
+print p
