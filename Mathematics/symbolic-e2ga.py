@@ -9,6 +9,7 @@ y = Variable("y")
 
 p = PointE2(x, y)
 print p
+print repr(p)
 A = PointE2(2, 3)
 B = PointE2(5, 2)
 print A
