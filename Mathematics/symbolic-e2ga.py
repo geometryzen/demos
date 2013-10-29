@@ -6,6 +6,7 @@ from symbolic import *
 
 x = Variable("x")
 y = Variable("y")
+print repr(x)
 
 p = PointE2(x, y)
 print p
