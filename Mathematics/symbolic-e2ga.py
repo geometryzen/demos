@@ -6,5 +6,5 @@ from symbolic import *
 
 x = Variable("x")
 env = Environment() + Binding("x", 3)
-print env
+print env.lookup("x")
 print env.evaluate(x)
