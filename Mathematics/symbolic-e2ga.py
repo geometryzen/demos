@@ -9,6 +9,7 @@ j = VectorE2(0, 1)
 
 x = Variable("x")
 expr = x * i
+print expr
 b = Binding("x", 2)
 print b
 env = Environment(None, b)
