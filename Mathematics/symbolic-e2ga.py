@@ -6,7 +6,7 @@ from symbolic import *
 
 x = Variable("x")
 y = Variable("y")
-z = Add(x, y)
+z = x + y
 print z
 
 p = PointE2(x, y)
