@@ -5,7 +5,7 @@ from e2ga import *
 from symbolic import *
 
 x = Variable("x")
-expr = x + 2
+expr = 3 + x + 2
 b = Binding("x", 2)
 print b
 env = Environment(None, b)
