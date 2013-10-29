@@ -14,9 +14,9 @@ z = Variable("z")
 
 p = PointE2(x, y)
 print p
-expr = x * i
+expr = p
 print expr
 b = Binding("x", 2)
 print b
 env = Environment(None, b)
-#print Binding(str(expr), expr.evaluate(env))
+print Binding(str(expr), expr.evaluate(env))
