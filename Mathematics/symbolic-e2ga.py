@@ -6,4 +6,4 @@ from symbolic import *
 
 x = Variable("x")
 env = Environment(None, Binding("x", 5))
-print Binding(str(x), x.evaluate(env))
+print Binding(str(x), env.evaluate(x))
