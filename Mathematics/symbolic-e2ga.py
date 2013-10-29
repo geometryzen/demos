@@ -14,6 +14,6 @@ xy = Variable("xy")
 
 p = Euclidean2(w, x, y, xy)
 print repr(p)
-expr = p
-env = Environment() + Binding("x", 2) + Binding("y", 3)
-print Binding(str(expr), expr.evaluate(env))
+#expr = p
+#env = Environment() + Binding("x", 2) + Binding("y", 3)
+#print Binding(str(expr), expr.evaluate(env))
