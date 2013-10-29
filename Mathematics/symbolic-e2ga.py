@@ -10,6 +10,7 @@ z = x + 2
 print z
 env = Environment()
 print env
+print env.evaluate(z)
 
 p = PointE2(x, y)
 print p
