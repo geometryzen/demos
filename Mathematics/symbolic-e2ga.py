@@ -10,9 +10,9 @@ j = VectorE2(0, 1)
 w = Variable("w")
 x = Variable("x")
 y = Variable("y")
-xy = Variable("xy")
+s = Variable("s")
 
-p = Euclidean2(w, x, y, xy)
+p = Euclidean2(w, x, y, s)
 print repr(p)
 #expr = p
 #env = Environment() + Binding("x", 2) + Binding("y", 3)
