@@ -7,6 +7,7 @@ from symbolic import *
 x = Variable("x")
 y = Variable("y")
 sum = Add(x, y)
+print sum
 print repr(sum)
 
 p = PointE2(x, y)
