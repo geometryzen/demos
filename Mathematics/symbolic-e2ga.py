@@ -5,6 +5,6 @@ from e2ga import *
 from symbolic import *
 
 x = Variable("x")
-expr = x + long(2)
-env = Environment(None, Binding("x", long(2)))
+expr = x + 2
+env = Environment(None, Binding("x", 2))
 print Binding(str(expr), expr.evaluate(env))
