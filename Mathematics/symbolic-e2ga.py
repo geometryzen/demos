@@ -13,6 +13,6 @@ B = PointE2(5,2)
 #print p.x
 #print p.y
 
-expr = A - B
+expr = A
 env = Environment() + Binding("w", 1.0) + Binding("x", 2) + Binding("y", 3) + Binding("s", 4)
 print Binding(str(expr), expr.evaluate(env))
