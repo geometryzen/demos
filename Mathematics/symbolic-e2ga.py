@@ -6,9 +6,8 @@ from symbolic import *
 
 x = Variable("x")
 y = Variable("y")
-sum = Add(x, y)
-print sum
-print repr(sum)
+z = Add(x, y)
+print z
 
 p = PointE2(x, y)
 print p
