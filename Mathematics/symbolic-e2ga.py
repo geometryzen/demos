@@ -7,7 +7,7 @@ from symbolic import *
 i = VectorE2(1,0)
 
 x = Variable("x")
-expr = x * i
+expr = i * x
 b = Binding("x", 2)
 print b
 env = Environment(None, b)
