@@ -18,5 +18,5 @@ expr = p
 print expr
 b = Binding("x", 2)
 print b
-env = Environment(None, b)
+env = Environment() + b
 print Binding(str(expr), expr.evaluate(env))
