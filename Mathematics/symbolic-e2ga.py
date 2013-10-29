@@ -13,6 +13,7 @@ y = Variable("y")
 z = Variable("z")
 
 p = PointE2(x, y)
+print p
 expr = x * i
 print expr
 b = Binding("x", 2)
