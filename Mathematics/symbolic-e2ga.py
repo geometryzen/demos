@@ -8,8 +8,8 @@ x = Variable("x")
 y = Variable("y")
 s = Variable("s")
 
-A = PointE2(x,y)
-B = PointE2(5,2)
+A = PointE2(x, y)
+B = PointE2(5, 2)
 #print p.x
 #print p.y
 
