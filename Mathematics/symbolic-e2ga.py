@@ -3,15 +3,12 @@ Under Construction. This may not work for you. Oct 29, 2013.
 '''
 from symbolic import *
 
-i = VectorE2(1, 0)
-j = VectorE2(0, 1)
-
 w = Variable("w")
 x = Variable("x")
 y = Variable("y")
 s = Variable("s")
 
-p = Euclidean2(w, x, y, s)
+p = PointE2(x,y)
 print p.w
 print p.x
 
