@@ -10,6 +10,7 @@ s = Variable("s")
 
 A = PointE2(x, y)
 B = PointE2(5, 2)
+print Binding("A", A)
 #print p.x
 #print p.y
 
