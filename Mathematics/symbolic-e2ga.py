@@ -7,5 +7,4 @@ a = Variable("a")
 b = Variable("b")
 c = Variable("c")
 
-
-print a - a
+print a - b
