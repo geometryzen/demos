@@ -14,5 +14,5 @@ s = Variable("s")
 
 p = Euclidean2(w, x, y, s)
 expr = p
-env = Environment() + Binding("x", 2) + Binding("y", 3)
+env = Environment() + Binding("x", 2) + Binding("y", 3) + Binding("s", 4)
 print Binding(str(expr), expr.evaluate(env))
