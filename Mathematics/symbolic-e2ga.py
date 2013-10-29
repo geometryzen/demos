@@ -7,4 +7,4 @@ a = Variable("a")
 b = Variable("b")
 c = Variable("c")
 
-print repr(a - b)
+print a - b
