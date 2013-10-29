@@ -9,6 +9,7 @@ y = Variable("y")
 z = x + 2
 print z
 env = Environment()
+print env
 
 p = PointE2(x, y)
 print p
