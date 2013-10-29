@@ -7,4 +7,4 @@ a = Variable("a")
 b = Variable("b")
 c = Variable("c")
 
-print a - b + c
+print a - b + c * 2
