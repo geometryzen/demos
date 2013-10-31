@@ -6,3 +6,7 @@ from e3ga import *
 print e1
 print e2
 print e3
+
+e1.setX(0)
+
+print e1
