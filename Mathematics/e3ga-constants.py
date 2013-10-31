@@ -11,3 +11,4 @@ e3.setZ(0)
 
 print e1
 print e2
+print e3
