@@ -7,4 +7,5 @@ print e1
 print e2
 print e3
 print I
+print e1 ^ e2
 print e1 << I
