@@ -5,3 +5,4 @@ from e3ga import *
 
 print i
 print j
+print k
