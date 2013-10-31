@@ -7,6 +7,7 @@ print e1
 print e2
 print e3
 
-e1.setX(0)
+e2.setX(0)
 
 print e1
+print e2
