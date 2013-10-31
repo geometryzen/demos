@@ -5,4 +5,3 @@ from e2ga import *
 
 print e1
 print e2
-print e3
