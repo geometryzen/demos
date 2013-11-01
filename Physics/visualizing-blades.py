@@ -89,8 +89,8 @@ def onDocumentKeyDown(event):
         pass
     
 def onClickA(event):
-    global A
-    A = e3
+    global indexA
+    indexA = indexA + 1 % 8
 
 def setUp():
     workbench2D.setUp()
