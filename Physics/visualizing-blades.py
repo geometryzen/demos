@@ -25,7 +25,7 @@ workbench2D = Workbench2D(canvas2D)
 space2D = Stage(canvas2D)
 space2D.autoClear = True
 
-output = Text("Hit Esc key to exit.", "20px Helvetica", "white")
+output = Text("Click rectangles to change blades. Hit Esc key to exit.", "10px Helvetica", "white")
 output.x = 100
 output.y = 60
 space2D.addChild(output)
