@@ -8,7 +8,7 @@ from workbench import *
 from geometry import *
 from math import exp, pi
 
-timeOut = 600
+timeOut = 20
 
 space3D = CartesianSpace()
 canvas3D = space3D.renderer.domElement
