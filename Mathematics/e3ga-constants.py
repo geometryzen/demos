@@ -1,5 +1,6 @@
 '''
 The e3ga module pre-defines the standard basis vectors e1, e2 and e3, as well as the pseudoscalar I.
+The alias constants i, j and k are also defined.
 '''
 from e3ga import *
 
