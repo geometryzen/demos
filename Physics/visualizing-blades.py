@@ -31,6 +31,8 @@ output.x = 100
 output.y = 80
 space2D.addChild(output)
 
+arm.graphics.beginFill("black").drawRect(-2, -2, 100, 4).endFill()
+
 outputA = Text("", "20px Helvetica", "red")
 outputA.x = 100
 outputA.y = 120
