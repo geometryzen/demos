@@ -1,6 +1,3 @@
-'''
-Under Construction.
-'''
 from easel import *
 from three import *
 from browser import *
