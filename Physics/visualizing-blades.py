@@ -23,10 +23,16 @@ outputA = Text("", "20px Helvetica", "red")
 outputA.x = 100
 outputA.y = 100
 space2D.addChild(outputA)
+
 outputB = Text("", "20px Helvetica", "green")
 outputB.x = 100
 outputB.y = 120
 space2D.addChild(outputB)
+
+outputC = Text("", "20px Helvetica", "blue")
+outputC.x = 100
+outputC.y = 120
+space2D.addChild(outputC)
 
 A = e1
 B = e2
