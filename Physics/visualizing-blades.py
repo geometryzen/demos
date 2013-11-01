@@ -19,7 +19,7 @@ workbench2D = Workbench2D(canvas2D)
 space2D = Stage(canvas2D)
 space2D.autoClear = True
 
-outputA = Text("", "20px Helvetica", 0xFF0000)
+outputA = Text("", "20px Helvetica", "red")
 outputA.x = 100
 outputA.y = 100
 space2D.addChild(outputA)
