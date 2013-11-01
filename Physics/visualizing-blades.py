@@ -9,7 +9,7 @@ A = e1
 B = e1 * e2
 C = A * B
 
-timeOut = 20
+timeOut = 60
 
 space3D = CartesianSpace()
 canvas3D = space3D.renderer.domElement
