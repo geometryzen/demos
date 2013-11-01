@@ -102,8 +102,6 @@ def setUp():
     outputA.addEventListener("click", onClickA)
 
 def tick(t):
-    if changing:
-        return
     A = blades[indexA]
     B = blades[indexB]
     C = A * B
