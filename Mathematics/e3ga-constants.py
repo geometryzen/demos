@@ -11,3 +11,7 @@ print e1 ^ e2
 print e1 << I
 print I * e3
 print e3 * I
+
+print i
+print j
+print k
