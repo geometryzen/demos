@@ -22,7 +22,7 @@ space2D.autoClear = True
 outputA = Text("", "20px Helvetica", 0xFF0000)
 outputA.x = 100
 outputA.y = 100
-space2D.addChild(output)
+space2D.addChild(outputA)
 
 A = e1
 B = e2
