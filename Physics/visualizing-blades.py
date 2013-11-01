@@ -23,29 +23,34 @@ workbench2D = Workbench2D(canvas2D)
 space2D = Stage(canvas2D)
 space2D.autoClear = True
 
+output = Text("ESC to exit.", "20px Helvetica", "white")
+output.x = 100
+output.y = 100
+space2D.addChild(output)
+
 outputA = Text("", "20px Helvetica", "red")
 outputA.x = 100
-outputA.y = 100
+outputA.y = 120
 space2D.addChild(outputA)
 
 outputOp = Text("*", "20px Helvetica", "white")
 outputOp.x = 100
-outputOp.y = 120
+outputOp.y = 140
 space2D.addChild(outputOp)
 
 outputB = Text("", "20px Helvetica", "green")
 outputB.x = 100
-outputB.y = 140
+outputB.y = 160
 space2D.addChild(outputB)
 
 outputEq = Text("=", "20px Helvetica", "white")
 outputEq.x = 100
-outputEq.y = 160
+outputEq.y = 180
 space2D.addChild(outputEq)
 
 outputC = Text("", "20px Helvetica", "blue")
 outputC.x = 100
-outputC.y = 180
+outputC.y = 200
 space2D.addChild(outputC)
 
 probeA  = ProbeBuilderE3().color(0xFF0000).build()
