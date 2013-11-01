@@ -24,9 +24,9 @@ output.x = 100
 output.y = 100
 space2D.addChild(output)
 
-quantityA = e1
-quantityB = e2
-quantityC = e3
+A = e1
+B = e2
+C = A * B
 
 probeA  = ProbeBuilderE3().color(0xFF0000).build()
 space3D.add(probeA.grade0)
@@ -65,9 +65,9 @@ def setUp():
     document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(t):
-    probeA.quantity = quantityA
-    probeB.quantity = quantityB
-    probeC.quantity = quantityC
+    probeA.quantity = A
+    probeB.quantity = B
+    probeC.quantity = C
     output.text = str(probeA.quantity)
     space3D.render()
     space2D.render()
