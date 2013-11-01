@@ -41,7 +41,7 @@ space2D.addChild(outputB)
 outputEq = Text("=", "20px Helvetica", "white")
 outputEq.x = 100
 outputEq.y = 160
-space2D.addChild(outputOp)
+space2D.addChild(outputEq)
 
 outputC = Text("", "20px Helvetica", "blue")
 outputC.x = 100
