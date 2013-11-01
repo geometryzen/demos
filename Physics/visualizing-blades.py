@@ -60,6 +60,11 @@ outputB.x = 300
 outputB.y = 120
 space2D.addChild(outputB)
 
+outputB2 = Text("", "20px Helvetica", "green")
+outputB2.x = 300
+outputB2.y = 140
+space2D.addChild(outputB2)
+
 outputEq = Text("=", "20px Helvetica", "white")
 outputEq.x = 400
 outputEq.y = 120
@@ -125,6 +130,7 @@ def tick(t):
     outputA.text = str(A)
     outputA2.text = repr(A)
     outputB.text = str(B)
+    outputB2.text = repr(B)
     outputC.text = str(C)
     try:
         probeA.quantity = A
