@@ -75,6 +75,11 @@ outputC.x = 500
 outputC.y = 120
 space2D.addChild(outputC)
 
+outputC2 = Text("", "20px Helvetica", "blue")
+outputC2.x = 500
+outputC2.y = 140
+space2D.addChild(outputC2)
+
 probeC  = ProbeBuilderE3().wireframe(True).segments(6).color(0x0000FF).build()
 space3D.add(probeC.grade0)
 space3D.add(probeC.grade1)
@@ -132,6 +137,7 @@ def tick(t):
     outputB.text = str(B)
     outputB2.text = repr(B)
     outputC.text = str(C)
+    outputC2.text = repr(C)
     try:
         probeA.quantity = A
         probeB.quantity = B
