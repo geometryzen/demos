@@ -15,7 +15,7 @@ space3D = CartesianSpace()
 canvas3D = space3D.renderer.domElement
 workbench3D = Workbench3D(canvas3D, space3D.renderer, space3D.camera)
 space3D.camera.position = e1 + e2 + e3
-space3D.camera.lookAt(0,0,0)
+space3D.camera.lookAt(VectorE3(0,0,0))
    
 canvas2D = document.createElement("canvas")
 canvas2D.style.position = "absolute"
