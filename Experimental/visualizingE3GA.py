@@ -26,6 +26,7 @@ space2D.addChild(output)
 quantity = e1 * e2
 
 probe  = ProbeBuilderE3().color(0x0000FF).build()
+probe.position = e1
 
 space3D.add(probe.grade0)
 space3D.add(probe.grade1)
