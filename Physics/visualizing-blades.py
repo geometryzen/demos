@@ -31,7 +31,10 @@ output.x = 100
 output.y = 80
 space2D.addChild(output)
 
-arm.graphics.beginFill("black").drawRect(-2, -2, 100, 4).endFill()
+circle = space2D.addChild(Shape())
+circle.graphics.beginFill("red").drawCircle(0, 0, 50).endFill()
+circle.x = 100
+circle.y = 100
 
 outputA = Text("", "20px Helvetica", "red")
 outputA.x = 100
