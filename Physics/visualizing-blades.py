@@ -5,6 +5,10 @@ from workbench import *
 from geometry import *
 from math import exp, pi
 
+A = e1
+B = e2
+C = A * B
+
 timeOut = 20
 
 space3D = CartesianSpace()
@@ -34,20 +38,18 @@ outputC.x = 100
 outputC.y = 120
 space2D.addChild(outputC)
 
-A = e1
-B = e2
-C = A * B
-
 probeA  = ProbeBuilderE3().color(0xFF0000).build()
 space3D.add(probeA.grade0)
 space3D.add(probeA.grade1)
 space3D.add(probeA.grade2)
 space3D.add(probeA.grade3)
+
 probeB  = ProbeBuilderE3().color(0x00FF00).build()
 space3D.add(probeB.grade0)
 space3D.add(probeB.grade1)
 space3D.add(probeB.grade2)
 space3D.add(probeB.grade3)
+
 probeC  = ProbeBuilderE3().color(0x0000FF).build()
 space3D.add(probeC.grade0)
 space3D.add(probeC.grade1)
