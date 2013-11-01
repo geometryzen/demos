@@ -3,7 +3,6 @@ from three import *
 from browser import *
 from workbench import *
 from geometry import *
-from math import exp, pi
 
 timeOut = 20
 
