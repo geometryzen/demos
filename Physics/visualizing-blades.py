@@ -32,7 +32,7 @@ output.y = 80
 space2D.addChild(output)
 
 circle = space2D.addChild(Shape())
-circle.graphics.beginFill("red").drawCircle(0, 0, 50).endFill()
+circle.graphics.beginFill("red").drawRect(0, 0, 50, 20).endFill()
 circle.x = 100
 circle.y = 100
 
