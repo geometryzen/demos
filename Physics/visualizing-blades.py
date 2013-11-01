@@ -6,7 +6,8 @@ from geometry import *
 from math import exp, pi
 
 blades = [1, e1, e2, e3, e1 ^ e2, e2 ^ e3, e3 ^ e1, e1 ^ e2 ^ e3]
-indexA = 1
+print len(blades)
+indexA = 0
 indexB = 2
 changing = True
 
@@ -97,7 +98,7 @@ def onDocumentKeyDown(event):
 def onClickA(event):
     global indexA, changing
     changing = True
-    indexA = (indexA + 1) % 8
+    indexA = (indexA + 1) % len(blades)
     changing = True
 
 def setUp():
