@@ -32,7 +32,7 @@ quantity = ScalarE3(1) + VectorE3(3, 4, 0) + BivectorE3(4,3,0) + PseudoscalarE3(
 # Define the Meshes that you want to represent each grade of the quantity.
 wireframe = False
 grade0 = SphereBuilder().wireframe(True).color(0xFFFF00).segments(12).build()
-grade1 = CylinderBuilder().color(0x0000FF).wireframe(wireframe).segments(32).build()
+grade1 = ConeBuilder().color(0x0000FF).wireframe(wireframe).segments(32).build()
 grade2 = VortexBuilder().wireframe(wireframe).color(0x0000FF).build()
 grade3 = CubeBuilder().wireframe(False).color(0xFFFF00).build()
 
