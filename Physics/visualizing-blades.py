@@ -104,7 +104,7 @@ def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
-    outputA.addEventListener("click", buttonA)
+    buttonA.addEventListener("click", onClickA)
 
 def tick(t):
     A = blades[indexA]
@@ -126,7 +126,7 @@ def terminate(t):
     return t > timeOut
 
 def tearDown():
-    outputA.removeEventListener("click", buttonA)
+    buttonA.removeEventListener("click", onClickA)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench3D.tearDown()
     workbench2D.tearDown()
