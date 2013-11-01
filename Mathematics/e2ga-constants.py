@@ -1,5 +1,6 @@
 '''
 The e2ga module pre-defines the standard basis vectors e1 and e2, as well as the pseudoscalar I.
+The alias constants i and j are also defined.
 '''
 from e2ga import *
 
