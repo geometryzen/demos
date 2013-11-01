@@ -23,7 +23,7 @@ workbench2D = Workbench2D(canvas2D)
 space2D = Stage(canvas2D)
 space2D.autoClear = True
 
-output = Text("ESC to exit.", "20px Helvetica", "white")
+output = Text("Hit Esc key to exit.", "20px Helvetica", "white")
 output.x = 100
 output.y = 100
 space2D.addChild(output)
