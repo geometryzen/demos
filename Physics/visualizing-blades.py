@@ -29,7 +29,7 @@ space2D.addChild(output)
 
 quantity = ScalarE3(1) + VectorE3(3, 4, 0) + BivectorE3(4,3,0) + PseudoscalarE3(0)
 
-probe  = ProbeBuilderE3().segments(12).build()
+probe  = ProbeBuilderE3().segments(24).build()
 
 space3D.add(probe.grade0)
 space3D.add(probe.grade1)
