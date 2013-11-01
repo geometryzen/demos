@@ -23,7 +23,7 @@ output.x = 100
 output.y = 100
 space2D.addChild(output)
 
-quantity = 2 * e1
+quantity = e1 * e2
 
 probe  = ProbeBuilderE3().color(0x0000FF).build()
 
