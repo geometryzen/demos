@@ -35,7 +35,7 @@ space2D.addChild(outputB)
 
 outputC = Text("", "20px Helvetica", "blue")
 outputC.x = 100
-outputC.y = 120
+outputC.y = 140
 space2D.addChild(outputC)
 
 probeA  = ProbeBuilderE3().color(0xFF0000).build()
