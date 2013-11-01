@@ -105,12 +105,12 @@ def tick(t):
     A = blades[indexA]
     B = blades[indexB]
     C = A * B
-    probeA.quantity = A
-    probeB.quantity = B
-    probeC.quantity = C
     outputA.text = str(indexA)
     outputB.text = str(A)
     outputC.text = str(C)
+    probeA.quantity = A
+    probeB.quantity = B
+    probeC.quantity = C
     space3D.render()
     space2D.render()
 
