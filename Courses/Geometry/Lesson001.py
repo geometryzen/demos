@@ -51,7 +51,7 @@ outputA2.y = 140
 space2D.addChild(outputA2)
 
 buttonOp = space2D.addChild(Shape())
-buttonOp.graphics.beginFill("red").drawRect(0, 0, 50, 20).endFill()
+buttonOp.graphics.beginFill("gray").drawRect(0, 0, 20, 20).endFill()
 buttonOp.x = 200
 buttonOp.y = 100
 
