@@ -111,7 +111,7 @@ def tick(t):
     probeB.quantity = B
     probeC.quantity = C
     outputA.text = str(indexA)
-    outputB.text = str(B)
+    outputB.text = str(A)
     outputC.text = str(C)
     space3D.render()
     space2D.render()
