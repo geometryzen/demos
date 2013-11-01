@@ -92,6 +92,7 @@ def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
+    outputA.addEventListener("click", handleClickA)
 
 def tick(t):
     probeA.quantity = A
@@ -107,6 +108,7 @@ def terminate(t):
     return t > timeOut
 
 def tearDown():
+    outputA.removeEventListener("click", handleClickA)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench3D.tearDown()
     workbench2D.tearDown()
