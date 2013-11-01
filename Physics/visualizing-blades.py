@@ -24,7 +24,9 @@ output.x = 100
 output.y = 100
 space2D.addChild(output)
 
-quantityA = ScalarE3(1) + VectorE3(3, 4, 0) + BivectorE3(4,3,0) + PseudoscalarE3(1)
+quantityA = e1
+quantityB = e2
+quantityC = e3
 
 probeA  = ProbeBuilderE3().color(0xFF0000).build()
 space3D.add(probeA.grade0)
@@ -64,6 +66,8 @@ def setUp():
 
 def tick(t):
     probeA.quantity = quantityA
+    probeB.quantity = quantityB
+    probeC.quantity = quantityC
     output.text = str(probeA.quantity)
     space3D.render()
     space2D.render()
