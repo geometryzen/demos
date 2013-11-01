@@ -26,11 +26,21 @@ space2D.addChild(output)
 
 quantityA = ScalarE3(1) + VectorE3(3, 4, 0) + BivectorE3(4,3,0) + PseudoscalarE3(1)
 
-probe  = ProbeBuilderE3().color(0x0000FF).build()
-space3D.add(probe.grade0)
-space3D.add(probe.grade1)
-space3D.add(probe.grade2)
-space3D.add(probe.grade3)
+probeA  = ProbeBuilderE3().color(0xFF0000).build()
+space3D.add(probeA.grade0)
+space3D.add(probeA.grade1)
+space3D.add(probeA.grade2)
+space3D.add(probeA.grade3)
+probeB  = ProbeBuilderE3().color(0x00FF00).build()
+space3D.add(probeB.grade0)
+space3D.add(probeB.grade1)
+space3D.add(probeB.grade2)
+space3D.add(probeB.grade3)
+probeC  = ProbeBuilderE3().color(0x0000FF).build()
+space3D.add(probeC.grade0)
+space3D.add(probeC.grade1)
+space3D.add(probeC.grade2)
+space3D.add(probeC.grade3)
 
 def escKey(event, downFlag):
     event.preventDefault()
@@ -53,8 +63,8 @@ def setUp():
     document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(t):
-    probe.quantity = quantityA
-    output.text = str(probe.quantity)
+    probeA.quantity = quantityA
+    output.text = str(probeA.quantity)
     space3D.render()
     space2D.render()
 
