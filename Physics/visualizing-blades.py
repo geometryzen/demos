@@ -87,12 +87,16 @@ def onDocumentKeyDown(event):
         keyHandlers[event.keyCode](event, True)
     except:
         pass
+    
+def onClickA(event):
+    global A
+    A = e3
 
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
-    outputA.addEventListener("click", handleClickA)
+    outputA.addEventListener("click", onClickA)
 
 def tick(t):
     probeA.quantity = A
@@ -108,7 +112,7 @@ def terminate(t):
     return t > timeOut
 
 def tearDown():
-    outputA.removeEventListener("click", handleClickA)
+    outputA.removeEventListener("click", onClickA)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench3D.tearDown()
     workbench2D.tearDown()
