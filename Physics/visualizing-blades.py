@@ -6,7 +6,6 @@ from geometry import *
 from math import exp, pi
 
 blades = [ScalarE3(1), e1, e2, e3, e1 ^ e2, e2 ^ e3, e3 ^ e1, e1 ^ e2 ^ e3]
-print len(blades)
 indexA = 1
 indexB = 2
 
@@ -103,18 +102,23 @@ def onClickA(event):
     global indexA
     indexA = (indexA + 1) % len(blades)
 
+def onClickB(event):
+    global indexB
+    indexB = (indexB + 1) % len(blades)
+
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
     buttonA.addEventListener("click", onClickA)
+    buttonB.addEventListener("click", onClickB)
 
 def tick(t):
     A = blades[indexA]
     B = blades[indexB]
     C = A * B
-    outputA.text = str(indexA)
-    outputB.text = str(A)
+    outputA.text = str(A)
+    outputB.text = str(B)
     outputC.text = str(C)
     try:
         probeA.quantity = A
@@ -130,6 +134,7 @@ def terminate(t):
 
 def tearDown():
     buttonA.removeEventListener("click", onClickA)
+    buttonB.removeEventListener("click", onClickB)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench3D.tearDown()
     workbench2D.tearDown()
