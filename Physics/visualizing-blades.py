@@ -19,9 +19,9 @@ workbench2D = Workbench2D(canvas2D)
 space2D = Stage(canvas2D)
 space2D.autoClear = True
 
-output = Text("", "20px Helvetica", "white")
-output.x = 100
-output.y = 100
+outputA = Text("", "20px Helvetica", 0xFF0000)
+outputA.x = 100
+outputA.y = 100
 space2D.addChild(output)
 
 A = e1
@@ -68,7 +68,7 @@ def tick(t):
     probeA.quantity = A
     probeB.quantity = B
     probeC.quantity = C
-    output.text = str(probeA.quantity)
+    outputA.text = str(probeA.quantity)
     space3D.render()
     space2D.render()
 
