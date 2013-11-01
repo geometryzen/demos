@@ -92,7 +92,7 @@ def onDocumentKeyDown(event):
 def onClickA(event):
     global indexA, changing
     changing = True
-    indexA = ((indexA + 1) % 7) + 1
+    indexA = (indexA + 1) % 8
     changing = False
 
 def setUp():
