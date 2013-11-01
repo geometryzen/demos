@@ -34,22 +34,22 @@ outputA.y = 120
 space2D.addChild(outputA)
 
 outputOp = Text("*", "20px Helvetica", "white")
-outputOp.x = 100
+outputOp.x = 200
 outputOp.y = 140
 space2D.addChild(outputOp)
 
 outputB = Text("", "20px Helvetica", "green")
-outputB.x = 100
+outputB.x = 300
 outputB.y = 160
 space2D.addChild(outputB)
 
 outputEq = Text("=", "20px Helvetica", "white")
-outputEq.x = 100
+outputEq.x = 400
 outputEq.y = 180
 space2D.addChild(outputEq)
 
 outputC = Text("", "20px Helvetica", "blue")
-outputC.x = 100
+outputC.x = 600
 outputC.y = 200
 space2D.addChild(outputC)
 
