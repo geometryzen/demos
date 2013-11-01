@@ -111,7 +111,7 @@ def tick(t):
     probeA.quantity = A
     probeB.quantity = B
     probeC.quantity = C
-    space3D.render()
+#   space3D.render()
     space2D.render()
 
 def terminate(t):
