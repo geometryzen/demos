@@ -45,6 +45,11 @@ outputA.x = 100
 outputA.y = 120
 space2D.addChild(outputA)
 
+outputA2 = Text("", "20px Helvetica", "red")
+outputA2.x = 100
+outputA2.y = 140
+space2D.addChild(outputA2)
+
 outputOp = Text("*", "20px Helvetica", "white")
 outputOp.x = 200
 outputOp.y = 120
