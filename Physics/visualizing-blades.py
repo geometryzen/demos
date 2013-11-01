@@ -5,9 +5,9 @@ from workbench import *
 from geometry import *
 from math import exp, pi
 
-A = e1
-B = e1 * e2
-C = A * B
+blades = [1, e1, e2, e3, e1 ^ e2, e2 ^ e3, e3 ^ e1, e1 ^ e2 ^ e3]
+indexA = 1
+indexB = 2
 
 timeOut = 600
 
@@ -99,6 +99,9 @@ def setUp():
     outputA.addEventListener("click", onClickA)
 
 def tick(t):
+    A = blades[indexA]
+    B = blades[indexB]
+    C = A * B
     probeA.quantity = A
     probeB.quantity = B
     probeC.quantity = C
