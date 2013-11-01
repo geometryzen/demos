@@ -22,6 +22,7 @@ space2D.autoClear = True
 output = Text("", "20px Helvetica", "white")
 output.x = 100
 output.y = 100
+output.color = 0x0000FF
 space2D.addChild(output)
 
 quantityA = ScalarE3(1) + VectorE3(3, 4, 0) + BivectorE3(4,3,0) + PseudoscalarE3(1)
