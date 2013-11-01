@@ -23,7 +23,7 @@ outputA = Text("", "20px Helvetica", "red")
 outputA.x = 100
 outputA.y = 100
 space2D.addChild(outputA)
-outputB = Text("", "20px Helvetica", "red")
+outputB = Text("", "20px Helvetica", "green")
 outputB.x = 100
 outputB.y = 120
 space2D.addChild(outputB)
