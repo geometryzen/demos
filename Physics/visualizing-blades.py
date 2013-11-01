@@ -5,7 +5,7 @@ from workbench import *
 from geometry import *
 from math import exp, pi
 
-A = e1
+A = e1 * e2
 B = e2
 C = A * B
 
