@@ -33,7 +33,7 @@ grade1 = ArrowBuilder().color(0x0000FF).wireframe(wireframe).segments(32).build(
 grade2 = VortexBuilder().wireframe(wireframe).color(0x0000FF).build()
 grade3 = CubeBuilder().wireframe(True).color(0xFFFF00).segments(1).build()
 
-probe  = ProbeE3(grade0, grade1, grade2, grade3)
+probe  = ProbeBuilderE3().build()
 
 space3D.add(probe.grade0)
 space3D.add(probe.grade1)
