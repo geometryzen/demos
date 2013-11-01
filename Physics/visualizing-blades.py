@@ -55,7 +55,7 @@ outputC.x = 600
 outputC.y = 120
 space2D.addChild(outputC)
 
-probeA  = ProbeBuilderE3().segments(24).color(0xFF0000).build()
+probeA  = ProbeBuilderE3().wireframe(True).segments(24).color(0xFF0000).build()
 space3D.add(probeA.grade0)
 space3D.add(probeA.grade1)
 space3D.add(probeA.grade2)
@@ -67,7 +67,7 @@ space3D.add(probeB.grade1)
 space3D.add(probeB.grade2)
 space3D.add(probeB.grade3)
 
-probeC  = ProbeBuilderE3().segments(24).color(0x0000FF).build()
+probeC  = ProbeBuilderE3().wireframe(True).segments(24).color(0x0000FF).build()
 space3D.add(probeC.grade0)
 space3D.add(probeC.grade1)
 space3D.add(probeC.grade2)
