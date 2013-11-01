@@ -29,7 +29,7 @@ space2D.autoClear = True
 
 output = Text("Hit Esc key to exit.", "20px Helvetica", "white")
 output.x = 100
-output.y = 80
+output.y = 60
 space2D.addChild(output)
 
 buttonA = space2D.addChild(Shape())
@@ -39,8 +39,8 @@ buttonA.y = 100
 
 buttonB = space2D.addChild(Shape())
 buttonB.graphics.beginFill("green").drawRect(0, 0, 50, 20).endFill()
-buttonB.x = 100
-buttonB.y = 300
+buttonB.x = 300
+buttonB.y = 100
 
 outputA = Text("", "20px Helvetica", "red")
 outputA.x = 100
