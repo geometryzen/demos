@@ -37,6 +37,11 @@ buttonA.graphics.beginFill("red").drawRect(0, 0, 50, 20).endFill()
 buttonA.x = 100
 buttonA.y = 100
 
+buttonB = space2D.addChild(Shape())
+buttonB.graphics.beginFill("green").drawRect(0, 0, 50, 20).endFill()
+buttonB.x = 100
+buttonB.y = 300
+
 outputA = Text("", "20px Helvetica", "red")
 outputA.x = 100
 outputA.y = 120
