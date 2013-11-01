@@ -8,7 +8,7 @@ from math import exp, pi
 blades = [1, e1, e2, e3, e1 ^ e2, e2 ^ e3, e3 ^ e1, e1 ^ e2 ^ e3]
 indexA = 1
 indexB = 2
-changing = False
+changing = True
 
 timeOut = 600
 
