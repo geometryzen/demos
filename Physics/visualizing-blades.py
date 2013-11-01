@@ -101,10 +101,8 @@ def onDocumentKeyDown(event):
         pass
     
 def onClickA(event):
-    global indexA, changing
-    changing = True
+    global indexA
     indexA = (indexA + 1) % len(blades)
-    changing = True
 
 def setUp():
     workbench2D.setUp()
