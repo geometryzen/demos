@@ -35,22 +35,22 @@ space2D.addChild(outputA)
 
 outputOp = Text("*", "20px Helvetica", "white")
 outputOp.x = 200
-outputOp.y = 140
+outputOp.y = 120
 space2D.addChild(outputOp)
 
 outputB = Text("", "20px Helvetica", "green")
 outputB.x = 300
-outputB.y = 160
+outputB.y = 120
 space2D.addChild(outputB)
 
 outputEq = Text("=", "20px Helvetica", "white")
 outputEq.x = 400
-outputEq.y = 180
+outputEq.y = 120
 space2D.addChild(outputEq)
 
 outputC = Text("", "20px Helvetica", "blue")
 outputC.x = 600
-outputC.y = 200
+outputC.y = 120
 space2D.addChild(outputC)
 
 probeA  = ProbeBuilderE3().color(0xFF0000).build()
