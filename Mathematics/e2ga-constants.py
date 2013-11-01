@@ -7,3 +7,5 @@ print e1
 print e2
 print e1 * e2
 print e2 << I
+
+print i == e1
