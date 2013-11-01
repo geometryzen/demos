@@ -61,7 +61,7 @@ outputEq.y = 120
 space2D.addChild(outputEq)
 
 outputC = Text("", "20px Helvetica", "blue")
-outputC.x = 600
+outputC.x = 500
 outputC.y = 120
 space2D.addChild(outputC)
 
