@@ -27,7 +27,7 @@ output.x = 100
 output.y = 100
 space2D.addChild(output)
 
-quantity = ScalarE3(1) + VectorE3(3, 4, 0) + BivectorE3(4,3,0) + PseudoscalarE3(1)
+quantity = ScalarE3(0) + VectorE3(3, 4, 0) + BivectorE3(4,3,0) + PseudoscalarE3(1)
 
 probe  = ProbeBuilderE3().segments(3).build()
 
