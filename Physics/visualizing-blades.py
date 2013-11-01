@@ -108,11 +108,14 @@ def tick(t):
     outputA.text = str(indexA)
     outputB.text = str(A)
     outputC.text = str(C)
-    probeA.quantity = A
-    probeB.quantity = B
-    probeC.quantity = C
-#   space3D.render()
-    space2D.render()
+    try:
+        probeA.quantity = A
+        probeB.quantity = B
+        probeC.quantity = C
+        space3D.render()
+        space2D.render()
+    except:
+        pass
 
 def terminate(t):
     return t > timeOut
