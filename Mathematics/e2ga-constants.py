@@ -5,5 +5,5 @@ from e2ga import *
 
 print i
 print j
-print e1 * e2
+print i * j
 print e2 << I
