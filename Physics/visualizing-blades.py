@@ -93,7 +93,7 @@ def onClickA(event):
     global indexA, changing
     changing = True
     indexA = (indexA + 1) % 8
-    changing = False
+    changing = True
 
 def setUp():
     workbench2D.setUp()
