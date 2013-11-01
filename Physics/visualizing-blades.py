@@ -8,6 +8,7 @@ from math import exp, pi
 blades = [1, e1, e2, e3, e1 ^ e2, e2 ^ e3, e3 ^ e1, e1 ^ e2 ^ e3]
 indexA = 1
 indexB = 2
+changing = False
 
 timeOut = 600
 
@@ -89,8 +90,10 @@ def onDocumentKeyDown(event):
         pass
     
 def onClickA(event):
-    global indexA
+    global indexA, changing
+    changing = True
     indexA = (indexA + 1) % 7
+    changing = False
 
 def setUp():
     workbench2D.setUp()
@@ -99,6 +102,8 @@ def setUp():
     outputA.addEventListener("click", onClickA)
 
 def tick(t):
+    if changing:
+        return
     A = blades[indexA]
     B = blades[indexB]
     C = A * B
