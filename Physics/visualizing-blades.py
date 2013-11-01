@@ -31,10 +31,10 @@ output.x = 100
 output.y = 80
 space2D.addChild(output)
 
-circle = space2D.addChild(Shape())
-circle.graphics.beginFill("red").drawRect(0, 0, 50, 20).endFill()
-circle.x = 100
-circle.y = 100
+buttonA = space2D.addChild(Shape())
+buttonA.graphics.beginFill("red").drawRect(0, 0, 50, 20).endFill()
+buttonA.x = 100
+buttonA.y = 100
 
 outputA = Text("", "20px Helvetica", "red")
 outputA.x = 100
@@ -104,7 +104,7 @@ def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
-    outputA.addEventListener("click", onClickA)
+    outputA.addEventListener("click", buttonA)
 
 def tick(t):
     A = blades[indexA]
@@ -126,7 +126,7 @@ def terminate(t):
     return t > timeOut
 
 def tearDown():
-    outputA.removeEventListener("click", onClickA)
+    outputA.removeEventListener("click", buttonA)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench3D.tearDown()
     workbench2D.tearDown()
