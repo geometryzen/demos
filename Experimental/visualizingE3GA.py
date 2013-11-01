@@ -4,7 +4,7 @@ from browser import *
 from workbench import *
 from geometry import *
 
-timeOut = 20
+timeOut = 60
 
 space3D = CartesianSpace()
 canvas3D = space3D.renderer.domElement
