@@ -34,7 +34,7 @@ wireframe = False
 grade0 = SphereBuilder().wireframe(True).color(0xFFFF00).segments(12).build()
 grade1 = ArrowBuilder().color(0x0000FF).wireframe(wireframe).segments(32).build()
 grade2 = VortexBuilder().wireframe(wireframe).color(0x0000FF).build()
-grade3 = CylinderBuilder().wireframe(True).color(0xFFFF00).segments(1).build()
+grade3 = CylinderBuilder().wireframe(False).color(0xFFFF00).build()
 
 probe  = ProbeE3(grade0, grade1, grade2, grade3)
 
