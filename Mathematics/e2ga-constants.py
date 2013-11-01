@@ -6,4 +6,4 @@ from e2ga import *
 print i
 print j
 print i * j
-print e2 << I
+print j << I
