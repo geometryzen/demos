@@ -31,12 +31,12 @@ output.y = 60
 space2D.addChild(output)
 
 buttonA = space2D.addChild(Shape())
-buttonA.graphics.beginFill("red").drawRect(0, 0, 50, 20).endFill()
+buttonA.graphics.beginFill("red").drawRect(0, 0, 20, 20).endFill()
 buttonA.x = 100
 buttonA.y = 100
 
 buttonB = space2D.addChild(Shape())
-buttonB.graphics.beginFill("green").drawRect(0, 0, 50, 20).endFill()
+buttonB.graphics.beginFill("green").drawRect(0, 0, 20, 20).endFill()
 buttonB.x = 300
 buttonB.y = 100
 
