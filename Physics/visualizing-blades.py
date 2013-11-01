@@ -123,6 +123,7 @@ def tick(t):
     B = blades[indexB]
     C = A * B
     outputA.text = str(A)
+    outputA2.text = repr(A)
     outputB.text = str(B)
     outputC.text = str(C)
     try:
