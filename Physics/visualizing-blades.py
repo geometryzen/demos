@@ -33,7 +33,7 @@ quantity = e3
 # Define the Meshes that you want to represent each grade of the quantity.
 wireframe = False
 grade0 = SphereBuilder().wireframe(True).color(0xFFFF00).segments(12).build()
-grade1 = CylinderBuilder().color(0x0000FF).wireframe(wireframe).segments(32).radiusTop(0.2).radiusBottom(1).height(1).build()
+grade1 = CylinderBuilder().color(0x0000FF).wireframe(wireframe).segments(32).radiusTop(0).radiusBottom(1).height(1).build()
 grade2 = VortexBuilder().wireframe(wireframe).color(0x0000FF).build()
 grade3 = CubeBuilder().wireframe(False).color(0xFFFF00).build()
 
