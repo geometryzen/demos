@@ -32,7 +32,9 @@ colorB = "#19FF65" # Spring Green
 colorC = "#FF9900" # Orange Peel
 colorP = "#999999" # Light Gray
 
-output = Text("Click squares to change blades. Hit Esc key to exit.", "16px Helvetica", "white")
+font = "20px Helvetica"
+
+output = Text("Click squares to change blades. Hit Esc key to exit.", font, "white")
 output.x = 100
 output.y = 60
 space2D.addChild(output)
@@ -47,12 +49,12 @@ buttonB.graphics.beginFill(colorB).drawRect(0, 0, 20, 20).endFill()
 buttonB.x = 300
 buttonB.y = 100
 
-outputA = Text("", "20px Helvetica", colorA)
+outputA = Text("", font, colorA)
 outputA.x = 100
 outputA.y = 120
 space2D.addChild(outputA)
 
-outputA2 = Text("", "20px Helvetica", colorA)
+outputA2 = Text("", font, colorA)
 outputA2.x = 100
 outputA2.y = 140
 space2D.addChild(outputA2)
@@ -62,32 +64,32 @@ buttonOp.graphics.beginFill(colorP).drawRect(0, 0, 20, 20).endFill()
 buttonOp.x = 200
 buttonOp.y = 100
 
-outputOp = Text("*", "20px Helvetica", colorP)
+outputOp = Text("", font, colorP)
 outputOp.x = 200
 outputOp.y = 120
 space2D.addChild(outputOp)
 
-outputB = Text("", "20px Helvetica", colorB)
+outputB = Text("", font, colorB)
 outputB.x = 300
 outputB.y = 120
 space2D.addChild(outputB)
 
-outputB2 = Text("", "20px Helvetica", colorB)
+outputB2 = Text("", font, colorB)
 outputB2.x = 300
 outputB2.y = 140
 space2D.addChild(outputB2)
 
-outputEq = Text("=", "20px Helvetica", colorP)
+outputEq = Text("=", font, colorP)
 outputEq.x = 400
 outputEq.y = 120
 space2D.addChild(outputEq)
 
-outputC = Text("", "20px Helvetica", colorC)
+outputC = Text("", font, colorC)
 outputC.x = 500
 outputC.y = 120
 space2D.addChild(outputC)
 
-outputC2 = Text("", "20px Helvetica", colorC)
+outputC2 = Text("", font, colorC)
 outputC2.x = 500
 outputC2.y = 140
 space2D.addChild(outputC2)
