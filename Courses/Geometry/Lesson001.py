@@ -9,6 +9,7 @@ blades = [ScalarE3(1), e1, e2, e3, e1 ^ e2, e2 ^ e3, e3 ^ e1, e1 ^ e2 ^ e3]
 binops = ["+", "-", "*", "<<", "^", ">>"]
 indexA = 1
 indexB = 2
+indexOp = 0
 
 timeOut = 600
 
@@ -149,6 +150,7 @@ def tick(t):
     outputB2.text = repr(B)
     outputC.text = str(C)
     outputC2.text = repr(C)
+    outputOp.text = str(binops[indexOp])
     try:
         probeA.quantity = A
         probeB.quantity = B
