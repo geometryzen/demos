@@ -6,7 +6,7 @@ from three import *
 center = VectorE3(1,2,3)
 radius = e3
 
-sphere = Sphere()
+sphere = Sphere(center, radius)
 
 print sphere.center
 print sphere.radius
