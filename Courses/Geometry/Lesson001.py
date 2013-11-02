@@ -27,8 +27,9 @@ workbench2D = Workbench2D(canvas2D)
 space2D = Stage(canvas2D)
 space2D.autoClear = True
 
-colorA = "#7014CC"
-colorC = "19FF65"
+colorA = "#7014CC" # Purple Heart
+colorB = "#FF9900" # Orange Peel
+colorC = "#19FF65" # Spring Green
 
 output = Text("Click squares to change blades. Hit Esc key to exit.", "16px Helvetica", "white")
 output.x = 100
