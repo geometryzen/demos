@@ -61,42 +61,42 @@ space2D.addChild(outputA)
 
 outputA2 = Text("", font, colorA)
 outputA2.x = 100
-outputA2.y = 140
+outputA2.y = rowR
 space2D.addChild(outputA2)
 
 buttonOp = space2D.addChild(Shape())
 buttonOp.graphics.beginFill(colorP).drawRect(0, 0, 20, 20).endFill()
 buttonOp.x = 200
-buttonOp.y = 100
+buttonOp.y = rowS
 
 outputOp = Text("", font, colorP)
 outputOp.x = 200
-outputOp.y = 120
+outputOp.y = rowC
 space2D.addChild(outputOp)
 
 outputB = Text("", font, colorB)
 outputB.x = 300
-outputB.y = 120
+outputB.y = rowC
 space2D.addChild(outputB)
 
 outputB2 = Text("", font, colorB)
 outputB2.x = 300
-outputB2.y = 140
+outputB2.y = rowR
 space2D.addChild(outputB2)
 
 outputEq = Text("=", font, colorP)
 outputEq.x = 400
-outputEq.y = 120
+outputEq.y = rowC
 space2D.addChild(outputEq)
 
 outputC = Text("", font, colorC)
 outputC.x = 500
-outputC.y = 120
+outputC.y = rowC
 space2D.addChild(outputC)
 
 outputC2 = Text("", font, colorC)
 outputC2.x = 500
-outputC2.y = 140
+outputC2.y = rowR
 space2D.addChild(outputC2)
 
 probeC  = ProbeBuilderE3().wireframe(True).segments(18).color(colorC).build()
