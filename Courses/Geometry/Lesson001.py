@@ -99,7 +99,7 @@ space3D.add(probeA.grade1)
 space3D.add(probeA.grade2)
 space3D.add(probeA.grade3)
 
-probeB  = ProbeBuilderE3().wireframe(True).segments(12).color(0x00FF00).build()
+probeB  = ProbeBuilderE3().wireframe(False).segments(12).color(0x00FF00).build()
 space3D.add(probeB.grade0)
 space3D.add(probeB.grade1)
 space3D.add(probeB.grade2)
