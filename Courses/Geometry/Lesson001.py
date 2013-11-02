@@ -62,7 +62,7 @@ buttonOp.graphics.beginFill(colorP).drawRect(0, 0, 20, 20).endFill()
 buttonOp.x = 200
 buttonOp.y = 100
 
-outputOp = Text("*", "20px Helvetica", "white")
+outputOp = Text("*", "20px Helvetica", colorP)
 outputOp.x = 200
 outputOp.y = 120
 space2D.addChild(outputOp)
@@ -77,7 +77,7 @@ outputB2.x = 300
 outputB2.y = 140
 space2D.addChild(outputB2)
 
-outputEq = Text("=", "20px Helvetica", "white")
+outputEq = Text("=", "20px Helvetica", colorP)
 outputEq.x = 400
 outputEq.y = 120
 space2D.addChild(outputEq)
