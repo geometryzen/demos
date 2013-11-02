@@ -9,6 +9,7 @@ direction = e1
 ray = Ray(origin, direction)
 
 print ray.origin
+print ray.direction
 
 print ray
 print repr(ray)
