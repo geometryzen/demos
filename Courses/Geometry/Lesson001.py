@@ -158,7 +158,7 @@ def tick(t):
     elif binops[indexOp] == "%":
         C = A % B
     else:
-        C = Scalar(0)
+        C = ScalarE3(0)
     outputA.text = str(A)
     outputA2.text = repr(A)
     outputB.text = str(B)
