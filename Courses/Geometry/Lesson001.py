@@ -34,24 +34,29 @@ colorP = "#999999" # Light Gray
 
 font = "20px Helvetica"
 
+rowI = 60
+rowS = 100
+rowC = 120
+rowR = 140
+
 output = Text("Click squares to change blades. Hit Esc key to exit.", font, "white")
 output.x = 100
-output.y = 60
+output.y = rowI
 space2D.addChild(output)
 
 buttonA = space2D.addChild(Shape())
 buttonA.graphics.beginFill(colorA).drawRect(0, 0, 20, 20).endFill()
 buttonA.x = 100
-buttonA.y = 100
+buttonA.y = rowS
 
 buttonB = space2D.addChild(Shape())
 buttonB.graphics.beginFill(colorB).drawRect(0, 0, 20, 20).endFill()
 buttonB.x = 300
-buttonB.y = 100
+buttonB.y = rowS
 
 outputA = Text("", font, colorA)
 outputA.x = 100
-outputA.y = 120
+outputA.y = rowC
 space2D.addChild(outputA)
 
 outputA2 = Text("", font, colorA)
