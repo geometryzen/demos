@@ -30,6 +30,7 @@ space2D.autoClear = True
 colorA = "#7014CC" # Purple Heart
 colorB = "#19FF65" # Spring Green
 colorC = "#FF9900" # Orange Peel
+colorP = "#999999" # Light Gray
 
 output = Text("Click squares to change blades. Hit Esc key to exit.", "16px Helvetica", "white")
 output.x = 100
@@ -57,7 +58,7 @@ outputA2.y = 140
 space2D.addChild(outputA2)
 
 buttonOp = space2D.addChild(Shape())
-buttonOp.graphics.beginFill("gray").drawRect(0, 0, 20, 20).endFill()
+buttonOp.graphics.beginFill(colorP).drawRect(0, 0, 20, 20).endFill()
 buttonOp.x = 200
 buttonOp.y = 100
 
