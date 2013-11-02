@@ -9,7 +9,7 @@ blades = [ScalarE3(1), e1, e2, e3, e1 ^ e2, e2 ^ e3, e3 ^ e1, e1 ^ e2 ^ e3]
 binops = ["+", "-", "*", "<<", "^", ">>"]
 indexA = 1
 indexB = 2
-indexOp = 0
+indexOp = 2
 
 timeOut = 600
 
