@@ -13,3 +13,5 @@ print sphere.radius
 
 print sphere
 print repr(sphere)
+
+print sphere.intersectsSphere(sphere)
