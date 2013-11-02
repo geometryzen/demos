@@ -28,6 +28,7 @@ space2D = Stage(canvas2D)
 space2D.autoClear = True
 
 colorA = "#7014CC"
+colorC = "19FF65"
 
 output = Text("Click squares to change blades. Hit Esc key to exit.", "16px Helvetica", "white")
 output.x = 100
@@ -89,13 +90,13 @@ outputC2.x = 500
 outputC2.y = 140
 space2D.addChild(outputC2)
 
-probeC  = ProbeBuilderE3().wireframe(True).segments(18).color(colorA).build()
+probeC  = ProbeBuilderE3().wireframe(True).segments(18).color(colorC).build()
 space3D.add(probeC.grade0)
 space3D.add(probeC.grade1)
 space3D.add(probeC.grade2)
 space3D.add(probeC.grade3)
 
-probeA  = ProbeBuilderE3().wireframe(True).segments(18).color(0x0091FF).build()
+probeA  = ProbeBuilderE3().wireframe(True).segments(18).color(colorA).build()
 space3D.add(probeA.grade0)
 space3D.add(probeA.grade1)
 space3D.add(probeA.grade2)
