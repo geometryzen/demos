@@ -89,7 +89,7 @@ outputC2.x = 500
 outputC2.y = 140
 space2D.addChild(outputC2)
 
-probeC  = ProbeBuilderE3().wireframe(True).segments(18).color(0xFF9900).build()
+probeC  = ProbeBuilderE3().wireframe(True).segments(18).color(colorA).build()
 space3D.add(probeC.grade0)
 space3D.add(probeC.grade1)
 space3D.add(probeC.grade2)
