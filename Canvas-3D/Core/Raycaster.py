@@ -9,3 +9,6 @@ near = 0.01
 far = 10000
 
 raycaster = Raycaster(origin, direction, near, far)
+
+print raycaster
+print repr(raycaster)
