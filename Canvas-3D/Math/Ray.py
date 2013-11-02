@@ -5,4 +5,4 @@ from three import *
 
 origin = VectorE3(0,0,0)
 
-ray = Ray(1,2)
+ray = Ray(origin)
