@@ -3,12 +3,21 @@ from three import *
 from browser import *
 from workbench import *
 from geometry import *
+from math import exp, pi
 
-timeOut = 60
+blades = [ScalarE3(1), e1, e2, e3, e1 ^ e2, e2 ^ e3, e3 ^ e1, e1 ^ e2 ^ e3]
+binops = ["+", "-", "*", "<<", "^", ">>"]
+indexA = 1
+indexB = 2
+indexOp = 2
+
+timeOut = 600
 
 space3D = CartesianSpace()
 canvas3D = space3D.renderer.domElement
 workbench3D = Workbench3D(canvas3D, space3D.renderer, space3D.camera)
+space3D.camera.position = 1.5 * (e1 + e2 + e3)
+space3D.camera.lookAt(VectorE3(0,0,0))
    
 canvas2D = document.createElement("canvas")
 canvas2D.style.position = "absolute"
@@ -18,19 +27,95 @@ workbench2D = Workbench2D(canvas2D)
 space2D = Stage(canvas2D)
 space2D.autoClear = True
 
-output = Text("", "20px Helvetica", "white")
+colorA = "#7014CC" # Purple Heart
+colorB = "#19FF65" # Spring Green
+colorC = "#FF9900" # Orange Peel
+colorP = "#999999" # Light Gray
+
+font = "20px Helvetica"
+
+rowI = 60
+rowC = 90
+rowS = 120
+rowR = 150
+
+output = Text("Click squares to change operator and operands. Hit Esc key to exit.", font, "white")
 output.x = 100
-output.y = 100
+output.y = rowI
 space2D.addChild(output)
 
-quantity = ScalarE3(1) + VectorE3(3, 4, 0) + 4 * BivectorE3(4,3,0) + PseudoscalarE3(1)
+buttonA = space2D.addChild(Shape())
+buttonA.graphics.beginFill(colorA).drawRect(0, 0, 20, 20).endFill()
+buttonA.x = 100
+buttonA.y = rowS
 
-probe  = ProbeBuilderE3().color(0x0000FF).build()
+buttonB = space2D.addChild(Shape())
+buttonB.graphics.beginFill(colorB).drawRect(0, 0, 20, 20).endFill()
+buttonB.x = 300
+buttonB.y = rowS
 
-space3D.add(probe.grade0)
-space3D.add(probe.grade1)
-space3D.add(probe.grade2)
-space3D.add(probe.grade3)
+outputA = Text("", font, colorA)
+outputA.x = 100
+outputA.y = rowC
+space2D.addChild(outputA)
+
+outputA2 = Text("", font, colorA)
+outputA2.x = 100
+outputA2.y = rowR
+space2D.addChild(outputA2)
+
+buttonOp = space2D.addChild(Shape())
+buttonOp.graphics.beginFill(colorP).drawRect(0, 0, 20, 20).endFill()
+buttonOp.x = 200
+buttonOp.y = rowS
+
+outputOp = Text("", font, colorP)
+outputOp.x = 200
+outputOp.y = rowC
+space2D.addChild(outputOp)
+
+outputB = Text("", font, colorB)
+outputB.x = 300
+outputB.y = rowC
+space2D.addChild(outputB)
+
+outputB2 = Text("", font, colorB)
+outputB2.x = 300
+outputB2.y = rowR
+space2D.addChild(outputB2)
+
+outputEq = Text("=", font, colorP)
+outputEq.x = 400
+outputEq.y = rowC
+space2D.addChild(outputEq)
+
+outputC = Text("", font, colorC)
+outputC.x = 500
+outputC.y = rowC
+space2D.addChild(outputC)
+
+outputC2 = Text("", font, colorC)
+outputC2.x = 500
+outputC2.y = rowR
+space2D.addChild(outputC2)
+
+probeC  = ProbeBuilderE3().wireframe(True).segments(18).color(colorC).build()
+space3D.add(probeC.grade0)
+space3D.add(probeC.grade1)
+space3D.add(probeC.grade2)
+space3D.add(probeC.grade3)
+
+probeA  = ProbeBuilderE3().wireframe(True).segments(18).color(colorA).build()
+space3D.add(probeA.grade0)
+space3D.add(probeA.grade1)
+space3D.add(probeA.grade2)
+space3D.add(probeA.grade3)
+
+probeB  = ProbeBuilderE3().wireframe(True).segments(18).color(colorB).build()
+space3D.add(probeB.grade0)
+space3D.add(probeB.grade1)
+space3D.add(probeB.grade2)
+space3D.add(probeB.grade3)
 
 def escKey(event, downFlag):
     event.preventDefault()
@@ -46,22 +131,69 @@ def onDocumentKeyDown(event):
         keyHandlers[event.keyCode](event, True)
     except:
         pass
+    
+def onClickA(event):
+    global indexA
+    indexA = (indexA + 1) % len(blades)
+
+def onClickB(event):
+    global indexB
+    indexB = (indexB + 1) % len(blades)
+
+def onClickOp(event):
+    global indexOp
+    indexOp = (indexOp + 1) % len(binops)
 
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
+    buttonA.addEventListener("click", onClickA)
+    buttonB.addEventListener("click", onClickB)
+    buttonOp.addEventListener("click", onClickOp)
 
 def tick(t):
-    probe.quantity = quantity
-    output.text = str(probe.quantity)
-    space3D.render()
-    space2D.render()
+    A = blades[indexA]
+    B = blades[indexB]
+    if binops[indexOp] == "+":
+        C = A + B
+    elif binops[indexOp] == "-":
+        C = A - B
+    elif binops[indexOp] == "*":
+        C = A * B
+    elif binops[indexOp] == "<<":
+        C = A << B
+    elif binops[indexOp] == "^":
+        C = A ^ B
+    elif binops[indexOp] == ">>":
+        C = A >> B
+    elif binops[indexOp] == "m":
+        C = A % B
+    else:
+        C = ScalarE3(0)
+    outputA.text = str(A)
+    outputA2.text = repr(A)
+    outputB.text = str(B)
+    outputB2.text = repr(B)
+    outputC.text = str(C)
+    outputC2.text = repr(C)
+    outputOp.text = str(binops[indexOp])
+    try:
+        probeA.quantity = A
+        probeB.quantity = B
+        probeC.quantity = C
+        space3D.render()
+        space2D.render()
+    except:
+        pass
 
 def terminate(t):
     return t > timeOut
 
 def tearDown():
+    buttonA.removeEventListener("click", onClickA)
+    buttonB.removeEventListener("click", onClickB)
+    buttonOp.removeEventListener("click", onClickOp)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench3D.tearDown()
     workbench2D.tearDown()
