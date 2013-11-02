@@ -1,1 +1,3 @@
-# Ray.py
+from three import *
+
+ray = Ray()
