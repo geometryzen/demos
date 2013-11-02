@@ -137,6 +137,7 @@ def setUp():
     document.addEventListener("keydown", onDocumentKeyDown, False)
     buttonA.addEventListener("click", onClickA)
     buttonB.addEventListener("click", onClickB)
+    buttonOp.addEventListener("click", onClickOp)
 
 def tick(t):
     A = blades[indexA]
@@ -163,6 +164,7 @@ def terminate(t):
 def tearDown():
     buttonA.removeEventListener("click", onClickA)
     buttonB.removeEventListener("click", onClickB)
+    buttonOp.removeEventListener("click", onClickOp)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench3D.tearDown()
     workbench2D.tearDown()
