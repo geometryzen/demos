@@ -4,7 +4,7 @@ Under construction. Nov 2, 2013
 from three import *
 
 origin = VectorE3(1,2,3)
-direction = e1
+direction = e3
 
 ray = Ray(origin, direction)
 
