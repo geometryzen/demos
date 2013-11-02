@@ -42,16 +42,16 @@ buttonA.x = 100
 buttonA.y = 100
 
 buttonB = space2D.addChild(Shape())
-buttonB.graphics.beginFill("green").drawRect(0, 0, 20, 20).endFill()
+buttonB.graphics.beginFill(colorB).drawRect(0, 0, 20, 20).endFill()
 buttonB.x = 300
 buttonB.y = 100
 
-outputA = Text("", "20px Helvetica", "red")
+outputA = Text("", "20px Helvetica", colorA)
 outputA.x = 100
 outputA.y = 120
 space2D.addChild(outputA)
 
-outputA2 = Text("", "20px Helvetica", "red")
+outputA2 = Text("", "20px Helvetica", colorA)
 outputA2.x = 100
 outputA2.y = 140
 space2D.addChild(outputA2)
@@ -81,12 +81,12 @@ outputEq.x = 400
 outputEq.y = 120
 space2D.addChild(outputEq)
 
-outputC = Text("", "20px Helvetica", "blue")
+outputC = Text("", "20px Helvetica", colorC)
 outputC.x = 500
 outputC.y = 120
 space2D.addChild(outputC)
 
-outputC2 = Text("", "20px Helvetica", "blue")
+outputC2 = Text("", "20px Helvetica", colorC)
 outputC2.x = 500
 outputC2.y = 140
 space2D.addChild(outputC2)
