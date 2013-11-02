@@ -66,12 +66,12 @@ outputOp.x = 200
 outputOp.y = 120
 space2D.addChild(outputOp)
 
-outputB = Text("", "20px Helvetica", "green")
+outputB = Text("", "20px Helvetica", colorB)
 outputB.x = 300
 outputB.y = 120
 space2D.addChild(outputB)
 
-outputB2 = Text("", "20px Helvetica", "green")
+outputB2 = Text("", "20px Helvetica", colorB)
 outputB2.x = 300
 outputB2.y = 140
 space2D.addChild(outputB2)
