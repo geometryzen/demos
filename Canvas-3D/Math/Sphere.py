@@ -14,8 +14,8 @@ print sphere.radius
 print sphere
 print repr(sphere)
 
-s1 = Sphere(VectorE3(0,0,0),1)
-s2 = Spgere(VectorE3(2,2,2),1)
+s1 = Sphere(VectorE3(0,0,0), 1.0)
+s2 = Spgere(VectorE3(2,2,2), 1.0)
 
 print sphere.intersectsSphere(sphere)
 print s1.intersectsSphere(s2)
