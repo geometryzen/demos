@@ -127,6 +127,10 @@ def onClickB(event):
     global indexB
     indexB = (indexB + 1) % len(blades)
 
+def onClickOp(event):
+    global indexOp
+    indexOp = (indexOp + 1) % len(binops)
+
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
