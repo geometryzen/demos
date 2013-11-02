@@ -35,9 +35,9 @@ colorP = "#999999" # Light Gray
 font = "20px Helvetica"
 
 rowI = 60
-rowS = 120
+rowS = 110
 rowC = 100
-rowR = 140
+rowR = 150
 
 output = Text("Click squares to change blades. Hit Esc key to exit.", font, "white")
 output.x = 100
