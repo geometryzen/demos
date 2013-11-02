@@ -8,7 +8,7 @@ direction = e1
 near = 0.01
 far = 10000
 
-raycaster = Raycaster(origin, direction, 1, 2)
+raycaster = Raycaster(origin, direction, near, 2)
 
 print raycaster
 print repr(raycaster)
