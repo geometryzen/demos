@@ -6,7 +6,7 @@ from geometry import *
 from math import exp, pi
 
 blades = [ScalarE3(1), e1, e2, e3, e1 ^ e2, e2 ^ e3, e3 ^ e1, e1 ^ e2 ^ e3]
-binops = ["+", "-", "*", "<<", "^", ">>", "%%"]
+binops = ["+", "-", "*", "<<", "^", ">>", "m"]
 indexA = 1
 indexB = 2
 indexOp = 0
@@ -155,7 +155,7 @@ def tick(t):
         C = A ^ B
     elif binops[indexOp] == ">>":
         C = A >> B
-    elif binops[indexOp] == "%%":
+    elif binops[indexOp] == "m":
         C = A % B
     else:
         C = ScalarE3(0)
