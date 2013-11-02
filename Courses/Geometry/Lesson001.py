@@ -27,13 +27,15 @@ workbench2D = Workbench2D(canvas2D)
 space2D = Stage(canvas2D)
 space2D.autoClear = True
 
+colorA = "#7014CC"
+
 output = Text("Click squares to change blades. Hit Esc key to exit.", "16px Helvetica", "white")
 output.x = 100
 output.y = 60
 space2D.addChild(output)
 
 buttonA = space2D.addChild(Shape())
-buttonA.graphics.beginFill("red").drawRect(0, 0, 20, 20).endFill()
+buttonA.graphics.beginFill(colorA).drawRect(0, 0, 20, 20).endFill()
 buttonA.x = 100
 buttonA.y = 100
 
