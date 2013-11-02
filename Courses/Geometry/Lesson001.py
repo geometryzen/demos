@@ -143,7 +143,10 @@ def setUp():
 def tick(t):
     A = blades[indexA]
     B = blades[indexB]
-    C = A * B
+    if binops[indexOp] == "+":
+        C = A + B
+    else:
+        C = A * B
     outputA.text = str(A)
     outputA2.text = repr(A)
     outputB.text = str(B)
