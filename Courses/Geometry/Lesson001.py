@@ -155,7 +155,7 @@ def tick(t):
         C = A ^ B
     elif binops[indexOp] == ">>":
         C = A >> B
-    elif binops[indexOp] == "%":
+    elif binops[indexOp] == "%%":
         C = A % B
     else:
         C = ScalarE3(0)
