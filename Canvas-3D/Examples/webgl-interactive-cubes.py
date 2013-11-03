@@ -121,6 +121,7 @@ def tick(t):
                 INTERSECTED.material.emissive.setHex(currentHex)
             INTERSECTED = intersects[0].object
             currentHex = INTERSECTED.material.emissive.getHex()
+            INTERSECTED.material.emissive.setHex(0xFF0000)
     else:
         if INTERSECTED:
             INTERSECTED.material.emissive.setHex(currentHex)
