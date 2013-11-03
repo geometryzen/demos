@@ -5,7 +5,7 @@ from random import random
 from math import *
 
 radius = 100.0
-theta  = 0.0
+omega  = 2.0 * pi / 5.0
 
 scene = Scene()
 renderer = WebGLRenderer()
@@ -29,6 +29,7 @@ for i in range(0, 10):
 workbench = Workbench(renderer, camera)
 
 def tick(t):
+    theta = omega * t
     camera.position.x = radius * sin(theta)
     camera.position.y = radius * sin(theta)
     camera.position.z = radius * cos(theta)
