@@ -74,6 +74,7 @@ def tick(t):
     camera.lookAt(scene.position)
     
     vector = mouse.clone()
+    projector.unprojectVector(vector, camera)
     
     renderer.render(scene, camera)
     
