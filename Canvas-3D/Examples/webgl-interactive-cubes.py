@@ -32,7 +32,7 @@ raycaster = Raycaster()
 
 geometry = CubeGeometry(20, 20, 20)
 
-for i in range(0, 2000):
+for i in range(0, 1):
     object = Mesh(geometry, MeshLambertMaterial({"color": random() * 0xFFFFFF}))
     object.position.x = random() * 800.0 - 400.0
     object.position.y = random() * 800.0 - 400.0
@@ -71,7 +71,7 @@ def onDocumentMouseMove(event):
     mouse.y = - (float(event.clientY) / float(window.innerHeight)) * 2.0 + 1.0
 
 def tick(t):
-    theta = omega * t
+    theta = 0#omega * t
     
     camera.position.x = radius * sin(theta)
     camera.position.y = radius * sin(theta)
