@@ -4,6 +4,7 @@ from workbench import *
 
 scene = Scene()
 renderer = WebGLRenderer()
+renderer.sortObject = False
 camera = PerspectiveCamera(70, 1, 1, 10000)
 
 
