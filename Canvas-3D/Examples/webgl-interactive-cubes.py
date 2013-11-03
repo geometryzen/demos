@@ -6,6 +6,7 @@ from math import *
 
 radius = 100.0
 omega  = 2.0 * pi / 5.0
+timeOut = 60.0
 
 scene = Scene()
 renderer = WebGLRenderer()
@@ -64,7 +65,7 @@ def tick(t):
     renderer.render(scene, camera)
     
 def terminate(t):
-    return t > 60
+    return t > timeOut
 
 def setUp():
     workbench.setUp()
