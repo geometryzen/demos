@@ -8,6 +8,8 @@ radius = 100.0
 omega  = 2.0 * pi / 20.0
 timeOut = 60.0
 
+mouse = VectorE3()
+
 scene = Scene()
 renderer = WebGLRenderer()
 renderer.sortObjects = False
@@ -58,6 +60,11 @@ def onDocumentKeyDown(event):
         keyHandlers[event.keyCode](event, True)
     except:
         pass
+
+def onDocumentMouseMove(event):
+    event.preventDefault()
+    mouse.x = (event.clientX / window.innerWidth) * 2.0 - 1.0
+    mouse.y = (event.clientY / window.innerHeight) * 2.0 + 1.0
 
 def tick(t):
     theta = omega * t
