@@ -29,6 +29,9 @@ for i in range(0, 10):
 workbench = Workbench(renderer, camera)
 
 def tick(t):
+    camera.position.x = radius * sin(theta)
+    camera.position.y = radius * sin(theta)
+    camera.position.z = radius * cos(theta)
     camera.lookAt(scene.position)
     renderer.render(scene, camera)
     
