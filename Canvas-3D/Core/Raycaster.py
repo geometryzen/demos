@@ -10,5 +10,7 @@ far = 10000.0
 
 raycaster = Raycaster(origin, direction, near, far)
 
+print raycaster.near
+
 print raycaster
 print repr(raycaster)
