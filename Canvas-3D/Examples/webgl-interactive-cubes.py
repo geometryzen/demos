@@ -61,8 +61,8 @@ geometry = CubeGeometry(20, 20, 20)
 for i in range(0, 1):
     material = MeshLambertMaterial({"color": random() * 0xFFFFFF})
     print material.emissive
-    object = Mesh(geometry, material)
-    print object.material.emissive
+    mesh = Mesh(geometry, material)
+    print mesh.material.emissive
 
 #    object.position.x = random() * 800.0 - 400.0
 #    object.position.y = random() * 800.0 - 400.0
@@ -76,7 +76,7 @@ for i in range(0, 1):
 #    object.scale.y = random() + 0.5
 #    object.scale.z = random() + 0.5
 
-    scene.add(object)
+    scene.add(mesh)
     
 workbench = Workbench(renderer, camera)
 
