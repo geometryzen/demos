@@ -81,7 +81,7 @@ def tick(t):
     vector = mouse.clone()
     projector.unprojectVector(vector, camera)
     raycaster.set(camera.position, vector.sub(camera.position).normalize())
-    
+    print vector
     intersects = raycaster.intersectObjects(scene.children)
     if len(intersects) > 0:
         print intersects[0]
