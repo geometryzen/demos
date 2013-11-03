@@ -49,7 +49,7 @@ def tick(t):
     renderer.render(scene, camera)
     
 def terminate(t):
-    return t > 4
+    return t > 60
 
 def setUp():
     workbench.setUp()
