@@ -60,6 +60,7 @@ geometry = CubeGeometry(20, 20, 20)
 
 for i in range(0, 1):
     object = Mesh(geometry, MeshLambertMaterial({"color": random() * 0xFFFFFF}))
+    print object.material.emissive
 
 #    object.position.x = random() * 800.0 - 400.0
 #    object.position.y = random() * 800.0 - 400.0
