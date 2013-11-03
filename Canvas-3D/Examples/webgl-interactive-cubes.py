@@ -11,6 +11,9 @@ light = DirectionalLight(0xFFFFFF, 2)
 light.position.set(1, 1, 1).normalize()
 scene.add(light)
 
+light = DirectionalLight(0xFFFFFF)
+light.position.set(-1, -1, -1).normalize()
+scene.add(light)
 
 workbench = Workbench(renderer, camera)
 
