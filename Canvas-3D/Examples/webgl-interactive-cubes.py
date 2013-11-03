@@ -115,7 +115,7 @@ def tick(t):
     if len(intersects) > 0:
         if INTERSECTED != intersects[0].object:
             if INTERSECTED:
-                output.text = str(INTERSECTED)
+                output.text = str(INTERSECTED.material)
             INTERSECTED = intersects[0].object
     else:
         INTERSECTED = None
