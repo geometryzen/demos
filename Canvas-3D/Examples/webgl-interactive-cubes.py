@@ -59,7 +59,7 @@ raycaster = Raycaster()
 
 geometry = CubeGeometry(20, 20, 20)
 
-for i in range(0, 100):
+for i in range(0, 2000):
     material = MeshLambertMaterial({"color": random() * 0xFFFFFF})
     mesh = Mesh(geometry, material)
 
