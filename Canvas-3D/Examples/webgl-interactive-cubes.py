@@ -111,12 +111,10 @@ def tick(t):
     
     intersects = raycaster.intersectObjects(scene.children)
 
-    output.text = str(intersects)
-
     if len(intersects) > 0:
         if INTERSECTED != intersects[0].object:
             if INTERSECTED:
-                print INTERSECTED.material
+                output.text = str(INTERSECTED)
 
     renderer.render(scene, camera)
     space2D.render()
