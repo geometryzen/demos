@@ -115,6 +115,9 @@ def tick(t):
         if INTERSECTED != intersects[0].object:
             if INTERSECTED:
                 output.text = str(INTERSECTED)
+            INTERSECTED = intersects[0].object
+    else:
+        INTERSECTED = None
 
     renderer.render(scene, camera)
     space2D.render()
