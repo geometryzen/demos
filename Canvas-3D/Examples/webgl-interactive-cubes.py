@@ -65,7 +65,6 @@ def onDocumentMouseMove(event):
     event.preventDefault()
     mouse.x = (float(event.clientX) / float(window.innerWidth)) * 2.0 - 1.0
     mouse.y = (float(event.clientY) / float(window.innerHeight)) * 2.0 + 1.0
-    print mouse
 
 def tick(t):
     theta = omega * t
@@ -73,6 +72,9 @@ def tick(t):
     camera.position.y = radius * sin(theta)
     camera.position.z = radius * cos(theta)
     camera.lookAt(scene.position)
+    
+    vector = mouse.copy()
+    
     renderer.render(scene, camera)
     
 def terminate(t):
