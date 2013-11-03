@@ -2,6 +2,10 @@ from three import *
 from browser import *
 from workbench import *
 from random import random
+from math import *
+
+radius = 100.0
+theta  = 0.0
 
 scene = Scene()
 renderer = WebGLRenderer()
