@@ -4,6 +4,7 @@ from workbench import *
 
 scene = Scene()
 renderer = WebGLRenderer()
+camera = PerspectiveCamera(70, 1, 1, 10000)
 
 
 workbench = Workbench(renderer, camera)
