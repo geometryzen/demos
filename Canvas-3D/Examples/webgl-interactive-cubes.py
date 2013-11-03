@@ -126,6 +126,7 @@ def tick(t):
             INTERSECTED.material.emissive.setHex(currentHex)
         INTERSECTED = None
 
+    output.text = str(currentHex)
     renderer.render(scene, camera)
     space2D.render()
     
