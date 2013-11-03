@@ -117,7 +117,6 @@ def tick(t):
     if len(intersects) > 0:
         if INTERSECTED != intersects[0].object:
             if INTERSECTED:
-                output.text = str(INTERSECTED.material)
                 INTERSECTED.material.emissive.setHex(currentHex)
             INTERSECTED = intersects[0].object
             currentHex = INTERSECTED.material.emissive.getHex()
