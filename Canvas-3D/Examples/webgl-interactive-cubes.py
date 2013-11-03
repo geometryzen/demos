@@ -5,7 +5,7 @@ from random import random
 from math import *
 
 radius = 100.0
-omega  = 2.0 * pi / 5.0
+omega  = 2.0 * pi / 20.0
 timeOut = 60.0
 
 scene = Scene()
