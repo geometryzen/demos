@@ -39,6 +39,7 @@ timeOut = 60.0
 
 mouse = VectorE3(0.0, 0.0, 1.0)
 INTERSECTED = None
+currentHex = None
 
 scene = Scene()
 renderer = WebGLRenderer()
@@ -119,12 +120,12 @@ def tick(t):
         if INTERSECTED != intersects[0].object:
             if INTERSECTED:
                 output.text = str(INTERSECTED.material)
-                INTERSECTED.material.emissive.setHex(INTERSECTED.currentHex)
+                INTERSECTED.material.emissive.setHex(currentHex)
             INTERSECTED = intersects[0].object
-            INTERSECTED.currentHex = INTERSECTED.material.emissive.getHex()
+            currentHex = INTERSECTED.material.emissive.getHex()
     else:
         if INTERSECTED:
-            INTERSECTED.material.emissive.setHex(INTERSECTED.currentHex)
+            INTERSECTED.material.emissive.setHex(currentHex)
         INTERSECTED = None
 
     renderer.render(scene, camera)
