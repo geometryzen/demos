@@ -12,6 +12,7 @@ omega  = 2.0 * pi / 20.0
 timeOut = 60.0
 
 mouse = VectorE3(0.0, 0.0, 1.0)
+INTERSECTED = None
 
 scene = Scene()
 renderer = WebGLRenderer()
@@ -81,7 +82,11 @@ def tick(t):
     raycaster.set(camera.position, vector.sub(camera.position).normalize())
     
     intersects = raycaster.intersectObjects(scene.children)
-    
+    if len(intersects) > 0:
+        if INTERSECTED != intersects[0].object:
+            if INTERSECTED:
+                print INTERSECTED
+
     renderer.render(scene, camera)
     
 def terminate(t):
