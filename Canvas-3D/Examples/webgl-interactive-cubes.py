@@ -82,6 +82,7 @@ def tick(t):
     raycaster.set(camera.position, vector.sub(camera.position).normalize())
     
     intersects = raycaster.intersectObjects(scene.children)
+    print len(intersects)
     if len(intersects) > 0:
         if INTERSECTED != intersects[0].object:
             if INTERSECTED:
