@@ -18,6 +18,9 @@ scene.add(light)
 
 geometry = CubeGeometry(20, 20, 20)
 
+for i in range(0, 10):
+    print i
+
 workbench = Workbench(renderer, camera)
 
 def tick(t):
