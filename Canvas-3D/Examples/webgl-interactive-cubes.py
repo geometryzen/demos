@@ -1,26 +1,9 @@
-# webgl-interactive-cubes.py
 from three import *
 from browser import *
 from workbench import *
 
-space = CartesianSpace()
+scene = Scene()
 
-# All arguments are optional and the defaults, in order, are as follows.
-length = 6
-segments = 12
-radiusShaft = 0.01
-radiusCone = 0.08
-lengthCone = 0.2
-material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1})
-arrow = ArrowBuilder().scale(length).segments(segments).material(material).build()
-arrow.geometry.name = 'Foo'
-
-print repr(arrow.geometry)
-print "uuid:            " + str(arrow.geometry.uuid)
-print "name:            " + str(arrow.geometry.name)
-print arrow.geometry
-
-space.add(arrow)
 
 workbench = Workbench(space.renderer, space.camera)
 
