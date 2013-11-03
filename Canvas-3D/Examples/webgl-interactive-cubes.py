@@ -80,6 +80,8 @@ def tick(t):
     projector.unprojectVector(vector, camera)
     raycaster.set(camera.position, vector.sub(camera.position).normalize())
     
+    intersects = raycaster.intersectObjects(scene.children)
+    
     renderer.render(scene, camera)
     
 def terminate(t):
