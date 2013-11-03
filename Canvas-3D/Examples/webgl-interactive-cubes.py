@@ -80,8 +80,10 @@ def terminate(t):
 def setUp():
     workbench.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
+    document.addEventListener("mousemove", onDocumentMouseMove, False)
 
 def tearDown():
+    document.removeEventListener("mousemove", onDocumentMouseMove, False)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench.tearDown()
 
