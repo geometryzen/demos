@@ -98,6 +98,7 @@ def onDocumentMouseMove(event):
     mouse.y = - (float(event.clientY) / float(window.innerHeight)) * 2.0 + 1.0
 
 def tick(t):
+    global INTERSECTED
     theta = 0#omega * t
     
     camera.position.x = radius * sin(theta)
