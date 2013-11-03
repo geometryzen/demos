@@ -1,7 +1,7 @@
 from three import *
 from browser import *
 from workbench import *
-from math import random
+from random import random
 
 scene = Scene()
 renderer = WebGLRenderer()
