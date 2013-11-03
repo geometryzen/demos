@@ -118,6 +118,7 @@ def tick(t):
 #                print INTERSECTED
 
     renderer.render(scene, camera)
+    space2D.render()
     
 def terminate(t):
     return t > timeOut
