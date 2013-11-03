@@ -32,7 +32,7 @@ raycaster = Raycaster()
 
 geometry = CubeGeometry(20, 20, 20)
 
-for i in range(0, 20):
+for i in range(0, 2000):
     object = Mesh(geometry, MeshLambertMaterial({"color": random() * 0xFFFFFF}))
     object.position.x = random() * 800.0 - 400.0
     object.position.y = random() * 800.0 - 400.0
@@ -82,8 +82,8 @@ def tick(t):
     raycaster.set(camera.position, vector.sub(camera.position).normalize())
     
     intersects = raycaster.intersectObjects(scene.children)
-    print len(intersects)
     if len(intersects) > 0:
+        print intersects[0]
         if INTERSECTED != intersects[0].object:
             if INTERSECTED:
                 print INTERSECTED
