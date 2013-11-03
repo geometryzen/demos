@@ -46,8 +46,6 @@ for i in range(0, 20):
     object.scale.z = random() + 0.5
     
     scene.add(object)
-
-print scene.children
     
 workbench = Workbench(renderer, camera)
 
@@ -82,7 +80,7 @@ def tick(t):
     projector.unprojectVector(vector, camera)
     raycaster.set(camera.position, vector.sub(camera.position).normalize())
     
-    #intersects = raycaster.intersectObjects(scene.children)
+    intersects = raycaster.intersectObjects(scene.children)
     
     renderer.render(scene, camera)
     
