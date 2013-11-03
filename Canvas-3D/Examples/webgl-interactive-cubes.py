@@ -40,6 +40,21 @@ for i in range(0, 1000):
 
 workbench = Workbench(renderer, camera)
 
+def escKey(event, downFlag):
+    event.preventDefault()
+    global timeOut
+    timeOut = 0
+
+keyHandlers = {
+ 27: escKey
+}
+    
+def onDocumentKeyDown(event):
+    try:
+        keyHandlers[event.keyCode](event, True)
+    except:
+        pass
+
 def tick(t):
     theta = omega * t
     camera.position.x = radius * sin(theta)
@@ -53,8 +68,10 @@ def terminate(t):
 
 def setUp():
     workbench.setUp()
+    document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tearDown():
+    document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
