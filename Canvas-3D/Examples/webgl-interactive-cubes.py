@@ -7,6 +7,31 @@ from workbench import *
 from random import random
 from math import *
 
+canvas2D = document.createElement("canvas")
+canvas2D.style.position = "absolute"
+canvas2D.style.top = "0px"
+canvas2D.style.left = "0px"
+workbench2D = Workbench2D(canvas2D)
+space2D = Stage(canvas2D)
+space2D.autoClear = True
+
+colorA = "#7014CC" # Purple Heart
+colorB = "#19FF65" # Spring Green
+colorC = "#FF9900" # Orange Peel
+colorP = "#999999" # Light Gray
+
+font = "20px Helvetica"
+
+rowI = 60
+rowC = 90
+rowS = 120
+rowR = 150
+
+output = Text("Click squares to change operator and operands. Hit Esc key to exit.", font, "white")
+output.x = 100
+output.y = rowI
+space2D.addChild(output)
+
 radius = 100.0
 omega  = 2.0 * pi / 20.0
 timeOut = 60.0
