@@ -25,6 +25,7 @@ for i in range(0, 10):
 workbench = Workbench(renderer, camera)
 
 def tick(t):
+    camera.lookAt(scene.position)
     renderer.render(scene, camera)
     
 def terminate(t):
