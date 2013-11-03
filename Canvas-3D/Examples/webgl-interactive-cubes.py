@@ -68,10 +68,11 @@ def onDocumentKeyDown(event):
 def onDocumentMouseMove(event):
     event.preventDefault()
     mouse.x = (float(event.clientX) / float(window.innerWidth)) * 2.0 - 1.0
-    mouse.y = (float(event.clientY) / float(window.innerHeight)) * 2.0 + 1.0
+    mouse.y = - (float(event.clientY) / float(window.innerHeight)) * 2.0 + 1.0
 
 def tick(t):
     theta = omega * t
+    
     camera.position.x = radius * sin(theta)
     camera.position.y = radius * sin(theta)
     camera.position.z = radius * cos(theta)
