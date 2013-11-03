@@ -124,12 +124,14 @@ def terminate(t):
 
 def setUp():
     workbench.setUp()
+    workbench2D.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("mousemove", onDocumentMouseMove, False)
 
 def tearDown():
     document.removeEventListener("mousemove", onDocumentMouseMove, False)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
+    workbench2D.tearDown()
     workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
