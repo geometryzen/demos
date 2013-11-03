@@ -21,6 +21,9 @@ light = DirectionalLight(0xFFFFFF)
 light.position.set(-1, -1, -1).normalize()
 scene.add(light)
 
+projector = Projector()
+raycaster = Raycaster()
+
 geometry = CubeGeometry(20, 20, 20)
 
 for i in range(0, 2000):
