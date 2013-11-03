@@ -59,7 +59,9 @@ raycaster = Raycaster()
 geometry = CubeGeometry(20, 20, 20)
 
 for i in range(0, 1):
-    object = Mesh(geometry, MeshLambertMaterial({"color": random() * 0xFFFFFF}))
+    material = MeshLambertMaterial({"color": random() * 0xFFFFFF})
+    print material.emissive
+    object = Mesh(geometry, material)
     print object.material.emissive
 
 #    object.position.x = random() * 800.0 - 400.0
