@@ -28,6 +28,10 @@ for i in range(0, 10):
     object.position.y = random() * 800.0 - 400.0
     object.position.z = random() * 800.0 - 400.0
     
+    object.rotation.x = random() * 800.0 - 400.0
+    object.rotation.y = random() * 800.0 - 400.0
+    object.rotation.z = random() * 800.0 - 400.0
+    
     scene.add(object)
 
 workbench = Workbench(renderer, camera)
