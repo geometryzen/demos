@@ -6,7 +6,7 @@ scene = Scene()
 renderer = WebGLRenderer()
 
 
-workbench = Workbench(renderer, space.camera)
+workbench = Workbench(renderer, camera)
 
 def tick(t):
     renderer.render(scene, camera)
