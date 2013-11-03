@@ -3,7 +3,7 @@ Under Construction. Nov 3, 2013.
 '''
 from three import *
 
-distance = 10.0
+distance = 10
 
 intersection = Intersection(distance)
 
