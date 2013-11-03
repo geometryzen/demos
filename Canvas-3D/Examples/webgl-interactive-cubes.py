@@ -28,7 +28,7 @@ rowC = 90
 rowS = 120
 rowR = 150
 
-output = Text("Click squares to change operator and operands. Hit Esc key to exit.", font, "white")
+output = Text("Click squares to change operator and operands. Hit Esc key to exit.", font, "black")
 output.x = 100
 output.y = rowI
 space2D.addChild(output)
