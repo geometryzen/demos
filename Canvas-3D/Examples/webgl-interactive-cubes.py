@@ -85,10 +85,11 @@ def tick(t):
 
     intersects = raycaster.intersectObjects(scene.children)
     if len(intersects) > 0:
-        print intersects[0]
-        if INTERSECTED != intersects[0].object:
-            if INTERSECTED:
-                print INTERSECTED
+        print "Intersection!"
+#        print intersects[0]
+#        if INTERSECTED != intersects[0].object:
+#            if INTERSECTED:
+#                print INTERSECTED
 
     renderer.render(scene, camera)
     
