@@ -65,6 +65,7 @@ def onDocumentMouseMove(event):
     event.preventDefault()
     mouse.x = (event.clientX / window.innerWidth) * 2.0 - 1.0
     mouse.y = (event.clientY / window.innerHeight) * 2.0 + 1.0
+    print mouse
 
 def tick(t):
     theta = omega * t
