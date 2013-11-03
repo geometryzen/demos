@@ -20,7 +20,7 @@ geometry = CubeGeometry(20, 20, 20)
 
 for i in range(0, 10):
     object = Mesh(geometry, MeshLambertMaterial({"color": random() * 0xFFFFFF}))
-    print i
+    scene.add(object)
 
 workbench = Workbench(renderer, camera)
 
