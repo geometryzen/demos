@@ -9,7 +9,7 @@ renderer = WebGLRenderer()
 workbench = Workbench(renderer, space.camera)
 
 def tick(t):
-    space.render()
+    renderer.render(scene, camera)
     
 def terminate(t):
     return t > 4
