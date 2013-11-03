@@ -1,1 +1,3 @@
-# Intersection.py
+from three import *
+
+i = Intersection()
