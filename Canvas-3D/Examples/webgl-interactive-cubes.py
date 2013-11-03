@@ -1,6 +1,7 @@
 from three import *
 from browser import *
 from workbench import *
+from math import random
 
 scene = Scene()
 renderer = WebGLRenderer()
@@ -14,6 +15,8 @@ scene.add(light)
 light = DirectionalLight(0xFFFFFF)
 light.position.set(-1, -1, -1).normalize()
 scene.add(light)
+
+geometry = CubeGeometry(20, 20, 20)
 
 workbench = Workbench(renderer, camera)
 
