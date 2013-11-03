@@ -47,6 +47,8 @@ for i in range(0, 2000):
     
     scene.add(object)
 
+print scene.children
+    
 workbench = Workbench(renderer, camera)
 
 def escKey(event, downFlag):
@@ -80,7 +82,7 @@ def tick(t):
     projector.unprojectVector(vector, camera)
     raycaster.set(camera.position, vector.sub(camera.position).normalize())
     
-    intersects = raycaster.intersectObjects(scene.children)
+    #intersects = raycaster.intersectObjects(scene.children)
     
     renderer.render(scene, camera)
     
