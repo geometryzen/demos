@@ -73,7 +73,7 @@ def tick(t):
     camera.position.z = radius * cos(theta)
     camera.lookAt(scene.position)
     
-    vector = mouse.copy()
+    vector = mouse.clone()
     
     renderer.render(scene, camera)
     
