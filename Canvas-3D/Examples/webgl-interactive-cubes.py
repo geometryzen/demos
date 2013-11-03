@@ -59,21 +59,21 @@ raycaster = Raycaster()
 
 geometry = CubeGeometry(20, 20, 20)
 
-for i in range(0, 1):
+for i in range(0, 10):
     material = MeshLambertMaterial({"color": random() * 0xFFFFFF})
     mesh = Mesh(geometry, material)
 
-#    object.position.x = random() * 800.0 - 400.0
-#    object.position.y = random() * 800.0 - 400.0
-#    object.position.z = random() * 800.0 - 400.0
+    mesh.position.x = random() * 800.0 - 400.0
+    mesh.position.y = random() * 800.0 - 400.0
+    mesh.position.z = random() * 800.0 - 400.0
+
+    mesh.rotation.x = random() * 2.0 * pi
+    mesh.rotation.y = random() * 2.0 * pi
+    mesh.rotation.z = random() * 2.0 * pi
     
-#    object.rotation.x = random() * 2.0 * pi
-#    object.rotation.y = random() * 2.0 * pi
-#    object.rotation.z = random() * 2.0 * pi
-    
-#    object.scale.x = random() + 0.5
-#    object.scale.y = random() + 0.5
-#    object.scale.z = random() + 0.5
+    mesh.scale.x = random() + 0.5
+    mesh.scale.y = random() + 0.5
+    mesh.scale.z = random() + 0.5
 
     scene.add(mesh)
     
@@ -101,7 +101,7 @@ def onDocumentMouseMove(event):
 
 def tick(t):
     global INTERSECTED, currentHex
-    theta = 0#omega * t
+    theta = omega * t
     
     camera.position.x = radius * sin(theta)
     camera.position.y = radius * sin(theta)
@@ -127,7 +127,6 @@ def tick(t):
             INTERSECTED.material.emissive.setHex(currentHex)
         INTERSECTED = None
 
-    output.text = str(currentHex)
     renderer.render(scene, camera)
     space2D.render()
     
