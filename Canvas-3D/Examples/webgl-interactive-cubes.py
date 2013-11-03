@@ -22,7 +22,7 @@ scene.add(light)
 
 geometry = CubeGeometry(20, 20, 20)
 
-for i in range(0, 10):
+for i in range(0, 1000):
     object = Mesh(geometry, MeshLambertMaterial({"color": random() * 0xFFFFFF}))
     object.position.x = random() * 800.0 - 400.0
     object.position.y = random() * 800.0 - 400.0
