@@ -10,7 +10,7 @@ far = 10000.0
 
 raycaster = Raycaster(origin, direction, near, far)
 
-print raycaster.origin
+print raycaster.direction
 print raycaster.near
 print raycaster.far
 
