@@ -32,6 +32,10 @@ for i in range(0, 10):
     object.rotation.y = random() * 2.0 * pi
     object.rotation.z = random() * 2.0 * pi
     
+    object.scale.x = random() * 0.5
+    object.scale.y = random() * 0.5
+    object.scale.z = random() * 0.5
+    
     scene.add(object)
 
 workbench = Workbench(renderer, camera)
