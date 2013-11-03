@@ -3,9 +3,10 @@ from browser import *
 from workbench import *
 
 scene = Scene()
+renderer = WebGLRenderer()
 
 
-workbench = Workbench(space.renderer, space.camera)
+workbench = Workbench(renderer, space.camera)
 
 def tick(t):
     space.render()
