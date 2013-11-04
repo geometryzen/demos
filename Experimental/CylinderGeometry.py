@@ -15,7 +15,7 @@ def setUp():
     workbench.setUp()
 
     material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 2})
-    mesh = CylinderBuilder().axis(e1).radius(1).height(4).segments(3).material(material).build()
+    mesh = CylinderBuilder().axis(e3).radius(1).height(4).segments(3).material(material).build()
 
     space.add(mesh)
 
