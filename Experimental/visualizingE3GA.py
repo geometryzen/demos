@@ -118,7 +118,8 @@ composite.add(cylinder)
 composite.add(cube)
 space3D.add(composite)
 composite.visible = False
-#probeB.grade3 = composite
+print composite.visible
+probeB.grade3 = composite
 space3D.add(probeB.grade0)
 space3D.add(probeB.grade1)
 space3D.add(probeB.grade2)
