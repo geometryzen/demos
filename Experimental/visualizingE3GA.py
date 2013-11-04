@@ -117,7 +117,7 @@ cube = CubeBuilder().wireframe(True).color(colorB).build()
 composite.add(cylinder)
 composite.add(cube)
 arrow = ArrowBuilder().wireframe(True).color(colorB).build()
-arrow.position = VectorE3(0, -0.5, 0.5)
+arrow.position = VectorE3(0, 0.5, 0.5)
 composite.add(arrow)
 probeB.grade3 = composite
 space3D.add(probeB.grade0)
