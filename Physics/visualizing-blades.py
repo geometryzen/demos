@@ -74,12 +74,12 @@ outputEq.x = 400
 outputEq.y = 120
 space2D.addChild(outputEq)
 
-outputC = Text("", "20px Helvetica", "blue")
+outputC = Text("", "20px Helvetica", colorC)
 outputC.x = 500
 outputC.y = 120
 space2D.addChild(outputC)
 
-outputC2 = Text("", "20px Helvetica", "blue")
+outputC2 = Text("", "20px Helvetica", colorC)
 outputC2.x = 500
 outputC2.y = 140
 space2D.addChild(outputC2)
@@ -96,7 +96,7 @@ space3D.add(probeA.grade1)
 space3D.add(probeA.grade2)
 space3D.add(probeA.grade3)
 
-probeB  = ProbeBuilderE3().wireframe(True).segments(6).color(0x00FF00).build()
+probeB  = ProbeBuilderE3().wireframe(True).segments(6).color(colorB).build()
 space3D.add(probeB.grade0)
 space3D.add(probeB.grade1)
 space3D.add(probeB.grade2)
