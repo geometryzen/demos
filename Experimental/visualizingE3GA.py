@@ -7,7 +7,7 @@ from geometry import *
 blades = [ScalarE3(1), e1, e2, e3, e1 ^ e2, e2 ^ e3, e3 ^ e1, e1 ^ e2 ^ e3]
 binops = ["+", "-", "*", "<<", "^", ">>"]
 indexA = 1
-indexB = 2
+indexB = 7
 indexOp = 2
 
 timeOut = 600
@@ -99,8 +99,6 @@ outputC2.y = rowR
 space2D.addChild(outputC2)
 
 probeC  = ProbeBuilderE3().wireframe(True).segments(18).color(colorC).build()
-cylinder = CylinderBuilder().build()
-probeC.grade3 = cylinder
 space3D.add(probeC.grade0)
 space3D.add(probeC.grade1)
 space3D.add(probeC.grade2)
@@ -113,6 +111,8 @@ space3D.add(probeA.grade2)
 space3D.add(probeA.grade3)
 
 probeB  = ProbeBuilderE3().wireframe(True).segments(18).color(colorB).build()
+cylinder = CylinderBuilder().build()
+probeB.grade3 = cylinder
 space3D.add(probeB.grade0)
 space3D.add(probeB.grade1)
 space3D.add(probeB.grade2)
