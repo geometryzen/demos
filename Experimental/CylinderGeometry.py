@@ -1,3 +1,6 @@
+'''
+Under Construction. Nov 4, 2013 (axis)
+'''
 from three import *
 from geometry import *
 from workbench import *
