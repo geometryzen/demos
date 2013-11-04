@@ -15,7 +15,7 @@ timeOut = 600
 space3D = CartesianSpace()
 canvas3D = space3D.renderer.domElement
 workbench3D = Workbench3D(canvas3D, space3D.renderer, space3D.camera)
-space3D.camera.position = 1.5 * (e1 + e2 + e3)
+space3D.camera.position = 1.5 * (e1 + 2.0 * e2 + e3)
 space3D.camera.lookAt(VectorE3(0,0,0))
    
 canvas2D = document.createElement("canvas")
