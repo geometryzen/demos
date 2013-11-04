@@ -30,6 +30,7 @@ colorA = "#FF0000" # "#7014CC" # Purple Heart
 colorB = "#00FF00" # "#19FF65" # Spring Green
 colorC = "#0000FF" # "#FF9900" # Orange Peel
 colorP = "#999999" # Light Gray
+wireframe = False
 
 font = "20px Helvetica"
 
@@ -98,19 +99,19 @@ outputC2.x = 500
 outputC2.y = rowR
 space2D.addChild(outputC2)
 
-probeC  = ProbeBuilderE3().wireframe(True).segments(18).color(colorC).build()
+probeC  = ProbeBuilderE3().wireframe(wireframe).segments(18).color(colorC).build()
 space3D.add(probeC.grade0)
 space3D.add(probeC.grade1)
 space3D.add(probeC.grade2)
 space3D.add(probeC.grade3)
 
-probeA  = ProbeBuilderE3().wireframe(True).segments(18).color(colorA).build()
+probeA  = ProbeBuilderE3().wireframe(wireframe).segments(18).color(colorA).build()
 space3D.add(probeA.grade0)
 space3D.add(probeA.grade1)
 space3D.add(probeA.grade2)
 space3D.add(probeA.grade3)
 
-probeB  = ProbeBuilderE3().wireframe(True).segments(18).color(colorB).build()
+probeB  = ProbeBuilderE3().wireframe(wireframe).segments(18).color(colorB).build()
 composite = Object3D()
 #cube = CubeBuilder().wireframe(True).color(colorB).build()
 #composite.add(cube)
