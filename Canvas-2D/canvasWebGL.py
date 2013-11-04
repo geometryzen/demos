@@ -2,6 +2,7 @@
 # This is really a 3D graphics example.
 from three import *
 from browser import *
+from workbench import *
 
 moveForward = False
 moveBackward = False
