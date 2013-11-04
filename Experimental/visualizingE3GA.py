@@ -99,6 +99,7 @@ outputC2.y = rowR
 space2D.addChild(outputC2)
 
 probeC  = ProbeBuilderE3().wireframe(True).segments(18).color(colorC).build()
+cylinder = CylinderBuilder().build()
 space3D.add(probeC.grade0)
 space3D.add(probeC.grade1)
 space3D.add(probeC.grade2)
