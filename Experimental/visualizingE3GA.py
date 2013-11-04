@@ -4,10 +4,6 @@ from browser import *
 from workbench import *
 from geometry import *
 
-def invisible(x):
-    print x
-    x.visible = False
-
 blades = [ScalarE3(1), e1, e2, e3, e1 ^ e2, e2 ^ e3, e3 ^ e1, e1 ^ e2 ^ e3]
 binops = ["+", "-", "*", "<<", "^", ">>"]
 indexA = 1
