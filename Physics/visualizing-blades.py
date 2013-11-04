@@ -9,6 +9,8 @@ blades = [ScalarE3(1), e1, e2, e3, e1 ^ e2, e2 ^ e3, e3 ^ e1, e1 ^ e2 ^ e3]
 indexA = 1
 indexB = 2
 
+colorA = "0xFF0000"
+
 timeOut = 600
 
 space3D = CartesianSpace()
@@ -31,7 +33,7 @@ output.y = 60
 space2D.addChild(output)
 
 buttonA = space2D.addChild(Shape())
-buttonA.graphics.beginFill("red").drawRect(0, 0, 50, 20).endFill()
+buttonA.graphics.beginFill(colorA).drawRect(0, 0, 50, 20).endFill()
 buttonA.x = 100
 buttonA.y = 100
 
@@ -45,7 +47,7 @@ outputA.x = 100
 outputA.y = 120
 space2D.addChild(outputA)
 
-outputA2 = Text("", "20px Helvetica", "red")
+outputA2 = Text("", "20px Helvetica", colorA)
 outputA2.x = 100
 outputA2.y = 140
 space2D.addChild(outputA2)
@@ -80,7 +82,7 @@ outputC2.x = 500
 outputC2.y = 140
 space2D.addChild(outputC2)
 
-probeC  = ProbeBuilderE3().wireframe(True).segments(6).color(0x0000FF).build()
+probeC  = ProbeBuilderE3().wireframe(True).segments(6).color(colorA).build()
 space3D.add(probeC.grade0)
 space3D.add(probeC.grade1)
 space3D.add(probeC.grade2)
