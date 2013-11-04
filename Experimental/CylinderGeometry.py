@@ -4,7 +4,7 @@ from workbench import *
 from browser import *
 
 space = CartesianSpace()
-timeOut = 6
+timeOut = 4
 
 workbench = Workbench3D(space.renderer.canvas, space.renderer, space.camera)
 
