@@ -13,21 +13,11 @@ workbench2D = Workbench2D(canvas2D)
 space2D = Stage(canvas2D)
 space2D.autoClear = True
 
-colorA = "#7014CC" # Purple Heart
-colorB = "#19FF65" # Spring Green
-colorC = "#FF9900" # Orange Peel
-colorP = "#999999" # Light Gray
-
 font = "20px Helvetica"
-
-rowI = 60
-rowC = 90
-rowS = 120
-rowR = 150
 
 output = Text("Hit Esc key to exit.", font, "black")
 output.x = 100
-output.y = rowI
+output.y = 60
 space2D.addChild(output)
 
 radius = 100.0
