@@ -26,9 +26,9 @@ workbench2D = Workbench2D(canvas2D)
 space2D = Stage(canvas2D)
 space2D.autoClear = True
 
-colorA = "#7014CC" # Purple Heart
-colorB = "#19FF65" # Spring Green
-colorC = "#FF9900" # Orange Peel
+colorA = "#FF0000" # "#7014CC" # Purple Heart
+colorB = "#00FF00" # "#19FF65" # Spring Green
+colorC = "#0000FF" # "#FF9900" # Orange Peel
 colorP = "#999999" # Light Gray
 
 font = "20px Helvetica"
