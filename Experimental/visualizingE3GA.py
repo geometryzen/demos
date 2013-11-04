@@ -112,7 +112,7 @@ space3D.add(probeA.grade3)
 
 probeB  = ProbeBuilderE3().wireframe(True).segments(18).color(colorB).build()
 composite = Object3D()
-cylinder = CylinderBuilder().wireframe(True).build()
+cylinder = CylinderBuilder().wireframe(True).color(colorB).build()
 cube = CubeBuilder().wireframe(True).build()
 composite.add(cylinder)
 composite.add(cube)
