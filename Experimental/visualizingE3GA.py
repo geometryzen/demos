@@ -116,9 +116,6 @@ cylinder = CylinderBuilder().wireframe(True).color(colorB).build()
 cube = CubeBuilder().wireframe(True).color(colorB).build()
 composite.add(cylinder)
 composite.add(cube)
-space3D.add(composite)
-composite.visible = False
-print composite.visible
 probeB.grade3 = composite
 space3D.add(probeB.grade0)
 space3D.add(probeB.grade1)
