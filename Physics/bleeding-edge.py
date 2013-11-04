@@ -1,6 +1,3 @@
-'''
-This program may not work for you because I am working on it right now!
-'''
 from browser import *
 from three import *
 from workbench import *
