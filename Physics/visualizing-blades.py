@@ -10,6 +10,8 @@ indexA = 1
 indexB = 2
 
 colorA = "#FF0000"
+colorB = "#00FF00"
+colorC = "#0000FF"
 
 timeOut = 600
 
@@ -38,11 +40,11 @@ buttonA.x = 100
 buttonA.y = 100
 
 buttonB = space2D.addChild(Shape())
-buttonB.graphics.beginFill("green").drawRect(0, 0, 50, 20).endFill()
+buttonB.graphics.beginFill(colorB).drawRect(0, 0, 50, 20).endFill()
 buttonB.x = 300
 buttonB.y = 100
 
-outputA = Text("", "20px Helvetica", "red")
+outputA = Text("", "20px Helvetica", colorA)
 outputA.x = 100
 outputA.y = 120
 space2D.addChild(outputA)
@@ -57,12 +59,12 @@ outputOp.x = 200
 outputOp.y = 120
 space2D.addChild(outputOp)
 
-outputB = Text("", "20px Helvetica", "green")
+outputB = Text("", "20px Helvetica", colorB)
 outputB.x = 300
 outputB.y = 120
 space2D.addChild(outputB)
 
-outputB2 = Text("", "20px Helvetica", "green")
+outputB2 = Text("", "20px Helvetica", colorB)
 outputB2.x = 300
 outputB2.y = 140
 space2D.addChild(outputB2)
@@ -82,13 +84,13 @@ outputC2.x = 500
 outputC2.y = 140
 space2D.addChild(outputC2)
 
-probeC  = ProbeBuilderE3().wireframe(True).segments(6).color(colorA).build()
+probeC  = ProbeBuilderE3().wireframe(True).segments(6).color(colorC).build()
 space3D.add(probeC.grade0)
 space3D.add(probeC.grade1)
 space3D.add(probeC.grade2)
 space3D.add(probeC.grade3)
 
-probeA  = ProbeBuilderE3().wireframe(True).segments(6).color(0xFF0000).build()
+probeA  = ProbeBuilderE3().wireframe(True).segments(6).color(colorA).build()
 space3D.add(probeA.grade0)
 space3D.add(probeA.grade1)
 space3D.add(probeA.grade2)
