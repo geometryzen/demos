@@ -114,7 +114,7 @@ probeB  = ProbeBuilderE3().wireframe(True).segments(18).color(colorB).build()
 composite = Object3D()
 cube = CubeBuilder().wireframe(True).color(colorB).build()
 composite.add(cube)
-arrow = ArrowBuilder().wireframe(True).color(colorB).build()
+arrow = ArrowBuilder().axis(e1).wireframe(True).color(colorB).build()
 arrow.position = VectorE3(-0.5, 0.5, 0.0)
 composite.add(arrow)
 probeB.grade3 = composite
