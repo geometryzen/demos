@@ -16,6 +16,7 @@ arrow = Mesh(geometry, material)
 #arrow = ArrowBuilder().scale(length).segments(segments).material(material).build()
 arrow.geometry.name = 'Foo'
 
+print repr(geometry)
 print repr(arrow.geometry)
 print "uuid:            " + str(arrow.geometry.uuid)
 print "name:            " + str(arrow.geometry.name)
