@@ -5,12 +5,13 @@ from workbench import *
 space = CartesianSpace()
 
 # All arguments are optional and the defaults, in order, are as follows.
-length = 6
+scale = 6
+length = 1
 segments = 12
 radiusShaft = 0.01
 radiusCone = 0.08
 lengthCone = 0.2
-geometry = ArrowGeometry(1, ScalarE3(1), segments, length, radiusShaft, radiusCone, lengthCone)
+geometry = ArrowGeometry(scale, ScalarE3(1), segments, length, radiusShaft, radiusCone, lengthCone)
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1})
 arrow = Mesh(geometry, material)
 #arrow = ArrowBuilder().scale(length).segments(segments).material(material).build()
