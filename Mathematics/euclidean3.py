@@ -88,7 +88,7 @@ except AssertionError as e:
 else:
     print "Expecting error when assigning to an immutable Euclidean3."
     
-# You can also make a Euclidean3 immutable upon construction by setting the mutable flag.
+print "You can also make a Euclidean3 immutable upon construction by setting the mutable flag."
 zero = Euclidean3(0, 0, 0, 0, 0, 0, 0, 0, False)
 assertEqual(False, zero.mutable)
 
