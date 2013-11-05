@@ -32,7 +32,7 @@ cosTheta = a.dot(b)/(a.magnitude()*b.magnitude())
 print "cos(theta) = " + str(cosTheta)
 sinTheta = sqrt(1 - cosTheta * cosTheta)
 print "sin(theta) = " + str(sinTheta)
-print "|a cross b|= " + str(c.length())
+print "|a cross b|= " + str(c.magnitude())
 print "|a||b|sin(theta)= " + str(a.magnitude() * b.magnitude() * sinTheta)
 print "3) The direction of a cross b follows the right-hand rule."
 i = VectorE3(1, 0, 0)
