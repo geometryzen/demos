@@ -252,11 +252,11 @@ assertEqual(True, R.mutable)
 R.constantify()
 assertEqual(False, R.mutable)
 
-# The reversion of a multivector is the multivector obtained by reversing the vectors.
-# We use the Python ~ unary operator to perform reversion.  
+print "The reversion of a multivector is the multivector obtained by reversing the vectors."
+print "We use the Python ~ unary operator to perform reversion." 
 A = Euclidean3(1, 2, 3, 4, 5, 6, 7, 8)
 revA = ~A
-# Under reversion, the signs of the components (by grade) follow a ++--++--... pattern
+print "Under reversion, the signs of the components (by grade) follow a ++--++--... pattern."
 assertEqual(revA.w, A.w)
 assertEqual(revA.x, A.x)
 assertEqual(revA.y, A.y)
