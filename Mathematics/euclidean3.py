@@ -120,7 +120,7 @@ assertEqual(mass.zx, 0)
 assertEqual(mass.xyz, 0)
 assertEqual(True, mass.mutable)
 
-# You can create scalar constants by setting the mutable flag on construction.
+print "You can create scalar constants by setting the mutable flag on construction."
 one = ScalarE3(1, False)
 assertEqual(one.w, 1)
 assertEqual(one.x, 0)
@@ -132,7 +132,7 @@ assertEqual(one.zx, 0)
 assertEqual(one.xyz, 0)
 assertEqual(False, one.mutable)
 
-# Constructing a vector, such as a position, involves the x,y,z components of the Euclidean3.
+print "Constructing a vector, such as a position, involves the x,y,z components of the Euclidean3."
 position = Euclidean3(0, 2, 3, 5, 0, 0, 0, 0)
 assertEqual(position.w, 0)
 assertEqual(position.x, 2)
