@@ -11,10 +11,9 @@ segments = 12
 radiusShaft = 0.01
 radiusCone = 0.08
 lengthCone = 0.2
-#geometry = ArrowGeometry(scale, ScalarE3(1), segments, length, radiusShaft, radiusCone, lengthCone, e2)
+geometry = ArrowGeometry(scale, ScalarE3(1), segments, length, radiusShaft, radiusCone, lengthCone, e2)
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1})
-#arrow = Mesh(geometry, material)
-arrow = ArrowBuilder().axis(e3).scale(scale).segments(segments).material(material).build()
+arrow = Mesh(geometry, material)
 arrow.geometry.name = 'Foo'
 
 print repr(arrow.geometry)
