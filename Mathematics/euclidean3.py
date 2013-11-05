@@ -178,9 +178,9 @@ assertEqual("3*e1+4*e2+12*e3", str(VectorE3(3, 4, 12)))
 
 assertEqual(VectorE3(3, 4, 12).magnitude(), 13)
 
-# The scalar product is available using the Python % operator.
-# Between vectors this is referred to as the dot product.
-# Here are the orthonormal conditions satisfied by our basis vectors.
+print "The scalar product is available using the Python % operator."
+print "Between vectors this is referred to as the dot product."
+print "Here are the orthonormal conditions satisfied by our basis vectors."
 assertEqual(1, e1 % e1)
 assertEqual(1, e2 % e2)
 assertEqual(1, e3 % e3)
