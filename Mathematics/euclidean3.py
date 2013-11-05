@@ -108,7 +108,7 @@ assertEqual(mass.zx, 0)
 assertEqual(mass.xyz, 0)
 assertEqual(True, mass.mutable)
 
-# There is a handy abbreviation for constructing a scalar quantity - ScalarE3(value [,mutable]}
+print "There is a handy abbreviation for constructing a scalar quantity - ScalarE3(value [,mutable]}"
 mass = ScalarE3(23)
 assertEqual(mass.w, 23)
 assertEqual(mass.x, 0)
