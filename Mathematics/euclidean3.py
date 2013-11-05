@@ -96,7 +96,7 @@ assertEqual(False, zero.mutable)
 
 print "Most of the time, you will want to construct scalars, vectors or rotors."
 
-# Constructing a scalar, such as an inertial mass, involves only the 'w' component of the Euclidean3. 
+print "Constructing a scalar, such as an inertial mass, involves only the 'w' component of the Euclidean3."
 mass = Euclidean3(19, 0, 0, 0, 0, 0, 0, 0)
 assertEqual(mass.w, 19)
 assertEqual(mass.x, 0)
