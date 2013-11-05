@@ -7,7 +7,7 @@ space = CartesianSpace()
 
 # Specify an attitude as the rotor that rotates e2(j) onto e3(k)
 rotor = exp(-BivectorE3(0,1,0)*pi/4)
-shape = ArrowBuilder().wireframe(False).color(0x0000FF).attitude(rotor).build()
+shape = ArrowBuilder().wireframe(False).color(0x0000FF).axis(e3).segments(6).build()
 space.add(shape)
 for face in shape.geometry.faces:
     normal = ArrowBuilder().axis(e1).build()
