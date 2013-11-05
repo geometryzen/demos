@@ -6,7 +6,7 @@ space = CartesianSpace()
 
 # All arguments are optional and the defaults, in order, are as follows.
 scale = 6.0
-length = 1
+length = 1.0
 segments = 12
 radiusShaft = 0.01
 radiusCone = 0.08
