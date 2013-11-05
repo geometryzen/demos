@@ -176,8 +176,7 @@ assertEqual("e2", str(e2))
 assertEqual("e3", str(e3))
 assertEqual("3*e1+4*e2+12*e3", str(VectorE3(3, 4, 12)))
 
-# TODO: Not sure whether to use length or something else.
-assertEqual(13, len(VectorE3(3, 4, 12)))
+assertEqual(VectorE3(3, 4, 12).magnitude(), 13)
 
 # The scalar product is available using the Python % operator.
 # Between vectors this is referred to as the dot product.
