@@ -12,7 +12,7 @@ space.add(shape)
 for face in shape.geometry.faces:
     normal = ArrowBuilder().axis(e1).build()
     normal.position = face.centroid
-    #space.add(normal)
+    space.add(normal)
 
 workbench = Workbench(space.renderer, space.camera)
 
