@@ -85,7 +85,7 @@ print "Testing immutability..."
 try:
     a.w = 1
 except AssertionError as e:
-    print "We got an AssertionError" + e
+    print "We got an AssertionError" + repr(e)
     #assertEqual(str(e),"AssertionError: Quantity is not mutable on line 85")
 else:
     print "Expecting error when assigning to an immutable Euclidean3."
