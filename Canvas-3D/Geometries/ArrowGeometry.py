@@ -16,10 +16,10 @@ material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1})
 arrow = Mesh(geometry, material)
 arrow.geometry.name = 'Foo'
 
-print repr(arrow.geometry)
+print repr(geometry)
 print "uuid:            " + str(arrow.geometry.uuid)
 print "name:            " + str(arrow.geometry.name)
-print arrow.geometry
+print geometry
 
 space.add(arrow)
 
