@@ -34,7 +34,7 @@ print "thetaStart:     " + str(sphere.thetaStart)
 print "thetaLength:    " + str(sphere.thetaLength)
 print sphere
 
-mesh = Mesh(sphere, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
+mesh = Mesh(sphere, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":2}))
 scene.add(mesh)
 
 movement = VectorE3(0.02, 0.02, 0.02)
