@@ -19,6 +19,8 @@ arrow.geometry.name = 'Foo'
 for face in arrow.geometry.faces:
     print face.centroid
     print face.normal
+    normal = ArrowBuilder().axis(e1).build()
+    space.add(normal)
 
 
 print repr(arrow.geometry)
