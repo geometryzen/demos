@@ -35,7 +35,7 @@ def tick(t):
     space.render()
     
 def terminate(t):
-    return t > 4
+    return t > 20
 
 def setUp():
     workbench.setUp()
