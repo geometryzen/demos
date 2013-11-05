@@ -33,7 +33,7 @@ colorC = "#FF9900" # Orange Peel
 #colorB = "#00FF00" # "#19FF65" # Spring Green
 #colorC = "#0000FF" # "#FF9900" # Orange Peel
 colorP = "#999999" # Light Gray
-wireframe = True
+wireframe = False
 
 font = "20px Helvetica"
 
