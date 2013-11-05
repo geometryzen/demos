@@ -5,14 +5,9 @@ from math import exp, pi
 
 space = CartesianSpace()
 
-# Specify an attitude as the rotor that rotates e2(j) onto e3(k)
 rotor = exp(-BivectorE3(0,1,0)*pi/4)
 shape = ArrowBuilder().scale(2).wireframe(False).color(0x0000FF).axis(e3).segments(6).build()
 space.add(shape)
-for face in shape.geometry.faces:
-    normal = ArrowBuilder().scale(face.normal.magnitude()).axis(e1).build()
-    normal.position = face.centroid + (face.normal / 2)
-    space.add(normal)
 
 workbench = Workbench(space.renderer, space.camera)
 
