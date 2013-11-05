@@ -17,9 +17,8 @@ material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1})
 arrow = ArrowBuilder().axis(e3).scale(scale).segments(segments).material(material).build()
 arrow.geometry.name = 'Foo'
 for face in arrow.geometry.faces:
-    print face.centroid
-    print face.normal
     normal = ArrowBuilder().axis(e1).build()
+    normal.position = face.centroid
     space.add(normal)
 
 
