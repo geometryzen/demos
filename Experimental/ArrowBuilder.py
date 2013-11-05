@@ -10,7 +10,7 @@ rotor = exp(-BivectorE3(0,1,0)*pi/4)
 shape = ArrowBuilder().scale(2).wireframe(False).color(0x0000FF).axis(e3).segments(6).build()
 space.add(shape)
 for face in shape.geometry.faces:
-    normal = ArrowBuilder().axis(e2).build()
+    normal = ArrowBuilder().axis(e1 + e2).build()
     normal.position = face.centroid
     space.add(normal)
 
