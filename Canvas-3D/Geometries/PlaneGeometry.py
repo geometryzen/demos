@@ -5,7 +5,7 @@ from workbench import *
 space = CartesianSpace()
 
 width = 4.0
-depth = 4
+depth = 4.0
 widthSegments = 8
 depthSegments = 8
 plane = PlaneGeometry(width, depth)#, widthSegments, depthSegments)
