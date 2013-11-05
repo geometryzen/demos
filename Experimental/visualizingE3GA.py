@@ -135,7 +135,7 @@ arrow.position = VectorE3(+0.5, -0.5, +0.0)
 composite.add(arrow)
 
 pipe = CylinderBuilder().radius(0.01).axis(e3).wireframe(wireframe).color(colorB).build()
-pipe.position = VectorE3(+0.0, +0.0, +0.0)
+pipe.position = VectorE3(+0.5, +0.5, +0.0)
 composite.add(pipe)
 
 probeB.grade3 = composite
