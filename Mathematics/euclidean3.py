@@ -64,7 +64,7 @@ assertEqual(a.yz, 13)
 assertEqual(a.zx, 17)
 assertEqual(a.xyz, 19)
 
-# You can't assign anything other than a number to a coordinate of Euclidean3.
+print "You can't assign anything other than a number to a coordinate of Euclidean3."
 try:
     a.w = "You can't do this"
 except TypeError as e:
