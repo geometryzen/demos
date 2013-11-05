@@ -18,7 +18,8 @@ def setUp():
     mesh = CylinderBuilder().axis(e2).radius(1).height(4).segments(3).material(material).build()
     geometry = mesh.geometry
     faces = geometry.faces
-    print faces
+    for face in faces:
+        print face
 
     space.add(mesh)
 
