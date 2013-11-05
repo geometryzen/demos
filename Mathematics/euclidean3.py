@@ -171,10 +171,10 @@ assertEqual(e1.xyz, 0)
 assertEqual(False, e1.mutable)
 
 # Euclidean3 adopts Hamilton's notation for basis vectors - i,j,k.
-assertEqual("i", str(e1))
-assertEqual("j", str(e2))
-assertEqual("k", str(e3))
-assertEqual("3*i+4*j+12*k", str(VectorE3(3, 4, 12)))
+assertEqual("e1", str(e1))
+assertEqual("e2", str(e2))
+assertEqual("e3", str(e3))
+assertEqual("3*e1+4*e2+12*e3", str(VectorE3(3, 4, 12)))
 
 # TODO: Not sure whether to use length or something else.
 assertEqual(13, len(VectorE3(3, 4, 12)))
