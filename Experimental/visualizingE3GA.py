@@ -7,7 +7,7 @@ from geometry import *
 blades = [ScalarE3(1), e1, e2, e3, e1 ^ e2, e2 ^ e3, e3 ^ e1, e1 ^ e2 ^ e3, e1 ^ e3 ^ e2]
 binops = ["+", "-", "*", "<<", "^", ">>"]
 indexA = 1
-indexB = 6
+indexB = 5
 indexOp = 2
 
 timeOut = 600
