@@ -103,7 +103,7 @@ outputC2.y = rowR
 space2D.addChild(outputC2)
 
 probeC  = ProbeBuilderE3().wireframe(wireframe).segments(18).color(colorC).build()
-probeC.grade3 = VortexBuilder().wireframe(wireframe).build()
+probeC.grade3 = VolumeBuilder().wireframe(wireframe).build()
 space3D.add(probeC.grade0)
 space3D.add(probeC.grade1)
 space3D.add(probeC.grade2)
