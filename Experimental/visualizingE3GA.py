@@ -115,59 +115,6 @@ space3D.add(probeA.grade2)
 space3D.add(probeA.grade3)
 
 probeB  = ProbeBuilderE3().wireframe(wireframe).segments(18).color(colorB).build()
-composite = Object3D()
-#cube = CubeBuilder().wireframe(True).color(colorB).build()
-#composite.add(cube)
-arrow = ArrowBuilder().axis(-e1).wireframe(wireframe).color(colorB).build()
-arrow.position = VectorE3(+0.0, +0.5, -0.5)
-composite.add(arrow)
-
-arrow = ArrowBuilder().axis(+e2).wireframe(wireframe).color(colorB).build()
-arrow.position = VectorE3(+0.5, +0.0, -0.5)
-composite.add(arrow)
-
-arrow = ArrowBuilder().axis(+e3).wireframe(wireframe).color(colorB).build()
-arrow.position = VectorE3(-0.5, +0.5, +0.0)
-composite.add(arrow)
-
-pipe = CylinderBuilder().radius(0.01).axis(+e1).wireframe(wireframe).color(colorB).build()
-pipe.position = VectorE3(+0.0, -0.5, +0.5)
-composite.add(pipe)
-
-pipe = CylinderBuilder().radius(0.01).axis(e2).wireframe(wireframe).color(colorB).build()
-pipe.position = VectorE3(-0.5, +0.0, +0.5)
-composite.add(pipe)
-
-pipe = CylinderBuilder().radius(0.01).axis(e3).wireframe(wireframe).color(colorB).build()
-pipe.position = VectorE3(+0.5, -0.5, +0.0)
-composite.add(pipe)
-
-pipe = CylinderBuilder().radius(0.01).axis(e3).wireframe(wireframe).color(colorB).build()
-pipe.position = VectorE3(+0.5, +0.5, +0.0)
-composite.add(pipe)
-
-pipe = CylinderBuilder().radius(0.01).axis(e1).wireframe(wireframe).color(colorB).build()
-pipe.position = VectorE3(+0.0, +0.5, +0.5)
-composite.add(pipe)
-
-pipe = CylinderBuilder().radius(0.01).axis(e2).wireframe(wireframe).color(colorB).build()
-pipe.position = VectorE3(+0.5, +0.0, +0.5)
-composite.add(pipe)
-
-pipe = CylinderBuilder().radius(0.01).axis(e2).wireframe(wireframe).color(colorB).build()
-pipe.position = VectorE3(-0.5, +0.0, -0.5)
-composite.add(pipe)
-
-pipe = CylinderBuilder().radius(0.01).axis(e3).wireframe(wireframe).color(colorB).build()
-pipe.position = VectorE3(-0.5, -0.5, +0.0)
-composite.add(pipe)
-
-pipe = CylinderBuilder().radius(0.01).axis(e1).wireframe(wireframe).color(colorB).build()
-pipe.position = VectorE3(+0.0, -0.5, -0.5)
-composite.add(pipe)
-
-probeB.grade3 = composite
-
 space3D.add(probeB.grade0)
 space3D.add(probeB.grade1)
 space3D.add(probeB.grade2)
