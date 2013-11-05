@@ -16,6 +16,9 @@ material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1})
 #arrow = Mesh(geometry, material)
 arrow = ArrowBuilder().axis(e3).scale(scale).segments(segments).material(material).build()
 arrow.geometry.name = 'Foo'
+for face in arrow.geometry.faces:
+    print face
+
 
 print repr(arrow.geometry)
 print "uuid:            " + str(arrow.geometry.uuid)
