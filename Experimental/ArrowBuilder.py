@@ -1,8 +1,3 @@
-'''
-This program may not work for you because I am working on it right now!
-The main change is to unify the quantities used by the graphics API.
-Instead of Vector3 and Quaternion we use Euclidean3 (and constructors ScalarE3, VectorE3, BivectorE3, PseudoscalarE3).
-'''
 from geometry import *
 from browser import *
 from workbench import *
