@@ -34,7 +34,7 @@ def isCloseTo(actual, expect):
     quadrance = error % error
     return sqrt(quadrance) < epsilon
 
-# Euclidean3 forms a Linear or Vector Space of 2**3=8 dimensions.
+print "Euclidean3 forms a Linear or Vector Space of 2**3=8 dimensions."
 a = Euclidean3(1, 2, 3, 4, 5, 6, 7, 8)
 assertEqual(a.w, 1)
 assertEqual(a.x, 2)
