@@ -26,7 +26,7 @@ print "2) |a cross b| = |a||b|sin(theta), where theta is the angle between a and
 # This takes a bit more work because we need a definition of the angle between a and b:
 # a dot b = |a||b|cos(theta)
 print "|a| => " + str(a.magnitude())
-print "|b| => " + str(b.length())
+print "|b| => " + str(b.magnitude())
 print "a.dot(b) => " + str(a.dot(b))
 cosTheta = a.dot(b)/(a.length()*b.length())
 print "cos(theta) = " + str(cosTheta)
