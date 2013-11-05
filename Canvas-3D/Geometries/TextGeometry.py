@@ -1,3 +1,6 @@
+'''
+Under Construction.
+'''
 from three import *
 from browser import *
 from workbench import *
@@ -13,7 +16,7 @@ print "name:           " + str(text.name)
 print "uuid:           " + str(text.uuid)
 print text
 
-mesh = Mesh(text, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1}))
+mesh = Mesh(text)
 space.add(mesh)
 
 workbench = Workbench3D(space.renderer.canvas, space.renderer, space.camera)
