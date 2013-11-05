@@ -16,6 +16,8 @@ def setUp():
 
     material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 2})
     mesh = CylinderBuilder().axis(e2).radius(1).height(4).segments(3).material(material).build()
+    geometry = mesh.geometry
+    print geometry
 
     space.add(mesh)
 
