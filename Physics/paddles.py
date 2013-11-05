@@ -1,7 +1,3 @@
-'''
-This program will be used to experiment with visualizing bivectors.
-THIS IS A WORK IN PROGRESS, IT MAY NOT WORK FOR YOU AT THE MOMENT.
-'''
 from three import *
 from geometry import *
 from browser import *
