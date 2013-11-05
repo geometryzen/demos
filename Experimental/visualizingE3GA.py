@@ -158,6 +158,10 @@ pipe = CylinderBuilder().radius(0.01).axis(e2).wireframe(wireframe).color(colorB
 pipe.position = VectorE3(-0.5, +0.0, -0.5)
 composite.add(pipe)
 
+pipe = CylinderBuilder().radius(0.01).axis(e3).wireframe(wireframe).color(colorB).build()
+pipe.position = VectorE3(-0.5, -0.5, +0.0)
+composite.add(pipe)
+
 probeB.grade3 = composite
 
 space3D.add(probeB.grade0)
