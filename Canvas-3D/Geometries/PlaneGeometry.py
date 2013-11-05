@@ -6,9 +6,9 @@ space = CartesianSpace()
 
 width = 4.0
 depth = 4.0
-widthSegments = 8
-depthSegments = 8
-plane = PlaneGeometry(width, depth)#, widthSegments, depthSegments)
+widthSegments = 3
+depthSegments = 2
+plane = PlaneGeometry(width, depth, widthSegments, depthSegments)
 
 print repr(plane)
 print "width:         " + str(plane.width)
@@ -17,7 +17,7 @@ print "widthSegments: " + str(plane.widthSegments)
 print "depthSegments: " + str(plane.depthSegments)
 print plane
 
-mesh = Mesh(plane, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":2}))
+mesh = Mesh(plane, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 2}))
 space.add(mesh)
 
 workbench = Workbench(space.renderer, space.camera)
