@@ -11,7 +11,7 @@ shape = ArrowBuilder().scale(2).wireframe(False).color(0x0000FF).axis(e3).segmen
 space.add(shape)
 for face in shape.geometry.faces:
     normal = ArrowBuilder().axis(e1).build()
-    normal.position = face.centroid + (normal / 2)
+    normal.position = face.centroid + (face.normal / 2)
     space.add(normal)
 
 workbench = Workbench(space.renderer, space.camera)
