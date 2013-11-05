@@ -35,9 +35,9 @@ def onDocumentKeyDown(event):
 def setUp():
     workbench.setUp()
 
-    space.add(e1)
+#    space.add(e1)
     space.add(e2)
-    space.add(e3)
+#    space.add(e3)
     
     space.camera.position.set(2,2,2)
     space.camera.lookAt(VectorE3(0,0,0))
