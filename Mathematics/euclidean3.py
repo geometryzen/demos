@@ -92,7 +92,7 @@ print "You can also make a Euclidean3 immutable upon construction by setting the
 zero = Euclidean3(0, 0, 0, 0, 0, 0, 0, 0, False)
 assertEqual(False, zero.mutable)
 
-# Most of the time, you will want to construct scalars, vectors or rotors.
+print "Most of the time, you will want to construct scalars, vectors or rotors."
 
 # Constructing a scalar, such as an inertial mass, involves only the 'w' component of the Euclidean3. 
 mass = Euclidean3(19, 0, 0, 0, 0, 0, 0, 0)
