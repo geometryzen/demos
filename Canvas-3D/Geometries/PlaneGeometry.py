@@ -17,7 +17,7 @@ print "widthSegments: " + str(plane.widthSegments)
 print "depthSegments: " + str(plane.depthSegments)
 print plane
 
-mesh = Mesh(plane, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3}))
+mesh = Mesh(plane, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":2}))
 space.add(mesh)
 
 workbench = Workbench(space.renderer, space.camera)
