@@ -81,6 +81,7 @@ assertEqual(a.x, 23)
 print "You can make a Euclidean3 immutable after construction by setting the mutable latch to False."
 a.constantify()
 assertEqual(False, a.mutable)
+print "Testing immutability..."
 try:
     a.w = 1
 except AssertionError as e:
