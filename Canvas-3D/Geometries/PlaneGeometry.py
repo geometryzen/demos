@@ -4,7 +4,7 @@ from workbench import *
 
 space = CartesianSpace()
 
-width = 4
+width = 4.0
 depth = 4
 widthSegments = 8
 depthSegments = 8
