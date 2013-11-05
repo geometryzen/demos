@@ -22,6 +22,7 @@ def setUp():
     faces = geometry.faces
     for face in faces:
         print face
+        print face.vertexNormals
 
     space.add(mesh)
 
