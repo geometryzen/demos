@@ -16,15 +16,6 @@ def setUp():
 
     material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 2})
     mesh = CylinderBuilder().axis(e3).radius(1).height(4).segments(24).material(material).build()
-    geometry = mesh.geometry
-    for vertex in geometry.vertices:
-        print vertex
-    faces = geometry.faces
-    for face in faces:
-        print face
-        for normal in face.vertexNormals:
-            print normal
-        
 
     space.add(mesh)
 
