@@ -27,8 +27,9 @@ radius = 100.0
 theta = 45.0
 timeOut = 60.0
 
-mouse2D = VectorE3(0, 10000, 0.5)
+mouse = VectorE3(0, 10000, 0.5)
 target = VectorE3(0,200,0)
+ROLLOVERED = None
 
 scene = Scene()
 renderer = CanvasRenderer()
@@ -75,8 +76,12 @@ def onDocumentMouseDown(event):
 
 def onDocumentMouseMove(event):
     event.preventDefault()
-#    mouse.x = (float(event.clientX) / float(window.innerWidth)) * 2.0 - 1.0
-#    mouse.y = - (float(event.clientY) / float(window.innerHeight)) * 2.0 + 1.0
+    mouse.x = (float(event.clientX) / float(window.innerWidth)) * 2.0 - 1.0
+    mouse.y = - (float(event.clientY) / float(window.innerHeight)) * 2.0 + 1.0
+    intersects = raycaster.intersects(scene.children)
+    if len(intersects) > 0:
+        if ROLLOVERED:
+            ROLLOVERED.color.setHex(0x00FF80)
 
 def tick(t):
     global raycaster
@@ -85,7 +90,7 @@ def tick(t):
     camera.position.z = 1400.0 * cos(theta * pi / 360.0)
     camera.lookAt(target)
     
-    raycaster = projector.pickingRay(mouse2D.clone(), camera)
+    raycaster = projector.pickingRay(mouse.clone(), camera)
     
     renderer.render(scene, camera)
     space2D.render()
