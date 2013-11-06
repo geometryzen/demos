@@ -91,7 +91,17 @@ def onDocumentMouseDown(event):
                 normal = face.normal.clone()
                 normal.applyMatrix3(normalMatrix).normalize()
                 position = intersect.point + normal
-                output.text = str(position)
+                geometry = CubeGeometry(50,50,50)
+                for i in range(0, len(geometry.faces)):
+                    geometry.faces[i].color.setHex(0x00ff80)
+                material = MeshLambertMaterial({"vertexColors": FaceColors})
+                voxel = Mesh(geometry, material)
+                voxel.position.x = floor(position.x / 50.0) * 50 + 25.0
+                voxel.position.y = floor(position.y / 50.0) * 50 + 25.0
+                voxel.position.z = floor(position.z / 50.0) * 50 + 25.0
+                voxel.matrixAutoUpdate = False
+                voxel.updateMatrix()
+                scene.add(voxel)
 
 def onDocumentMouseMove(event):
     global ROLLOVERED
