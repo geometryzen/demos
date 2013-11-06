@@ -35,7 +35,7 @@ camera.position.z = 500
 
 scene = Scene()
 
-geometry = CubeFeometry(200,200,200)
+geometry = CubeGeometry(200,200,200)
 
 renderer = CanvasRenderer()
 
