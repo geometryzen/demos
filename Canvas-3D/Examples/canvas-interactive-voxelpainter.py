@@ -74,8 +74,8 @@ def onDocumentMouseDown(event):
 
 def onDocumentMouseMove(event):
     event.preventDefault()
-    mouse.x = (float(event.clientX) / float(window.innerWidth)) * 2.0 - 1.0
-    mouse.y = - (float(event.clientY) / float(window.innerHeight)) * 2.0 + 1.0
+#    mouse.x = (float(event.clientX) / float(window.innerWidth)) * 2.0 - 1.0
+#    mouse.y = - (float(event.clientY) / float(window.innerHeight)) * 2.0 + 1.0
 
 def tick(t):
 
