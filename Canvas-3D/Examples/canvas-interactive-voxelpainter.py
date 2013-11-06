@@ -71,8 +71,7 @@ def onDocumentKeyUp(event):
 
 def onDocumentMouseDown(event):
     event.preventDefault()
-    mouse.x = (float(event.clientX) / float(window.innerWidth)) * 2.0 - 1.0
-    mouse.y = - (float(event.clientY) / float(window.innerHeight)) * 2.0 + 1.0
+    output.text = str(event)
 
 def onDocumentMouseMove(event):
     event.preventDefault()
