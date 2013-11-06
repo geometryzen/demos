@@ -30,9 +30,7 @@ isShiftDown = False
 isCtrlDown = False
 
 scene = Scene()
-renderer = WebGLRenderer({"preserveDrawingBuffer": True})
-renderer.sortObjects = False
-renderer.autoClearColor = False
+renderer = None
 
 camera = PerspectiveCamera(60, 1, 1, 10000)
 camera.position.set(10000, 0, 3200)
@@ -105,6 +103,10 @@ def setUp():
     
     mesh = ParticleSystem(geometry, material)
     scene.add(mesh)
+
+    renderer = WebGLRenderer({"preserveDrawingBuffer": True})
+    renderer.sortObjects = False
+    renderer.autoClearColor = False
 
     workbench.setUp()
     workbench2D.setUp()
