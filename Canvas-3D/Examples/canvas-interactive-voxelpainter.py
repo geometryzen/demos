@@ -94,7 +94,7 @@ def onDocumentMouseMove(event):
         if ROLLOVERED:
             ROLLOVERED.color.setHex(0x00FF80)
         ROLLOVERED = intersects[0].face
-        ROLLOVERED.color.setHex(0xFF8000)
+        # ROLLOVERED.color.setHex(0xFF8000)
 
 def tick(t):
     global raycaster
