@@ -128,6 +128,7 @@ def setUp():
     except:
         print "Oops!"
     scene.add(line)
+    print "LinePieces added to Scene!"
     
     workbench.setUp()
     workbench2D.setUp()
