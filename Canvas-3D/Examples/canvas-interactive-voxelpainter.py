@@ -28,7 +28,7 @@ omega  = 2.0 * pi / 20.0
 timeOut = 60.0
 
 mouse2D = VectorE3(0, 10000, 0.5)
-print repr(mouse2D)
+print repr(mouse2D.clone())
 
 scene = Scene()
 renderer = WebGLRenderer()
