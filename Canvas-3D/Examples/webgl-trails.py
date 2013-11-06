@@ -89,23 +89,13 @@ def terminate(t):
     return t > timeOut
 
 def setUp():
+    colors = [0x000000,0xFF0080,0x8000FF, 0xFFFFFF]
     geometry = Geometry()
-    size = 500
-    step = 50
-    for i in range(-size, size + 1, step):
-        geometry.vertices.append(VectorE3(-size, 0, i))
-        geometry.vertices.append(VectorE3(+size, 0, i))
-        geometry.vertices.append(VectorE3(i, 0, -size))
-        geometry.vertices.append(VectorE3(i, 0, +size))
+    for i in range(0, 2000):
+        vertex = VectorE3()
+        vertex.x = random() * 4000 - 2000
+        geometry.vertices.append(vertex)
 
-    material = LineBasicMaterial({"color": 0x000000, "opacity": 0.2})
-    line = Line(geometry, material, LinePieces)
-    scene.add(line)
-    
-    plane.rotation.x = - pi / 2.0
-    plane.visible = False
-    scene.add(plane)
-    
     workbench.setUp()
     workbench2D.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
