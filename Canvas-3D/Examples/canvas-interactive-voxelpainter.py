@@ -120,7 +120,7 @@ def setUp():
         geometry.vertices.append(VectorE3(i, 0, +size))
 
     material = LineBasicMaterial({"color": 0x000000, "opacity": 0.2})
-#    line = Line(geometry, material)
+    line = Line(geometry, material)
 #    line.type = LinePieces
 #    scene.add(line)
     
