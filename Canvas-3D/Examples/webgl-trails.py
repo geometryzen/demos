@@ -4,7 +4,7 @@ from workbench import *
 from random import random
 from math import *
 
-timeOut = 6.0
+timeOut = 10.0
 
 mouse = VectorE3(0, 0, 0)
 
