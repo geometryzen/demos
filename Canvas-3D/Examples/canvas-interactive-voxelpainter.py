@@ -115,7 +115,15 @@ def setUp():
     step = 50
     for i in range(-size, size + 1, step):
         geometry.vertices.append(VectorE3(-size, 0, i))
-    print geometry.vertices
+        geometry.vertices.append(VectorE3(+size, 0, i))
+        geometry.vertices.append(VectorE3(i, 0, -size))
+        geometry.vertices.append(VectorE3(i, 0, +size))
+
+    material = LineBasicMaterial({"color": 0x000000, "opacity": 0.2})
+    line = Line(geometry, material)
+    line.type = LinePieces
+    scene.add(line)
+    
     workbench.setUp()
     workbench2D.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
