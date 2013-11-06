@@ -27,7 +27,7 @@ radius = 100.0
 omega  = 2.0 * pi / 20.0
 timeOut = 60.0
 
-mouse = VectorE3(0.0, 0.0, 1.0)
+mouse2D = VectorE3(0, 10000, 0.5)
 
 scene = Scene()
 renderer = WebGLRenderer()
