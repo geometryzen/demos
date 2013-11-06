@@ -81,8 +81,8 @@ def onDocumentMouseMove(event):
 def tick(t):
     global raycaster
 
-    camera.position.x = 1400 * sin(theta * PI / 360)
-    camera.position.z = 1400 * cos(theta * PI / 360)
+    camera.position.x = 1400.0 * sin(theta * pi / 360.0)
+    camera.position.z = 1400.0 * cos(theta * pi / 360.0)
     camera.lookAt(target)
     
     raycaster = projector.pickingRay(mouse2D.clone(), camera)
