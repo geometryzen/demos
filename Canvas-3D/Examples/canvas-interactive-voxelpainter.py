@@ -31,8 +31,8 @@ mouse2D = VectorE3(0, 10000, 0.5)
 target = VectorE3(0,200,0)
 
 scene = Scene()
-renderer = WebGLRenderer()
-renderer.sortObjects = False
+renderer = CanvasRenderer()
+
 camera = PerspectiveCamera(70, 1, 1, 10000)
 camera.position.y = 800
 
