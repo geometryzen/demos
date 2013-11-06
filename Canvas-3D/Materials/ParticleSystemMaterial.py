@@ -25,6 +25,7 @@ material.sizeAttenuation = False
 print material.sizeAttenuation
 material.vertexColors = True
 print material.vertexColors
+material.fog = True
 print material.fog
 print material
 print repr(material)
