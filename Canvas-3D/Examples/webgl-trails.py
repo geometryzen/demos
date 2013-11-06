@@ -3,15 +3,13 @@ Under Construction. Nov 6, 2013
 '''
 from three import *
 from browser import *
+from workbench import *
 from random import random
 from math import *
 
 timeOut = 600.0
 
 mouse = VectorE3(0, 0, 0)
-
-container = document.createElement('div')
-document.body.appendChild(container)
 
 scene = Scene()
 
@@ -37,7 +35,8 @@ renderer = WebGLRenderer({"preserveDrawingBuffer": True})
 renderer.sortObjects = False
 renderer.autoClearColor = False
 renderer.setClearColor(0x000000, 1.0)
-container.appendChild(renderer.domElement)
+
+workbench = Workbench(renderer, camera)
 
 def escKey(event, downFlag):
     event.preventDefault()
@@ -85,7 +84,7 @@ def terminate(t):
     return t > timeOut
 
 def setUp():
-    window.addEventListener("resize", onWindowResize, False)
+    workbench.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
     document.addEventListener("mousemove", onDocumentMouseMove, False)
@@ -94,6 +93,6 @@ def tearDown():
     document.removeEventListener("mousemove", onDocumentMouseMove, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
-    window.removeEventListener("resize", onWindowResize, False)
+    workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
