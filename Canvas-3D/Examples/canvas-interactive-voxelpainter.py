@@ -73,6 +73,13 @@ def onDocumentKeyUp(event):
 
 def onDocumentMouseDown(event):
     event.preventDefault()
+    intersects = raycaster.intersectObjects(scene.children)
+    if len(intersects) > 0:
+        intersect = intersects[0]
+        if isCtrlDown:
+            pass
+        else:
+            normalMatrix.getNormalMatrix(intersect.object.matrixWorld)
 
 def onDocumentMouseMove(event):
     event.preventDefault()
