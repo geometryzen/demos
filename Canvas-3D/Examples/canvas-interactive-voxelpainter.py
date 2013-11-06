@@ -114,7 +114,7 @@ def setUp():
     size = 500
     step = 50
     for i in range(-size, size + 1, step):
-        print i
+        geometry.vertices.append(VectorE3(-size, 0, i))
     workbench.setUp()
     workbench2D.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
