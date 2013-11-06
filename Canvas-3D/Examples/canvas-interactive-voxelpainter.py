@@ -122,14 +122,8 @@ def setUp():
         geometry.vertices.append(VectorE3(i, 0, +size))
 
     material = LineBasicMaterial({"color": 0x000000, "opacity": 0.2})
-    line = Line(geometry, material)
-    try:
-        line.type = LinePieces
-        print "LinePieces really to Scene!" + str(LinePieces) + str(line.type)
-    except:
-        print "Oops!"
+    line = Line(geometry, material, LinePieces)
     scene.add(line)
-    print "LinePieces added to Scene!"
     
     workbench.setUp()
     workbench2D.setUp()
