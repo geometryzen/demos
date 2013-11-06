@@ -33,6 +33,7 @@ normalMatrix = Matrix3()
 ROLLOVERED = None
 isShiftDown = False
 isCtrlDown = False
+plane = Mesh(PlaneGeometry(1000.0,1000.0), MeshBasicMaterial())
 
 scene = Scene()
 renderer = CanvasRenderer()
@@ -162,7 +163,6 @@ def setUp():
     line = Line(geometry, material, LinePieces)
     scene.add(line)
     
-    plane = Mesh(PlaneGeometry(1000.0,1000.0), MeshBasicMaterial())
     plane.rotation.x = - pi / 2.0
     plane.visible = False
     scene.add(plane)
