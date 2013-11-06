@@ -127,6 +127,11 @@ def setUp():
     line = Line(geometry, material, LinePieces)
     scene.add(line)
     
+    plane = Mesh(PlaneGeometry(1000,1000), MeshBasicMaterial())
+    plane.rotation.x = - pi / 2.0
+    plane.visible = True
+    scene.add(plane)
+    
     workbench.setUp()
     workbench2D.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
