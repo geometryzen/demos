@@ -69,9 +69,6 @@ def onDocumentKeyUp(event):
     except:
         pass
 
-def onDocumentMouseDown(event):
-    event.preventDefault()
-
 def onDocumentMouseMove(event):
     event.preventDefault()
     mouse.x = (float(event.clientX) / float(window.innerWidth)) * 2.0 - 1.0
@@ -117,10 +114,8 @@ def setUp():
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
     document.addEventListener("mousemove", onDocumentMouseMove, False)
-    document.addEventListener("mousedown", onDocumentMouseDown, False)
 
 def tearDown():
-    document.removeEventListener("mousedown", onDocumentMouseDown, False)
     document.removeEventListener("mousemove", onDocumentMouseMove, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
