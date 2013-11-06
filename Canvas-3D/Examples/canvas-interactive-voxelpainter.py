@@ -7,7 +7,8 @@ from browser import *
 from workbench import *
 from random import random
 from math import *
-
+print str(None)
+print repr(None)
 canvas2D = document.createElement("canvas")
 canvas2D.style.position = "absolute"
 canvas2D.style.top = "0px"
