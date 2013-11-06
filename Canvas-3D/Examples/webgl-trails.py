@@ -34,7 +34,7 @@ renderer = WebGLRenderer({"preserveDrawingBuffer":True})
 renderer.sortObjects = False
 renderer.autoClearColor = False
 
-camera = PerspectiveCamera(70, 1, 1, 10000)
+camera = PerspectiveCamera(60, 1, 1, 10000)
 camera.position.set(10000, 0, 3200)
 
 workbench = Workbench(renderer, camera)
