@@ -3,13 +3,15 @@ Under Construction. Nov 6, 2013
 '''
 from three import *
 from browser import *
-from workbench import *
 from random import random
 from math import *
 
 timeOut = 600.0
 
 mouse = VectorE3(0, 0, 0)
+
+container = document.createElement('div')
+document.body.appendChild(container)
 
 scene = Scene()
 
@@ -35,8 +37,7 @@ renderer = WebGLRenderer({"preserveDrawingBuffer": True})
 renderer.sortObjects = False
 renderer.autoClearColor = False
 renderer.setClearColor(0x000000, 1.0)
-    
-workbench = Workbench(renderer, camera)
+container.appendChild(renderer.domElement)
 
 def escKey(event, downFlag):
     event.preventDefault()
@@ -46,6 +47,9 @@ def escKey(event, downFlag):
 keyHandlers = {
  27: escKey
 }
+
+def onWindowResize(event):
+    pass
     
 def onDocumentKeyDown(event):
     try:
@@ -79,7 +83,7 @@ def terminate(t):
     return t > timeOut
 
 def setUp():
-    workbench.setUp()
+    window.addEventListener("resize", onWindowResize, False)
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
     document.addEventListener("mousemove", onDocumentMouseMove, False)
@@ -88,6 +92,6 @@ def tearDown():
     document.removeEventListener("mousemove", onDocumentMouseMove, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
-    workbench.tearDown()
+    window.removeEventListener("resize", onWindowResize, False)
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
