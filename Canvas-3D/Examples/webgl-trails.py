@@ -60,9 +60,11 @@ def onDocumentKeyUp(event):
         pass
 
 def onDocumentMouseMove(event):
-    event.preventDefault()
-    mouse.x = (float(event.clientX) / float(window.innerWidth)) * 2.0 - 1.0
-    mouse.y = - (float(event.clientY) / float(window.innerHeight)) * 2.0 + 1.0
+    windowHalfX = float(window.innerWidth) / 2.0
+    windowHalfX = float(window.innerHeight) / 2.0
+    
+    mouse.x = (float(event.clientX) - windowHalfX) * 10.0
+    mouse.y = (float(event.clientY) - windowHalfY) * 10.0
 
 def tick(t):
 
