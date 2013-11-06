@@ -31,6 +31,8 @@ isCtrlDown = False
 
 scene = Scene()
 renderer = WebGLRenderer({"preserveDrawingBuffer":True})
+renderer.sortObjects = False
+renderer.autoClearColor = False
 
 camera = PerspectiveCamera(70, 1, 1, 10000)
 camera.position.y = 800
