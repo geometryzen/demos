@@ -105,7 +105,7 @@ def setUp():
 
     renderer = WebGLRenderer({"preserveDrawingBuffer": True})
     renderer.sortObjects = False
-    renderer.autoClearColor = False
+    #renderer.autoClearColor = False
     renderer.setClearColor(0x000000, 1.0)
 
     workbench = Workbench(renderer, camera)
