@@ -79,8 +79,9 @@ def onDocumentMouseMove(event):
 #    mouse.y = - (float(event.clientY) / float(window.innerHeight)) * 2.0 + 1.0
 
 def tick(t):
-
-#    raycaster = projector.pickingRay(mouse2D.clone(), camera)
+    global raycaster
+    
+    raycaster = projector.pickingRay(mouse2D.clone(), camera)
     
     renderer.render(scene, camera)
     space2D.render()
