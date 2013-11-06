@@ -35,7 +35,7 @@ renderer = None
 camera = PerspectiveCamera(60, 1, 1, 10000)
 camera.position.set(10000, 0, 3200)
 
-workbench = Workbench(renderer, camera)
+workbench = None
 
 def shiftKey(event, downFlag):
     global isShiftDown
@@ -107,6 +107,8 @@ def setUp():
     renderer = WebGLRenderer({"preserveDrawingBuffer": True})
     renderer.sortObjects = False
     renderer.autoClearColor = False
+
+    workbench = Workbench(renderer, camera)
 
     workbench.setUp()
     workbench2D.setUp()
