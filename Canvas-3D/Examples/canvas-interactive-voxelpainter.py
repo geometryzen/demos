@@ -124,8 +124,8 @@ def setUp():
     material = LineBasicMaterial({"color": 0x000000, "opacity": 0.2})
     line = Line(geometry, material)
     try:
-        line.typo = LinePieces
-        print "LinePieces really to Scene!" + str(LinePieces)
+        line.type = LinePieces
+        print "LinePieces really to Scene!" + str(LinePieces) + str(line.type)
     except:
         print "Oops!"
     scene.add(line)
