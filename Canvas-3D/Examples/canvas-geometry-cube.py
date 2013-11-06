@@ -35,7 +35,11 @@ camera.position.z = 500
 
 scene = Scene()
 
-geometry = CubeGeometry(200,200,200)
+geometry = CubeGeometry(200, 200, 200)
+for i in range(0, geometry.faces.length):
+    hex = random() * 0xFFFFFF
+    geometry.faces[i].color.setHex(hex)
+    heometry.faces[i+1].color.setHex(hex)
 
 renderer = CanvasRenderer()
 
