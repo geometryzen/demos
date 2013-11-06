@@ -78,7 +78,7 @@ def onDocumentMouseMove(event):
     event.preventDefault()
     mouse.x = (float(event.clientX) / float(window.innerWidth)) * 2.0 - 1.0
     mouse.y = - (float(event.clientY) / float(window.innerHeight)) * 2.0 + 1.0
-    intersects = raycaster.intersects(scene.children)
+    intersects = raycaster.intersectObjects(scene.children)
     if len(intersects) > 0:
         if ROLLOVERED:
             ROLLOVERED.color.setHex(0x00FF80)
