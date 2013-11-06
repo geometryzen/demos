@@ -89,6 +89,7 @@ def terminate(t):
     return t > timeOut
 
 def setUp():
+    global renderer, workbench
     colors = [0x000000,0xFF0080,0x8000FF, 0xFFFFFF]
     geometry = Geometry()
     for i in range(0, 2000):
