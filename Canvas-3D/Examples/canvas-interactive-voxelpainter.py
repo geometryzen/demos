@@ -127,7 +127,7 @@ def setUp():
     line = Line(geometry, material, LinePieces)
     scene.add(line)
     
-    plane = Mesh(PlaneGeometry(1000,1000), MeshBasicMaterial())
+    plane = Mesh(PlaneGeometry(1000.0,1000.0), MeshBasicMaterial())
     plane.rotation.x = - pi / 2.0
     plane.visible = True
     scene.add(plane)
