@@ -94,6 +94,7 @@ def onDocumentMouseMove(event):
         if ROLLOVERED:
             ROLLOVERED.color.setHex(0x00FF80)
         ROLLOVERED = intersects[0].face
+        print ROLLOVERED
         output.text = str(ROLLOVERED)
         ROLLOVERED.color.setHex(0xFF8000)
 
