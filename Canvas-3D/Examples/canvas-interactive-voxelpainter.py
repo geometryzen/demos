@@ -28,7 +28,7 @@ theta = 45.0
 timeOut = 60.0
 
 mouse2D = VectorE3(0, 10000, 0.5)
-print repr(mouse2D.clone())
+target = VectorE3(0,200,0)
 
 scene = Scene()
 renderer = WebGLRenderer()
