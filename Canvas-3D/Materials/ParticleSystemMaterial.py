@@ -16,6 +16,11 @@ scene = Scene()
 camera = PerspectiveCamera(60, 1, 1, 10000)
 camera.position.set(10000, 0, 3200)
 
+material = ParticleSystemMaterial({"size": 1, "vertexColors": VertexColors, "depthTest": False, "opacity": 0.5, "sizeAttenuation": False, "transparent": True})
+print material.size
+print material
+print repr(material)
+
 colors = [0x000000,0xFF0080,0x8000FF, 0xFFFFFF]
 geometry = Geometry()
 for i in range(0, 2000):
@@ -25,11 +30,6 @@ for i in range(0, 2000):
     vertex.z = random() * 4000.0 - 2000.0
     geometry.vertices.append(vertex)
     geometry.colors.append(Color(colors[floor(random() * len(colors))]))
-    
-material = ParticleSystemMaterial({"size": 1, "vertexColors": VertexColors, "depthTest": False, "opacity": 0.5, "sizeAttenuation": False, "transparent": True})
-print material.size
-print material
-print repr(material)
     
 mesh = ParticleSystem(geometry, material)
 scene.add(mesh)
