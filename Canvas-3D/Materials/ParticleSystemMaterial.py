@@ -17,6 +17,7 @@ camera = PerspectiveCamera(60, 1, 1, 10000)
 camera.position.set(10000, 0, 3200)
 
 material = ParticleSystemMaterial({"size": 1, "vertexColors": True, "depthTest": False, "opacity": 0.5, "sizeAttenuation": False, "transparent": True})
+material.size = 2
 print material.size
 print material.color
 print material.sizeAttenuation
