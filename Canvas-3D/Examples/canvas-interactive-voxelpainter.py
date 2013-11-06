@@ -70,7 +70,7 @@ def onDocumentKeyDown(event):
 
 def onDocumentKeyUp(event):
     try:
-        keyHandlers[event.keyCode](event, True)
+        keyHandlers[event.keyCode](event, False)
     except:
         pass
 
