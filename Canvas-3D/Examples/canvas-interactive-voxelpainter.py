@@ -110,6 +110,11 @@ def terminate(t):
     return t > timeOut
 
 def setUp():
+    geometry = Geometry()
+    size = 500
+    step = 50
+    for i in range(-size, size + 1, step):
+        print i
     workbench.setUp()
     workbench2D.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
