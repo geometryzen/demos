@@ -36,7 +36,7 @@ camera.position.z = 500
 scene = Scene()
 
 geometry = CubeGeometry(200, 200, 200)
-for i in range(0, geometry.faces.length):
+for i in range(0, len(geometry.faces)):
     hex = random() * 0xFFFFFF
     geometry.faces[i].color.setHex(hex)
     heometry.faces[i+1].color.setHex(hex)
