@@ -25,7 +25,7 @@ space2D.addChild(output)
 
 radius = 100.0
 theta = 45.0
-timeOut = 60.0
+timeOut = 6000.0
 
 mouse = VectorE3(0, 10000, 0.5)
 target = VectorE3(0,200,0)
