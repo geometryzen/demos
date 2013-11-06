@@ -20,7 +20,7 @@ material = ParticleSystemMaterial({"size": 1, "vertexColors": VertexColors, "dep
 print material.size
 print material.color
 print material.sizeAttenuation
-print material
+#print material
 print repr(material)
 
 colors = [0x000000,0xFF0080,0x8000FF, 0xFFFFFF]
