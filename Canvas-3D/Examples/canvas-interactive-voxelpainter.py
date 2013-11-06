@@ -95,6 +95,8 @@ def onDocumentMouseDown(event):
     if len(intersects) > 0:
         intersect = intersects[0]
         if isCtrlDown:
+            if intersect.object != plane:
+                scene.remove(intersect.object)
             pass
         else:
             normalMatrix.getNormalMatrix(intersect.object.matrixWorld)
