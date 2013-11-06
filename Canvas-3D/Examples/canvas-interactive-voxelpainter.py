@@ -56,12 +56,24 @@ raycaster = None
 
 workbench = Workbench(renderer, camera)
 
+def shiftKey(event, downFlag):
+    global isShiftDown
+    event.preventDefault()
+    isShiftDown = downFlag
+
+def ctrlKey(event, downFlag):
+    global isCtrlDown
+    event.preventDefault()
+    isCtrlDown = downFlag
+    
 def escKey(event, downFlag):
     event.preventDefault()
     global timeOut
     timeOut = 0
 
 keyHandlers = {
+ 16: shiftKey,
+ 17: ctrlKey, 
  27: escKey
 }
     
