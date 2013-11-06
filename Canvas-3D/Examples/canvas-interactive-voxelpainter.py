@@ -92,12 +92,9 @@ def onDocumentMouseMove(event):
     intersects = raycaster.intersectObjects(scene.children)
     if len(intersects) > 0:
         if ROLLOVERED:
-            # ROLLOVERED.color.setHex(0x00FF80)
-            pass
+            ROLLOVERED.color.setHex(0x00FF80)
         ROLLOVERED = intersects[0].face
-        print type(ROLLOVERED)
-        print str(ROLLOVERED)
-        # ROLLOVERED.color.setHex(0xFF8000)
+        ROLLOVERED.color.setHex(0xFF8000)
 
 def tick(t):
     global raycaster
