@@ -23,7 +23,7 @@ for i in range(0, 2000):
     geometry.vertices.append(vertex)
     geometry.colors.append(Color(colors[floor(random() * len(colors))]))
     
-material = ParticleSystemMaterial({"size": 2.0, "vertexColors": VertexColors, "depthTest": False, "opacity": 0.5, "sizeAttenuation": False, "transparent": True})
+material = ParticleSystemMaterial({"size": 1.0, "vertexColors": VertexColors, "depthTest": False, "opacity": 0.5, "sizeAttenuation": False, "transparent": True})
     
 mesh = ParticleSystem(geometry, material)
 scene.add(mesh)
