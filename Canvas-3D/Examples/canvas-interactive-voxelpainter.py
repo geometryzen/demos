@@ -59,12 +59,10 @@ workbench = Workbench(renderer, camera)
 
 def shiftKey(event, downFlag):
     global isShiftDown
-    event.preventDefault()
     isShiftDown = downFlag
 
 def ctrlKey(event, downFlag):
     global isCtrlDown
-    event.preventDefault()
     isCtrlDown = downFlag
     
 def escKey(event, downFlag):
