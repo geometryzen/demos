@@ -71,7 +71,6 @@ def onDocumentKeyUp(event):
 
 def onDocumentMouseDown(event):
     event.preventDefault()
-    output.text = str(event)
 
 def onDocumentMouseMove(event):
     event.preventDefault()
@@ -80,6 +79,8 @@ def onDocumentMouseMove(event):
 
 def tick(t):
 
+    raycaster = projector.pickingRay(mouse2D.clone(), camera)
+    
     renderer.render(scene, camera)
     space2D.render()
     
