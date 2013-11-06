@@ -96,6 +96,8 @@ def setUp():
         vertex.x = random() * 4000.0 - 2000.0
         geometry.vertices.append(vertex)
         geometry.colors.append(Color(colors[floor(random() * len(colors))]))
+        
+    material = ParticleSystemMaterial({"size":1, "vertexColors": VertexColors, "depthTest": False, "opacity": 0.5, "sizeAttenuation": False, "transparent": True})
 
     workbench.setUp()
     workbench2D.setUp()
