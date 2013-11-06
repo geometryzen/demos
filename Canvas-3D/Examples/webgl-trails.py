@@ -24,6 +24,8 @@ for i in range(0, 2000):
     geometry.colors.append(Color(colors[floor(random() * len(colors))]))
     
 material = ParticleSystemMaterial({"size": 1, "vertexColors": VertexColors, "depthTest": False, "opacity": 0.5, "sizeAttenuation": False, "transparent": True})
+print material
+print repr(material)
     
 mesh = ParticleSystem(geometry, material)
 scene.add(mesh)
