@@ -47,6 +47,7 @@ cube.position.y = 150
 scene.add(cube)
 
 geometry = PlaneGeometry(200.0, 200.0)
+geometry.applyMatrix(Matrix4().makeRotation(-pi / 2.0))
 
 renderer = CanvasRenderer()
 
