@@ -21,7 +21,7 @@ material.size = 2.0
 print material.size
 material.color = Color(0x00FF00)
 print material.color
-material.sizeAttenuation = True
+material.sizeAttenuation = False
 print material.sizeAttenuation
 print material.vertexColors
 print material.fog
