@@ -92,6 +92,7 @@ def onDocumentMouseMove(event):
     intersects = raycaster.intersectObjects(scene.children)
     if len(intersects) > 0:
         if ROLLOVERED:
+            print type(ROLLOVERED)
             ROLLOVERED.color.setHex(0x00FF80)
         ROLLOVERED = intersects[0].face
         # ROLLOVERED.color.setHex(0xFF8000)
