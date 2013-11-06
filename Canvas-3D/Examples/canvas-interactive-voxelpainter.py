@@ -28,6 +28,7 @@ omega  = 2.0 * pi / 20.0
 timeOut = 60.0
 
 mouse2D = VectorE3(0, 10000, 0.5)
+print repr(mouse2D)
 
 scene = Scene()
 renderer = WebGLRenderer()
@@ -44,7 +45,7 @@ light.position.set(-1, -1, -1).normalize()
 scene.add(light)
 
 projector = Projector()
-raycaster = Raycaster()
+raycaster = None
 
 workbench = Workbench(renderer, camera)
 
@@ -79,7 +80,7 @@ def onDocumentMouseMove(event):
 
 def tick(t):
 
-    raycaster = projector.pickingRay(mouse2D.clone(), camera)
+#    raycaster = projector.pickingRay(mouse2D.clone(), camera)
     
     renderer.render(scene, camera)
     space2D.render()
