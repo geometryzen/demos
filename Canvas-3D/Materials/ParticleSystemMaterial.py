@@ -23,7 +23,7 @@ material.color = Color(0x00FF00)
 print material.color
 material.sizeAttenuation = False
 print material.sizeAttenuation
-material.vertexColors = False
+material.vertexColors = True
 print material.vertexColors
 print material.fog
 print material
