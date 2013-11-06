@@ -1,6 +1,3 @@
-'''
-Under Construction. Nov 6, 2013
-'''
 from three import *
 from browser import *
 from workbench import *
