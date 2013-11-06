@@ -125,6 +125,7 @@ def setUp():
     line = Line(geometry, material)
     try:
         line.type = LinePieces
+        print "LinePieces really to Scene!"
     except:
         print "Oops!"
     scene.add(line)
