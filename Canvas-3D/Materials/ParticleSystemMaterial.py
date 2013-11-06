@@ -19,6 +19,7 @@ camera.position.set(10000, 0, 3200)
 material = ParticleSystemMaterial({"size": 1.0, "vertexColors": True, "depthTest": False, "opacity": 0.5, "sizeAttenuation": False, "transparent": True})
 material.size = 2.0
 print material.size
+material.color = Color(0x00FF00)
 print material.color
 print material.sizeAttenuation
 print material.vertexColors
