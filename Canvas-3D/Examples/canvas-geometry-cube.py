@@ -29,10 +29,15 @@ mouse = VectorE3(0, 10000, 0.5)
 isShiftDown = False
 isCtrlDown = False
 
-scene = Scene()
-renderer = CanvasRenderer()
-
 camera = PerspectiveCamera(70, 1, 1, 10000)
+camera.position.y = 150
+camera.position.z = 500
+
+scene = Scene()
+
+geometry = CubeFeometry(200,200,200)
+
+renderer = CanvasRenderer()
 
 workbench = Workbench(renderer, camera)
 
