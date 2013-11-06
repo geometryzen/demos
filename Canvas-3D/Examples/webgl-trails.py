@@ -92,9 +92,10 @@ def setUp():
     colors = [0x000000,0xFF0080,0x8000FF, 0xFFFFFF]
     geometry = Geometry()
     for i in range(0, 2000):
-        vertex = VectorE3(0,0,0)
-        vertex.x = random() * 4000 - 2000
+        vertex = VectorE3(0.0, 0.0, 0.0)
+        vertex.x = random() * 4000.0 - 2000.0
         geometry.vertices.append(vertex)
+        geometry.colors.append(Color(colors[floor(random() * len(colors))]))
 
     workbench.setUp()
     workbench2D.setUp()
