@@ -92,7 +92,7 @@ def setUp():
     colors = [0x000000,0xFF0080,0x8000FF, 0xFFFFFF]
     geometry = Geometry()
     for i in range(0, 2000):
-        vertex = VectorE3()
+        vertex = VectorE3(0,0,0)
         vertex.x = random() * 4000 - 2000
         geometry.vertices.append(vertex)
 
