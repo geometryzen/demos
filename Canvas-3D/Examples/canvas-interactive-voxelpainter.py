@@ -30,6 +30,8 @@ timeOut = 60.0
 mouse = VectorE3(0, 10000, 0.5)
 target = VectorE3(0,200,0)
 ROLLOVERED = None
+isShiftDown = False
+isCtrlDown = False
 
 scene = Scene()
 renderer = CanvasRenderer()
