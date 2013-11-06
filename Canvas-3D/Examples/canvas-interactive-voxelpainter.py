@@ -122,7 +122,7 @@ def setUp():
     material = LineBasicMaterial({"color": 0x000000, "opacity": 0.2})
     line = Line(geometry, material)
     line.type = LinePieces
-#    scene.add(line)
+    scene.add(line)
     
     workbench.setUp()
     workbench2D.setUp()
