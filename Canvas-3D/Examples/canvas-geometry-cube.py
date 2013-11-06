@@ -46,7 +46,7 @@ cube = Mesh(geometry, material)
 cube.position.y = 150
 scene.add(cube)
 
-geometry = PlaneGeometry(200,200)
+geometry = PlaneGeometry(200.0, 200.0)
 
 renderer = CanvasRenderer()
 
