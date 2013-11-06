@@ -129,7 +129,7 @@ def setUp():
     
     plane = Mesh(PlaneGeometry(1000.0,1000.0), MeshBasicMaterial())
     plane.rotation.x = - pi / 2.0
-    plane.visible = True
+    plane.visible = False
     scene.add(plane)
     
     workbench.setUp()
