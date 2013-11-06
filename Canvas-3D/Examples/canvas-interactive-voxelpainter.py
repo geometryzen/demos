@@ -93,6 +93,7 @@ def onDocumentMouseMove(event):
     if len(intersects) > 0:
         if ROLLOVERED:
             print type(ROLLOVERED)
+            print str(ROLLOVERED)
             ROLLOVERED.color.setHex(0x00FF80)
         ROLLOVERED = intersects[0].face
         # ROLLOVERED.color.setHex(0xFF8000)
