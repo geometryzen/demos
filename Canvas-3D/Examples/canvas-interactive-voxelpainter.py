@@ -86,6 +86,9 @@ def onDocumentMouseDown(event):
             pass
         else:
             normalMatrix.getNormalMatrix(intersect.object.matrixWorld)
+            normal = intersect.face.normal.clone()
+            normal.applyMatrix3(normalMatrix).normalize()
+            position = intersect.point + normal
 
 def onDocumentMouseMove(event):
     global ROLLOVERED
