@@ -49,7 +49,9 @@ keyHandlers = {
 }
 
 def onWindowResize(event):
-    pass
+    camera.aspect = float(window.innerWidth) / float(window.innerHeight)
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight)
     
 def onDocumentKeyDown(event):
     try:
