@@ -129,7 +129,10 @@ def onDocumentMouseMove(event):
             ROLLOVERED.color.setHex(0xFF8000)
 
 def tick(t):
-    global raycaster
+    global raycaster, theta
+    
+    if isShiftDown:
+        theta += mouse.x * 3
 
     camera.position.x = 1400.0 * sin(theta * pi / 360.0)
     camera.position.z = 1400.0 * cos(theta * pi / 360.0)
