@@ -30,7 +30,7 @@ isShiftDown = False
 isCtrlDown = False
 
 scene = Scene()
-renderer = WebGLRenderer({"preserveDrawingBuffer":True})
+renderer = WebGLRenderer({"preserveDrawingBuffer": True})
 renderer.sortObjects = False
 renderer.autoClearColor = False
 
@@ -96,10 +96,12 @@ def setUp():
     for i in range(0, 2000):
         vertex = VectorE3(0.0, 0.0, 0.0)
         vertex.x = random() * 4000.0 - 2000.0
+        vertex.y = random() * 4000.0 - 2000.0
+        vertex.z = random() * 4000.0 - 2000.0
         geometry.vertices.append(vertex)
         geometry.colors.append(Color(colors[floor(random() * len(colors))]))
         
-    material = ParticleSystemMaterial({"size":1, "vertexColors": VertexColors, "depthTest": False, "opacity": 0.5, "sizeAttenuation": False, "transparent": True})
+    material = ParticleSystemMaterial({"size": 1, "vertexColors": VertexColors, "depthTest": False, "opacity": 0.5, "sizeAttenuation": False, "transparent": True})
     
     mesh = ParticleSystem(geometry, material)
     scene.add(mesh)
