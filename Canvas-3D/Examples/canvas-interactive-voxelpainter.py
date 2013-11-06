@@ -79,7 +79,6 @@ def onDocumentMouseDown(event):
     intersects = raycaster.intersectObjects(scene.children)
     if len(intersects) > 0:
         intersect = intersects[0]
-        output.text = str(intersect)
         if isCtrlDown:
             pass
         else:
