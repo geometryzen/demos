@@ -121,7 +121,7 @@ assertEqual(mass.xyz, 0)
 assertEqual(True, mass.mutable)
 
 print "You can create scalar constants by setting the mutable flag on construction."
-one = ScalarE3(1, False)
+one = ScalarE3(1.0, False)
 assertEqual(one.w, 1)
 assertEqual(one.x, 0)
 assertEqual(one.y, 0)
