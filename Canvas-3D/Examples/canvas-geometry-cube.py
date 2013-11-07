@@ -97,6 +97,11 @@ def onDocumentMouseDown(event):
 
     mouseXOnMouseDown = event.clientX - (float(window.innerWidth) / 2.0)
 
+def onDocumentMouseMove(event):
+    global mouseX
+    event.preventDefault()
+    mouseX = event.clientX - (float(window.innerWidth) / 2.0)
+
 def onDocumentTouchStart(event):
     event.preventDefault()
     mouse.x = (float(event.clientX) / float(window.innerWidth)) * 2.0 - 1.0
