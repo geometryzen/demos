@@ -231,7 +231,7 @@ assertEqual(repr(e12), "BivectorE3(1, 0, 0)")
 assertEqual(e12 * e12, ScalarE3(-1.0))
 assertEqual(e12 * e12, ScalarE3(-1.0))
 assertTrue(e12 * e12 == ScalarE3(-1.0))
-assertTrue(e12 * e12 == ScalarE3(-1))
+assertTrue(e12 * e12 == ScalarE3(-1.0))
 assertFalse(e12 * e12 == -1.0)
 assertFalse(e12 * e12 == -1)
 
