@@ -96,7 +96,8 @@ def onDocumentMouseDown(event):
     document.addEventListener("mouseout", onDocumentMouseOut, False)
 
     mouseXOnMouseDown = event.clientX - (float(window.innerWidth) / 2.0)
-
+    targetRotationOnMouseDown = targetRotation
+    
 def onDocumentMouseMove(event):
     global mouseX
     event.preventDefault()
@@ -111,10 +112,12 @@ def onDocumentMouseOut(event):
     pass
 
 def onDocumentTouchStart(event):
-    event.preventDefault()
-    mouse.x = (float(event.clientX) / float(window.innerWidth)) * 2.0 - 1.0
-    mouse.y = - (float(event.clientY) / float(window.innerHeight)) * 2.0 + 1.0
-
+    global mouseXOnMouseDown, targetRotationOnMouseDown
+    if len(event.touches) == 1:
+        event.preventDefault()
+        mouseXOnMouseDown = event.touches[0].pageX - (float(window.innerWidth) / 2.0)
+        targetRotationOnMouseDown = targetRotation
+        
 def onDocumentTouchMove(event):
     event.preventDefault()
     mouse.x = (float(event.clientX) / float(window.innerWidth)) * 2.0 - 1.0
