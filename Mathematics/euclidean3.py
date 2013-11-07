@@ -157,9 +157,9 @@ assertEqual(position.xyz, 0)
 assertEqual(True, position.mutable)
 
 print "Lets take a look at the basis vectors for Euclidean3 by setting up some constant unit vectors."
-e1 = VectorE3(1, 0, 0, False)
-e2 = VectorE3(0, 1, 0, False)
-e3 = VectorE3(0, 0, 1, False)
+e1 = VectorE3(1.0, 0.0, 0.0, False)
+e2 = VectorE3(0.0, 1.0, 0.0, False)
+e3 = VectorE3(0.0, 0.0, 1.0, False)
 assertEqual(e1.w, 0)
 assertEqual(e1.x, 1)
 assertEqual(e1.y, 0)
