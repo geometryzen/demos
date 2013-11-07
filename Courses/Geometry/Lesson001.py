@@ -6,8 +6,8 @@ from geometry import *
 
 blades = [ScalarE3(+1), ScalarE3(-1), +e1, -e1, +e2, -e2, +e3, -e3, e1 ^ e2, e2 ^ e1, e2 ^ e3, e3 ^ e2, e3 ^ e1, e1 ^ e3, I, -I]
 binops = ["+", "-", "*", "<<", "^", ">>"]
-indexA = 1
-indexB = 2
+indexA = 3
+indexB = 11
 indexOp = 2
 wireframe = False
 
