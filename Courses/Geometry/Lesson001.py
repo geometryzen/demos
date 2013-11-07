@@ -4,7 +4,7 @@ from browser import *
 from workbench import *
 from geometry import *
 
-blades = [ScalarE3(1), e1, e2, e3, e1 ^ e2, e2 ^ e3, e3 ^ e1, e1 ^ e2 ^ e3]
+blades = [ScalarE3(1), e1, -e1, e2, e3, e1 ^ e2, e2 ^ e3, e3 ^ e1, e1 ^ e2 ^ e3]
 binops = ["+", "-", "*", "<<", "^", ">>"]
 indexA = 1
 indexB = 2
