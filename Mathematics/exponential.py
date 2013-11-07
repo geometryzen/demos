@@ -8,7 +8,7 @@ theta = (2.0 * pi) * i * j
 omega = theta * (1 / second)
 print "omega       => " + str(omega)
 
-t = ScalarE3(1) * second
+t = ScalarE3(1.0) * second
 print "t           => " + str(t)
 theta = omega * t
 print "theta       => " + str(theta)
