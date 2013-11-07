@@ -239,7 +239,7 @@ print "Bivectors, like e12, that square to -1 are the generators of rotations."
 # A rotor can be constructed from a normalized bivector using the exponential function.
 # Notice how a rotation through theta is expressed as a half-angle in the rotor, R
 theta = pi / 2
-R = exp(-e12 * theta / 2)
+R = exp(-e12 * theta / 2.0)
 assertEqual(R.w, cos(theta / 2))
 assertEqual(R.x, 0)
 assertEqual(R.y, 0)
