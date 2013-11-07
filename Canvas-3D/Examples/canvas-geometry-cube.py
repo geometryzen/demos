@@ -107,6 +107,9 @@ def onDocumentMouseUp(event):
     document.removeEventListener("mouseup", onDocumentMouseUp, False)
     document.removeEventListener("mouseout", onDocumentMouseOut, False)
 
+def onDocumentMouseOut(event):
+    pass
+
 def onDocumentTouchStart(event):
     event.preventDefault()
     mouse.x = (float(event.clientX) / float(window.innerWidth)) * 2.0 - 1.0
