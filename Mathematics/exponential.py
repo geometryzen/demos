@@ -4,7 +4,7 @@ from units import *
 
 i = VectorE3(1.0, 0.0, 0.0)
 j = VectorE3(0.0, 1.0, 0.0)
-theta = (2 * pi) * i * j
+theta = (2.0 * pi) * i * j
 omega = theta * (1 / second)
 print "omega       => " + str(omega)
 
