@@ -17,10 +17,6 @@ scene.add(pointLight)
 
 workbench3D = Workbench(renderer, camera)
 
-i = VectorE3(1, 0, 0)
-j = VectorE3(0, 1, 0)
-k = VectorE3(0, 0, 1)
-
 side = 4.0
 thk = 0.3
 s2 = 2 * side - thk
@@ -58,14 +54,14 @@ def tick(t):
     ball.position += (ball.momentum / ball.mass) * dt
     # Use a scalar product to project the ball position.
     # Use a geometric vector sandwich to compute the reflection. 
-    if abs(ball.position % i) >= side:
-        ball.momentum = - i * ball.momentum * i
+    if abs(ball.position % e1) >= side:
+        ball.momentum = - e1 * ball.momentum * e1
 
-    if abs(ball.position % j) >= side:
-        ball.momentum = - j * ball.momentum * j
+    if abs(ball.position % e2) >= side:
+        ball.momentum = - e2 * ball.momentum * e2
         
-    if abs(ball.position % k) >= side:
-        ball.momentum = - k * ball.momentum * k
+    if abs(ball.position % e3) >= side:
+        ball.momentum = - e3 * ball.momentum * e3
 
     renderer.render(scene, camera)
 
