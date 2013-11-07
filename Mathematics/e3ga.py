@@ -41,7 +41,7 @@ showValue("0    + sum", 0 + sum)
 showValue("zero - sum", zero - sum)
 showValue("0    - sum", 0 - sum)
 showValue("one  * sum", one * sum)
-showValue("1    * sum", 1 * sum)
+showValue("1    * sum", 1.0 * sum)
 showValue("one  ^ sum", one ^ sum)
 showValue("1    ^ sum", 1 ^ sum)
 print ""
