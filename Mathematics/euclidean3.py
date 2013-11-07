@@ -145,7 +145,7 @@ assertEqual(position.xyz, 0)
 assertEqual(True, position.mutable)
 
 print "There is a handy abbreviation for constructing a vector quantity - VectorE3(x, y, z [,mutable]}"
-position = VectorE3(2, 3, 5)
+position = VectorE3(2.0, 3.0, 5.0)
 assertEqual(position.w, 0)
 assertEqual(position.x, 2)
 assertEqual(position.y, 3)
