@@ -88,9 +88,21 @@ def onDocumentKeyUp(event):
         pass
 
 def onDocumentMouseDown(event):
+    global mouseXOnMouseDown, targetRotationOnMouseDown
     event.preventDefault()
 
-def onDocumentMouseMove(event):
+    document.addEventListener("mousemove", onDocumentMouseMove, False)
+    document.addEventListener("mouseup", onDocumentMouseUp, False)
+    document.addEventListener("mouseout", onDocumentMouseOut, False)
+
+    mouseXOnMouseDown = event.clientX - (float(window.innerWidth) / 2.0)
+
+def onDocumentTouchStart(event):
+    event.preventDefault()
+    mouse.x = (float(event.clientX) / float(window.innerWidth)) * 2.0 - 1.0
+    mouse.y = - (float(event.clientY) / float(window.innerHeight)) * 2.0 + 1.0
+
+def onDocumentTouchMove(event):
     event.preventDefault()
     mouse.x = (float(event.clientX) / float(window.innerWidth)) * 2.0 - 1.0
     mouse.y = - (float(event.clientY) / float(window.innerHeight)) * 2.0 + 1.0
@@ -108,12 +120,14 @@ def setUp():
     workbench2D.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
-    document.addEventListener("mousemove", onDocumentMouseMove, False)
+    document.addEventListener("touchstart", onDocumentTouchStart, False)
+    document.addEventListener("touchmove", onDocumentTouchMove, False)
     document.addEventListener("mousedown", onDocumentMouseDown, False)
 
 def tearDown():
     document.removeEventListener("mousedown", onDocumentMouseDown, False)
-    document.removeEventListener("mousemove", onDocumentMouseMove, False)
+    document.removeEventListener("touchstart", onDocumentTouchStart, False)
+    document.removeEventListener("touchmove", onDocumentTouchMove, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench2D.tearDown()
