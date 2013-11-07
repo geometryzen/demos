@@ -138,7 +138,8 @@ def onDocumentTouchMove(event):
 
 def tick(t):
     
-    plane.rotation.y = cube.rotation.y += (targetRotation - cube.rotation.y) * 0.05
+    cube.rotation.y += (targetRotation - cube.rotation.y) * 0.05
+    plane.rotation.y = cube.rotation.y
     renderer.render(scene, camera)
     space2D.render()
     
