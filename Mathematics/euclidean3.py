@@ -286,7 +286,7 @@ assertEqual(e1 * e2 * e3, I)
 
 print "The pseudoscalar has lots of interesting properties, some of which depend upon the dimensionality of the linear space."
 # I squares to -1
-assertEqual(I * I, ScalarE3(-1))
+assertEqual(I * I, ScalarE3(-1.0))
 # It commutes with other elements.
 assertEqual(I * one, one * I)
 assertEqual(I * e1, e1 * I)
