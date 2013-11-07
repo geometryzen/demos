@@ -9,6 +9,7 @@ binops = ["+", "-", "*", "<<", "^", ">>"]
 indexA = 1
 indexB = 2
 indexOp = 2
+wireframe = False
 
 timeOut = 600
 
@@ -98,19 +99,19 @@ outputC2.x = 500
 outputC2.y = rowR
 space2D.addChild(outputC2)
 
-probeC  = ProbeBuilderE3().wireframe(True).segments(18).color(colorC).build()
+probeC  = ProbeBuilderE3().wireframe(wireframe).segments(18).color(colorC).build()
 space3D.add(probeC.grade0)
 space3D.add(probeC.grade1)
 space3D.add(probeC.grade2)
 space3D.add(probeC.grade3)
 
-probeA  = ProbeBuilderE3().wireframe(True).segments(18).color(colorA).build()
+probeA  = ProbeBuilderE3().wireframe(wireframe).segments(18).color(colorA).build()
 space3D.add(probeA.grade0)
 space3D.add(probeA.grade1)
 space3D.add(probeA.grade2)
 space3D.add(probeA.grade3)
 
-probeB  = ProbeBuilderE3().wireframe(True).segments(18).color(colorB).build()
+probeB  = ProbeBuilderE3().wireframe(wireframe).segments(18).color(colorB).build()
 space3D.add(probeB.grade0)
 space3D.add(probeB.grade1)
 space3D.add(probeB.grade2)
