@@ -17,7 +17,7 @@ space3D.add(giant)
 
 dwarf = SphereBuilder().color("yellow").radius(0.2).build()
 dwarf.position = VectorE3(4.0, 0.0, 0.0)
-dwarf.mass     = ScalarE3(1)
+dwarf.mass     = ScalarE3(1.0)
 dwarf.momentum = -giant.momentum
 space3D.add(dwarf)
 
