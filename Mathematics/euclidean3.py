@@ -281,7 +281,7 @@ print "Finally, we come to the Pseudoscalar, geometrically interpreted as an ori
 I = e1 ^ e2 ^ e3
 # Here are some other ways of constructing the pseudoscalar.
 assertEqual(Euclidean3(0,0,0,0,0,0,0,1), I)
-assertEqual(PseudoscalarE3(1), I)
+assertEqual(PseudoscalarE3(1.0), I)
 assertEqual(e1 * e2 * e3, I)
 
 print "The pseudoscalar has lots of interesting properties, some of which depend upon the dimensionality of the linear space."
