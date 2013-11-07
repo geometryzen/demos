@@ -6,7 +6,7 @@ k = VectorE3(0,0,1)
 
 # Endpoints of the Barycentric Line.
 a0 = i + j
-a1 = 3 * i + 4 * j
+a1 = 3.0 * i + 4.0 * j
 
 # The Barycentric coordinates sum to unity.
 t0 = 0.6
