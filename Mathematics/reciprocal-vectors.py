@@ -33,8 +33,8 @@ print r1 ^ e1 + r2 ^ e2
 i = VectorE3(1.0, 0.0, 0.0)
 j = VectorE3(0.0, 1.0, 0.0)
 k = VectorE3(0.0, 0.0, 1.0)
-e1 = 12 * i
-e2 = 3 * i + 4 * j
+e1 = 12.0 * i
+e2 = 3.0 * i + 4.0 * j
 e3 = k
 v = (e1.cross(e2)) % e3
 r1 = e2.cross(e3) / v
