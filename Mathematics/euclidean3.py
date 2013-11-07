@@ -303,8 +303,8 @@ assertEqual(I * I, -one)
 
 # We've been assuming the geometric product all along using the standard Python operator for multiplication.
 # Between vectors we have the following identity.
-a = VectorE3(2,3,5)
-b = VectorE3(7,11,13)
+a = VectorE3(2.0,  3.0,  5.0)
+b = VectorE3(7.0, 11.0, 13.0)
 assertEqual(a * b, (a % b) + (a ^ b))
 # Notice the need for parenthesis because of Python precedence rules.
 assertEqual(a * b, a % b + (a ^ b))
