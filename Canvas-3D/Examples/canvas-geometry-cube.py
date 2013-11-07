@@ -125,7 +125,7 @@ def onDocumentTouchStart(event):
         targetRotationOnMouseDown = targetRotation
         
 def onDocumentTouchMove(event):
-    global mouseX, targetRotationOnMouseDown
+    global mouseX, targetRotation
 
     if len(event.touches) == 1:
         event.preventDefault()
