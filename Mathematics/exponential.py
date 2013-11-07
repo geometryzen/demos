@@ -18,6 +18,6 @@ print "exp(-theta) => " + str(exp(-theta))
 
 R = exp(-theta/2)
 print "R           => " + str(R)
-r = R * (1 * i * meter) * ~R
+r = R * (1.0 * i * meter) * ~R
 
 print r
