@@ -174,7 +174,7 @@ print "Euclidean3 adopts standard notation for basis vectors - e1,e2,e3."
 assertEqual("e1", str(e1))
 assertEqual("e2", str(e2))
 assertEqual("e3", str(e3))
-assertEqual("3*e1+4*e2+12*e3", str(VectorE3(3, 4, 12)))
+assertEqual("3*e1+4*e2+12*e3", str(VectorE3(3.0, 4.0, 12.0)))
 
 assertEqual(VectorE3(3, 4, 12).magnitude(), 13)
 
