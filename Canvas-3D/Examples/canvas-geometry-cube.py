@@ -92,6 +92,7 @@ def onDocumentKeyUp(event):
 
 def onDocumentMouseDown(event):
     global mouseXOnMouseDown, targetRotationOnMouseDown
+
     event.preventDefault()
 
     document.addEventListener("mousemove", onDocumentMouseMove, False)
@@ -103,6 +104,7 @@ def onDocumentMouseDown(event):
     
 def onDocumentMouseMove(event):
     global mouseX, targetRotation
+
     mouseX = event.clientX - (float(window.innerWidth) / 2.0)
     targetRotation = targetRotationOnMouseDown + (mouseX - mouseXOnMouseDown) * 0.02
 
@@ -112,22 +114,31 @@ def onDocumentMouseUp(event):
     document.removeEventListener("mouseout", onDocumentMouseOut, False)
 
 def onDocumentMouseOut(event):
-    pass
+    document.removeEventListener("mousemove", onDocumentMouseMove, False)
+    document.removeEventListener("mouseup", onDocumentMouseUp, False)
+    document.removeEventListener("mouseout", onDocumentMouseOut, False)
 
 def onDocumentTouchStart(event):
     global mouseXOnMouseDown, targetRotationOnMouseDown
+
     if len(event.touches) == 1:
         event.preventDefault()
+
         mouseXOnMouseDown = event.touches[0].pageX - (float(window.innerWidth) / 2.0)
         targetRotationOnMouseDown = targetRotation
         
 def onDocumentTouchMove(event):
-    event.preventDefault()
-    mouse.x = (float(event.clientX) / float(window.innerWidth)) * 2.0 - 1.0
-    mouse.y = - (float(event.clientY) / float(window.innerHeight)) * 2.0 + 1.0
+    global mouseX, targetRotationOnMouseDown
+
+    if len(event.touches) == 1:
+        event.preventDefault()
+
+        mouseX = event.touches[0].pageX - (float(window.innerWidth) / 2.0)
+        targetRotation = targetRotationOnMouseDown + (mouseX - mouseXOnMouseDown) * 0.05
 
 def tick(t):
     
+    plane.rotation.y = cube.rotation.y += (targetRotation - cube.rotation.y) * 0.05
     renderer.render(scene, camera)
     space2D.render()
     
