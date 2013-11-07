@@ -189,9 +189,9 @@ assertEqual(0, e2 % e3)
 assertEqual(0, e3 % e1)
 
 # Here is the scalar product being used for projection.
-assertEqual(3,  e1 % VectorE3(3, 4, 12))
-assertEqual(4,  e2 % VectorE3(3, 4, 12))
-assertEqual(12, e3 % VectorE3(3, 4, 12))
+assertEqual(3,  e1 % VectorE3(3.0, 4.0, 12.0))
+assertEqual(4,  e2 % VectorE3(3.0, 4.0, 12.0))
+assertEqual(12, e3 % VectorE3(3.0, 4.0, 12.0))
 
 # Things get a bit more interesting when we extend the vectors using the outer product.
 e12 = e1 ^ e2
