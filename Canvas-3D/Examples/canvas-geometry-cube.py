@@ -25,7 +25,10 @@ space2D.addChild(output)
 
 timeOut = 6000.0
 
-mouse = VectorE3(0, 10000, 0.5)
+mouseX = 0
+mouseXOnMouseDown = 0
+targetRotation = 0
+targetRotationOnMouseDown = 0
 isShiftDown = False
 isCtrlDown = False
 
