@@ -30,9 +30,9 @@ print r2 ^ e2
 print r1 ^ e1 + r2 ^ e2
 
 # And now we do it using the traditional 3-dimensional formula.
-i = VectorE3(1, 0, 0)
-j = VectorE3(0, 1, 0)
-k = VectorE3(0, 0, 1)
+i = VectorE3(1.0, 0.0, 0.0)
+j = VectorE3(0.0, 1.0, 0.0)
+k = VectorE3(0.0, 0.0, 1.0)
 e1 = 12 * i
 e2 = 3 * i + 4 * j
 e3 = k
