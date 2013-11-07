@@ -48,6 +48,9 @@ scene.add(cube)
 
 geometry = PlaneGeometry(200.0, 200.0)
 geometry.applyMatrix(Matrix4().makeRotationX(-pi / 2.0))
+material = MeshBasicMaterial({"color": 0xE0E0E0, "overdraw": 0.5})
+plane = Mesh(geometry, material)
+scene.add(plane)
 
 renderer = CanvasRenderer()
 
