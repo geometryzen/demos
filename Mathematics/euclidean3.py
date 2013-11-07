@@ -229,7 +229,7 @@ assertEqual(repr(e12), "BivectorE3(1, 0, 0)")
 
 # e12 squares to -1, but notice that the result is a Euclidean3 (ScalarE3), not a float.
 assertEqual(e12 * e12, ScalarE3(-1.0))
-assertEqual(e12 * e12, ScalarE3(-1))
+assertEqual(e12 * e12, ScalarE3(-1.0))
 assertTrue(e12 * e12 == ScalarE3(-1.0))
 assertTrue(e12 * e12 == ScalarE3(-1))
 assertFalse(e12 * e12 == -1.0)
