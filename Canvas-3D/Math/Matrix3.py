@@ -18,3 +18,5 @@ print m.transpose()
 print m
 print m.transpose()
 print m
+
+print m.clone()
