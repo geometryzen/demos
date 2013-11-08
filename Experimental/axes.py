@@ -70,8 +70,8 @@ def addMainGrid(scene, size):
     for y in range(-size, size+1):
         if (y != 0):
             gridLineGeometry = Geometry()
-            gridLineGeometry.vertices.append(Vector3(-size, y, 0))
-            gridLineGeometry.vertices.append(Vector3(size, y, 0))
+            gridLineGeometry.vertices.append(VectorE3(float(-size), float(y), 0.0))
+            gridLineGeometry.vertices.append(VectorE3(float(size), float(y), 0.0))
             material = MATERIAL_GRID_MAJOR if (y % 10 == 0) else MATERIAL_GRID_MINOR
             line = Line(gridLineGeometry, material)
             sceneObject.add(line)
