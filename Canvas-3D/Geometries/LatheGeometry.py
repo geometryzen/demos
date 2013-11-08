@@ -10,9 +10,9 @@ length = 4.0
 lengthShaft = 3.0
 a = VectorE3(0.0, 0.0, length)
 b = VectorE3(radiusCone, 0.0, lengthShaft)
-c = VectorE3(radiusShaft, 0, lengthShaft)
-d = VectorE3(radiusShaft, 0, 0)
-e = VectorE3(0, 0, 0)
+c = VectorE3(radiusShaft, 0.0, lengthShaft)
+d = VectorE3(radiusShaft, 0.0, 0.0)
+e = VectorE3(0.0, 0.0, 0.0)
 points = [a, b, c, d, e]
 arrow = LatheGeometry(points, 12)
 
