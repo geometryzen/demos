@@ -19,4 +19,4 @@ print s1.intersectsSphere(s2)
 
 print Sphere().copy(s2)
 
-print s1.distanceToPoint(VectorE3(1, 0, 0))
+print s1.distanceToPoint(VectorE3(1.0, 0.0, 0.0))
