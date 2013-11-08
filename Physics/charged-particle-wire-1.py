@@ -10,7 +10,7 @@ def wireB(position):
     return VectorE3(-y/quadrance, x/quadrance, 0)
 
 def constantB(position):
-    return VectorE3(1, 0, 0)
+    return VectorE3(1.0, 0.0, 0.0)
 
 timeOut = 60
 
