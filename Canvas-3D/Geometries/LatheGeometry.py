@@ -4,7 +4,7 @@ from workbench import *
 
 space = CartesianSpace()
 
-radiusCone = 1
+radiusCone = 1.0
 radiusShaft = 0.5
 length = 4.0
 lengthShaft = 3.0
