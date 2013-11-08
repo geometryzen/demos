@@ -20,3 +20,4 @@ print m.transpose()
 print m
 
 print m.clone()
+print m.copy()
