@@ -5,7 +5,7 @@ from workbench import *
 from geometry import *
 from math import exp, pi
 
-blades = [ScalarE3(1), e1, e2, e3, e1 ^ e2, e2 ^ e3, e3 ^ e1, e1 ^ e2 ^ e3]
+blades = [ScalarE3(1.0), e1, e2, e3, e1 ^ e2, e2 ^ e3, e3 ^ e1, e1 ^ e2 ^ e3]
 indexA = 1
 indexB = 2
 
