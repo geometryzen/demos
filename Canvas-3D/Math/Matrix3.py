@@ -21,3 +21,4 @@ print m
 
 print m.clone()
 print m.copy(Matrix3())
+print m
