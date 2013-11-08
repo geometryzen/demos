@@ -47,7 +47,7 @@ square.y = 100
 square.name = "square"
 space2D.addChild(square)
 
-quantity = VectorE3(0, 3, 0)
+quantity = VectorE3(0.0, 3.0, 0.0)
 
 def handleMouseEvent(event):
     quantity.y += 0.1
