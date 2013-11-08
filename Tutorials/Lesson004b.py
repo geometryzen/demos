@@ -14,7 +14,7 @@ scale = 4.0 / L
 i = VectorE3(1.0, 0.0, 0.0, False)
 j = VectorE3(0.0, 1.0, 0.0, False)
 k = VectorE3(0.0, 0.0, 1.0, False)
-print -L * i
+print float(-L) * i
 position = -L * i - L * j
 move = j.clone()
 R = (1 + i * j) / sqrt(2)
