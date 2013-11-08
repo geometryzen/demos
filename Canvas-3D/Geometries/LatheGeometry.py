@@ -6,7 +6,7 @@ space = CartesianSpace()
 
 radiusCone = 1
 radiusShaft = 0.5
-length = 4
+length = 4.0
 lengthShaft = 3.0
 a = VectorE3(0.0, 0.0, length)
 b = VectorE3(radiusCone, 0, lengthShaft)
