@@ -20,4 +20,4 @@ print m.transpose()
 print m
 
 print m.clone()
-print m.copy(Matrxi())
+print m.copy(Matrix3())
