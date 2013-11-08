@@ -1,4 +1,4 @@
-from e3ga import *
+from three import *
 
 m = Matrix3()
 
