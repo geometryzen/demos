@@ -54,7 +54,7 @@ scene.add(grnMesh)
 scene.add(yloMesh)
 
 pointLight = PointLight(0x888888)
-pointLight.position.set(20, 20, 20)
+pointLight.position.set(20.0, 20.0, 20.0)
 scene.add(pointLight)
 
 directionalLight = DirectionalLight(0x888888)
