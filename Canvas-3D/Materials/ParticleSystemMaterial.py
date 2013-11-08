@@ -11,7 +11,7 @@ mouse = VectorE3(0.0, 0.0, 0.0)
 scene = Scene()
 
 camera = PerspectiveCamera(60, 1, 1, 10000)
-camera.position.set(10000, 0, 3200)
+camera.position.set(10000.0, 0.0, 3200.0)
 
 material = ParticleSystemMaterial({"size": 1.0, "vertexColors": True, "depthTest": False, "opacity": 0.5, "sizeAttenuation": False, "transparent": True})
 material.size = 2.0
