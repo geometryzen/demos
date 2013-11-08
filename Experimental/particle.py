@@ -16,15 +16,15 @@ particle = Mesh(SphereGeometry(50, 32, 24), MeshLambertMaterial({"color":0x0000F
 scene.add(particle)
 
 # Initialize the system configuration.
-x = VectorE3(-500,0,0)
-v = VectorE3(75,75,0)
+x = VectorE3(-500.0, 0.0, 0.0)
+v = VectorE3(75.0, 75.0, 0.0)
 m = 1
-g = VectorE3(0, -9.81, 0)
+g = VectorE3(0.0, -9.81, 0.0)
 
 # Charge, Electric Field, and Magnetic Field as an bivector (no "dishonest" axial vectors, Thank You).
-e = ScalarE3(1)
-E = VectorE3(0,0,0)
-B = BivectorE3(0,0,0)
+e = ScalarE3(1.0)
+E = VectorE3(0.0, 0.0, 0.0)
+B = BivectorE3(0.0, 0.0, 0.0)
 
 # Some more examples of constructing reference multivectors.
 one = Euclidean3(1, 0, 0, 0, 0, 0, 0, 0)
