@@ -11,5 +11,5 @@ print plane.offset
 print plane
 print repr(plane)
 
-s1 = Plane(VectorE3(0, 0, 0), 0.1)
-s2 = Plane(VectorE3(2, 2, 2), 1.5)
+s1 = Plane(VectorE3(0.0, 0.0, 0.0), 0.1)
+s2 = Plane(VectorE3(2.0, 2.0, 2.0), 1.5)
