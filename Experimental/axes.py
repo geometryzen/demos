@@ -15,16 +15,16 @@ MATERIAL_GRID_MINOR = LineBasicMaterial({"color": COLOR_GRID,"opacity":0.02,"tra
 
 def addLights(scene):
     pointLight = PointLight(0xFFFFFF)
-    pointLight.position.set(100, 100, 100)
+    pointLight.position.set(100.0, 100.0, 100.0)
     scene.add(pointLight)
     pointLight = PointLight(0xFFFFFF)
-    pointLight.position.set(100, -100, 100)
+    pointLight.position.set(100.0, -100.0, 100.0)
     scene.add(pointLight)
     pointLight = PointLight(0xFFFFFF)
-    pointLight.position.set(100, 100, -100)
+    pointLight.position.set(100.0, 100.0, -100.0)
     scene.add(pointLight)
     pointLight = PointLight(0xFFFFFF)
-    pointLight.position.set(100, -100, -100)
+    pointLight.position.set(100.0, -100.0, -100.0)
     scene.add(pointLight)
 
 def addAxes(scene):
