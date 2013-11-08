@@ -1,8 +1,8 @@
 from e3ga import *
 from units import *
  
-m = ScalarE3(10) * kilogram
-r = VectorE3(1,0,0) * meter
+m = ScalarE3(10.0) * kilogram
+r = VectorE3(1.0, 0.0, 0.0) * meter
  
 print "m => " + str(m)
  
