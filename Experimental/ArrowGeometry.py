@@ -3,9 +3,9 @@ from browser import *
 from workbench import *
 from math import pi
 
-i = VectorE3(1,0,0)
-j = VectorE3(0,1,0)
-k = VectorE3(0,0,1)
+i = VectorE3(1.0, 0.0, 0.0)
+j = VectorE3(0.0, 1.0, 0.0)
+k = VectorE3(0.0, 0.0, 1.0)
 
 scene = Scene()
 
