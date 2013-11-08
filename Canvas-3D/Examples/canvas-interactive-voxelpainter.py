@@ -42,7 +42,7 @@ ambientLight = AmbientLight(0x606060)
 scene.add(ambientLight)
 
 light = DirectionalLight(0xFFFFFF, 2)
-light.position.set(1, 1, 1).normalize()
+light.position.set(1.0, 1.0, 1.0).normalize()
 scene.add(light)
 
 light = DirectionalLight(0xFFFFFF)
