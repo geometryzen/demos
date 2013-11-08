@@ -12,7 +12,7 @@ ambientLight = AmbientLight(0x111111)
 scene.add(ambientLight)
 
 pointLight = PointLight(0xFFFFFF)
-pointLight.position.set(20, 20, 20)
+pointLight.position.set(20.0, 20.0, 20.0)
 scene.add(pointLight)
 
 directionalLight = DirectionalLight(0xFFFFFF)
