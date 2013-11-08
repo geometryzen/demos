@@ -148,7 +148,7 @@ distance = 1000
 polarAngle = 60 * pi / 180
 azimuthAngle = 10 * pi / 180
 target = {"distance": 300, "polarAngle": polarAngle, "azimuthAngle": azimuthAngle}
-targetScenePosition = VectorE3(0,0,0)
+targetScenePosition = VectorE3(0.0, 0.0, 0.0)
 
 workbench = Workbench(renderer, camera)
 
