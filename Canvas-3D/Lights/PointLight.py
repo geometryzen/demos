@@ -9,7 +9,7 @@ camera.position.set(10.0, 10.0, 10.0)
 camera.lookAt(scene.position)
 
 pointLight = PointLight(0xFFFFFF, 1, 100)
-pointLight.position.set(20, 20, 20)
+pointLight.position.set(20.0, 20.0, 20.0)
 scene.add(pointLight)
 
 renderer = WebGLRenderer()
