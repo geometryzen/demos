@@ -7,7 +7,7 @@ for canvas in document.getElementsByTagName("canvas"):
 scene = Scene()
 
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
-camera.position.set(10, 10, 10)
+camera.position.set(10.0, 10.0, 10.0)
 camera.lookAt(scene.position)
 
 ambientLight = AmbientLight(0x0000FF)
