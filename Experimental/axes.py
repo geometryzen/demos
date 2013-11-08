@@ -29,23 +29,23 @@ def addLights(scene):
 
 def addAxes(scene):
     axes = [Geometry(),Geometry(),Geometry(),Geometry(),Geometry(),Geometry()]
-    axes[0].vertices.append(VectorE3(0,0,0))
-    axes[0].vertices.append(VectorE3(1000,0,0))
+    axes[0].vertices.append(VectorE3(0.0, 0.0, 0.0))
+    axes[0].vertices.append(VectorE3(1000.0, 0.0, 0.0))
     
-    axes[1].vertices.append(VectorE3(0,0,0))
-    axes[1].vertices.append(VectorE3(0,1000,0))
+    axes[1].vertices.append(VectorE3(0.0, 0.0, 0.0))
+    axes[1].vertices.append(VectorE3(0.0, 1000.0, 0.0))
     
-    axes[2].vertices.append(VectorE3(0,0,0))
-    axes[2].vertices.append(VectorE3(0,0,1000))
+    axes[2].vertices.append(VectorE3(0.0, 0.0, 0.0))
+    axes[2].vertices.append(VectorE3(0.0, 0.0, 1000.0))
     
-    axes[3].vertices.append(VectorE3(0,0,0))
-    axes[3].vertices.append(VectorE3(-1000,0,0))
+    axes[3].vertices.append(VectorE3(0.0, 0.0, 0.0))
+    axes[3].vertices.append(VectorE3(-1000.0, 0.0, 0.0))
     
-    axes[4].vertices.append(VectorE3(0,0,0))
-    axes[4].vertices.append(VectorE3(0,-1000,0))
+    axes[4].vertices.append(VectorE3(0.0, 0.0, 0.0))
+    axes[4].vertices.append(VectorE3(0.0,-1000.0, 0.0))
     
-    axes[5].vertices.append(VectorE3(0,0,0))
-    axes[5].vertices.append(VectorE3(0,0,-1000))
+    axes[5].vertices.append(VectorE3(0.0, 0.0, 0.0))
+    axes[5].vertices.append(VectorE3(0.0, 0.0,-1000.0))
     
     sceneObject = Object3D()
     sceneObject.add(Line(axes[0], LineBasicMaterial({"color":COLOR_X_AXIS, "opacity":0.5,"transparent":True})))
