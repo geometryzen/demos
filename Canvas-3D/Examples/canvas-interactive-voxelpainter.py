@@ -150,7 +150,7 @@ def setUp():
     step = 50
     for i in range(-size, size + 1, step):
         geometry.vertices.append(VectorE3(float(-size), 0.0, float(i)))
-        geometry.vertices.append(VectorE3(+size, 0, i))
+        geometry.vertices.append(VectorE3(float(+size), 0.0, float(i)))
         geometry.vertices.append(VectorE3(i, 0, -size))
         geometry.vertices.append(VectorE3(i, 0, +size))
 
