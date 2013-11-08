@@ -46,7 +46,7 @@ light.position.set(1.0, 1.0, 1.0).normalize()
 scene.add(light)
 
 light = DirectionalLight(0xFFFFFF)
-light.position.set(-1, -1, -1).normalize()
+light.position.set(-1.0, -1.0, -1.0).normalize()
 scene.add(light)
 
 projector = Projector()
