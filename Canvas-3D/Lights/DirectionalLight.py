@@ -10,7 +10,7 @@ camera.lookAt(scene.position)
 
 # White directional light at half intensity shining from the top.
 directionalLight = DirectionalLight(0xFFFFFF)
-directionalLight.position.set(0, 1, 0)
+directionalLight.position.set(0.0, 1.0, 0.0)
 scene.add(directionalLight)
 
 renderer = WebGLRenderer()
