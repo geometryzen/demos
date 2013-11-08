@@ -4,7 +4,7 @@ from browser import *
 from math import pi
 
 useLargeCanvas = False
-LENGTH = 10
+LENGTH = 10.0
 DURATION_SECONDS = 20
 
 scene = Scene()
