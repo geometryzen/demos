@@ -9,7 +9,7 @@ moveLeft = False
 moveRight = False
 
 camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
-camera.position.z = 2
+camera.position.z = 2.0
 renderer = WebGLRenderer({"antialias": True})
 scene = Scene()
 
