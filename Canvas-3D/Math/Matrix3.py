@@ -1,5 +1,7 @@
 '''
-Under Construction. Nov 8, 2013
+Using three.Matrix3 as a general-purpose matrix is not recommended.
+1) Precision is limited to 32-bit.
+2) getInverse(m, throwOnInvertible) is confusing/broken?
 '''
 from three import *
 
