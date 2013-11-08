@@ -1,6 +1,6 @@
 from three import *
 
-normal = VectorE3(0, 0, 1)
+normal = VectorE3(0.0, 0.0, 1.0)
 offset = 1.0
 
 plane = Plane(normal, offset)
