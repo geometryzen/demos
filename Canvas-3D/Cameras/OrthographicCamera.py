@@ -59,10 +59,10 @@ def setUp():
     step = 50
     geometry = Geometry()
     for i in range(-size, size+step, step):
-        geometry.vertices.append(Vector3(-size, 0, i))
-        geometry.vertices.append(Vector3(+size, 0, i))
-        geometry.vertices.append(Vector3( i, 0, -size))
-        geometry.vertices.append(Vector3( i, 0, +size))
+        geometry.vertices.append(VectorE3(float(-size), 0.0, float(i)))
+        geometry.vertices.append(VectorE3(float(+size), 0.0, float(i)))
+        geometry.vertices.append(VectorE3( float(i), 0.0, float(-size)))
+        geometry.vertices.append(VectorE3( float(i), 0.0, float(+size)))
         
     material = LineBasicMaterial({"color":0x000000,"opacity":0.2})
     
