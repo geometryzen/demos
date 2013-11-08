@@ -94,8 +94,8 @@ def isInsideY(y, size):
 
 def addFadingGridTile(x, y, size, sceneObject):
     fadingGridLineGeometry = Geometry()
-    fadingGridLineGeometry.vertices.append(VectorE3(0,0,0))
-    fadingGridLineGeometry.vertices.append(VectorE3(10,0,0))
+    fadingGridLineGeometry.vertices.append(VectorE3(0.0, 0.0, 0.0))
+    fadingGridLineGeometry.vertices.append(VectorE3(10.0, 0.0, 0.0))
     dx = 0
     if (x < -size):
         dx = -size - x
