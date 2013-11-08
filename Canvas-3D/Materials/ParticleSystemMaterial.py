@@ -42,8 +42,8 @@ scene.add(mesh)
     
 renderer = WebGLRenderer({"preserveDrawingBuffer": True})
 renderer.sortObjects = False
-renderer.autoClearColor = False
-renderer.setClearColor(0x000000, 1.0)
+renderer.autoClearColor = True
+renderer.setClearColor(Color(0xCCCCCC), 1.0)
 
 workbench = Workbench(renderer, camera)
 
