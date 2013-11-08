@@ -6,16 +6,16 @@ from workbench import *
 space = CartesianSpace()
 
 # All arguments are optional and the defaults, in order, are as follows.
-radiusCone = 1
+radiusCone = 1.0
 radiusShaft = 0.5
-length = 4
-lengthShaft = 3
+length = 4.0
+lengthShaft = 3.0
 
-a = VectorE3(0, 0, length)
-b = VectorE3(radiusCone, 0, lengthShaft)
-c = VectorE3(radiusShaft, 0, lengthShaft)
-d = VectorE3(radiusShaft, 0, 0)
-e = VectorE3(0, 0, 0)
+a = VectorE3(0.0, 0.0, length)
+b = VectorE3(radiusCone, 0.0, lengthShaft)
+c = VectorE3(radiusShaft, 0.0, lengthShaft)
+d = VectorE3(radiusShaft, 0.0, 0.0)
+e = VectorE3(0.0, 0.0, 0.0)
 points = [a, b, c, d, e]
 # The points are to be rotated in the xy-plane to generate the geometry.
 arrow = RevolutionGeometry(points, BivectorE3(1, 0, 0), 12)
