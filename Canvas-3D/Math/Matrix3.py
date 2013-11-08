@@ -9,3 +9,5 @@ print m
 
 print Matrix3().determinant()
 print m.determinant()
+print m.transpose()
+print m
