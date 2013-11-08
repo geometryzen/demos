@@ -34,11 +34,11 @@ renderer.sortObjects = False
 camera = PerspectiveCamera(70, 1, 1, 10000)
 
 light = DirectionalLight(0xFFFFFF, 2)
-light.position.set(1, 1, 1).normalize()
+light.position.set(1.0, 1.0, 1.0).normalize()
 scene.add(light)
 
 light = DirectionalLight(0xFFFFFF)
-light.position.set(-1, -1, -1).normalize()
+light.position.set(-1.0, -1.0, -1.0).normalize()
 scene.add(light)
 
 projector = Projector()
