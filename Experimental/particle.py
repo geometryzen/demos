@@ -27,7 +27,7 @@ E = VectorE3(0.0, 0.0, 0.0)
 B = BivectorE3(0.0, 0.0, 0.0)
 
 # Some more examples of constructing reference multivectors.
-one = Euclidean3(1, 0, 0, 0, 0, 0, 0, 0)
+one = Euclidean3(1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
 i = VectorE3(1,0,0)
 j = VectorE3(0,1,0)
 k = VectorE3(0,0,1)
