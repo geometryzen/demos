@@ -1,6 +1,6 @@
 from three import *
 
-origin = VectorE3(1,2,3)
+origin = VectorE3(1.0, 2.0, 3.0)
 direction = e3
 
 ray = Ray(origin, direction)
