@@ -83,7 +83,7 @@ def addFadingGrid(scene, size, boundary):
         for y in range(-size-boundary, size+boundary+1):
             inside = isInsideX(x, size) and isInsideY(y, size)
             if ((x % 10 == 0) and (y % 10 == 0) and (x != 0) and (y != 0) and  not inside):
-                addFadingGridTile(x, y, size, sceneObject)
+                addFadingGridTile(float(x), float(y), size, sceneObject)
     scene.add(sceneObject)
     
 def isInsideX(x, size):
