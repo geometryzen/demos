@@ -41,7 +41,7 @@ redMesh.lookAt(VectorE3(1.0, 0.0, 0.0))
 grnMesh.lookAt(VectorE3(0.0, 1.0, 0.0))
 grnMesh.visible = True
 yloMesh.lookAt(VectorE3(1.0, 0.0, 0.0))
-yloMesh.position = VectorE3(0,1,1)
+yloMesh.position = VectorE3(0.0, 1.0, 1.0)
 
 print "position   => " + str(bluMesh.position)
 print "rotation   => " + str(bluMesh.rotation)
