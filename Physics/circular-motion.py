@@ -27,7 +27,7 @@ workbench = Workbench(space.renderer, space.camera)
 def onDocumentKeyDown(event):
     global timeOut
     if event.keyCode == 27:
-        timeOut = 0
+        timeOut = 0.0
 
 def setUp():
     workbench.setUp()
@@ -35,7 +35,7 @@ def setUp():
 
 def tick(t):
     R = exp(-omega * t / 2.0)
-    shape.position = R * (4 * i) * ~R
+    shape.position = R * (4.0 * i) * ~R
     shape.attitude = R
     space.render()
     
