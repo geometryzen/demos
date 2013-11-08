@@ -11,7 +11,7 @@ mouse = VectorE3(0.0, 0.0, 0.0)
 scene = Scene()
 
 camera = PerspectiveCamera(60, 1, 1, 10000)
-camera.position.set(10000, 0, 3200)
+camera.position.set(10000.0, 0.0, 3200.0)
 
 colors = [0x000000,0xFF0080,0x8000FF, 0xFFFFFF]
 geometry = Geometry()
