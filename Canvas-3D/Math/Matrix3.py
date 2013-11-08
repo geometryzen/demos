@@ -16,3 +16,5 @@ print ""
 print "transpose()"
 print m.transpose()
 print m
+print m.transpose()
+print m
