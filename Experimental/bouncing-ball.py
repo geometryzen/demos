@@ -15,7 +15,7 @@ scene.add(particle)
 COLOR_GRID = 0x66A1D2
 xyPlane = Mesh(PlaneGeometry(LENGTH,LENGTH,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True, "opacity":0.2,"transparent":True}))
 scene.add(xyPlane)
-xyPlane.position.set(LENGTH/2,LENGTH/2,0)
+xyPlane.position.set(LENGTH/2, LENGTH/2, 0.0)
 
 yzPlane = Mesh(PlaneGeometry(LENGTH,LENGTH,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True, "opacity":0.2,"transparent":True}))
 yzPlane.rotation.set(0,pi/2,0)
