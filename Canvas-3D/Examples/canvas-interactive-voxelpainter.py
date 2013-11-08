@@ -36,7 +36,7 @@ scene = Scene()
 renderer = CanvasRenderer()
 
 camera = PerspectiveCamera(70, 1, 1, 10000)
-camera.position.y = 800
+camera.position.y = 800.0
 
 ambientLight = AmbientLight(0x606060)
 scene.add(ambientLight)
