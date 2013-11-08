@@ -5,7 +5,7 @@ from workbench import *
 scene = Scene()
 
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
-camera.position.set(10, 10, 10)
+camera.position.set(10.0, 10.0, 10.0)
 camera.lookAt(scene.position)
 
 # White directional light at half intensity shining from the top.
