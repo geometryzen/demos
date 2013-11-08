@@ -7,9 +7,9 @@ useLargeCanvas = True
 
 # Global variables
 camera = OrthographicCamera(-1, 1, 1, -1, -500, 1000)
-camera.position.x = 200
-camera.position.y = 100
-camera.position.z = 200
+camera.position.x = 200.0
+camera.position.y = 100.0
+camera.position.z = 200.0
 
 renderer = WebGLRenderer({"antialias": True})
 renderer.setClearColor(Color(0xFFFFFF), 1.0)
