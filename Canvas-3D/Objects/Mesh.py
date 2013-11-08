@@ -68,7 +68,7 @@ startTime =  None
 movement = VectorE3(0.02, 0.02, 0.02)
 
 def render():
-    grnMesh.position.set(0.5,0,0);
+    grnMesh.position.set(0.5, 0.0, 0.0);
     grnMesh.scale.set(1,1,1)
     bluMesh.rotation += movement
         
