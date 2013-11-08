@@ -10,7 +10,7 @@ k = VectorE3(0.0, 0.0, 1.0)
 scene = Scene()
 
 camera  = PerspectiveCamera(45, 1.0, 0.1, 1000)
-camera.up.set(0, 0, 1)
+camera.up.set(0.0, 0.0, 1.0)
 camera.position.set(3, 3, 3)
 camera.lookAt(scene.position)
 
