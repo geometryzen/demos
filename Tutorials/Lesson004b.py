@@ -15,7 +15,7 @@ i = VectorE3(1.0, 0.0, 0.0, False)
 j = VectorE3(0.0, 1.0, 0.0, False)
 k = VectorE3(0.0, 0.0, 1.0, False)
 
-position = -L * i -L * j
+position = -L * i - L * j
 move = j.clone()
 R = (1 + i * j) / sqrt(2)
 
