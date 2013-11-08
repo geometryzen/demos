@@ -55,7 +55,7 @@ def wireB(position):
     y = position.y
     quadrance = x * x + y * y
     # Conver the traditional magnetic field to a bivector.
-    return -I * VectorE3(-y/quadrance, x/quadrance, 0)
+    return -I * VectorE3(-y/quadrance, x/quadrance, 0.0)
 
 def outsideCube(position, size):
     if (abs(particle.position % i) > size):
