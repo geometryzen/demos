@@ -58,7 +58,7 @@ pointLight.position.set(20.0, 20.0, 20.0)
 scene.add(pointLight)
 
 directionalLight = DirectionalLight(0x888888)
-directionalLight.position.set(0, 1, 0)
+directionalLight.position.set(0.0, 1.0, 0.0)
 scene.add(directionalLight)
 
 progressEnd = 6
