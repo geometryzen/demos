@@ -18,7 +18,7 @@ d = VectorE3(radiusShaft, 0.0, 0.0)
 e = VectorE3(0.0, 0.0, 0.0)
 points = [a, b, c, d, e]
 # The points are to be rotated in the xy-plane to generate the geometry.
-arrow = RevolutionGeometry(points, BivectorE3(1, 0, 0), 12)
+arrow = RevolutionGeometry(points, BivectorE3(1.0, 0.0, 0.0), 12)
 
 material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth": 1})
 mesh = Mesh(arrow, material)
