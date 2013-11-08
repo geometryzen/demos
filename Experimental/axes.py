@@ -143,7 +143,7 @@ addFadingGrid(scene, 60, 50)
 
 progressEnd = 6
 
-lastCameraPosition = VectorE3(0,0,0)
+lastCameraPosition = VectorE3(0.0, 0.0, 0.0)
 distance = 1000
 polarAngle = 60 * pi / 180
 azimuthAngle = 10 * pi / 180
