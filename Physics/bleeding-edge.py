@@ -14,10 +14,10 @@ I = i * j * k
 workbench3D = Workbench(space3D.renderer, space3D.camera)
 
 particle = SphereBuilder().color("blue").radius(0.1).build()
-particle.charge   = ScalarE3(1)
-particle.mass     = ScalarE3(1)
-particle.position = VectorE3(0, 1, 0)
-particle.velocity = VectorE3(0, -1, 0)
+particle.charge   = ScalarE3(1.0)
+particle.mass     = ScalarE3(1.0)
+particle.position = VectorE3(0.0, 1.0, 0.0)
+particle.velocity = VectorE3(0.0, -1.0, 0.0)
 space3D.add(particle)
 
 #wire = CylinderBuilder().radius(0.1).height(100).color("blue").build()
