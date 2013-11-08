@@ -33,7 +33,7 @@ camera.position.set(LENGTH * 2.0, LENGTH * 2.0, LENGTH * 1.0)
 camera.lookAt(scene.position)
 
 # Initialize the system configuration.
-r = VectorE3(0, 0, LENGTH)
+r = VectorE3(0.0, 0.0, LENGTH)
 v = VectorE3(0,0,0)
 m = 1
 g = VectorE3(0, 0, -9.81)
