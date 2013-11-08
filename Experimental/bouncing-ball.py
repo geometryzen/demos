@@ -34,7 +34,7 @@ camera.lookAt(scene.position)
 
 # Initialize the system configuration.
 r = VectorE3(0.0, 0.0, LENGTH)
-v = VectorE3(0,0,0)
+v = VectorE3(0.0, 0.0, 0.0)
 m = 1
 g = VectorE3(0, 0, -9.81)
 k = VectorE3(0,0,1)
