@@ -7,7 +7,7 @@ from browser import *
 from workbench import *
 from math import pi, exp
 
-timeOut = 12
+timeOut = 12.0
 
 space = CartesianSpace()
 
