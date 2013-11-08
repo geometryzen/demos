@@ -7,8 +7,8 @@ def assertEqual(actual, expect):
     else:
         print {"actual": actual, "expect": expect}
 
-velocity = VectorE3(1,0,0) * meter / second ** 2
-mass = ScalarE3(10) * kilogram
+velocity = VectorE3(1.0, 0.0, 0.0) * meter / second ** 2
+mass = ScalarE3(10.0) * kilogram
 
 print velocity
 
