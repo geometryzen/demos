@@ -25,7 +25,7 @@ theta = 45.0
 timeOut = 6000.0
 
 mouse = VectorE3(0.0, 10000.0, 0.5)
-target = VectorE3(0,200,0)
+target = VectorE3(0.0, 200.0, 0.0)
 normalMatrix = Matrix3()
 ROLLOVERED = None
 isShiftDown = False
