@@ -43,7 +43,7 @@ for i in range(0, len(geometry.faces), 2):
     
 material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
 cube = Mesh(geometry, material)
-cube.position.y = 150
+cube.position.y = 150.0
 scene.add(cube)
 
 geometry = PlaneGeometry(200.0, 200.0)
