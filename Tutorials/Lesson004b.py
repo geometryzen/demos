@@ -8,7 +8,7 @@ from geometry import CartesianSpace, SphereBuilder
 from math import sqrt
 from workbench import Workbench
 
-L = 50
+L = 50.0
 scale = 4.0 / L
 
 i = VectorE3(1.0, 0.0, 0.0, False)
