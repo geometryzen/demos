@@ -40,7 +40,7 @@ yloMesh = Mesh(yloGeom, yloWire)
 redMesh.lookAt(VectorE3(1.0, 0.0, 0.0))
 grnMesh.lookAt(VectorE3(0.0, 1.0, 0.0))
 grnMesh.visible = True
-yloMesh.lookAt(VectorE3(1,0,0))
+yloMesh.lookAt(VectorE3(1.0, 0.0, 0.0))
 yloMesh.position = VectorE3(0,1,1)
 
 print "position   => " + str(bluMesh.position)
