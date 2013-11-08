@@ -36,7 +36,7 @@ camera.lookAt(scene.position)
 r = VectorE3(0.0, 0.0, LENGTH)
 v = VectorE3(0.0, 0.0, 0.0)
 m = 1
-g = VectorE3(0, 0, -9.81)
+g = VectorE3(0.0, 0.0, -9.81)
 k = VectorE3(0,0,1)
 
 # The user-defined force field, F, may depend upon the particle position, velocity and time.
