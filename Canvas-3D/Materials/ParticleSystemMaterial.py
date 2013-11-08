@@ -6,7 +6,7 @@ from math import *
 
 timeOut = 4.0
 
-mouse = VectorE3(0, 0, 0)
+mouse = VectorE3(0.0, 0.0, 0.0)
 
 scene = Scene()
 
