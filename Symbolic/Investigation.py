@@ -3,7 +3,7 @@ Investigating the feasibility of CAS.
 '''
 from symbolic import *
 
-a = Variable("a")
+a = Variable("x")
 b = Variable("b")
 c = Variable("c")
 
