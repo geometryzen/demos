@@ -6,6 +6,7 @@ from symbolic import *
 # The following functions are provided for testing purposes.
 def assertEqual(fn, actual, expect):
     if str(fn.execute(actual)) == str(expect):
+        print str(actual) + "=>" + str(fn.execute(actual))
         pass
     else:
         print {"fn": fn, "output": str(fn.execute(actual)), "expect": str(expect), "input": str(actual)}
