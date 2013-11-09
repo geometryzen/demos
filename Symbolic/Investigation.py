@@ -13,5 +13,10 @@ walker = TreeWalker(tree)
 if walker.moveToLastChild():
     print walker.contextNode
     print len(walker.ancestorAxis)
+    if walker.moveToParent():
+        print walker.contextNode
+        print len(walker.ancestorAxis)
+    else:
+        pass
 else:
     print "cannot move to first child of " + str(walker.contextNode)
