@@ -14,3 +14,5 @@ print walker.contextNode
 print walker.ancestorAxis
 if walker.moveToFirstChild():
     print walker.contextNode
+else:
+    print "cannot move to first child of " + str(walker.contextNode)
