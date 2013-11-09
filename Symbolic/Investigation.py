@@ -7,7 +7,7 @@ a = Variable("a")
 b = Variable("b")
 c = Variable("c")
 
-z = a * (b + c)
+tree = a * (b + c)
 
-print z
-print repr(z)
+print tree
+print repr(tree)
