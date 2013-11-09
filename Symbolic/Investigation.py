@@ -12,5 +12,6 @@ tree = a * (b + c)
 walker = TreeWalker(tree)
 if walker.moveToFirstChild():
     print walker.contextNode
+    print walker.ancestorAxis
 else:
     print "cannot move to first child of " + str(walker.contextNode)
