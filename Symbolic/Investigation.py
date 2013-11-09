@@ -9,4 +9,4 @@ c = Variable("c")
 
 tree = a * (b + c)
 
-w = Walker(tree)
+w = TreeWalker(tree)
