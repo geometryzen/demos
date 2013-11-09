@@ -11,4 +11,4 @@ tree = a * (b + c)
 
 walker = TreeWalker(tree)
 
-print tree
+print repr(tree)
