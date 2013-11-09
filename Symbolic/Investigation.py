@@ -30,7 +30,7 @@ assertEqual(Commute(),  a * b         , b * a         )
 assertEqual(DistribL(), a * (b + c)   , a * b + a * c )
 
 assertEqual(FactorL(),  a * b + a * c , a * (b + c)   )
-assertEqual(FactorR(),  a * b + c * b , (a + c) * c   )
+assertEqual(FactorR(),  a * b + c * b , (a + c) * b   )
 
 assertEqual(AssocL(),   a * (b * c)   , (a * b) * c   )
 assertEqual(AssocR(),   (a * b) * c   , a * (b * c)   )
