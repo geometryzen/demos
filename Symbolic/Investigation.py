@@ -33,6 +33,6 @@ aL = AssocL()
 aR = AssocR()
 
 assertEqual(Commute(), a * b, b * a)
-assertEqual(dL.execute(a * (b + c)), a * b + a * c)
+assertEqual(DistribL(), a * (b + c), a * b + a * c)
 assertEqual(fL.execute(a * b + a * c), a * (b + c))
 assertEqual(aL.execute(a * b + a * c), a * (b + c))
