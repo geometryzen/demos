@@ -16,4 +16,4 @@ fL = FactorL()
 
 print tree
 print dL.execute(tree)
-print fL(dL.execute(tree))
+print fL.execute(dL.execute(tree))
