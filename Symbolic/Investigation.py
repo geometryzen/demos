@@ -15,7 +15,7 @@ co = Commute()
 dL = DistribL()
 fL = FactorL()
 aL = AssocL()
-aR = assocR()
+aR = AssocR()
 
 print tree
 print dL.execute(tree)
