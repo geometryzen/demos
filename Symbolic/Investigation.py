@@ -5,4 +5,4 @@ from symbolic import *
 
 x = Variable("x")
 
-y = 2 * x
+y = x + x
