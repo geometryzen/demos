@@ -46,6 +46,7 @@ aL = AssocL()
 aR = AssocR()
 
 assertEqual(str(co.execute(a * b)), str(b * a))
+assertEqual(str(dL.execute(a * (b + c))), str(a * b + a * c))
 
 print dL.execute(tree)
 print fL.execute(dL.execute(tree))
