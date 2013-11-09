@@ -24,4 +24,4 @@ print fL.execute(dL.execute(tree))
 expr = a * (b * c)
 print expr
 print aL.execute(expr)
-print aR.execute(al.execute(expr))
+print aR.execute(aL.execute(expr))
