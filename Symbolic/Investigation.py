@@ -4,8 +4,9 @@ Investigating the feasibility of CAS.
 from symbolic import *
 
 x = Variable("x")
+y = Variable("y")
 
-y = x + x + x
+z = x + x + y
 
-print y
-print repr(y)
+print z
+print repr(z)
