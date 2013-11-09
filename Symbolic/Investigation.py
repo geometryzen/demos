@@ -6,3 +6,5 @@ from symbolic import *
 x = Variable("x")
 
 y = x + x
+
+print y
