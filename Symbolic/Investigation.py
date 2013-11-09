@@ -12,6 +12,8 @@ tree = a * (b + c)
 walker = TreeWalker(tree)
 
 dL = DistribL()
+fL = FactorL()
 
 print tree
 print dL.execute(tree)
+print fL(dL.execute(tree))
