@@ -9,5 +9,5 @@ c = Variable("c")
 
 tree = a * (b + c)
 
-print a.children
+print (a+b).children
 print repr(tree)
