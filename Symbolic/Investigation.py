@@ -13,4 +13,4 @@ print tree
 print repr(tree)
 print a.uuid
 print b.uuid
-print (a+b).uuid
+print (a*b).uuid
