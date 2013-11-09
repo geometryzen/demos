@@ -14,7 +14,7 @@ if walker.moveToLastChild():
     print walker.contextNode
     print len(walker.ancestorAxis)
     if walker.moveToParent():
-        print walker.contextNode
+        print walker.contextNode.uuid
         print len(walker.ancestorAxis)
     else:
         pass
