@@ -7,7 +7,7 @@ a = Variable("a")
 b = Variable("b")
 c = Variable("c")
 
-tree = a - b + c
+tree = a + b - c
 
 walker = TreeWalker(tree)
 
