@@ -9,4 +9,5 @@ c = Variable("c")
 
 tree = a * (b + c)
 
-w = TreeWalker(tree)
+walker = TreeWalker(tree)
+print walker.contextNode
