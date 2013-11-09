@@ -3,10 +3,11 @@ Investigating the feasibility of CAS.
 '''
 from symbolic import *
 
-x = Variable("x")
-y = Variable("y")
+a = Variable("a")
+b = Variable("b")
+c = Variable("c")
 
-z = x + x + y
+z = a * (b + c)
 
 print z
 print repr(z)
