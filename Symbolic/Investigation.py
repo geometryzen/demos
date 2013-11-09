@@ -18,3 +18,4 @@ aL = AssocL()
 print tree
 print dL.execute(tree)
 print fL.execute(dL.execute(tree))
+print aL.execute((a * (b * c))
