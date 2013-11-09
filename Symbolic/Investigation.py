@@ -45,7 +45,7 @@ fL = FactorL()
 aL = AssocL()
 aR = AssocR()
 
-assertEqual(co.execute(a * b), str(b * a))
+assertEqual(str(co.execute(a * b)), str(b * a))
 
 print dL.execute(tree)
 print fL.execute(dL.execute(tree))
