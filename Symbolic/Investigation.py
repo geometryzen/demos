@@ -10,8 +10,6 @@ c = Variable("c")
 tree = a * (b + c)
 
 walker = TreeWalker(tree)
-print walker.contextNode
-print walker.ancestorAxis
 if walker.moveToFirstChild():
     print walker.contextNode
 else:
