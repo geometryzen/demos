@@ -11,6 +11,3 @@ tree = a * (b + c)
 
 print tree
 print repr(tree)
-print a.uuid
-print b.uuid
-print (a*b).uuid
