@@ -11,4 +11,6 @@ tree = a * b
 
 walker = TreeWalker(tree)
 
+commute = Commute()
+
 print tree
