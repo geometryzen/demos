@@ -11,7 +11,7 @@ tree = a * (b + c)
 
 walker = TreeWalker(tree)
 
-c = Commute()
+co = Commute()
 dL = DistribL()
 fL = FactorL()
 aL = AssocL()
