@@ -10,7 +10,7 @@ c = Variable("c")
 tree = a * (b + c)
 
 walker = TreeWalker(tree)
-if walker.moveToFirstChild():
+if walker.moveToLastChild():
     print walker.contextNode
     print len(walker.ancestorAxis)
 else:
