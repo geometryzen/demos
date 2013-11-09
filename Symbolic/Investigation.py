@@ -14,3 +14,4 @@ walker = TreeWalker(tree)
 commute = Commute()
 
 print tree
+print commute.execute(tree)
