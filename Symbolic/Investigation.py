@@ -24,8 +24,6 @@ b = Variable("b")
 c = Variable("c")
 
 print "The Basic tree transformations: Distribution, Factorization, Association, and Commutation."
-assertEqual(Commute(),  a * b         , b * a             )
-
 assertEqual(DistribL(), a * (b + c)   , (a * b) + (a * c) )
 assertEqual(DistribR(), (a + b) * c   , (a * c) + (b * c) )
 
@@ -34,3 +32,5 @@ assertEqual(FactorR(),  (a * b) + (c * b) , (a + c) * b   )
 
 assertEqual(AssocL(),   a * (b * c)   , (a * b) * c       )
 assertEqual(AssocR(),   (a * b) * c   , a * (b * c)       )
+
+assertEqual(Commute(),  a * b         , b * a             )
