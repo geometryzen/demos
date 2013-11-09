@@ -5,6 +5,7 @@ from symbolic import *
 
 x = Variable("x")
 
-y = x + x
+y = x + x + x
 
 print y
+print repr(y)
