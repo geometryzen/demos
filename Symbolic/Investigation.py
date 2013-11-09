@@ -11,7 +11,7 @@ tree = a * (b + c)
 
 walker = TreeWalker(tree)
 
-commute = Commute()
+transform = Commute()
 
 print tree
-print commute.execute(tree)
+print transform.execute(tree)
