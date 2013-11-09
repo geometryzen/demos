@@ -13,6 +13,7 @@ walker = TreeWalker(tree)
 
 dL = DistribL()
 fL = FactorL()
+aL = AssocL()
 
 print tree
 print dL.execute(tree)
