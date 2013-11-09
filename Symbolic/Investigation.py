@@ -2,20 +2,13 @@
 Investigating the feasibility of CAS.
 '''
 from symbolic import *
-from math import exp, cos, sin, sqrt, pi
 
 # The following functions are provided for testing purposes.
 def assertEqual(actual, expect):
-    if expect == actual:
+    if str(expect) == str(actual):
         pass
     else:
         print {"actual": actual, "expect": expect}
-
-def assertTrue(actual):
-    return assertEqual(actual, True)
-
-def assertFalse(actual):
-    return assertEqual(actual, False)
 
 def explain(m):
     print str(m) + " is " + repr(m)
@@ -24,12 +17,6 @@ def explain(m):
 def showValue(name, m):
     print name + " => " + str(m)
     return m
-
-def isCloseTo(actual, expect):
-    epsilon = 1e-10
-    error = actual - expect
-    quadrance = error % error
-    return sqrt(quadrance) < epsilon
 
 a = Variable("a")
 b = Variable("b")
