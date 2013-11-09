@@ -9,5 +9,4 @@ c = Variable("c")
 
 tree = a * (b + c)
 
-print tree.children
-print repr(tree)
+w = Walker()
