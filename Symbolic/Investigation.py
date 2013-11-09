@@ -22,7 +22,7 @@ a = Variable("a")
 b = Variable("b")
 c = Variable("c")
 
-print "The Basic tree transdormations: Distribution, Factorization, Association, and Commutation."
+print "The Basic tree transformations: Distribution, Factorization, Association, and Commutation."
 assertEqual(Commute(),  a * b         , b * a             )
 
 assertEqual(DistribL(), a * (b + c)   , (a * b) + (a * c) )
