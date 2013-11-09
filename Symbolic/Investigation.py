@@ -11,7 +11,7 @@ tree = a * (b + c)
 
 walker = TreeWalker(tree)
 
-transform = Commute()
+transform = DistributeLHS()
 
 print tree
 print transform.execute(tree)
