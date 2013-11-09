@@ -22,10 +22,7 @@ a = Variable("a")
 b = Variable("b")
 c = Variable("c")
 
-tree = a * (b + c)
-
-walker = TreeWalker(tree)
-
+print "The Basic tree transdormations: Distribution, Factorization, Association, and Commutation."
 assertEqual(Commute(),  a * b         , b * a             )
 
 assertEqual(DistribL(), a * (b + c)   , (a * b) + (a * c) )
