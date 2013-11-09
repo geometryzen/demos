@@ -27,7 +27,9 @@ tree = a * (b + c)
 walker = TreeWalker(tree)
 
 assertEqual(Commute(),  a * b         , b * a         )
+
 assertEqual(DistribL(), a * (b + c)   , a * b + a * c )
+assertEqual(DistribR(), (a + b) * c   , a * c + b * c )
 
 assertEqual(FactorL(),  a * b + a * c , a * (b + c)   )
 assertEqual(FactorR(),  a * b + c * b , (a + c) * b   )
