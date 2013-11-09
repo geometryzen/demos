@@ -8,7 +8,7 @@ def assertEqual(fn, actual, expect):
     if str(fn.execute(actual)) == str(expect):
         pass
     else:
-        print {"fn": fn, "actual": str(actual), "expect": str(expect)}
+        print {"fn": fn, "actual": str(fn.execute(actual)), "expect": str(expect)}
 
 def explain(m):
     print str(m) + " is " + repr(m)
