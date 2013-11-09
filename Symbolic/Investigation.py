@@ -11,4 +11,4 @@ tree = a * (b + c)
 
 walker = TreeWalker(tree)
 print walker.contextNode
-print walker.ancestors
+print walker.ancestorAxis
