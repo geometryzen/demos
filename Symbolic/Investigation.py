@@ -4,8 +4,8 @@ Investigating the feasibility of CAS.
 from symbolic import *
 
 # The following functions are provided for testing purposes.
-def assertEqual(actual, expect):
-    if str(expect) == str(actual):
+def assertEqual(fn, actual, expect):
+    if str(fn.execute(actual)) == str(expect):
         pass
     else:
         print {"actual": actual, "expect": expect}
@@ -35,11 +35,4 @@ aR = AssocR()
 assertEqual(co.execute(a * b), b * a)
 assertEqual(dL.execute(a * (b + c)), a * b + a * c)
 assertEqual(fL.execute(a * b + a * c), a * (b + c))
-
-print dL.execute(tree)
-print fL.execute(dL.execute(tree))
-
-expr = a * (b * c)
-print expr
-print aL.execute(expr)
-print aR.execute(aL.execute(expr))
+assertEqual(aL.execute(a * b + a * c), a * (b + c))
