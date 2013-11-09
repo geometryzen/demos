@@ -19,6 +19,6 @@ print tree
 print dL.execute(tree)
 print fL.execute(dL.execute(tree))
 
-expr = a * (b * c)
+expr = a * (b + c)
 print expr
 print aL.execute(expr)
