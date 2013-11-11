@@ -1,6 +1,10 @@
 from three import *
 
-class Bird(Geometry):
+class Reptile():
+    def __init__(self):
+        pass
+
+class Bird(Reptile):
     def __init__(self):
         self.computeCentroids()
         pass
