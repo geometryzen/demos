@@ -7,7 +7,7 @@ class Reptile():
     def talk(self):
         pass
 
-class Bird(Reptile):
+class Bird(VectorE3):
     def __init__(self):
         self.talk()
         pass
