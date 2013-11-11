@@ -4,7 +4,7 @@ class Reptile():
     def __init__(self):
         pass
     
-    def update(self):
+    def talk(self):
         pass
 
 class Bird(Reptile):
