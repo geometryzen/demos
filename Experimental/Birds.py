@@ -1,1 +1,3 @@
-# Birds.py
+class Bird(Geometry):
+    
+b = Bird()
