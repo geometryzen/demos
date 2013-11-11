@@ -22,4 +22,6 @@ class Bird(Object3D):
     
 b = Bird()
 
+b.position = VectorE3(1,2,3)
+
 print b
