@@ -9,7 +9,7 @@ class Reptile():
 
 class Bird(Reptile):
     def __init__(self):
-        self.update()
+        self.talk()
         pass
     
     
