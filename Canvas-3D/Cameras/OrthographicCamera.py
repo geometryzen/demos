@@ -6,7 +6,7 @@ from random import random
 useLargeCanvas = True
 
 # Global variables
-camera = OrthographicCamera(-1, 1, 1, -1, -500, 1000)
+camera = OrthographicCamera(-1.0, 1, 1, -1, -500, 1000)
 camera.position.x = 200.0
 camera.position.y = 100.0
 camera.position.z = 200.0
