@@ -1,4 +1,5 @@
 from three import *
+from e3ga import *
 
 class Reptile():
     def __init__(self):
