@@ -22,7 +22,7 @@ class Bird(Geometry):
     
 b = Bird()
 
-b.computeCentroids()
+print b.radius
 
 print b
 print repr(b)
