@@ -22,9 +22,7 @@ class Bird(Geometry):
     
 b = Bird()
 
-b.pqr = VectorE3(1,2,3)
-
-print b.pqr
+b.computeCentroids()
 
 print b
 print repr(b)
