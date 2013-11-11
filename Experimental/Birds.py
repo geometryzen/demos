@@ -9,7 +9,6 @@ class Reptile():
 
 class Bird(VectorE3):
     def __init__(self):
-        self.talk()
         pass
     
     
