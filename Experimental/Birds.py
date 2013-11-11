@@ -17,3 +17,5 @@ class Bird(Object3D):
     
     
 b = Bird()
+
+print b
