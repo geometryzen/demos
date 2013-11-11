@@ -1,5 +1,5 @@
 from three import *
 
-class Bird(Geometry):
+class Bird():
     
 b = Bird()
