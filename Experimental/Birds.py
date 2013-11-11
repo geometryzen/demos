@@ -26,4 +26,5 @@ b.pqr = VectorE3(1,2,3)
 
 print b.pqr
 
+print b
 print repr(b)
