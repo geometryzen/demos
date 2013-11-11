@@ -1,3 +1,6 @@
+'''
+Under construction. Nov 11, 2013.
+'''
 from three import *
 from e3ga import *
 
