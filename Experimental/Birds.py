@@ -23,7 +23,5 @@ class Bird(Geometry):
 b = Bird()
 c = Geometry()
 
-print b.radius
-
 print b
 print repr(b)
