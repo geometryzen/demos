@@ -26,4 +26,4 @@ b.position = VectorE3(1,2,3)
 
 print b.position
 
-print b
+print repr(b)
