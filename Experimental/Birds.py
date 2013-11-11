@@ -11,7 +11,7 @@ class Reptile():
     def talk(self):
         pass
 
-class Bird(Object3D):
+class Bird(Object3s):
     def __init__(self):
         pass
     
