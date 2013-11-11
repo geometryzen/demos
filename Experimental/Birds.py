@@ -22,8 +22,8 @@ class Bird(Geometry):
     
 b = Bird()
 
-b.position = VectorE3(1,2,3)
+b.pqr = VectorE3(1,2,3)
 
-print b.position
+print b.pqr
 
 print repr(b)
