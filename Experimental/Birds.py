@@ -21,7 +21,7 @@ class Bird(Geometry):
     
     
 b = Bird()
-c = Geomerty()
+c = Geometry()
 
 print b.radius
 
