@@ -1,5 +1,7 @@
 from three import *
 
-class Bird():
+class Bird:
+    def __init__(self):
+        pass
     
 b = Bird()
