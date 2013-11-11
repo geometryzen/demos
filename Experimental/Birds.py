@@ -11,7 +11,7 @@ class Reptile():
     def talk(self):
         pass
 
-class Bird(e3ga.Geometry):
+class Bird(Object3D):
     def __init__(self):
         pass
     
