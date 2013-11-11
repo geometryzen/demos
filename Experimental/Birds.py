@@ -21,7 +21,6 @@ class Bird(Geometry):
     
     
 b = Bird()
-c = Geometry()
 
 print b
 print repr(b)
