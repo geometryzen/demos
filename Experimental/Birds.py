@@ -11,5 +11,5 @@ class Bird(Object3D):
     
 b = Bird()
 
-print b
+print b.velocity
 print repr(b)
