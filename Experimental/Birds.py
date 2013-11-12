@@ -10,6 +10,6 @@ class Bird():
     
     
 b = Bird()
-b.velocity = VectorE3(1,2,3)
-print b.velocity
+
+print b
 print repr(b)
