@@ -1,6 +1,6 @@
 from three import *
 
-class Bird():
+class Bird(Geometry):
     def __init__(self):
         pass
     
