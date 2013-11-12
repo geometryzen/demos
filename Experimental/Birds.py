@@ -1,7 +1,7 @@
 from three import *
 
 class Bird(Geometry):
-    def __init__(self, more):
+    def __init__(self):
         print more
         pass
     
