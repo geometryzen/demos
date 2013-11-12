@@ -1,17 +1,6 @@
-'''
-Under construction. Nov 11, 2013.
-'''
 from three import *
-from e3ga import *
 
-class Reptile():
-    def __init__(self):
-        pass
-    
-    def talk(self):
-        pass
-
-class Bird(Geometry):
+class Bird():
     def __init__(self):
         pass
     
