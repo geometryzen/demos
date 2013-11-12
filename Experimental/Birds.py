@@ -10,6 +10,6 @@ class Bird(Object3D):
     
     
 b = Bird()
-
+b.velocity = VectprE3(1,2,3)
 print b.velocity
 print repr(b)
