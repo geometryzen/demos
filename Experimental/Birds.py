@@ -4,6 +4,6 @@ g = Geometry()
 
 vertices = g.vertices
 
-print str(True)
+print str(1)
 
 print g
