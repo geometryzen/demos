@@ -1,6 +1,6 @@
 '''
-Under Construction. Nov 12, 2013
 This program should provide a good test of optimization.
+It is rather slow right now!
 '''
 from three import *
 from browser import *
