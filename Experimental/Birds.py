@@ -5,7 +5,7 @@ from workbench import *
 from geometry import *
 
 # global timeOut allows us to terminate the program gracefully on time or Esc key.
-timeOut = 10
+timeOut = 5
 
 # Don't need to set the aspect for the camera - the workbench will do that.
 camera = PerspectiveCamera(75, 1, 1, 10000)
@@ -14,6 +14,7 @@ camera.position.z = 450
 scene = Scene()
 
 renderer = WebGLRenderer()
+renderer.setClearColor(Color("0x000000"), 1.0)
 
 workbench3D = Workbench3D(renderer.domElement, renderer, camera)
 
