@@ -1,3 +1,6 @@
+'''
+This program should provide a good test of optimization.
+'''
 from three import *
 from browser import *
 from workbench import *
