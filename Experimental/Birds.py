@@ -1,8 +1,6 @@
-from easel import *
 from three import *
 from browser import *
 from workbench import *
-from geometry import *
 
 # global timeOut allows us to terminate the program gracefully on time or Esc key.
 timeOut = 5
