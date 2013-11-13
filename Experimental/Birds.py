@@ -26,20 +26,20 @@ def Borg():
     geometry = Geometry();
     vertices = geometry.vertices
     
-    vertices.append(VectorE3( 5, 0,  0))
-    vertices.append(VectorE3(-5,-2,  1))
-    vertices.append(VectorE3(-5, 0,  0))
-    vertices.append(VectorE3(-5,-2, -1))
+    vertices.append(VectorE3( 5,  0,  0))
+    vertices.append(VectorE3(-5, -2,  1))
+    vertices.append(VectorE3(-5,  0,  0))
+    vertices.append(VectorE3(-5, -2, -1))
     
-    vertices.append(VectorE3( 0, 2, -6))
-    vertices.append(VectorE3( 0, 2,  6))
-    vertices.append(VectorE3( 2, 0,  0))
-    vertices.append(VectorE3(-3, 0,  0))
+    vertices.append(VectorE3( 0,  2, -6))
+    vertices.append(VectorE3( 0,  2,  6))
+    vertices.append(VectorE3( 2,  0,  0))
+    vertices.append(VectorE3(-3,  0,  0))
     
     faces = geometry.faces
-    faces.append(Face3(0,2,1))
-    faces.append(Face3(4,7,6))
-    faces.append(Face3(5,6,7))
+    faces.append(Face3(0, 2, 1))
+    faces.append(Face3(4, 7, 6))
+    faces.append(Face3(5, 6, 7))
     
     geometry.computeCentroids()
     geometry.computeFaceNormals()
@@ -83,7 +83,7 @@ def setUp():
     for i in range(0, 200):
         bird = Bird()
         bird.setAvoidWalls(True)
-        bird.setWorldSize(200, 200, 200)
+        bird.setWorldSize(500, 500, 500)
         bird.phase = floor(random() * 62.83)
         birds.append(bird)
         
