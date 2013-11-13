@@ -96,23 +96,20 @@ def setUp():
     document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def render(t):
-    try:
-        for i in range(0, len(birds)):
-            bird = birds[i]
-            borg = borgs[i]
+    for i in range(0, len(birds)):
+        bird = birds[i]
+        borg = borgs[i]
             
-            color = borg.material.color
-            c = (500.0 - bird.position.z) / 1000.0
-            color.r = c
-            color.g = c
-            color.b = c
+        color = borg.material.color
+        c = (500.0 - bird.position.z) / 1000.0
+        color.r = c
+        color.g = c
+        color.b = c
             
-            borg.rotation.y = atan2(-bird.velocity.z, bird.velocity.x)
-            borh.rotation.z = asin(-bird.velocity.y / bird.velocity.magnitude())
+        borg.rotation.y = atan2(-bird.velocity.z, bird.velocity.x)
+        borh.rotation.z = asin(-bird.velocity.y / bird.velocity.magnitude())
             
-        renderer.render(scene, camera)
-    except:
-        print "Unexpected error"
+    renderer.render(scene, camera)
 
 def terminate(t):
     return t > timeOut
