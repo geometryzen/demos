@@ -97,6 +97,9 @@ def setUp():
 
 def render(t):
     try:
+        for i in range(0, len(birds)):
+            bird = birds[i]
+            borg = borgs[i]
         renderer.render(scene, camera)
     except:
         print "Unexpected error"
