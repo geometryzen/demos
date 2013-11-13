@@ -19,6 +19,10 @@ class Bird:
         self._width  = width
         self._height = height
         self._depth  = depth
+        
+def birdMesh():
+    g = Geometry();
+    m = MeshBasicMaterial({"color": random() * 0xFFFFFF, "side": DoubleSide})
 
 # global timeOut allows us to terminate the program gracefully on time or Esc key.
 timeOut = 5
