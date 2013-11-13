@@ -63,7 +63,7 @@ camera.position.z = 450
 scene = Scene()
 
 renderer = CanvasRenderer()
-#renderer.setClearColor(Color(0xFFFFFF), 1.0)
+renderer.setClearColor(Color(0xFFFFFF), 1.0)
 
 workbench3D = Workbench3D(renderer.domElement, renderer, camera)
 
