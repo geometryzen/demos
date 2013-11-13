@@ -38,7 +38,7 @@ class Bird:
     def run(self, birds):
         if self._avoidWalls:
             vector = VectorE3(0.0, 0.0, 0.0)
-            vector.set(-self._width, this.position.y, this.position.z)
+            vector.set(-self._width, self.position.y, self.position.z)
             vector = self.avoid(vector)
         else:
             pass
