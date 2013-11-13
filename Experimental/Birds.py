@@ -113,7 +113,7 @@ class Bird:
         if count > 0:
             velSum.divideScalar(float(count))
             a = velSum.magnitude()
-            if a > _maxSteerForce:
+            if a > maxSteerForce:
                 velSum.divideScalar(a / maxSteerForce)
         return velSum
     
