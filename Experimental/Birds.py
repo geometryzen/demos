@@ -112,9 +112,26 @@ class Bird:
         return vsum
     
     def cohesion(self, birds):
+        posSum = VectorE3(0.0, 0.0, 0.0)
         steer = VectorE3(0.0, 0.0, 0.0)
+        count = 0
+        for i in range(0, len(birds)):
+            if random() > 0.6:
+                pass
+            else:
+                bird = birds[i]
+                distance = bird.position.distanceTo(self.position)
+                if distance > 0 and distance <= self._neighborhoodRadius:
+                    posSum.add(bird.positon)
+                    count += 1;
+        if count > 0:
+            posSum.divideScalar(count)
+            
+        steer = posSum - self.position
+        f = steer.magnitude()
+        if f > self._maxSteerForce:
+            steer.divideScalar(f / _maxSteerForce);
         return steer
-        pass
     
     def separation(self, birds):
         posSum = VectorE3(0.0, 0.0, 0.0)
