@@ -109,7 +109,7 @@ def render(t):
         borg.rotation.y = atan2(-bird.velocity.z, bird.velocity.x)
         borg.rotation.z = asin(-bird.velocity.y / bird.velocity.magnitude())
 
-        bird.phase = (bird.phase + max(0.0, bird.rotation.z) + 0.1))
+        bird.phase = (bird.phase + (max(0.0, bird.rotation.z) + 0.1))
         temp = sin(bird.phase) * 5
         borg.geometry.vertices[4].y = temp
         borg.geometry.vertices[5].y = temp
