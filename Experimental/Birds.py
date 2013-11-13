@@ -28,7 +28,7 @@ class Bird:
         self._height = height
         self._depth  = depth
         
-    def run(self.birds):
+    def run(self, birds):
         if self._avoidWalls:
             pass
         else:
