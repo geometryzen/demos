@@ -50,7 +50,7 @@ class Bird:
         self._acceleration.set(0.0, 0.0, 0.0)
         pass
     
-    def alignment(self):
+    def alignment(self, birds):
         boid = VectorE3()
         vsum = VectorE3()
         
