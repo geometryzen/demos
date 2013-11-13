@@ -99,7 +99,7 @@ class Bird:
         return steer
     
     def alignment(self, birds):
-        vsum = VectorE3(0.0, 0.0, 0.0)
+        velSum = VectorE3(0.0, 0.0, 0.0)
         count = 0
         for i in range(0, len(birds)):
             if random() > 0.6:
@@ -108,8 +108,14 @@ class Bird:
                 bird = birds[i]
                 distance = bird.position.distanceTo(self.position)
                 if distance > 0 and distance <= self._neighborhoodRadius:
-                    vsum.add(bird.velocity)
-        return vsum
+                    velSum.add(bird.velocity)
+                    count += 1
+        if count > 0:
+            velSum.divideScalar(count)
+            a = velSum.magnitude()
+            if a > _maxSteerForce:
+                velSum.divideScalar(a / _maxSteerForce)
+        return velSum
     
     def cohesion(self, birds):
         posSum = VectorE3(0.0, 0.0, 0.0)
