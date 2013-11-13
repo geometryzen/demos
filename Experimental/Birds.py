@@ -5,7 +5,7 @@ from random import random
 
 class Bird:
     def __init__(self):
-        self.position = VectorE3()
+        self.position = VectorE3(0.0, 0.0, 0.0)
         pass
 
 # global timeOut allows us to terminate the program gracefully on time or Esc key.
