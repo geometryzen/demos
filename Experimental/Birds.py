@@ -141,8 +141,19 @@ class Bird:
     
     def separation(self, birds):
         posSum = VectorE3(0.0, 0.0, 0.0)
+        repulse = VectorE3(0.0, 0.0, 0.0)
+        for i in range(0, len(birds)):
+            if random() > 0.6:
+                pass
+            else:
+                bird = birds[i]
+                distance = bird.position.distanceTo(self.position)
+                if distance > 0 and distance <= self._neighborhoodRadius:
+                    repulse = self.position - bird.position
+                    repulse.normalize()
+                    repulse.divideScalar(distance)
+                    posSum.add(repulse)
         return posSum
-        pass
 
 def Borg():
     geometry = Geometry();
