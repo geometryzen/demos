@@ -47,6 +47,7 @@ def setUp():
     for i in range(0, 200):
         bird = Bird()
         bird.setAvoidWalls(True)
+        boid.setWorldSize(200, 200, 200)
         birds.append(bird)
         
     workbench3D.setUp()
