@@ -1,4 +1,5 @@
 '''
+Under Construction. Nov 12, 2013
 This program should provide a good test of optimization.
 '''
 from three import *
