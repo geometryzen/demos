@@ -8,6 +8,9 @@ from workbench import *
 from random import random
 from math import *
 
+# global timeOut allows us to terminate the program gracefully on time or Esc key.
+timeOut = 5
+
 class Bird:
     def __init__(self):
         self.position = VectorE3(random() - 0.5, random() - 0.5, random() - 0.5) * 400.0
@@ -92,9 +95,6 @@ def Borg():
     
     material = MeshBasicMaterial({"color": random() * 0xFFFFFF, "side": DoubleSide})
     return Mesh(geometry, material)
-
-# global timeOut allows us to terminate the program gracefully on time or Esc key.
-timeOut = 15
 
 # Don't need to set the aspect for the camera - the workbench will do that.
 camera = PerspectiveCamera(75.0, 1.0, 1.0, 10000.0)
