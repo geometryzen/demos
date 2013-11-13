@@ -38,6 +38,10 @@ def onDocumentKeyDown(event):
 birds = []
     
 def setUp():
+    for i in range(0, 200):
+        bird = Bird()
+        birds.append(bird)
+        
     workbench3D.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
 
