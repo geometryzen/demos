@@ -40,8 +40,8 @@ def setUp():
 def render(t):
     try:
         space3D.render()
-    except e:
-        print e
+    except:
+        print "Unexpected error"
         pass
 
 def terminate(t):
