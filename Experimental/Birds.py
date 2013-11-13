@@ -39,7 +39,7 @@ def setUp():
 
 def render(t):
     try:
-        space3D.render()
+        renderer.render(scene, camera)
     except:
         print "Unexpected error"
         pass
