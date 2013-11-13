@@ -34,6 +34,7 @@ class Bird:
         
     def run(self, birds):
         if self._avoidWalls:
+            print "Avoiding..."
             pass
         else:
             pass
