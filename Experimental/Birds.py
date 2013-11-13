@@ -12,8 +12,7 @@ scene = Scene()
 
 renderer = CanvasRenderer()
 
-canvas3D = space3D.renderer.domElement
-workbench3D = Workbench3D(canvas3D, space3D.renderer, space3D.camera)
+workbench3D = Workbench3D(renderer.domElement, renderer, camera)
 
 def escKey(event, downFlag):
     event.preventDefault()
