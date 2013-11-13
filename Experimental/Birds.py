@@ -8,9 +8,17 @@ class Bird:
         self.position = VectorE3(random() - 0.5, random() - 0.5, random() - 0.5) * 400.0
         self.velocity = VectorE3(random() - 0.5, random() - 0.5, random() - 0.5) * 2.0
         self._avoidWalls = False
+        self._width  = 500
+        self._height = 500
+        self._depth  = 500
 
     def setAvoidWalls(self, avoidWalls):
         self._avoidWalls = avoidWalls
+
+    def setWorldSize(self, width, height, depth):
+        self._width  = width
+        self._height = height
+        self._depth  = depth
 
 # global timeOut allows us to terminate the program gracefully on time or Esc key.
 timeOut = 5
