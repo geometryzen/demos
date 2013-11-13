@@ -20,29 +20,30 @@ class Bird:
         self._height = height
         self._depth  = depth
         
-def borgMesh():
-    g = Geometry();
-    vertices = g.vertices
+def Borg():
+    geometry = Geometry();
+    vertices = geometry.vertices
     
-    vertices.append(VectorE3( 5, 0,0))
-    vertices.append(VectorE3(-5,-2,1))
-    vertices.append(VectorE3(-5, 0,0))
-    vertices.append(VectorE3(-5,-2,1))
+    vertices.append(VectorE3( 5, 0,  0))
+    vertices.append(VectorE3(-5,-2,  1))
+    vertices.append(VectorE3(-5, 0,  0))
+    vertices.append(VectorE3(-5,-2, -1))
     
     vertices.append(VectorE3( 0, 2, -6))
     vertices.append(VectorE3( 0, 2,  6))
     vertices.append(VectorE3( 2, 0,  0))
     vertices.append(VectorE3(-3, 0,  0))
     
-    faces = g.faces
+    faces = geometry.faces
     faces.append(Face3(0,2,1))
     faces.append(Face3(4,7,6))
     faces.append(Face3(5,6,7))
     
-    g.computeCentroids()
-    g.computeFaceNormals()
+    geometry.computeCentroids()
+    geometry.computeFaceNormals()
     
-    m = MeshBasicMaterial({"color": random() * 0xFFFFFF, "side": DoubleSide})
+    material = MeshBasicMaterial({"color": random() * 0xFFFFFF, "side": DoubleSide})
+    return Mesh(geometry, material)
 
 # global timeOut allows us to terminate the program gracefully on time or Esc key.
 timeOut = 5
@@ -83,7 +84,9 @@ def setUp():
         bird.setWorldSize(200, 200, 200)
         birds.append(bird)
         
-        borg = borgMesh()
+        borg = Borg()
+        borg.phase = floor(random * 62.83)
+        borg.position = bird.position
         borgs.append(borg)
         scene.add(borg)
         
