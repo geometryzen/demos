@@ -10,7 +10,7 @@ class Bird:
         self._avoidWalls = False
 
     def setAvoidWalls(self, avoidWalls):
-        _avoidWalls = avoidWalls
+        self._avoidWalls = avoidWalls
 
 # global timeOut allows us to terminate the program gracefully on time or Esc key.
 timeOut = 5
