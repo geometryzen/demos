@@ -8,7 +8,7 @@ from geometry import *
 timeOut = 5
 
 # Don't need to set the aspect for the camera - the workbench will do that.
-camera = PerspectiveCamera(75.0, 1, 1, 10000)
+camera = PerspectiveCamera(75.0, 1.0, 1, 10000)
 camera.position.z = 450
 
 scene = Scene()
