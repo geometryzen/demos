@@ -40,7 +40,8 @@ def setUp():
 def render(t):
     try:
         space3D.render()
-    except:
+    except e:
+        print e
         pass
 
 def terminate(t):
