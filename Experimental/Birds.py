@@ -51,7 +51,7 @@ def Borg():
     geometry.computeFaceNormals()
     
     material = MeshBasicMaterial({"color": random() * 0xFFFFFF, "side": DoubleSide})
-    return Mesh(SphereGeometry(0.1), material)
+    return Mesh(SphereGeometry(10), material)
 
 # global timeOut allows us to terminate the program gracefully on time or Esc key.
 timeOut = 5
