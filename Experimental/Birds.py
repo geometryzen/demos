@@ -58,6 +58,16 @@ class Bird:
             vector = self.avoid(vector)
             vector.multiplyScalar(5.0)
             self._acceleration.add(vector)
+
+            vector.set(self.position.x, self.position.y, -self._depth)
+            vector = self.avoid(vector)
+            vector.multiplyScalar(5.0)
+            self._acceleration.add(vector)
+
+            vector.set(self.position.x, self.position.y, +self._depth)
+            vector = self.avoid(vector)
+            vector.multiplyScalar(5.0)
+            self._acceleration.add(vector)            
         else:
             pass
         if random() > 0.5:
