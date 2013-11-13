@@ -35,6 +35,9 @@ class Bird:
             pass
         if random() > 0.5:
             flock(birds)
+            
+    def flock(self, birds):
+        pass
         
 def Borg():
     geometry = Geometry();
