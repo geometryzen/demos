@@ -112,9 +112,13 @@ class Bird:
         return vsum
     
     def cohesion(self, birds):
+        steer = VectorE3(0.0, 0.0, 0.0)
+        return steer
         pass
     
     def separation(self, birds):
+        posSum = VectorE3(0.0, 0.0, 0.0)
+        return posSum
         pass
 
 def Borg():
