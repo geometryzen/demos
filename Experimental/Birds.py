@@ -54,7 +54,7 @@ def Borg():
     return Mesh(geometry, material)
 
 # global timeOut allows us to terminate the program gracefully on time or Esc key.
-timeOut = 5
+timeOut = 10
 
 # Don't need to set the aspect for the camera - the workbench will do that.
 camera = PerspectiveCamera(75.0, 1.0, 1.0, 10000.0)
