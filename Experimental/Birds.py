@@ -108,6 +108,7 @@ def render(t):
             color.b = c
             
             borg.rotation.y = atan2(-bird.velocity.z, bird.velocity.x)
+            borh.rotation.z = asin(-bird.velocity.y / bird.velocity.magnitude())
             
         renderer.render(scene, camera)
     except:
