@@ -23,7 +23,7 @@ class Bird:
 def borgMesh():
     g = Geometry();
     vertices = g.vertices
-    vertices.append(VectorE3(5,0,0))
+    vertices.append(Vector3(5,0,0))
     m = MeshBasicMaterial({"color": random() * 0xFFFFFF, "side": DoubleSide})
 
 # global timeOut allows us to terminate the program gracefully on time or Esc key.
