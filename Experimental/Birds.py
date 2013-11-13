@@ -13,7 +13,7 @@ camera.position.z = 450
 
 scene = Scene()
 
-renderer = CanvasRenderer()
+renderer = WebGLRenderer()
 
 workbench3D = Workbench3D(renderer.domElement, renderer, camera)
 
