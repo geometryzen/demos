@@ -34,7 +34,7 @@ class Bird:
         else:
             pass
         if random() > 0.5:
-            flock(birds)
+            self.flock(birds)
             
     def flock(self, birds):
         pass
