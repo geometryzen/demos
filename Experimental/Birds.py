@@ -1,9 +1,39 @@
+from easel import *
 from three import *
+from browser import *
+from workbench import *
+from geometry import *
 
-g = Geometry()
+def escKey(event, downFlag):
+    event.preventDefault()
+    global timeOut
+    timeOut = 0
 
-vertices = g.vertices
+keyHandlers = {
+ 27: escKey
+}
+    
+def onDocumentKeyDown(event):
+    try:
+        keyHandlers[event.keyCode](event, True)
+    except:
+        pass
 
-print str(1.0)
+def setUp():
+    workbench3D.setUp()
+    document.addEventListener("keydown", onDocumentKeyDown, False)
 
-print g
+def render(t):
+    try:
+        space3D.render()
+    except:
+        pass
+
+def terminate(t):
+    return t > timeOut
+
+def tearDown():
+    document.removeEventListener("keydown", onDocumentKeyDown, False)
+    workbench3D.tearDown()
+
+WindowAnimationRunner(render, terminate, setUp, tearDown).start()
