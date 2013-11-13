@@ -9,9 +9,10 @@ class Bird:
         self.position = VectorE3(random() - 0.5, random() - 0.5, random() - 0.5) * 400.0
         self.velocity = VectorE3(random() - 0.5, random() - 0.5, random() - 0.5) * 2.0
         self._avoidWalls = False
-        self._width  = 500
-        self._height = 500
-        self._depth  = 500
+        self._width  = 500.0
+        self._height = 500.0
+        self._depth  = 500.0
+        self.phase = 0.0
 
     def setAvoidWalls(self, avoidWalls):
         self._avoidWalls = avoidWalls
