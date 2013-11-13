@@ -4,6 +4,10 @@ from browser import *
 from workbench import *
 from geometry import *
 
+
+canvas3D = space3D.renderer.domElement
+workbench3D = Workbench3D(canvas3D, space3D.renderer, space3D.camera)
+
 def escKey(event, downFlag):
     event.preventDefault()
     global timeOut
