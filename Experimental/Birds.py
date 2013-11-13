@@ -100,6 +100,7 @@ def render(t):
         for i in range(0, len(birds)):
             bird = birds[i]
             borg = borgs[i]
+            color = borg.material.color
         renderer.render(scene, camera)
     except:
         print "Unexpected error"
