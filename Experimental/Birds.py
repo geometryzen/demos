@@ -35,8 +35,12 @@ class Bird:
             pass
         if random() > 0.5:
             self.flock(birds)
+        self.move()
             
     def flock(self, birds):
+        pass
+    
+    def move(self):
         pass
         
 def Borg():
