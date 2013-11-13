@@ -53,6 +53,13 @@ class Bird:
     def alignment(self, birds):
         boid = VectorE3(0.0, 0.0, 0.0)
         vsum = VectorE3(0.0, 0.0, 0.0)
+        count = 0
+        for u in range(0, len(birds)):
+            if random() > 0.6:
+                pass
+            else:
+                bird = birds[i]
+                distance = bird.position.distanceTo(self.position)
         return vsum
         
 def Borg():
