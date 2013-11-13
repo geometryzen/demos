@@ -59,6 +59,13 @@ class Bird:
         self._acceleration.set(0.0, 0.0, 0.0)
         pass
     
+    def avoid(self, target):
+        steer = VectorE3(0.0, 0.0, 0.0)
+        steer.copy(self.position)
+        steer.sub(target)
+        steer.multiplyScalar(1.0 / self.position.distanceToSquared(target))
+        return steer
+    
     def alignment(self, birds):
         vsum = VectorE3(0.0, 0.0, 0.0)
         count = 0
