@@ -49,6 +49,10 @@ class Bird:
         self.position.add(self.velocity)
         self._acceleration.set(0.0, 0.0, 0.0)
         pass
+    
+    def alignment(self):
+        boid = VectorE3()
+        vsum = VectorE3()
         
 def Borg():
     geometry = Geometry();
