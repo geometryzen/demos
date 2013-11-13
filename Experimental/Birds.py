@@ -4,6 +4,9 @@ from browser import *
 from workbench import *
 from geometry import *
 
+# global timeOut allows us to terminate the program gracefully on time or Esc key.
+timeOut = 10
+
 # Don't need to set the aspect for the camera - the workbench will do that.
 camera = PerspectiveCamera(75, 1, 1, 10000)
 camera.position.z = 450
