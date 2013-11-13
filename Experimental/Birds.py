@@ -2,6 +2,7 @@ from three import *
 from browser import *
 from workbench import *
 from random import random
+from math import *
 
 class Bird:
     def __init__(self):
