@@ -2,6 +2,10 @@ from three import *
 from browser import *
 from workbench import *
 
+class Bird:
+    def __init__(self):
+        pass
+
 # global timeOut allows us to terminate the program gracefully on time or Esc key.
 timeOut = 5
 
@@ -31,6 +35,8 @@ def onDocumentKeyDown(event):
     except:
         pass
 
+birds = []
+    
 def setUp():
     workbench3D.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
