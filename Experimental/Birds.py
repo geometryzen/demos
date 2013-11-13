@@ -83,10 +83,10 @@ def setUp():
         bird = Bird()
         bird.setAvoidWalls(True)
         bird.setWorldSize(200, 200, 200)
+        bird.phase = floor(random() * 62.83)
         birds.append(bird)
         
         borg = Borg()
-        borg.phase = floor(random() * 62.83)
         borg.position = bird.position
         borgs.append(borg)
         scene.add(borg)
