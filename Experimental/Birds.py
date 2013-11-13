@@ -41,6 +41,10 @@ class Bird:
         pass
     
     def move(self):
+        self.velocity.add(self._acceleration)
+        speed = self.velocity.magnitude()
+        self.position.add(self.velocity)
+        self._acceleration.set(0.0, 0.0, 0.0)
         pass
         
 def Borg():
