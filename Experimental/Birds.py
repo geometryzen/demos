@@ -28,6 +28,14 @@ class Bird:
         self._height = height
         self._depth  = depth
         
+    def run(self.birds):
+        if self._avoidWalls:
+            pass
+        else:
+            pass
+        if random() > 0.5:
+            flock(birds)
+        
 def Borg():
     geometry = Geometry();
     vertices = geometry.vertices
