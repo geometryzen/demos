@@ -40,7 +40,6 @@ def render(t):
         renderer.render(scene, camera)
     except:
         print "Unexpected error"
-        pass
 
 def terminate(t):
     return t > timeOut
