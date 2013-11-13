@@ -40,6 +40,7 @@ birds = []
 def setUp():
     for i in range(0, 200):
         bird = Bird()
+        bird.position.x = random() * 400 - 200
         birds.append(bird)
         
     workbench3D.setUp()
