@@ -9,7 +9,7 @@ from random import random
 from math import *
 
 # global timeOut allows us to terminate the program gracefully on time or Esc key.
-timeOut = 5
+timeOut = 60
 maxSteerForce = 0.1
 
 class Bird:
