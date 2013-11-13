@@ -86,7 +86,7 @@ class Bird:
         self.velocity.add(self._acceleration)
         speed = self.velocity.magnitude()
         if speed > self._maxSpeed:
-            self.velocity.divideScalar(speed/self._maxSpeed)
+            self.velocity.divideScalar(speed / self._maxSpeed)
         self.position.add(self.velocity)
         self._acceleration.set(0.0, 0.0, 0.0)
         pass
