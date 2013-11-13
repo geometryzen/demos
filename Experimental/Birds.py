@@ -40,6 +40,7 @@ class Bird:
     def flock(self, birds):
         if self._goal:
             self._acceleration.add(self.reach(self._goal, 0.005))
+        self._acceleration.add(self.alignment(birds));
         pass
     
     def move(self):
