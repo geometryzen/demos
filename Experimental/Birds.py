@@ -100,11 +100,15 @@ def render(t):
         for i in range(0, len(birds)):
             bird = birds[i]
             borg = borgs[i]
+            
             color = borg.material.color
             c = (500.0 - bird.position.z) / 1000.0
             color.r = c
             color.g = c
             color.b = c
+            
+            borg.rotation.y = atan2(-bird.velocity.z, bird.velocity.x)
+            
         renderer.render(scene, camera)
     except:
         print "Unexpected error"
