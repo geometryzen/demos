@@ -38,8 +38,11 @@ class Bird:
     def run(self, birds):
         if self._avoidWalls:
             vector = VectorE3(0.0, 0.0, 0.0)
+
             vector.set(-self._width, self.position.y, self.position.z)
             vector = self.avoid(vector)
+            vector.multiplyScalar(5)
+            self._acceleration.add(vector)
         else:
             pass
         if random() > 0.5:
