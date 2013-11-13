@@ -110,7 +110,13 @@ class Bird:
                 if distance > 0 and distance <= self._neighborhoodRadius:
                     vsum.add(bird.velocity)
         return vsum
-        
+    
+    def cohesion(self, birds):
+        pass
+    
+    def separation(self, birds):
+        pass
+
 def Borg():
     geometry = Geometry();
     vertices = geometry.vertices
