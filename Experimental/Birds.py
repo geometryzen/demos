@@ -104,6 +104,9 @@ def setUp():
 def render(t):
     for i in range(0, len(birds)):
         bird = birds[i]
+        
+        bird.run(birds)
+        
         borg = borgs[i]
             
         color = borg.material.color
