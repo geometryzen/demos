@@ -86,7 +86,7 @@ def setUp():
         birds.append(bird)
         
         borg = Borg()
-        borg.phase = floor(random * 62.83)
+        borg.phase = floor(random() * 62.83)
         borg.position = bird.position
         borgs.append(borg)
         scene.add(borg)
