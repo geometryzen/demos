@@ -4,6 +4,13 @@ from browser import *
 from workbench import *
 from geometry import *
 
+# Don't need to set the aspect for the camera - the workbench will do that.
+camera = new PerspectiveCamera(75, 1, 1, 10000)
+camera.position.z = 450
+
+scene = Scene()
+
+renderer = CanvasRenderer()
 
 canvas3D = space3D.renderer.domElement
 workbench3D = Workbench3D(canvas3D, space3D.renderer, space3D.camera)
