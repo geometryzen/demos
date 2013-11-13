@@ -125,7 +125,7 @@ class Bird:
                     posSum.add(bird.position)
                     count += 1;
         if count > 0:
-            posSum.divideScalar(count)
+            posSum.divideScalar(float(count))
             
         steer = posSum - self.position
         f = steer.magnitude()
