@@ -101,6 +101,10 @@ def render(t):
             bird = birds[i]
             borg = borgs[i]
             color = borg.material.color
+            c = (500.0 - bird.position.z) / 1000.0
+            color.r = c
+            color.g = c
+            color.b = c
         renderer.render(scene, camera)
     except:
         print "Unexpected error"
