@@ -41,7 +41,7 @@ class Bird:
 
             vector.set(-self._width, self.position.y, self.position.z)
             vector = self.avoid(vector)
-            vector.multiplyScalar(5)
+            vector.multiplyScalar(5.0)
             self._acceleration.add(vector)
         else:
             pass
