@@ -10,6 +10,7 @@ from math import *
 
 # global timeOut allows us to terminate the program gracefully on time or Esc key.
 timeOut = 5
+maxSteerForce = 0.1
 
 class Bird:
     def __init__(self):
@@ -25,7 +26,6 @@ class Bird:
         self._goal = None
         self._neighborhoodRadius = 100.0
         self._maxSpeed = 4.0
-        self._maxSteerForce = 0.1
 
     def setAvoidWalls(self, avoidWalls):
         self._avoidWalls = avoidWalls
@@ -122,15 +122,15 @@ class Bird:
                 bird = birds[i]
                 distance = bird.position.distanceTo(self.position)
                 if distance > 0 and distance <= self._neighborhoodRadius:
-                    posSum.add(bird.positon)
+                    posSum.add(bird.position)
                     count += 1;
         if count > 0:
             posSum.divideScalar(count)
             
         steer = posSum - self.position
         f = steer.magnitude()
-        if f > self._maxSteerForce:
-            steer.divideScalar(f / _maxSteerForce);
+        if f > maxSteerForce:
+            steer.divideScalar(f / maxSteerForce);
         return steer
     
     def separation(self, birds):
