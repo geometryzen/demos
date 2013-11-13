@@ -114,7 +114,7 @@ class Bird:
             velSum.divideScalar(float(count))
             a = velSum.magnitude()
             if a > _maxSteerForce:
-                velSum.divideScalar(a / _maxSteerForce)
+                velSum.divideScalar(a / maxSteerForce)
         return velSum
     
     def cohesion(self, birds):
