@@ -53,6 +53,7 @@ class Bird:
     def alignment(self, birds):
         boid = VectorE3(0.0, 0.0, 0.0)
         vsum = VectorE3(0.0, 0.0, 0.0)
+        return vsum
         
 def Borg():
     geometry = Geometry();
