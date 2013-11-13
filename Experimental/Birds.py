@@ -78,11 +78,15 @@ class Bird:
         if self._goal:
             self._acceleration.add(self.reach(self._goal, 0.005))
         self._acceleration.add(self.alignment(birds));
+        self._acceleration.add(self.cohesion(birds));
+        self._acceleration.add(self.separation(birds));
         pass
     
     def move(self):
         self.velocity.add(self._acceleration)
         speed = self.velocity.magnitude()
+        if speed > self._maxSpeed:
+            self.velocity.divideScalar(speed/self._maxSpeed)
         self.position.add(self.velocity)
         self._acceleration.set(0.0, 0.0, 0.0)
         pass
