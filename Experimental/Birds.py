@@ -6,6 +6,7 @@ from random import random
 class Bird:
     def __init__(self):
         self.position = VectorE3(random() - 0.5, random() - 0.5, random() - 0.5) * 400.0
+        self.velocity = VectorE3(random() - 0.5, random() - 0.5, random() - 0.5) * 2.0
         pass
 
 # global timeOut allows us to terminate the program gracefully on time or Esc key.
@@ -42,6 +43,7 @@ birds = []
 def setUp():
     for i in range(0, 200):
         bird = Bird()
+        bird.setAvoidWalls(True)
         birds.append(bird)
         
     workbench3D.setUp()
