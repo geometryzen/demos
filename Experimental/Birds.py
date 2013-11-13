@@ -20,7 +20,7 @@ class Bird:
         self._height = height
         self._depth  = depth
         
-def birdMesh():
+def borgMesh():
     g = Geometry();
     m = MeshBasicMaterial({"color": random() * 0xFFFFFF, "side": DoubleSide})
 
@@ -54,6 +54,7 @@ def onDocumentKeyDown(event):
         pass
 
 birds = []
+borgs = []
     
 def setUp():
     for i in range(0, 200):
@@ -61,6 +62,10 @@ def setUp():
         bird.setAvoidWalls(True)
         bird.setWorldSize(200, 200, 200)
         birds.append(bird)
+        
+        borg = borgMesh()
+        borgs.append(borg)
+        scene.add(borg)
         
     workbench3D.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
