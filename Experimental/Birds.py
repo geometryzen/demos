@@ -77,10 +77,9 @@ class Bird:
     def flock(self, birds):
         if self._goal:
             self._acceleration.add(self.reach(self._goal, 0.005))
-        self._acceleration.add(self.alignment(birds));
-        self._acceleration.add(self.cohesion(birds));
-        self._acceleration.add(self.separation(birds));
-        pass
+        self._acceleration.add(self.alignment(birds))
+        self._acceleration.add(self.cohesion(birds))
+        self._acceleration.add(self.separation(birds))
     
     def move(self):
         self.velocity.add(self._acceleration)
@@ -89,7 +88,6 @@ class Bird:
             self.velocity.divideScalar(speed / self._maxSpeed)
         self.position.add(self.velocity)
         self._acceleration.set(0.0, 0.0, 0.0)
-        pass
     
     def avoid(self, target):
         steer = VectorE3(0.0, 0.0, 0.0)
@@ -107,7 +105,7 @@ class Bird:
             else:
                 bird = birds[i]
                 distance = bird.position.distanceTo(self.position)
-                if distance > 0 and distance <= self._neighborhoodRadius:
+                if distance > 0.0 and distance <= self._neighborhoodRadius:
                     velSum.add(bird.velocity)
                     count += 1
         if count > 0:
@@ -127,7 +125,7 @@ class Bird:
             else:
                 bird = birds[i]
                 distance = bird.position.distanceTo(self.position)
-                if distance > 0 and distance <= self._neighborhoodRadius:
+                if distance > 0.0 and distance <= self._neighborhoodRadius:
                     posSum.add(bird.position)
                     count += 1;
         if count > 0:
@@ -229,7 +227,7 @@ def render(t):
     for i in range(0, len(birds)):
         bird = birds[i]
         
-        bird.run(birds)
+        #bird.run(birds)
         
         borg = borgs[i]
             
