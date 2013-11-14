@@ -208,7 +208,7 @@ birds = []
 borgs = []
     
 def setUp():
-    for i in range(0, 20):
+    for i in range(0, 4):
         bird = Bird()
         bird.setAvoidWalls(True)
         bird.setWorldSize(500, 500, 500)
