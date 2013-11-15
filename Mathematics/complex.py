@@ -162,9 +162,9 @@ print "abs"
 print "----------"
 print abs(i)
 print "----------"
-print "exp(i * pi) + 1"
+print "exp(i * pi) - 1"
 print "----------"
-print exp(i * pi) + 1
+print exp(i * pi) - 1
 print "----------"
 print "exp(i * tao)"
 print "----------"
