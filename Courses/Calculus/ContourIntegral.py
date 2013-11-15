@@ -8,7 +8,6 @@ We can also chug through the integral using Cartesian coordinates.
 
 '''
 from cmath import *
-#from e2ga import *
 from math import cos, sin
 
 def f(z):
