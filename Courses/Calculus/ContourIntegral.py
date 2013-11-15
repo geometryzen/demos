@@ -39,8 +39,8 @@ def directIntegral(R):
     sum = 0
     for index in range(1, N + 1):
         theta = index * tao / N 
-        cosT = cos(theta)
-        sinT = sin(theta)
+        cosT = cos(theta - (dTheta/2))
+        sinT = sin(theta - (dTheta/2))
         dz = R * (-sinT + i * cosT) * dTheta
         z = R * (cosT + i * sinT)
         sum += f(z) * dz
