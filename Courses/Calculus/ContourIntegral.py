@@ -24,4 +24,5 @@ def sumOne(R):
     return sum
     
 print sumOne(5)
+print sumOne(0.5)
 
