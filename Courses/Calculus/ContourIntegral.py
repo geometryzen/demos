@@ -11,7 +11,7 @@ from cmath import *
 from math import cos, sin
 
 def f(z):
-    return 1.0 / (z * (z + 1))
+    return one / (z * (z + 1))
 
 def sumOne(R):
     N = 1000
