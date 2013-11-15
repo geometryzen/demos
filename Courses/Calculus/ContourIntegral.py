@@ -22,7 +22,7 @@ def polarIntegral(R):
     sum = 0
     for index in range(1, N + 1):
         theta = index * pi / N 
-        cosT = cos(theta - (dTheta/2))
+        cosT = cos(theta - (dTheta / 2.0))
         sum += ((R * cosT + one) / (R * R + 2.0 * R * cosT + one))
     return 2.0 * i * sum * dTheta
 
@@ -39,8 +39,8 @@ def directIntegral(R):
     sum = 0
     for index in range(1, N + 1):
         theta = index * tao / N 
-        cosT = cos(theta - (dTheta/2))
-        sinT = sin(theta - (dTheta/2))
+        cosT = cos(theta - (dTheta / 2.0))
+        sinT = sin(theta - (dTheta / 2.0))
         dz = R * (-sinT + i * cosT) * dTheta
         z = R * (cosT + i * sinT)
         sum += f(z) * dz
