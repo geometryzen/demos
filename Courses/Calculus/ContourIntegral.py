@@ -21,6 +21,7 @@ def sumOne(R):
         theta = i * 2 * pi / N 
         c = cos(theta)
         sum += ((R * c + 1) / (R * R + 2* R * c + 1)) * dTheta
+    return sum
     
 print sumOne(5)
 
