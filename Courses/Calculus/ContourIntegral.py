@@ -17,7 +17,7 @@ def f(z):
 Integrate the simplified integral in polar coordinates.
 '''
 def polarIntegral(R):
-    N = 200
+    N = 500
     dTheta = tao / N
     sum = 0
     for index in range(1, N + 1):
