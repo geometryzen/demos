@@ -14,10 +14,14 @@ def f(z):
     return 1.0 / (z * (z + 1))
 
 N = 6
+R = 5
 dTheta = 2 * pi / N
+sum = 0
 print dTheta
 for i in range(1, N + 1):
     theta = i * 2 * pi / N 
-    print i
-    print theta
+    c = cos(theta)
+    sum += ((R * c + 1) / (R * R + 2* R * c + 1)) * dTheta
+    
+print sum
 
