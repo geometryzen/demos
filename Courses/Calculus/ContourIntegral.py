@@ -13,18 +13,20 @@ from math import cos, sin
 def f(z):
     return one / (z * (z + 1))
 
+'''
+'''
 def sumOne(R):
     N = 500
     dTheta = tao / N
     sum = 0
-    for i in range(1, N + 1):
-        theta = i * tao / N 
+    for index in range(1, N + 1):
+        theta = index * tao / N 
         c = cos(theta)
         sum += ((R * c + one) / (R * R + 2 * R * c + one))
     return sum * dTheta
 
-for i in range(0,20):
-    R = i / 10.0
+for r in range(0, 20):
+    R = r / 10.0
     print str(R) + " => " + str(sumOne(R))
 
 
