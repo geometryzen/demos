@@ -20,8 +20,8 @@ def sumOne(R):
     for i in range(1, N + 1):
         theta = i * 2 * pi / N 
         c = cos(theta)
-        sum += ((R * c + 1) / (R * R + 2* R * c + 1)) * dTheta
-    return sum
+        sum += ((R * c + 1) / (R * R + 2 * R * c + 1))
+    return sum * dTheta
 
 for i in range(0,2):
     print str(i) + "=>" + str(sumOne(i))
