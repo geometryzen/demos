@@ -24,6 +24,7 @@ def sumOne(R):
     return sum * dTheta
 
 for i in range(0,20):
-    print str(i) + "=>" + str(sumOne(i / 10.0))
+    R = i / 10.0
+    print str(R) + " => " + str(sumOne(R))
 
 
