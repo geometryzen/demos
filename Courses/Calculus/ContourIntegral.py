@@ -15,10 +15,10 @@ def f(z):
 
 def sumOne(R):
     N = 500
-    dTheta = 2 * pi / N
+    dTheta = tao / N
     sum = 0
     for i in range(1, N + 1):
-        theta = i * 2 * pi / N 
+        theta = i * tao / N 
         c = cos(theta)
         sum += ((R * c + one) / (R * R + 2 * R * c + one))
     return sum * dTheta
