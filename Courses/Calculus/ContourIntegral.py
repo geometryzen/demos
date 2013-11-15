@@ -15,6 +15,7 @@ def f(z):
 
 N = 6
 dTheta = 2 * pi / N
+print dTheta
 for i in range(1, N + 1):
     theta = i * 2 * pi / N 
     print i
