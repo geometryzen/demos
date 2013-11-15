@@ -22,7 +22,8 @@ def sumOne(R):
         c = cos(theta)
         sum += ((R * c + 1) / (R * R + 2* R * c + 1)) * dTheta
     return sum
-    
-print sumOne(5)
-print sumOne(0.5)
+
+for i in range(0,2):
+    print str(i) + "=>" + str(sumOne(i))
+
 
