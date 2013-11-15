@@ -18,10 +18,10 @@ Integrate the simplified integral in polar coordinates.
 '''
 def polarIntegral(R):
     N = 1000
-    dTheta = tao / N
+    dTheta = pi / N
     sum = 0
     for index in range(1, N + 1):
-        theta = index * tao / N 
+        theta = index * pi / N 
         cosT = cos(theta)
         sum += ((R * cosT + one) / (R * R + 2.0 * R * cosT + one))
     return sum * dTheta * i
