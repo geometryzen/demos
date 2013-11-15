@@ -7,7 +7,7 @@ We can convert this to polar coordinates and simplify.
 We can also chug through the integral using Cartesian coordinates.
 
 '''
-from cmath import *
+#from cmath import *
 from e2ga import *
 from math import cos, sin
 
