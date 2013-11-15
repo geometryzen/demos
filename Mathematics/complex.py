@@ -169,3 +169,5 @@ print "----------"
 print "exp(i * tao)"
 print "----------"
 print exp(i * tao)
+print pi
+print tao
