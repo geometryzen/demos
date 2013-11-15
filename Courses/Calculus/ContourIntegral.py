@@ -9,6 +9,6 @@ from cmath import *
 def f(z):
     return 1.0 / (z * (z + 1))
 
-z = complex(0,0)
+z = complex(0,-1)
 print f(z)
 
