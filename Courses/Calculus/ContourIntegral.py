@@ -8,13 +8,14 @@ We can also chug through the integral using Cartesian coordinates.
 
 '''
 from cmath import *
+from math import cos, sin
 
 def f(z):
     return 1.0 / (z * (z + 1))
 
-steps = 1000
-for i in range(0, steps):
-    theta = i * 2 * pi / steps
+N = 5
+for i in range(0, N + 1):
+    theta = i * 2 * pi / N 
     print i
     print theta
 
