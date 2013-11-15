@@ -12,7 +12,7 @@ from cmath import *
 def f(z):
     return 1.0 / (z * (z + 1))
 
-steps = 40
+steps = 400
 for i in range(0, steps):
     theta = i * 2 * pi / steps
     print i
