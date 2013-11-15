@@ -17,11 +17,11 @@ def f(z):
 Integrate the simplified integral in polar coordinates.
 '''
 def polarIntegral(R):
-    N = 10000
+    N = 100
     dTheta = tao / N
     sum = 0
     for index in range(1, N + 1):
-        theta = index * pi / N 
+        theta = index * tao / N 
         cosT = cos(theta)
         sum += ((R * cosT + one) / (R * R + 2 * R * cosT + one))
     return sum * dTheta * i
