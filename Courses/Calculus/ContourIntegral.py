@@ -1,7 +1,10 @@
 '''
 Experiment with the calculation and visualization of a path integral in the complex plane.
 
-f(z) = 1/(z(z+1))
+f(z) = 1/(z(z+1)), where the contour is a circle: |z| = R > 1.
+
+We can convert this to polar coordinates and simplify.
+We can also chug through the integral using Cartesian coordinates.
 
 '''
 from cmath import *
@@ -9,6 +12,9 @@ from cmath import *
 def f(z):
     return 1.0 / (z * (z + 1))
 
-z = complex(-1,0)
-print f(z)
+steps = 4
+for i in range(0 to steps):
+    theta = i * 2 * pi
+    print i
+    print theta
 
