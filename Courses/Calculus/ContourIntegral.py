@@ -14,7 +14,7 @@ def f(z):
     return one / (z * (z + 1))
 
 '''
-Polar 
+Integrate the simplified integral in polar coordinates.
 '''
 def polarIntegral(R):
     N = 200
