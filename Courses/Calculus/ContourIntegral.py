@@ -27,6 +27,6 @@ def sumOne(R):
 
 for r in range(0, 20):
     R = r / 10.0
-    print str(R) + " => " + str(sumOne(R))
+    print "R=" + str(R) + " => " + str(sumOne(R))
 
 
