@@ -31,4 +31,23 @@ for r in range(0, 20):
     R = r / 10.0
     print "R=" + str(R) + " => " + str(polarIntegral(R))
 
+'''
+Integrate directly.
+'''
+def directIntegral(R):
+    N = 200
+    dTheta = tao / N
+    sum = 0
+    for index in range(1, N + 1):
+        theta = index * tao / N 
+        cosT = cos(theta)
+        sinT = sin(theta)
+
+    return sum
+
+print "Direct Integral:"
+for r in range(0, 20):
+    R = r / 10.0
+    print "R=" + str(R) + " => " + str(directIntegral(R))
+
 
