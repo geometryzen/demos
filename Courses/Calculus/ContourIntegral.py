@@ -7,8 +7,8 @@ We can convert this to polar coordinates and simplify.
 We can also chug through the integral using Cartesian coordinates.
 
 '''
-#from cmath import *
-from e2ga import *
+from cmath import *
+#from e2ga import *
 from math import cos, sin
 
 def f(z):
@@ -28,8 +28,7 @@ def polarIntegral(R):
     return sum * dTheta * i
 
 print "Polar Integral:"
-for r in range(0, 20):
-    R = r / 10.0
+for R in [0.5, 1.5]:
     print "R=" + str(R) + " => " + str(polarIntegral(R))
 
 '''
