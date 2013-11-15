@@ -9,5 +9,5 @@ from cmath import *
 def f(z):
     return 1.0 / (z * (z + 1))
 
-print f(0)
+print f(0.0)
 
