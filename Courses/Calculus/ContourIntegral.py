@@ -11,7 +11,7 @@ from cmath import *
 from math import cos, sin
 
 def f(z):
-    return one / (z * (z + 1))
+    return one / (z * (z + one))
 
 '''
 Integrate the simplified integral in polar coordinates.
