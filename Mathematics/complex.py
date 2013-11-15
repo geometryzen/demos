@@ -168,6 +168,4 @@ print exp(i * pi) + 1
 print "----------"
 print "exp(i * tao) - 1"
 print "----------"
-print exp(i * tao) + 1
-print pi
-print tao
+print exp(i * tao) - 1
