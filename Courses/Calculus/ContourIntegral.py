@@ -13,7 +13,7 @@ def f(z):
     return 1.0 / (z * (z + 1))
 
 steps = 4
-for i in range(0 to steps):
+for i in range(0, steps):
     theta = i * 2 * pi / steps
     print i
     print theta
