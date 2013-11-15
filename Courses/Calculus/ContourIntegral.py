@@ -14,7 +14,7 @@ def f(z):
 
 steps = 4
 for i in range(0 to steps):
-    theta = i * 2 * pi
+    theta = i * 2 * pi / steps
     print i
     print theta
 
