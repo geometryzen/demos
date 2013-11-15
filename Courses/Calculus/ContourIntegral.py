@@ -42,6 +42,8 @@ def directIntegral(R):
         theta = index * tao / N 
         cosT = cos(theta)
         sinT = sin(theta)
+        dz = R * (-sinT + cosT) * dTheta
+        print dz
 
     return sum
 
