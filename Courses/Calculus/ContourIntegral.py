@@ -38,7 +38,7 @@ def directIntegral(R):
     dTheta = tao / N
     sum = 0
     for index in range(1, N + 1):
-        theta = index * tao / N 
+        theta = index * pi / N 
         cosT = cos(theta)
         sinT = sin(theta)
         dz = R * (-sinT + i * cosT) * dTheta
