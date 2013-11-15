@@ -43,8 +43,8 @@ def directIntegral(R):
         cosT = cos(theta)
         sinT = sin(theta)
         dz = R * (-sinT + i * cosT) * dTheta
-        print dz
-
+        z = R * (cosT + i * sinT)
+        sum += f(z) * dz
     return sum
 
 print "Direct Integral:"
