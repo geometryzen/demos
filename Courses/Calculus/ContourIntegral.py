@@ -24,7 +24,7 @@ def polarIntegral(R):
         theta = index * pi / N 
         cosT = cos(theta)
         sum += ((R * cosT + one) / (R * R + 2.0 * R * cosT + one))
-    return sum * dTheta * i
+    return 2.0 * i * sum * dTheta
 
 print "Polar Integral:"
 for R in [0.1, 0.5, 0.9, 1.1, 1.5]:
