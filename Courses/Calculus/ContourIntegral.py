@@ -13,7 +13,7 @@ from math import cos, sin
 def f(z):
     return 1.0 / (z * (z + 1))
 
-N = 60
+N = 1000
 R = 5
 dTheta = 2 * pi / N
 sum = 0
