@@ -14,7 +14,7 @@ def f(z):
     return 1.0 / (z * (z + 1))
 
 N = 5
-for i in range(0, N + 1):
+for i in range(1, N + 1):
     theta = i * 2 * pi / N 
     print i
     print theta
