@@ -14,7 +14,7 @@ def f(z):
     return one / (z * (z + 1))
 
 def sumOne(R):
-    N = 1000
+    N = 500
     dTheta = 2 * pi / N
     sum = 0
     for i in range(1, N + 1):
