@@ -17,7 +17,6 @@ N = 6
 R = 5
 dTheta = 2 * pi / N
 sum = 0
-print dTheta
 for i in range(1, N + 1):
     theta = i * 2 * pi / N 
     c = cos(theta)
