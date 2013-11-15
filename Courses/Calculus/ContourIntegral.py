@@ -23,7 +23,7 @@ def sumOne(R):
         sum += ((R * c + one) / (R * R + 2 * R * c + one))
     return sum * dTheta
 
-for i in range(0,2):
-    print str(i) + "=>" + str(sumOne(i))
+for i in range(0,20):
+    print str(i) + "=>" + str(sumOne(i / 10.0))
 
 
