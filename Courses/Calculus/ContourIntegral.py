@@ -14,16 +14,17 @@ def f(z):
     return one / (z * (z + 1))
 
 '''
+Polar 
 '''
 def polarIntegral(R):
-    N = 1000
+    N = 200
     dTheta = tao / N
     sum = 0
     for index in range(1, N + 1):
         theta = index * tao / N 
-        c = cos(theta)
-        sum += ((R * c + one) / (R * R + 2 * R * c + one))
-    return sum * dTheta * complex(0, 1)
+        cosT = cos(theta)
+        sum += ((R * cosT + one) / (R * R + 2 * R * cosT + one))
+    return sum * dTheta * complex(0.0, 1.0)
 
 for r in range(0, 20):
     R = r / 10.0
