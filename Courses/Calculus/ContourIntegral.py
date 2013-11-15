@@ -22,7 +22,7 @@ def polarIntegral(R):
     sum = 0
     for index in range(1, N + 1):
         theta = index * pi / N 
-        cosT = cos(theta)
+        cosT = cos(theta - (dTheta/2))
         sum += ((R * cosT + one) / (R * R + 2.0 * R * cosT + one))
     return 2.0 * i * sum * dTheta
 
