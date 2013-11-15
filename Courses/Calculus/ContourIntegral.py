@@ -28,7 +28,7 @@ def polarIntegral(R):
     return sum * dTheta * i
 
 print "Polar Integral:"
-for R in [0.5, 1.5]:
+for R in [0.1, 0.5, 0.9, 1.1, 1.5]:
     print "R=" + str(R) + " => " + str(polarIntegral(R))
 
 '''
@@ -48,8 +48,7 @@ def directIntegral(R):
     return sum
 
 print "Direct Integral:"
-for r in range(0, 20):
-    R = r / 10.0
+for R in [0.1, 0.5, 0.9, 1.1, 1.5]:
     print "R=" + str(R) + " => " + str(directIntegral(R))
 
 
