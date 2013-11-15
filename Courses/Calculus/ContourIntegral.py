@@ -15,7 +15,7 @@ def f(z):
 
 '''
 '''
-def sumOne(R):
+def polarIntegral(R):
     N = 500
     dTheta = tao / N
     sum = 0
@@ -23,10 +23,10 @@ def sumOne(R):
         theta = index * tao / N 
         c = cos(theta)
         sum += ((R * c + one) / (R * R + 2 * R * c + one))
-    return sum * dTheta
+    return sum * dTheta * complex(0, 1)
 
 for r in range(0, 20):
     R = r / 10.0
-    print "R=" + str(R) + " => " + str(sumOne(R))
+    print "R=" + str(R) + " => " + str(polarIntegral(R))
 
 
