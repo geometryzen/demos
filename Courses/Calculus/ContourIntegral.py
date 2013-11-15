@@ -26,6 +26,7 @@ def polarIntegral(R):
         sum += ((R * cosT + one) / (R * R + 2 * R * cosT + one))
     return sum * dTheta * complex(0.0, 1.0)
 
+print "Polar Integral:"
 for r in range(0, 20):
     R = r / 10.0
     print "R=" + str(R) + " => " + str(polarIntegral(R))
