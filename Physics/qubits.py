@@ -30,3 +30,4 @@ print "|y+> => " + str(yp)
 print "|y-> => " + str(ym)
 
 print e2 * yp * e3 / yp
+print e2 * ym * e3 / ym
