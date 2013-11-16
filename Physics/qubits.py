@@ -1,4 +1,5 @@
 from e3ga import *
+from math import exp
 
 print I
 print pi
