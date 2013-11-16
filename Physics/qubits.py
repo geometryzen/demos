@@ -6,8 +6,8 @@ Seems to be a problem computing z-
 z+ <-> 1
 z- <-> -e31 = - I * e2
 
-x+ <-> (1 - e31) / sqrt(2)
-x- <->
+x+ <-> (1 - e31)   / sqrt(2)
+x- <-> (e23 - e12) / sqrt(2)
 
 '''
 from e3ga import *
@@ -22,3 +22,5 @@ print "|x+> => " + str(rotor(pi / 2.0,  0.0))
 print "|x-> => " + str(rotor(pi / 2.0,  pi))
 print "|y+> => " + str(rotor(pi / 2.0, +pi / 2.0))
 print "|y-> => " + str(rotor(pi / 2.0, -pi / 2.0))
+
+print e2 * (e2 * e3 - e1 * e2) * e3
