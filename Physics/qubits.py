@@ -35,7 +35,8 @@ print "x- => " + str(xm)
 print "y+ => " + str(yp)
 print "y- => " + str(ym)
 
-# Exact values:
+print "Exact values (not normalized):"
+
 zp = ScalarE3(1.0)
 zm = -I * e2
 
