@@ -1,9 +1,7 @@
 from e3ga import *
 from math import exp
 
-theta = 0
-phi = 0
+def rotor(theat, phi):
+    return exp(-I * e3 * phi / 2) * exp(-I * e2 * theta / 2)
 
-R = exp(-I * e3 * phi / 2) * exp(-I * e2 * theta / 2)
-
-print R
+print "z => " + str(rotor(0,0))
