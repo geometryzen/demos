@@ -45,6 +45,13 @@ xm = e2 * e3 - e1 * e2
 yp = ScalarE3(1.0) - e1 * e2 + e2 * e3 - e3 * e1
 ym = ScalarE3(1.0) + e1 * e2 - e2 * e3 - e3 * e1
 
+print "z+ => " + str(zp)
+print "z- => " + str(zm)
+print "x+ => " + str(xp)
+print "x- => " + str(xm)
+print "y+ => " + str(yp)
+print "y- => " + str(ym)
+
 # For E3 we can check the eigenvalues by division.
 print e3 * zp * e3 / zp
 print e3 * zm * e3 / zm
