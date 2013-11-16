@@ -35,6 +35,8 @@ print "x- => " + str(xm)
 print "y+ => " + str(yp)
 print "y- => " + str(ym)
 
+zp = one
+
 print e3 * zp * e3 / zp
 print e3 * zm * e3 / zm
 
