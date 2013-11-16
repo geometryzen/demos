@@ -2,7 +2,7 @@ from e3ga import *
 from math import exp
 
 def rotor(theta, phi):
-    return exp(-I * e3 * phi / 2) * exp(-I * e2 * theta / 2)
+    return exp(-I * e3 * phi / 2.0) * exp(-I * e2 * theta / 2.0)
 
 print "|z+> => " + str(rotor(0,0))
 print "|z-> => " + str(rotor(pi,0))
