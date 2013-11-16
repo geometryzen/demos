@@ -1,7 +1,7 @@
 '''
 Rotors for the cardinal points in 3D space.
 
-Seems to be a problem computing z-
+Seems to be a problem computing z-. Wrong magnitude.
 
 z+ <-> 1
 z- <-> -e31 = - I * e2
@@ -25,8 +25,8 @@ zm = rotor(pi,  0.0)
 xp = rotor(pi / 2.0, 0.0)
 xm = rotor(pi / 2.0, pi)
 
-yp = rotor(pi / 2.0, +pi / 2.0)
-ym = rotor(pi / 2.0, -pi / 2.0)
+yp = rotor(pi / 2.0, 1.0 * pi / 2.0)
+ym = rotor(pi / 2.0, 3.0 * pi / 2.0)
 
 print "z+ => " + str(zp)
 print "z- => " + str(zm)
