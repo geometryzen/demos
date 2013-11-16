@@ -34,5 +34,5 @@ print "|y-> => " + str(ym)
 print e1 * xp * e3
 print e1 * xm * e3
 
-print e2 * yp * e3
+print e2 * yp * e3 - yp
 print e2 * ym * e3
