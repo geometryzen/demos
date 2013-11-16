@@ -38,6 +38,8 @@ print "y- => " + str(ym)
 zp = ScalarE3(1.0)
 zm = -I * e2
 
+xp = ScalarE3(1.0) - e3 * e1
+
 print e3 * zp * e3 / zp
 print e3 * zm * e3 / zm
 
