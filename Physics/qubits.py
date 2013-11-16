@@ -38,8 +38,8 @@ print "y- => " + str(ym)
 print e3 * zp * e3 / zp
 print e3 * zm * e3 / zm
 
-print e1 * xp * e3 - xp
-print e1 * xm * e3 + xm
+print e1 * xp * e3 / xp
+print e1 * xm * e3 / xm
 
-print e2 * yp * e3 - yp
-print e2 * ym * e3 + ym
+print e2 * yp * e3 / yp
+print e2 * ym * e3 / ym
