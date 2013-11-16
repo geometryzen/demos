@@ -8,7 +8,7 @@ z- =>
 from e3ga import *
 from math import exp
 
-print I * e2
+print -I * e2
 
 def rotor(theta, phi):
     return exp(-I * e3 * phi / 2.0) * exp(-I * e2 * theta / 2.0)
