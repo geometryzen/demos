@@ -28,12 +28,12 @@ xm = rotor(pi / 2.0, pi)
 yp = rotor(pi / 2.0, +pi / 2.0)
 ym = rotor(pi / 2.0, -pi / 2.0)
 
-print "|z+> => " + str(zp)
-print "|z-> => " + str(zm)
-print "|x+> => " + str(xp)
-print "|x-> => " + str(xm)
-print "|y+> => " + str(yp)
-print "|y-> => " + str(ym)
+print "z+ => " + str(zp)
+print "z- => " + str(zm)
+print "x+ => " + str(xp)
+print "x- => " + str(xm)
+print "y+ => " + str(yp)
+print "y- => " + str(ym)
 
 print e1 * xp * e3 - xp
 print e1 * xm * e3 + xm
