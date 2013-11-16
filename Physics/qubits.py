@@ -19,13 +19,17 @@ from math import exp
 def rotor(theta, phi):
     return exp(-I * e3 * phi / 2.0) * exp(-I * e2 * theta / 2.0)
 
-xp = rotor(pi / 2.0,  0.0)
-xm = rotor(pi / 2.0,  pi)
+zp = rotor(0.0, 0.0)
+zm = rotor(pi,  0.0)
+
+xp = rotor(pi / 2.0, 0.0)
+xm = rotor(pi / 2.0, pi)
+
 yp = rotor(pi / 2.0, +pi / 2.0)
 ym = rotor(pi / 2.0, -pi / 2.0)
 
-print "|z+> => " + str(rotor(0.0,       0.0))
-print "|z-> => " + str(rotor(pi,        0.0))
+print "|z+> => " + str(zp)
+print "|z-> => " + str(zm)
 print "|x+> => " + str(xp)
 print "|x-> => " + str(xm)
 print "|y+> => " + str(yp)
