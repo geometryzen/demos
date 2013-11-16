@@ -28,5 +28,4 @@ print "|x-> => " + str(rotor(pi / 2.0,  pi))
 print "|y+> => " + str(yp)
 print "|y-> => " + str(rotor(pi / 2.0, -pi / 2.0))
 
-print e2 * (e2 * e3 - e1 * e2) * e3
-print e2 * (1 - e3 * e1) * e3
+print e2 * yp * e3
