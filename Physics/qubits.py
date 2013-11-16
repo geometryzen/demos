@@ -6,3 +6,4 @@ def rotor(theta, phi):
 
 print "|0> => " + str(rotor(0,0))
 print "|1> => " + str(rotor(pi,0))
+print "|+> => " + str(rotor(pi/2,0))
