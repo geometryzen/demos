@@ -2,13 +2,16 @@
 Rotors for the cardinal points in 3D space.
 
 Seems to be a problem computing z-
-z+ => 1
-z- => 
+
+z+ <-> 1
+z- <-> -e31 = - I * e2
+
+x+ <-> (1 - e31) / sqrt(2)
+x- <->
+
 '''
 from e3ga import *
 from math import exp
-
-print -I * e2
 
 def rotor(theta, phi):
     return exp(-I * e3 * phi / 2.0) * exp(-I * e2 * theta / 2.0)
