@@ -8,3 +8,4 @@ print e
 print pi
 print tao
 print cos(pi/4)
+print sqrt1_2
