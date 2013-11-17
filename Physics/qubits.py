@@ -33,13 +33,6 @@ xm = rotor(pi / 2.0, pi)
 yp = rotor(pi / 2.0, 1.0 * pi / 2.0)
 ym = rotor(pi / 2.0, 3.0 * pi / 2.0)
 
-print "z+ => " + str(zp)
-print "z- => " + str(zm)
-print "x+ => " + str(xp)
-print "x- => " + str(xm)
-print "y+ => " + str(yp)
-print "y- => " + str(ym)
-
 zp = ScalarE3(1.0)
 zm = -I * e2
 
