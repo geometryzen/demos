@@ -14,7 +14,7 @@ y- <-> (1 + e12 - e23 - e31) / 2
 
 '''
 from e3ga import *
-from math import exp, sqrt
+from math import exp, sqrt, pi
 
 def rotor(theta, phi):
     return exp(-I * e3 * phi / 2.0) * exp(-I * e2 * theta / 2.0)
