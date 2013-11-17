@@ -31,3 +31,4 @@ print (I * e2 * (pi / 2.0)).vector
 print (I * e2 * (pi / 2.0)).quaternion
 print (I * e2 * (pi / 2.0)).quaternion.z
 print sin((-pi / 2.0)/2.0)
+print cos(pi/4)
