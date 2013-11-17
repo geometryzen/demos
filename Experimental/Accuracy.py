@@ -15,3 +15,4 @@ print cos(pi / 4 + 0.0000000001)
 print cos(pi / 4 + 0.000000001)
 print cos(pi / 4 + 0.00000001)
 print pi
+print degrees(pi)
