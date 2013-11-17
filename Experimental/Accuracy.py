@@ -28,4 +28,5 @@ print exp((pi / 2.0) / 2.0)
 
 print rotor(pi / 2.0, 0.0)
 print (I * e2 * (pi / 2.0)).quaternion.y
+print (I * e2 * (pi / 2.0)).quaternion.z
 print -pi / 2
