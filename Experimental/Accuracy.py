@@ -30,4 +30,4 @@ print rotor(pi / 2.0, 0.0)
 print (I * e2 * (pi / 2.0)).quaternion.x
 print (I * e2 * (pi / 2.0)).quaternion.y
 print (I * e2 * (pi / 2.0)).quaternion.z
-print cos((-pi / 2.0)/2.0)
+print sin((-pi / 2.0)/2.0)
