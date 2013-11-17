@@ -20,3 +20,4 @@ print sqrt1_2 * sqrt1_2
 print cos(pi / 4.0) * cos(pi / 4)
 
 print rotor(pi / 2.0, 0.0)
+print cos((pi / 2.0) / 2.0)
