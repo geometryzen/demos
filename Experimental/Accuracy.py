@@ -21,5 +21,5 @@ print degrees(3.14159265359)
 print degrees(pi/2)
 print degrees(1.57079632679)
 
-for i in range(-8, 9)
+for i in range(-8, 9):
     print i
