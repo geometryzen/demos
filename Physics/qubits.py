@@ -21,7 +21,7 @@ def rotor(theta, phi):
 
 def amplitude(phi, psi):
     ihp = ~phi
-    return 1
+    return (ihp * psi)[0]
 
 zp = rotor(0.0, 0.0)
 zm = rotor(pi,  0.0)
