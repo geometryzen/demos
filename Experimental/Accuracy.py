@@ -7,7 +7,8 @@ from e3ga import Euclidean3, I, e3, e2
 def rotor(theta, phi):
     R2 = exp(-I * e3 * phi / 2.0)
     R1 = exp(-I * e2 * theta / 2.0)
-    return R2 * R1
+    return R1
+    #return R2 * R1
 
 print "sqrt(2) => " + str(sqrt(2))
 print e
