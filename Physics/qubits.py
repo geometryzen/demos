@@ -60,3 +60,10 @@ print e2 * yp * e3 / yp
 print e2 * ym * e3 / ym
 
 print "<z+|z+> => " + str(amplitude(zp, zp))
+print "<z+|z-> => " + str(amplitude(zp, zm))
+print "<x+|x+> => " + str(amplitude(xp, xp))
+print "<x+|x-> => " + str(amplitude(xp, xm))
+print "<y+|y+> => " + str(amplitude(yp, yp))
+print "<y+|y+> => " + str(amplitude(yp, ym))
+
+print "<z+|z+> => " + str(amplitude(zp, zp))
