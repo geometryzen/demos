@@ -18,3 +18,4 @@ print pi
 print pi / 2
 print 3.14159265359
 print degrees(3.14159265359)
+print degrees(pi/2)
