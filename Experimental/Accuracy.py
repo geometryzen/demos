@@ -2,7 +2,7 @@
 Investigation into improving accuracy in the use of trigonometric functions.
 '''
 from math import *
-from e3ga import Euclidean3
+from e3ga import Euclidean3, I
 
 def rotor(theta, phi):
     return exp(-I * e3 * phi / 2.0) * exp(-I * e2 * theta / 2.0)
