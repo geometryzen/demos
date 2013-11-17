@@ -74,3 +74,6 @@ print "<z+|y-> => " + str(amplitude(zp, ym))
 
 print "<x+|y+> => " + str(amplitude(xp, yp))
 print "<x+|y-> => " + str(amplitude(xp, ym))
+
+print "<y+|z+> => " + str(amplitude(xp, yp))
+print "<y+|z-> => " + str(amplitude(xp, ym))
