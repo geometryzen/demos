@@ -13,3 +13,4 @@ print sqrt1_2
 print sqrt2
 print sqrt2 * sqrt2
 print sqrt1_2 * sqrt1_2
+print cos(pi / 4.0) * cos(pi / 4)
