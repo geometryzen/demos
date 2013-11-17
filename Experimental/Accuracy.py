@@ -27,4 +27,4 @@ print cos((pi / 2.0) / 2.0)
 print sin((pi / 2.0) / 2.0)
 print exp((pi / 2.0) / 2.0)
 
-print I * e2 * (pi / 2.0).quaternion
+print (I * e2 * (pi / 2.0)).quaternion
