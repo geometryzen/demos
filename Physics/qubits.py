@@ -59,21 +59,21 @@ print e1 * xm * e3 / xm
 print e2 * yp * e3 / yp
 print e2 * ym * e3 / ym
 
-print "<z+|z+> => " + str(amplitude(zp, zp))
-print "<z+|z-> => " + str(amplitude(zp, zm))
-print "<x+|x+> => " + str(amplitude(xp, xp))
-print "<x+|x-> => " + str(amplitude(xp, xm))
-print "<y+|y+> => " + str(amplitude(yp, yp))
-print "<y+|y-> => " + str(amplitude(yp, ym))
+print "<z+|z+> <-> " + str(amplitude(zp, zp))
+print "<z+|z-> <-> " + str(amplitude(zp, zm))
+print "<x+|x+> <-> " + str(amplitude(xp, xp))
+print "<x+|x-> <-> " + str(amplitude(xp, xm))
+print "<y+|y+> <-> " + str(amplitude(yp, yp))
+print "<y+|y-> <-> " + str(amplitude(yp, ym))
 
-print "<z+|x+> => " + str(amplitude(zp, xp))
-print "<z+|x-> => " + str(amplitude(zp, xm))
+print "<z+|x+> <-> " + str(amplitude(zp, xp))
+print "<z+|x-> <-> " + str(amplitude(zp, xm))
 
-print "<z+|y+> => " + str(amplitude(zp, yp))
-print "<z+|y-> => " + str(amplitude(zp, ym))
+print "<z+|y+> <-> " + str(amplitude(zp, yp))
+print "<z+|y-> <-> " + str(amplitude(zp, ym))
 
-print "<x+|y+> => " + str(amplitude(xp, yp))
-print "<x+|y-> => " + str(amplitude(xp, ym))
+print "<x+|y+> <-> " + str(amplitude(xp, yp))
+print "<x+|y-> <-> " + str(amplitude(xp, ym))
 
-print "<y+|z+> => " + str(amplitude(xp, yp))
-print "<y+|z-> => " + str(amplitude(xp, ym))
+print "<y+|z+> <-> " + str(amplitude(xp, yp))
+print "<y+|z-> <-> " + str(amplitude(xp, ym))
