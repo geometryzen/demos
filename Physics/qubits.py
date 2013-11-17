@@ -46,10 +46,10 @@ zp = ScalarE3(1.0)
 zm = -I * e2
 
 xp = (ScalarE3(1.0) - e3 * e1) / sqrt(2.0)
-xm = e2 * e3 - e1 * e2
+xm = (e2 * e3 - e1 * e2) / sqrt(2.0)
 
-yp = ScalarE3(1.0) - e1 * e2 + e2 * e3 - e3 * e1
-ym = ScalarE3(1.0) + e1 * e2 - e2 * e3 - e3 * e1
+yp = (ScalarE3(1.0) - e1 * e2 + e2 * e3 - e3 * e1) / 2.0
+ym = (ScalarE3(1.0) + e1 * e2 - e2 * e3 - e3 * e1) / 2.0
 
 print "z+ => " + str(zp)
 print "z- => " + str(zm)
