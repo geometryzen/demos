@@ -7,4 +7,4 @@ print "sqrt(2) => " + str(sqrt(2))
 print e
 print pi
 print tao
-print cos(pi/2)
+print cos(pi/4)
