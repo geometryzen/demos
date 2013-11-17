@@ -27,7 +27,7 @@ print sin((pi / 2.0) / 2.0)
 print exp((pi / 2.0) / 2.0)
 
 print rotor(pi / 2.0, 0.0)
-print (I * e2 * (pi / 2.0)).vector.x
+print (I * e2 * (pi / 2.0)).vector
 print (I * e2 * (pi / 2.0)).quaternion.y
 print (I * e2 * (pi / 2.0)).quaternion.z
 print sin((-pi / 2.0)/2.0)
