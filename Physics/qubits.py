@@ -19,6 +19,10 @@ from math import exp
 def rotor(theta, phi):
     return exp(-I * e3 * phi / 2.0) * exp(-I * e2 * theta / 2.0)
 
+def amplitude(phi, psi):
+    ihp = ~phi
+    return 1
+
 zp = rotor(0.0, 0.0)
 zm = rotor(pi,  0.0)
 
