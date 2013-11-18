@@ -6,11 +6,12 @@ from matrix import *
 from math import *
 from cmath import *
 
+zero = complex(0.0, 0.0)
 one = complex(1.0, 0.0)
 i = complex(0.0, 1.0)
 
-zp = Matrix2x1(complex(1.0, 0.0), complex(0.0, 0.0))
-zm = Matrix2x1(complex(0.0, 0.0), complex(1.0, 0.0))
+zp = Matrix2x1(one, zero)
+zm = Matrix2x1(zero, one)
 
 I = Matrix2x2(zp, zm)
 print "The Identity Matrix, I"
