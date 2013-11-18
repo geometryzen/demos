@@ -105,3 +105,6 @@ print "<x+|y-> <-> " + str(amplitude(xp, ym))
 
 print "<y+|z+> <-> " + str(amplitude(xp, yp))
 print "<y+|z-> <-> " + str(amplitude(xp, ym))
+
+n = (e2 - e3) / sqrt(2)
+print n
