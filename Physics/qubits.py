@@ -54,7 +54,7 @@ sxm = spinor(pi / 2.0, pi)
 syp = spinor(pi / 2.0, 1.0 * pi / 2.0)
 sym = spinor(pi / 2.0, 3.0 * pi / 2.0)
 
-print "|z+> => " + str(szp)
+print "|z+> => \n" + str(szp)
 print "|z-> => " + str(szm)
 print "|x+> => " + str(sxp)
 print "|x-> => " + str(sxm)
