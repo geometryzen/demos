@@ -17,7 +17,7 @@ sx = Matrix2x2(zm, zp)
 print "The Pauli sigma x"
 print sx
 
-sy = Matrix2x2(Matrix2x1(complex(1.0, 0.0), complex(0.0, 1.0)), Matrix2x1(complex(0.0, -1.0), complex(0.0, 0.0)))
+sy = Matrix2x2(Matrix2x1(complex(0.0, 0.0), complex(0.0, 1.0)), Matrix2x1(complex(0.0, -1.0), complex(0.0, 0.0)))
 print "The Pauli sigma y"
 print sy
 
