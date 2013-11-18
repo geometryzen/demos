@@ -13,9 +13,13 @@ y- <-> (1 + e12 - e23 - e31) / 2
 '''
 from e3ga import *
 from math import exp, sqrt, pi
+from matrix import *
 
 def rotor(theta, phi):
     return exp(-I * e3 * phi / 2.0) * exp(-I * e2 * theta / 2.0)
+
+def spinor(theta, phi):
+    return Matrix2x1(cos(theta / 2.0) * exp(-i * phi / 2.0), sin(theta / 2.0) * exp(+i * phi / 2.0))
 
 def amplitude(phi, psi):
     ihp = ~phi
