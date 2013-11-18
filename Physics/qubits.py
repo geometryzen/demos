@@ -12,7 +12,7 @@ y- <-> (1 + e12 - e23 - e31) / 2
 
 '''
 from e3ga import *
-from math import exp, sqrt, pi
+from math import exp, sqrt, pi, cos, sin
 from matrix import *
 
 def rotor(theta, phi):
