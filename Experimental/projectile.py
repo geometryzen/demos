@@ -10,7 +10,7 @@ scene = Scene()
 particle = Mesh(SphereGeometry(50, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
 scene.add(particle)
 
-xyPlane = Mesh(PlaneGeometry(1000,1000,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True, "opacity":0.2,"transparent":True}))
+xyPlane = Mesh(PlaneGeometry(1000.0,1000.0,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True, "opacity":0.2,"transparent":True}))
 scene.add(xyPlane)
 xyPlane.position.set(500,500,0)
 
