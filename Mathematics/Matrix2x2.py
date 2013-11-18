@@ -21,6 +21,10 @@ sy = Matrix2x2(Matrix2x1(complex(1.0, 0.0), complex(0.0, 1.0)), Matrix2x1(comple
 print "The Pauli sigma y"
 print sy
 
+sz = Matrix2x2(Matrix2x1(complex(1.0, 0.0), complex(0.0, 0.0)), Matrix2x1(complex(0.0, 0.0), complex(0.0, -1.0)))
+print "The Pauli sigma z"
+print sz
+
 print "zp[0] => " + str(zp[0])
 print "zp[1] => " + str(zp[1])
 
