@@ -108,3 +108,4 @@ print "<y+|z-> <-> " + str(amplitude(xp, ym))
 
 n = (e2 - e3) / sqrt(2)
 print n
+print -n * yp * n
