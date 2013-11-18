@@ -7,3 +7,4 @@ from matrix import *
 spinor = Matrix2x1(1, 2)
 
 print spinor
+print repr(spinor)
