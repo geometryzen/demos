@@ -19,23 +19,16 @@ print "The Identity Matrix, I"
 print I
 
 X = Matrix2x2(zm, zp)
-print "The Pauli X"
+print "Pauli X"
 print X
 
 Y = Matrix2x2(Matrix2x1(zero, i), Matrix2x1(-i, zero))
-print "The Pauli Y"
+print "Pauli Y"
 print Y
 
 Z = Matrix2x2(Matrix2x1(one, zero), Matrix2x1(zero, -one))
-print "The Pauli Z"
+print "Pauli Z"
 print Z
-
-print "-i * X * Y"
-print -i * X * Y
-
-
-print "zp[0] => " + str(zp[0])
-print "zp[1] => " + str(zp[1])
 
 hxp = (zp + zm) / sqrt(2.0)
 hxm = (zp - zm) / sqrt(2.0)
@@ -56,6 +49,8 @@ b = Variable("b")
 
 state = Matrix2x1(a,b)
 print state
+
+print X * state
 
 
 
