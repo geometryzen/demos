@@ -55,11 +55,11 @@ syp = spinor(pi / 2.0, 1.0 * pi / 2.0)
 sym = spinor(pi / 2.0, 3.0 * pi / 2.0)
 
 print "|z+> => \n" + str(szp)
-print "|z-> => " + str(szm)
-print "|x+> => " + str(sxp)
-print "|x-> => " + str(sxm)
-print "|y+> => " + str(syp)
-print "|y-> => " + str(sym)
+print "|z-> => \n" + str(szm)
+print "|x+> => \n" + str(sxp)
+print "|x-> => \n" + str(sxm)
+print "|y+> => \n" + str(syp)
+print "|y-> => \n" + str(sym)
 
 zp = ScalarE3(1.0)
 zm = -I * e2
