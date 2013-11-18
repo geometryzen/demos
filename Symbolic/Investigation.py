@@ -2,7 +2,6 @@
 Investigating the feasibility of CAS.
 '''
 from symbolic import *
-from matrix import *
 
 # The following functions are provided for testing purposes.
 def assertEqual(fn, actual, expect):
@@ -36,6 +35,3 @@ assertEqual(AssocL(),   a * (b * c)   , (a * b) * c       )
 assertEqual(AssocR(),   (a * b) * c   , a * (b * c)       )
 
 assertEqual(Commute(),  a * b         , b * a             )
-
-M = Matrix2x2(Matrix2x1(a,c),Matrix2x1(b,d))
-print M * a
