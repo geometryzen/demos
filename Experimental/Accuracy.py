@@ -6,3 +6,4 @@ from math import *
 for i in range(-8, 9):
     theta = i * tao / 8
     print cos(theta)
+    print sin(theta)
