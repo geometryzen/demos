@@ -9,7 +9,7 @@ binops = ["+", "-", "*", "<<", "^", ">>"]
 indexA = 2
 indexB = 10
 indexOp = 2
-wireframe = False
+wireframe = True
 
 timeOut = 600
 
