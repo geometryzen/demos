@@ -29,7 +29,7 @@ b = Variable("b")
 
 state = Matrix2x1(a, b)
 
-print "Z * " + str(state) + " => " + str(Z * state)
+print "H * " + str(state) + " => " + str(H * state)
 
 
 
