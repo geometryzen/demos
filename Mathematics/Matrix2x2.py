@@ -25,10 +25,8 @@ Z = Matrix2x2(Matrix2x1(complex(1.0, 0.0), complex(0.0, 0.0)), Matrix2x1(complex
 print "The Pauli Z"
 print Z
 
-print "sx * sy"
-print X * Y
-print "sx * sy * sz"
-print X * Y * Z
+print "X * Z"
+print X * Z
 
 
 print "zp[0] => " + str(zp[0])
