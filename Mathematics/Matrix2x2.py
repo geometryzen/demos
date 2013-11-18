@@ -8,7 +8,7 @@ from cmath import *
 
 i = complex(0.0, 1.0)
 
-zp = Matrix2x1(complex(1.0, 0.0), complex(0.0, 0.0))
+zp = Matrix2x1(1, complex(0.0, 0.0))
 zm = Matrix2x1(complex(0.0, 0.0), complex(1.0, 0.0))
 
 I = Matrix2x2(zp, zm)
