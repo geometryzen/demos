@@ -4,7 +4,7 @@
 # This program demonstrates this fact.
 from cmath import *
 from math import exp, pi, tao, cos, sin, sqrt
-#from e2ga import *
+from e2ga import *
 
 # Try changing this variable to False to perform the operations using the e2ga sub-algebra.
 useComplex = True
@@ -170,8 +170,4 @@ print "exp(i * tao) - 1"
 print "----------"
 print exp(i * tao) - 1
 print "----------"
-print 2 * (cos(3 * pi / 4) + i * sin(3 * pi / 4))
-print 2 * exp(i * 3 * pi / 4)
-print (3 + 4 * i) / (1 - 2 * i)
-print (1+i).conjugate()
-print pow((-2 + 2 * sqrt(3) * i), 3)
+#print pow((-2 + 2 * sqrt(3) * i), 3)
