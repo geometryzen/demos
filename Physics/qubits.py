@@ -14,7 +14,7 @@ y- <-> (1 + e12 - e23 - e31) / 2
 from e3ga import *
 from math import exp, sqrt, pi, cos, sin
 from matrix import *
-from complex import *
+from cmath import *
 
 i = complex(0.0, 1.0)
 
