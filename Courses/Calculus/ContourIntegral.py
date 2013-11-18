@@ -8,7 +8,7 @@ We can also chug through the integral using Cartesian coordinates.
 
 '''
 from cmath import *
-from math import cos, sin, pi
+from math import cos, sin, pi, tao
 
 one = complex(1.0, 0.0)
 i = complex(0.0, 1.0)
