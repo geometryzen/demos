@@ -23,7 +23,7 @@ def showValue(name, m):
 a = Variable("a")
 b = Variable("b")
 c = Variable("c")
-b = Variable("d")
+d = Variable("d")
 
 print "The Basic tree transformations: Distribution, Factorization, Association, and Commutation."
 assertEqual(DistribL(), a * (b + c)   , (a * b) + (a * c) )
