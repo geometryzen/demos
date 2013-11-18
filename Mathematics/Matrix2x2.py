@@ -6,6 +6,7 @@ from matrix import *
 from math import *
 from cmath import *
 
+one = complex(1.0, 0.0)
 i = complex(0.0, 1.0)
 
 zp = Matrix2x1(complex(1.0, 0.0), complex(0.0, 0.0))
