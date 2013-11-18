@@ -1,8 +1,6 @@
 '''
 Rotors for the cardinal points in 3D space.
 
-Seems to be a problem computing z-. Wrong magnitude.
-
 z+ <-> 1
 z- <-> -e31 = - I * e2
 
