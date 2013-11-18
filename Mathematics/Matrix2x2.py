@@ -5,7 +5,7 @@ Under Construction. Nov 17, 2013.
 from matrix import *
 from cmath import *
 
-spinor = Matrix2x1(complex(1,0), complex(0,1))
+hxp = Matrix2x1(complex(1,0), complex(0,1))
 
-print spinor
-print repr(spinor)
+print hxp
+print repr(hxp)
