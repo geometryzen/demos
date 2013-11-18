@@ -3,7 +3,7 @@
 # The complex imag part corresponds to the multivector bivector part.
 # This program demonstrates this fact.
 from cmath import *
-from math import exp, pi, tao, cos, sin
+from math import exp, pi, tao, cos, sin, sqrt
 #from e2ga import *
 
 # Try changing this variable to False to perform the operations using the e2ga sub-algebra.
