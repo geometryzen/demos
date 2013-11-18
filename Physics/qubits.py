@@ -15,6 +15,8 @@ from e3ga import *
 from math import exp, sqrt, pi, cos, sin
 from matrix import *
 
+i = complex(0.0, 1.0)
+
 def rotor(theta, phi):
     return exp(-I * e3 * phi / 2.0) * exp(-I * e2 * theta / 2.0)
 
