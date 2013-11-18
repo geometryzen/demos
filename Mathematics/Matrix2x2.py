@@ -5,6 +5,7 @@ Under Construction. Nov 18, 2013.
 from matrix import *
 from math import *
 from cmath import *
+from symbolic import *
 
 zero = complex(0.0, 0.0)
 one = complex(1.0, 0.0)
