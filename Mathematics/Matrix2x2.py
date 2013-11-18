@@ -52,7 +52,7 @@ print "H[1][0] => " + str(H[1][0])
 print "H[1][1] => " + str(H[1][1])
 
 a = Variable("a")
-b = Varaible("b")
+b = Variable("b")
 
 state = Matrix2x1(a,b)
 print state
