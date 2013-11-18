@@ -25,7 +25,7 @@ Y = Matrix2x2(Matrix2x1(zero, i), Matrix2x1(-i, zero))
 print "The Pauli Y"
 print Y
 
-Z = Matrix2x2(Matrix2x1(complex(1.0, 0.0), complex(0.0, 0.0)), Matrix2x1(complex(0.0, 0.0), complex(-1.0, 0.0)))
+Z = Matrix2x2(Matrix2x1(one, zero), Matrix2x1(zero, -one))
 print "The Pauli Z"
 print Z
 
