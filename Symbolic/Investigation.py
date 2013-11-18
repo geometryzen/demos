@@ -2,6 +2,7 @@
 Investigating the feasibility of CAS.
 '''
 from symbolic import *
+from matrix import *
 
 # The following functions are provided for testing purposes.
 def assertEqual(fn, actual, expect):
@@ -22,6 +23,7 @@ def showValue(name, m):
 a = Variable("a")
 b = Variable("b")
 c = Variable("c")
+b = Variable("d")
 
 print "The Basic tree transformations: Distribution, Factorization, Association, and Commutation."
 assertEqual(DistribL(), a * (b + c)   , (a * b) + (a * c) )
