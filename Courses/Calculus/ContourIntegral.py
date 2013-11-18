@@ -8,7 +8,7 @@ We can also chug through the integral using Cartesian coordinates.
 
 '''
 from cmath import *
-from math import cos, sin
+from math import cos, sin, pi
 
 def f(z):
     return one / (z * (z + one))
