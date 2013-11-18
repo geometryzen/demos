@@ -27,6 +27,8 @@ print sz
 
 print "sx * sy"
 print sx * sy
+print "sx * sy * sz"
+print sx * sy * sz
 
 
 print "zp[0] => " + str(zp[0])
