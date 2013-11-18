@@ -9,8 +9,8 @@ from cmath import *
 zp = Matrix2x1(complex(1.0, 0.0), complex(0.0, 0.0))
 zm = Matrix2x1(complex(0.0, 0.0), complex(1.0, 0.0))
 
-hxp = (zp + zm)
-hxm = (zp - zm)
+hxp = (zp + zm) / sqrt(2.0)
+hxm = (zp - zm) / sqrt(2.0)
 
 print "|0> => \n" + str(zp) 
 print "|1> => \n" + str(zm) 
