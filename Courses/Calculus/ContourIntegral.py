@@ -10,6 +10,8 @@ We can also chug through the integral using Cartesian coordinates.
 from cmath import *
 from math import cos, sin, pi
 
+one = complex(1.0, 0.0)
+
 def f(z):
     return one / (z * (z + one))
 
