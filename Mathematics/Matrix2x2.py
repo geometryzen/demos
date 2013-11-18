@@ -13,6 +13,10 @@ I = Matrix2x2(zp, zm)
 print "The Identity Matrix, I"
 print I
 
+sx = Matrix2x2(zm, zp)
+print "The Pauli sigma x"
+print sx
+
 print "zp[0] => " + str(zp[0])
 print "zp[1] => " + str(zp[1])
 
