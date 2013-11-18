@@ -20,7 +20,7 @@ print "|1> => \n" + str(zm)
 print "|+> => \n" + str(hxp) 
 print "|-> => \n" + str(hxm)
 
-H = Matrix2x2(zp, zm)
+H = Matrix2x2(zp, zm) / sqrt(2.0)
 print "H[0][0] => " + str(H[0][0])
 print "H[0][1] => " + str(H[0][1])
 print "H[1][0] => " + str(H[1][0])
