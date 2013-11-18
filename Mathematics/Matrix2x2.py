@@ -9,6 +9,9 @@ from cmath import *
 zp = Matrix2x1(complex(1.0, 0.0), complex(0.0, 0.0))
 zm = Matrix2x1(complex(0.0, 0.0), complex(1.0, 0.0))
 
+I = Matrix2x2(zp, zm)
+print I
+
 print "zp[0] => " + str(zp[0])
 print "zp[1] => " + str(zp[1])
 
@@ -26,5 +29,5 @@ print "H[0][1] => " + str(H[0][1])
 print "H[1][0] => " + str(H[1][0])
 print "H[1][1] => " + str(H[1][1])
 
-print H
-print repr(H)
+
+
