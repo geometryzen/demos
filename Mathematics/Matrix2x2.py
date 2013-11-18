@@ -5,7 +5,7 @@ Under Construction. Nov 17, 2013.
 from matrix import *
 from cmath import *
 
-hxp = Matrix2x1(complex(1,0), complex(0,1))
+hxp = Matrix2x1(complex(1,0), complex(0,1)) / sqrt(2.0)
 
 print hxp
 print repr(hxp)
