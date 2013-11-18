@@ -18,7 +18,7 @@ space.add(sphere)
 
 workbench = Workbench(space.renderer, space.camera)
 
-timeOut = 20
+timeOut = 10
 
 def tick(t):
     sphere.position.set(R * cos(omega*t), R * sin(omega*t), 0)
