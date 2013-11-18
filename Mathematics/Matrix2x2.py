@@ -29,7 +29,7 @@ b = Variable("b")
 
 state = Matrix2x1(a, b)
 
-print "H * " + str(state) + " => " + str(H * state * sqrt1_2)
+print "H * " + str(state) + " => " + str(H * state * (1/sqrt(2)))
 
 
 
