@@ -6,7 +6,10 @@ from matrix import *
 from math import *
 from cmath import *
 
-hxp = Matrix2x1(complex(1,0), complex(0,1)) / sqrt(2.0)
+hzp = Matrix2x1(complex(1.0, 0.0), complex(0.0, 0.0))
+hzm = Matrix2x1(complex(0.0, 0.0), complex(0.0, 1.0))
+
+hxp = Matrix2x1(complex(1.0, 0.0), complex(0.0, 1.0)) / sqrt(2.0)
 
 print hxp
 print repr(hxp)
