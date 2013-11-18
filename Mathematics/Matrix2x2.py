@@ -50,7 +50,7 @@ b = Variable("b")
 state = Matrix2x1(2, 3)
 print state
 
-print X * 
+print X * state
 
 
 
