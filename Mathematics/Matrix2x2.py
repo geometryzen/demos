@@ -1,6 +1,6 @@
 '''
 Support for 2x2, 2x1, 1x2 matrices over an arbitrary field.
-Under Construction. Nov 17, 2013.
+Under Construction. Nov 18, 2013.
 '''
 from matrix import *
 from math import *
