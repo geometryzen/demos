@@ -15,5 +15,4 @@ hxm = (zp - zm)
 print "|0> => \n" + str(zp) 
 print "|1> => \n" + str(zm) 
 print "|+> => \n" + str(hxp) 
-print hxp
-print repr(hxp)
+print "|-> => \n" + str(hxm) 
