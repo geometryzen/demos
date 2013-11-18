@@ -13,22 +13,22 @@ I = Matrix2x2(zp, zm)
 print "The Identity Matrix, I"
 print I
 
-sx = Matrix2x2(zm, zp)
-print "The Pauli sigma x"
-print sx
+X = Matrix2x2(zm, zp)
+print "The Pauli X"
+print X
 
-sy = Matrix2x2(Matrix2x1(complex(0.0, 0.0), complex(0.0, 1.0)), Matrix2x1(complex(0.0, -1.0), complex(0.0, 0.0)))
-print "The Pauli sigma y"
-print sy
+Y = Matrix2x2(Matrix2x1(complex(0.0, 0.0), complex(0.0, 1.0)), Matrix2x1(complex(0.0, -1.0), complex(0.0, 0.0)))
+print "The Pauli Y"
+print Y
 
-sz = Matrix2x2(Matrix2x1(complex(1.0, 0.0), complex(0.0, 0.0)), Matrix2x1(complex(0.0, 0.0), complex(-1.0, 0.0)))
-print "The Pauli sigma z"
-print sz
+Z = Matrix2x2(Matrix2x1(complex(1.0, 0.0), complex(0.0, 0.0)), Matrix2x1(complex(0.0, 0.0), complex(-1.0, 0.0)))
+print "The Pauli Z"
+print Z
 
 print "sx * sy"
-print sx * sy
+print X * Y
 print "sx * sy * sz"
-print sx * sy * sz
+print X * Y * Z
 
 
 print "zp[0] => " + str(zp[0])
