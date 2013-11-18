@@ -15,20 +15,9 @@ zp = Matrix2x1(one, zero)
 zm = Matrix2x1(zero, one)
 
 I = Matrix2x2(zp, zm)
-print "The Identity Matrix, I"
-print I
-
 X = Matrix2x2(zm, zp)
-print "Pauli X"
-print X
-
 Y = Matrix2x2(Matrix2x1(zero, i), Matrix2x1(-i, zero))
-print "Pauli Y"
-print Y
-
 Z = Matrix2x2(Matrix2x1(one, zero), Matrix2x1(zero, -one))
-print "Pauli Z"
-print Z
 
 hxp = (zp + zm) / sqrt(2.0)
 hxm = (zp - zm) / sqrt(2.0)
@@ -39,10 +28,6 @@ print "|+> => \n" + str(hxp)
 print "|-> => \n" + str(hxm)
 
 H = Matrix2x2(hxp, hxm)
-print "H[0][0] => " + str(H[0][0])
-print "H[0][1] => " + str(H[0][1])
-print "H[1][0] => " + str(H[1][0])
-print "H[1][1] => " + str(H[1][1])
 
 a = Variable("a")
 b = Variable("b")
