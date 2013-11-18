@@ -21,6 +21,8 @@ print "|+> => \n" + str(hxp)
 print "|-> => \n" + str(hxm)
 
 H = Matrix2x2(zp, zm)
+print "H[0] => " + str(H[0])
+print "H[1] => " + str(H[1])
 
 print H
 print repr(H)
