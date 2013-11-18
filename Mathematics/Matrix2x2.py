@@ -28,9 +28,8 @@ a = Variable("a")
 b = Variable("b")
 
 state = Matrix2x1(a, b)
-print state
 
-print "X * " + str(state) + " => " + str(X * state)
+print "Z * " + str(state) + " => " + str(Z * state)
 
 
 
