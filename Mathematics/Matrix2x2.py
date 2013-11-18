@@ -22,11 +22,6 @@ Z = Matrix2x2(Matrix2x1(one, zero), Matrix2x1(zero, -one))
 hxp = (zp + zm) / sqrt(2.0)
 hxm = (zp - zm) / sqrt(2.0)
 
-print "|0> => \n" + str(zp) 
-print "|1> => \n" + str(zm) 
-print "|+> => \n" + str(hxp) 
-print "|-> => \n" + str(hxm)
-
 H = Matrix2x2(hxp, hxm)
 
 a = Variable("a")
