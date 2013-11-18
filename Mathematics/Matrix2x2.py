@@ -11,6 +11,6 @@ zm = Matrix2x1(complex(0.0, 0.0), complex(1.0, 0.0))
 
 hxp = Matrix2x1(complex(1.0, 0.0), complex(0.0, 1.0)) / sqrt(2.0)
 
-print "|0> => " + str(zp) 
+print "|0> => \n" + str(zp) 
 print hxp
 print repr(hxp)
