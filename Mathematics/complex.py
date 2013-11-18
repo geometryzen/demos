@@ -172,3 +172,4 @@ print exp(i * tao) - 1
 print "----------"
 print 2 * (cos(3 * pi / 4) + i * sin(3 * pi / 4))
 print 2 * exp(i * 3 * pi / 4)
+print (3 + 4 * i) / (1 - 2 * i)
