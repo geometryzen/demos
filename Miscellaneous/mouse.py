@@ -55,6 +55,6 @@ def tearDown():
     document.removeEventListener('mousedown', onDocumentMouseDown, False)
     print "Goodbye."
 
-war = WindowAnimationRunner(window, tick, terminate, setUp, tearDown)
+war = WindowAnimationRunner(tick, terminate, setUp, tearDown)
 
 war.start()
