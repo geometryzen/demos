@@ -6,10 +6,11 @@ from matrix import *
 from math import *
 from cmath import *
 
-hzp = Matrix2x1(complex(1.0, 0.0), complex(0.0, 0.0))
-hzm = Matrix2x1(complex(0.0, 0.0), complex(1.0, 0.0))
+zp = Matrix2x1(complex(1.0, 0.0), complex(0.0, 0.0))
+zm = Matrix2x1(complex(0.0, 0.0), complex(1.0, 0.0))
 
 hxp = Matrix2x1(complex(1.0, 0.0), complex(0.0, 1.0)) / sqrt(2.0)
 
+print "|0> => " + str(zp) 
 print hxp
 print repr(hxp)
