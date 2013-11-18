@@ -28,7 +28,7 @@ print "The Pauli Z"
 print Z
 
 print "-i * X * Y"
-print (-i * X) * Y
+print -i * X * Y
 
 
 print "zp[0] => " + str(zp[0])
