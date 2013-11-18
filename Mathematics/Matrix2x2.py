@@ -10,6 +10,7 @@ zp = Matrix2x1(complex(1.0, 0.0), complex(0.0, 0.0))
 zm = Matrix2x1(complex(0.0, 0.0), complex(1.0, 0.0))
 
 I = Matrix2x2(zp, zm)
+print "The Identity Matrix, I"
 print I
 
 print "zp[0] => " + str(zp[0])
