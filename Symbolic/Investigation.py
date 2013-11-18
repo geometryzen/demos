@@ -37,5 +37,5 @@ assertEqual(AssocR(),   (a * b) * c   , a * (b * c)       )
 
 assertEqual(Commute(),  a * b         , b * a             )
 
-M = Matrix2x2(Matrix2x1(a,-c),Matrix2x1(b,d))
+M = Matrix2x2(Matrix2x1(a,c),Matrix2x1(b,d))
 print M
