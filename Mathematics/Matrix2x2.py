@@ -5,3 +5,5 @@ Under Construction. Nov 17, 2013.
 from matrix import *
 
 spinor = Matrix2x1(1, 2)
+
+print spinor
