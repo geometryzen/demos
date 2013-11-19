@@ -27,7 +27,7 @@ H = Matrix2x2(hxp, hxm)
 hp = Matrix2x1(one, complex(sqrt2 - 1.0, 0.0))
 
 print H
-print hp
+print H * hp
 
 
 
