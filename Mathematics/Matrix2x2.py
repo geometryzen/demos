@@ -25,9 +25,11 @@ hxm = (zp - zm) / sqrt(2.0)
 H = Matrix2x2(hxp, hxm)
 
 hp = Matrix2x1(one, sqrt2 - one)
-hm = Matrix2x1(one, -(sqrt2 + one))
+hm = Matrix2x1(one, -(sqrt2 + one)) / (2 * sqrt(1 + sqrt1_2))
 print repr(hp)
 print repr(hm)
+
+
 
 print H
 print repr(H * hp)
