@@ -29,6 +29,7 @@ hm = Matrix2x1(one, -(sqrt2 + one))
 
 print H
 print H * hp
+print H * hm
 
 
 
