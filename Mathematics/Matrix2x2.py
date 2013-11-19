@@ -24,7 +24,7 @@ hxm = (zp - zm) / sqrt(2.0)
 
 H = Matrix2x2(hxp, hxm)
 
-hp = Matrix2x1(one, sqrt2 - one) / sqrt(2*(sqrt2-1))
+hp = Matrix2x1(one, sqrt2 - one) / (2 * sqrt(1 - sqrt1_2))
 hm = Matrix2x1(one, -(sqrt2 + one)) / (2 * sqrt(1 + sqrt1_2))
 
 print hp[0]*hp[0] + hp[1]*hp[1]
