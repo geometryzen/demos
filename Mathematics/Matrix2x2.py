@@ -24,12 +24,10 @@ hxm = (zp - zm) / sqrt(2.0)
 
 H = Matrix2x2(hxp, hxm)
 
-a = Variable("a")
-b = Variable("b")
+hp = Matrix2x1(one, complex(sqrt2 - 1.0, 0.0))
 
-state = Matrix2x1(a, b)
-
-print "H * " + str(state) + " => " + str(H * sqrt1_2 * state)
+print H
+print hp
 
 
 
