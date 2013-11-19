@@ -30,7 +30,7 @@ print repr(hp)
 print repr(hm)
 
 print H
-print H * hp
+print repr(H * hp)
 print repr(H * hm * -1)
 
 
