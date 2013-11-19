@@ -24,7 +24,8 @@ hxm = (zp - zm) / sqrt(2.0)
 
 H = Matrix2x2(hxp, hxm)
 
-hp = Matrix2x1(one, complex(sqrt2 - 1.0, 0.0))
+hp = Matrix2x1(one, sqrt2 - one)
+hm = Matrix2x1(one, -(sqrt2 + one))
 
 print H
 print H * hp
