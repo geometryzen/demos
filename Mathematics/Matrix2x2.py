@@ -26,6 +26,8 @@ H = Matrix2x2(hxp, hxm)
 
 hp = Matrix2x1(one, sqrt2 - one)
 hm = Matrix2x1(one, -(sqrt2 + one))
+print hp
+print hm
 
 print H
 print H * hp
