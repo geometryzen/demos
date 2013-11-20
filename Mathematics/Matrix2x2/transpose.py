@@ -19,5 +19,7 @@ print M[1]
 
 s = Matrix2x1(a,b)
 print repr(s)
+print s
 t = Matrix1x2(c,d)
 print repr(t)
+print t
