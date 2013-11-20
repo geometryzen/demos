@@ -25,7 +25,6 @@ v2 = Matrix2x1(complex(19,3), complex(13,7))
 print v1
 print v2
 print v1+v2
-print v1*v2
 
 zp = Matrix2x1(one, zero)
 zm = Matrix2x1(zero, one)
