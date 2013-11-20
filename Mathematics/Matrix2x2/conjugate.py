@@ -9,7 +9,7 @@ zero = complex(0.0, 0.0)
 one = complex(1.0, 0.0)
 i = complex(0.0, 1.0)
 
-print "1+i => " + str(one+i)
+print "1+i => " + str(1+i)
 
 I = Matrix2x2(Matrix2x1(one, zero), Matrix2x1(zero, one))
 X = Matrix2x2(Matrix2x1(zero, one), Matrix2x1(one, zero))
