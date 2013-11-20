@@ -9,7 +9,9 @@ d = Variable("d")
 M = Matrix2x2(Matrix2x1(1,3), Matrix2x1(2,4))
 
 print "M is a 2x2 matrix."
+print "Construction..."
 print "repr(M) => " + repr(M)
+print "Notation..."
 print "str(M) => " + str(M)
 print ""
 print "Extraction of the column vectors..."
