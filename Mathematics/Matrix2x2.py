@@ -9,7 +9,7 @@ the representation over a complex field. This is the traditional "Dirac" approac
 It should be possible to work in both the state vector and density operator formalism.
 
 Of course, I'll want to represent qubits as spinors in Geometric Algebra
-as well.
+as well. The challenge there will be library programming for multiparticle states.
 '''
 from matrix import *
 from math import *
@@ -19,6 +19,9 @@ from symbolic import *
 zero = complex(0.0, 0.0)
 one = complex(1.0, 0.0)
 i = complex(0.0, 1.0)
+
+v1 = Matrix2x1(complex(2,3), complex(5,7))
+print v1
 
 zp = Matrix2x1(one, zero)
 zm = Matrix2x1(zero, one)
