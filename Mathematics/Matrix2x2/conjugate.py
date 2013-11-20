@@ -10,8 +10,6 @@ from matrix import *
 from cmath import *
 from math import *
 
-print "conjugate(1) => " + str(conjugate(1))
-
 i = complex(0.0, 1.0)
 
 print "conjugate(0) => " + str(conjugate(0))
