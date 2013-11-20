@@ -11,6 +11,7 @@ M = Matrix2x2(Matrix2x1(1,3), Matrix2x1(2,4))
 print "M is a 2x2 matrix."
 print "repr(M) => " + repr(M)
 print "str(M) => " + str(M)
+print "M.transpose() => " + str(M.transpose())
 print M
 print M.transpose()
 print M.transpose().transpose()
