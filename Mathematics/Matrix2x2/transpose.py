@@ -13,20 +13,6 @@ print "repr(M) => " + repr(M)
 print "str(M) => " + str(M)
 print "M[0] => " + str(M[0])
 print "M[1] => " + str(M[1])
+print "M[0][0] => " + str(M[0][0])
 print "M.transpose() => " + str(M.transpose())
 print "M => " + str(M)
-
-print ""
-print M[0]
-print ""
-print "M[1]:"
-print M[1]
-
-s = Matrix2x1(a,b)
-print repr(s)
-print s
-t = Matrix1x2(c,d)
-print repr(t)
-print t
-print t.transpose()
-print t.transpose().transpose()
