@@ -16,6 +16,7 @@ print "conjugate(one) => " + str(conjugate(one))
 print "conjugate(i) => " + str(conjugate(i))
 
 print "4+3i => " + str(4+3*i)
+print "conjugate(4+3i) => " + str(conjugate(4+3*i))
 
 I = Matrix2x2(Matrix2x1(1, zero), Matrix2x1(zero, one))
 X = Matrix2x2(Matrix2x1(zero, one), Matrix2x1(one, zero))
