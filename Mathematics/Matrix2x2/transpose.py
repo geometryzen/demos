@@ -12,11 +12,8 @@ print "M is a 2x2 matrix."
 print "repr(M) => " + repr(M)
 print "str(M) => " + str(M)
 print "M.transpose() => " + str(M.transpose())
-print M
-print M.transpose()
-print M.transpose().transpose()
-print ""
-print "M[0]:"
+print "M => " + str(M)
+
 print M[0]
 print ""
 print "M[1]:"
