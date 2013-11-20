@@ -18,4 +18,4 @@ print "M[1]:"
 print M[1]
 
 s = Matrix1x2(c,d)
-print s
+print repr(s)
