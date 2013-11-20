@@ -1,5 +1,10 @@
 '''
 Matrices over a complex field.
+
+The conjugate of a real number is simply the real number.
+The conjugate of a complex number is the number reflected in the x-axis.
+The conjugate of a matrix of elements is the matrix of the conjugated elements.
+This could be extended to Quaternions, Octonions (division algebras) as well as the Clifford Conjugate of multivectors.
 '''
 from matrix import *
 from cmath import *
