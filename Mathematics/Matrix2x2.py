@@ -23,6 +23,7 @@ i = complex(0.0, 1.0)
 v1 = Matrix2x1(complex(2,3), complex(5,7))
 v2 = Matrix2x1(complex(11,13), complex(17,19))
 print v1
+print v2
 
 zp = Matrix2x1(one, zero)
 zm = Matrix2x1(zero, one)
