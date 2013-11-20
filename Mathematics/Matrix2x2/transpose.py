@@ -12,6 +12,7 @@ print "M:"
 print repr(M)
 print M
 print M.transpose()
+print M.transpose().transpose()
 print ""
 print "M[0]:"
 print M[0]
