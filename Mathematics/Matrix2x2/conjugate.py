@@ -5,7 +5,7 @@ from matrix import *
 from cmath import *
 from math import *
 
-print conjugate(1)
+print "conjugate(1) =>" + str(conjugate(1))
 
 zero = complex(0.0, 0.0)
 one = complex(1.0, 0.0)
