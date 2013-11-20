@@ -8,7 +8,7 @@ d = Variable("d")
 
 M = Matrix2x2(Matrix2x1(a,c), Matrix2x1(b,d))
 
-print "M:"
+print "M is a 2x2 matrix."
 print "repr(M) => " + repr(M)
 print "str(M) => " + str(M)
 print M
