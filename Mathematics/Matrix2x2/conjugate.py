@@ -1,9 +1,14 @@
+'''
+Matrices over a complex field.
+'''
 from matrix import *
 from cmath import *
 
+zero = complex(0.0, 0.0)
+one = complex(1.0, 0.0)
 i = complex(0.0, 1.0)
 
-M = Matrix2x2(Matrix2x1(1,3), Matrix2x1(2,4))
+X = Matrix2x2(Matrix2x1(zero, one), Matrix2x1(one, zero))
 
 print "M is a 2x2 matrix."
 print ""
