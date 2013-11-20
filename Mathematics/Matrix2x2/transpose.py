@@ -11,6 +11,7 @@ M = Matrix2x2(Matrix2x1(a,c), Matrix2x1(b,d))
 print "M:"
 print repr(M)
 print M
+print M.transpose()
 print ""
 print "M[0]:"
 print M[0]
