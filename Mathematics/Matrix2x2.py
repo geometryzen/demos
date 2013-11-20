@@ -46,7 +46,7 @@ print hp[0]*hp[0] + hp[1]*hp[1]
 print hm[0]*hm[0] + hm[1]*hm[1]
 
 print H * hp
-print repr(H * hm * -1)
+print H * hm * -1
 
 
 
