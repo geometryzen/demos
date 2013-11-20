@@ -15,6 +15,8 @@ print ""
 print "Extraction of the column vectors..."
 print "M[0] => " + str(M[0])
 print "M[1] => " + str(M[1])
+print ""
+print "Extraction of the elements of each column vector..."
 print "M[0][0] => " + str(M[0][0])
 print "M[0][1] => " + str(M[0][1])
 print "M[1][0] => " + str(M[1][0])
