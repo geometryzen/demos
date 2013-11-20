@@ -45,6 +45,7 @@ hm = Matrix2x1(one, -(sqrt2 + one)) / (2 * sqrt(1 + sqrt1_2))
 print hp[0]*hp[0] + hp[1]*hp[1]
 print hm[0]*hm[0] + hm[1]*hm[1]
 
+print H
 print H * hp
 print H * hm * -1
 
