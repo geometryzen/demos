@@ -12,6 +12,8 @@ one = complex(1.0, 0.0)
 i = complex(0.0, 1.0)
 
 print "conjugate(zero) => " + str(conjugate(zero))
+print "conjugate(one) => " + str(conjugate(one))
+print "conjugate(i) => " + str(conjugate(i))
 
 print "4+3i => " + str(4+3*i)
 
