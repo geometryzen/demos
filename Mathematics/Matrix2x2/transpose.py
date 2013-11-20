@@ -16,3 +16,5 @@ print M[0]
 print ""
 print "M[1]:"
 print M[1]
+
+s = Matrix1x2(c,d)
