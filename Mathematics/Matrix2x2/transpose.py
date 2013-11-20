@@ -26,5 +26,6 @@ print "M[0][1] => " + str(M[0][1])
 print "M[1][0] => " + str(M[1][0])
 print "M[1][1] => " + str(M[1][1])
 print ""
+print "Transposition..."
 print "M.transpose() => " + str(M.transpose())
 print "M => " + str(M)
