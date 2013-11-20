@@ -29,3 +29,5 @@ print "X => " + str(X)
 print "Y => " + str(Y)
 print "Z => " + str(Z)
 print "H => " + str(H)
+
+print "conjugate(Y) => " + str(conjugate(Y))
