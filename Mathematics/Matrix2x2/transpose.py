@@ -17,5 +17,7 @@ print ""
 print "M[1]:"
 print M[1]
 
-s = Matrix1x2(c,d)
+s = Matrix2x1(a,b)
 print repr(s)
+t = Matrix1x2(c,d)
+print repr(t)
