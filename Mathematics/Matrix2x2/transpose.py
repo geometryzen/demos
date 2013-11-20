@@ -14,6 +14,8 @@ print "str(M) => " + str(M)
 print "M.transpose() => " + str(M.transpose())
 print "M => " + str(M)
 
+print ""
+print "M[0] => " + str(M[0])
 print M[0]
 print ""
 print "M[1]:"
