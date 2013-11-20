@@ -24,3 +24,4 @@ print s
 t = Matrix1x2(c,d)
 print repr(t)
 print t
+print t.transpose()
