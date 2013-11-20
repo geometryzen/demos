@@ -20,8 +20,8 @@ zero = complex(0.0, 0.0)
 one = complex(1.0, 0.0)
 i = complex(0.0, 1.0)
 
-v1 = Matrix2x1(complex(2,3), complex(5,7))
-v2 = Matrix2x1(complex(11,13), complex(17,19))
+v1 = Matrix2x1(complex(2,17), complex(5,11))
+v2 = Matrix2x1(complex(19,3), complex(13,7))
 print v1
 print v2
 print v1+v2
