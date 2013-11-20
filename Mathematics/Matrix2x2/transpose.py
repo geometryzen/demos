@@ -10,6 +10,7 @@ M = Matrix2x2(Matrix2x1(a,c), Matrix2x1(b,d))
 
 print "M:"
 print "repr(M) => " + repr(M)
+print "str(M) => " + str(M)
 print M
 print M.transpose()
 print M.transpose().transpose()
