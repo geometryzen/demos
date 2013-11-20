@@ -12,21 +12,19 @@ from math import *
 
 print "conjugate(1) => " + str(conjugate(1))
 
-zero = complex(0.0, 0.0)
-one = complex(1.0, 0.0)
 i = complex(0.0, 1.0)
 
-print "conjugate(zero) => " + str(conjugate(zero))
-print "conjugate(one) => " + str(conjugate(one))
+print "conjugate(0) => " + str(conjugate(0))
+print "conjugate(1) => " + str(conjugate(1))
 print "conjugate(i) => " + str(conjugate(i))
 
 print "4+3i => " + str(4+3*i)
 print "conjugate(4+3i) => " + str(conjugate(4+3*i))
 
 I = Matrix2x2(Matrix2x1(1, 0), Matrix2x1(0, 1))
-X = Matrix2x2(Matrix2x1(zero, one), Matrix2x1(one, zero))
+X = Matrix2x2(Matrix2x1(0, 1), Matrix2x1(1, 0))
 Y = Matrix2x2(Matrix2x1(0, i), Matrix2x1(-i, 0))
-Z = Matrix2x2(Matrix2x1(one, zero), Matrix2x1(zero, -one))
+Z = Matrix2x2(Matrix2x1(1, 0), Matrix2x1(0, -1))
 H = (X + Z) * sqrt1_2
 
 print "I => " + str(I)
