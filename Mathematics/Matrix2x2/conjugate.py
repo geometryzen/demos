@@ -30,4 +30,4 @@ print "Y => " + str(Y)
 print "Z => " + str(Z)
 print "H => " + str(H)
 
-print "conjugate(Y) => " + str(conjugate(Y))
+print "conjugate(Y[0]) => " + str(conjugate(Y[0]))
