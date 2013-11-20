@@ -1,10 +1,4 @@
 from matrix import *
-from symbolic import *
-
-a = Variable("a")
-b = Variable("b")
-c = Variable("c")
-d = Variable("d")
 
 M = Matrix2x2(Matrix2x1(1,3), Matrix2x1(2,4))
 
