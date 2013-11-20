@@ -37,4 +37,7 @@ print "H => " + str(H)
 
 print "conjugate(Y[0]) => " + str(conjugate(Y[0]))
 print "conjugate(Y[1].transpose()) => " + str(conjugate(Y[1].transpose()))
+print "conjugate(I) => " + str(conjugate(I))
+print "conjugate(X) => " + str(conjugate(X))
 print "conjugate(Y) => " + str(conjugate(Y))
+print "conjugate(Z) => " + str(conjugate(Z))
