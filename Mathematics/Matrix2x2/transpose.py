@@ -6,7 +6,7 @@ b = Variable("b")
 c = Variable("c")
 d = Variable("d")
 
-M = Matrix2x2(Matrix2x1(a,c), Matrix2x1(b,d))
+M = Matrix2x2(Matrix2x1(1,3), Matrix2x1(2,4))
 
 print "M is a 2x2 matrix."
 print "repr(M) => " + repr(M)
