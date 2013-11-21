@@ -1,5 +1,7 @@
 from browser import *
+from workbench import *
 from math import pi
+
 
 useLargeCanvas = False
 
