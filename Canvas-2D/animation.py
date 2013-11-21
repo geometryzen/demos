@@ -42,24 +42,11 @@ def onDocumentKeyUp(event):
     event.preventDefault()
     keyHandlers[event.keyCode](False)
 
-def onWindowResize():
-    if (useLargeCanvas):
-        canvas.width = window.innerWidth * pixelRatio
-        canvas.height = window.innerHeight * pixelRatio
-    else:
-        container = document.getElementById("canvas-container")
-        canvas.width = container.clientWidth * pixelRatio
-        canvas.height = container.clientHeight * pixelRatio
-
-    # Changing the canvas width or height resets the canvas.
-    context.fillStyle = "blue"
-    context.font = "24pt Helvetica"
-    context.textAlign = "center"
-    context.textBaseline = "middle"
-    
-def discardCanvases():
-    for cs in document.getElementsByTagName("canvas"):
-        cs.parentNode.removeChild(cs)
+# Changing the canvas width or height resets the canvas.
+#    context.fillStyle = "blue"
+#    context.font = "24pt Helvetica"
+#    context.textAlign = "center"
+#    context.textBaseline = "middle"
         
 step = 0
 steps = 50
@@ -67,19 +54,10 @@ addAngle = 2 * pi / steps
 addScale = 1.0 / steps
 
 def setUp():
-    print "Press ESC to terminate."
-    print "This program will 'self-terminate' in "+str(progressEnd)+" seconds!"
-    discardCanvases()
-    if useLargeCanvas:
-        document.body.insertBefore(canvas, document.body.firstChild)
-    else:
-        container = document.getElementById("canvas-container")
-        container.appendChild(canvas)
-    
+    workbench.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
     window.addEventListener("resize", onWindowResize, False)
-    onWindowResize()
 
 def tick(t):
     global step
@@ -101,6 +79,7 @@ def tearDown():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
     window.removeEventListener("resize", onWindowResize, False)
+    workbench.tearDown()
     print "Done."
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
