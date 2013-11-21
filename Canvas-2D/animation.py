@@ -74,7 +74,6 @@ def terminate(t):
     return t > progressEnd
     
 def tearDown():
-    discardCanvases()
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
     window.removeEventListener("resize", onWindowResize, False)
