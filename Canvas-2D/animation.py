@@ -13,6 +13,8 @@ def backingScale(context):
 
 canvas = document.createElement("canvas")
 
+workbench = Workbench2D(canvas)
+
 context = canvas.getContext("2d")
 
 pixelRatio = backingScale(context)
