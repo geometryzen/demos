@@ -57,7 +57,6 @@ def setUp():
     workbench.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
-    window.addEventListener("resize", onWindowResize, False)
 
 def tick(t):
     global step
