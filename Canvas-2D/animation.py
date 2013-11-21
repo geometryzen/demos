@@ -42,11 +42,6 @@ def onDocumentKeyUp(event):
     event.preventDefault()
     keyHandlers[event.keyCode](False)
 
-# Changing the canvas width or height resets the canvas.
-#    context.fillStyle = "blue"
-#    context.font = "24pt Helvetica"
-#    context.textAlign = "center"
-#    context.textBaseline = "middle"
         
 step = 0
 steps = 50
@@ -62,6 +57,11 @@ def tick(t):
     global step
     if step < steps:
         step += 1
+    # Changing the canvas width or height resets the canvas.
+    context.fillStyle = "blue"
+    context.font = "24pt Helvetica"
+    context.textAlign = "center"
+    context.textBaseline = "middle"
     context.clearRect(0, 0, canvas.width, canvas.height)
     context.save()
     context.translate(canvas.width / 2, canvas.height / 2)
@@ -77,6 +77,5 @@ def tearDown():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
     workbench.tearDown()
-    print "Done."
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
