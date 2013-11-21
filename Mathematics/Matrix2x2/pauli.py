@@ -7,7 +7,7 @@ from cmath import *
 
 i = complex(0.0, 1.0)
 
-I = Matrix2x2(Matrix2x1(1, 0), Matrix2x1(0, 1))
+I = Matrix2x2(Matrix2x1(1.0, 0.0), Matrix2x1(0.0, 1.0))
 X = Matrix2x2(Matrix2x1(0, 1), Matrix2x1(1, 0))
 Y = Matrix2x2(Matrix2x1(0, i), Matrix2x1(-i, 0))
 Z = Matrix2x2(Matrix2x1(1, 0), Matrix2x1(0, -1))
