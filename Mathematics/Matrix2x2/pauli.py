@@ -13,7 +13,7 @@ i = complex(0.0, 1.0)
 I = Matrix2x2(Matrix2x1(1.0, 0.0), Matrix2x1(0.0, 1.0))
 X = Matrix2x2(Matrix2x1(zero, one), Matrix2x1(one, zero))
 Y = Matrix2x2(Matrix2x1(0, i), Matrix2x1(-i, 0))
-Z = Matrix2x2(Matrix2x1(1, 0), Matrix2x1(0, -1))
+Z = Matrix2x2(Matrix2x1(one, zero), Matrix2x1(zero, -one))
 
 H = (X + Z) * sqrt1_2
 
