@@ -13,6 +13,9 @@ Y = Matrix2x2(Matrix2x1(0, i), Matrix2x1(-i, 0))
 Z = Matrix2x2(Matrix2x1(1, 0), Matrix2x1(0, -1))
 
 print "I => " + str(I)
+print "X => " + str(X)
+print "Y => " + str(Y)
+print "Z => " + str(Z)
 
 
 
