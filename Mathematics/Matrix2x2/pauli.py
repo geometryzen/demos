@@ -24,6 +24,6 @@ print "H => " + str(H)
 print "H * H => " + str(H * H)
 
 x = Matrix2x1(complex(random(),random()), complex(random(),random()))
-print x
+print x.transpose() * x
 
 
