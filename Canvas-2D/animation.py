@@ -76,7 +76,6 @@ def terminate(t):
 def tearDown():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
-    window.removeEventListener("resize", onWindowResize, False)
     workbench.tearDown()
     print "Done."
 
