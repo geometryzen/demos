@@ -4,6 +4,7 @@ Matrix2x2 used to represent single-qubit operators and spinors.
 from matrix import *
 from math import *
 from cmath import *
+from random import *
 
 i = complex(0.0, 1.0)
 
