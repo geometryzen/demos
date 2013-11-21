@@ -20,5 +20,6 @@ print "Y => " + str(Y)
 print "Z => " + str(Z)
 print ""
 print "H => " + str(H)
+print "H * H => " + str(H * H)
 
 
