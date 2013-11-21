@@ -14,40 +14,13 @@ as well. The challenge there will be library programming for multiparticle state
 from matrix import *
 from math import *
 from cmath import *
-from symbolic import *
 
-zero = complex(0.0, 0.0)
-one = complex(1.0, 0.0)
 i = complex(0.0, 1.0)
-
-v1 = Matrix2x1(complex(2,17), complex(5,11))
-v2 = Matrix2x1(complex(19,3), complex(13,7))
-print v1
-print v2
-print v1+v2
-
-zp = Matrix2x1(one, zero)
-zm = Matrix2x1(zero, one)
 
 I = Matrix2x2(Matrix2x1(1, 0), Matrix2x1(0, 1))
 X = Matrix2x2(Matrix2x1(0, 1), Matrix2x1(1, 0))
-Y = Matrix2x2(Matrix2x1(zero, i), Matrix2x1(-i, zero))
-Z = Matrix2x2(Matrix2x1(one, zero), Matrix2x1(zero, -one))
-
-hxp = (zp + zm) / sqrt(2.0)
-hxm = (zp - zm) / sqrt(2.0)
-
-H = Matrix2x2(hxp, hxm)
-
-hp = Matrix2x1(one, sqrt2 - one) / (2 * sqrt(1 - sqrt1_2))
-hm = Matrix2x1(one, -(sqrt2 + one)) / (2 * sqrt(1 + sqrt1_2))
-
-print hp[0]*hp[0] + hp[1]*hp[1]
-print hm[0]*hm[0] + hm[1]*hm[1]
-
-print H
-print H * hp
-print H * hm * -1
+Y = Matrix2x2(Matrix2x1(0, i), Matrix2x1(-i, 0))
+Z = Matrix2x2(Matrix2x1(1, 0), Matrix2x1(0, -1))
 
 
 
