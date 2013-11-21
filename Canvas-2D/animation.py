@@ -24,8 +24,11 @@ pixelRatio = backingScale(context)
 canvas.height = 400 * pixelRatio
 canvas.width = 400 * pixelRatio
 
+progressEnd = 3
+
 def escKey(downFlag):
-    terminate()
+    global progressEnd
+    progressEnd = 0
 
 keyHandlers = {
  27: escKey
@@ -58,7 +61,6 @@ def discardCanvases():
     for cs in document.getElementsByTagName("canvas"):
         cs.parentNode.removeChild(cs)
         
-progressEnd = 3
 step = 0
 steps = 50
 addAngle = 2 * pi / steps
