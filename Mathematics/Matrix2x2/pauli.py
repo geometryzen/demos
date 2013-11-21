@@ -27,6 +27,6 @@ x = Matrix2x1(complex(random(),random()), complex(random(),random()))
 print repr(x.transpose())
 print repr(x)
 print repr(conjugate(x.transpose()) * x)
-print abs(conjugate(x.transpose()) * x)
+print sqrt(abs(conjugate(x.transpose()) * x))
 
 
