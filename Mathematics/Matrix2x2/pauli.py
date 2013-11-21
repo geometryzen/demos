@@ -37,6 +37,7 @@ print ""
 print "s     => " + str(s)
 Hs = H * s
 print "H * s => " + str(H * s)
+print "H * H * s => " + str(H * H * s)
 
 
 
