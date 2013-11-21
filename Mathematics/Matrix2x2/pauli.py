@@ -36,6 +36,7 @@ print "Z * s => " + str(Z * s)
 print ""
 print "s     => " + str(s)
 print "H * s => " + str(H * s)
+print conjugate(s.transpose()) * s
 
 
 
