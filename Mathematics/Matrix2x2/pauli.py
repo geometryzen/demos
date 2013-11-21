@@ -30,7 +30,7 @@ zp = Matrix2x1(one, zero)
 zm = Matrix2x1(zero, one)
 
 I = Matrix2x2(Matrix2x1(1, 0), Matrix2x1(0, 1))
-X = Matrix2x2(zm, zp)
+X = Matrix2x2(Matrix2x1(0, 1), Matrix2x1(1, 0))
 Y = Matrix2x2(Matrix2x1(zero, i), Matrix2x1(-i, zero))
 Z = Matrix2x2(Matrix2x1(one, zero), Matrix2x1(zero, -one))
 
