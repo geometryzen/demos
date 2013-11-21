@@ -2,27 +2,11 @@ from browser import *
 from workbench import *
 from math import pi
 
-
-useLargeCanvas = False
-
-def backingScale(context):
-    if window.devicePixelRatio and context.webkitBackingStorePixelRatio:
-        return window.devicePixelRatio
-    else:
-        return 1
-
 canvas = document.createElement("canvas")
 
 workbench = Workbench2D(canvas)
 
 context = canvas.getContext("2d")
-
-pixelRatio = backingScale(context)
-# Multiply width and height of canvas by the backing scale.
-# Drawing instructions that refer to points in the coordinate space
-# must also be multiplied by the backing scale.
-canvas.height = 400 * pixelRatio
-canvas.width = 400 * pixelRatio
 
 progressEnd = 3
 
