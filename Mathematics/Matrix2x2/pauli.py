@@ -27,8 +27,12 @@ print "H * H => " + str(H * H)
 
 s = Matrix2x1(complex(random(),random()), complex(random(),random()))
 s = s / sqrt(abs(conjugate(s.transpose()) * s))
+print ""
 print "s     => " + str(s)
 print "X * s => " + str(X * s)
+print ""
+print "s     => " + str(s)
+print "Z * s => " + str(Z * s)
 
 
 
