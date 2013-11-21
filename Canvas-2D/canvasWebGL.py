@@ -88,5 +88,5 @@ def tearDown():
     workbench.tearDown()
     print "Goodbye."
 
-WindowAnimationRunner(tick, terminate, setUp, tearDown)
+war = WindowAnimationRunner(tick, terminate, setUp, tearDown)
 war.start()
