@@ -204,7 +204,7 @@ def onDocumentMouseOut(event):
 def render(t):
     txtCoords.text = "Spherical polar coordinates (theta, phi):" + str(coords)
     R = exp(- I * e3 * radians(coords.phi) / 2) * exp(- I * e2 * radians(coords.theta) / 2)
-    txtRotor.text = R
+    txtRotor.text = "Rotor: " + str(R)
     cube.attitude = R
     probe.quantity = R
     renderer.render(scene, camera)
