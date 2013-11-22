@@ -65,6 +65,9 @@ cube = Mesh(geometry, material)
 scene.add(cube)
 
 geometry = SphereGeometry()
+material = MeshBasicMaterial()
+sphere = Mesh(geometry, material)
+scene.add(sphere)
 
 camera.up = e3
 camera.lookAt(cube.position)
