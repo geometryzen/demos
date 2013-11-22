@@ -117,6 +117,9 @@ def onDocumentKeyUp(event):
         keyHandlers[event.keyCode](event, False)
     except:
         pass
+    
+def deviceX(clientX):
+    return 2.0 * (float(clientX) / float(window.innerWidth)) - 1.0
 
 def onDocumentMouseDown(event):
     global targetRotationOnMouseDown
