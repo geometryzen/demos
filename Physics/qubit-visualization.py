@@ -53,25 +53,25 @@ txtRotor.x = 100
 txtRotor.y = 130
 space2D.addChild(txtRotor)
 
+txtProjection = Text("", font, colorR)
+txtProjection.x = 100
+txtProjection.y = 160
+space2D.addChild(txtProjection)
+
 txtBloch = Text("", font, colorB)
 txtBloch.x = 100
-txtBloch.y = 160
+txtBloch.y = 190
 space2D.addChild(txtBloch)
 
 txtSpinor = Text("", font, color)
 txtSpinor.x = 100
-txtSpinor.y = 190
+txtSpinor.y = 210
 space2D.addChild(txtSpinor)
 
 txtException = Text("", font, "red")
 txtException.x = 100
-txtException.y = 210
+txtException.y = 240
 space2D.addChild(txtException)
-
-txtScratch = Text("", font, color)
-txtScratch.x = 100
-txtScratch.y = 240
-space2D.addChild(txtScratch)
 
 timeOut = 6000.0
 
@@ -211,10 +211,12 @@ def render(t):
     n = sin(theta) * (cos(phi) * e1 + sin(phi) * e2) + cos(theta) * e3 # R * e3 * ~R
     
     txtRotor.text = "Rotor, R = " + str(R)
-    txtBloch.text = "Bloch sphere unit vector, n = " + str(n) 
+    txtProjection.text = "Projection of 1 and e1 ^ e2 components, (R + e3 * R * e3) / 2.0 = " + str((R + e3 * R * e3) / 2.0)
+    
+    txtBloch.text = "Bloch sphere unit vector, n = " + str(n)
+    
     cube.attitude = R
     
-    txtScratch.text = "Projection of 1 and e1 ^ e2 components, (R + e3 * R * e3) / 2.0 = " + str((R + e3 * R * e3) / 2.0)
     
     probeR0.quantity = R
     probeR2.quantity = R
