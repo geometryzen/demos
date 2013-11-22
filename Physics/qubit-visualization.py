@@ -33,9 +33,8 @@ space2D.autoClear = True
 
 font = "20px Helvetica"
 color = "white"
-rotorColor = "#FFFF00"
 colorB = "#7014CC" # Purple Heart
-colorG = "#19FF65" # Spring Green
+colorR = "#19FF65" # Spring Green
 colorO = "#FF9900" # Orange Peel
 colorG = "#999999" # Light Gray
 
@@ -49,7 +48,7 @@ txtCoords.x = 100
 txtCoords.y = 100
 space2D.addChild(txtCoords)
 
-txtRotor = Text("", font, colorG)
+txtRotor = Text("", font, colorR)
 txtRotor.x = 100
 txtRotor.y = 130
 space2D.addChild(txtRotor)
@@ -107,11 +106,11 @@ space3D.add(probeN.grade2)
 space3D.add(probeN.grade3)
 probeN.position = -2.0 * e2
 
-probeR0 = ProbeBuilderE3().color(rotorColor).wireframe(False).build()
+probeR0 = ProbeBuilderE3().color(colorR).wireframe(False).build()
 space3D.add(probeR0.grade0)
 probeR0.position = -1.5 * e3
 
-probeR2 = ProbeBuilderE3().color(rotorColor).build()
+probeR2 = ProbeBuilderE3().color(colorR).build()
 space3D.add(probeR2.grade2)
 probeR2.position = VectorE3(0.0, 0.0, 0.0)
 
