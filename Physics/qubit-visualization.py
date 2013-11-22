@@ -122,8 +122,8 @@ def arrowRight(event, downFlag):
 def arrowUp(event, downFlag):
     event.preventDefault()
     global theta
-    theta -= 1.0
-    theta = max(theta, 0.0)
+    thetaDegrees -= 1.0
+    thetaDegrees = max(thetaDegrees, 0.0)
 
 def arrowDown(event, downFlag):
     event.preventDefault()
