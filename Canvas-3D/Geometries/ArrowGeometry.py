@@ -2,7 +2,7 @@ from three import *
 from browser import *
 from workbench import *
 
-e3 = VectorE3(0.0, 0.0, 1.0)
+e3 = VectorE3(0.0, 0.0, 1.0, False)
 
 space = CartesianSpace()
 
