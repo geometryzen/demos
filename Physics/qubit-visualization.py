@@ -12,9 +12,6 @@ e1 = VectorE3(1.0, 0.0, 0.0, False)
 e2 = VectorE3(0.0, 1.0, 0.0, False)
 e3 = VectorE3(0.0, 0.0, 1.0, False)
 
-projector = Projector()
-raycaster = None
-
 canvas2D = document.createElement("canvas")
 canvas2D.style.position = "absolute"
 canvas2D.style.top = "0px"
@@ -129,20 +126,7 @@ def deviceY(clientY):
     return 1.0 - 2.0 * (float(clientY) / float(window.innerHeight))
 
 def onDocumentMouseDown(event):
-
     event.preventDefault()
-
-    if raycaster:    
-        intersects = raycaster.intersectObjects(scene.children)
-        if len(intersects) > 0:
-            intersect = intersects[0]
-            face = intersect.face
-            if face:
-                txtScratch.text = face.centroid
-            else:
-                txtScratch.text = "intersect has no face"
-        else:
-            txtScratch.text = "zero intersects"
     
 def onDocumentMouseMove(event):
     mouse.x = deviceX(event.clientX)
@@ -155,11 +139,7 @@ def onDocumentMouseOut(event):
     pass
         
 def render(t):
-    global raycaster
-    raycaster = projector.pickingRay(mouse.clone(), camera)
     txtSpinor.text = mouse
-    txtMouseDown.text = mouseOnMouseDown
-
     renderer.render(scene, camera)
     space2D.render()
     
