@@ -111,6 +111,7 @@ def onDocumentKeyDown(event):
     try:
         keyHandlers[event.keyCode](event, True)
     except:
+        print event
         pass
 
 def onDocumentKeyUp(event):
