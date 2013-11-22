@@ -34,6 +34,11 @@ txtMouseDown.x = 100
 txtMouseDown.y = 140
 space2D.addChild(txtMouseDown)
 
+txtScratch = Text("", font, "black")
+txtScratch.x = 100
+txtScratch.y = 300
+space2D.addChild(txtScratch)
+
 timeOut = 6000.0
 
 mouse = VectorE2(0,0)
