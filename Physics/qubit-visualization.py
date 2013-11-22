@@ -15,6 +15,7 @@ e1 = VectorE3(1.0, 0.0, 0.0, False)
 e2 = VectorE3(0.0, 1.0, 0.0, False)
 e3 = VectorE3(0.0, 0.0, 1.0, False)
 
+angles = SphericalPolar()
 thetaDegrees = 0.0
 phi = 0.0
 
