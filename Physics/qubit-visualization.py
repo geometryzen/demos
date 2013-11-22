@@ -106,10 +106,17 @@ sphere = Mesh(geometry, material)
 space3D.add(sphere)
 sphere.position = - 2.0 * e2
 
-probe = ProbeBuilderE3().color(0x0000FF).build()
-space3D.add(probe.grade0)
-space3D.add(probe.grade1)
-space3D.add(probe.grade2)
+probeN = ProbeBuilderE3().color(0xFFFFFF).build()
+space3D.add(probeN.grade0)
+space3D.add(probeN.grade1)
+space3D.add(probeN.grade2)
+space3D.add(probeN.grade3)
+
+probeR = ProbeBuilderE3().color(0x0000FF).build()
+space3D.add(probeR.grade0)
+space3D.add(probeR.grade1)
+space3D.add(probeR.grade2)
+space3D.add(probeR.grade3)
 
 renderer = CanvasRenderer()
 renderer.setClearColor(0x777777, 1.0)
@@ -203,7 +210,8 @@ def render(t):
     R = exp(- I * e3 * radians(coords.phi) / 2) * exp(- I * e2 * radians(coords.theta) / 2)
     txtRotor.text = "Rotor: " + str(R)
     cube.attitude = R
-    probe.quantity = R
+    probeR.quantity = R
+    probeN.quantity = R * e3 * ~R
     space3D.render()
     space2D.render()
     
