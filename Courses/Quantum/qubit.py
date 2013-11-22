@@ -36,7 +36,7 @@ colorS = "#19FF65" # Spring Green
 colorR = "#FF9900" # Orange Peel
 colorG = "#999999" # Light Gray
 
-output = Text("Press arrow keys to rotate the qubit. Hit Esc key to exit.", font, "gray")
+output = Text("Press arrow keys to rotate the qubit. Hit Esc key to exit.", font, "#000000")
 output.x = 100
 output.y = 60
 space2D.addChild(output)
