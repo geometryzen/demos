@@ -209,9 +209,6 @@ def render(t):
     
     txtBloch.text = "Bloch sphere unit vector, n = R * e3 * ~R = " + str(n)
     
-    cube.attitude = R
-    
-    
     probeR0.quantity = R
     probeR2.quantity = R
     probeN.quantity = n
