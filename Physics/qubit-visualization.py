@@ -7,6 +7,7 @@ from browser import *
 from workbench import *
 from random import random
 from math import *
+from geometry import *
 
 class SphericalPolar:
     def __init__(self):
