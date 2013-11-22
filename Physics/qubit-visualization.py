@@ -18,6 +18,7 @@ class SphericalPolar:
 e1 = VectorE3(1.0, 0.0, 0.0, False)
 e2 = VectorE3(0.0, 1.0, 0.0, False)
 e3 = VectorE3(0.0, 0.0, 1.0, False)
+I = e1 ^ e2 ^ e3
 
 coords = SphericalPolar()
 
