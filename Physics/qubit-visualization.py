@@ -237,7 +237,7 @@ def render(t):
     
     probeE1.quantity = R * e1 * ~R
     probeE2.quantity = R * e2 * ~R
-    probeEe.quantity = R * e3 * ~R
+    probeE3.quantity = R * e3 * ~R
     
     space3D.render()
     space2D.render()
