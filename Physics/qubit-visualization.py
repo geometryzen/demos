@@ -108,6 +108,10 @@ probeE2 = ProbeBuilderE3().color("#00FF00").build()
 space3D.add(probeE2.grade1)
 probeE2.position = cube.position
 
+probeE3 = ProbeBuilderE3().color("#0000FF").build()
+space3D.add(probeE3.grade1)
+probeE3.position = cube.position
+
 probeN = ProbeBuilderE3().color(colorB).build()
 space3D.add(probeN.grade0)
 space3D.add(probeN.grade1)
@@ -230,8 +234,10 @@ def render(t):
     probeR0.quantity = R
     probeR2.quantity = R
     probeN.quantity = n
+    
     probeE1.quantity = R * e1 * ~R
     probeE2.quantity = R * e2 * ~R
+    probeEe.quantity = R * e3 * ~R
     
     space3D.render()
     space2D.render()
