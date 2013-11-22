@@ -51,23 +51,23 @@ space2D.addChild(txtSpinor)
 
 txtRotor = Text("", font, color)
 txtRotor.x = 100
-txtRotor.y = 130
+txtRotor.y = 140
 space2D.addChild(txtRotor)
 
 txtBloch = Text("", font, color)
 txtBloch.x = 100
-txtBloch.y = 140
+txtBloch.y = 160
 space2D.addChild(txtBloch)
-
-txtScratch = Text("", font, color)
-txtScratch.x = 100
-txtScratch.y = 300
-space2D.addChild(txtScratch)
 
 txtException = Text("", font, "red")
 txtException.x = 100
 txtException.y = 200
 space2D.addChild(txtException)
+
+txtScratch = Text("", font, color)
+txtScratch.x = 100
+txtScratch.y = 300
+space2D.addChild(txtScratch)
 
 timeOut = 6000.0
 
