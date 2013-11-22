@@ -81,7 +81,7 @@ camera.position.z = 0
 
 space3D = CartesianSpace()
 
-geometry = CubeGeometry(0.5, 0.5, 1.0)
+geometry = CubeGeometry(0.5, 0.5, 0.5)
 faces = geometry.faces
 faces[0].color.setHex(0xFF0000)
 faces[1].color.setHex(0xFF0000)
