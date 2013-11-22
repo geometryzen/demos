@@ -138,8 +138,8 @@ keyHandlers = {
 def onDocumentKeyDown(event):
     try:
         keyHandlers[event.keyCode](event, True)
-    except:
-        print event.keyCode
+    except Exception as e:
+        print e
         pass
 
 def onDocumentKeyUp(event):
