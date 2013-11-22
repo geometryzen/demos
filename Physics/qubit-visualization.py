@@ -122,7 +122,7 @@ def onDocumentMouseDown(event):
     document.addEventListener("mouseup", onDocumentMouseUp, False)
     document.addEventListener("mouseout", onDocumentMouseOut, False)
 
-    mouseOnMouseDown = event.clientX - (float(window.innerWidth) / 2.0)
+    mouseOnMouseDown.x = event.clientX - (float(window.innerWidth) / 2.0)
     targetRotationOnMouseDown = targetRotation
     
 def onDocumentMouseMove(event):
