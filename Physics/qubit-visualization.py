@@ -213,7 +213,7 @@ def render(t):
     txtRotor.text = "Rotor, R = " + str(R)
     txtProjection.text = "Projection of 1 and e1 ^ e2 components, (R + e3 * R * e3) / 2.0 = " + str((R + e3 * R * e3) / 2.0)
     
-    txtBloch.text = "Bloch sphere unit vector, n = " + str(n)
+    txtBloch.text = "Bloch sphere unit vector, n = R * e3 * ~R = " + str(n)
     
     cube.attitude = R
     
