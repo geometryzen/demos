@@ -157,7 +157,8 @@ def onDocumentMouseOut(event):
     document.removeEventListener("mouseup", onDocumentMouseUp, False)
     document.removeEventListener("mouseout", onDocumentMouseOut, False)
         
-def tick(t):
+def render(t):
+    raycaster = projector.pickingRay(mouse.clone(), camera)
     cube.rotation.z += (targetRotation - cube.rotation.z) * 0.05
     sphere.rotation.z += (targetRotation - sphere.rotation.z) * 0.05
     txtSpinor.text = mouse
@@ -183,4 +184,4 @@ def tearDown():
     workbench2D.tearDown()
     workbench.tearDown()
 
-WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(render, terminate, setUp, tearDown).start()
