@@ -112,12 +112,13 @@ def arrowLeft(event, downFlag):
 def arrowRight(event, downFlag):
     event.preventDefault()
     global timeOut
-    timeOut = 0
+    timeOut = 0.0
 
 def arrowUp(event, downFlag):
     event.preventDefault()
     global theta
-    theta -= 1
+    theta -= 1.0
+    theta = min(theat, 0.0)
 
 def arrowDown(event, downFlag):
     event.preventDefault()
