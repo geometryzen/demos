@@ -145,7 +145,7 @@ def onDocumentTouchMove(event):
 
 def tick(t):
 
-    cube.attitude = 1    
+    cube.attitude = Scalare3(1)    
 #    cube.rotation.y += (targetRotation - cube.rotation.y) * 0.05
     txtSpinor.text = str(cube.attitude)
     renderer.render(scene, camera)
