@@ -88,11 +88,11 @@ cube = Mesh(geometry, material)
 scene.add(cube)
 cube.position = e2
 
-geometry = SphereGeometry()
+geometry = SphereGeometry(1.0)
 material = MeshBasicMaterial()
 sphere = Mesh(geometry, material)
 scene.add(sphere)
-cube.position = -e2
+sphere.position = -e2
 
 camera.up = e3
 camera.lookAt(scene.position)
