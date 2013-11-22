@@ -11,7 +11,7 @@ camera.position.z = 100.0
 renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
 
-radius = 50
+radius = 50.0
 widthSegments = 32
 heightSegments = 24
 phiStart = 0
