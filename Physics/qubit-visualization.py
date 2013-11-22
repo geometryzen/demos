@@ -9,15 +9,15 @@ from random import random
 from math import *
 
 class SphericalPolar:
-    pass
+    def __init__(self):
+        self.theta = 0.0
+        self.phi = 0.0
 
 e1 = VectorE3(1.0, 0.0, 0.0, False)
 e2 = VectorE3(0.0, 1.0, 0.0, False)
 e3 = VectorE3(0.0, 0.0, 1.0, False)
 
-angles = SphericalPolar()
-thetaDegrees = 0.0
-phi = 0.0
+coords = SphericalPolar()
 
 canvas2D = document.createElement("canvas")
 canvas2D.style.position = "absolute"
@@ -116,15 +116,13 @@ def arrowRight(event, downFlag):
 
 def arrowUp(event, downFlag):
     event.preventDefault()
-    global thetaDegrees
-    thetaDegrees -= 1.0
-    thetaDegrees = max(thetaDegrees, 0.0)
+    coords.theta -= 1.0
+    coords.theta = max(coords.theta, 0.0)
 
 def arrowDown(event, downFlag):
     event.preventDefault()
-    global thetaDegrees
-    thetaDegrees += 1.0
-    thetaDegrees = min(thetaDegrees, 180.0)
+    coords.theta += 1.0
+    coords.theta = min(coords.theta, 180.0)
 
 keyHandlers = {
  16: shiftKey,
@@ -168,7 +166,7 @@ def onDocumentMouseOut(event):
     pass
         
 def render(t):
-    txtScratch.text = thetaDegrees
+    txtScratch.text = coords.theta
     renderer.render(scene, camera)
     space2D.render()
     
