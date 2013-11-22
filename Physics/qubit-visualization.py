@@ -1,6 +1,3 @@
-'''
-Under Construction. Nov 22, 2013.
-'''
 from three import *
 from easel import *
 from browser import *
