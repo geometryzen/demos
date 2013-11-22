@@ -12,8 +12,8 @@ def randomInt():
     return int(random() * 100)
 
 # Set up some basis vectors.
-i = VectorE3(1,0,0)
-j = VectorE3(0,1,0)
+i = VectorE3(1.0, 0.0, 0.0)
+j = VectorE3(0.0, 1.0, 0.0)
 k = VectorE3(0,0,1)
 
 # The tetrahedron is described by 4 points.
