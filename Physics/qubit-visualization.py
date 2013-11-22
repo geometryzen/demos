@@ -30,13 +30,19 @@ isShiftDown = False
 isCtrlDown = False
 
 camera = PerspectiveCamera(70, 1, 1, 10000)
-camera.position.y = -200.0
+camera.position.y = 200.0
 camera.position.z = 500.0
 
 scene = Scene()
 
 geometry = CubeGeometry(200, 200, 200)
-geometry.faces[6].color.setHex(0xFF0000)
+faces = geometry.faces
+faces[0].color.setHex(0xFF0000)
+faces[1].color.setHex(0xFF0000)
+faces[4].color.setHex(0x00FF00)
+faces[5].color.setHex(0x00FF00)
+faces[8].color.setHex(0x0000FF)
+faces[9].color.setHex(0x0000FF)
     
 material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
 cube = Mesh(geometry, material)
