@@ -44,7 +44,7 @@ space2D.addChild(txtScratch)
 
 timeOut = 6000.0
 
-mouse = VectorE2(0,0)
+mouse = VectorE3(0,0)
 mouseOnMouseDown = VectorE2(0, 0)
 targetRotation = 0
 targetRotationOnMouseDown = 0
