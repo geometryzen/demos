@@ -123,7 +123,7 @@ def arrowUp(event, downFlag):
     event.preventDefault()
     global theta
     theta -= 1.0
-    theta = min(theta, 0.0)
+    theta = min(theata, 0.0)
 
 def arrowDown(event, downFlag):
     event.preventDefault()
