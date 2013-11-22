@@ -83,13 +83,12 @@ faces[8].color.setHex(0x0000FF)
 faces[9].color.setHex(0x0000FF)
 faces[10].color.setHex(0xFFFF00)
 faces[11].color.setHex(0xFFFF00)
-    
 material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
 cube = Mesh(geometry, material)
 scene.add(cube)
 
 camera.up = e3
-camera.lookAt(cube.position)
+camera.lookAt(scene.position)
 
 renderer = CanvasRenderer()
 renderer.setClearColor(0x777777, 1.0)
