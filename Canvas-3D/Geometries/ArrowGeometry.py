@@ -2,6 +2,8 @@ from three import *
 from browser import *
 from workbench import *
 
+e3 = VectorE3(0.0, 0.0, 1.0)
+
 space = CartesianSpace()
 
 # All arguments are optional and the defaults, in order, are as follows.
