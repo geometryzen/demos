@@ -81,26 +81,6 @@ isCtrlDown = False
 
 space3D = CartesianSpace()
 
-geometry = CubeGeometry(0.5, 0.5, 0.5)
-faces = geometry.faces
-faces[0].color.setHex(0xFF0000)
-faces[1].color.setHex(0xFF0000)
-faces[2].color.setHex(0x00FFFF)
-faces[3].color.setHex(0x00FFFF)
-faces[4].color.setHex(0x00FF00)
-faces[5].color.setHex(0x00FF00)
-faces[6].color.setHex(0xFF00FF)
-faces[7].color.setHex(0xFF00FF)
-faces[8].color.setHex(0x0000FF)
-faces[9].color.setHex(0x0000FF)
-faces[10].color.setHex(0xFFFF00)
-faces[11].color.setHex(0xFFFF00)
-material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
-cube = Mesh(geometry, material)
-space3D.add(cube)
-cube.position = 2.0 * e2
-cube.visible = False
-
 probeN = ProbeBuilderE3().color(colorB).build()
 space3D.add(probeN.grade0)
 space3D.add(probeN.grade1)
