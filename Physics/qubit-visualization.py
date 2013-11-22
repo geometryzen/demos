@@ -36,7 +36,7 @@ camera.position.z = 500.0
 scene = Scene()
 
 geometry = CubeGeometry(200, 200, 200)
-geometry.faces[0].color.setHex(0xFF0000)
+geometry.faces[1].color.setHex(0xFF0000)
     
 material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
 cube = Mesh(geometry, material)
