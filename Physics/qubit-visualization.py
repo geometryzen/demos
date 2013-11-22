@@ -45,7 +45,7 @@ txtCoords.x = 100
 txtCoords.y = 100
 space2D.addChild(txtCoords)
 
-txtRotor = Text("", font, rotorColor)
+txtRotor = Text("", font, color)
 txtRotor.x = 100
 txtRotor.y = 130
 space2D.addChild(txtRotor)
@@ -207,11 +207,11 @@ def render(t):
     R = exp(- I * e3 * phi / 2) * exp(- I * e2 * theta / 2)
     n = sin(theta) * (cos(phi) * e1 + sin(phi) * e2) + cos(theta) * e3 # R * e3 * ~R
     
-    txtRotor.text = "Rotor: " + str(R)
+    txtRotor.text = "Rotor, R = " + str(R)
     txtBloch.text = "Bloch sphere unit vector, n = " + str(n) 
     cube.attitude = R
     
-    txtScratch.text = "(R + e3 * R * e3)/2 = " + str((R + e3 * R * e3) / 2)
+    txtScratch.text = "Projection of R onto e3, (R + e3 * R * e3)/2 = " + str((R + e3 * R * e3) / 2)
     
     probeR0.quantity = R
     probeR2.quantity = R
