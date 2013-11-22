@@ -38,6 +38,11 @@ output.x = 100
 output.y = 60
 space2D.addChild(output)
 
+txtCoords = Text("", font, "black")
+txtCoords.x = 100
+txtCoords.y = 100
+space2D.addChild(txtCoords)
+
 txtSpinor = Text("", font, "black")
 txtSpinor.x = 100
 txtSpinor.y = 120
@@ -192,6 +197,7 @@ def onDocumentMouseOut(event):
     pass
         
 def render(t):
+    txtCoords.text = str(coords)
     R = exp(- I * e3 * radians(coords.phi) / 2) * exp(- I * e2 * radians(coords.theta) / 2)
     txtScratch.text = R
     cube.attitude = R
