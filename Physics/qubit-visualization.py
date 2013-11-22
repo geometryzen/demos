@@ -16,6 +16,7 @@ class SphericalPolar:
     def __str__(self):
         return "(" + str(self.theta) + ", " + str(self.phi) + ")"
 
+origin = VectorE3(0.0, 0.0, 0.0, False)
 e1 = VectorE3(1.0, 0.0, 0.0, False)
 e2 = VectorE3(0.0, 1.0, 0.0, False)
 e3 = VectorE3(0.0, 0.0, 1.0, False)
@@ -100,18 +101,6 @@ space3D.add(cube)
 cube.position = 2.0 * e2
 cube.visible = False
 
-probeE1 = ProbeBuilderE3().color("#FF0000").build()
-space3D.add(probeE1.grade1)
-probeE1.position = cube.position
-
-probeE2 = ProbeBuilderE3().color("#00FF00").build()
-space3D.add(probeE2.grade1)
-probeE2.position = cube.position
-
-probeE3 = ProbeBuilderE3().color("#0000FF").build()
-space3D.add(probeE3.grade1)
-probeE3.position = cube.position
-
 probeN = ProbeBuilderE3().color(colorB).build()
 space3D.add(probeN.grade0)
 space3D.add(probeN.grade1)
@@ -126,6 +115,18 @@ probeR0.position = -1.5 * e3
 probeR2 = ProbeBuilderE3().color(colorR).build()
 space3D.add(probeR2.grade2)
 probeR2.position = VectorE3(0.0, 0.0, 0.0)
+
+probeE1 = ProbeBuilderE3().color("#FF0000").build()
+space3D.add(probeE1.grade1)
+probeE1.position = origin
+
+probeE2 = ProbeBuilderE3().color("#00FF00").build()
+space3D.add(probeE2.grade1)
+probeE2.position = origin
+
+probeE3 = ProbeBuilderE3().color("#0000FF").build()
+space3D.add(probeE3.grade1)
+probeE3.position = origin
 
 space3D.renderer.setClearColor(0x000000, 1.0)
 space3D.camera.position = 4 * e1 + 3 * e2 + 2 * e3
