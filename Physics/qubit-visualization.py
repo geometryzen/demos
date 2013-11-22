@@ -8,6 +8,9 @@ from workbench import *
 from random import random
 from math import *
 
+class SphericalPolar:
+    pass
+
 e1 = VectorE3(1.0, 0.0, 0.0, False)
 e2 = VectorE3(0.0, 1.0, 0.0, False)
 e3 = VectorE3(0.0, 0.0, 1.0, False)
