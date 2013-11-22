@@ -97,19 +97,19 @@ faces[11].color.setHex(0xFFFF00)
 material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
 cube = Mesh(geometry, material)
 scene.add(cube)
-cube.position = e2
+cube.position = 2.0 * e2
 
 geometry = SphereGeometry(1.0, 16, 12)
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1})
 sphere = Mesh(geometry, material)
 scene.add(sphere)
-sphere.position = -e2
+sphere.position = - 2.0 * e2
 
 probe = ProbeBuilderE3().color(0x0000FF).build()
 scene.add(probe.grade0)
 scene.add(probe.grade1)
 scene.add(probe.grade2)
-probe.position = e3
+probe.position = scene.position
 
 camera.up = e3
 camera.lookAt(scene.position)
