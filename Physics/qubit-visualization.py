@@ -113,7 +113,7 @@ space3D.add(probe.grade2)
 renderer = CanvasRenderer()
 renderer.setClearColor(0x777777, 1.0)
 
-workbench = Workbench(space3Drenderer, space3D.camera)
+workbench = Workbench(space3D.renderer, space3D.camera)
 
 def shiftKey(event, downFlag):
     global isShiftDown
