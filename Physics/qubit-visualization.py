@@ -173,8 +173,6 @@ def onDocumentMouseOut(event):
     pass
         
 def render(t):
-    txtSpinor.text = mouse
-    txtScratch.text = theta
     renderer.render(scene, camera)
     space2D.render()
     
