@@ -123,12 +123,13 @@ def arrowUp(event, downFlag):
     event.preventDefault()
     global theta
     theta -= 1.0
-    theta = min(theata, 0.0)
+    theta = min(theta, 0.0)
 
 def arrowDown(event, downFlag):
     event.preventDefault()
     global theta
     theta += 1
+    theta = max(theta, 180.0)
 
 keyHandlers = {
  16: shiftKey,
@@ -149,8 +150,8 @@ def onDocumentKeyDown(event):
 def onDocumentKeyUp(event):
     try:
         keyHandlers[event.keyCode](event, False)
-    except:
-        pass
+    except Exception as e:
+        txtException.text = e
     
 def deviceX(clientX):
     return 2.0 * (float(clientX) / float(window.innerWidth)) - 1.0
