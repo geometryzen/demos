@@ -39,6 +39,8 @@ geometry = CubeGeometry(200, 200, 200)
 faces = geometry.faces
 faces[0].color.setHex(0xFF0000)
 faces[1].color.setHex(0xFF0000)
+faces[2].color.setHex(0x00FFFF)
+faces[3].color.setHex(0x00FFFF)
 faces[4].color.setHex(0x00FF00)
 faces[5].color.setHex(0x00FF00)
 faces[8].color.setHex(0x0000FF)
