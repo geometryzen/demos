@@ -133,7 +133,7 @@ def onDocumentMouseDown(event):
     
 def onDocumentMouseMove(event):
     global targetRotation
-
+    txtScratch.text = event.clientX
     mouse.x = event.clientX - (float(window.innerWidth) / 2.0)
     targetRotation = targetRotationOnMouseDown + (mouse.x - mouseOnMouseDown.x) * 0.02
 
