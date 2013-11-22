@@ -172,7 +172,7 @@ def onDocumentMouseOut(event):
     pass
         
 def render(t):
-    txtScratch.text = coords.theta
+    txtScratch.text = coords
     renderer.render(scene, camera)
     space2D.render()
     
