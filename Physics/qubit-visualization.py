@@ -112,7 +112,7 @@ space3D.add(probeR2.grade2)
 probeR2.position = VectorE3(0.0, 0.0, 0.0)
 
 space3D.renderer.setClearColor(0x000000, 1.0)
-space3D.camera.position = VectorE3(e1 + e2 + e3)
+space3D.camera.position = e1 + e2 + e3
 
 workbench = Workbench(space3D.renderer, space3D.camera)
 
