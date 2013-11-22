@@ -40,7 +40,7 @@ for i in range(0, len(geometry.faces), 2):
     print i
     hex = int(random() * 0xFFFFFF)
     geometry.faces[i].color.setHex(hex)
-    geometry.faces[i+1].color.setHex(hex)
+#    geometry.faces[i+1].color.setHex(hex)
     
 material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
 cube = Mesh(geometry, material)
