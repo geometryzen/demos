@@ -78,7 +78,7 @@ camera.position.x = 4
 camera.position.y = 0
 camera.position.z = 0
 
-scene = Scene()
+space3D = CartesianSpace()
 
 geometry = CubeGeometry(1.0, 1.0, 1.0)
 faces = geometry.faces
@@ -96,28 +96,24 @@ faces[10].color.setHex(0xFFFF00)
 faces[11].color.setHex(0xFFFF00)
 material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
 cube = Mesh(geometry, material)
-scene.add(cube)
+space3D.add(cube)
 cube.position = 2.0 * e2
 
 geometry = SphereGeometry(0.5, 16, 12)
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1})
 sphere = Mesh(geometry, material)
-scene.add(sphere)
+space3D.add(sphere)
 sphere.position = - 2.0 * e2
 
 probe = ProbeBuilderE3().color(0x0000FF).build()
-scene.add(probe.grade0)
-scene.add(probe.grade1)
-scene.add(probe.grade2)
-probe.position = scene.position
-
-camera.up = e3
-camera.lookAt(scene.position)
+space3D.add(probe.grade0)
+space3D.add(probe.grade1)
+space3D.add(probe.grade2)
 
 renderer = CanvasRenderer()
 renderer.setClearColor(0x777777, 1.0)
 
-workbench = Workbench(renderer, camera)
+workbench = Workbench(space3Drenderer, space3D.camera)
 
 def shiftKey(event, downFlag):
     global isShiftDown
@@ -207,7 +203,7 @@ def render(t):
     txtRotor.text = "Rotor: " + str(R)
     cube.attitude = R
     probe.quantity = R
-    renderer.render(scene, camera)
+    space3D.render()
     space2D.render()
     
 def terminate(t):
