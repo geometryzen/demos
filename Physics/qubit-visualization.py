@@ -141,11 +141,8 @@ def onDocumentMouseDown(event):
     targetRotationOnMouseDown = targetRotation
     
 def onDocumentMouseMove(event):
-    global targetRotation
     mouse.x = deviceX(event.clientX)
-    mouse.y = deviceY(event.clientY);
-    txtScratch.text = mouse
-    targetRotation = targetRotationOnMouseDown + (mouse.x - mouseOnMouseDown.x) * 0.02
+    mouse.y = deviceY(event.clientY)
 
 def onDocumentMouseUp(event):
     document.removeEventListener("mousemove", onDocumentMouseMove, False)
