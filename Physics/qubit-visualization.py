@@ -64,6 +64,8 @@ material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
 cube = Mesh(geometry, material)
 scene.add(cube)
 
+geometry = SphereGeometry()
+
 camera.up = e3
 camera.lookAt(cube.position)
 
