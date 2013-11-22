@@ -140,29 +140,12 @@ def onDocumentMouseOut(event):
     document.removeEventListener("mousemove", onDocumentMouseMove, False)
     document.removeEventListener("mouseup", onDocumentMouseUp, False)
     document.removeEventListener("mouseout", onDocumentMouseOut, False)
-
-def onDocumentTouchStart(event):
-    global targetRotationOnMouseDown
-
-    if len(event.touches) == 1:
-        event.preventDefault()
-
-        mouseXOnMouseDown = event.touches[0].pageX - (float(window.innerWidth) / 2.0)
-        targetRotationOnMouseDown = targetRotation
         
-def onDocumentTouchMove(event):
-    global targetRotation
-
-    if len(event.touches) == 1:
-        event.preventDefault()
-
-        mouseX = event.touches[0].pageX - (float(window.innerWidth) / 2.0)
-        targetRotation = targetRotationOnMouseDown + (mouseX - mouseXOnMouseDown) * 0.05
-
 def tick(t):
     cube.rotation.z += (targetRotation - cube.rotation.z) * 0.05
     sphere.rotation.z += (targetRotation - sphere.rotation.z) * 0.05
     txtSpinor.text = mouse
+    txtMouseDown.text = mouseOnMouseDown
 
     renderer.render(scene, camera)
     space2D.render()
@@ -175,14 +158,10 @@ def setUp():
     workbench2D.setUp()
     document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("keyup", onDocumentKeyUp, False)
-    document.addEventListener("touchstart", onDocumentTouchStart, False)
-    document.addEventListener("touchmove", onDocumentTouchMove, False)
     document.addEventListener("mousedown", onDocumentMouseDown, False)
 
 def tearDown():
     document.removeEventListener("mousedown", onDocumentMouseDown, False)
-    document.removeEventListener("touchstart", onDocumentTouchStart, False)
-    document.removeEventListener("touchmove", onDocumentTouchMove, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench2D.tearDown()
