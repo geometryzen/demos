@@ -20,6 +20,11 @@ output.x = 100
 output.y = 60
 space2D.addChild(output)
 
+txtSpinor = Text("...", font, "black")
+txtSpinor.x = 100
+txtSpinor.y = 80
+space2D.addChild(txtSpinor)
+
 timeOut = 6000.0
 
 mouseX = 0
