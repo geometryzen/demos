@@ -147,6 +147,8 @@ keyHandlers = {
 def onDocumentKeyDown(event):
     try:
         keyHandlers[event.keyCode](event, True)
+    except KeyError as keyError:
+        pass
     except Exception as e:
         txtException.text = e
 
