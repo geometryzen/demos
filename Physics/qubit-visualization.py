@@ -62,7 +62,7 @@ faces[11].color.setHex(0xFFFF00)
     
 material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
 cube = Mesh(geometry, material)
-#scene.add(cube)
+scene.add(cube)
 
 geometry = SphereGeometry(1.0, 16, 12)
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 2})
