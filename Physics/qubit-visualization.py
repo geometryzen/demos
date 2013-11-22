@@ -64,7 +64,7 @@ material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
 cube = Mesh(geometry, material)
 scene.add(cube)
 
-geometry = SphereGeometry()
+geometry = SphereGeometry(3)
 material = MeshBasicMaterial()
 sphere = Mesh(geometry, material)
 scene.add(sphere)
