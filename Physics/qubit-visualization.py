@@ -157,7 +157,7 @@ def onDocumentTouchMove(event):
 def tick(t):
     cube.rotation.z += (targetRotation - cube.rotation.z) * 0.05
     sphere.rotation.z += (targetRotation - sphere.rotation.z) * 0.05
-    txtSpinor.text = cube.attitude
+    txtSpinor.text = mouse
 
     renderer.render(scene, camera)
     space2D.render()
