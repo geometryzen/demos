@@ -152,7 +152,7 @@ def arrowRight(event, downFlag):
     event.preventDefault()
     if downFlag:
         coords.phi += 1.0
-        coords.phi = min(coords.phi, 360.0)
+        coords.phi = min(coords.phi, 720.0)
 
 def arrowUp(event, downFlag):
     event.preventDefault()
