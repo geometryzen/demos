@@ -195,6 +195,7 @@ def render(t):
     R = exp(- I * e3 * radians(coords.phi) / 2) * exp(- I * e2 * radians(coords.theta) / 2)
     txtScratch.text = R
     cube.attitude = R
+    probe.quantity = R
     renderer.render(scene, camera)
     space2D.render()
     
