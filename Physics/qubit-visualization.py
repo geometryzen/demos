@@ -19,7 +19,7 @@ space2D.autoClear = True
 
 font = "20px Helvetica"
 
-output = Text("Drag to spin the qubit. Hit Esc key to exit.", font, "black")
+output = Text("Drag to spin the qubit. Hit Esc key to exit.", font, 0xFFFF00)
 output.x = 100
 output.y = 60
 space2D.addChild(output)
