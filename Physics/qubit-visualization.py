@@ -49,7 +49,7 @@ txtCoords.x = 100
 txtCoords.y = 100
 space2D.addChild(txtCoords)
 
-txtRotor = Text("", font, color)
+txtRotor = Text("", font, colorG)
 txtRotor.x = 100
 txtRotor.y = 130
 space2D.addChild(txtRotor)
