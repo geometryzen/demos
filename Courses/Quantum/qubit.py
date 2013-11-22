@@ -32,8 +32,8 @@ space2D.autoClear = True
 font = "20px Helvetica"
 color = "white"
 colorB = "#7014CC" # Purple Heart
-colorR = "#19FF65" # Spring Green
-colorO = "#FF9900" # Orange Peel
+colorS = "#19FF65" # Spring Green
+colorR = "#FF9900" # Orange Peel
 colorG = "#999999" # Light Gray
 
 output = Text("Press arrow keys to rotate the qubit. Hit Esc key to exit.", font, "gray")
