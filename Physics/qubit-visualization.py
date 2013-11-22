@@ -101,10 +101,16 @@ def escKey(event, downFlag):
     global timeOut
     timeOut = 0
 
+def arrowRight(event, downFlag):
+    event.preventDefault()
+    global timeOut
+    timeOut = 0
+
 keyHandlers = {
  16: shiftKey,
  17: ctrlKey, 
- 27: escKey
+ 27: escKey,
+ 39: arrowRight
 }
     
 def onDocumentKeyDown(event):
