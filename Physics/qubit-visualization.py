@@ -48,6 +48,11 @@ txtSpinor.x = 100
 txtSpinor.y = 120
 space2D.addChild(txtSpinor)
 
+txtRotor = Text("", font, "black")
+txtRotor.x = 100
+txtRotor.y = 130
+space2D.addChild(txtRotor)
+
 txtMouseDown = Text("", font, "black")
 txtMouseDown.x = 100
 txtMouseDown.y = 140
@@ -199,7 +204,7 @@ def onDocumentMouseOut(event):
 def render(t):
     txtCoords.text = "Spherical polar coordinates (theta, phi):" + str(coords)
     R = exp(- I * e3 * radians(coords.phi) / 2) * exp(- I * e2 * radians(coords.theta) / 2)
-    txtScratch.text = R
+    txtRotor.text = R
     cube.attitude = R
     probe.quantity = R
     renderer.render(scene, camera)
