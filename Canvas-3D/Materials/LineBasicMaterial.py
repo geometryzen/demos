@@ -29,7 +29,7 @@ print "color:              " + str(material.color)
 print "opacity:            " + str(material.opacity)
 print str(material)
 
-mesh = Mesh(SphereGeometry(50, 32, 24), material)
+mesh = Mesh(SphereGeometry(50.0, 32, 24), material)
 
 scene.add(mesh)
 
