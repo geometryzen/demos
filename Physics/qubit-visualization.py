@@ -75,11 +75,6 @@ timeOut = 6000.0
 isShiftDown = False
 isCtrlDown = False
 
-camera = PerspectiveCamera(70, 1, 1, 10000)
-camera.position.x = 4
-camera.position.y = 0
-camera.position.z = 0
-
 space3D = CartesianSpace()
 
 geometry = CubeGeometry(0.5, 0.5, 0.5)
@@ -117,7 +112,7 @@ space3D.add(probeR2.grade2)
 probeR2.position = VectorE3(0.0, 0.0, 0.0)
 
 space3D.renderer.setClearColor(0x000000, 1.0)
-print space3D.camera.position
+space3D.camera.position = VectorE3(e1 + e2 + e3)
 
 workbench = Workbench(space3D.renderer, space3D.camera)
 
