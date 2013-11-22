@@ -128,7 +128,7 @@ def arrowUp(event, downFlag):
 def arrowDown(event, downFlag):
     event.preventDefault()
     global theta
-    thetaDegrees += 1
+    thetaDegrees += 1.0
     thetaDegrees = min(thetaDegrees, 180.0)
 
 keyHandlers = {
