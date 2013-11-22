@@ -204,7 +204,7 @@ def onDocumentMouseOut(event):
         
 def render(t):
     theta = radians(coords.theta)
-    phi = radians(coors.phi)
+    phi = radians(coords.phi)
     
     txtCoords.text = "Spherical polar coordinates (theta, phi):" + str(coords) + " degrees."
     R = exp(- I * e3 * radians(phi) / 2) * exp(- I * e2 * radians(theta) / 2)
