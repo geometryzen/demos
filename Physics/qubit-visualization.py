@@ -83,11 +83,6 @@ material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
 cube = Mesh(geometry, material)
 scene.add(cube)
 
-geometry = SphereGeometry(1.0, 24, 24)
-material = MeshBasicMaterial({"wireframe": True, "wireframeLinewidth": 1, "color": Color(0xFFFFFF)})
-sphere = Mesh(geometry, material)
-scene.add(sphere)
-
 camera.up = e3
 camera.lookAt(cube.position)
 
@@ -111,13 +106,9 @@ def escKey(event, downFlag):
 
 def arrowLeft(event, downFlag):
     event.preventDefault()
-    global timeOut
-    timeOut = 0
 
 def arrowRight(event, downFlag):
     event.preventDefault()
-    global timeOut
-    timeOut = 0.0
 
 def arrowUp(event, downFlag):
     event.preventDefault()
