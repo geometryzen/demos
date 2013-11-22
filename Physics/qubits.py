@@ -17,6 +17,10 @@ from matrix import *
 from cmath import *
 
 i = complex(0.0, 1.0)
+e1 = VectorE3(1.0, 0.0, 0.0)
+e2 = VectorE3(0.0, 1.0, 0.0)
+e3 = VectorE3(0.0, 0.0, 1.0)
+I = e1 * e2 * e3
 
 def rotor(theta, phi):
     return exp(-I * e3 * phi / 2.0) * exp(-I * e2 * theta / 2.0)
