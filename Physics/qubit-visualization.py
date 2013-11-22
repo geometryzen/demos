@@ -98,6 +98,11 @@ material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
 cube = Mesh(geometry, material)
 space3D.add(cube)
 cube.position = 2.0 * e2
+cube.visible = False
+
+probeE1 = ProbeBuilderE3().color("#FF0000").build()
+space3D.add(probeE1.grade1)
+probeE1.position = cube.position
 
 probeN = ProbeBuilderE3().color(colorB).build()
 space3D.add(probeN.grade0)
@@ -221,6 +226,7 @@ def render(t):
     probeR0.quantity = R
     probeR2.quantity = R
     probeN.quantity = n
+    probeE1.quantity = R * e1 * ~R
     
     space3D.render()
     space2D.render()
