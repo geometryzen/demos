@@ -45,7 +45,7 @@ camera.position.z = 300
 
 scene = Scene()
 
-geometry = CubeGeometry(1.0, 1.0, 200)
+geometry = CubeGeometry(1.0, 1.0, 1.0)
 faces = geometry.faces
 faces[0].color.setHex(0xFF0000)
 faces[1].color.setHex(0xFF0000)
