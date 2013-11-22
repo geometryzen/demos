@@ -42,7 +42,7 @@ camera = PerspectiveCamera(70, 1, 1, 10000)
 camera.position.y = 300.0
 camera.position.z = 500.0
 
-scene = CartesianSpace()
+scene = Scene()
 
 geometry = CubeGeometry(200, 200, 200)
 faces = geometry.faces
