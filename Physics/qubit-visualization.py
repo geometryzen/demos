@@ -12,6 +12,8 @@ class SphericalPolar:
     def __init__(self):
         self.theta = 0.0
         self.phi = 0.0
+    def __str__(self):
+        return "(" + str(self.theta) + ", " + str(self.phi) + ")"
 
 e1 = VectorE3(1.0, 0.0, 0.0, False)
 e2 = VectorE3(0.0, 1.0, 0.0, False)
