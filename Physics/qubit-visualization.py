@@ -34,7 +34,7 @@ space2D.autoClear = True
 font = "20px Helvetica"
 color = "white"
 
-output = Text("Press arrow keys to rotate the qubit. Hit Esc key to exit.", font, "#FFFF00")
+output = Text("Press arrow keys to rotate the qubit. Hit Esc key to exit.", font, "gray")
 output.x = 100
 output.y = 60
 space2D.addChild(output)
