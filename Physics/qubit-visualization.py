@@ -116,13 +116,19 @@ def arrowUp(event, downFlag):
     global timeOut
     timeOut = 0
 
+def arrowDown(event, downFlag):
+    event.preventDefault()
+    global timeOut
+    timeOut = 0
+
 keyHandlers = {
  16: shiftKey,
  17: ctrlKey, 
  27: escKey,
  37: arrowLeft,
  38: arrowUp,
- 39: arrowRight
+ 39: arrowRight,
+ 40: arrowDown
 }
     
 def onDocumentKeyDown(event):
