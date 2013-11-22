@@ -180,6 +180,7 @@ def onDocumentMouseOut(event):
 def render(t):
     R = exp(- e1 ^ e3 * radians(coords.theta))
     txtScratch.text = R
+    cube.attitude = R
     renderer.render(scene, camera)
     space2D.render()
     
