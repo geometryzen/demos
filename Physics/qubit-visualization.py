@@ -44,14 +44,9 @@ txtCoords.x = 100
 txtCoords.y = 100
 space2D.addChild(txtCoords)
 
-txtSpinor = Text("", font, color)
-txtSpinor.x = 100
-txtSpinor.y = 120
-space2D.addChild(txtSpinor)
-
 txtRotor = Text("", font, color)
 txtRotor.x = 100
-txtRotor.y = 140
+txtRotor.y = 130
 space2D.addChild(txtRotor)
 
 txtBloch = Text("", font, color)
@@ -59,14 +54,19 @@ txtBloch.x = 100
 txtBloch.y = 160
 space2D.addChild(txtBloch)
 
+txtSpinor = Text("", font, color)
+txtSpinor.x = 100
+txtSpinor.y = 190
+space2D.addChild(txtSpinor)
+
 txtException = Text("", font, "red")
 txtException.x = 100
-txtException.y = 200
+txtException.y = 210
 space2D.addChild(txtException)
 
 txtScratch = Text("", font, color)
 txtScratch.x = 100
-txtScratch.y = 300
+txtScratch.y = 240
 space2D.addChild(txtScratch)
 
 timeOut = 6000.0
