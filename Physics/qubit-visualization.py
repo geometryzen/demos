@@ -124,7 +124,7 @@ def onDocumentMouseMove(event):
     global targetRotation
 
     mouse.x = event.clientX - (float(window.innerWidth) / 2.0)
-    targetRotation = targetRotationOnMouseDown + (mouse.x - mouseXOnMouseDown) * 0.02
+    targetRotation = targetRotationOnMouseDown + (mouse.x - mouseOnMouseDown.x) * 0.02
 
 def onDocumentMouseUp(event):
     document.removeEventListener("mousemove", onDocumentMouseMove, False)
