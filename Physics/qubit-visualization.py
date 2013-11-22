@@ -138,7 +138,7 @@ def onDocumentMouseDown(event):
     if raycaster:    
         intersects = raycaster.intersectObjects(scene.children)
         if len(intersects) > 0:
-            intersect = intersect[0]
+            intersect = intersects[0]
             txtScratch.text = intersect
     
 def onDocumentMouseMove(event):
