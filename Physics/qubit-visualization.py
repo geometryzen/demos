@@ -113,7 +113,7 @@ probeR0.position = 2 * e3
 
 probeR2 = ProbeBuilderE3().color(0x0000FF).build()
 space3D.add(probeR2.grade2)
-probeR2.position = VectorE3(0,0,0)
+probeR2.position = VectorE3(0.0, 0.0, 0.0)
 
 renderer = CanvasRenderer()
 renderer.setClearColor(0x777777, 1.0)
