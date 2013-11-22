@@ -105,7 +105,7 @@ probeN.position = -2.0 * e2
 
 probeR0 = ProbeBuilderE3().color(rotorColor).build()
 space3D.add(probeR0.grade0)
-probeR0.position = 2 * e3
+probeR0.position = -2.0 * e3
 
 probeR2 = ProbeBuilderE3().color(rotorColor).build()
 space3D.add(probeR2.grade2)
