@@ -156,6 +156,7 @@ def onDocumentMouseOut(event):
     document.removeEventListener("mouseout", onDocumentMouseOut, False)
         
 def render(t):
+    global raycaster
     raycaster = projector.pickingRay(mouse.clone(), camera)
     txtScratch.text = raycaster
     cube.rotation.z += (targetRotation - cube.rotation.z) * 0.05
