@@ -62,4 +62,5 @@ def tearDown():
     document.removeEventListener("keyup", onDocumentKeyUp, False)
     workbench.tearDown()
 
-WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
+war = WindowAnimationRunner(tick, terminate, setUp, tearDown)
+war.start()
