@@ -54,7 +54,7 @@ def setUp():
     document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(t):
-    probeV.position = VectorE3(0,0,0)
+    probeV.position = VectorE3(0.0, 0.0, 0.0)
     
     space3D.render()
 
