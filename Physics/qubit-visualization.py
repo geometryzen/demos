@@ -58,8 +58,6 @@ space2D.addChild(txtException)
 
 timeOut = 6000.0
 
-mouse = VectorE3(0.0, 0.0, 0.0)
-mouseOnMouseDown = VectorE3(0.0, 0.0, 0.0)
 isShiftDown = False
 isCtrlDown = False
 
@@ -180,6 +178,7 @@ def onDocumentMouseOut(event):
     pass
         
 def render(t):
+    R = exp(- e1 ^ e3 * radians(coords.theta))
     txtScratch.text = coords
     renderer.render(scene, camera)
     space2D.render()
