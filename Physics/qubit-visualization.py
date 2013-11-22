@@ -49,8 +49,6 @@ timeOut = 6000.0
 
 mouse = VectorE3(0.0, 0.0, 0.0)
 mouseOnMouseDown = VectorE3(0.0, 0.0, 0.0)
-targetRotation = 0
-targetRotationOnMouseDown = 0
 isShiftDown = False
 isCtrlDown = False
 
@@ -134,10 +132,6 @@ def onDocumentMouseDown(event):
 
     event.preventDefault()
 
-    document.addEventListener("mousemove", onDocumentMouseMove, False)
-    document.addEventListener("mouseup", onDocumentMouseUp, False)
-    document.addEventListener("mouseout", onDocumentMouseOut, False)
-
     if raycaster:    
         intersects = raycaster.intersectObjects(scene.children)
         if len(intersects) > 0:
@@ -155,20 +149,14 @@ def onDocumentMouseMove(event):
     mouse.y = deviceY(event.clientY)
 
 def onDocumentMouseUp(event):
-    document.removeEventListener("mousemove", onDocumentMouseMove, False)
-    document.removeEventListener("mouseup", onDocumentMouseUp, False)
-    document.removeEventListener("mouseout", onDocumentMouseOut, False)
+    pass
 
 def onDocumentMouseOut(event):
-    document.removeEventListener("mousemove", onDocumentMouseMove, False)
-    document.removeEventListener("mouseup", onDocumentMouseUp, False)
-    document.removeEventListener("mouseout", onDocumentMouseOut, False)
+    pass
         
 def render(t):
     global raycaster
     raycaster = projector.pickingRay(mouse.clone(), camera)
-    cube.rotation.z += (targetRotation - cube.rotation.z) * 0.05
-    sphere.rotation.z += (targetRotation - sphere.rotation.z) * 0.05
     txtSpinor.text = mouse
     txtMouseDown.text = mouseOnMouseDown
 
@@ -181,14 +169,20 @@ def terminate(t):
 def setUp():
     workbench.setUp()
     workbench2D.setUp()
-    document.addEventListener("keydown", onDocumentKeyDown, False)
-    document.addEventListener("keyup", onDocumentKeyUp, False)
+    document.addEventListener("keydown",   onDocumentKeyDown, False)
+    document.addEventListener("keyup",     onDocumentKeyUp, False)
     document.addEventListener("mousedown", onDocumentMouseDown, False)
+    document.addEventListener("mousemove", onDocumentMouseMove, False)
+    document.addEventListener("mouseup",   onDocumentMouseUp, False)
+    document.addEventListener("mouseout",  onDocumentMouseOut, False)
 
 def tearDown():
     document.removeEventListener("mousedown", onDocumentMouseDown, False)
-    document.removeEventListener("keyup", onDocumentKeyUp, False)
-    document.removeEventListener("keydown", onDocumentKeyDown, False)
+    document.removeEventListener("mousemove", onDocumentMouseMove, False)
+    document.removeEventListener("mouseup",   onDocumentMouseUp, False)
+    document.removeEventListener("mouseout",  onDocumentMouseOut, False)
+    document.removeEventListener("keyup",     onDocumentKeyUp, False)
+    document.removeEventListener("keydown",   onDocumentKeyDown, False)
     workbench2D.tearDown()
     workbench.tearDown()
 
