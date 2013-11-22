@@ -151,7 +151,7 @@ def tick(t):
 
     attitude = (e2 * e3 - e1 * e2)
     txtSpinor.text = repr(attitude)
-#    cube.attitude = attitude    
+    cube.attitude = attitude    
 #    cube.rotation.y += (targetRotation - cube.rotation.y) * 0.05
     renderer.render(scene, camera)
     space2D.render()
