@@ -111,6 +111,11 @@ def arrowRight(event, downFlag):
     global timeOut
     timeOut = 0
 
+def arrowUp(event, downFlag):
+    event.preventDefault()
+    global timeOut
+    timeOut = 0
+
 keyHandlers = {
  16: shiftKey,
  17: ctrlKey, 
