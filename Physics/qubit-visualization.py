@@ -207,7 +207,7 @@ def render(t):
     phi = radians(coords.phi)
     
     txtCoords.text = "Spherical polar coordinates (theta, phi):" + str(coords) + " degrees."
-    R = exp(- I * e3 * radians(phi) / 2) * exp(- I * e2 * radians(theta) / 2)
+    R = exp(- I * e3 * phi / 2) * exp(- I * e2 * theta / 2)
     n = sin(theta) * (cos(phi) * e1 + sin(phi) * e2) + cos(theta) * e3 # R * e3 * ~R
     
     txtRotor.text = "Rotor: " + str(R)
