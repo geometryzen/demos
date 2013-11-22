@@ -142,6 +142,8 @@ def onDocumentMouseDown(event):
             face = intersect.face
             if face:
                 txtScratch.text = face
+            else:
+                txtScratch = "intersect has no face"
     
 def onDocumentMouseMove(event):
     mouse.x = deviceX(event.clientX)
