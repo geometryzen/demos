@@ -28,7 +28,7 @@ print str(renderer)
 container = document.getElementById("canvas-container")
 container.appendChild(renderer.domElement)
 
-sphere = SphereGeometry(50, 32, 24)
+sphere = SphereGeometry(50.0, 32, 24)
 
 mesh = Mesh(sphere, MeshNormalMaterial())
 scene.add(mesh)
