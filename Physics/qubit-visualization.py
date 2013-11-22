@@ -43,7 +43,7 @@ camera.position.x = 2
 camera.position.y = 0
 camera.position.z = 1.5
 
-scene = Scene()
+scene = CartesianSpace().scene
 
 geometry = CubeGeometry(1.0, 1.0, 1.0)
 faces = geometry.faces
