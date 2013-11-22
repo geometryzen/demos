@@ -64,6 +64,7 @@ cube = Mesh(geometry, material)
 cube.position.y = 150.0
 scene.add(cube)
 
+camera.up = e3
 camera.lookAt(cube.position)
 
 renderer = CanvasRenderer()
