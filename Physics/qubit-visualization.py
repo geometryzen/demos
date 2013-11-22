@@ -29,6 +29,11 @@ txtSpinor.x = 100
 txtSpinor.y = 120
 space2D.addChild(txtSpinor)
 
+txtMouseDown = Text("", font, "black")
+txtMouseDown.x = 100
+txtMouseDown.y = 140
+space2D.addChild(txtMouseDown)
+
 timeOut = 6000.0
 
 mouse = VectorE2(0,0)
