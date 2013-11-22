@@ -22,7 +22,7 @@ space2D.addChild(output)
 
 txtSpinor = Text("...", font, "black")
 txtSpinor.x = 100
-txtSpinor.y = 80
+txtSpinor.y = 120
 space2D.addChild(txtSpinor)
 
 timeOut = 6000.0
