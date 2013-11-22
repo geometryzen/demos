@@ -128,17 +128,17 @@ def deviceY(clientY):
     return 1.0 - 2.0 * (float(clientY) / float(window.innerHeight))
 
 def onDocumentMouseDown(event):
-    global targetRotationOnMouseDown
 
     event.preventDefault()
 
     document.addEventListener("mousemove", onDocumentMouseMove, False)
     document.addEventListener("mouseup", onDocumentMouseUp, False)
     document.addEventListener("mouseout", onDocumentMouseOut, False)
-
-    mouseOnMouseDown.x = float(event.clientX) - (float(window.innerWidth)  / 2.0)
-    mouseOnMouseDown.y = float(event.clientY) - (float(window.innerHeight) / 2.0)
-    targetRotationOnMouseDown = targetRotation
+    
+    intersects = raycaster.intersectObjects(scene.children)
+    if len(intersects) > 0:
+        intersect = intersect[0]
+        txtScratch.text = intersect
     
 def onDocumentMouseMove(event):
     mouse.x = deviceX(event.clientX)
