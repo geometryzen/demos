@@ -121,6 +121,9 @@ def onDocumentKeyUp(event):
 def deviceX(clientX):
     return 2.0 * (float(clientX) / float(window.innerWidth)) - 1.0
 
+def deviceY(clientY):
+    return 1.0 - 2.0 * (float(clientY) / float(window.innerHeight))
+
 def onDocumentMouseDown(event):
     global targetRotationOnMouseDown
 
@@ -136,8 +139,9 @@ def onDocumentMouseDown(event):
     
 def onDocumentMouseMove(event):
     global targetRotation
-    txtScratch.text = deviceX(event.clientX)
-    mouse.x = event.clientX - (float(window.innerWidth) / 2.0)
+    mouse.x = deviceX(event.clientX)
+    mouse.y = deviceY(event.clientY);
+    txtScratch.text = mouse
     targetRotation = targetRotationOnMouseDown + (mouse.x - mouseOnMouseDown.x) * 0.02
 
 def onDocumentMouseUp(event):
