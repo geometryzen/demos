@@ -68,6 +68,7 @@ camera.up = e3
 camera.lookAt(cube.position)
 
 renderer = CanvasRenderer()
+renderer.setClearColor(0xFFFFFF, 1.0)
 
 workbench = Workbench(renderer, camera)
 
