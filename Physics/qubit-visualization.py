@@ -203,9 +203,12 @@ def onDocumentMouseOut(event):
     pass
         
 def render(t):
+    theta = radians(coords.theta)
+    phi = radians(coors.phi)
+    
     txtCoords.text = "Spherical polar coordinates (theta, phi):" + str(coords) + " degrees."
-    R = exp(- I * e3 * radians(coords.phi) / 2) * exp(- I * e2 * radians(coords.theta) / 2)
-    n = R * e3 * ~R
+    R = exp(- I * e3 * radians(phi) / 2) * exp(- I * e2 * radians(theta) / 2)
+    n = sin(theta) * (cos(phi) * e1 + sin(phi) * e2) + cos(theta) * e3 # R * e3 * ~R
     
     txtRotor.text = "Rotor: " + str(R)
     txtBloch.text = "Bloch sphere unit vector, n = " + str(n) 
