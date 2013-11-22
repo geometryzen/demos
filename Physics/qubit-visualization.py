@@ -155,6 +155,8 @@ def onDocumentKeyDown(event):
 def onDocumentKeyUp(event):
     try:
         keyHandlers[event.keyCode](event, False)
+    except KeyError as keyError:
+        pass
     except Exception as e:
         txtException.text = e
     
