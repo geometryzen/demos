@@ -149,7 +149,7 @@ def onDocumentTouchMove(event):
 
 def tick(t):
 
-    attitude = (1 - e3 * e1) * sqrt1_2
+    attitude = (- e3 * e1) * sqrt1_2
     txtSpinor.text = repr(attitude)
     cube.attitude = attitude    
 #    cube.rotation.y += (targetRotation - cube.rotation.y) * 0.05
