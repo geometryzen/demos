@@ -24,7 +24,7 @@ output.x = 100
 output.y = 60
 space2D.addChild(output)
 
-txtSpinor = Text("...", font, "black")
+txtSpinor = Text("", font, "black")
 txtSpinor.x = 100
 txtSpinor.y = 120
 space2D.addChild(txtSpinor)
