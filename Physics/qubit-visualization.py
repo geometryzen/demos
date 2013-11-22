@@ -111,25 +111,25 @@ def escKey(event, downFlag):
 def arrowLeft(event, downFlag):
     event.preventDefault()
     if downFlag:
-        coords.phi -= 10.0
+        coords.phi -= 1.0
         coords.phi = max(coords.phi, 0.0)
 
 def arrowRight(event, downFlag):
     event.preventDefault()
     if downFlag:
-        coords.phi += 10.0
+        coords.phi += 1.0
         coords.phi = min(coords.phi, 360.0)
 
 def arrowUp(event, downFlag):
     event.preventDefault()
     if downFlag:
-        coords.theta -= 10.0
+        coords.theta -= 1.0
         coords.theta = max(coords.theta, 0.0)
 
 def arrowDown(event, downFlag):
     event.preventDefault()
     if downFlag:
-        coords.theta += 10.0
+        coords.theta += 1.0
         coords.theta = min(coords.theta, 180.0)
 
 keyHandlers = {
