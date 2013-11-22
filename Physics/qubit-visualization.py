@@ -178,7 +178,7 @@ def onDocumentMouseOut(event):
     pass
         
 def render(t):
-    R = exp(- e1 ^ e3 * radians(coords.theta))
+    R = exp(- e1 ^ e3 * radians(coords.theta) / 2)
     txtScratch.text = R
     cube.attitude = R
     renderer.render(scene, camera)
