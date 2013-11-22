@@ -39,9 +39,9 @@ isShiftDown = False
 isCtrlDown = False
 
 camera = PerspectiveCamera(70, 1, 1, 10000)
-camera.position.x = 3
-camera.position.y = 3
-camera.position.z = 2
+camera.position.x = 2
+camera.position.y = 2
+camera.position.z = 1.5
 
 scene = Scene()
 
