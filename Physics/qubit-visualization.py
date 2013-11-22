@@ -107,11 +107,13 @@ space3D.add(probeN.grade2)
 space3D.add(probeN.grade3)
 probeN.position = -2.0 * e2
 
-probeR = ProbeBuilderE3().color(0x0000FF).build()
-space3D.add(probeR.grade0)
-space3D.add(probeR.grade1)
-space3D.add(probeR.grade2)
-space3D.add(probeR.grade3)
+probeR0 = ProbeBuilderE3().color(0x0000FF).build()
+space3D.add(probeR0.grade0)
+probeR0.position = e1
+
+probeR2 = ProbeBuilderE3().color(0x0000FF).build()
+space3D.add(probeR2.grade2)
+probeR2.position = -e1
 
 renderer = CanvasRenderer()
 renderer.setClearColor(0x777777, 1.0)
@@ -209,7 +211,8 @@ def render(t):
     txtBloch.text = "Bloch sphere unit vector, n = " + str(n) 
     cube.attitude = R
     
-    probeR.quantity = R
+    probeR0.quantity = R
+    probeR2.quantity = R
     probeN.quantity = n
     
     space3D.render()
