@@ -197,7 +197,7 @@ def onDocumentMouseOut(event):
     pass
         
 def render(t):
-    txtCoords.text = "Spherical polar coordinates (theta, phi):"str(coords)
+    txtCoords.text = "Spherical polar coordinates (theta, phi):" + str(coords)
     R = exp(- I * e3 * radians(coords.phi) / 2) * exp(- I * e2 * radians(coords.theta) / 2)
     txtScratch.text = R
     cube.attitude = R
