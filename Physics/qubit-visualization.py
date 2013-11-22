@@ -60,7 +60,6 @@ faces[11].color.setHex(0xFFFF00)
     
 material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
 cube = Mesh(geometry, material)
-cube.position.y = 150.0
 scene.add(cube)
 
 camera.up = e3
