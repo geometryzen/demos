@@ -65,7 +65,7 @@ cube = Mesh(geometry, material)
 #scene.add(cube)
 
 geometry = SphereGeometry(3)
-material = MeshBasicMaterial()
+material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 2}))
 sphere = Mesh(geometry, material)
 scene.add(sphere)
 
