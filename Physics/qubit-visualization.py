@@ -134,11 +134,12 @@ def onDocumentMouseDown(event):
     document.addEventListener("mousemove", onDocumentMouseMove, False)
     document.addEventListener("mouseup", onDocumentMouseUp, False)
     document.addEventListener("mouseout", onDocumentMouseOut, False)
-    
-    intersects = raycaster.intersectObjects(scene.children)
-    if len(intersects) > 0:
-        intersect = intersect[0]
-        txtScratch.text = intersect
+
+    if raycaster:    
+        intersects = raycaster.intersectObjects(scene.children)
+        if len(intersects) > 0:
+            intersect = intersect[0]
+            txtScratch.text = intersect
     
 def onDocumentMouseMove(event):
     mouse.x = deviceX(event.clientX)
