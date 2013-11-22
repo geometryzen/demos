@@ -34,6 +34,10 @@ space2D.autoClear = True
 font = "20px Helvetica"
 color = "white"
 rotorColor = "#FFFF00"
+colorP = "#7014CC" # Purple Heart
+colorG = "#19FF65" # Spring Green
+colorO = "#FF9900" # Orange Peel
+colorG = "#999999" # Light Gray
 
 output = Text("Press arrow keys to rotate the qubit. Hit Esc key to exit.", font, "gray")
 output.x = 100
@@ -50,7 +54,7 @@ txtRotor.x = 100
 txtRotor.y = 130
 space2D.addChild(txtRotor)
 
-txtBloch = Text("", font, color)
+txtBloch = Text("", font, colorP)
 txtBloch.x = 100
 txtBloch.y = 160
 space2D.addChild(txtBloch)
