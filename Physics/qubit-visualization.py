@@ -118,7 +118,7 @@ def arrowLeft(event, downFlag):
 def arrowRight(event, downFlag):
     event.preventDefault()
     coords.phi += 10.0
-    coords.phi = max(coords.phi, 360.0)
+    coords.phi = min(coords.phi, 360.0)
 
 def arrowUp(event, downFlag):
     event.preventDefault()
