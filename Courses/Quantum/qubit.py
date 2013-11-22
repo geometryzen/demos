@@ -83,7 +83,7 @@ space3D.add(probeN.grade0)
 space3D.add(probeN.grade1)
 space3D.add(probeN.grade2)
 space3D.add(probeN.grade3)
-probeN.position = -2.0 * e2
+probeN.position = e1 - e2
 
 probeR0 = ProbeBuilderE3().color(colorR).wireframe(False).build()
 space3D.add(probeR0.grade0)
