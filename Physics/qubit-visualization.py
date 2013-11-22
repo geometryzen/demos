@@ -50,7 +50,7 @@ txtRotor.x = 100
 txtRotor.y = 130
 space2D.addChild(txtRotor)
 
-txtBloch = Text("", font, rotorColor)
+txtBloch = Text("", font, color)
 txtBloch.x = 100
 txtBloch.y = 160
 space2D.addChild(txtBloch)
