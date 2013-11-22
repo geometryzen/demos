@@ -15,7 +15,7 @@ space2D.autoClear = True
 
 font = "20px Helvetica"
 
-output = Text("Drag to spin the cube. Hit Esc key to exit.", font, "black")
+output = Text("Drag to spin the qubit. Hit Esc key to exit.", font, "black")
 output.x = 100
 output.y = 60
 space2D.addChild(output)
@@ -45,12 +45,6 @@ material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
 cube = Mesh(geometry, material)
 cube.position.y = 150.0
 scene.add(cube)
-
-geometry = PlaneGeometry(200.0, 200.0)
-geometry.applyMatrix(Matrix4().makeRotationX(-pi / 2.0))
-material = MeshBasicMaterial({"color": 0xE0E0E0, "overdraw": 0.5})
-plane = Mesh(geometry, material)
-scene.add(plane)
 
 renderer = CanvasRenderer()
 
