@@ -32,33 +32,34 @@ space2D = Stage(canvas2D)
 space2D.autoClear = True
 
 font = "20px Helvetica"
+color = "white"
 
 output = Text("Press arrow keys to rotate the qubit. Hit Esc key to exit.", font, "#FFFF00")
 output.x = 100
 output.y = 60
 space2D.addChild(output)
 
-txtCoords = Text("", font, "black")
+txtCoords = Text("", font, color)
 txtCoords.x = 100
 txtCoords.y = 100
 space2D.addChild(txtCoords)
 
-txtSpinor = Text("", font, "black")
+txtSpinor = Text("", font, color)
 txtSpinor.x = 100
 txtSpinor.y = 120
 space2D.addChild(txtSpinor)
 
-txtRotor = Text("", font, "black")
+txtRotor = Text("", font, color)
 txtRotor.x = 100
 txtRotor.y = 130
 space2D.addChild(txtRotor)
 
-txtMouseDown = Text("", font, "black")
+txtMouseDown = Text("", font, color)
 txtMouseDown.x = 100
 txtMouseDown.y = 140
 space2D.addChild(txtMouseDown)
 
-txtScratch = Text("", font, "black")
+txtScratch = Text("", font, color)
 txtScratch.x = 100
 txtScratch.y = 300
 space2D.addChild(txtScratch)
