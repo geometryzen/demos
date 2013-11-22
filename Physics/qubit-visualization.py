@@ -116,6 +116,7 @@ keyHandlers = {
  17: ctrlKey, 
  27: escKey,
  37: arrowLeft,
+ 38: arrowUp,
  39: arrowRight
 }
     
