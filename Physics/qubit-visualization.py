@@ -94,6 +94,12 @@ sphere = Mesh(geometry, material)
 scene.add(sphere)
 sphere.position = -e2
 
+probe = ProbeBuilderE3().color(0x0000FF).build()
+scene.add(probe.grade0)
+scene.add(probe.grade1)
+scene.add(probe.grade2)
+probe.position = e3
+
 camera.up = e3
 camera.lookAt(scene.position)
 
