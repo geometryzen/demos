@@ -12,6 +12,9 @@ e1 = VectorE3(1.0, 0.0, 0.0, False)
 e2 = VectorE3(0.0, 1.0, 0.0, False)
 e3 = VectorE3(0.0, 0.0, 1.0, False)
 
+theta = 0.0
+phi = 0.0
+
 canvas2D = document.createElement("canvas")
 canvas2D.style.position = "absolute"
 canvas2D.style.top = "0px"
@@ -113,13 +116,13 @@ def arrowRight(event, downFlag):
 
 def arrowUp(event, downFlag):
     event.preventDefault()
-    global timeOut
-    timeOut = 0
+    global theta
+    theata -= 1
 
 def arrowDown(event, downFlag):
     event.preventDefault()
-    global timeOut
-    timeOut = 0
+    global theta
+    theta += 1
 
 keyHandlers = {
  16: shiftKey,
@@ -165,6 +168,7 @@ def onDocumentMouseOut(event):
         
 def render(t):
     txtSpinor.text = mouse
+    txtScratch.text = theta
     renderer.render(scene, camera)
     space2D.render()
     
