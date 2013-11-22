@@ -33,6 +33,7 @@ space2D.autoClear = True
 
 font = "20px Helvetica"
 color = "white"
+rotorColor = "#FFFF00"
 
 output = Text("Press arrow keys to rotate the qubit. Hit Esc key to exit.", font, "gray")
 output.x = 100
@@ -44,12 +45,12 @@ txtCoords.x = 100
 txtCoords.y = 100
 space2D.addChild(txtCoords)
 
-txtRotor = Text("", font, color)
+txtRotor = Text("", font, rotorColor)
 txtRotor.x = 100
 txtRotor.y = 130
 space2D.addChild(txtRotor)
 
-txtBloch = Text("", font, color)
+txtBloch = Text("", font, rotorColor)
 txtBloch.x = 100
 txtBloch.y = 160
 space2D.addChild(txtBloch)
@@ -107,11 +108,11 @@ space3D.add(probeN.grade2)
 space3D.add(probeN.grade3)
 probeN.position = -2.0 * e2
 
-probeR0 = ProbeBuilderE3().color("#FFFF00").build()
+probeR0 = ProbeBuilderE3().color(rotorColor).build()
 space3D.add(probeR0.grade0)
 probeR0.position = 2 * e3
 
-probeR2 = ProbeBuilderE3().color(0x0000FF).build()
+probeR2 = ProbeBuilderE3().color(rotorColor).build()
 space3D.add(probeR2.grade2)
 probeR2.position = VectorE3(0.0, 0.0, 0.0)
 
