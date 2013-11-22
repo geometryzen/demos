@@ -100,12 +100,6 @@ cube = Mesh(geometry, material)
 space3D.add(cube)
 cube.position = 2.0 * e2
 
-geometry = SphereGeometry(0.5, 16, 12)
-material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1})
-sphere = Mesh(geometry, material)
-space3D.add(sphere)
-sphere.position = - 2.0 * e2
-
 probeN = ProbeBuilderE3().color(0xFFFFFF).build()
 space3D.add(probeN.grade0)
 space3D.add(probeN.grade1)
