@@ -5,9 +5,9 @@ from workbench import *
 from random import random
 from math import *
 
-e1 = VectorE3(1.0, 0.0, 0.0, 3)
-e2 = VectorE3(0.0, 1.0, 0.0)
-e2 = VectorE3(0.0, 1.0, 0.0)
+e1 = VectorE3(1.0, 0.0, 0.0, False)
+e2 = VectorE3(0.0, 1.0, 0.0, False)
+e2 = VectorE3(0.0, 0.0, 1.0, False)
 
 canvas2D = document.createElement("canvas")
 canvas2D.style.position = "absolute"
