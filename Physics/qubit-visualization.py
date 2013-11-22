@@ -109,7 +109,7 @@ def onDocumentKeyUp(event):
         pass
 
 def onDocumentMouseDown(event):
-    global mouseXOnMouseDown, targetRotationOnMouseDown
+    global targetRotationOnMouseDown
 
     event.preventDefault()
 
@@ -137,7 +137,7 @@ def onDocumentMouseOut(event):
     document.removeEventListener("mouseout", onDocumentMouseOut, False)
 
 def onDocumentTouchStart(event):
-    global mouseXOnMouseDown, targetRotationOnMouseDown
+    global targetRotationOnMouseDown
 
     if len(event.touches) == 1:
         event.preventDefault()
@@ -155,8 +155,6 @@ def onDocumentTouchMove(event):
         targetRotation = targetRotationOnMouseDown + (mouseX - mouseXOnMouseDown) * 0.05
 
 def tick(t):
-
-
     cube.rotation.z += (targetRotation - cube.rotation.z) * 0.05
     sphere.rotation.z += (targetRotation - sphere.rotation.z) * 0.05
     txtSpinor.text = cube.attitude
