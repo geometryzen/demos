@@ -101,6 +101,11 @@ def escKey(event, downFlag):
     global timeOut
     timeOut = 0
 
+def arrowLeft(event, downFlag):
+    event.preventDefault()
+    global timeOut
+    timeOut = 0
+
 def arrowRight(event, downFlag):
     event.preventDefault()
     global timeOut
@@ -110,6 +115,7 @@ keyHandlers = {
  16: shiftKey,
  17: ctrlKey, 
  27: escKey,
+ 37: arrowLeft,
  39: arrowRight
 }
     
