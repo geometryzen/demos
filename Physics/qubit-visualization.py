@@ -117,7 +117,7 @@ def arrowRight(event, downFlag):
 def arrowUp(event, downFlag):
     event.preventDefault()
     global theta
-    theata -= 1
+    theta -= 1
 
 def arrowDown(event, downFlag):
     event.preventDefault()
