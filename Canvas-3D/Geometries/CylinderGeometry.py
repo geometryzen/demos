@@ -2,6 +2,8 @@ from three import *
 from browser import *
 from workbench import *
 
+e1 = VectorE3(1.0, 0.0, 0.0)
+
 space = CartesianSpace()
 
 radiusTop = 1
