@@ -32,7 +32,7 @@ space2D.addChild(txtSpinor)
 timeOut = 6000.0
 
 mouse = VectorE2(0,0)
-mouseXOnMouseDown = 0
+mouseOnMouseDown = VectorE2(0, 0)
 targetRotation = 0
 targetRotationOnMouseDown = 0
 isShiftDown = False
