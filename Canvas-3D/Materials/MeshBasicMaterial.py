@@ -31,7 +31,7 @@ print "wireframe: " + str(material.wireframe)
 print "wireframeLinewidth: " + str(material.wireframeLinewidth)
 print "str(material) => " + str(material)
 
-mesh = Mesh(SphereGeometry(50, 32, 24), material)
+mesh = Mesh(SphereGeometry(50.0, 32, 24), material)
 
 scene.add(mesh)
 
