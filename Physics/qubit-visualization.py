@@ -141,7 +141,7 @@ def onDocumentMouseDown(event):
             intersect = intersects[0]
             face = intersect.face
             if face:
-                txtScratch.text = face
+                txtScratch.text = face.centroid
             else:
                 txtScratch.text = "intersect has no face"
         else:
