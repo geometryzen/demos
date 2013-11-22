@@ -127,8 +127,9 @@ def arrowUp(event, downFlag):
 
 def arrowDown(event, downFlag):
     event.preventDefault()
-    coords.theta += 10.0
-    coords.theta = min(coords.theta, 180.0)
+    if downFlag:
+        coords.theta += 10.0
+        coords.theta = min(coords.theta, 180.0)
 
 keyHandlers = {
  16: shiftKey,
