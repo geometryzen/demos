@@ -45,6 +45,11 @@ txtScratch.x = 100
 txtScratch.y = 300
 space2D.addChild(txtScratch)
 
+txtException = Text("", font, "red")
+txtException.x = 100
+txtException.y = 200
+space2D.addChild(txtException)
+
 timeOut = 6000.0
 
 mouse = VectorE3(0.0, 0.0, 0.0)
@@ -118,7 +123,7 @@ def arrowUp(event, downFlag):
     event.preventDefault()
     global theta
     theta -= 1.0
-    theta = min(theat, 0.0)
+    theta = min(theta, 0.0)
 
 def arrowDown(event, downFlag):
     event.preventDefault()
@@ -139,8 +144,7 @@ def onDocumentKeyDown(event):
     try:
         keyHandlers[event.keyCode](event, True)
     except Exception as e:
-        print e
-        pass
+        txtException.text = e
 
 def onDocumentKeyUp(event):
     try:
