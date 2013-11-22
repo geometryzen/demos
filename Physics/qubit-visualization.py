@@ -34,7 +34,7 @@ space2D.autoClear = True
 font = "20px Helvetica"
 color = "white"
 rotorColor = "#FFFF00"
-colorP = "#7014CC" # Purple Heart
+colorB = "#7014CC" # Purple Heart
 colorG = "#19FF65" # Spring Green
 colorO = "#FF9900" # Orange Peel
 colorG = "#999999" # Light Gray
@@ -54,7 +54,7 @@ txtRotor.x = 100
 txtRotor.y = 130
 space2D.addChild(txtRotor)
 
-txtBloch = Text("", font, colorP)
+txtBloch = Text("", font, colorB)
 txtBloch.x = 100
 txtBloch.y = 160
 space2D.addChild(txtBloch)
@@ -100,7 +100,7 @@ cube = Mesh(geometry, material)
 space3D.add(cube)
 cube.position = 2.0 * e2
 
-probeN = ProbeBuilderE3().color(0xFFFFFF).build()
+probeN = ProbeBuilderE3().color(colorB).build()
 space3D.add(probeN.grade0)
 space3D.add(probeN.grade1)
 space3D.add(probeN.grade2)
