@@ -158,6 +158,7 @@ def tick(t):
 
 
     cube.rotation.z += (targetRotation - cube.rotation.z) * 0.05
+    sphere.rotation.z += (targetRotation - sphere.rotation.z) * 0.05
     txtSpinor.text = cube.attitude
 
     renderer.render(scene, camera)
