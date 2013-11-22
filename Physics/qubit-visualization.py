@@ -173,7 +173,7 @@ def onDocumentMouseOut(event):
     pass
         
 def render(t):
-    txtScratch.text = theta
+    txtScratch.text = thetaDegrees
     renderer.render(scene, camera)
     space2D.render()
     
