@@ -99,7 +99,7 @@ cube = Mesh(geometry, material)
 scene.add(cube)
 cube.position = 2.0 * e2
 
-geometry = SphereGeometry(1.0, 16, 12)
+geometry = SphereGeometry(0.5, 16, 12)
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1})
 sphere = Mesh(geometry, material)
 scene.add(sphere)
