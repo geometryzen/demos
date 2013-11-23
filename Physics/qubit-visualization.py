@@ -32,11 +32,11 @@ space2D.autoClear = True
 font = "20px Helvetica"
 color = "white"
 colorB = "#7014CC" # Purple Heart
-colorR = "#19FF65" # Spring Green
-colorO = "#FF9900" # Orange Peel
+colorS = "#19FF65" # Spring Green
+colorR = "#FF9900" # Orange Peel
 colorG = "#999999" # Light Gray
 
-output = Text("Press arrow keys to rotate the qubit. Hit Esc key to exit.", font, "gray")
+output = Text("Press arrow keys to rotate the qubit. Hit Esc key to exit.", font, "#000000")
 output.x = 100
 output.y = 60
 space2D.addChild(output)
@@ -83,11 +83,11 @@ space3D.add(probeN.grade0)
 space3D.add(probeN.grade1)
 space3D.add(probeN.grade2)
 space3D.add(probeN.grade3)
-probeN.position = -2.0 * e2
+probeN.position = e1 - e2
 
 probeR0 = ProbeBuilderE3().color(colorR).wireframe(False).build()
 space3D.add(probeR0.grade0)
-probeR0.position = -1.5 * e3
+probeR0.position = e2 - e1
 
 probeR2 = ProbeBuilderE3().color(colorR).build()
 space3D.add(probeR2.grade2)
@@ -105,8 +105,8 @@ probeE3 = ProbeBuilderE3().color("#0000FF").build()
 space3D.add(probeE3.grade1)
 probeE3.position = origin
 
-space3D.renderer.setClearColor(0x000000, 1.0)
-space3D.camera.position = 4 * e1 + 3 * e2 + 2 * e3
+space3D.renderer.setClearColor(0x777777, 1.0)
+space3D.camera.position = (4 * e1 + 4 * e2 + 2 * e3) * 0.6
 space3D.camera.lookAt(probeR2.position)
 
 workbench = Workbench(space3D.renderer, space3D.camera)
