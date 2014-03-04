@@ -43,7 +43,7 @@ k = VectorE3(0.0, 0.0, 1.0)
 def F(r,v,t):
     return m * g
     
-def integrate(t, dt):
+def integrate(dt):
     # TODO: The accuracy should be improved using interpolation on impact.
     # TODO: Otherwise, the ball will gain/lose energy.
     global r, v
@@ -119,12 +119,6 @@ def discardCanvases():
     for cs in document.getElementsByTagName("canvas"):
         cs.parentNode.removeChild(cs)
         
-requestID = None
-frameIndex = 0
-startTime =  None
-frameTime = None
-endTime = None
-
 def setUp():       
     print "Press ESC to terminate."
     print "This program will 'self-terminate' in "+str(DURATION_SECONDS)+" seconds!"
