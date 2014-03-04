@@ -1,1 +1,1 @@
-# JSXGraph/poc.py
+print "Hello"
