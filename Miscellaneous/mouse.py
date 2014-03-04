@@ -7,7 +7,7 @@ clientX = 0
 clientY = 0
 button = 0
 
-progressEnd = 10000
+progressEnd = 10
 
 
 def onDocumentKeyDown(event):
