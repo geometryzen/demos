@@ -11,7 +11,7 @@ i = VectorE3(1.0, 0.0, 0.0, False)
 e2 = VectorE3(0.0, 1.0, 0.0, False)
 e3 = VectorE3(0.0, 0.0, 1.0, False)
 
-e1 = ArrowBuilder().color(0xFF0000).axis(e1).build()#.attitude(exp(-BivectorE3( 0,  0, 1)*pi/4)).build()
+e1 = ArrowBuilder().color(0xFF0000).axis(i).build()#.attitude(exp(-BivectorE3( 0,  0, 1)*pi/4)).build()
 e2 = ArrowBuilder().color(0x00FF00).axis(e2).build()#.attitude(exp(-BivectorE3( 0, -1, 0)*pi/4)).build()
 e3 = ArrowBuilder().color(0x0000FF).axis(e3).build()#.attitude(exp(-BivectorE3( 1,  0, 0)*pi/4)).build()
 
