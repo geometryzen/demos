@@ -176,3 +176,5 @@ def terminate():
     print "Done."
 
 run()
+war = WindowAnimationRunner(render, terminate, setUp, tearDown)
+war.start()
