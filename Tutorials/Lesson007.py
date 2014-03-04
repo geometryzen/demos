@@ -24,7 +24,7 @@ pointLight = PointLight(0xFFFFFF, 1, 100)
 pointLight.position.set(0, 0, 10)
 scene.add(pointLight)
 
-geometry = SphereGeometry(1)
+geometry = SphereGeometry(1.0)
 material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
 sphere = Mesh(geometry, material)
 scene.add(sphere)
