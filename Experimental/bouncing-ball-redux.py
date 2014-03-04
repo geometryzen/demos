@@ -165,7 +165,7 @@ def render(timestamp):
     else:
         terminate()
         
-def terminate():
+def terminate(elapsedTime):
     return False
         
 def tearDown():
