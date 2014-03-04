@@ -125,7 +125,7 @@ startTime =  None
 frameTime = None
 endTime = None
 
-def run():       
+def setUp():       
     print "Press ESC to terminate."
     print "This program will 'self-terminate' in "+str(DURATION_SECONDS)+" seconds!"
     discardCanvases()
@@ -153,7 +153,7 @@ def frameZero(timestamp):
     integrate(frameIndex, (frameTime - startTime)/1000, 0.0)
     renderer.render(scene, camera)
     
-def animate(timestamp):
+def render(timestamp):
     global requestID, frameIndex, frameTime
     frameIndex += 1
     interval = timestamp - frameTime 
@@ -165,7 +165,7 @@ def animate(timestamp):
     else:
         terminate()
         
-def terminate():
+def tearDown():
     window.cancelAnimationFrame(requestID)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
