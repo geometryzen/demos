@@ -165,6 +165,9 @@ def render(timestamp):
     else:
         terminate()
         
+def terminate():
+    return False
+        
 def tearDown():
     window.cancelAnimationFrame(requestID)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
