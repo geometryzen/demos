@@ -5,6 +5,10 @@ from workbench import *
 from geometry import *
 from math import exp, pi
 
+e1 = VectorE3(1.0, 0.0, 0.0, False)
+e2 = VectorE3(0.0, 1.0, 0.0, False)
+e3 = VectorE3(0.0, 0.0, 1.0, False)
+
 blades = [ScalarE3(1.0), e1, e2, e3, e1 ^ e2, e2 ^ e3, e3 ^ e1, e1 ^ e2 ^ e3]
 indexA = 1
 indexB = 2
