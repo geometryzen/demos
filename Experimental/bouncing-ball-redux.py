@@ -143,27 +143,10 @@ def setUp():
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize(None)
     window.requestAnimationFrame(frameZero)
-
-def frameZero(timestamp):
-    global requestID, startTime, frameTime, endTime
-    startTime = timestamp
-    frameTime = startTime
-    endTime = startTime + DURATION_SECONDS * 1000
-    requestID = window.requestAnimationFrame(animate)
-    integrate(frameIndex, (frameTime - startTime)/1000, 0.0)
-    renderer.render(scene, camera)
     
 def render(timestamp):
-    global requestID, frameIndex, frameTime
-    frameIndex += 1
-    interval = timestamp - frameTime 
-    frameTime = timestamp   
-    if frameTime < endTime:
-        requestID = window.requestAnimationFrame(animate)
-        integrate(frameIndex, (frameTime - startTime)/1000, interval/1000)
-        renderer.render(scene, camera)
-    else:
-        terminate()
+    integrate(frameIndex, (frameTime - startTime)/1000, interval/1000)
+    renderer.render(scene, camera)
         
 def terminate(elapsedTime):
     return False
