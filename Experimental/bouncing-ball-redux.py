@@ -43,7 +43,7 @@ k = VectorE3(0.0, 0.0, 1.0)
 def F(r,v,t):
     return m * g
     
-def integrate(n, t, dt):
+def integrate(t, dt):
     # TODO: The accuracy should be improved using interpolation on impact.
     # TODO: Otherwise, the ball will gain/lose energy.
     global r, v
@@ -142,21 +142,17 @@ def setUp():
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize(None)
-    window.requestAnimationFrame(frameZero)
     
-def render(timestamp):
-    integrate(frameIndex, (frameTime - startTime)/1000, interval/1000)
+def render(elapsedTime):
+    integrate(elapsedTime, interval/1000)
     renderer.render(scene, camera)
         
 def terminate(elapsedTime):
     return False
         
 def tearDown():
-    window.cancelAnimationFrame(requestID)
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     document.removeEventListener("keyup", onDocumentKeyUp, False)
-    time = (frameTime-startTime)/1000
-    count = frameIndex+1
     if useLargeCanvas:
         discardCanvases()
     print "Done."
