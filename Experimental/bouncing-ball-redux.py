@@ -140,7 +140,7 @@ def setUp():
     onWindowResize(None)
     
 def render(elapsedTime):
-    integrate(1)
+    integrate(0.1)
     renderer.render(scene, camera)
         
 def terminate(elapsedTime):
