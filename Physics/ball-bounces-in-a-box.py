@@ -70,7 +70,7 @@ def tick(t):
     renderer.render(scene, camera)
 
 def terminate(t):
-    return t > 15
+    return False#t > 15
 
 def tearDown():
     workbench3D.tearDown()
