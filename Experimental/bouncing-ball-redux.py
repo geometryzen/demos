@@ -3,7 +3,7 @@ from three import *
 from browser import *
 from math import pi
 
-useLargeCanvas = True
+useLargeCanvas = False
 LENGTH = 10.0
 DURATION_SECONDS = 20
 done = False
@@ -140,7 +140,7 @@ def setUp():
     onWindowResize(None)
     
 def render(elapsedTime):
-    integrate(0.001)
+    integrate(1)
     renderer.render(scene, camera)
         
 def terminate(elapsedTime):
