@@ -13,7 +13,7 @@ R = 4
 
 space = CartesianSpace()
 
-sphere = SphereBuilder().color(0x0000FF).build()
+sphere = SphereBuilder().color(0x0000FF).radius(0.2).build()
 space.add(sphere)
 
 workbench = Workbench(space.renderer, space.camera)
