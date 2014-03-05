@@ -3,7 +3,7 @@ from three import *
 from browser import *
 from math import pi
 
-useLargeCanvas = False
+useLargeCanvas = True
 LENGTH = 10.0
 DURATION_SECONDS = 20
 done = False
