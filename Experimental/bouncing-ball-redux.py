@@ -6,6 +6,7 @@ from math import pi
 useLargeCanvas = False
 LENGTH = 10.0
 DURATION_SECONDS = 20
+done = False
 
 scene = Scene()
 
@@ -82,7 +83,8 @@ graph.style.left = "0px"
 context = graph.getContext("2d")
 
 def escKey(downFlag):
-    terminate()
+    global done
+    done = True
 
 keyHandlers = {
  27: escKey
@@ -142,7 +144,7 @@ def render(elapsedTime):
     renderer.render(scene, camera)
         
 def terminate(elapsedTime):
-    return False
+    return done
         
 def tearDown():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
