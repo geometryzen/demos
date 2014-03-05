@@ -45,7 +45,7 @@ scene.add(wallZ)
 ball = SphereBuilder().color("green").radius(0.8).build()
 # This could equally well be done by using the velocity as the variable to describe the motion.
 ball.mass     = ScalarE3(1.0)
-ball.momentum = VectorE3(random(), random(), random())
+ball.momentum = VectorE3(-0.15, -0.23, +0.27)
 scene.add(ball)
 
 side = side - thk * 0.5 - ball.geometry.radius
