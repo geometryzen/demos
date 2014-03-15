@@ -5,7 +5,6 @@ from workbench import *
 from math import pi, exp
 
 space = CartesianSpace()
-timeOut = 10
 
 i = VectorE3(1.0, 0.0, 0.0, False)
 j = VectorE3(0.0, 1.0, 0.0, False)
@@ -31,7 +30,7 @@ def tick(t):
     space.render()
     
 def terminate(t):
-    return t > timeOut
+    return t > 10
 
 def tearDown():
     workbench.tearDown()
