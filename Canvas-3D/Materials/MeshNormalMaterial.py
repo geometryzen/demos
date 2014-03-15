@@ -23,17 +23,9 @@ container.appendChild(renderer.domElement)
 
 material = MeshNormalMaterial()
 
-print repr(material)
-print str(material)
-
 mesh = Mesh(SphereGeometry(50.0, 32, 24), material)
 
 scene.add(mesh)
-
-requestID = None
-progress = None
-progressEnd = 6000
-startTime =  None
 
 workbench = Workbench(renderer, camera)
 
