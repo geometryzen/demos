@@ -32,7 +32,7 @@ def tick(t):
     space.render()
     
 def terminate(t):
-    return t > 60
+    return t > 5
 
 def tearDown():
     workbench.tearDown()
