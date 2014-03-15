@@ -58,6 +58,7 @@ def setUp():
     workbench3D.setUp()
 
 def tick(t):
+    global frames
     frames += 1.0
     ball.position += (ball.momentum / ball.mass) * dt
     # Use a scalar product to project the ball position.
