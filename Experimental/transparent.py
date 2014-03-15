@@ -23,7 +23,7 @@ renderer = WebGLRenderer()
 renderer.autoClear = True
 renderer.gammaInput = True
 renderer.gammaOutput = True
-renderer.setClearColor(Color(0xCCCCCC), 1.0)
+#renderer.setClearColor(Color(0xCCCCCC), 1.0)
 
 material = MeshLambertMaterial({"color":0x0000FF,"opacity":0.5,"transparent":True})
 material.name = "bluecube"
@@ -69,7 +69,6 @@ def setUp():
     document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(t):
-    mesh.rotation += movement
     renderer.render(scene, camera)
 
 def terminate(t):
