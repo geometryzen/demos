@@ -7,8 +7,6 @@ from browser import *
 from workbench import *
 from math import pi, exp
 
-timeOut = 12.0
-
 space = CartesianSpace()
 
 shape = ConeBuilder().color(0xFFFF00).build()
@@ -34,7 +32,7 @@ def tick(t):
     space.render()
     
 def terminate(t):
-    return t > timeOut
+    return t > 60
 
 def tearDown():
     workbench.tearDown()
