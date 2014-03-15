@@ -47,8 +47,9 @@ def setUp():
 def tick(t):
     r = dwarf.position - giant.position
     F = giant.mass * dwarf.mass * r / pow(r % r, 3/2)
-    giant.momentum = giant.momentum + F * dt
-    dwarf.momentum = dwarf.momentum - F * dt
+    impulse = F * dt
+    giant.momentum += impulse
+    dwarf.momentum -= impulse
     
     for star in [giant, dwarf]:
         star.position += (star.momentum / star.mass) * dt
