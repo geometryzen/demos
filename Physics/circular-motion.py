@@ -29,7 +29,7 @@ def setUp():
 
 def tick(t):
     R = exp(-omega * t / 2.0)
-    shape.position = R * (4.0 * i) * ~R
+    shape.position = R * i * ~R
 #   shape.attitude = R
     space.render()
     
