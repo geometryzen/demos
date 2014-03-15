@@ -52,7 +52,7 @@ material = MeshBasicMaterial({"color": 0xE0E0E0, "overdraw": 0.5})
 plane = Mesh(geometry, material)
 scene.add(plane)
 
-renderer = CanvasRenderer()
+renderer = WebGLRenderer()
 
 workbench = Workbench(renderer, camera)
 
