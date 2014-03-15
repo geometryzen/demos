@@ -116,6 +116,8 @@ def onDocumentMouseOut(event):
     document.removeEventListener("mouseup", onDocumentMouseUp, False)
     document.removeEventListener("mouseout", onDocumentMouseOut, False)
 
+war = WindowAnimationRunner(tick, terminate, setUp, tearDown)
+    
 def tick(t):
     
     cube.rotation.y += (targetRotation - cube.rotation.y) * 0.05
@@ -140,4 +142,4 @@ def tearDown():
     workbench2D.tearDown()
     workbench.tearDown()
 
-WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
+war.start()
