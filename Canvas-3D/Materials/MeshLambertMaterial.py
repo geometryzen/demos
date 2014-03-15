@@ -27,7 +27,7 @@ renderer.setClearColor(Color(0xCCCCCC), 1.0)
 
 material = MeshLambertMaterial({"color":0x0000FF})
 material.name = "bluecube"
-material.opacity = 0.5
+material.opacity = 0.1
 
 print "repr(material) => " + repr(material)
 print "id: " + str(material.id)
