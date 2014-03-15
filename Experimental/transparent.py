@@ -46,6 +46,9 @@ scene.add(mesh)
 movement = VectorE3(0.02, 0.02, 0.02)
 
 workbench = Workbench(renderer, camera)
+
+timeOut = 10
+
 def escKey(event, downFlag):
     event.preventDefault()
     global timeOut
@@ -70,7 +73,7 @@ def tick(t):
     renderer.render(scene, camera)
 
 def terminate(t):
-    return t > 6
+    return t > timeOut
 
 def tearDown():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
