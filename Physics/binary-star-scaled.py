@@ -35,7 +35,7 @@ space2D = Stage(canvas2D)
 space2D.autoClear = True
 
 
-output = Text("Hit ESC to exit.", "20px Helvetica", "white")
+output = Text("Hit Esc to exit.", "20px Helvetica", "white")
 output.x = window.innerWidth / 2
 output.y = window.innerHeight / 2
 space2D.addChild(output)
@@ -53,7 +53,7 @@ def tick(t):
     for star in [giant, dwarf]:
         star.position = star.position + (star.momentum / star.mass) * dt
 
-    centerOfMass.position = (giant.position * giant.mass + dwarf.position * dwarf.mass) / (giant.mass + dwarf.mass)
+#   centerOfMass.position = (giant.position * giant.mass + dwarf.position * dwarf.mass) / (giant.mass + dwarf.mass)
     
     space3D.render()
     space2D.update()
