@@ -66,21 +66,6 @@ for i in range(0, 2000):
     
 workbench = Workbench(renderer, camera)
 
-def escKey(event, downFlag):
-    event.preventDefault()
-    global timeOut
-    timeOut = 0
-
-keyHandlers = {
- 27: escKey
-}
-    
-def onDocumentKeyDown(event):
-    try:
-        keyHandlers[event.keyCode](event, True)
-    except:
-        pass
-
 def onDocumentMouseMove(event):
     event.preventDefault()
     mouse.x = (float(event.clientX) / float(window.innerWidth)) * 2.0 - 1.0
@@ -122,12 +107,10 @@ def terminate(t):
 def setUp():
     workbench.setUp()
     workbench2D.setUp()
-    document.addEventListener("keydown", onDocumentKeyDown, False)
     document.addEventListener("mousemove", onDocumentMouseMove, False)
 
 def tearDown():
     document.removeEventListener("mousemove", onDocumentMouseMove, False)
-    document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench2D.tearDown()
     workbench.tearDown()
 
