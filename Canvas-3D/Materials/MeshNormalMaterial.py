@@ -14,9 +14,6 @@ renderer.gammaInput  = True
 renderer.gammaOutput = True
 renderer.setClearColor(Color(0x080808), 1.0)
 
-container = document.getElementById("canvas-container")
-container.appendChild(renderer.domElement)
-
 material = MeshNormalMaterial()
 
 mesh = Mesh(SphereGeometry(50.0, 32, 24), material)
