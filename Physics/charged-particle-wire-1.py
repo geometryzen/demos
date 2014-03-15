@@ -42,21 +42,6 @@ space3D.add(probeF.grade1)
 
 dt = 0.02
 
-def escKey(event, downFlag):
-    event.preventDefault()
-    global timeOut
-    timeOut = 0
-
-keyHandlers = {
- 27: escKey
-}
-    
-def onDocumentKeyDown(event):
-    try:
-        keyHandlers[event.keyCode](event, True)
-    except:
-        pass
-
 def outsideCube(position, size):
     if (abs(particle.position % i) > size):
         return True
@@ -68,7 +53,6 @@ def outsideCube(position, size):
 
 def setUp():
     workbench3D.setUp()
-    document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(t):
     global timeOut
@@ -110,7 +94,6 @@ def terminate(t):
     return t > timeOut
 
 def tearDown():
-    document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench3D.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
