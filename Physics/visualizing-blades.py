@@ -105,21 +105,6 @@ space3D.add(probeB.grade0)
 space3D.add(probeB.grade1)
 space3D.add(probeB.grade2)
 space3D.add(probeB.grade3)
-
-def escKey(event, downFlag):
-    event.preventDefault()
-    global timeOut
-    timeOut = 0
-
-keyHandlers = {
- 27: escKey
-}
-    
-def onDocumentKeyDown(event):
-    try:
-        keyHandlers[event.keyCode](event, True)
-    except:
-        pass
     
 def onClickA(event):
     global indexA
@@ -132,7 +117,6 @@ def onClickB(event):
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
-    document.addEventListener("keydown", onDocumentKeyDown, False)
     buttonA.addEventListener("click", onClickA)
     buttonB.addEventListener("click", onClickB)
 
@@ -161,7 +145,6 @@ def terminate(t):
 def tearDown():
     buttonA.removeEventListener("click", onClickA)
     buttonB.removeEventListener("click", onClickB)
-    document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench3D.tearDown()
     workbench2D.tearDown()
 
