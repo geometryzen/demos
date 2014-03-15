@@ -34,6 +34,7 @@ plane = Mesh(PlaneGeometry(1000.0,1000.0), MeshBasicMaterial())
 
 scene = Scene()
 renderer = CanvasRenderer()
+renderer.setClearColor(Color(0xFFFFFF), 1.0)
 
 camera = PerspectiveCamera(70, 1, 1, 10000)
 camera.position.y = 800.0
