@@ -9,6 +9,7 @@ camera  = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 100.0
 
 renderer = WebGLRenderer()
+print renderer
 renderer.autoClear   = True
 renderer.gammaInput  = True
 renderer.gammaOutput = True
