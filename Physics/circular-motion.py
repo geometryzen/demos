@@ -22,6 +22,9 @@ omega = 2.0 * pi * i * j / 1
 
 workbench = Workbench(space.renderer, space.camera)
 
+frames = 0
+timeout = 5
+
 def setUp():
     workbench.setUp()
 
@@ -32,10 +35,10 @@ def tick(t):
     space.render()
     
 def terminate(t):
-    print t
-    return t > 5
+    return t > timeout
 
 def tearDown():
     workbench.tearDown()
+    print frames / timeout
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
