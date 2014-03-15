@@ -29,6 +29,7 @@ def setUp():
     workbench.setUp()
 
 def tick(t):
+    global frames
     frames += 1
     R = exp(-omega * t / 2.0)
     shape.position = R * i * ~R
