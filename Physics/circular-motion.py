@@ -24,14 +24,8 @@ omega = 2.0 * pi * i * j / timeOut
 
 workbench = Workbench(space.renderer, space.camera)
 
-def onDocumentKeyDown(event):
-    global timeOut
-    if event.keyCode == 27:
-        timeOut = 0.0
-
 def setUp():
     workbench.setUp()
-    document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(t):
     R = exp(-omega * t / 2.0)
@@ -43,7 +37,6 @@ def terminate(t):
     return t > timeOut
 
 def tearDown():
-    document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
