@@ -20,12 +20,15 @@ mesh = Mesh(SphereGeometry(50.0, 32, 24), material)
 
 scene.add(mesh)
 
+movement = VectorE3(0.02, 0.02, 0.02)
+
 workbench = Workbench(renderer, camera)
 
 def setUp():
     workbench.setUp()
 
 def tick(t):
+    mesh.rotation += movement
     renderer.render(scene, camera)
 
 def terminate(t):
