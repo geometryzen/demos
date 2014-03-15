@@ -39,7 +39,7 @@ print "transparent: " + str(material.transparent)
 print "visible: " + str(material.visible)
 print "str(material) => " + str(material)
 
-mesh = Mesh(CubeGeometry(5, 5, 5), material)
+mesh = Mesh(CubeGeometry(5, 5, 1), material)
 
 scene.add(mesh)
 
