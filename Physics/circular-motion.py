@@ -22,15 +22,15 @@ omega = 2.0 * pi * i * j / 1
 
 workbench = Workbench(space.renderer, space.camera)
 
-frames = 0
-timeout = 10
+frames = 0.0
+timeout = 10.0
 
 def setUp():
     workbench.setUp()
 
 def tick(t):
     global frames
-    frames += 1
+    frames += 1.0
     R = exp(-omega * t / 2.0)
     shape.position = R * i * ~R
 #   shape.attitude = R
