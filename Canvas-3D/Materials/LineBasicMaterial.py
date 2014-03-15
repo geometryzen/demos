@@ -2,10 +2,6 @@
 from three import *
 from browser import *
 from workbench import *
-from math import pi
-
-for canvas in document.getElementsByTagName("canvas"):
-    canvas.parentNode.removeChild(canvas)
 
 scene = Scene()
 
@@ -33,12 +29,6 @@ print str(material)
 mesh = Mesh(SphereGeometry(50.0, 32, 24), material)
 
 scene.add(mesh)
-
-requestID = None
-progress = None
-progressEnd = 2000
-startTime =  None
-
 
 movement = VectorE3(0.02, 0.02, 0.02)
 
