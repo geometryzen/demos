@@ -52,7 +52,8 @@ material = MeshBasicMaterial({"color": 0xE0E0E0, "overdraw": 0.5})
 plane = Mesh(geometry, material)
 scene.add(plane)
 
-renderer = WebGLRenderer()
+renderer = WebGLRenderer({"antialias": True})
+renderer.setClearColor(Color(0xFFFFFF), 1.0)
 
 workbench = Workbench(renderer, camera)
 
