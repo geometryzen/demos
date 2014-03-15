@@ -116,8 +116,6 @@ def onDocumentMouseOut(event):
     document.removeEventListener("mouseup", onDocumentMouseUp, False)
     document.removeEventListener("mouseout", onDocumentMouseOut, False)
 
-war = WindowAnimationRunner(tick, terminate, setUp, tearDown)
-    
 def tick(t):
     
     cube.rotation.y += (targetRotation - cube.rotation.y) * 0.05
@@ -141,5 +139,8 @@ def tearDown():
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench2D.tearDown()
     workbench.tearDown()
+
+# Python does not allow functions to be referenced before they are declared.
+war = WindowAnimationRunner(tick, terminate, setUp, tearDown)
 
 war.start()
