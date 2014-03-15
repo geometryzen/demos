@@ -23,7 +23,7 @@ omega = 2.0 * pi * i * j / 1
 workbench = Workbench(space.renderer, space.camera)
 
 frames = 0
-timeout = 5
+timeout = 10
 
 def setUp():
     workbench.setUp()
