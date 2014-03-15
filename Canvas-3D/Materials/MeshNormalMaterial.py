@@ -1,11 +1,7 @@
-# MeshNormalMaterial demonstration.
 from three import *
 from browser import *
 from workbench import *
 from math import pi
-
-for canvas in document.getElementsByTagName("canvas"):
-    canvas.parentNode.removeChild(canvas)
 
 scene = Scene()
 
