@@ -62,16 +62,10 @@ def shiftKey(event, downFlag):
 def ctrlKey(event, downFlag):
     global isCtrlDown
     isCtrlDown = downFlag
-    
-def escKey(event, downFlag):
-    event.preventDefault()
-    global timeOut
-    timeOut = 0
 
 keyHandlers = {
  16: shiftKey,
- 17: ctrlKey, 
- 27: escKey
+ 17: ctrlKey
 }
     
 def onDocumentKeyDown(event):
