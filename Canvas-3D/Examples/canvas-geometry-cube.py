@@ -57,37 +57,6 @@ renderer.setClearColor(Color(0xFFFFFF), 1.0)
 
 workbench = Workbench(renderer, camera)
 
-def shiftKey(event, downFlag):
-    global isShiftDown
-    isShiftDown = downFlag
-
-def ctrlKey(event, downFlag):
-    global isCtrlDown
-    isCtrlDown = downFlag
-    
-def escKey(event, downFlag):
-    event.preventDefault()
-    global timeOut
-    timeOut = 0
-
-keyHandlers = {
- 16: shiftKey,
- 17: ctrlKey, 
- 27: escKey
-}
-    
-def onDocumentKeyDown(event):
-    try:
-        keyHandlers[event.keyCode](event, True)
-    except:
-        pass
-
-def onDocumentKeyUp(event):
-    try:
-        keyHandlers[event.keyCode](event, False)
-    except:
-        pass
-
 def onDocumentMouseDown(event):
     global mouseXOnMouseDown, targetRotationOnMouseDown
 
@@ -129,14 +98,10 @@ def terminate(t):
 def setUp():
     workbench.setUp()
     workbench2D.setUp()
-    document.addEventListener("keydown", onDocumentKeyDown, False)
-    document.addEventListener("keyup", onDocumentKeyUp, False)
     document.addEventListener("mousedown", onDocumentMouseDown, False)
 
 def tearDown():
     document.removeEventListener("mousedown", onDocumentMouseDown, False)
-    document.removeEventListener("keyup", onDocumentKeyUp, False)
-    document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench2D.tearDown()
     workbench.tearDown()
 
