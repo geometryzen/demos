@@ -25,7 +25,7 @@ renderer.gammaInput = True
 renderer.gammaOutput = True
 renderer.setClearColor(Color(0xCCCCCC), 1.0)
 
-material = MeshLambertMaterial({"color":0x0000FF})
+material = MeshLambertMaterial({"color":0x0000FF,"opacity":0.1})
 material.name = "bluecube"
 material.transparent = True
 
