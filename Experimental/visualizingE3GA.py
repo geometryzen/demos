@@ -5,6 +5,7 @@ from workbench import *
 from geometry import *
 
 e1 = VectorE3(1,0,0)
+e2 = VectorE3(0,1,0)
 
 blades = [ScalarE3(1), e1, e2, e3, e1 ^ e2, e2 ^ e3, e3 ^ e1, e1 ^ e2 ^ e3, e1 ^ e3 ^ e2]
 binops = ["+", "-", "*", "<<", "^", ">>"]
