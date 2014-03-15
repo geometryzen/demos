@@ -8,9 +8,6 @@ camera = PerspectiveCamera(75, 1.0, 0.1, 1000)
 camera.position.z = 100.0
 
 renderer = WebGLRenderer()
-renderer.autoClear = True
-renderer.gammaInput = True
-renderer.gammaOutput = True
 renderer.setClearColor(Color(0x080808), 1.0)
 
 material = MeshBasicMaterial({"color":0x0000FF, "wireframe":True})
@@ -35,8 +32,6 @@ mesh = Mesh(SphereGeometry(50.0, 32, 24), material)
 
 scene.add(mesh)
 
-timeOut = 6
-
 workbench = Workbench(renderer, camera)
 
 def setUp():
@@ -49,7 +44,7 @@ def tick(t):
     renderer.render(scene, camera)
     
 def terminate(t):
-    return t > timeOut
+    return t > 6
 
 def tearDown():
     workbench.tearDown()
