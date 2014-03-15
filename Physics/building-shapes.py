@@ -16,28 +16,19 @@ space.add(SphereBuilder().build().translateX(+2.5).translateY(-2.5))
 space.add(ConeBuilder().build().translateX(-2.5).translateY(+2.5))
 space.add(ArrowBuilder().build())
 
-timeout = 6
-
 workbench = Workbench(space.renderer, space.camera)
-
-def onDocumentKeyDown(event):
-    global timeout
-    if event.keyCode == 27:
-        timeout = 0
 
 def tick(t):
     space.render()
     
 def terminate(t):
-    return t > timeout
+    return t > 6
 
 def setUp():
     print "Press Esc to exit"
     workbench.setUp()
-    document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tearDown():
-    document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
