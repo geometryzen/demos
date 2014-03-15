@@ -32,6 +32,7 @@ def tick(t):
     space.render()
     
 def terminate(t):
+    print t
     return t > 5
 
 def tearDown():
