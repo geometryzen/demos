@@ -46,9 +46,24 @@ scene.add(mesh)
 movement = VectorE3(0.02, 0.02, 0.02)
 
 workbench = Workbench(renderer, camera)
+def escKey(event, downFlag):
+    event.preventDefault()
+    global timeOut
+    timeOut = 0
+
+keyHandlers = {
+ 27: escKey
+}
+    
+def onDocumentKeyDown(event):
+    try:
+        keyHandlers[event.keyCode](event, True)
+    except:
+        pass
 
 def setUp():
     workbench.setUp()
+    document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(t):
     mesh.rotation += movement
@@ -58,6 +73,7 @@ def terminate(t):
     return t > 6
 
 def tearDown():
+    document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
