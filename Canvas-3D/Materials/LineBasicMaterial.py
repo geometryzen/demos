@@ -38,37 +38,22 @@ progress = None
 progressEnd = 2000
 startTime =  None
 
-def render():
-    mesh.rotation.x = mesh.rotation.x + 0.02
-    mesh.rotation.y = mesh.rotation.y + 0.02
-    mesh.rotation.z = mesh.rotation.z + 0.02
-        
+
+movement = VectorE3(0.02, 0.02, 0.02)
+
+workbench = Workbench(renderer, camera)
+
+def setUp():
+    workbench.setUp()
+
+def tick(t):
+    mesh.rotation += movement
     renderer.render(scene, camera)
 
-def onWindowResize():
-    camera.aspect = window.innerWidth / window.innerHeight
-    camera.updateProjectionMatrix()
-    renderer.size = (window.innerWidth, window.innerHeight)
-    
-def step(timestamp):
-    global requestID, progress, startTime
-    if (startTime):
-        progress = timestamp - startTime
-    else:
-        if (timestamp):
-            startTime = timestamp
-        else:
-            progress = 0
-        
-    if (progress < progressEnd):
-        requestID = window.requestAnimationFrame(step)
-        render()
-    else:
-        window.cancelAnimationFrame(requestID)
-        # container.removeChild(renderer.domElement)
+def terminate(t):
+    return t > 6
 
-window.addEventListener("resize", onWindowResize, False)
+def tearDown():
+    workbench.tearDown()
 
-onWindowResize()
-
-step(None)
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
