@@ -35,27 +35,6 @@ renderer.setClearColor(0x000000, 1.0)
 
 workbench = Workbench(renderer, camera)
 
-def escKey(event, downFlag):
-    event.preventDefault()
-    global timeOut
-    timeOut = 0
-
-keyHandlers = {
- 27: escKey
-}
-    
-def onDocumentKeyDown(event):
-    try:
-        keyHandlers[event.keyCode](event, True)
-    except:
-        pass
-
-def onDocumentKeyUp(event):
-    try:
-        keyHandlers[event.keyCode](event, False)
-    except:
-        pass
-
 def onDocumentMouseMove(event):
     windowHalfX = float(window.innerWidth) / 2.0
     windowHalfY = float(window.innerHeight) / 2.0
@@ -77,14 +56,10 @@ def terminate(t):
 
 def setUp():
     workbench.setUp()
-    document.addEventListener("keydown", onDocumentKeyDown, False)
-    document.addEventListener("keyup", onDocumentKeyUp, False)
     document.addEventListener("mousemove", onDocumentMouseMove, False)
 
 def tearDown():
     document.removeEventListener("mousemove", onDocumentMouseMove, False)
-    document.removeEventListener("keyup", onDocumentKeyUp, False)
-    document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
