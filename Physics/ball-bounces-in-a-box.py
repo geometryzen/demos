@@ -71,7 +71,6 @@ def tick(t):
         
 #    if abs(ball.position % e3) >= side:
 #        ball.momentum = - e3 * ball.momentum * e3
-
      renderer.render(scene, camera)
 
 def terminate(t):
