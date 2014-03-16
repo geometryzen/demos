@@ -24,7 +24,6 @@ def terminate(t):
     return t > 6
 
 def setUp():
-    print "Press Esc to exit"
     workbench.setUp()
 
 def tearDown():
