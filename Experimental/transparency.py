@@ -20,13 +20,12 @@ directionalLight.position.set(0.0, 1.0, 0.0)
 scene.add(directionalLight)
 
 renderer = WebGLRenderer()
-renderer.setClearColor(Color(0xFFFFF), 1.0)
+renderer.setClearColor(Color(0xFFFFFF), 1.0)
 
 for i in range(0,10):
     mesh = Mesh(CubeGeometry(0.1, 5, 5), MeshLambertMaterial({"color":0x0000FF,"opacity":0.1,"transparent":True}))
     mesh.position = VectorE3(i-5,0,0)
     scene.add(mesh)
-    print i
 
 movement = VectorE3(0.02, 0.02, 0.02)
 
