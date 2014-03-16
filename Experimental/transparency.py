@@ -24,7 +24,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 
 material = MeshLambertMaterial({"color":0x0000FF,"opacity":0.1,"transparent":True})
 
-mesh = Mesh(CubeGeometry(5, 5, 5), material)
+mesh = Mesh(CubeGeometry(2, 2, 2), material)
 m2 = Mesh(CubeGeometry(5, 5, 5), MeshLambertMaterial({"color":0x0000FF,"opacity":0.1,"transparent":True}))
 m3 = Mesh(CubeGeometry(10, 10, 10), MeshLambertMaterial({"color":0x0000FF,"opacity":0.1,"transparent":True}))
 
