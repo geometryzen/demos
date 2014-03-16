@@ -137,4 +137,5 @@ def tearDown():
     workbench3D.tearDown()
     print "Goodbye."
 
+# Esc key is managed by the animation runner.
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
