@@ -62,6 +62,7 @@ def tick(t):
     frames += 1.0
     renderer.render(scene, camera)
     renderer.render(scene, camera)
+    renderer.render(scene, camera)
 #    ball.position += (ball.momentum / ball.mass) * dt
     # Use a scalar product to project the ball position.
     # Use a geometric vector sandwich to compute the reflection. 
