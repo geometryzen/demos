@@ -25,8 +25,10 @@ renderer.setClearColor(Color(0x080808), 1.0)
 material = MeshLambertMaterial({"color":0x0000FF,"opacity":0.1,"transparent":True})
 
 mesh = Mesh(CubeGeometry(5, 5, 5), material)
+m2 = Mesh(CubeGeometry(5, 5, 5), MeshLambertMaterial({"color":0x0000FF,"opacity":0.1,"transparent":True}))
 
 scene.add(mesh)
+scene.add(m2)
 
 movement = VectorE3(0.02, 0.02, 0.02)
 
