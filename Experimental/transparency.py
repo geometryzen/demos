@@ -32,6 +32,9 @@ scene.add(mesh)
 scene.add(m2)
 scene.add(m3)
 
+for i in [1..10]:
+    print i
+
 movement = VectorE3(0.02, 0.02, 0.02)
 
 workbench = Workbench(renderer, camera)
