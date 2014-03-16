@@ -60,7 +60,6 @@ def setUp():
 def tick(t):
     global frames
     frames += 1.0
-    renderer.render(scene, camera)
 #    ball.position += (ball.momentum / ball.mass) * dt
     # Use a scalar product to project the ball position.
     # Use a geometric vector sandwich to compute the reflection. 
@@ -73,7 +72,7 @@ def tick(t):
 #    if abs(ball.position % e3) >= side:
 #        ball.momentum = - e3 * ball.momentum * e3
 
-#    renderer.render(scene, camera)
+     renderer.render(scene, camera)
 
 def terminate(t):
     return t > timeout
