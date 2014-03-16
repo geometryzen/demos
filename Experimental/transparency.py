@@ -26,9 +26,11 @@ material = MeshLambertMaterial({"color":0x0000FF,"opacity":0.1,"transparent":Tru
 
 mesh = Mesh(CubeGeometry(5, 5, 5), material)
 m2 = Mesh(CubeGeometry(5, 5, 5), MeshLambertMaterial({"color":0x0000FF,"opacity":0.1,"transparent":True}))
+m2 = Mesh(CubeGeometry(2, 2, 2), MeshLambertMaterial({"color":0x0000FF,"opacity":0.1,"transparent":True}))
 
 scene.add(mesh)
 scene.add(m2)
+scene.add(m3)
 
 movement = VectorE3(0.02, 0.02, 0.02)
 
