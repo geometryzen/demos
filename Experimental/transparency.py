@@ -26,7 +26,7 @@ material = MeshLambertMaterial({"color":0x0000FF,"opacity":0.1,"transparent":Tru
 
 mesh = Mesh(CubeGeometry(5, 5, 5), material)
 m2 = Mesh(CubeGeometry(5, 5, 5), MeshLambertMaterial({"color":0x0000FF,"opacity":0.1,"transparent":True}))
-m3 = Mesh(CubeGeometry(2, 2, 2), MeshLambertMaterial({"color":0x0000FF,"opacity":0.1,"transparent":True}))
+m3 = Mesh(CubeGeometry(10, 10, 10), MeshLambertMaterial({"color":0x0000FF,"opacity":0.1,"transparent":True}))
 
 scene.add(mesh)
 scene.add(m2)
@@ -44,7 +44,7 @@ def tick(t):
     renderer.render(scene, camera)
 
 def terminate(t):
-    return t > 6
+    return t > 60
 
 def tearDown():
     workbench.tearDown()
