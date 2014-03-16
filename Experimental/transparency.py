@@ -24,6 +24,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 
 for i in range(0,3):
     mesh = Mesh(CubeGeometry(5, 5, 5), MeshLambertMaterial({"color":0x0000FF,"opacity":0.1,"transparent":True}))
+    mesh.position = VectorE3(i,0,0)
     scene.add(mesh)
     print i
 
