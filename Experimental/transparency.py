@@ -36,7 +36,7 @@ def tick(t):
     renderer.render(scene, camera)
 
 def terminate(t):
-    return t > 60
+    return t > 6000
 
 def tearDown():
     workbench.tearDown()
