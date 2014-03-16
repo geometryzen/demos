@@ -22,11 +22,6 @@ canvas2D.style.left = "0px"
 
 context = canvas2D.getContext("2d")
 
-def escKey(downFlag, event):
-    event.preventDefault()
-    global timeOut
-    timeOut = 0
-
 def leftArrowKey(downFlag, event):
     event.preventDefault()
     global moveLeft
@@ -48,7 +43,6 @@ def downArrowKey(downFlag, event):
     moveBackward = downFlag
 
 keyHandlers = {
- 27: escKey,
  37: leftArrowKey,
  38: upArrowKey,
  39: rightArrowKey,
