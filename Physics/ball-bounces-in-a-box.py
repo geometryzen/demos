@@ -52,14 +52,16 @@ side = side - thk * 0.5 - ball.geometry.radius
 dt = 0.3
 
 frames = 0.0
+elapsed = 0.0
 timeout = 10.0
 
 def setUp():
     workbench3D.setUp()
 
 def tick(t):
-    global frames
+    global frames, elapsed
     frames += 1.0
+    elapsed = t
     ball.position += (ball.momentum / ball.mass) * dt
     # Use a scalar product to project the ball position.
     # Use a geometric vector sandwich to compute the reflection. 
@@ -76,6 +78,6 @@ def terminate(t):
 
 def tearDown():
     workbench3D.tearDown()
-    print frames / timeout
+    print frames / elapsed
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
