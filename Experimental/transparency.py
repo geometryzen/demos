@@ -23,7 +23,7 @@ renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
 
 for i in range(0,10):
-    mesh = Mesh(CubeGeometry(0.1, 5, 5), MeshLambertMaterial({"color":0x0000FF,"opacity":0.1,"transparent": False}))
+    mesh = Mesh(CubeGeometry(0.1, 5, 5), MeshLambertMaterial({"color": 0x0000FF,"opacity": 0.5,"transparent": True}))
     mesh.position = VectorE3(i-5,0,0)
     scene.add(mesh)
 
