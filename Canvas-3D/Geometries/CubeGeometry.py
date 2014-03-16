@@ -29,7 +29,7 @@ print cube
 
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3})
 mesh = Mesh(cube, material)
-mesh = CubeBuilder().width(width).height(height).depth(depth).material(material).build()
+#mesh = CubeBuilder().width(width).height(height).depth(depth).material(material).build()
 scene.add(mesh)
 
 timeOut = 6
