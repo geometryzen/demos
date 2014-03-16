@@ -20,7 +20,7 @@ particle.position = VectorE3(0.0, 1.0, 0.0)
 particle.velocity = VectorE3(0.0, -1.0, 0.0)
 space3D.add(particle)
 
-wire = CylinderBuilder().radius(0.1).height(100).color("blue").build()
+wire = CylinderBuilder().radius(0.1).height(4).color("blue").build()
 space3D.add(wire)
 
 # Probe to show the velocity of the particle.
