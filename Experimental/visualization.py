@@ -35,7 +35,7 @@ space2D = Stage(canvas2D)
 space2D.autoClear = True
 
 
-output = Text("", "20px Helvetica", "white")
+output = Text("Hit Esc key to exit the animation.", "20px Helvetica", "white")
 output.x = window.innerWidth / 2
 output.y = window.innerHeight / 2
 space2D.addChild(output)
