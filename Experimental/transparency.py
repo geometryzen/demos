@@ -27,7 +27,7 @@ for i in range(0,10):
     mesh.position = VectorE3(i-5,0,0)
     scene.add(mesh)
     mesh = Mesh(CubeGeometry(5, 0.1, 5), MeshLambertMaterial({"color": 0x00FF00,"opacity": 0.25,"transparent": True}))
-    mesh.position = VectorE3(0,i-5,0)
+    mesh.position = VectorE3(i, i-5,0)
     scene.add(mesh)
 
 workbench = Workbench(renderer, camera)
