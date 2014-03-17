@@ -22,7 +22,7 @@ scene.add(directionalLight)
 renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
 
-material = MeshLambertMaterial({"color":0x0000FF,"opacity":0.5,"transparent":True})
+material = MeshLambertMaterial({"color": Color(0x0000FF),"opacity":0.5,"transparent":True})
 material.name = "bluecube"
 
 print "repr(material) => " + repr(material)
