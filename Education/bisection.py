@@ -10,8 +10,8 @@ tolerance = 1.0e-6
 def f(x):
     return exp(x)*log(x) - x * x
 
-a = window.prompt("Enter first guess", "0")
-b = window.prompt("Enter second guess", "1")
+a = float(window.prompt("Enter first guess", "0"))
+b = float(window.prompt("Enter second guess", "1"))
 
 dx = abs(b-a)
 
