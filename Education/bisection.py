@@ -23,4 +23,4 @@ while dx > tolerance:
         a = x
     dx = abs(b-a)
 
-print 'Found f(x) = 0 at x = %0.8f +/- %0.8f ' % (x, tolerance)
+print 'Found f(x) = %0.8f at x = %0.8f +/- %0.8f ' % (f(x), x, tolerance)
