@@ -10,4 +10,4 @@ tolerance = 1.0e-6
 def f(x):
     return exp(x)*log(x) - x * x
 
-a = window.prompt("Enter first guess")
+a = window.prompt("Enter first guess", "0")
