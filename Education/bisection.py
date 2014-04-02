@@ -11,3 +11,4 @@ def f(x):
     return exp(x)*log(x) - x * x
 
 a = window.prompt("Enter first guess", "0")
+b = window.prompt("Enter second guess", "0")
