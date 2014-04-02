@@ -16,11 +16,11 @@ b = float(window.prompt("Enter second guess", "1"))
 dx = abs(b-a)
 
 while dx > tolerance:
-    x = (a+b)/2.0
-    if (f(a)*f(x)) < 0:
-        b = x
+    midpoint = (a+b)/2.0
+    if (f(a)*f(midpoint)) < 0:
+        b = midpoint
     else:
-        a = x
+        a = midpoint
     dx = abs(b-a)
 
 print 'Found f(x) = %0.8f at x = %0.8f +/- %0.8f ' % (f(x), x, tolerance)
