@@ -3,7 +3,7 @@ from browser import window, WindowAnimationRunner
 w = None
 
 def tick(time):
-    w.document.body.innerHTML = '<h1>' + str(time) + '</h1>'
+    # w.document.body.innerHTML = '<h1>' + str(time) + '</h1>'
     pass
 
 def terminate(time):
