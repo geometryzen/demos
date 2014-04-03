@@ -1,9 +1,9 @@
 from browser import window, WindowAnimationRunner
 
 #window.open("http://www.geometryzen.org")
-w = window.open("https://www.google.com","_blank")
+w = window.open("","", "height=200, width=100")
 
-w.document.write("Hello")
+#w.document.write("Hello")
 
 def tick(time):
     pass
