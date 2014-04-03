@@ -15,7 +15,7 @@ def setUp():
     global w, board
     w = window.open("", "", "height=400, width=600")
     w.document.body.innerHTML = '<div id="box" style="width:200px;height:200px"></div>'
-    w.document.title = "Hello"
+    w.document.title = "Hello, World!"
     e = w.document.getElementById("box")
     print e
 #    board = JSXGraph.initBoard(e)
