@@ -1,5 +1,5 @@
 from browser import window, WindowAnimationRunner
-from jxg import *
+from jxg import JSXGraph
 
 w = None
 
