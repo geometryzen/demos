@@ -13,6 +13,7 @@ def setUp():
     pass
 
 def tearDown():
+    print "Closing the window that was opened."
     w.close()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
