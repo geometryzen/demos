@@ -1,6 +1,6 @@
 from browser import window, WindowAnimationRunner
 
-w = window.open("","", "height=200, width=100")
+w = window.open("","", "height=200, width=100, top=500")
 
 #w.document.write("Hello")
 
