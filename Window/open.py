@@ -1,10 +1,9 @@
 from browser import window, WindowAnimationRunner
 
 w = None
-#w.document.write("Hello")
 
 def tick(time):
-    # w.document.body.innerHTML = '<h1>' + str(time) + '</h1>'
+    w.document.body.innerHTML = '<h1>' + str(time) + '</h1>'
     pass
 
 def terminate(time):
@@ -13,7 +12,7 @@ def terminate(time):
 def setUp():
     global w
     w = window.open("", "MyWindow", "height=400, width=600")
-    w.document.write("<h1>Hello</h1>")
+    # w.document.write("<h1>Hello</h1>")
 
 def tearDown():
     print "Closing the window that was opened."
