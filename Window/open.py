@@ -1,6 +1,5 @@
 from browser import window, WindowAnimationRunner
 
-w = window.open("","", "height=400, width=600")
 
 #w.document.write("Hello")
 
@@ -11,7 +10,7 @@ def terminate(time):
     return False
 
 def setUp():
-    pass
+    w = window.open("","", "height=400, width=600")
 
 def tearDown():
     print "Closing the window that was opened."
