@@ -6,7 +6,7 @@ w = window.open("https://www.google.com","_blank")
 def tick():
     pass
 
-def terminate():
+def terminate(time):
     return False
 
 def setUp():
