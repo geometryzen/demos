@@ -1,4 +1,4 @@
-from browser import window, WindowAnimationRunner
+from browser import window, WindowAnimationRunner, foo
 from jxg import JSXGraph
 
 w = None
