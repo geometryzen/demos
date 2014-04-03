@@ -18,7 +18,7 @@ def setUp():
     w.document.title = "Hello, World!"
     e = w.document.getElementById("box")
     print e
-#    board = JSXGraph.initBoard(e)
+    board = JSXGraph.initBoard("box")
 
 def tearDown():
     w.close()
