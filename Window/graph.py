@@ -17,7 +17,7 @@ def setUp():
     w.document.body.innerHTML = '<div id="box" style="width:200px;height:200px"></div>'
     e = w.document.getElementById("box")
     print e
-    board = JSXGraph.initBoard("box")
+    board = JSXGraph.initBoard(e)
 
 def tearDown():
     w.close()
