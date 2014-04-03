@@ -10,6 +10,7 @@ def terminate(time):
     return False
 
 def setUp():
+    global w
     w = window.open("","", "height=400, width=600")
 
 def tearDown():
