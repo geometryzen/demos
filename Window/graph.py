@@ -14,6 +14,7 @@ def setUp():
     global w
     w = window.open("", "", "height=400, width=600")
     w.document.body.innerHTML = '<div id="box" style="width:200px;height:200px"></div>'
+    print JSXGraph
 
 def tearDown():
     w.close()
