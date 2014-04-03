@@ -1,1 +1,1 @@
-# Window/open.py
+from browser import window
