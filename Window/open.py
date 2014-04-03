@@ -12,7 +12,7 @@ def terminate(time):
 def setUp():
     global w
     w = window.open("", "MyWindow", "height=400, width=600")
-    # w.document.write("<h1>Hello</h1>")
+    w.document.write("<h1>Hello</h1>")
 
 def tearDown():
     print "Closing the window that was opened."
