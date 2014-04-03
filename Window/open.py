@@ -1,6 +1,6 @@
 from browser import window, WindowAnimationRunner
 
-
+w = None
 #w.document.write("Hello")
 
 def tick(time):
