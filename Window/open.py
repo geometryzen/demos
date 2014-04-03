@@ -12,4 +12,7 @@ def terminate():
 def setUp():
     pass
 
+def tearDown():
+    pass
+
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
