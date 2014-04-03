@@ -7,6 +7,7 @@ def tick(time):
     pass
 
 def terminate(time):
+    print time
     return False
 
 def setUp():
