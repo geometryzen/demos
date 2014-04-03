@@ -11,7 +11,7 @@ def terminate(time):
 
 def setUp():
     global w
-    w = window.open("","", "height=400, width=600")
+    w = window.open("", "MyWindow", "height=400, width=600")
 
 def tearDown():
     print "Closing the window that was opened."
