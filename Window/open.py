@@ -16,7 +16,6 @@ def setUp():
     # w.document.write("<h1>Hello</h1>")
 
 def tearDown():
-    print "Closing the window that was opened."
     w.close()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
