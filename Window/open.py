@@ -10,6 +10,7 @@ def terminate(time):
     return False
 
 def setUp():
+    print "Press Esc key with this window in focus to termintate the animation."
     global w
     w = window.open("", "MyWindow", "height=400, width=600")
     # w.document.write("<h1>Hello</h1>")
