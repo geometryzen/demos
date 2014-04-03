@@ -9,4 +9,7 @@ def tick():
 def terminate():
     return False
 
+def setUp():
+    pass
+
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
