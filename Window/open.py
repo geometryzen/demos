@@ -6,4 +6,7 @@ w = window.open("https://www.google.com","_blank")
 def tick():
     pass
 
+def terminate():
+    return False
+
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
