@@ -15,7 +15,7 @@ def setUp():
     global w, board
     w = window.open("", "", "height=400, width=600")
     w.document.body.innerHTML = '<div id="box" style="width:200px;height:200px"></div>'
-    board = JSXGraph.initBoard();
+    board = JSXGraph.initBoard("box");
 
 def tearDown():
     w.close()
