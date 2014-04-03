@@ -12,7 +12,7 @@ def setUp():
     print "Press Esc key with this window as focus to termintate the animation."
     global w
     w = window.open("", "", "height=400, width=600")
-    w.document.body.innerHTML = '<h1>' + '</h1>'
+    w.document.body.innerHTML = '<div>' + '</div>'
 
 def tearDown():
     w.close()
