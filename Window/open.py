@@ -4,7 +4,7 @@ w = None
 #w.document.write("Hello")
 
 def tick(time):
-    w.document.body.innerHTML = '<h1>', time, '</h1>'
+    w.document.body.innerHTML = '<h1>', str(time), '</h1>'
     pass
 
 def terminate(time):
