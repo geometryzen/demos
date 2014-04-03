@@ -4,6 +4,7 @@ w = None
 #w.document.write("Hello")
 
 def tick(time):
+    w.document.body.innerHTML = '<h1>', time, '</h1>'
     pass
 
 def terminate(time):
@@ -12,8 +13,6 @@ def terminate(time):
 def setUp():
     global w
     w = window.open("", "MyWindow", "height=400, width=600")
-    print w.document
-    w.document.body.innerHTML = '<h1>Hello!</h1>'
 
 def tearDown():
     print "Closing the window that was opened."
