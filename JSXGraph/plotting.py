@@ -17,13 +17,7 @@ dataX = [1,2,3,4,5,6,7,8]
 dataY = [0.3,4.0,-1,2.3,7,9,8,9]
 
 # It does seem that JXG calls with a second Boolean argument.
-def foo(x, unused):
-    if unused == True:
-        print x, unused
-        return p.X() * sin(x) * x
-    if unused == False:
-        print x, unused
-        return p.X() * sin(x) * x
+def foo(x, notFirstOrNone):
     return p.X() * sin(x) * x
 
 b.create('curve',[dataX,dataY],{"strokeColor":'red'})
