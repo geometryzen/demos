@@ -9,6 +9,7 @@ div.style.height = "400px"
 
 board = JSXGraph.initBoard("box", {"axis":True,"grid":True,"showCopyright":False})
 
-p = board.create('point',[1,2],{"name":'X',"size":3,"face":'[]'})
+free = board.create('point',[0,0],{"name":'A',"size":3})
+dep = board.create('point',["X(A)",1],{"name":'B',"size":3})
 
-p.setAttribute({"fixed":True});
+#p.setAttribute({"fixed":True});
