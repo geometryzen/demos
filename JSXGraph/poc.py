@@ -11,4 +11,4 @@ board = JSXGraph.initBoard("box", {"axis":True,"grid":True,"showCopyright":False
 
 p = board.create('point',[1,2],{"name":'X',"size":3,"face":'[]'})
 
-p.setProperty({"fixed":True});
+p.setAttribute({"fixed":True});
