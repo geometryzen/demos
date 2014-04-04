@@ -12,4 +12,7 @@ b = JSXGraph.initBoard("box", {"boundingbox":[-5,5,5,-5]})
 p1 = b.create('point',[0,0],{"name":'A',"size":4})
 p2 = b.create('point',[ 2,-1],{"name":'B',"size":4})
 
-ci = b.create('circle',[p1,p2],{"fillColor":"#ffff00", "dash":2})
+ci = b.create(
+      'circle',
+              [p1,p2],
+              {"fillColor":"#ffff00", "dash":2})
