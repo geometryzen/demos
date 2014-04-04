@@ -16,3 +16,4 @@ p = b.create('point',[1,1])
 dataX = [1,  2,   3,4,5,6,7,8]
 dataY = [0.3,4.0,-1,2,3,7,9,8]
 b.create('curve',[dataX,dataY],{"strokeColor":'red'})
+b.create('curve',[dataX,lambda x,unused: p.X()],{"strokeColor":'blue'})
