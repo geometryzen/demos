@@ -14,7 +14,7 @@ free = board.create('point',[3,4],{"name":'A',"size":3})
 def foo():
     return free.X()
 
-dep = board.create('point',["X(A)",1],{"name":'B',"size":3})
+dep = board.create('point',[foo,1],{"name":'B',"size":3})
 
 #p.setAttribute({"fixed":True});
 
