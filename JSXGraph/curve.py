@@ -1,6 +1,6 @@
 from browser import document, window
 from jxg import require
-from math import sin
+from math import *
 
 JXG = require('JXG')
 JSXGraph = JXG.JSXGraph
@@ -13,4 +13,4 @@ div.style.height = "400px"
 
 b = JSXGraph.initBoard("box", {"boundingbox":[-10,10,20,-10]})
 
-b.create('functiongraph',[sin,-math.pi,math.pi])
+b.create('functiongraph',[sin,-pi,pi])
