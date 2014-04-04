@@ -12,4 +12,4 @@ b = JSXGraph.initBoard("box", {"axis":True,"grid":True,"boundingbox":[-5,2,5,-2]
 p1 = b.create('point',[-1,1],{"name":'A',"size":4})
 p2 = b.create('point',[ 2,-1],{"name":'B',"size":4})
 
-li = b.create('line',[p1,p2],{"strokecolor":"#00ff00"})
+li = b.create('line',[p1,p2],{"strokecolor":"#00ff00", "dash":2})
