@@ -11,7 +11,7 @@ div = document.getElementById("box")
 div.style.width  = "400px"
 div.style.height = "400px"
 
-b = JSXGraph.initBoard("box", {"boundingbox":[-10,10,20,-10]})
+b = JSXGraph.initBoard("box", {"boundingbox":[-10,10,20,-10]},"axis":True)
 
 def foo(x,unk):
     return sin(x)
