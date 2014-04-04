@@ -7,7 +7,7 @@ div = document.getElementById("box")
 div.style.width  = "400px"
 div.style.height = "400px"
 
-b = JSXGraph.initBoard("box", {"axis":True,"grid":True,"boundingbox":[-5,2,5,-2]})
+b = JSXGraph.initBoard("box", {"boundingbox":[-5,2,5,-2]})
 
 p1 = b.create('point',[-1,1],{"name":'A',"size":4})
 p2 = b.create('point',[ 2,-1],{"name":'B',"size":4})
