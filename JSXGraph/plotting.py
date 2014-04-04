@@ -22,6 +22,7 @@ def foo(x, unused):
         return p.X() * sin(x) * x
     if unused == False:
         return p.X() * sin(x) * x
+    return p.X() * sin(x) * x
 
 b.create('curve',[dataX,dataY],{"strokeColor":'red'})
 
