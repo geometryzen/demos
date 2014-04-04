@@ -17,6 +17,7 @@ ci = b.create(
     [p1,p2],
     {
         "fillColor":"#555500",
-        "dash":2
+        "dash":2,
+        "fillOpacity": lambda: p2.X() * 0.25
     }
 )
