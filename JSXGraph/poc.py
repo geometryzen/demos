@@ -16,3 +16,4 @@ dep = board.create('point',["X(A)",1],{"name":'B',"size":3})
 
 print free
 print free.X()
+print free.Y()
