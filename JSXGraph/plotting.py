@@ -20,7 +20,7 @@ dataY = [0.3,4.0,-1,2.3,7,9,8,9]
 def foo(x, unused):
     return p.Y()
 
-b.create('curve',[dataX,foo],{"strokeColor":'red'})
+b.create('curve',[dataX,dataY],{"strokeColor":'red'})
 
 # FIXME: Some bug prevents us from doing this.
 b.create('curve',[dataX,lambda x,first:p.X()],{"strokeColor":'blue',"dash":1})
