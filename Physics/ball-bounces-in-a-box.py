@@ -78,6 +78,6 @@ def terminate(t):
 
 def tearDown():
     workbench3D.tearDown()
-    print frames / elapsed
+    # print frames / elapsed
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
