@@ -2,6 +2,7 @@ from browser import document
 from jxg import JSXGraph
 
 gc = document.getElementById("graph-container")
+pc = document.getElementById("printer-container")
 
 div = document.createElement("div")
 div.id = "box"
