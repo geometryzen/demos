@@ -1,7 +1,7 @@
 from browser import document
 from jxg import JSXGraph
 
-gc = document.getElementById("graph-container").innerHTML = '<div id="box"></div>'
+document.getElementById("graph-container").innerHTML = '<div id="box"></div>'
 div = document.getElementById("box")
 
 div.style.width = "400px"
