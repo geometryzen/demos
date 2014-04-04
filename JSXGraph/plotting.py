@@ -23,4 +23,4 @@ def foo(x, unused):
 b.create('curve',[dataX,dataY],{"strokeColor":'red'})
 
 # FIXME: Some bug prevents us from doing this.
-#b.create('curve',[dataX,foo],{"strokeColor":'blue'})
+b.create('curve',[dataX,dataY],{"strokeColor":'blue',"dash":1})
