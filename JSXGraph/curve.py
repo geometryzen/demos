@@ -13,7 +13,7 @@ div.style.height = "400px"
 
 b = JSXGraph.initBoard("box", {"boundingbox":[-10,10,20,-10]})
 
-def foo(x):
+def foo(x,unk):
     return sin(x)
 
 b.create('functiongraph',[foo,-pi,pi])
