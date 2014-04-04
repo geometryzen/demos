@@ -1,5 +1,5 @@
 from browser import document, window
-from jxg import require
+import jxg
 from math import *
 
 JSXGraph = require('JXG').JSXGraph
