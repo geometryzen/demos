@@ -13,3 +13,5 @@ free = board.create('point',[0,0],{"name":'A',"size":3})
 dep = board.create('point',["X(A)",1],{"name":'B',"size":3})
 
 #p.setAttribute({"fixed":True});
+
+print free.X()
