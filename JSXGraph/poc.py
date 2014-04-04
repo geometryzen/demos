@@ -3,7 +3,7 @@ from jxg import require
 
 JXG = require('JXG')
 print JXG
-JSXGraph = JXG.JSXGraph()
+JSXGraph = JXG.JSXGraph
 
 document.getElementById("graph-container").innerHTML = '<div id="box" class="jxgbox"></div>'
 div = document.getElementById("box")
