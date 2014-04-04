@@ -16,7 +16,7 @@ def foo():
 
 bar = lambda: free.X()
 
-dep = board.create('point',[bar,1],{"name":'B',"size":3})
+dep = board.create('point',[lambda: free.X(),1],{"name":'B',"size":3})
 
 #p.setAttribute({"fixed":True});
 
