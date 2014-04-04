@@ -21,3 +21,5 @@ ci = b.create(
         "fillOpacity": lambda: p2.X() * 0.25
     }
 )
+
+print window.JXG
