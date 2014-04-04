@@ -7,10 +7,10 @@ div = document.getElementById("box")
 div.style.width  = "400px"
 div.style.height = "400px"
 
-board = JSXGraph.initBoard("box", {"axis":True,"grid":True,"boundingbox":[-5,2,5,-2]})
+b = JSXGraph.initBoard("box", {"axis":True,"grid":True,"boundingbox":[-5,2,5,-2]})
 
-free = board.create('point',[3,4],{"name":'A',"size":3})
-dep = board.create('point',[lambda: free.X(),1],{"name":'B',"size":3})
+p1 = b.create('point',[-1,1],{"name":'A',"size":4})
+p2 = b.create('point',[ 2,1],{"name":'B',"size":4})
 
 #free.setAttribute({"fixed":True});
 
