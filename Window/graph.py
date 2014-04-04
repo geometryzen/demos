@@ -11,4 +11,4 @@ div.style.height = "400px"
 
 gc.appendChild(div)
 
-print gc
+JSXGraph.initBoard("box")
