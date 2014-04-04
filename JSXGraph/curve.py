@@ -13,4 +13,4 @@ div.style.height = "400px"
 b = JSXGraph.initBoard("box", {"axis":True,"grid":True})
 
 p = b.create('point',[1,1])
-b.create('functiongraph',[lambda x: p.X() * sin(x)])
+b.create('functiongraph',[lambda x,unused: p.X() * sin(x)])
