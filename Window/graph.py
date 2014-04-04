@@ -5,7 +5,7 @@ gc = document.getElementById("graph-container")
 
 div = document.createElement("div")
 div.id = "box"
-div.class = "jxgbox"
+div.style.width = "400px"
 
 gc.appendChild(div)
 
