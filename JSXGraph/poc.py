@@ -1,5 +1,5 @@
 from browser import document, window
-from jxg import JSXGraph
+from jxg import require
 
 document.getElementById("graph-container").innerHTML = '<div id="box" class="jxgbox"></div>'
 div = document.getElementById("box")
