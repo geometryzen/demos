@@ -16,4 +16,4 @@ b = JSXGraph.initBoard("box", {"boundingbox":[-10,10,20,-10],"axis":True})
 def foo(x,unk):
     return sin(x)
 
-b.create('functiongraph',[foo,-pi,pi])
+b.create('functiongraph',[foo,-pi,2*pi])
