@@ -9,7 +9,7 @@ div.style.height = "400px"
 
 b = JSXGraph.initBoard("box", {"boundingbox":[-5,2,5,-2]})
 
-p1 = b.create('point',[-1,1],{"name":'A',"size":4})
+p1 = b.create('point',[0,0],{"name":'A',"size":4})
 p2 = b.create('point',[ 2,-1],{"name":'B',"size":4})
 
-li = b.create('line',[p1,p2],{"lastArrow":True, "dash":2})
+li = b.create('circle',[p1,p2],{"lastArrow":True, "dash":2})
