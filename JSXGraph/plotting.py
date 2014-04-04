@@ -18,6 +18,7 @@ dataY = [0.3,4.0,-1,2.3,7,9,8,9]
 b.create('curve',[dataX,dataY],{"strokeColor":'red'})
 
 def foo(x, unused):
+    print x,unused
     return p.X()
 
 b.create('curve',[dataX,foo],{"strokeColor":'blue'})
