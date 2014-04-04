@@ -7,4 +7,5 @@ div = document.getElementById("box")
 div.style.width  = "400px"
 div.style.height = "400px"
 
-JSXGraph.initBoard("box", {"boundingbox":[-2,4,6,-4], "axis":True, "grid":True})
+JSXGraph.initBoard("box", 
+                   {"boundingbox":[-2,4,6,-4], "axis":True, "grid":True})
