@@ -1,7 +1,7 @@
 from browser import document
 from jxg import JSXGraph
 
-gc = document.getElementById("graph-container").innerHTML = ""
+gc = document.getElementById("graph-container").innerHTML = '<div id="box"></div>'
 pc = document.getElementById("printer-container")
 
 div = document.createElement("div")
