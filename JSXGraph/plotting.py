@@ -18,9 +18,9 @@ dataY = [0.3,4.0,-1,2.3,7,9,8,9]
 
 # It does seem that JXG calls with a second Boolean argument.
 def foo(x, unused):
-    return p.Y()
+    return p.X() * sin(x) * x
 
 b.create('curve',[dataX,dataY],{"strokeColor":'red'})
 
 # FIXME: Some bug prevents us from doing this.
-b.create('curve',[dataX,lambda x,first: p.X()*sin(x)*x],{"strokeColor":'blue',"dash":1})
+b.create('curve',[dataX,foo],{"strokeColor":'blue',"dash":1})
