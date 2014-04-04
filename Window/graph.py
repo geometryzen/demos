@@ -11,4 +11,4 @@ div.style.height = "400px"
 
 gc.appendChild(div)
 
-JSXGraph.initBoard("box")
+JSXGraph.initBoard("box", {"boundingbox":[-2,4,6,-4]})
