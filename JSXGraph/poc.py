@@ -26,4 +26,3 @@ ci = b.create(
     }
 )
 
-print window.JXG
