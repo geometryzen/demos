@@ -1,2 +1,2 @@
-from browser import window
+from browser import document
 from jxg import JSXGraph
