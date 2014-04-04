@@ -2,8 +2,7 @@ from browser import document, window
 from jxg import require
 from math import *
 
-JXG = require('JXG')
-JSXGraph = JXG.JSXGraph
+JSXGraph = require('JXG').JSXGraph
 
 document.getElementById("graph-container").innerHTML = '<div id="box" class="jxgbox"></div>'
 div = document.getElementById("box")
