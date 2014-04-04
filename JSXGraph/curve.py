@@ -10,7 +10,7 @@ div = document.getElementById("box")
 div.style.width  = "400px"
 div.style.height = "400px"
 
-b = JSXGraph.initBoard("box", {"boundingbox":[-10,10,20,-10],"axis":True})
+b = JSXGraph.initBoard("box", {"axis":True})
 
 p = b.create('point',[1,1])
 b.create('functiongraph',[lambda x,unused: p.X() * sin(x)])
