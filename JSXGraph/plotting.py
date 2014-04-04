@@ -20,4 +20,5 @@ b.create('curve',[dataX,dataY],{"strokeColor":'red'})
 def foo(x, unused):
     return p.X()
 
+# FIXME: Some bug prevents us from doing this.
 b.create('curve',[dataX,foo],{"strokeColor":'blue'})
