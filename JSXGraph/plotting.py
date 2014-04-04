@@ -18,7 +18,7 @@ dataY = [0.3,4.0,-1,2.3,7,9,8,9]
 
 # It does seem that JXG calls with a second Boolean argument.
 def foo(x, unused):
-    return p.X()
+    return p.()
 
 b.create('curve',[dataX,foo],{"strokeColor":'red'})
 
