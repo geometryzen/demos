@@ -14,4 +14,8 @@ p2 = b.create('point',[ 2,-1],{"name":'B',"size":4})
 
 ci = b.create('circle',
               [p1,p2],
-              {"fillColor":"#555500", "dash":2})
+              {
+                  "fillColor":"#555500",
+                   "dash":2
+               }
+)
