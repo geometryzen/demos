@@ -9,4 +9,4 @@ div.style.height = "400px"
 
 board = JSXGraph.initBoard("box", {"axis":True,"grid":True,"showCopyright":False})
 
-print board
+p = board.create('point',[1,1])
