@@ -5,4 +5,6 @@ gc = document.getElementById("graph-container")
 
 div = document.createElement("div")
 
+gc.addChild(div)
+
 print gc
