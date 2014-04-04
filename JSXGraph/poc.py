@@ -1,4 +1,4 @@
-# Thisfrom browser import document
+from browser import document
 from jxg import JSXGraph
 
 document.getElementById("graph-container").innerHTML = '<div id="box" class="jxgbox"></div>'
