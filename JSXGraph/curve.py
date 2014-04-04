@@ -10,4 +10,4 @@ div = document.getElementById("box")
 div.style.width  = "400px"
 div.style.height = "400px"
 
-b = JSXGraph.initBoard("box", {"boundingbox":[-5,5,5,-5]})
+b = JSXGraph.initBoard("box", {"boundingbox":[-10,10,20,-10]})
