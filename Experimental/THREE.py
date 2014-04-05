@@ -13,5 +13,6 @@ print repr(v)
 z = v + w
 print z.x, z.y, z.z
 
+# The danger of assuming that default method names have consistent behavior...
 z = v - w
 print z.x, z.y, z.z
