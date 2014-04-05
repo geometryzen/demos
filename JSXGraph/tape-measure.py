@@ -23,3 +23,4 @@ p3 = board.create('point', [2,1])
 tape = board.create('tapemeasure', [[0, 2], [2, 2]], {"name":'dist'})
 
 board.zoomX = 0.5
+print board.zoomX
