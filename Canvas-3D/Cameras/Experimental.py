@@ -92,6 +92,7 @@ def setUp():
         scene.add(cube)
         
     # Lights
+    print "Adding Lights"
     ambientLight = THREE.AmbientLight(random() * 0x10)
     scene.add(ambientLight)
     
@@ -111,6 +112,7 @@ def setUp():
 
     window.addEventListener("resize", onWindowResize, False)
     onWindowResize(None)
+    print "setUp complete!"
 
 def tick(t):
     theta = t * 0.1
