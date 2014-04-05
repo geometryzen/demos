@@ -3,7 +3,7 @@ from jxg import require
 
 # WARNING: This method for acquiring the library is subject to change,
 #          but the API will otherwise stay the same.
-graph = require('JXG').JSXGraph
+graph = window.JXG.JSXGraph
 
 document.getElementById("graph-container").innerHTML = '<div id="box" class="jxgbox"></div>'
 div = document.getElementById("box")
