@@ -4,7 +4,7 @@ from random import random
 
 THREE = window.THREE
 
-glwin = window.open("","","width=600,height=600")
+glwin = window.open("","","width=600,height=480")
 
 # Global variables
 camera = THREE.OrthographicCamera(-1.0, 1.0, 1.0, -1.0, -500.0, 1000.0)
@@ -31,6 +31,7 @@ def onWindowResize(event):
 def setUp():
     print "Hello!"
     print "This example will end automatically in "+str(progressEnd)+" seconds."
+    # Abit surprising that this works given two different documents.
     glwin.document.body.insertBefore(renderer.domElement, glwin.document.body.firstChild)
 
     # Grid
