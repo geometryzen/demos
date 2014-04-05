@@ -58,24 +58,24 @@ def setUp():
     # Grid
     size = 500
     step = 50
-    geometry = Geometry()
+    geometry = THREE.Geometry()
     for i in range(-size, size+step, step):
         geometry.vertices.append(VectorE3(float(-size), 0.0, float(i)))
         geometry.vertices.append(VectorE3(float(+size), 0.0, float(i)))
         geometry.vertices.append(VectorE3( float(i), 0.0, float(-size)))
         geometry.vertices.append(VectorE3( float(i), 0.0, float(+size)))
         
-    material = LineBasicMaterial({"color":0x000000,"opacity":0.2})
+    material = THREE.LineBasicMaterial({"color":0x000000,"opacity":0.2})
     
-    line = Line(geometry, material)
+    line = THREE.Line(geometry, material)
     line.type = LinePieces
     scene.add(line)
     
     # Cubes
-    geometry = CubeGeometry(50, 50, 50)
-    material = MeshLambertMaterial({"color":0xFFFFFF,"shading":FlatShading, "overdraw":True})
+    geometry = THREE.CubeGeometry(50, 50, 50)
+    material = THREE.MeshLambertMaterial({"color":0xFFFFFF,"shading":FlatShading, "overdraw":True})
     for i in range(0, 100):
-        cube = Mesh(geometry, material)
+        cube = THREE.Mesh(geometry, material)
         cube.scale.y = floor(random() * 2 + 1)
         cube.position.x = floor((random() * 1000 - 500) / 50) * 50 + 25
         cube.position.y = (cube.scale.y * 50) / 2
@@ -83,17 +83,17 @@ def setUp():
         scene.add(cube)
         
     # Lights
-    ambientLight = AmbientLight(random() * 0x10)
+    ambientLight = THREE.AmbientLight(random() * 0x10)
     scene.add(ambientLight)
     
-    directionalLight = DirectionalLight(random() * 0xFFFFFF)
+    directionalLight = THREE.DirectionalLight(random() * 0xFFFFFF)
     directionalLight.position.x = random() - 0.5
     directionalLight.position.y = random() - 0.5
     directionalLight.position.z = random() - 0.5
     directionalLight.position.normalize()
     scene.add(directionalLight)
     
-    directionalLight = DirectionalLight(random() * 0xFFFFFF)
+    directionalLight = THREE.DirectionalLight(random() * 0xFFFFFF)
     directionalLight.position.x = random() - 0.5
     directionalLight.position.y = random() - 0.5
     directionalLight.position.z = random() - 0.5
