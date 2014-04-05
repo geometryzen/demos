@@ -4,7 +4,7 @@ from random import random
 
 THREE = window.THREE
 
-glwin = window.open("","","width=1200,height=960")
+glwin = window.open("","","width=600,height=480")
 
 # Global variables
 camera = THREE.OrthographicCamera(-1.0, 1.0, 1.0, -1.0, -500.0, 1000.0)
@@ -15,7 +15,7 @@ camera.position.z = 200.0
 renderer = THREE.WebGLRenderer({"antialias": True})
 renderer.setClearColor(THREE.Color(0xFFFFFF), 1.0)
 scene = THREE.Scene()
-progressEnd = 30
+progressEnd = 10
 
 def onWindowResize(event):
     halfW = glwin.innerWidth / 2
