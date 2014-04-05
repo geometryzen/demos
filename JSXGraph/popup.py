@@ -3,6 +3,8 @@ from math import *
 
 graph = window.JXG.JSXGraph
 
+plotWindow = window.open("","JSXGraph-Window","width=500,height=500")
+
 document.getElementById("graph-container").innerHTML = '<div id="box" class="jxgbox"></div>'
 div = document.getElementById("box")
 
