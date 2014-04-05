@@ -15,6 +15,6 @@ A = board.create('point',[1,1],{"name": 'Alice'})
 B = board.create('point',[2,2],{"name":'Bob'})
 
 def foo(x):
-    return 1
+    return A.X()
 
 f = board.create('functiongraph',[foo])
