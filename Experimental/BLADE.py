@@ -9,4 +9,5 @@ print v.w, v.x, v.y, v.xy
 print str(v)
 print repr(v)
 
+z = v.add(w)
 z = v + w
