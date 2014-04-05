@@ -78,7 +78,7 @@ def setUp():
     directionalLight.position.normalize()
     scene.add(directionalLight)
 
-    window.addEventListener("resize", onWindowResize, False)
+    glwin.addEventListener("resize", onWindowResize, False)
     onWindowResize(None)
 
 def tick(t):
