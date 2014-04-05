@@ -1,5 +1,5 @@
 from browser import window
 
-THREE = window.THREED
+THREE = window.THREE
 
 print repr(THREE.Vector3)
