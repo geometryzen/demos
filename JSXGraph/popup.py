@@ -13,7 +13,7 @@ div = plotDoc.getElementById("box")
 div.style.width  = "400px"
 div.style.height = "400px"
 
-board = graph.initBoard("box", {"axis":True,"grid":True})
+board = graph.initBoard("box", {"document":plotDoc,"axis":True,"grid":True})
 
 A = board.create('point',[1,1],{"name": 'Alice'})
 B = board.create('point',[2,2],{"name":'Bob'})
