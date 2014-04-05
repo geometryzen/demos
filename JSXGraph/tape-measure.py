@@ -13,15 +13,7 @@ div.style.height = "400px"
 
 board = graph.initBoard("box", {"boundingbox":[-1,3,3,-1],"axis":True})
 
-print board.hasMouseUp
-print board.zoomX
-print board.xmlString
-
 p1 = board.create('point', [0,0])
 p2 = board.create('point', [1,1])
 p3 = board.create('point', [2,1])
 tape = board.create('tapemeasure', [[0, 2], [2, 2]], {"name":'dist'})
-
-board.zoomX = 2.0
-print board.zoomX
-print board.origin.scrCoords
