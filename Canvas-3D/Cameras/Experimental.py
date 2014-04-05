@@ -73,7 +73,7 @@ def setUp():
     
     # Cubes
     geometry = THREE.CubeGeometry(50, 50, 50)
-    material = THREE.MeshLambertMaterial({"color":0xFFFFFF,"shading":FlatShading, "overdraw":True})
+    material = THREE.MeshLambertMaterial({"color":0xFFFFFF,"shading":THREE.FlatShading, "overdraw":True})
     for i in range(0, 100):
         cube = THREE.Mesh(geometry, material)
         cube.scale.y = floor(random() * 2 + 1)
