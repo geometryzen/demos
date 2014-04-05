@@ -12,3 +12,6 @@ print repr(v)
 
 z = v + w
 print z.x, z.y, z.z
+
+z = v - w
+print z.x, z.y, z.z
