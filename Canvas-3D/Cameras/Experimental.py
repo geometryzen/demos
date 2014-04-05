@@ -56,6 +56,7 @@ def setUp():
         container.appendChild(renderer.domElement)
 
     # Grid
+    print "Making the Grid"
     size = 500
     step = 50
     geometry = THREE.Geometry()
