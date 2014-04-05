@@ -14,6 +14,7 @@ div.style.height = "400px"
 board = graph.initBoard("box", {"boundingbox":[-1,3,3,-1],"axis":True})
 
 print board.hasMouseUp
+print board.xmlString
 
 p1 = board.create('point', [0,0])
 p2 = board.create('point', [1,1])
