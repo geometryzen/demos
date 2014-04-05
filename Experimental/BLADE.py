@@ -22,3 +22,5 @@ z = v - w
 print z
 z = v * w
 print z
+z = v / w
+print z
