@@ -12,7 +12,7 @@ camera.position.x = 200.0
 camera.position.y = 100.0
 camera.position.z = 200.0
 
-renderer = WebGLRenderer({"antialias": True})
+renderer = THREE.WebGLRenderer({"antialias": True})
 renderer.setClearColor(Color(0xFFFFFF), 1.0)
 scene = Scene()
 view = document.getElementById("view")
