@@ -1,4 +1,4 @@
-from browser import *
+from browser import window
 from math import cos, sin, floor
 from random import random
 
