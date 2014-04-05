@@ -14,4 +14,8 @@ board = graph.initBoard("box", {"axis":True,"grid":True})
 A = board.create('point',[1,1],{"name": 'Alice'})
 B = board.create('point',[2,2],{"name":'Bob'})
 
-f = board.create('functiongraph',[lambda x,k: A.X() * sin(x)])
+def foo(x):
+    print x
+    return A.X() * sin(x)
+
+f = board.create('functiongraph',[foo])
