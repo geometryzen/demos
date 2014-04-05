@@ -60,10 +60,10 @@ def setUp():
     step = 50
     geometry = THREE.Geometry()
     for i in range(-size, size+step, step):
-        geometry.vertices.append(VectorE3(float(-size), 0.0, float(i)))
-        geometry.vertices.append(VectorE3(float(+size), 0.0, float(i)))
-        geometry.vertices.append(VectorE3( float(i), 0.0, float(-size)))
-        geometry.vertices.append(VectorE3( float(i), 0.0, float(+size)))
+        geometry.vertices.append(THREE.Vector3(float(-size), 0.0, float(i)))
+        geometry.vertices.append(THREE.Vector3(float(+size), 0.0, float(i)))
+        geometry.vertices.append(THREE.Vector3( float(i), 0.0, float(-size)))
+        geometry.vertices.append(THREE.Vector3( float(i), 0.0, float(+size)))
         
     material = THREE.LineBasicMaterial({"color":0x000000,"opacity":0.2})
     
