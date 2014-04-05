@@ -1,4 +1,4 @@
-from browser import window
+from browser import window, WindowAnimationRunner
 from math import cos, sin, floor
 from random import random
 
