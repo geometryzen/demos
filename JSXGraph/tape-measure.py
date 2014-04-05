@@ -24,4 +24,4 @@ tape = board.create('tapemeasure', [[0, 2], [2, 2]], {"name":'dist'})
 
 board.zoomX = 2.0
 print board.zoomX
-print board.origin.usrCoords
+print board.origin.scrCoords
