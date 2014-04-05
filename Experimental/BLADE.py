@@ -10,4 +10,5 @@ print str(v)
 print repr(v)
 
 z = v.add(w)
+print z
 z = v + w
