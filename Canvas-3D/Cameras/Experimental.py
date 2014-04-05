@@ -62,6 +62,7 @@ def setUp():
     geometry = THREE.Geometry()
     print geometry
     print geometry.vertices
+    geometry.vertices.append(THREE.Vector3(1, 2, 3))
     print "ok"
     for i in range(-size, size+step, step):
         geometry.vertices.append(THREE.Vector3(float(-size), 0.0, float(i)))
