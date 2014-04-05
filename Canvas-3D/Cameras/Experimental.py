@@ -18,8 +18,6 @@ scene = THREE.Scene()
 view = document.getElementById("view")
 progressEnd = 5
 
-THREE.Geometry().vertices
-
 def onWindowResize(event):
     if (useLargeCanvas):
         halfW = window.innerWidth / 2
