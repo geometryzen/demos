@@ -31,7 +31,6 @@ def onWindowResize(event):
 def setUp():
     global glwin
     glwin = window.open("","","width=800,height=600")
-    print "Hello!"
     print "This example will end automatically in "+str(progressEnd)+" seconds."
     # A bit surprising that this works given two different documents.
     glwin.document.body.insertBefore(renderer.domElement, glwin.document.body.firstChild)
