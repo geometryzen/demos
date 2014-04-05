@@ -14,7 +14,7 @@ camera.position.z = 200.0
 
 renderer = THREE.WebGLRenderer({"antialias": True})
 renderer.setClearColor(THREE.Color(0xFFFFFF), 1.0)
-scene = Scene()
+scene = THREE.Scene()
 view = document.getElementById("view")
 progressEnd = 5
 
