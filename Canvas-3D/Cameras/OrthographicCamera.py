@@ -1,11 +1,9 @@
-#from three import *
+from three import *
 from browser import *
 from math import cos, sin, floor
 from random import random
 
 useLargeCanvas = True
-
-THREE = window.THREE
 
 # Global variables
 camera = THREE.OrthographicCamera(-1.0, 1.0, 1.0, -1.0, -500.0, 1000.0)
