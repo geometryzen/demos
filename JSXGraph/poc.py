@@ -1,9 +1,6 @@
 from browser import document, window
 
-# WARNING: This method for acquiring the library is subject to change,
-#          but the API will otherwise stay the same.
-JXG = require('JXG')
-JSXGraph = JXG.JSXGraph
+graph = window.JXG.JSXGraph
 
 document.getElementById("graph-container").innerHTML = '<div id="box" class="jxgbox"></div>'
 div = document.getElementById("box")
@@ -11,7 +8,7 @@ div = document.getElementById("box")
 div.style.width  = "400px"
 div.style.height = "400px"
 
-b = JSXGraph.initBoard("box", {"boundingbox":[-5,5,5,-5]})
+b = graph.initBoard("box", {"boundingbox":[-5,5,5,-5]})
 
 p1 = b.create('point',[0,0],{"name":'A',"size":4})
 p2 = b.create('point',[ 2,-1],{"name":'B',"size":4})
