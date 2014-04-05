@@ -12,4 +12,4 @@ div.style.height = "400px"
 b = graph.initBoard("box", {"axis":True,"grid":True})
 
 p = b.create('point',[1,1])
-b.create('functiongraph',[lambda x,k: p.X() * sin(x)])
+f = b.create('functiongraph',[lambda x,k: p.X() * sin(x)])
