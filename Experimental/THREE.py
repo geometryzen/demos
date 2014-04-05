@@ -8,3 +8,5 @@ w = THREE.Vector3(0.5,0.5,0.5)
 print v.x, v.y, v.z
 print str(v)
 print repr(v)
+
+print v + w
