@@ -11,17 +11,9 @@ div = document.getElementById("box")
 div.style.width  = "400px"
 div.style.height = "400px"
 
-b = graph.initBoard("box", {"boundingbox":[-5,5,5,-5]})
+board = graph.initBoard("box", {"boundingbox":[-1,3,3,-1],"axis":true})
 
-p1 = b.create('point',[0,0],{"name":'A',"size":4})
-p2 = b.create('point',[ 2,-1],{"name":'B',"size":4})
-
-ci = b.create(
-    'circle',
-    [p1,p2],
-    {
-        "fillColor":"#555500",
-        "dash":2,
-        "fillOpacity": lambda: p2.X() * 0.25
-    }
-)
+p1 = board.create('point', [0,0])
+p2 = board.create('point', [1,1])
+p3 = board.create('point', [2,1])
+tape = board.create('tapemeasure', [[0, 2], [2, 2]], {name:'dist'})
