@@ -2,8 +2,6 @@ from browser import *
 from math import cos, sin, floor
 from random import random
 
-useLargeCanvas = True
-
 THREE = window.THREE
 
 glwin = window.open("","","width=600,height=600")
@@ -17,31 +15,18 @@ camera.position.z = 200.0
 renderer = THREE.WebGLRenderer({"antialias": True})
 renderer.setClearColor(THREE.Color(0xFFFFFF), 1.0)
 scene = THREE.Scene()
-view = document.getElementById("view")
 progressEnd = 5
 
 def onWindowResize(event):
-    if (useLargeCanvas):
-        halfW = window.innerWidth / 2
-        halfH = window.innerHeight / 2
+    halfW = window.innerWidth / 2
+    halfH = window.innerHeight / 2
         
-        camera.left = -halfW
-        camera.right = halfW
-        camera.top = halfH
-        camera.bottom = -halfH
-        camera.updateProjectionMatrix()
-        renderer.setSize(window.innerWidth, window.innerHeight)
-    else:
-        container = document.getElementById("canvas-container")
-        halfW = container.clientWidth / 2
-        halfH = container.clientHeight / 2
-        
-        camera.left = -halfW
-        camera.right = halfW
-        camera.top = halfH
-        camera.bottom = -halfH
-        camera.updateProjectionMatrix()
-        renderer.setSize(container.clientWidth, container.clientHeight)
+    camera.left = -halfW
+    camera.right = halfW
+    camera.top = halfH
+    camera.bottom = -halfH
+    camera.updateProjectionMatrix()
+    renderer.setSize(glwin.innerWidth, glwin.innerHeight)
     
 def discardCanvases():
     for cs in document.getElementsByTagName("canvas"):
