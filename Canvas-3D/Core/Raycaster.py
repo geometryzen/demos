@@ -1,4 +1,7 @@
+from browser import window
 from three import *
+
+THREE = window.THREE
 
 origin = VectorE3(1.0, 0.0, 0.0)
 direction = VectorE3(1.0, 0.0, 0.0, False)
