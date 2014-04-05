@@ -1,4 +1,5 @@
-from browser import document, window
+# This requires JSXGraph build Nightly on 2014-04-05
+from browser import window
 from math import *
 
 graph = window.JXG.JSXGraph
