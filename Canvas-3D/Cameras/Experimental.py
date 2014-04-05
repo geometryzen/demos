@@ -60,6 +60,7 @@ def setUp():
     size = 500
     step = 50
     geometry = THREE.Geometry()
+    print geometry.vertices
     for i in range(-size, size+step, step):
         geometry.vertices.append(THREE.Vector3(float(-size), 0.0, float(i)))
         geometry.vertices.append(THREE.Vector3(float(+size), 0.0, float(i)))
