@@ -9,7 +9,9 @@ div = document.getElementById("box")
 div.style.width  = "400px"
 div.style.height = "400px"
 
-b = graph.initBoard("box", {"axis":True,"grid":True})
+board = graph.initBoard("box", {"axis":True,"grid":True})
 
-p = b.create('point',[1,1])
-f = b.create('functiongraph',[lambda x,k: p.X() * sin(x)])
+p = board.create('point',[1,1])
+B = board.create('point',[2,2])
+
+f = board.create('functiongraph',[lambda x,k: p.X() * sin(x)])
