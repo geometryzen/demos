@@ -1,3 +1,4 @@
+# Demonstration of using native JavaScript Math.
 from browser import window
 
 m = window.Math
