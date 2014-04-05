@@ -4,7 +4,7 @@ from random import random
 
 THREE = window.THREE
 
-glwin = window.open("","","width=800,height=600")
+glwin = None
 
 # Global variables
 camera = THREE.OrthographicCamera(-1.0, 1.0, 1.0, -1.0, -500.0, 1000.0)
@@ -29,6 +29,8 @@ def onWindowResize(event):
     renderer.setSize(glwin.innerWidth, glwin.innerHeight)
     
 def setUp():
+    global glwin
+    glwin = window.open("","","width=800,height=600")
     print "Hello!"
     print "This example will end automatically in "+str(progressEnd)+" seconds."
     # A bit surprising that this works given two different documents.
