@@ -28,19 +28,10 @@ def onWindowResize(event):
     camera.updateProjectionMatrix()
     renderer.setSize(glwin.innerWidth, glwin.innerHeight)
     
-def discardCanvases():
-    for cs in document.getElementsByTagName("canvas"):
-        cs.parentNode.removeChild(cs)
-
 def setUp():
     print "Hello!"
     print "This example will end automatically in "+str(progressEnd)+" seconds."
-    discardCanvases()
-    if (useLargeCanvas):
-        document.body.insertBefore(renderer.domElement, document.body.firstChild)
-    else:
-        container = document.getElementById("canvas-container")
-        container.appendChild(renderer.domElement)
+    glwin.document.body.insertBefore(renderer.domElement, glwin.document.body.firstChild)
 
     # Grid
     size = 500
