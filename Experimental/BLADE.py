@@ -17,3 +17,4 @@ print z
 print z.grade(1)
 # TODO: Possibility of converting arithmetic operators into method calls?
 z = v + w
+print z
