@@ -2,4 +2,4 @@ from browser import window
 
 THREE = window.THREE
 
-print repr(THREE.Vector3)
+x = THREE.Vector3(1,1,1)
