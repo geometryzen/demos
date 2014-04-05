@@ -18,8 +18,8 @@ scene = THREE.Scene()
 progressEnd = 30
 
 def onWindowResize(event):
-    halfW = window.innerWidth / 2
-    halfH = window.innerHeight / 2
+    halfW = glwin.innerWidth / 2
+    halfH = glwin.innerHeight / 2
         
     camera.left = -halfW
     camera.right = halfW
@@ -31,7 +31,7 @@ def onWindowResize(event):
 def setUp():
     print "Hello!"
     print "This example will end automatically in "+str(progressEnd)+" seconds."
-    # Abit surprising that this works given two different documents.
+    # A bit surprising that this works given two different documents.
     glwin.document.body.insertBefore(renderer.domElement, glwin.document.body.firstChild)
 
     # Grid
