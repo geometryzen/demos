@@ -15,7 +15,6 @@ A = board.create('point',[1,1],{"name": 'Alice'})
 B = board.create('point',[2,2],{"name":'Bob'})
 
 def foo(x):
-    print x
-    return A.X() * sin(x)
+    return 1
 
 f = board.create('functiongraph',[foo])
