@@ -65,7 +65,8 @@ def setUp():
         geometry.vertices.append(THREE.Vector3(float(+size), 0.0, float(i)))
         geometry.vertices.append(THREE.Vector3( float(i), 0.0, float(-size)))
         geometry.vertices.append(THREE.Vector3( float(i), 0.0, float(+size)))
-        
+
+    print "Making LineBasic..."        
     material = THREE.LineBasicMaterial({"color":0x000000,"opacity":0.2})
     
     line = THREE.Line(geometry, material)
