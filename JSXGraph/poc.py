@@ -1,5 +1,4 @@
 from browser import document, window
-from jxg import require
 
 # WARNING: This method for acquiring the library is subject to change,
 #          but the API will otherwise stay the same.
