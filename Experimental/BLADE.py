@@ -11,4 +11,5 @@ print repr(v)
 
 z = v.add(w)
 print z
+print z.grade(0)
 z = v + w
