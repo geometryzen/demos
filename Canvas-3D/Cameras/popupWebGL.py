@@ -15,7 +15,7 @@ camera.position.z = 200.0
 renderer = THREE.WebGLRenderer({"antialias": True})
 renderer.setClearColor(THREE.Color(0xFFFFFF), 1.0)
 scene = THREE.Scene()
-progressEnd = 20
+progressEnd = 10
 
 def onWindowResize(event):
     halfW = glwin.innerWidth / 2
