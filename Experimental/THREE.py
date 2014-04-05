@@ -4,4 +4,4 @@ THREE = window.THREE
 
 v = THREE.Vector3(1,1,1)
 
-print v
+print v.x
