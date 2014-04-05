@@ -2,8 +2,8 @@ from browser import window
 
 BLADE = window.BLADE
 
-one = BLADE.Rational(1,1)
-print one
+third = BLADE.Rational(1,3)
+print third
 
 v = BLADE.Euclidean2(1,2,3,4)
 w = BLADE.Euclidean2(1,1,1,1)
