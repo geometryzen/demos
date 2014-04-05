@@ -11,7 +11,7 @@ div.style.height = "400px"
 
 board = graph.initBoard("box", {"axis":True,"grid":True})
 
-A = board.create('point',[-1,1])
-B = board.create('point',[1,1])
-C = board.create('point',[0,-1])
+A = board.create('point',[-1,0])
+B = board.create('point',[1,0])
+C = board.create('point',[0,2])
 E = board.create('ellipse',[A,B,C])
