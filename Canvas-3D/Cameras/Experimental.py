@@ -68,7 +68,7 @@ def setUp():
     material = THREE.LineBasicMaterial({"color":0x000000,"opacity":0.2})
     
     line = THREE.Line(geometry, material)
-    line.type = LinePieces
+    line.type = THREE.LinePieces
     scene.add(line)
     
     # Cubes
