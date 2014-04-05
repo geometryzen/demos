@@ -58,20 +58,15 @@ def setUp():
         container.appendChild(renderer.domElement)
 
     # Grid
-    print "Making the Grid"
     size = 500
     step = 50
     geometry = THREE.Geometry()
-    print geometry
-    print geometry.vertices
-    print "ok"
     for i in range(-size, size+step, step):
         geometry.vertices.append(THREE.Vector3(float(-size), 0.0, float(i)))
         geometry.vertices.append(THREE.Vector3(float(+size), 0.0, float(i)))
         geometry.vertices.append(THREE.Vector3( float(i), 0.0, float(-size)))
         geometry.vertices.append(THREE.Vector3( float(i), 0.0, float(+size)))
-
-    print "Making LineBasic..."        
+        
     material = THREE.LineBasicMaterial({"color":0x000000,"opacity":0.2})
     
     line = THREE.Line(geometry, material)
@@ -79,7 +74,6 @@ def setUp():
     scene.add(line)
     
     # Cubes
-    print "Making Cubes"
     geometry = THREE.CubeGeometry(50, 50, 50)
     material = THREE.MeshLambertMaterial({"color":0xFFFFFF,"shading":THREE.FlatShading, "overdraw":True})
     for i in range(0, 100):
