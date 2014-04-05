@@ -94,7 +94,7 @@ def terminate(t):
     return t > progressEnd
 
 def tearDown():
-    discardCanvases()
+    glwin.close()
     print "Goodbye!"
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
