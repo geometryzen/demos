@@ -3,7 +3,7 @@ from three import *
 
 THREE = window.THREE
 
-origin = VectorE3(1.0, 0.0, 0.0)
+origin = THREE.Vector(1.0, 0.0, 0.0)
 direction = VectorE3(1.0, 0.0, 0.0, False)
 near = 0.01
 far = 10000.0
