@@ -23,4 +23,4 @@ def foo(x):
 b.create('curve',[dataX,dataY],{"strokeColor":'red'})
 
 # FIXME: Some bug prevents us from doing this.
-b.create('curve',[dataX,lambda x: p.X()*sin(x)*x],{"strokeColor":'blue',"dash":1})
+b.create('curve',[dataX,lambda x,k: p.X()*sin(x)*x],{"strokeColor":'blue',"dash":1})
