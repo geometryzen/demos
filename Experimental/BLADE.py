@@ -2,6 +2,9 @@ from browser import window
 
 BLADE = window.BLADE
 
+one = BLADE.Rational(1,1)
+print one
+
 v = BLADE.Euclidean2(1,2,3,4)
 w = BLADE.Euclidean2(1,1,1,1)
 
