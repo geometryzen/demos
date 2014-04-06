@@ -40,5 +40,6 @@ def run():
 
     print sumdist/nr
     board.unsuspendUpdate()
+    print t.pos
 
 run()
