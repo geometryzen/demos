@@ -1,5 +1,4 @@
 from browser import document, window
-from math import *
 
 Math = window.Math
 
