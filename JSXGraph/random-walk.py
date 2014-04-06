@@ -30,8 +30,8 @@ def run():
                               random(),
                               random()))
         for j in range(100):
-            a = Math.floor(360*random()) 
-            t.right(a) 
+            angle = Math.floor(360*random()) 
+            t.right(angle) 
             t.forward(stepSize)
 
         dist = t.pos[0]*t.pos[0]+t.pos[1]*t.pos[1]
