@@ -15,7 +15,8 @@ div.style.height = "400px"
 
 board = graph.initBoard("box", 
                         {"boundingbox":[-100,100,100,-100],
-                         "showCopyright":False})
+                         "showCopyright":False,
+                         "showNavigation":False})
 t = board.create('turtle')
  
 def run():
