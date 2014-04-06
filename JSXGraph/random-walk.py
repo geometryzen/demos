@@ -41,3 +41,5 @@ def run():
 
     print (sumdist/nr).toFixed(3)
     board.unsuspendUpdate()
+
+run()
