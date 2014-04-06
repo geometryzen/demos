@@ -37,5 +37,5 @@ def run():
         sumdist += dist
         t.home()
 
-    document.getElementById('output').value = (sumdist/nr).toFixed(3)
-    board.unsuspendUpdate();
+    print (sumdist/nr).toFixed(3)
+    board.unsuspendUpdate()
