@@ -1,4 +1,3 @@
-# random-walk.py
 from browser import document, window
 from random import random
 
