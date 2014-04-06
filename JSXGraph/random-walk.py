@@ -23,8 +23,9 @@ def run():
     sumdist=0.0
     stepSize = 5
     board.suspendUpdate()
-    nr = 20#document.getElementById('number').value*1
+    nr = 20
     for i in range(nr):
+        print i
         t.setPenColor(
                   JXG.hsv2rgb(
                               Math.round(random()*255),
