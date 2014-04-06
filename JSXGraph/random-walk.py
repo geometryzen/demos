@@ -27,9 +27,9 @@ def run():
     for i in range(nr):
         t.setPenColor(
                   JXG.hsv2rgb(
-                              Math.round(Math.random()*255),
-                              Math.random(),
-                              Math.random()))
+                              Math.round(random()*255),
+                              random(),
+                              random()))
         for j in range(100):
             a = Math.floor(360*random()) 
             t.right(a) 
