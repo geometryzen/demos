@@ -10,7 +10,10 @@ div = document.getElementById("box")
 div.style.width  = "400px"
 div.style.height = "400px"
 
-board = graph.initBoard("box", {"boundingbox":[-250,250,250,-250],"showCopyright":False})
+board = graph.initBoard("box", 
+                        {"boundingbox":[-250,250,250,-250],
+                         "showCopyright":False,
+                         "showNavigation":False})
 t = board.create('turtle',[0, 0], {"strokeOpacity":0.5})
 
 t.setPenSize(3)
