@@ -24,7 +24,6 @@ def run():
     board.suspendUpdate()
     nr = 20#document.getElementById('number').value*1
     for i in range(nr):
-        print i
         t.setPenColor(
                   JXG.hsv2rgb(
                               Math.round(Math.random()*255),
