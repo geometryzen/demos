@@ -1,4 +1,3 @@
-# ellipse-major-axis.py
 from browser import document, window
 from math import *
 
