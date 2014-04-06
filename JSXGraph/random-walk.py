@@ -20,7 +20,7 @@ t = board.create('turtle')
  
 def run():
     sumdist=0.0
-    stepSize = 10
+    stepSize = 5
     board.suspendUpdate()
     nr = 20#document.getElementById('number').value*1
     for i in range(nr):
