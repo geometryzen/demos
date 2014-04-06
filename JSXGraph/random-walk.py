@@ -31,7 +31,7 @@ def run():
                               Math.random(),
                               Math.random()))
         for j in range(100):
-            a = Math.floor(360*Math.random()) 
+            a = Math.floor(360*random()) 
             t.right(a) 
             t.forward(stepSize)
 
