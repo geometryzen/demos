@@ -28,7 +28,7 @@ def run():
     else:
         t.right(1)
 
-    alpha += 1;
+    alpha += 1
 
     if (alpha < 1440):
         window.setTimeout(run, 20)
