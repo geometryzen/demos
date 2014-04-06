@@ -16,22 +16,26 @@ board = graph.initBoard("box",
                          "showCopyright":False,
                          "showNavigation":False})
 t = board.create('turtle')
-
-t.setPenSize(3)
-t.right(90)
-alpha = 0
  
 def run():
-    global alpha
-    t.forward(2)
-    if (Math.floor(alpha / 360) % 2 == 0):
-        t.left(1)
-    else:
-        t.right(1)
+    sumdist=0.0
+    stepSize = 5 
+    board.suspendUpdate()
+    nr = document.getElementById('number').value*1
+    for (i=0;i<nr;i++):
+        t.setPenColor(
+                  JXG.hsv2rgb(
+                              Math.round(Math.random()*255),
+                              Math.random(),
+                              Math.random()))
+        for (j=0;j<100;j++):
+            a = Math.floor(360*Math.random()) 
+            t.right(a) 
+            t.forward(stepSize)
 
-    alpha += 1
+        dist = t.pos[0]*t.pos[0]+t.pos[1]*t.pos[1]
+        sumdist += dist
+        t.home()
 
-    if (alpha < 1440):
-        window.setTimeout(run, 20)
-
-run()
+    document.getElementById('output').value = (sumdist/nr).toFixed(3)
+    board.unsuspendUpdate();
