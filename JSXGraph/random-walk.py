@@ -4,6 +4,7 @@ from browser import document, window
 Math = window.Math
 
 graph = window.JXG.JSXGraph
+JXG = window.JXG
 
 document.getElementById("graph-container").innerHTML = '<div id="box" class="jxgbox"></div>'
 div = document.getElementById("box")
