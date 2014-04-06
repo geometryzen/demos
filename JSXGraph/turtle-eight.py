@@ -19,6 +19,7 @@ t.right(90)
 alpha = 0
  
 def run():
+    global alpha
     t.forward(2)
     if (Math.floor(alpha / 360) % 2 == 0):
         t.left(1)
