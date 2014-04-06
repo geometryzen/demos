@@ -7,7 +7,7 @@ COLOR_GRID = 0x66A1D2
 
 scene = Scene()
 
-particle = Mesh(SphereGeometry(50, 32, 24), MeshLambertMaterial({"color":0x0000FF}))
+particle = Mesh(SphereGeometry(float(50), 32, 24), MeshLambertMaterial({"color":0x0000FF}))
 scene.add(particle)
 
 xyPlane = Mesh(PlaneGeometry(1000.0,1000.0,10,10), MeshBasicMaterial({"color":COLOR_GRID, "wireframe":True, "opacity":0.2,"transparent":True}))
