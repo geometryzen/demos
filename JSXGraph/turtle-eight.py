@@ -1,6 +1,8 @@
 from browser import document, window
 from math import *
 
+Math = window.Math
+
 graph = window.JXG.JSXGraph
 
 document.getElementById("graph-container").innerHTML = '<div id="box" class="jxgbox"></div>'
