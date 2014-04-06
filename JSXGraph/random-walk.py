@@ -28,7 +28,7 @@ def run():
                               Math.round(Math.random()*255),
                               Math.random(),
                               Math.random()))
-        for (j=0;j<100;j++):
+        for j in range(100):
             a = Math.floor(360*Math.random()) 
             t.right(a) 
             t.forward(stepSize)
