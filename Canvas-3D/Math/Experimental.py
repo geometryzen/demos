@@ -3,6 +3,6 @@ from browser import window
 
 m = window.Math
 
-print m.sin(3)
+print m.sin(m.PI*30/180)
 print m.PI
 print m.E
