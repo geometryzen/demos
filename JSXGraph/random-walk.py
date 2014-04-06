@@ -23,9 +23,8 @@ def run():
     sumdist=0.0
     stepSize = 5
     board.suspendUpdate()
-    nr = 20
-    for i in range(nr):
-        print i
+    walkCount = 20
+    for i in range(walkCount):
         t.setPenColor(
                   JXG.hsv2rgb(
                               Math.round(random()*255),
@@ -40,7 +39,7 @@ def run():
         sumdist += dist
         t.home()
 
-    print sumdist/nr
+    print sumdist/walkCount
     board.unsuspendUpdate()
 
 run()
