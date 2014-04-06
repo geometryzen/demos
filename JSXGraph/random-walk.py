@@ -39,7 +39,7 @@ def run():
         sumdist += dist
         t.home()
 
-    print (sumdist/nr).toFixed(3)
+    print sumdist/nr
     board.unsuspendUpdate()
 
 run()
