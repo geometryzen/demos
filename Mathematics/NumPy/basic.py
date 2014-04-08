@@ -10,7 +10,7 @@ e6 = VectorE3(6,0,0)
 e7 = VectorE3(6,0,0)
 e8 = VectorE3(6,0,0)
 
-x = np.array([[e1,e2],[e3,e3]],[[e5,e6],[e7,e8]])
+x = np.array([[[e1,e2],[e3,e3]],[[e5,e6],[e7,e8]]])
 print type(x)
 print x.shape
 print x.sizes
