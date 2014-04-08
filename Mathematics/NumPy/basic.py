@@ -28,4 +28,4 @@ print x.shape
 print x.sizes
 print x.buffer
 print type(x[1,2])
-print x[0,1]
+print x[0,1,2]
