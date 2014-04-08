@@ -27,4 +27,9 @@ gravity = 9.8
 y = numpy.zeros((N,2))
 
 y[0,0] = x0
-print y[0,0]
+y[0,1] = v0
+
+def SHO(state, time):
+    g0 = state[1]
+    g1 = - k/m * state[0] - gravity
+    return numpy.array([g0, g1])
