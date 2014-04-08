@@ -36,3 +36,8 @@ def SHO(state, time):
 
 for j in range(N-1):
     y[j+1] = euler(y[j], time[j], dt, SHO)
+    
+xdata = [y[j,0] for j in range(N)]
+vdata = [y[j,1] for j in range(N)]
+
+print vdata
