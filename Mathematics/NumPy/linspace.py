@@ -1,8 +1,8 @@
 import numpy as np
 
-x = np.linspace(2.0, 3.0, 5)
+x = np.linspace(2.0, 3.0, 5, True, False)
 
-print "linspace(2.0, 3.0, 5)"
+print "linspace(2.0, 3.0, 5, True, False)"
 print x[0]
 print x[1]
 print x[2]
