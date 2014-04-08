@@ -18,4 +18,4 @@ print x.shape
 print x.strides
 print x.buffer
 print type(x[0,1,2])
-#print x[0,1,2]
+print x[0,1,2]
