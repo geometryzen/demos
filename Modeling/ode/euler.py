@@ -19,4 +19,6 @@ k = 3.5
 m = 0.2
 gravity = 9.8
 
-time = linspace(0, tau, N)
+#time = linspace(0, tau, N)
+
+y = zeros([N,2])
