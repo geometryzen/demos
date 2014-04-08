@@ -33,3 +33,6 @@ def SHO(state, time):
     g0 = state[1]
     g1 = - k/m * state[0] - gravity
     return numpy.array([g0, g1])
+
+for j in range(N-1):
+    y[j+1] = euler(y[j], time[j], dt, SHO)
