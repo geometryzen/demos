@@ -14,3 +14,9 @@ v0 = 0.0
 tau = 3.0
 
 dt = tau / float(N-1)
+
+k = 3.5
+m = 0.2
+gravity = 9.8
+
+time = linspace(0, tau, N)
