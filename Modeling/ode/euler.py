@@ -6,3 +6,11 @@ def FreeFall(state,time):
 def euler(y, t, dt, derivs):
     y.next = y + derivs(y,t) * dt
     return y.next
+
+N = 1000
+x0 = 0.0
+v0 = 0.0
+
+tau = 3.0
+
+dt = tau / float(N-1)
