@@ -1,1 +1,1 @@
-# NumPy/basic.py
+import numpy
