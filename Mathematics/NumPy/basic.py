@@ -14,5 +14,6 @@ x = np.array([[['a','b'],['c','d']],[['e','f'],['g','h']],[['i','j'],['k','l']]]
 print type(x)
 print x.shape
 print x.sizes
+print x.buffer
 print type(x[1,2])
 print x[0,1]
