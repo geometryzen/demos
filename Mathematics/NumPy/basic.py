@@ -10,7 +10,19 @@ e6 = VectorE3(6,0,0)
 e7 = VectorE3(6,0,0)
 e8 = VectorE3(6,0,0)
 
-x = np.array([[['a','b'],['c','d']],[['e','f'],['g','h']],[['i','j'],['k','l']]])
+x = np.array([[
+               ['a','b','c','d'],
+               ['e','f','g','h']
+              ],
+              [
+               ['i','j','k','l'],
+               ['m','n','o','p']
+              ],
+              [
+               ['q','r','s','t'],
+               ['u','v','w','x']
+              ]
+             ])
 print type(x)
 print x.shape
 print x.sizes
