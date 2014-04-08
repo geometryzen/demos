@@ -15,7 +15,7 @@ x = np.array([[
              ])
 print type(x)
 print x.shape
-print x.sizes
+print x.strides
 print x.buffer
 print type(x[0,1,2])
 print x[0,1,2]
