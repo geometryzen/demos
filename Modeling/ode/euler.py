@@ -25,4 +25,5 @@ gravity = 9.8
 
 y = numpy.zeros((N,2))
 
+y[0,0] = x0
 print y[0,0]
