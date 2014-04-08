@@ -23,6 +23,7 @@ gravity = 9.8
 
 #time = linspace(0, tau, N)
 
+# Check this...
 y = numpy.zeros((N,2))
 
 y[0,0] = x0
