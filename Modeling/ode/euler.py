@@ -23,4 +23,4 @@ gravity = 9.8
 
 #time = linspace(0, tau, N)
 
-y = numpy.zeros([N,2])
+y = numpy.zeros((N,2))
