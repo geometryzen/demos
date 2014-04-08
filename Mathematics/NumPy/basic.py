@@ -12,3 +12,4 @@ x = np.array([[e1,e2,e3],[e4,e5,e6]])
 print type(x)
 print x.shape
 print type(x[1,2])
+print x[1,2]
