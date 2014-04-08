@@ -13,4 +13,4 @@ print type(x)
 print x.shape
 print x.sizes
 print type(x[1,2])
-print x[0,9]
+print x[0,2]
