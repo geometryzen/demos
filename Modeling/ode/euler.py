@@ -36,7 +36,9 @@ for j in range(N-1):
     print time[j]
     print "y[",j,"][0]:", y[j][0]
     print "y[",j,"][1]:", y[j][1]
-    #y[j+1] = euler(y[j], time[j], dt, SHO)
+    y[j+1] = euler(y[j], time[j], dt, SHO)
+    print "y[",j+1,"][0]:", y[j+1][0]
+    print "y[",j+1,"][1]:", y[j+1][1]
     pass
     
 #xdata = [y[j,0] for j in range(N)]
