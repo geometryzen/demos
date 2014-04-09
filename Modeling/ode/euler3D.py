@@ -69,4 +69,4 @@ b.create('curve',[dataT,dataX],{"strokeColor":'blue'})
 
 b.create('curve',[dataT,dataV],{"strokeColor":'green'})
 
-print time(), Notice how the energy increases with the Euler solution."
+print time(), "Notice how the energy increases with the Euler solution."
