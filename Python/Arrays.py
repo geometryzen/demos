@@ -12,3 +12,4 @@ L.sort()
 print L
 L.reverse()
 print L
+print L.index(2)
