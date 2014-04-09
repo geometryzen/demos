@@ -15,3 +15,4 @@ print L
 print L.index(2)
 L.append(5)
 print L
+print len(L)
