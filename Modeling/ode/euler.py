@@ -11,14 +11,8 @@ def SHO(state, time):
     return numpy.array([g0, g1])
 
 def euler(y, t, dt, derivs):
-    print "y[0]:",y[0]
-    print "y[1]:",y[1]
     d = derivs(y,t)
-    print "d[0]",d[0]
-    print "d[1]",d[1]
-    print "dt", dt
     dy = d * numpy.array([dt,dt])
-    print "dy", dy
     return y + dy
 
 N = 10
