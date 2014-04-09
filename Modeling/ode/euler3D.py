@@ -12,9 +12,9 @@ origin = VectorE3(0,0,0)
 
 # Simple Harmonic Motion
 def SHO(state, time):
-    displacement = state[0]
+    position = state[0]
     velocity = state[1]
-    acceleration = - k/m * displacement + g
+    acceleration = - k/m * position + g
     return numpy.array([velocity, acceleration])
 
 # TODO: Let's record the acceleration.
