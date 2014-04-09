@@ -4,3 +4,4 @@ print L[0] # print the first element
 print L # print the entire list
 print 3 in L
 print 7 in L
+print L.count(3)
