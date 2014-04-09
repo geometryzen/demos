@@ -22,5 +22,6 @@ print x.shape
 print x.strides
 y = x[0]
 print y.shape
+print y.side
 print y[0]
 print y[1]
