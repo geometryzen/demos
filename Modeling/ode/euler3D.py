@@ -1,6 +1,7 @@
 # A work in progress.
 # Extend the simple euler example by using vectors, show the acceleration, maybe use units, simulation...
 import numpy
+from e3ga import *
 from browser import document, window
 
 #def FreeFall(state,time):
