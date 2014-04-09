@@ -24,6 +24,7 @@ def SHO(state, time):
 
 def euler(y, t, dt, derivs):
     d = derivs(y,t)
+    # TODO: Would be nice to be able to do scalar multiplication here.
     dy = d * numpy.array([dt,dt])
     return y + dy
 
