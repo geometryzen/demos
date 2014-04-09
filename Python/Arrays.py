@@ -5,3 +5,4 @@ print L # print the entire list
 print 3 in L
 print 7 in L
 print L.count(3)
+print L.count(8)
