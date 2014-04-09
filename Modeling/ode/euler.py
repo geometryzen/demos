@@ -34,6 +34,7 @@ y[0,1] = v0
 
 for j in range(N-1):
     print time[j]
+    print y[j]
     #y[j+1] = euler(y[j], time[j], dt, SHO)
     pass
     
