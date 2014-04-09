@@ -34,6 +34,7 @@ print y.shape
 y[0,0] = x0
 y[0,1] = v0
 
+# FIXME
 print y[0]
 
 def SHO(state, time):
