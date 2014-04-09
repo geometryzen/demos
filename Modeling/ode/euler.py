@@ -39,8 +39,8 @@ y[0,1] = v0
 for j in range(N-1):
     y[j+1] = euler(y[j], time[j], dt, SHO)
     
-xdata = [y[j,0] for j in range(N)]
-vdata = [y[j,1] for j in range(N)]
+dataX = [y[j,0] for j in range(N)]
+dataY = [y[j,1] for j in range(N)]
 
 print "Done!"
 
@@ -53,8 +53,5 @@ div.style.width  = "400px"
 div.style.height = "400px"
 
 b = graph.initBoard("box", {"boundingbox":[-10,10,20,-10],"axis":True})
-
-dataX = [1,2,3,4,5,6,7,8]
-dataY = [0.3,4.0,-1,2.3,7,9,8,9]
 
 b.create('curve',[dataX,dataY],{"strokeColor":'red'})
