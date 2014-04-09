@@ -19,8 +19,9 @@ origin = VectorE3(0,0,0)
 
 # Simple Harmonic Motion
 def SHO(state, time):
+    displacement = state[0]
     g0 = state[1]
-    g1 = - k/m * state[0] + g
+    g1 = - k/m * displacement + g
     return numpy.array([g0, g1])
 
 def euler(y, t, dt, derivs):
