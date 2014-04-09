@@ -16,6 +16,7 @@ print z[0]
 print z[1]
 print z[2]
 
+print ""
 x = np.array([[1,2],[2,4],[3,6]])
 print x[0]
 print x[1]
