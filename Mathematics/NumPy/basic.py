@@ -22,3 +22,4 @@ print x[0,1,2]
 y = x[0]
 print y.shape
 print y.strides
+print x[0][1][2]
