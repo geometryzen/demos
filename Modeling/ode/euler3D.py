@@ -25,6 +25,7 @@ def euler(y, t, dt, derivs):
 
 N = 1000
 
+# Keep track of displacement and velocity.
 y = numpy.zeros((N,2))
 
 # Initial position goes in slot 0. We start at the origin.
