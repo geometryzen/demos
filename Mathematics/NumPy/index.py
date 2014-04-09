@@ -16,6 +16,6 @@ print z[0]
 print z[1]
 print z[2]
 
-z = x[2:3:-1]
+z = x[2:3:1]
 print z.size
 print z.shape
