@@ -41,7 +41,7 @@ for j in range(N-1):
 
 dataT = [t[j]   for j in range(N)]    
 dataX = [y[j,0] for j in range(N)]
-dataY = [y[j,1] for j in range(N)]
+dataV = [y[j,1] for j in range(N)]
 
 print "Done!"
 
@@ -56,4 +56,6 @@ div.style.height = "400px"
 b = graph.initBoard("box", {"boundingbox":[-10,10,20,-10],"axis":True})
 
 b.create('curve',[dataT,dataX],{"strokeColor":'red'})
+
+b.create('curve',[dataT,dataV],{"strokeColor":'blue'})
 
