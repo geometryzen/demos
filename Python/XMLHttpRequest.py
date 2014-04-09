@@ -1,8 +1,10 @@
 from browser import window
 
 url = 'http://ctabustracker.com/bustime/map/getBusesForRoute.jsp?route=22'
+clazz = window.XMLHttpRequest
 
-request = window.XMLHttpRequest()
+print clazz
+
 request.open("GET", url, False)
 request.send()
 
