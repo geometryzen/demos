@@ -29,6 +29,7 @@ print time[2]
 
 # Check this...
 y = numpy.zeros((N,2))
+print y.shape
 
 y[0,0] = x0
 y[0,1] = v0
