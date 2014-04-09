@@ -1,9 +1,9 @@
 # UrlLib.py
 import urllib3
 
-http = urllib3.PoolManager()
+pool = urllib3.PoolManager()
 
-r = http.request('GET', 'gttp://google.com/')
+r = pool.request('GET', 'gttp://google.com/')
 
 print r
 
