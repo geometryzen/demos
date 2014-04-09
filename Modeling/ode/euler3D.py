@@ -30,7 +30,9 @@ N = 1000
 
 y = numpy.zeros((N,2))
 
+# Initial position
 y[0,0] = VectorE3(0, 0, 0)
+# Initial velocity
 y[0,1] = VectorE3(0, 0, 0)
 
 tau = 5.0
