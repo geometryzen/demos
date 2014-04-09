@@ -46,7 +46,7 @@ dt = tau / float(N-1)
 
 k = 3.5
 m = 0.2
-gravity = VectorE3(0.0, 0.0, -9.8)
+gravity = -9.81 * e3
 
 for j in range(N-1):
     y[j+1] = euler(y[j], t[j], dt, SHO)
