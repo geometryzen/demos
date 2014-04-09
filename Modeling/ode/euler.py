@@ -16,6 +16,7 @@ def euler(y, t, dt, derivs):
     d = derivs(y,t)
     print "d[0]",d[0]
     print "d[1]",d[1]
+    print "dt", dt
     return y + derivs(y,t) * dt
 
 N = 10
