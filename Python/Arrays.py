@@ -7,3 +7,4 @@ print 7 in L
 print L.count(3)
 print L.count(8)
 L.remove(3)
+print L
