@@ -5,7 +5,7 @@ def reqListener():
 
 request = XMLHttpRequest()
 request.onload = reqListener
-request.open('GET', 'http://google.com/')
+request.open('GET', 'http://google.com/', True)
 request.send()
 
 print "Done"
