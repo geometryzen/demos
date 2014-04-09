@@ -13,3 +13,5 @@ print L
 L.reverse()
 print L
 print L.index(2)
+L.append(5)
+print L
