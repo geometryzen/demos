@@ -4,9 +4,8 @@ def reqListener():
     print "Aha!"
 
 request = XMLHttpRequest()
-
+request.onload = reqListener
 request.open('GET', 'http://google.com/')
-
 request.send()
 
 print "Done"
