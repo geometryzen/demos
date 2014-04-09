@@ -29,7 +29,7 @@ k = 3.5
 m = 0.2
 gravity = 9.8
 
-time = numpy.linspace(0.0, tau, N)
+t = numpy.linspace(0.0, tau, N)
 
 y = numpy.zeros((N,2))
 
@@ -37,8 +37,9 @@ y[0,0] = x0
 y[0,1] = v0
 
 for j in range(N-1):
-    y[j+1] = euler(y[j], time[j], dt, SHO)
-    
+    y[j+1] = euler(y[j], t[j], dt, SHO)
+
+dataT = [t[j]   for j in range(N)]    
 dataX = [y[j,0] for j in range(N)]
 dataY = [y[j,1] for j in range(N)]
 
@@ -55,7 +56,4 @@ div.style.height = "400px"
 b = graph.initBoard("box", {"boundingbox":[-10,10,20,-10],"axis":True})
 
 b.create('curve',[dataX,dataY],{"strokeColor":'red'})
-
-for x in dataX:
-    print x
 
