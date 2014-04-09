@@ -5,6 +5,11 @@ def FreeFall(state,time):
     g1 = -9.8
     return numpy.array([g0, g1])
 
+def SHO(state, time):
+    g0 = state[1]
+    g1 = - k/m * state[0] - gravity
+    return numpy.array([g0, g1])
+
 def euler(y, t, dt, derivs):
     y.next = y + derivs(y,t) * dt
     return y.next
@@ -36,11 +41,6 @@ y[0,1] = v0
 
 # FIXME
 print y[0]
-
-def SHO(state, time):
-    g0 = state[1]
-    g1 = - k/m * state[0] - gravity
-    return numpy.array([g0, g1])
 
 for j in range(N-1):
     y[j+1] = euler(y[j], time[j], dt, SHO)
