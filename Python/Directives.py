@@ -8,8 +8,9 @@ print("decimal 73 as integer b = %d " % (b)) # for integer
 print("as octal b = %o" % (b)) # octal
 
 print("as hexadecimal b = %x " % (b)) # works hexadecimal
+
+print("learn \"Python\" ") # use of double quote symbol
 '''
-p r i n t ("learn \"Python\" ") # u s e o f d o u bl e q u ot e symbol
 p r i n t ("shows a backslash \\") # u s e o f nn
 p r i n t (’use of single \’ quotes \’ ’) # p r i n t s i n g l e q u o t e s
 '''
