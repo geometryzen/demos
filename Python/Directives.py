@@ -1,6 +1,7 @@
-print ("hello \n")
+print("hello \n")
+
+print("\t it’s me") # tabulator
 '''
-p r i n t ("\t it’s me") # t a b u l a t o r
 b = 73
 p r i n t ("decimal 73 as integer b = %d "%(b ) ) # f o r i n t e g e r
 p r i n t ("as octal b = %o"%(b ) ) # o c t a l
