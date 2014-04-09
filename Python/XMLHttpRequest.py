@@ -5,6 +5,8 @@ request = XMLHttpRequest()
 
 request.open('GET', 'gttp://google.com/')
 
+request.send()
+
 print "Done"
 
 
