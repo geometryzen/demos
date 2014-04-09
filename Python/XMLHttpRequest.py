@@ -1,15 +1,16 @@
 from http import *
 
 def reqListener():
+    # One problem is that we don't have access to this
     print "Aha!"
 
-request = XMLHttpRequest()
+xhr = XMLHttpRequest()
 
-request.open('GET', 'http://localhost:8080/users/geometryzen/repos/demos/blob/master/Python/XMLHttpRequest.py', True)
+xhr.open('GET', 'http://localhost:8080/users/geometryzen/repos/demos/blob/master/Python/XMLHttpRequest.py', True)
 
-request.onload = reqListener
+xhr.onload = reqListener
 
-request.send()
+xhr.send()
 
 
 print "Done"
