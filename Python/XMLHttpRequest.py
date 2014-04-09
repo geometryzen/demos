@@ -6,7 +6,7 @@ def reqListener():
 
 xhr = XMLHttpRequest()
 
-xhr.open('GET', 'http://www.html5rocks.com/', True)
+xhr.open('GET', 'http://www.geometryzen.org/', True)
 
 #xhr.responseType = "text"
 
