@@ -51,6 +51,7 @@ g = -9.81 * e3
 for j in range(N-1):
     y[j+1] = euler(y[j], t[j], dt, SHO)
 
+# Extract the data that we need for driving the graph.
 dataT = [t[j]   for j in range(N)]    
 dataX = [y[j,0].z for j in range(N)]
 dataV = [y[j,1].z for j in range(N)]
