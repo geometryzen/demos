@@ -19,6 +19,7 @@ print z[2]
 print ""
 x = np.array([[1,2],[3,4],[5,6]])
 print x.shape
+print x.strides
 print x[0]
 print x[1]
 print x[2]
