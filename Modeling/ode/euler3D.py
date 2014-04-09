@@ -28,7 +28,7 @@ def euler(y, t, dt, derivs):
 
 N = 1000
 
-y = numpy.zeros((N,2))
+y = numpy.zeros((N,3))
 
 # Initial position
 y[0,0] = VectorE3(0, 0, 0)
