@@ -15,4 +15,3 @@ print word[10:0]
 print word[-1] # counting from the right
 print word[-2]
 print word[-2:]
-#print word[-10]
