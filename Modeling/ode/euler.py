@@ -32,10 +32,6 @@ y = numpy.zeros((N,2))
 y[0,0] = x0
 y[0,1] = v0
 
-# FIXME
-print y[0][0]
-print y[0][1]
-
 for j in range(N-1):
     y[j+1] = euler(y[j], time[j], dt, SHO)
     pass
