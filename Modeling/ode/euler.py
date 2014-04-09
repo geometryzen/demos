@@ -35,13 +35,7 @@ y[0,0] = x0
 y[0,1] = v0
 
 for j in range(N-1):
-    e = euler(y[j], time[j], dt, SHO)
-    print "e[0]:", e[0]
-    print "e[1]:", e[1]
-    y[j+1]=e
-    print "y[",j+1,"][0]:", y[j+1][0]
-    print "y[",j+1,"][1]:", y[j+1][1]
-    pass
+    y[j+1] = euler(y[j], time[j], dt, SHO)
     
 xdata = [y[j,0] for j in range(N)]
 vdata = [y[j,1] for j in range(N)]
