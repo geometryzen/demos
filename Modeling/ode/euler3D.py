@@ -13,12 +13,10 @@ origin = VectorE3(0,0,0)
 def SHO(state, time):
     displacement = state[0]
     velocity = state[1]
-    
-    g0 = velocity
-    g1 = - k/m * displacement + g
-    
-    return numpy.array([g0, g1])
+    acceleration = - k/m * displacement + g
+    return numpy.array([velocity, acceleration])
 
+# TODO: Let's record the acceleration.
 def euler(y, t, dt, derivs):
     d = derivs(y,t)
     # TODO: Would be nice to be able to do scalar multiplication here.
