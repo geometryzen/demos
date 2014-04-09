@@ -15,8 +15,8 @@ def euler(y, t, dt, derivs):
     return y.next
 
 N = 1000
-x0 = 0.11
-v0 = 0.22
+x0 = 0.0
+v0 = 0.0
 
 tau = 3.0
 
