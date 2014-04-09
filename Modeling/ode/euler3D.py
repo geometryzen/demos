@@ -57,7 +57,8 @@ dataV = [y[j,1].z for j in range(N)]
 
 graph = window.JXG.JSXGraph
 
-window.document.getElementById("graph-container").innerHTML = '<div id="box" class="jxgbox"></div>'
+window.document.getElementById("graph-container").innerHTML = 
+'<div id="box" class="jxgbox"></div>'
 div = window.document.getElementById("box")
 
 div.style.width  = "400px"
