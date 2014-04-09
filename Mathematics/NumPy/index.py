@@ -11,5 +11,5 @@ print type(x[2])
 x = np.array([0,1,2,3,4,5,6,7,8,9])
 y = [0,1,2,3,4,5,6,7,8,9][1:7:2]
 print y
-z = x[1:7:2]
+z = x[slice(1,7,2)]
 print slice(None,None,-1)
