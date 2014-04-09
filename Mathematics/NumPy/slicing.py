@@ -14,6 +14,7 @@ print word[::2]
 print word[1:100]
 print word[10:0]
 print "Watch those minus signs..."
+# Looks like we have a parsing issue?
 print word[-1:4] # counting from the right
 #print word[-2]
 #print word[-2:]
