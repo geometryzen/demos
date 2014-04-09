@@ -8,6 +8,7 @@ from browser import document, window
 e1 = VectorE3(1, 0, 0)
 e2 = VectorE3(0, 1, 0)
 e3 = VectorE3(0, 0, 1)
+
 origin = VectorE3(0,0,0)
 
 #def FreeFall(state,time):
@@ -30,9 +31,9 @@ N = 1000
 
 y = numpy.zeros((N,2))
 
-# Initial position
+# Initial position goes in slot 0
 y[0,0] = VectorE3(0, 0, 0)
-# Initial velocity
+# Initial velocity goes in slot 1
 y[0,1] = VectorE3(0, 0, 0)
 
 tau = 5.0
