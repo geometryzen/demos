@@ -16,7 +16,7 @@ for x in xrange(size): x ** 2
 # out: 10 loops, best of 3: 88.9 ms per loop
 
 # avoid this
-for x in np.arange(size): x ** 2
+#for x in np.arange(size): x ** 2
 #out: 1 loops, best of 3: 1.16 s per loop
 
 # use this
