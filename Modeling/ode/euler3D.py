@@ -65,8 +65,8 @@ div.style.height = "400px"
 
 b = graph.initBoard("box", {"boundingbox":[-1.0,5,5,-5],"axis":True,"showCopyright":False})
 
-b.create('curve',[dataT,dataX],{"strokeColor":'red'})
+b.create('curve',[dataT,dataX],{"strokeColor":'blue'})
 
-b.create('curve',[dataT,dataV],{"strokeColor":'blue'})
+b.create('curve',[dataT,dataV],{"strokeColor":'green'})
 
 print "Notice how the energy increases with the Euler solution."
