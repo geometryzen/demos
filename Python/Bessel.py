@@ -1,5 +1,5 @@
 # Bessel.py
-import numpy as np
+from numpy import *
 
 xMax = 40.
 xMin = 0.25
