@@ -3,7 +3,7 @@ print("hello \n")
 print("\t it’s me") # tabulator
 
 b = 73
-print("decimal 73 as integer b = %d "%(b ) ) # for integer
+print("decimal 73 as integer b = %d " %(b)) # for integer
 '''
 p r i n t ("as octal b = %o"%(b ) ) # o c t a l
 p r i n t ("as hexadecimal b = %x "%(b ) ) # wo rks h e x a d e cim al
