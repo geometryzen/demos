@@ -15,3 +15,5 @@ print z.shape
 print z[0]
 print z[1]
 print z[2]
+
+print x[-2:10]
