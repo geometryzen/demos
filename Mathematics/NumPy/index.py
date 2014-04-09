@@ -24,5 +24,6 @@ y = x[0]
 print y.shape
 print y.size
 print y.ndim
+print y.strides
 print y[0]
 print y[1]
