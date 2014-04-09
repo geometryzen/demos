@@ -1,5 +1,7 @@
-# UrlLib.py
 from http import *
+
+def reqListener():
+    print "Aha!"
 
 request = XMLHttpRequest()
 
