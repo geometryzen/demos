@@ -10,3 +10,4 @@ print word[2:] # omitting second default to len(word)
 print word[2:len(word)]
 print word[:]
 print 'x' + word[1:]
+print word[1:100]
