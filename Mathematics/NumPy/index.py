@@ -18,3 +18,4 @@ print z[2]
 
 z = x[-2:10]
 print z.size
+print z.shape
