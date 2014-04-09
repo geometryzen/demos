@@ -22,6 +22,7 @@ print x.shape
 print x.strides
 print "y:"
 y = x[0]
+print y
 print y.shape
 print y.size
 print y.ndim
