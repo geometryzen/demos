@@ -13,4 +13,4 @@ y = [0,1,2,3,4,5,6,7,8,9][1:7:2]
 print y
 z = x[slice(1,7,2)]
 
-print (slice(1,10,5),slice(None,None,-1))
+print slice(1,10,5),slice(None,None,-1)
