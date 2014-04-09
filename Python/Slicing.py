@@ -12,3 +12,4 @@ print word[:]
 print 'x' + word[1:]
 print word[1:100]
 print word[10:0]
+print word[-1] # counting from the right
