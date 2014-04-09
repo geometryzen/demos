@@ -16,5 +16,5 @@ print L.index(2)
 L.append(5)
 print L
 print len(L)
-L = L + [5,6,7]
+L = L + [6,7,8]
 print L
