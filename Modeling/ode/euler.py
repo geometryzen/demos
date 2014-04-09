@@ -21,7 +21,7 @@ N = 1000
 x0 = 0.0
 v0 = 0.0
 
-tau = 3.0
+tau = 5.0
 
 dt = tau / float(N-1)
 
