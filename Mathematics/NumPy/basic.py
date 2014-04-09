@@ -14,6 +14,7 @@ x = np.array([[
               ]
              ])
 print type(x)
+print x
 print x.shape
 print x.strides
 print x.buffer
