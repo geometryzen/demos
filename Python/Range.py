@@ -20,5 +20,5 @@ for x in xrange(size): x ** 2
 #out: 1 loops, best of 3: 1.16 s per loop
 
 # use this
-np.arange(size) ** 2
+#np.arange(size) ** 2
 #out: 100 loops, best of 3: 19.5 ms per loop
