@@ -25,6 +25,7 @@ time = numpy.linspace(0.0, tau, N)
 print time.size
 print time[0]
 print time[1]
+print time[2]
 
 # Check this...
 y = numpy.zeros((N,2))
