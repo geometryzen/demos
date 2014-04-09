@@ -3,7 +3,7 @@ import urllib3
 
 http = urllib3.PoolManager()
 
-print http
+r = http.request('GET', 'gttp://google.com/')
 
 
 '''
