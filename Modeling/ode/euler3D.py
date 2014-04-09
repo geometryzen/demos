@@ -20,7 +20,7 @@ origin = VectorE3(0,0,0)
 # Simple Harmonic Motion
 def SHO(state, time):
     g0 = state[1]
-    g1 = - k/m * state[0] + gravity
+    g1 = - k/m * state[0] + g
     return numpy.array([g0, g1])
 
 def euler(y, t, dt, derivs):
