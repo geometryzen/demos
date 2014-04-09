@@ -18,3 +18,5 @@ print z[2]
 
 x = np.array([[1,2],[2,4],[3,6]])
 print x[0]
+print x[1]
+print x[2]
