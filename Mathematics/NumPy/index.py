@@ -16,6 +16,4 @@ print z[0]
 print z[1]
 print z[2]
 
-z = x[2:3:1]
-print z.size
-print z.shape
+x = np.array([[1,2],[2,4],[3,6]])
