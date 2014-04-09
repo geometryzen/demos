@@ -3,7 +3,7 @@ from http import *
 
 request = XMLHttpRequest()
 
-request.open('GET', 'gttp://google.com/')
+request.open('GET', 'http://google.com/')
 
 request.send()
 
