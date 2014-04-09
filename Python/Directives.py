@@ -13,4 +13,4 @@ print("learn \"Python\" ") # use of double quote symbol
 
 print("shows a backslash \\") # use of \\
 
-print(’use of single \’ quotes \’ ’) # print single quotes
+print("use of single ’quotes’ ") # print single quotes
