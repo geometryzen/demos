@@ -34,6 +34,8 @@ print y.shape
 y[0,0] = x0
 y[0,1] = v0
 
+print y[0]
+
 def SHO(state, time):
     g0 = state[1]
     g1 = - k/m * state[0] - gravity
