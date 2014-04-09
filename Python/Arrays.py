@@ -10,3 +10,5 @@ L.remove(3)
 print L
 L.sort()
 print L
+L.reverse()
+print L
