@@ -39,3 +39,5 @@ for j in range(N-1):
     
 xdata = [y[j,0] for j in range(N)]
 vdata = [y[j,1] for j in range(N)]
+
+print "Done!"
