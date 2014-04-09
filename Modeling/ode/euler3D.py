@@ -12,11 +12,6 @@ e3 = VectorE3(0, 0, 1)
 
 origin = VectorE3(0,0,0)
 
-#def FreeFall(state,time):
-#    g0 = state[1]
-#    g1 = -9.8
-#    return numpy.array([g0, g1])
-
 # Simple Harmonic Motion
 def SHO(state, time):
     displacement = state[0]
