@@ -43,8 +43,6 @@ dataT = [t[j]   for j in range(N)]
 dataX = [y[j,0] for j in range(N)]
 dataV = [y[j,1] for j in range(N)]
 
-print "Done!"
-
 graph = window.JXG.JSXGraph
 
 document.getElementById("graph-container").innerHTML = '<div id="box" class="jxgbox"></div>'
