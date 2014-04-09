@@ -55,6 +55,7 @@ m = 0.2
 # Acceleration due to gravity.
 g = -9.81 * e3
 
+# Propagate forward in time.
 for j in range(N-1):
     y[j+1] = euler(y[j], t[j], dt, SHO)
 
