@@ -55,3 +55,7 @@ div.style.height = "400px"
 b = graph.initBoard("box", {"boundingbox":[-10,10,20,-10],"axis":True})
 
 b.create('curve',[dataX,dataY],{"strokeColor":'red'})
+
+for x in dataX:
+    print x
+
