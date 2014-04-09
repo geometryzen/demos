@@ -16,4 +16,5 @@ print z[0]
 print z[1]
 print z[2]
 
-print x[-2:10]
+z = x[-2:10]
+print z.size
