@@ -32,7 +32,7 @@ N = 1000
 y = numpy.zeros((N,2))
 
 # Initial position goes in slot 0
-y[0,0] = VectorE3(0, 0, 0)
+y[0,0] = VectorE3(0, 0, 2)
 # Initial velocity goes in slot 1
 y[0,1] = VectorE3(0, 0, 0)
 
