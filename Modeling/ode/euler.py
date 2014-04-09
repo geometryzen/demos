@@ -15,7 +15,7 @@ def euler(y, t, dt, derivs):
     dy = d * numpy.array([dt,dt])
     return y + dy
 
-N = 100
+N = 1000
 x0 = 0.0
 v0 = 0.0
 
