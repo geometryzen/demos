@@ -13,7 +13,7 @@ def SHO(state, time):
 def euler(y, t, dt, derivs):
     return y + derivs(y,t) * dt
 
-N = 1000
+N = 10
 x0 = 0.0
 v0 = 0.0
 
