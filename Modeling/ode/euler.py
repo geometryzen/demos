@@ -1,4 +1,6 @@
 import numpy
+from browser import document, window
+from math import *
 
 def FreeFall(state,time):
     g0 = state[1]
@@ -41,3 +43,20 @@ xdata = [y[j,0] for j in range(N)]
 vdata = [y[j,1] for j in range(N)]
 
 print "Done!"
+
+graph = window.JXG.JSXGraph
+
+document.getElementById("graph-container").innerHTML = '<div id="box" class="jxgbox"></div>'
+div = document.getElementById("box")
+
+div.style.width  = "400px"
+div.style.height = "400px"
+
+b = graph.initBoard("box", {"boundingbox":[-10,10,20,-10],"axis":True})
+
+p = b.create('point',[1,4])
+dataX = [1,2,3,4,5,6,7,8]
+dataY = [0.3,4.0,-1,2.3,7,9,8,9]
+
+b.create('curve',[dataX,dataY],{"strokeColor":'red'})
+b.create('curve',[dataX,lambda x: p.X()*sin(x)*x],{"strokeColor":'blue',"dash":1})
