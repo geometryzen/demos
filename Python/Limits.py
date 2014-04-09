@@ -1,5 +1,5 @@
 # Limits.py : determines approximate machine precision
-N = 30
+N = 40
 eps = 1.0
 for i in range(N) :
     eps = eps / 2
