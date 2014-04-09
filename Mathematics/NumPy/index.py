@@ -20,6 +20,7 @@ print ""
 x = np.array([[1,2],[3,4],[5,6]])
 print x.shape
 print x.strides
+print "y:"
 y = x[0]
 print y.shape
 print y.size
