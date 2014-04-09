@@ -1,6 +1,6 @@
 # slicing.py
 from numpy import *
-word = 'Help' + 'A'
+word = array(['H','e','l','p','A'])
 print word
 print word * 5
 print word[4]
