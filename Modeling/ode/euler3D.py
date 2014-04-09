@@ -64,7 +64,7 @@ div = window.document.getElementById("box")
 div.style.width  = "400px"
 div.style.height = "400px"
 
-b = graph.initBoard("box", {"boundingbox":[-1.0,5,5,-5],"axis":True,"showCopyright":False})
+b = graph.initBoard("box", {"boundingbox":[-1.0,5,6,-5],"axis":True,"showCopyright":False})
 
 b.create('curve',[dataT,dataX],{"strokeColor":'blue'})
 
