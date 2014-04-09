@@ -19,10 +19,15 @@ def euler(y, t, dt, derivs):
     return y + dy
 
 N = 1000
-x0 = 0.0
-v0 = 0.0
+
+y = numpy.zeros((N,2))
+
+y[0,0] = 0.0
+y[0,1] = 0.0
 
 tau = 5.0
+
+t = numpy.linspace(0.0, tau, N)
 
 dt = tau / float(N-1)
 
@@ -30,12 +35,8 @@ k = 3.5
 m = 0.2
 gravity = 9.8
 
-t = numpy.linspace(0.0, tau, N)
 
-y = numpy.zeros((N,2))
 
-y[0,0] = x0
-y[0,1] = v0
 
 for j in range(N-1):
     y[j+1] = euler(y[j], t[j], dt, SHO)
