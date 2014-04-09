@@ -17,4 +17,3 @@ print z.shape
 print z[0]
 print z[1]
 print z[2]
-print slice(1,10,5),slice(None,None,-1)
