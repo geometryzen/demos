@@ -12,6 +12,7 @@ def SHO(state, time):
 
 def euler(y, t, dt, derivs):
     print "y[0]:",y[0]
+    print "y[1]:",y[1]
     return y + derivs(y,t) * dt
 
 N = 10
