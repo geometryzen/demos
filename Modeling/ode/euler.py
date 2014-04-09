@@ -39,6 +39,8 @@ for j in range(N-1):
     print "y[",j+1,"][0]:", e[0]
     print "y[",j+1,"][1]:", e[1]
     y[j+1]=e
+    print "y[",j+1,"][0]:", y[j+1][0]
+    print "y[",j+1,"][1]:", y[j+1][1]
     pass
     
 xdata = [y[j,0] for j in range(N)]
