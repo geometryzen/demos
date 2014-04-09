@@ -22,6 +22,7 @@ m = 0.2
 gravity = 9.8
 
 time = numpy.linspace(0.0, tau, N)
+print time.size
 
 # Check this...
 y = numpy.zeros((N,2))
