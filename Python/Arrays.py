@@ -9,3 +9,4 @@ print L.count(8)
 L.remove(3)
 print L
 L.sort()
+print L
