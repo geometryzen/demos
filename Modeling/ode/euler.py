@@ -26,14 +26,8 @@ m = 0.2
 gravity = 9.8
 
 time = numpy.linspace(0.0, tau, N)
-print time.size
-print time[0]
-print time[1]
-print time[2]
 
-# Check this...
 y = numpy.zeros((N,2))
-print y.shape
 
 y[0,0] = x0
 y[0,1] = v0
