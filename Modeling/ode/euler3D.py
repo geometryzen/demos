@@ -44,7 +44,7 @@ dt = tau / float(N-1)
 k = 3.5
 # Mass of body.
 m = 0.2
-# Drag coefficient
+# Damping
 b = 0.0
 # Acceleration due to gravity.
 g = -9.81 * e3
