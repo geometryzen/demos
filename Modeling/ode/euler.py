@@ -33,7 +33,8 @@ y[0,0] = x0
 y[0,1] = v0
 
 for j in range(N-1):
-    y[j+1] = euler(y[j], time[j], dt, SHO)
+    #print time[j]
+    #y[j+1] = euler(y[j], time[j], dt, SHO)
     pass
     
 #xdata = [y[j,0] for j in range(N)]
