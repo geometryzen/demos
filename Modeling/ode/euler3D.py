@@ -14,7 +14,7 @@ origin = VectorE3(0,0,0)
 def SHO(state, time):
     position = state[0]
     velocity = state[1]
-    acceleration = - k/m * position + g
+    acceleration = - k/m * position + g - b * velocity
     return numpy.array([velocity, acceleration])
 
 # TODO: Let's record the acceleration.
@@ -44,6 +44,8 @@ dt = tau / float(N-1)
 k = 3.5
 # Mass of body.
 m = 0.2
+# Drag
+b = 1.0
 # Acceleration due to gravity.
 g = -9.81 * e3
 
