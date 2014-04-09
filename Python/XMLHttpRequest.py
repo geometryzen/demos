@@ -8,7 +8,7 @@ xhr = XMLHttpRequest()
 
 xhr.open('GET', 'http://localhost:8080/users/geometryzen/repos/demos/blob/master/Python/XMLHttpRequest.py', True)
 
-xhr.responseType = "text"
+#xhr.responseType = "text"
 
 xhr.onload = reqListener
 
