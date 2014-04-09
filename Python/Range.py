@@ -2,7 +2,7 @@
 import numpy as np
 import sys
 
-sys.version
+#sys.version
 # out: '2.7.3rc2 (default, Mar 22 2012, 04:35:15) \n[GCC 4.6.3]'
 np.version.version
 # out: '1.6.2'
