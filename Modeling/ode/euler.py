@@ -57,3 +57,5 @@ b.create('curve',[dataT,dataX],{"strokeColor":'red'})
 
 b.create('curve',[dataT,dataV],{"strokeColor":'blue'})
 
+print "Notice how the amplitude increases with the Euler solution"
+
