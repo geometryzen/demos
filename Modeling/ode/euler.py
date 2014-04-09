@@ -37,7 +37,7 @@ y[0,0] = x0
 y[0,1] = v0
 
 for j in range(N-1):
-    y[j+1] = euler(y[j], time[j], dt, FreeFall)
+    y[j+1] = euler(y[j], time[j], dt, SHO)
     
 dataX = [y[j,0] for j in range(N)]
 dataY = [y[j,1] for j in range(N)]
