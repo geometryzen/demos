@@ -29,7 +29,7 @@ N = 1000
 
 y = numpy.zeros((N,2))
 
-y[0,0] = 0.0
+y[0,0] = VectorE3(0,0,0)
 y[0,1] = 0.0
 
 tau = 5.0
@@ -41,9 +41,6 @@ dt = tau / float(N-1)
 k = 3.5
 m = 0.2
 gravity = 9.8
-
-
-
 
 for j in range(N-1):
     y[j+1] = euler(y[j], t[j], dt, SHO)
