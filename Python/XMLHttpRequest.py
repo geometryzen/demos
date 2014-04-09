@@ -5,6 +5,8 @@ clazz = window.XMLHttpRequest
 
 print clazz
 
+request = clazz()
+
 request.open("GET", url, False)
 request.send()
 
