@@ -24,7 +24,7 @@ def euler(y, t, dt, derivs):
     dy = d * numpy.array([dt,dt])
     return y + dy
 
-N = 1000
+N = 10000
 
 # Keep track of displacement and velocity.
 y = numpy.zeros((N,2))
