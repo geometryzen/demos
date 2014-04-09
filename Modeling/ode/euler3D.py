@@ -1,5 +1,6 @@
 import numpy
 from e3ga import *
+from time import *
 from browser import window
 
 # Set up the standard unit vectors for Cartesian coordinates.
@@ -68,4 +69,4 @@ b.create('curve',[dataT,dataX],{"strokeColor":'blue'})
 
 b.create('curve',[dataT,dataV],{"strokeColor":'green'})
 
-print "Notice how the energy increases with the Euler solution."
+print time(), Notice how the energy increases with the Euler solution."
