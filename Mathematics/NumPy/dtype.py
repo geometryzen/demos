@@ -1,11 +1,6 @@
 import numpy as np
 
-def baz(x):
-    print x
-    return 3
-
-
-a = np.array([1, 4, 5, 8], baz)
+a = np.array([1, 4, 5, 8], float)
 print a
 print type(a)
 print a[0]
