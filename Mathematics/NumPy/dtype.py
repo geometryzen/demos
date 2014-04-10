@@ -23,3 +23,5 @@ print a.shape
 print a.dtype
 
 print len(a)
+
+print 2 in a
