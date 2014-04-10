@@ -1,6 +1,7 @@
 import numpy as np
 
 a = np.array([1, 4, 5, 8], float)
+'''
 print a
 print type(a)
 print a[0]
@@ -14,5 +15,6 @@ a = np.array([[1,2,3],[4,5,6]], float)
 print a
 print a[0,0]
 print a[0,1]
+'''
 # The parser does not seem to appreciate this.
 print a[1,:]
