@@ -1,6 +1,6 @@
 import numpy as np
 
-def baz():
+def baz(x):
     return 3
 
 
