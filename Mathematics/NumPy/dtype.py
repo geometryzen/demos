@@ -20,5 +20,4 @@ print a[0,1]
 #print a[1,:]
 
 print a.shape
-print float
 print a.dtype
