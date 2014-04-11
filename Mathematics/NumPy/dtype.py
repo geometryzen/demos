@@ -40,3 +40,5 @@ print c[3]
 c[0,0] = 7.0
 print c
 print b
+
+print c.tolist()
