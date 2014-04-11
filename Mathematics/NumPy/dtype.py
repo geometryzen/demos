@@ -35,3 +35,6 @@ print b.shape
 
 c = b.copy()
 print c
+c[0] = 7
+print c
+print b
