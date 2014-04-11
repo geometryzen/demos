@@ -29,4 +29,6 @@ print 0 in a
 
 a = np.array(range(10), float)
 print a
-print a.reshape((5,2))
+b = a.reshape((5,2))
+print b
+print b.shape
