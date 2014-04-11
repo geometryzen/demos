@@ -29,4 +29,4 @@ print 0 in a
 
 a = np.array(range(10), float)
 print a
-a.reshape((5,2))
+print a.reshape((5,2))
