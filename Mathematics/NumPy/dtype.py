@@ -41,4 +41,5 @@ c[0,0] = 7.0
 print c
 print b
 
-print c.tolist()
+x = c.tolist()
+print x[0]
