@@ -32,3 +32,6 @@ print a
 b = a.reshape((5,2))
 print b
 print b.shape
+
+c = b.copy()
+print c
