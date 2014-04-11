@@ -42,4 +42,5 @@ print c
 print b
 
 x = c.tolist()
+print x
 print x[0]
