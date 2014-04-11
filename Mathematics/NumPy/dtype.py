@@ -36,6 +36,7 @@ print b.shape
 c = b.copy()
 print c
 print type(c)
+print c[3]
 c[0] = 7
 print c
 print b
