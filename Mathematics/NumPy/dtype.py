@@ -26,3 +26,6 @@ print len(a)
 
 print 2 in a
 print 0 in a
+
+a = np.array(range(10), float)
+print a
