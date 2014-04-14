@@ -11,4 +11,4 @@ div.style.height = "600px"
 
 board = graph.initBoard("box",{"grid":True,"boundingbox":[-10,10,10,-10]})
 
-board.create('axis', [[0.0,1.0], [1.0,1.3]], {"withLabel": True, "name": "abc", "label": {"offset": [10,20]}});
+board.create('axis', [[0.0,1.0], [1.0,1.3]], {"withLabel": True, "name": "abc", "label": {"offset": [100,20]}});
