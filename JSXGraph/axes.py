@@ -1,5 +1,4 @@
 from browser import window
-from math import *
 
 graph = window.JXG.JSXGraph
 
