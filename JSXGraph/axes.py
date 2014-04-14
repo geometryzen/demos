@@ -9,4 +9,4 @@ div = document.getElementById("box")
 div.style.width  = "600px"
 div.style.height = "600px"
 
-board = graph.initBoard("box", {"grid":True})
+board = graph.initBoard("box", {})
