@@ -3,7 +3,7 @@ from math import *
 
 graph = window.JXG.JSXGraph
 
-document.getElementById("graph-container").innerHTML = '<div id="box" class="jxgbox"></div>'
+document.getElementById("graph-container").innerHTML = '<div id="box" class="jxgboxXXX"></div>'
 div = document.getElementById("box")
 
 div.style.width  = "600px"
