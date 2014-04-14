@@ -9,6 +9,6 @@ div = document.getElementById("box")
 div.style.width  = "600px"
 div.style.height = "600px"
 
-board = graph.initBoard("box",{"grid":True})
+board = graph.initBoard("box",{"grid":False})
 
 board.create('axis', [[0,0], [1,0]], {"withLabel": True, "name": "abc", "label": {"offset": [0,0]}});
