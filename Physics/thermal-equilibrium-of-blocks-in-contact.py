@@ -1,6 +1,6 @@
 from math import factorial
 
-Q = 4  # Total number of quanta shared between the blocks
+Q = 10  # Total number of quanta shared between the blocks
 N1 = 3 # number of oscillators in first block
 N2 = 3 # number of oscillators in second block
 
