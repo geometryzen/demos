@@ -4,4 +4,4 @@ jq = window.jQuery
 
 print jq
 
-jq.getScript()
+jq('div')
