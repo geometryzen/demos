@@ -10,4 +10,6 @@ for q1 in range(Q+1):
     w2 = factorial(q2 + N2 - 1) / factorial(q2) * factorial(N2-1)
     print q1, q2, w1, w2, w1 * w2
 
-# Note. To make this work for large numbers would require Strirling's approximation.
+'''
+Note. To make this work for large numbers would require Strirling's approximation. We can use the approximation obtained from considering the Trapezoid rule.
+'''
