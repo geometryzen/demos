@@ -1,1 +1,2 @@
-# thermal-equilibrium-of-blocks-in-contact.py
+x = range(100)
+print x
