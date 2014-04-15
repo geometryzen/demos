@@ -4,4 +4,4 @@ jq = window.jQuery
 
 print jq
 
-jq('div')
+print jq('div')
