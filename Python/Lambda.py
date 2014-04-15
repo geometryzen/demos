@@ -7,4 +7,4 @@ print map(lambda x: x*x*x, range(1, 11))
 
 integers = range(8)
 squares  = map(lambda x: x*x, integers)
-print map(None, seq, )
+print map(None, sequence, squares)
