@@ -1,1 +1,3 @@
-# dynamic-loading.py
+from browser import window
+
+$ = window.jQuery
