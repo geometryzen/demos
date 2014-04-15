@@ -14,4 +14,4 @@ board = graph.initBoard("box", {"axis":True,"grid":True})
 A = board.create('point',[-1,0])
 B = board.create('point',[1,0])
 s = board.create('slider',[[-1,-2],[1,-2],[0,4,10]])
-E = board.create('ellipse',[A,B,lambda : s.Value()])
+E = board.create('ellipse',[A,B,lambda : s.Value()]
