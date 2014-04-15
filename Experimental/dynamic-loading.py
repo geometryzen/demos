@@ -1,6 +1,6 @@
 from browser import window
 
-jQuery = window.foo
+jQuery = window.jQuery
 
 print jQuery
 
