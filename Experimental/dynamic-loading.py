@@ -2,6 +2,6 @@ from browser import window
 
 jq = window.jQuery
 
-print jq
+print jQuery
 
-print jq('div')
+print jQuery('div')
