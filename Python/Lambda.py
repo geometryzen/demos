@@ -6,5 +6,5 @@ for i in range(10):
 print map(lambda x: x*x*x, range(1, 11))
 
 integers = range(8)
-squares  = map(lambda x: x*x, seq)
+squares  = map(lambda x: x*x, integers)
 print map(None, seq, )
