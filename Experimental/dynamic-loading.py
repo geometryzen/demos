@@ -4,4 +4,4 @@ jQuery = window.jQuery
 
 print jQuery
 
-print jQuery('div')
+print type(jQuery('div'))
