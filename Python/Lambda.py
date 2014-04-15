@@ -9,4 +9,4 @@ integers = range(8)
 squares  = map(lambda x: x*x, integers)
 print integers
 print squares
-print map(None, sequence, squares)
+print map(lambda i,s:(i,s), sequence, squares)
