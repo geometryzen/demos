@@ -5,7 +5,7 @@ N1 = 6 # number of oscillators in first block
 N2 = 4 # number of oscillators in second block
 
 def factorial(n):
-    return n
+    return exp(n * log(n) - n + 1)
 
 for q1 in range(Q+1):
     q2 = Q - q1
