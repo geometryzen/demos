@@ -1,8 +1,8 @@
 from math import log, exp
 
 Q = 100  # Total number of quanta shared between the blocks
-N1 = 6 # number of oscillators in first block
-N2 = 4 # number of oscillators in second block
+N1 = 300 # number of oscillators in first block
+N2 = 200 # number of oscillators in second block
 
 def factorial(n):
     return exp(n * log(n) - n + 1)
