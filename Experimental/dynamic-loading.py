@@ -1,3 +1,3 @@
 from browser import window
 
-$ = window.jQuery
+jq = window.jQuery
