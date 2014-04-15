@@ -6,4 +6,4 @@ for i in range(10):
 print map(lambda x: x*x*x, range(1, 11))
 
 seq = range(8)
-print map(None, seq, map(lambda x: x*x, seq))
+#print map(None, seq, map(lambda x: x*x, seq))
