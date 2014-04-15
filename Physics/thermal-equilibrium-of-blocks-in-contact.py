@@ -1,7 +1,7 @@
 from math import factorial
 
 Q = 10  # Total number of quanta shared between the blocks
-N1 = 5 # number of oscillators in first block
+N1 = 3 # number of oscillators in first block
 N2 = 7 # number of oscillators in second block
 
 for q1 in range(Q):
