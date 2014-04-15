@@ -1,8 +1,8 @@
 from math import factorial
 
-Q = 100  # Total number of quanta shared between the blocks
-N1 = 300 # number of oscillators in first block
-N2 = 200 # number of oscillators in second block
+Q = 10  # Total number of quanta shared between the blocks
+N1 = 3 # number of oscillators in first block
+N2 = 2 # number of oscillators in second block
 
 for q1 in range(Q):
     q2 = Q - q1
