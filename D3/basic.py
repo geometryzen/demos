@@ -10,8 +10,12 @@ x1 = width / 2
 y1 = height / 2
 x0 = x1
 y0 = y1
+x = x0
+y = y0
 i = 0
+r = 200
 c = ""
+tau = math.pi * 2
 
 canvas = d3.select("body").append("canvas")
 canvas.attr("width", width).attr("height", height)
@@ -24,6 +28,8 @@ context.lineWidth = 2
 
 def circle(t):
     context.strokeStyle = c + str(1-t) + ")"
+    context.beginPath()
+    context.arc(x,y,r*t,0,)
     pass
 
 def tweeny():
@@ -33,7 +39,7 @@ def setUp():
     workbench.setUp()
 
 def tick(t):
-    global i, x0, y0, c
+    global i, x0, y0, c,x,y
     i += 1
     context.clearRect(0,0,width,height)
     z = d3.hsl(i % 360, 1, 0.5).rgb()
