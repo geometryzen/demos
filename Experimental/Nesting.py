@@ -4,6 +4,6 @@ def outer(x):
         def inner(z):
             return x
         return inner
-    return middle()()
+    return middle
 
-print outer(23)
+print outer(10)(20)(30)
