@@ -53,8 +53,6 @@ def tick(t):
     def tweeny():
         # This side effect is necessary to make things work!
         a = x
-        #z = x * y
-        #print "" + str(x)
         def circle(t):
             s = c + str(1-t) + ")"
             context.strokeStyle = s
