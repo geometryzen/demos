@@ -32,7 +32,7 @@ print context.globalCompositionOperation
 
 def circle(t):
     s = c + str(1-t) + ")"
-    context.strokeStyle = "rgba(255,100,255,"+str(1-t)+")"
+    context.strokeStyle = s
     context.beginPath()
     context.arc(x, y, r * t, 0, tau)
     context.stroke()
@@ -49,7 +49,7 @@ def tick(t):
     i += 1
     context.clearRect(0,0,width,height)
     z = d3.hsl(i % 360, 1, 0.5).rgb()
-    c = "rgba(" + str(z.r) + "," + str(z.g) + "," + str(z.b) + ","
+    c = "rgba(" + str(int(z.r)) + "," + str(int(z.g)) + "," + str(int(z.b)) + ","
     x0 += (x1 - x0) * .1
     y0 += (y1 - y0) * .1
     x = x0
