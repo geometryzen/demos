@@ -38,6 +38,8 @@ def particle():
     #d3.event.preventDefault()
 
     
-particle()
+
 rect = svg.append("rect")
-#rect.attr("width", width).attr("height", height).on("mousemove", particle)
+rect.attr("width", width).attr("height", height)#.on("mousemove", particle)
+
+particle()
