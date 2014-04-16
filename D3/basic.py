@@ -30,8 +30,10 @@ def tick(t):
     context.clearRect(0,0,width,height)
     z = d3.hsl(i % 360, 1, 0.5).rgb()
     c = "rgba(" + str(z.r) + "," + str(z.g) + "," + str(z.b) + ","
-    x = x0 += (x1 - x0) * .1
-    y = y0 += (y1 - y0) * .1
+    x0 += (x1 - x0) * .1
+    y0 += (y1 - y0) * .1
+    x = x0
+    y = y0
     pass
 
 def terminate(t):
