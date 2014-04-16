@@ -20,7 +20,8 @@ c = ""
 tau = math.pi * 2
 
 def move():
-    print "Mouse!!!"
+    mouse = d3.mouse()
+    print mouse
     pass
 
 canvas = d3.select("body").append("canvas")
