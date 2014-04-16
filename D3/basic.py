@@ -53,7 +53,7 @@ def tick(t):
     def tweeny():
         # This side effect is necessary to make things work!
         #z = x * y
-        # print "c in tweeny: " + c
+        print "c in tweeny: " + c
         def circle(t):
             print "circle t: %d, c: %s, x: %d" % (t, c, x)
             s = c + str(1-t) + ")"
