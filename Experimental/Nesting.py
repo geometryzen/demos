@@ -3,6 +3,7 @@ def outer(x):
         a = x
         def inner(z):
             print "z", str(z)
+            print "y", str(y)
             return x
         return inner
     return middle
