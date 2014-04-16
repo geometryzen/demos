@@ -27,7 +27,6 @@ def move():
     mouse = d3.mouse(canvas.node())
     x1 = mouse[0]
     y1 = mouse[1]
-    print x1, y1
     d3.event.preventDefauult()
     pass
 
