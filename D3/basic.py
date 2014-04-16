@@ -23,7 +23,7 @@ canvas = d3.select("body").append("canvas")
 canvas.attr("width", width).attr("height", height)
 
 def move():
-    mouse = d3.mouse(canvas)
+    mouse = d3.mouse(canvas.node())
     print mouse
     pass
 
