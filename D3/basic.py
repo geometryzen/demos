@@ -22,6 +22,8 @@ tau = math.pi * 2
 canvas = d3.select("body").append("canvas")
 canvas.attr("width", width).attr("height", height)
 
+d3.select("canvas").style("background-color", "#222")
+
 def move():
     global x1, y1
     mouse = d3.mouse(canvas.node())
