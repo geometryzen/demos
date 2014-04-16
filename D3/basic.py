@@ -10,7 +10,7 @@ svg = d3.select("body").append("svg").attr("width", width).attr("height", height
 svg.append("rect")
     .attr("width", width)
     .attr("height", height)
-    .on("ontouchstart" in document ? "touchmove" : "mousemove", particle)
+    .on("mousemove", particle)
 
 def particle():
     m = d3.mouse(this);
