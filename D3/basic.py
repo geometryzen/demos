@@ -48,8 +48,6 @@ def circle(t):
     context.stroke()
     pass
 
-def tweeny():
-    return circle
 
 def setUp():
     workbench.setUp()
@@ -64,6 +62,8 @@ def tick(t):
     y0 += (y1 - y0) * .1
     x = x0
     y = y0
+    def tweeny():
+        return circle
     d3.select({}).transition().duration(2000).ease(math.sqrt).tween("circle", tweeny)
     pass
 
