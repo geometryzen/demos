@@ -51,11 +51,11 @@ def tick(t):
     x = x0
     y = y0
     def tweeny():
-        print "c in tweeny: " + c
+        #print "c in tweeny: " + c
         def circle(t):
-            print "c in circle: " + c
+            #print "c in circle: " + c
             s = c + str(1-t) + ")"
-            print s
+            #print s
             context.strokeStyle = s
             context.beginPath()
             context.arc(x, y, r * t, 0, tau)
