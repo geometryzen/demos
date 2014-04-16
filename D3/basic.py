@@ -51,6 +51,7 @@ def tick(t):
     x = x0
     y = y0
     def tweeny():
+        # This side effect is necessary to make things work!
         z = x * y
         # print "c in tweeny: " + c
         def circle(t):
