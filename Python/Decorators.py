@@ -8,3 +8,5 @@ log_warning = make_log("warning")
 log_error = make_log("error")
 
 log_info("Hello")
+log_warning("Hello")
+log_error("Hello")
