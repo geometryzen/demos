@@ -44,4 +44,4 @@ def particle():
 #rect = svg.append("rect")
 #rect.attr("width", width).attr("height", height)#.on("mousemove", particle)
 
-#particle()
+particle()
