@@ -29,7 +29,8 @@ context.lineWidth = 2
 def circle(t):
     context.strokeStyle = c + str(1-t) + ")"
     context.beginPath()
-    context.arc(x,y,r*t,0,)
+    context.arc(x,y,r*t,0,tau)
+    context.stroke()
     pass
 
 def tweeny():
