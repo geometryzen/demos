@@ -4,6 +4,8 @@ import math
 
 d3 = window.d3
 
+d3.select("body").style("background-color", "black")
+
 width = max(960, window.innerWidth)
 height = max(500, window.innerHeight)
 x1 = width / 2
