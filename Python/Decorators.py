@@ -1,6 +1,6 @@
 def make_log(level):
     def _(message):
-        print("{}: {}".format(level, message))
+        print("%s: %s" % (level, message))
     return _
 
 log_info = make_log("info")
