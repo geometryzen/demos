@@ -9,7 +9,7 @@ height = max(500, window.innerHeight)
 i = 180
 rect = None
 
-print type(d3.hsl(i,1,.5))
+print d3.hsl(i,1,.5)
 
 svg = d3.select("body").append("svg")
 svg.attr("width", width).attr("height", height)
