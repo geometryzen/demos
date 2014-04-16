@@ -43,6 +43,7 @@ def foo(x):
             #print("Vars: ", vars())
             print "z", str(z)
             print "q", str(q)
+            print "y", str(y)
             return x + y + q + z
         return baz
     return bar
