@@ -41,6 +41,7 @@ def foo(x):
         def baz(z):
             #print("Locals: ", locals())
             #print("Vars: ", vars())
+            print "z", str(z)
             return x + y + q + z
         return baz
     return bar
