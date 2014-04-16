@@ -1,4 +1,5 @@
 from browser import window
+import math
 
 d3 = window.d3
 
@@ -10,6 +11,9 @@ rect = None
 
 svg = d3.select("body").append("svg")
 svg.attr("width", width).attr("height", height)
+
+def sqrt(x):
+    return math.sqrt(x)    
 
 def particle():
 
