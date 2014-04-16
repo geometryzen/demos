@@ -14,7 +14,7 @@ def particle(arg):
     global i
     i = (i + 1) % 360
     
-    m = d3.mouse(arg)
+    m = d3.mouse(window.document)
     print m
     print m[0],m[1]
 '''
