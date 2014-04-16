@@ -66,7 +66,7 @@ def tick(t):
     pass
 
 def terminate(t):
-    return t > 10
+    return t > 60
     
 def tearDown():
     workbench.tearDown()
