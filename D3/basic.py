@@ -9,6 +9,8 @@ height = max(500, window.innerHeight)
 i = 180
 rect = None
 
+print d3.hsl(i,1,.5)
+
 svg = d3.select("body").append("svg")
 svg.attr("width", width).attr("height", height)
 
@@ -39,7 +41,7 @@ def particle():
 
     
 
-rect = svg.append("rect")
+#rect = svg.append("rect")
 #rect.attr("width", width).attr("height", height)#.on("mousemove", particle)
 
-particle()
+#particle()
