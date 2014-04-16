@@ -40,7 +40,7 @@ def foo(x):
         # inner function "baz"
         def baz(z):
             #print("Locals: ", locals())
-            print("Vars: ", vars())
+            #print("Vars: ", vars())
             return x + y + q + z
         return baz
     return bar
