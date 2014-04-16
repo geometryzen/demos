@@ -26,7 +26,7 @@ def tick(t):
     i += 1
     context.clearRect(0,0,width,height)
     z = d3.hsl(i % 360, 1, 0.5).rgb()
-    c = "rgba(" + z.r + "," + z.g + "," + z.b + ","
+    c = "rgba(" + str(z.r) + "," + str(z.g) + "," + str(z.b) + ","
     print c
     pass
 
