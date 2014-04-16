@@ -14,7 +14,7 @@ def particle():
 
     global i
     i = (i + 1) % 360
-    m = d3.mouse(svg)
+    m = d3.mouse(window)
     print m
     print m[0],m[1]
 '''
