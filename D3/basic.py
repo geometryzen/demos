@@ -13,6 +13,7 @@ canvas.attr("width", width).attr("height", height)
 workbench = Workbench2D(canvas.node())
 
 context = canvas.node().getContext("2d")
+context.globalCompositionOperation = "lighter"
 
 def setUp():
     workbench.setUp()
