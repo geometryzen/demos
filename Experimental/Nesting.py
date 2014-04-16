@@ -7,4 +7,4 @@ def outer(x):
         return inner
     middle()()
 
-outer()
+outer(23)
