@@ -9,13 +9,12 @@ i = 0
 rect = None
 
 svg = d3.select("body").append("svg").attr("width", width).attr("height", height)
-print svg
 
 def particle():
 
     global i
     i = (i + 1) % 360
-    print rect
+    
     m = d3.mouse(rect)
     print m[0],m[1]
 '''
