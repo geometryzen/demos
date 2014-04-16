@@ -12,8 +12,7 @@ svg.append("rect").attr("width", width).attr("height", height).on("mousemove", p
 def particle():
     m = d3.mouse(this)
 
-    svg.insert("circle", "rect")
-        .attr("cx", m[0])
+    svg.insert("circle", "rect").attr("cx", m[0])
         .attr("cy", m[1])
         .attr("r", 1e-6)
         .style("stroke", d3.hsl((i = (i + 1) % 360), 1, .5))
