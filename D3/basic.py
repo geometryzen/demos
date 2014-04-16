@@ -8,7 +8,8 @@ height = max(500, window.innerHeight)
 i = 0
 rect = None
 
-svg = d3.select("body").append("svg").attr("width", width).attr("height", height)
+svg = d3.select("body").append("svg")
+svg.attr("width", width).attr("height", height)
 
 def particle():
 
