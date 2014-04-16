@@ -16,8 +16,8 @@ def particle():
     global i
     i = (i + 1) % 360
     
-    x = d3.event.pageX
-    y = d3.event.pageY
+    x = 0#d3.event.pageX
+    y = 0#d3.event.pageY
 
 #    m = d3.mouse(svg)
 #    print m[0],m[1]
@@ -33,5 +33,5 @@ def particle():
 
     d3.event.preventDefault()
     
-rect = svg.append("rect")
-rect.attr("width", width).attr("height", height).on("mousemove", particle)
+#rect = svg.append("rect")
+#rect.attr("width", width).attr("height", height).on("mousemove", particle)
