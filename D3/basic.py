@@ -28,7 +28,6 @@ def move():
     x1 = mouse[0]
     y1 = mouse[1]
     d3.event.preventDefault()
-    pass
 
 canvas.on("mousemove", move)
 
