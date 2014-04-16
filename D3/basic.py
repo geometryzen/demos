@@ -23,7 +23,7 @@ canvas.attr("width", width).attr("height", height)
 workbench = Workbench2D(canvas.node())
 
 context = canvas.node().getContext("2d")
-context.globalCompositionOperation = "lighter"
+#context.globalCompositionOperation = "lighter"
 context.lineWidth = 2
 
 def circle(t):
