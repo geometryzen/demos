@@ -23,7 +23,7 @@ def particle():
 #    print m[0],m[1]
 
     circle = svg.insert("circle", "rect")
-    print circle
+
     circle.attr("cx", x)
     circle.attr("cy", y)
     circle.attr("r", 1e-6)
