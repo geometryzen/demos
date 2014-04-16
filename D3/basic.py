@@ -19,13 +19,14 @@ r = 200
 c = ""
 tau = math.pi * 2
 
+canvas = d3.select("body").append("canvas")
+canvas.attr("width", width).attr("height", height)
+
 def move():
-    mouse = d3.mouse()
+    mouse = d3.mouse(canvas)
     print mouse
     pass
 
-canvas = d3.select("body").append("canvas")
-canvas.attr("width", width).attr("height", height)
 canvas.on("mousemove", move)
 
 workbench = Workbench2D(canvas.node())
