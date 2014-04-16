@@ -10,7 +10,7 @@ svg = d3.select("body").append("svg").attr("width", width).attr("height", height
 svg.append("rect").attr("width", width).attr("height", height).on("mousemove", particle)
 
 def particle():
-    m = d3.mouse(this);
+    m = d3.mouse(this)
 
     svg.insert("circle", "rect")
         .attr("cx", m[0])
