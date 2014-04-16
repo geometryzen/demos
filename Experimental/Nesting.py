@@ -3,8 +3,8 @@ def outer(x):
         # Why do we need this to stop x from being undefined?
         a = x
         def inner():
-            print x
+            return x
         return inner
     middle()()
 
-outer(23)
+print outer(23)
