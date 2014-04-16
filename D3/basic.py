@@ -6,7 +6,7 @@ d3 = window.d3
 width = max(960, window.innerWidth)
 height = max(500, window.innerHeight)
 
-i = 180
+i = 250
 rect = None
 
 print d3.hsl(i,1,.5)
