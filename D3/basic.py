@@ -8,7 +8,7 @@ width = max(960, window.innerWidth)
 height = max(500, window.innerHeight)
 
 canvas = d3.select("body").append("canvas")
-svg.attr("width", width).attr("height", height)
+canvas.attr("width", width).attr("height", height)
 
 workbench = Workbench2D(canvas.node())
 
