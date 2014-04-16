@@ -13,7 +13,6 @@ def particle():
 
     global i
     i = (i + 1) % 360
-    print d3.mouse
     m = d3.mouse(this)
     print m
     print m[0],m[1]
