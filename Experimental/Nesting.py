@@ -4,7 +4,7 @@ def outer():
         # Why do we need this to stop x from being undefined?
         #a = x
         def inner():
-            print type(x)
+            print x
         return inner
     middle()()
 
