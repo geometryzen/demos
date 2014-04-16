@@ -5,6 +5,8 @@ d3 = window.d3
 width = max(960, window.innerWidth)
 height = max(500, window.innerHeight)
 
+i = 0
+
 svg = d3.select("body").append("svg").attr("width", width).attr("height", height)
 
 svg.append("rect").attr("width", width).attr("height", height).on("mousemove", particle)
