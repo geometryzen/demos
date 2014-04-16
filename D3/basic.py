@@ -53,7 +53,7 @@ def tick(t):
     def tweeny():
         #print "c in tweeny: " + c
         def circle(t):
-            #print "c in circle: " + c
+            print "c in circle: " + c
             s = c + str(1-t) + ")"
             #print s
             context.strokeStyle = s
