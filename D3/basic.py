@@ -54,7 +54,7 @@ def tick(t):
     y0 += (y1 - y0) * .1
     x = x0
     y = y0
-    d3.select({}).transition().duration(2000).tween("circle", tweeny)
+    d3.select({}).transition().duration(2000).ease(math.sqrt).tween("circle", tweeny)
     pass
 
 def terminate(t):
