@@ -38,7 +38,7 @@ def tick(t):
     y0 += (y1 - y0) * .1
     x = x0
     y = y0
-    d3.select({}).transition().duration(2000).tween("circle")
+    d3.select({}).transition().duration(2000).tween("circle", lambda : return circle)
     print "Excellent"
     pass
 
