@@ -14,7 +14,6 @@ x0 = x1
 y0 = y1
 i = 0
 r = 200
-c = ""
 tau = math.pi * 2
 
 canvas = d3.select("body").append("canvas")
@@ -42,7 +41,7 @@ def setUp():
     workbench.setUp()
 
 def tick(t):
-    global i, x0, y0, c
+    global i, x0, y0
     i += 1
     context.clearRect(0,0,width,height)
     z = d3.hsl(i % 360, 1, 0.5).rgb()
