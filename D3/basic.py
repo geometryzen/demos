@@ -6,7 +6,10 @@ d3 = window.d3
 
 width = max(960, window.innerWidth)
 height = max(500, window.innerHeight)
-
+x1 = width / 2
+y1 = height / 2
+x0 = x1
+y0 = y1
 i = 0
 
 canvas = d3.select("body").append("canvas")
@@ -27,7 +30,8 @@ def tick(t):
     context.clearRect(0,0,width,height)
     z = d3.hsl(i % 360, 1, 0.5).rgb()
     c = "rgba(" + str(z.r) + "," + str(z.g) + "," + str(z.b) + ","
-    print c
+    x = x0 += (x1 - x0) * .1
+    y = y0 += (y1 - y0) * .1
     pass
 
 def terminate(t):
