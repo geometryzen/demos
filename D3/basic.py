@@ -13,9 +13,10 @@ def particle():
 
     global i
     i = (i + 1) % 360
-    print i
-'''
+    
     m = d3.mouse()
+    print m
+'''
 
     circle = svg.insert("circle", "rect")
     print circle
