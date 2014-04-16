@@ -44,6 +44,7 @@ def foo(x):
             print "z", str(z)
             print "q", str(q)
             print "y", str(y)
+            print "x", str(x)
             return x + y + q + z
         return baz
     return bar
