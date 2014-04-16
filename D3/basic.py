@@ -55,7 +55,7 @@ def tick(t):
         z = x * y
         # print "c in tweeny: " + c
         def circle(t):
-            print "circle t: " % (t)
+            print "circle t: %d" % (t)
             s = c + str(1-t) + ")"
             context.strokeStyle = s
             context.beginPath()
