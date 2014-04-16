@@ -21,6 +21,10 @@ context = canvas.node().getContext("2d")
 context.globalCompositionOperation = "lighter"
 context.lineWidth = 2
 
+def circle(t):
+    
+    pass
+
 def setUp():
     workbench.setUp()
 
@@ -34,7 +38,7 @@ def tick(t):
     y0 += (y1 - y0) * .1
     x = x0
     y = y0
-    d3.select({}).transition()
+    d3.select({}).transition().duration(2000).tween("circle")
     print "Excellent"
     pass
 
