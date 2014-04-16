@@ -24,7 +24,7 @@ def tick(t):
     pass
 
 def terminate(t):
-    return t > 10
+    return t > 4
     
 def tearDown():
     workbench.tearDown()
