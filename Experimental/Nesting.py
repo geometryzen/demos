@@ -2,6 +2,7 @@ def outer(x):
     def middle(y):
         a = x
         def inner(z):
+            print "z", str(z)
             return x
         return inner
     return middle
