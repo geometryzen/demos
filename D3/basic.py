@@ -23,7 +23,7 @@ def setUp():
 
 def tick(t):
     global i
-    i += 1
+    ++i
     context.clearRect(0,0,width,height)
     z = d3.hsl(i % 360, 1, 0.5).rgb()
     print z
