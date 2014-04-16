@@ -33,7 +33,7 @@ def particle():
     circle.attr("r", 1e-6)
     circle.style("stroke", d3.hsl(i, 1, .5))
     circle.style("stroke-opacity", 1)
-    circle.transition().duration(2000).ease(window.Math.sqrt).attr("r", 100).style("stroke-opacity", 1e-6).remove()
+    circle.transition().duration(2000).ease(sqrt).attr("r", 100).style("stroke-opacity", 1e-6).remove()
 
     #d3.event.preventDefault()
 
