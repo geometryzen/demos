@@ -27,8 +27,9 @@ context.globalCompositionOperation = "lighter"
 context.lineWidth = 2
 
 def circle(t):
+    s = c + str(1-t) + ")"
+    print s
     context.strokeStyle = c + str(1-t) + ")"
-    print context.strokeStyle
     context.beginPath()
     context.arc(x,y,r*t,0,tau)
     context.stroke()
