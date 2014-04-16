@@ -6,6 +6,7 @@ width = max(960, window.innerWidth)
 height = max(500, window.innerHeight)
 
 i = 0
+rect = None
 
 svg = d3.select("body").append("svg").attr("width", width).attr("height", height)
 print svg
@@ -14,7 +15,7 @@ def particle():
 
     global i
     i = (i + 1) % 360
-    m = d3.mouse(window)
+    m = d3.mouse(rect)
     print m
     print m[0],m[1]
 '''
@@ -31,4 +32,5 @@ def particle():
     d3.event.preventDefault()
 '''
     
-svg.append("rect").attr("width", width).attr("height", height).on("mousemove", particle)
+rect = svg.append("rect")
+rect.attr("width", width).attr("height", height).on("mousemove", particle)
