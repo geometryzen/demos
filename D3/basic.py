@@ -52,7 +52,7 @@ def tick(t):
     y = y0
     def tweeny():
         # This side effect is necessary to make things work!
-        a = x
+        a = 1
         def circle(t):
             s = c + str(1-t) + ")"
             context.strokeStyle = s
