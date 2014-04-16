@@ -1,7 +1,7 @@
 def outer(x):
-    def middle():
+    def middle(y):
         # a = x
-        def inner():
+        def inner(z):
             return x
         return inner
     return middle()()
