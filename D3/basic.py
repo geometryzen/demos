@@ -28,6 +28,7 @@ context = canvas.node().getContext("2d")
 context.globalCompositionOperation = "lighter"
 context.lineWidth = 6
 print context.lineWidth
+print context.globalCompositionOperation
 
 def circle(t):
     s = c + str(1-t) + ")"
