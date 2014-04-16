@@ -39,7 +39,7 @@ def foo(x):
         q = 10
         # inner function "baz"
         def baz(z):
-            print("Locals: ", locals())
+            #print("Locals: ", locals())
             print("Vars: ", vars())
             return x + y + q + z
         return baz
