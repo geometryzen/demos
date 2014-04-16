@@ -25,7 +25,7 @@ canvas.attr("width", width).attr("height", height)
 def move():
     global x1, y1
     mouse = d3.mouse(canvas.node())
-    print mouse
+    print type(mouse)
     x1 = mouse[0]
     y1 = mouse[1]
     print x1, y1
