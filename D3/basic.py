@@ -25,6 +25,9 @@ def circle(t):
     
     pass
 
+def tweeny():
+    return circle
+
 def setUp():
     workbench.setUp()
 
@@ -38,7 +41,7 @@ def tick(t):
     y0 += (y1 - y0) * .1
     x = x0
     y = y0
-    d3.select({}).transition().duration(2000).tween("circle", lambda : return circle)
+    d3.select({}).transition().duration(2000).tween("circle", tweeny)
     print "Excellent"
     pass
 
