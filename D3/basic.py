@@ -32,7 +32,7 @@ print context.globalCompositionOperation
 
 def circle(t):
     s = c + str(1-t) + ")"
-    context.strokeStyle = "rgba(255,255,255,"+str(1-t)+")"
+    context.strokeStyle = "rgba(255.0,255.0,255.0,"+str(1-t)+")"
     context.beginPath()
     context.arc(x, y, r * t, 0, tau)
     context.stroke()
