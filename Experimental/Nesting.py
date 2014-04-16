@@ -1,5 +1,4 @@
-def outer():
-    x = 23
+def outer(x):
     def middle():
         # Why do we need this to stop x from being undefined?
         # a = x
