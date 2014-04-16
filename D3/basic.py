@@ -32,7 +32,6 @@ def particle():
     circle.transition().duration(2000).ease(window.Math.sqrt).attr("r", 100).style("stroke-opacity", 1e-6).remove()
 
     d3.event.preventDefault()
-'''
     
 rect = svg.append("rect")
 rect.attr("width", width).attr("height", height).on("mousemove", particle)
