@@ -12,8 +12,6 @@ x1 = width / 2
 y1 = height / 2
 x0 = x1
 y0 = y1
-x = x0
-y = y0
 i = 0
 r = 200
 c = ""
@@ -45,7 +43,7 @@ def setUp():
     workbench.setUp()
 
 def tick(t):
-    global i, x0, y0, c,x,y
+    global i, x0, y0, c
     i += 1
     context.clearRect(0,0,width,height)
     z = d3.hsl(i % 360, 1, 0.5).rgb()
