@@ -25,7 +25,7 @@ def setUp():
     workbench.setUp()
 
 def tick(t):
-    global i
+    global i, x0, y0
     i += 1
     context.clearRect(0,0,width,height)
     z = d3.hsl(i % 360, 1, 0.5).rgb()
