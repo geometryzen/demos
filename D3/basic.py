@@ -1,1 +1,5 @@
-# D3/basic.py
+from browser import window
+
+d3 = window.d3
+
+print d3
