@@ -30,7 +30,7 @@ def circle(t):
     s = c + str(1-t) + ")"
     context.strokeStyle = s
     context.beginPath()
-    context.arc(x,y,r*t,0,tau)
+    context.arc(x, y, r * t, 0, tau)
     context.stroke()
     pass
 
