@@ -40,14 +40,6 @@ context = canvas.node().getContext("2d")
 context.globalCompositionOperation = "lighter"
 context.lineWidth = 2
 
-def circle(t):
-    s = c + str(1-t) + ")"
-    context.strokeStyle = s
-    context.beginPath()
-    context.arc(x, y, r * t, 0, tau)
-    context.stroke()
-    pass
-
 
 def setUp():
     workbench.setUp()
@@ -62,7 +54,14 @@ def tick(t):
     y0 += (y1 - y0) * .1
     x = x0
     y = y0
+    pass
     def tweeny():
+        def circle(t):
+            s = c + str(1-t) + ")"
+            context.strokeStyle = s
+            context.beginPath()
+            context.arc(x, y, r * t, 0, tau)
+            context.stroke()
         return circle
     d3.select({}).transition().duration(2000).ease(math.sqrt).tween("circle", tweeny)
     pass
