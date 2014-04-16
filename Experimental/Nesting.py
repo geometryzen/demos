@@ -1,6 +1,6 @@
 def outer(x):
     def middle(y):
-        a = 1
+        a = x
         def inner(z):
             print "z", str(z)
             print "y", str(y)
