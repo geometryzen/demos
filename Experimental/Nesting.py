@@ -5,6 +5,6 @@ def outer(x):
         def inner():
             return x
         return inner
-    middle()()
+    return middle()()
 
 print outer(23)
