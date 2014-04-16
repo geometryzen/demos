@@ -6,7 +6,7 @@ d3 = window.d3
 width = max(960, window.innerWidth)
 height = max(500, window.innerHeight)
 
-i = 0
+i = 180
 rect = None
 
 svg = d3.select("body").append("svg")
