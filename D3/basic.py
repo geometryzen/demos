@@ -61,7 +61,6 @@ def tick(t):
             context.stroke()
         return circle
     d3.select({}).transition().duration(2000).ease(math.sqrt).tween("circle", tweeny)
-    pass
 
 def terminate(t):
     return t > 60
