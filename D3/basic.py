@@ -15,7 +15,8 @@ def particle():
 
     global i
     i = (i + 1) % 360
-    
+    x = d3.event.pageX
+    print x
     m = d3.mouse(svg)
     print m[0],m[1]
 '''
