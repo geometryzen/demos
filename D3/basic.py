@@ -52,7 +52,6 @@ def tick(t):
     y0 += (y1 - y0) * .1
     x = x0
     y = y0
-    pass
     def tweeny():
         def circle(t):
             s = c + str(1-t) + ")"
