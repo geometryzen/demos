@@ -18,6 +18,7 @@ def setUp():
     workbench.setUp()
 
 def tick(t):
+    context.clearRect(0,0,width,height)
     pass
 
 def terminate(t):
