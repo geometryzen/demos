@@ -10,7 +10,7 @@ i = 0
 svg = d3.select("body").append("svg").attr("width", width).attr("height", height)
 
 def particle():
-    m = d3.mouse(this)
+    m = d3.mouse()
 
     circle = svg.insert("circle", "rect")
     print circle
