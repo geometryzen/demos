@@ -8,7 +8,7 @@ height = max(500, window.innerHeight)
 i = 0
 
 svg = d3.select("body").append("svg").attr("width", width).attr("height", height)
-print svg.tagName
+print svg
 
 def particle():
 
