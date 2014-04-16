@@ -1,6 +1,6 @@
 def outer(x):
     def middle():
-        a = x
+        # a = x
         def inner():
             return x
         return inner
