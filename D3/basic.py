@@ -51,8 +51,8 @@ def tick(t):
     x = x0
     y = y0
     def tweeny():
-        print 'TWEENY'
         def circle(t):
+            print "circle " + str(t)
             s = c + str(1-t) + ")"
             context.strokeStyle = s
             context.beginPath()
