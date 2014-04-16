@@ -60,10 +60,10 @@ def tick(t):
     context.clearRect(0,0,width,height)
     z = d3.hsl(i % 360, 1, 0.5).rgb()
     c = "rgba(" + str(int(z.r)) + "," + str(int(z.g)) + "," + str(int(z.b)) + ","
+    x0 += (x1 - x0) * .1
+    y0 += (y1 - y0) * .1
     x = x0
     y = y0
-    x += (x1 - x0) * .1
-    y += (y1 - y0) * .1
     d3.select({}).transition().duration(2000).ease(math.sqrt).tween("circle", tweeny)
     pass
 
