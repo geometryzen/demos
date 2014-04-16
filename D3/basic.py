@@ -22,7 +22,7 @@ context.globalCompositionOperation = "lighter"
 context.lineWidth = 2
 
 def circle(t):
-    
+    print t
     pass
 
 def tweeny():
