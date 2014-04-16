@@ -160,7 +160,7 @@ def global_fn():
 
 global_fn() # OK, 100
 print(global_fn.__closure__) # None
- 
+'''
 # ------ 5. By default assignment creates a local var. -----------------
 # ------ User `nonlocal` to capture the same name closured variable. ---
  
@@ -263,3 +263,4 @@ print(instance["modifyYContent"].__closure__)
 instance["modifyYContent"](30)
  
 print(instance["getY"]()) # {"foo": 30}
+'''
