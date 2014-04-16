@@ -15,16 +15,17 @@ def particle():
 
     global i
     i = (i + 1) % 360
+    
     x = d3.event.pageX
-    print x
-    m = d3.mouse(svg)
-    print m[0],m[1]
-'''
+    y = d3.event.pageY
+
+#    m = d3.mouse(svg)
+#    print m[0],m[1]
 
     circle = svg.insert("circle", "rect")
     print circle
-    circle.attr("cx", m[0])
-    circle.attr("cy", m[1])
+    circle.attr("cx", x)
+    circle.attr("cy", y)
     circle.attr("r", 1e-6)
     circle.style("stroke", d3.hsl(i, 1, .5))
     circle.style("stroke-opacity", 1)
