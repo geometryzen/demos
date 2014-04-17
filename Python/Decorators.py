@@ -28,3 +28,7 @@ def print_name(func):
         print("calling function '{}'".format(func.__name__))
         return func(*args, **kwargs)
     return _
+
+@print_name
+def do_nothing():
+    pass
