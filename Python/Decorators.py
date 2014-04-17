@@ -32,3 +32,5 @@ def print_name(func):
 @print_name
 def do_nothing():
     pass
+
+do_nothing()
