@@ -21,4 +21,10 @@ def make_counter():
 
 counter = make_counter()
 
-counter()
+# counter()
+
+def print_name(func):
+    def _(*args, **kwargs):
+        print("calling function '{}'".format(func.__name__))
+        return func(*args, **kwargs)
+    return _
