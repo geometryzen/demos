@@ -14,7 +14,11 @@ log_error("Hello")
 def make_counter():
     i = 0
     def _():
-        nonlocal i # This line is new
+        #Python 3nonlocal i # This line is new
         i += 1
         return i
     return _
+
+counter = make_counter()
+
+counter()
