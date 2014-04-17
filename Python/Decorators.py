@@ -11,4 +11,10 @@ log_info("Hello")
 log_warning("Hello")
 log_error("Hello")
 
-dir(log_info)
+def make_counter():
+    i = 0
+    def _():
+        nonlocal i # This line is new
+        i += 1
+        return i
+    return _
