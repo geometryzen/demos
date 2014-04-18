@@ -76,4 +76,4 @@ b.create('curve',[dataT,dataX],{"strokeColor":'blue'})
 b.create('curve',[dataT,dataV],{"strokeColor":'green'})
 b.create('tapemeasure', [[0,-4], [1,-4]], {"name":'distance'});
 print "time now:", time()
-print "Notice how the energy increases with the Euler solution."
+print "Notice how the energy stays nearly constant with the modified Euler solution."
