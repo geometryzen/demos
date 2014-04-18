@@ -23,7 +23,9 @@ def euler(y, x, h, f):
 
 def modifiedEuler(y, x, h, f):
     # TODO: Would be nice to be able to do scalar multiplication here.
-    return y + f(x,y) * numpy.array([h,h])
+    fxY = f(x,y)
+    yBar = y + f(x,y) * numpy.array([h,h])
+    return 0.5 * (y + yBar + f(x+h,yBar))
 
 N = 1000
 
