@@ -10,4 +10,5 @@ print M * M
 # TODO print dot(M,M)
 # TODO print cross(M,M)
 # TODO print transpose(M)
-print inv(M)
+# TODO print inv(M)
+print det(M)
