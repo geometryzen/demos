@@ -17,4 +17,4 @@ print M * M
 x = array([pi/6,pi/5,pi/4,pi/3,pi/2])
 # TODO print sin(x)
 
-print arange(0,1,0.25)
+# TODO print arange(0,1,0.25)
