@@ -15,3 +15,4 @@ print M * M
 # TODO print det(M)
 
 x = array([pi/6,pi/5,pi/4,pi/3,pi/2])
+print x
