@@ -3,4 +3,4 @@ M = array([[1,2],[3,4]])
 
 print M
 
-print M * 3.0
+print M * 3
