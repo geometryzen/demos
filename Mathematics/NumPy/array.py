@@ -7,4 +7,5 @@ print M
 print M + M
 print M * M
 
-print dot(M,M)
+# TODO print dot(M,M)
+print cross(M,M)
