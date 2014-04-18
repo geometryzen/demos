@@ -24,4 +24,4 @@ print linspace(0.0,1.0,5)
 # TODO print logspace(1, 3, 4)
 
 # TODO print zeros([2,3], int)
-print ones([2,3],int)
+# TODO print ones([2,3],int)
