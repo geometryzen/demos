@@ -18,8 +18,8 @@ def SHO(state, time):
     return numpy.array([velocity, acceleration])
 
 # TODO: Let's record the acceleration.
-def euler(y, t, dt, derivs):
-    d = derivs(y,t)
+def euler(y, t, dt, f):
+    d = f(y,t)
     # TODO: Would be nice to be able to do scalar multiplication here.
     dy = d * numpy.array([dt,dt])
     return y + dy
