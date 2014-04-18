@@ -1,4 +1,5 @@
 from numpy import *
+from math import pi
 M = array([[1,2],[3,4]])
 
 print M
