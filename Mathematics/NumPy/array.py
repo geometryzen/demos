@@ -1,5 +1,5 @@
 from numpy import *
-from math import pi
+from math import pi, sin
 M = array([[1,2],[3,4]])
 
 print M
