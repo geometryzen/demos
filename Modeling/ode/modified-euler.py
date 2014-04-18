@@ -11,7 +11,7 @@ e3 = VectorE3(0, 0, 1)
 origin = VectorE3(0,0,0)
 
 # Simple Harmonic Motion
-def SHO(state, time):
+def SHO(time, state):
     position = state[0]
     velocity = state[1]
     acceleration = - k/m * position + g - b * velocity
@@ -19,7 +19,7 @@ def SHO(state, time):
 
 def euler(y, x, h, f):
     # TODO: Would be nice to be able to do scalar multiplication here.
-    return y + f(y,x) * numpy.array([h,h])
+    return y + f(x,y) * numpy.array([h,h])
 
 N = 1000
 
