@@ -19,7 +19,7 @@ def SHO(state, time):
 
 def euler(y, t, h, f):
     # TODO: Would be nice to be able to do scalar multiplication here.
-    return y + numpy.array([h,h]) * f(y,t)
+    return y + f(y,t) * numpy.array([h,h])
 
 N = 1000
 
