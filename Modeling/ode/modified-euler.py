@@ -21,6 +21,10 @@ def euler(y, x, h, f):
     # TODO: Would be nice to be able to do scalar multiplication here.
     return y + f(x,y) * numpy.array([h,h])
 
+def modifiedEuler(y, x, h, f):
+    # TODO: Would be nice to be able to do scalar multiplication here.
+    return y + f(x,y) * numpy.array([h,h])
+
 N = 1000
 
 # Keep track of displacement and velocity.
