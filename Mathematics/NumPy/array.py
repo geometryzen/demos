@@ -6,3 +6,5 @@ print M
 # TODO print M * 3
 print M + M
 print M * M
+
+print dot(M,M)
