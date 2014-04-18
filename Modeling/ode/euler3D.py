@@ -34,7 +34,7 @@ y[0,0] = origin
 # Initial velocity goes in slot 1. We start from rest.
 y[0,1] = VectorE3(0, 0, 0)
 
-tau = 5.0
+tau = 10.0
 
 t = numpy.linspace(0.0, tau, N)
 
