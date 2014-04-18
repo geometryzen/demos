@@ -18,3 +18,5 @@ x = array([pi/6,pi/5,pi/4,pi/3,pi/2])
 # TODO print sin(x)
 
 # TODO print arange(0,1,0.25)
+
+print linspace(0,1,5)
