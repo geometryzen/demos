@@ -8,4 +8,5 @@ print M + M
 print M * M
 
 # TODO print dot(M,M)
-print cross(M,M)
+# TODO print cross(M,M)
+print transpose(M)
