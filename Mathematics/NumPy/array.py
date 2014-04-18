@@ -3,4 +3,5 @@ M = array([[1,2],[3,4]])
 
 print M
 
-print M * 3
+# TODO print M * 3
+print M + M
