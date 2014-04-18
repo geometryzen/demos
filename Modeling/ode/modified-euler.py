@@ -17,9 +17,9 @@ def SHO(state, time):
     acceleration = - k/m * position + g - b * velocity
     return numpy.array([velocity, acceleration])
 
-def euler(y, t, h, f):
+def euler(y, x, h, f):
     # TODO: Would be nice to be able to do scalar multiplication here.
-    return y + f(y,t) * numpy.array([h,h])
+    return y + f(y,x) * numpy.array([h,h])
 
 N = 1000
 
