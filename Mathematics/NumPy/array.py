@@ -5,6 +5,7 @@ M = array([[1,2],[3,4]])
 print M
 
 print "M*3",M * 3
+print "3*M",3 * M
 print M + M
 print M * M
 
