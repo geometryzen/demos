@@ -21,7 +21,7 @@ def trapezoidEuler(y, x, h, f):
     print f(x,y)
     print h
     print f(x,y)[1] * h
-    print h * f(x,y)[0]
+    print h * f(x,y)[1]
     yBar = h * f(x,y)
     print yBar
     print type(yBar)
