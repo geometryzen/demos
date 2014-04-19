@@ -18,7 +18,6 @@ def SHO(time, state):
     return numpy.array([velocity, acceleration])
 
 def midpointEuler(y, x, h, f):
-    fxY = f(x,y)
     yBar = y + f(x,y) * h
     return (y + yBar + f(x+h, yBar) * h) * 0.5
 
