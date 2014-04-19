@@ -18,9 +18,10 @@ def SHO(time, state):
     return numpy.array([velocity, acceleration])
 
 def trapezoidEuler(y, x, h, f):
+    # TODO: Would be nice to be able to do scalar multiplication here.
     fxY = f(x,y)
-    yBar = y + h * f(x,y)
-    return 0.5 * (y + yBar + h * f(x+h, yBar))
+    yBar = y + f(x,y) * h
+    return (y + yBar + f(x+h,yBar) * numpy.array([h,h])) * numpy.array([0.5,0.5])
 
 N = 1000
 
