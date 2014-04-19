@@ -12,4 +12,5 @@ e3 = VectorE3(0,0,1)
 x = array([e1])
 y = array([e2])
 print x * y
+print y * x
 
