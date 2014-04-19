@@ -21,7 +21,7 @@ def euler(y, x, h, f):
     # TODO: Would be nice to be able to do scalar multiplication here.
     return y + f(x,y) * numpy.array([h,h])
 
-def modifiedEuler(y, x, h, f):
+def trapezoidEuler(y, x, h, f):
     # TODO: Would be nice to be able to do scalar multiplication here.
     fxY = f(x,y)
     yBar = y + f(x,y) * numpy.array([h,h])
