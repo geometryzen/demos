@@ -19,7 +19,7 @@ def SHO(time, state):
 
 def trapezoidEuler(y, x, h, f):
     yEuler = y + h * f(x,y)
-    return (y + yEuler + f(x+h, yEuler) * h) * 0.5
+    return (y + yEuler + h * f(x+h, yEuler)) * 0.5
 
 N = 1000
 
