@@ -18,7 +18,7 @@ def SHO(state, time):
     return numpy.array([velocity, acceleration])
 
 def euler(y, t, dt, f):
-    return y + f(y, t) * dt
+    return y + f(y, t) * numpy.array([dt,dt])
 
 N = 1000
 
