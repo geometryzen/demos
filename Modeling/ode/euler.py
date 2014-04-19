@@ -11,10 +11,8 @@ def SHO(state, time):
     g1 = - k/m * state[0] - gravity
     return numpy.array([g0, g1])
 
-def euler(y, t, dt, derivs):
-    d = derivs(y,t)
-    dy = d * dt
-    return y + dy
+def euler(y, t, dt, f):
+    return y + f(y,t) * dt
 
 N = 1000
 x0 = 0.0
