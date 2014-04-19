@@ -13,4 +13,5 @@ x = array([e1])
 y = array([e2])
 print x * y
 print y * x
+print x * 3
 
