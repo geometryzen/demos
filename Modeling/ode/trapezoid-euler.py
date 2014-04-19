@@ -21,7 +21,7 @@ def trapezoidEuler(y, x, h, f):
     # TODO: Would be nice to be able to do scalar multiplication here.
     fxY = f(x,y)
     yBar = y + f(x,y) * h
-    return (y + yBar + f(x+h,yBar) * numpy.array([h,h])) * numpy.array([0.5,0.5])
+    return (y + yBar + f(x+h,yBar) * h) * numpy.array([0.5,0.5])
 
 N = 1000
 
