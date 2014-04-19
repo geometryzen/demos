@@ -38,7 +38,7 @@ t = numpy.linspace(0.0, tau, N)
 dt = tau / float(N-1)
 
 # Spring constant.
-k = 3.5
+k = 3.9
 # Mass of body.
 m = 0.2
 # Damping
