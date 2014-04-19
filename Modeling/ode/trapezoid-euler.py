@@ -54,7 +54,7 @@ g = -9.81 * e3
 
 # Propagate forward in time.
 for j in range(N-1):
-    y[j+1] = modifiedEuler(y[j], t[j], dt, SHO)
+    y[j+1] = trapezoidEuler(y[j], t[j], dt, SHO)
 
 # Extract the data that we need for driving the graph.
 dataT = [t[j]   for j in range(N)]    
