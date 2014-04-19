@@ -19,7 +19,7 @@ def SHO(time, state):
 
 def midpointEuler(y, x, h, f):
     yEuler = y + h * f(x,y)
-    return (y + yEuler + h * f(x+h, yEuler)) * 0.5
+    return 1.0 * (y + yEuler + h * f(x+h, yEuler)) * 0.5
 
 N = 1000
 
