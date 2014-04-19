@@ -17,10 +17,6 @@ def SHO(time, state):
     acceleration = - k/m * position + g - b * velocity
     return numpy.array([velocity, acceleration])
 
-def euler(y, x, h, f):
-    # TODO: Would be nice to be able to do scalar multiplication here.
-    return y + f(x,y) * numpy.array([h,h])
-
 def midpointEuler(y, x, h, f):
     # TODO: Would be nice to be able to do scalar multiplication here.
     fxY = f(x,y)
