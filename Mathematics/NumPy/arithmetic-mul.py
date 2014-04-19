@@ -15,4 +15,5 @@ print x * y
 print y * x
 print x * 3
 print 3 * x
+print x + y
 
