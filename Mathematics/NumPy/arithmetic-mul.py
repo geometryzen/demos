@@ -1,9 +1,7 @@
-import numpy as np
+from numpy import *
 
-x = np.array([1,2,3])
-y = np.array([9,7,5])
+
+x = array([1,2,3])
+y = array([9,7,5])
 print x * y
-z = x * y
-print z[0]
-print z[1]
-print z[2]
+
