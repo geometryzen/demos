@@ -18,7 +18,8 @@ def SHO(time, state):
     return numpy.array([velocity, acceleration])
 
 def trapezoidEuler(y, x, h, f):
-    yBar = y + h * f(x,y)
+    yBar = h * f(x,y)
+    yBar = y + yBar
     return (y + yBar + f(x+h,yBar) * h) * 0.5
 
 N = 1000
