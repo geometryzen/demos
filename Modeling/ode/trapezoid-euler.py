@@ -19,7 +19,7 @@ def SHO(time, state):
 
 def trapezoidEuler(y, x, h, f):
     yBar = y + f(x,y) * h
-    return 0.5 * (y + yBar + f(x+h,yBar) * h) * 0.5
+    return (y + yBar + f(x+h,yBar) * h) * 0.5
 
 N = 1000
 
