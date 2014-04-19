@@ -13,7 +13,7 @@ def SHO(state, time):
 
 def euler(y, t, dt, derivs):
     d = derivs(y,t)
-    dy = d * numpy.array([dt,dt])
+    dy = d * dt
     return y + dy
 
 N = 1000
