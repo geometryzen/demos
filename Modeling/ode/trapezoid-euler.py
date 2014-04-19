@@ -42,7 +42,7 @@ k = 3.5
 # Mass of body.
 m = 0.2
 # Damping
-b = 0.8
+b = 1.4
 # Acceleration due to gravity.
 g = -9.81 * e3
 
