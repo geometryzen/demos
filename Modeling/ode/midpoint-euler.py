@@ -18,10 +18,9 @@ def SHO(time, state):
     return numpy.array([velocity, acceleration])
 
 def midpointEuler(y, x, h, f):
-    # TODO: Would be nice to be able to do scalar multiplication here.
     fxY = f(x,y)
-    yBar = y + f(x,y) * numpy.array([h,h])
-    return (y + yBar + f(x+h,yBar) * numpy.array([h,h])) * numpy.array([0.5,0.5])
+    yBar = y + f(x,y) * h
+    return (y + yBar + f(x+h, yBar) * h) * 0.5
 
 N = 1000
 
@@ -72,4 +71,4 @@ b.create('curve',[dataT,dataX],{"strokeColor":'blue'})
 b.create('curve',[dataT,dataV],{"strokeColor":'green'})
 b.create('tapemeasure', [[0,-4], [1,-4]], {"name":'distance'});
 print "time now:", time()
-print "Notice how the energy stays nearly constant with the modified Euler solution."
+print "Notice how the energy stays nearly constant with the midpoint Euler solution."
