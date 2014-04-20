@@ -23,13 +23,12 @@ a = 1.0 - b
 beta = 1 / (2.0 * b)
 
 print "alpha", alpha
-print "beta", beta
 print "a", a
 print "b", b
 
 def rungeKutta2(y, x, h, f):
     k1 = h * f(x,y)
-    k2 = h * f(x + alpha * h, y + beta * k1)
+    k2 = h * f(x + alpha * h, y + alpha * k1)
     return y + a * k1 + b * k2
 
 N = 1000
