@@ -21,10 +21,6 @@ alpha = 0.8
 b = 1.0 / (2.0 * alpha)
 a = 1.0 - b
 
-print "alpha", alpha
-print "a", a
-print "b", b
-
 def rungeKutta2(y, x, h, f):
     k1 = h * f(x,y)
     k2 = h * f(x + alpha * h, y + alpha * k1)
@@ -79,3 +75,7 @@ b.create('curve',[dataT,dataX],{"strokeColor":'blue'})
 b.create('curve',[dataT,dataV],{"strokeColor":'green'})
 b.create('tapemeasure', [[0,-4], [1,-4]], {"name":'distance'});
 print "time now:", time()
+
+print "alpha", alpha
+print "a", a
+print "b", b
