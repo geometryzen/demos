@@ -20,7 +20,6 @@ def SHO(time, state):
 alpha = 0.8
 b = 1.0 / (2.0 * alpha)
 a = 1.0 - b
-beta = 1 / (2.0 * b)
 
 print "alpha", alpha
 print "a", a
