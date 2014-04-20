@@ -75,3 +75,4 @@ b.create('curve',[dataT,dataX],{"strokeColor":'blue'})
 
 b.create('curve',[dataT,dataV],{"strokeColor":'green'})
 b.create('tapemeasure', [[0,-4], [1,-4]], {"name":'distance'});
+print "time now:", time()
