@@ -25,8 +25,7 @@ beta = b / 2.0
 def rungeKutta2(y, x, h, f):
     k1 = h * f(x,y)
     k2 = h * f(x + alpha * h, y + beta * k1)
-    yEuler = y + h * f(x,y)
-    return 0.5 * (y + yEuler + h * f(x + h, yEuler))
+    return y + a * k1 + b * k2
 
 N = 1000
 
