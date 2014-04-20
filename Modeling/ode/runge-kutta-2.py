@@ -17,7 +17,7 @@ def SHO(time, state):
     acceleration = - k/m * position + g - b * velocity
     return numpy.array([velocity, acceleration])
 
-def trapezoidEuler(y, x, h, f):
+def rungeKutta2(y, x, h, f):
     yEuler = y + h * f(x,y)
     return 0.5 * (y + yEuler + h * f(x + h, yEuler))
 
