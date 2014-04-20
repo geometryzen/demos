@@ -17,6 +17,10 @@ def SHO(time, state):
     acceleration = - k/m * position + g - d * velocity
     return numpy.array([velocity, acceleration])
 
+alpha = 0.5
+b = alpha / 2.0
+a = 1.0 - a
+
 def rungeKutta2(y, x, h, f):
     k1 = h * f(x,y)
     k2 = h * f(x + alpha * h, y + beta * k1)
