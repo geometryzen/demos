@@ -14,7 +14,7 @@ origin = VectorE3(0,0,0)
 def SHO(time, state):
     position = state[0]
     velocity = state[1]
-    acceleration = - k/m * position + g - b * velocity
+    acceleration = - k/m * position + g - d * velocity
     return numpy.array([velocity, acceleration])
 
 def rungeKutta2(y, x, h, f):
