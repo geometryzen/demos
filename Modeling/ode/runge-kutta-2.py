@@ -20,6 +20,7 @@ def SHO(time, state):
 alpha = 0.5
 b = alpha / 2.0
 a = 1.0 - b
+beta = b / 2.0
 
 def rungeKutta2(y, x, h, f):
     k1 = h * f(x,y)
