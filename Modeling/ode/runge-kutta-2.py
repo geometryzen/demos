@@ -17,7 +17,7 @@ def SHO(time, state):
     acceleration = - k/m * position + g - d * velocity
     return numpy.array([velocity, acceleration])
 
-alpha = 0.5
+alpha = 1.0
 b = alpha / 2.0
 a = 1.0 - b
 beta = b / 2.0
