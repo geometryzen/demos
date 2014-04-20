@@ -22,6 +22,8 @@ b = alpha / 2.0
 a = 1.0 - b
 beta = 1 / (2.0 * b)
 
+print "alpha", alpha
+
 def rungeKutta2(y, x, h, f):
     k1 = h * f(x,y)
     k2 = h * f(x + alpha * h, y + beta * k1)
