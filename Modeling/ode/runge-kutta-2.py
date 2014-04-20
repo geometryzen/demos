@@ -68,12 +68,12 @@ div = window.document.getElementById("box")
 div.style.width  = "400px"
 div.style.height = "400px"
 
-b = graph.initBoard("box", {"boundingbox":[-1.0,5.0,tau,-5],"axis":True,"showCopyright":False})
+board = graph.initBoard("box", {"boundingbox":[-1.0,5.0,tau,-5],"axis":True,"showCopyright":False})
 
-b.create('curve',[dataT,dataX],{"strokeColor":'blue'})
+board.create('curve',[dataT,dataX],{"strokeColor":'blue'})
 
-b.create('curve',[dataT,dataV],{"strokeColor":'green'})
-b.create('tapemeasure', [[0,-4], [1,-4]], {"name":'distance'});
+board.create('curve',[dataT,dataV],{"strokeColor":'green'})
+board.create('tapemeasure', [[0,-4], [1,-4]], {"name":'distance'});
 print "time now:", time()
 
 print "alpha", alpha
