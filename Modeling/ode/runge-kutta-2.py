@@ -18,6 +18,8 @@ def SHO(time, state):
     return numpy.array([velocity, acceleration])
 
 def rungeKutta2(y, x, h, f):
+    k1 = h * f(x,y)
+    k2 = h * f(x + alpha * h, y + beta * k1)
     yEuler = y + h * f(x,y)
     return 0.5 * (y + yEuler + h * f(x + h, yEuler))
 
