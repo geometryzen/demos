@@ -21,12 +21,14 @@ alpha = 0.8
 a2 = 4 - alpha
 a3 = alpha
 b31 = (0.5-(1.0/alpha))
+b42 = (1.0-(alpha/2.0))
+b43 = alpha / 2
 
 def rungeKutta4(y, x, h, f):
     k1 = h * f(x,y)
     k2 = h * f(x + 0.5 * h, y + 0.5 * k1)
     k3 = h * f(x + 0.5 * h, y + b31 * k1 + (1/alpha) * k2)
-    k4 = h * f(x + h, y + (1.0-(alpha/2.0)) * k2 + (alpha/2) * k3)
+    k4 = h * f(x + h, y + b42 * k2 + b43 * k3)
     return y + (k1 + a2 * k2 + a3 * k3 + k4) / 6.0
 
 N = 1000
