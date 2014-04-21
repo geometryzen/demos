@@ -24,7 +24,7 @@ def rungeKutta4(y, x, h, f):
     k2 = h * f(x + 0.5 * h, y + 0.5 * k1)
     k3 = h * f(x + 0.5 * h, y + (0.5-(1.0/alpha)) * k1 + (1/alpha) * k2)
     k4 = h * f(x + h, y + (1.0-(alpha/2.0)) * k2 + (alpha/2) * k3)
-    return y + (k1 + (4.0-alpha) * k2 + k3 * alpha + k4) * (1/6.0)
+    return y + (k1 + (4.0-alpha) * k2 + k3 * alpha + k4) * (1 / 6.0)
 
 N = 1000
 
