@@ -77,5 +77,3 @@ board.create('tapemeasure', [[0,-4], [1,-4]], {"name":'distance'});
 print "time now:", time()
 
 print "alpha", alpha
-print "a", a
-print "b", b
