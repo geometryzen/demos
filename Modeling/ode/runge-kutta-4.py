@@ -32,7 +32,7 @@ def rungeKutta4(y, x, h, f):
     k4 = h * f(x + h, y + b42 * k2 + b43 * k3)
     return y + (k1 + a2 * k2 + a3 * k3 + k4) / 6.0
 
-N = 500
+N = 1000
 
 # Keep track of displacement and velocity.
 y = numpy.zeros((N,2))
