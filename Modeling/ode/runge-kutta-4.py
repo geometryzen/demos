@@ -21,7 +21,7 @@ alpha = 0.8
 
 def rungeKutta4(y, x, h, f):
     k1 = h * f(x,y)
-    k2 = h * f(x + 0.5 * h, y + 0.5 * k1)
+    # k2 = h * f(x + 0.5 * h, y + 0.5 * k1)
     k3 = 0
     # k3 = h * f(x + 0.5 * h, y + (0.5-(1.0/alpha)) * k1 + (1/alpha) * k2)
     k4 = 0
