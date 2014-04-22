@@ -1,4 +1,3 @@
-# This requires a new feature in JSXGraph build Nightly on 2014-04-05
 from browser import window
 from math import *
 
