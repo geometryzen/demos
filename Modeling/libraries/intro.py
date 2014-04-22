@@ -18,6 +18,9 @@ print x / 3
 print 3 / x
 
 print x % 3
+print
 print x ^ 3
+print
 print x << 1
+print
 print x >> 1
