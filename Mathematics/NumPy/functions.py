@@ -1,4 +1,5 @@
 import numpy as np
+from math import exp
 
 time = np.linspace(0.0, 1.0, 9)
 
