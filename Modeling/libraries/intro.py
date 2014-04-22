@@ -4,10 +4,13 @@ x = np.array([1,2,3,4,5,6],float)
 y = x - 3
 
 print x
+print
 print x + 3
 print 3 + x
+print
 print x - 3
 print 3 - x
+print
 print x * 3
 print 3 * x
 print x / 3
