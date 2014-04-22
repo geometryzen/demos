@@ -27,4 +27,4 @@ print x << 1
 print 1 << x
 print
 print x >> 1
-print 1 >> x
+print y >> x
