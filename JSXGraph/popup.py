@@ -4,7 +4,7 @@ from math import *
 
 graph = window.JXG.JSXGraph
 
-plotWin = window.open("","JSXGraph-Window","width=500,height=500")
+plotWin = window.open("","JSXGraph-Window","width=400,height=400")
 plotDoc = plotWin.document
 
 plotDoc.body.innerHTML = '<div id="box" class="jxgbox"></div>'
