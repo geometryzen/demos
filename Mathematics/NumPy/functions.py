@@ -1,5 +1,5 @@
 import numpy as np
-from math import exp
+from math import exp, sin
 
 time = np.linspace(0.0, 1.0, 9)
 
