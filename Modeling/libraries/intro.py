@@ -5,6 +5,7 @@ y = x - 3
 
 print x
 print x + 3
+print 3 + x
 print x - 3
 print x * 3
 print 3 * x
