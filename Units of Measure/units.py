@@ -14,6 +14,7 @@ angle = omega * t
 print angle
 
 print type(angle)
+print repr(angle)
 print cos(angle)
 
 #s = sin(angle)
