@@ -1,6 +1,6 @@
 from e3ga import *
 from units import *
-from math import pi
+from math import pi, cos
 
 angle1 = pi * radian
 angle2 = 180 * degree
