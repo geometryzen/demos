@@ -1,1 +1,1 @@
-from pythonds import Deque
+from pythonds import basic.Deque
