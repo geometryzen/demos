@@ -1,3 +1,3 @@
-x = input("dog")
+name = input("Please nter your name.")
 
-print x
+print name
