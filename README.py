@@ -1,1 +1,0 @@
-# Example Geometry Zen Models.
