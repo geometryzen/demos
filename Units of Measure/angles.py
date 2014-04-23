@@ -10,7 +10,7 @@ print length0
 print angle1
 print angle2
 
-print "cos(angle1) %s", cos(angle1)
+print "cos(angle1) %s" % cos(angle1)
 print "cos(angle2)", cos(angle2)
 
 print angle1 + angle2
