@@ -2,4 +2,4 @@ from e3ga import *
 from units import *
 
 print repr(radian)
-print radian.name
+print radian.uom.name
