@@ -6,6 +6,7 @@ print newton.scale
 print newton.name
 print newton.dimensions
 print newton.labels
+print newton
 
 print
 print repr(radian)
