@@ -1,1 +1,3 @@
-# Sequence.py
+x = []*5
+
+print x
