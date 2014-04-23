@@ -9,6 +9,7 @@ print angle1
 print angle2
 
 print repr(angle1)
+print type(angle1.quantity)
 print cos(angle1)
 
 print angle1 + angle2
