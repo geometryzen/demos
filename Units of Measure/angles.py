@@ -10,3 +10,4 @@ print repr(s)
 m = Measure(s, radian)
 
 print repr(m)
+print m;
