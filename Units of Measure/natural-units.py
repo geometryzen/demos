@@ -20,4 +20,3 @@ energyUnit = hbar / second
 lengthUnit = c / second
 
 print "Proton mass rest energy " + str(protonMassEnergy / joule) + " J"
-print "Proton mass rest energy " + str(protonMassEnergy / joule) + " J"
