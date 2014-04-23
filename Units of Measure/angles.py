@@ -6,6 +6,7 @@ angle0 = 1.0 * meter
 angle1 = pi * radian
 angle2 = 180 * degree
 
+print angle0
 print angle1
 print angle2
 
