@@ -1,1 +1,1 @@
-from pythonds import basic.Deque
+x = input()
