@@ -1,5 +1,5 @@
-x = []*5
+x = []
 
-x[3] = 9
+x.append(1)
 
 print x
