@@ -1,7 +1,7 @@
 from math import *
 from units import *
 
-omega = 2 * pi / (10 * second)
+omega = 2 * pi * radian / (10 * second)
 
 print omega
 
