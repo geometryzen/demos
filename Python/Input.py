@@ -1,6 +1,6 @@
 name = input("Please enter your first name.")
 
-print name
+quit(7)
 
 quit("Damn this for a game of chess!")
 
