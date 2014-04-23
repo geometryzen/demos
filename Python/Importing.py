@@ -1,1 +1,1 @@
-from pythondsX import *
+from pythonds import *
