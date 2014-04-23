@@ -6,7 +6,7 @@ print newton.name
 print newton.dimensions
 print newton.labels
 
-
+print
 print repr(radian)
 print radian.uom.scale
 print radian.uom.dimensions
