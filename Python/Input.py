@@ -1,4 +1,4 @@
-name = input("Please enter your first name.")
+name = input("Please enter your first name.", 23, True)
 
 print name
 
