@@ -3,6 +3,7 @@ from units import *
 
 print newton.scale
 print newton.name
+print newton.dimensions
 
 
 print repr(radian)
