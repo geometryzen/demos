@@ -1,5 +1,8 @@
+from e3ga import *
 from units import *
 
 print repr(radian)
 
-m = Measure(1, radian)
+s = ScalarE3(1)
+
+m = Measure(s, radian)
