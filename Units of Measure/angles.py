@@ -1,6 +1,7 @@
 from e3ga import *
 from units import *
 
+print "newton (N)"
 print newton.scale
 print newton.name
 print newton.dimensions
