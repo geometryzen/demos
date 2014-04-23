@@ -13,3 +13,4 @@ print radian.uom.scale
 print radian.uom.dimensions
 print radian.uom.labels
 print radian.uom.name
+print radian
