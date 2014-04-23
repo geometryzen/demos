@@ -1,1 +1,3 @@
 x = input()
+
+print x
