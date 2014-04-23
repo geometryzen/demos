@@ -5,4 +5,6 @@ print repr(radian)
 
 s = ScalarE3(1)
 
+print repr(s)
+
 m = Measure(s, radian)
