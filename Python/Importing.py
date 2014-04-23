@@ -1,1 +1,1 @@
-from pythonds import *
+from pythonds import basic
