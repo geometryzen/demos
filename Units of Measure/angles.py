@@ -8,3 +8,5 @@ s = ScalarE3(1)
 print repr(s)
 
 m = Measure(s, radian)
+
+print repr(m)
