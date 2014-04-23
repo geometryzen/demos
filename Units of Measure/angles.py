@@ -8,3 +8,5 @@ angle2 = 180 * degree
 print angle1
 print angle2
 
+print angle1 + angle2
+
