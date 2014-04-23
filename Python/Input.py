@@ -4,3 +4,5 @@ print name
 
 x = input()
 
+print x
+
