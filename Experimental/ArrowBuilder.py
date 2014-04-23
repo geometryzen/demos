@@ -5,6 +5,8 @@ from math import exp, pi
 
 space = CartesianSpace()
 
+e3 = VectorE3(0,0,1)
+
 rotor = exp(-BivectorE3(0.0, 1.0, 0.0)*pi/4.0)
 shape = ArrowBuilder().scale(2).wireframe(False).color(0x0000FF).axis(e3).segments(6).build()
 space.add(shape)
