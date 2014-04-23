@@ -2,6 +2,7 @@ from e3ga import *
 from units import *
 
 print newton.name
+print newton.uom
 
 print repr(radian)
 print radian.uom.scale
