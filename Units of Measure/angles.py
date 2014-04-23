@@ -1,3 +1,3 @@
 from units import *
 
-print radian
+print repr(radian)
