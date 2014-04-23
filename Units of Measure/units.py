@@ -13,8 +13,8 @@ angle = omega * t
 
 print angle
 
-#c = cos(angle)
-#print repr(c)
+print cos(angle)
+
 #s = sin(angle)
 #print s
 
