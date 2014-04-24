@@ -8,7 +8,7 @@ x = 3
 def fake(p1):
     pass
 
-k = 1.0
+k = 1.0 * newton / meter
 
 def f(x):
     return k * x * x
