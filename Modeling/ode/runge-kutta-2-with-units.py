@@ -49,7 +49,7 @@ print dt
 k = 3.5 * newton / meter
 print "k: %s" % k
 # Mass of body.
-m = 0.2
+m = 0.2 * kilogram
 print "m: %s" % m
 # Damping
 d = 0.0
