@@ -44,6 +44,6 @@ b = graph.initBoard("box",
                      "showNavigation":False
                      })
 
-b.create('curve',[dataX,dataY],{"strokeColor":'red'})
+b.create('curve',[dataX,dataY],{"strokeColor":'green'})
 xLabel = b.create('text',[0.6, 0.05, 'Extension / %s' % meter.uom], {"fontSize":15})
 yLabel = b.create('text',[-0.05, 0.8, 'Energy / %s' % f(meter).uom], {"fontSize":15, "display":'internal', "rotate":90})
