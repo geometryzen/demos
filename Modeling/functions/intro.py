@@ -11,6 +11,7 @@ graph = window.JXG.JSXGraph
 b = graph.initBoard("box", {"boundingbox":[-1,1,1,-1],"axis":True,"showCopyright":False})
 
 domainX = np.linspace(0, 1, 10) * meter
+print domainX
 rangeY = map(f, dataX)
 print rangeY
 
