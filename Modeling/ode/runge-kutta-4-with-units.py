@@ -89,7 +89,7 @@ board = graph.initBoard("box", {"boundingbox":[-1.0,5.0,tau.quantity,-5],"axis":
 
 board.create('curve',[dataT,dataX],{"strokeColor":'blue'})
 
-board.create('curve',[dataT,dataV],{"strokeColor":'green'})
+board.create('curve',[dataT,dataV],{"strokeColor":'red'})
 board.create('tapemeasure', [[0,-4], [1,-4]], {"name":'distance'});
 print "time end:", time()
 
