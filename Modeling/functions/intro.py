@@ -18,7 +18,7 @@ domainX = np.linspace(0.0, 1.0, 10)
 domainX = domainX * meter
 print "Are we still alive?"
 print domainX.shape
-print domainX[0]
+print domainX
 rangeY = map(f, dataX)
 print rangeY
 
