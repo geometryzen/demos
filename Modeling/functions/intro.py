@@ -14,6 +14,7 @@ def f(x):
     return k * x * x
 
 print f(2)
+print f(3)
 
 graph = window.JXG.JSXGraph
 
