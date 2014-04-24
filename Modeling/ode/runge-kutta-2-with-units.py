@@ -56,6 +56,7 @@ d = 0.0 * newton / (meter/second)
 print "d: %s" % d
 # Acceleration due to gravity.
 g = -9.81 * e3
+print "g: %s" % g
 
 # Propagate forward in time.
 for j in range(N-1):
