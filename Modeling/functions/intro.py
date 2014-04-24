@@ -23,6 +23,7 @@ b = graph.initBoard("box",
                     {"boundingbox":[min(dataX),max(dataY),max(dataX),min(dataY)],
                      "axis":True,
                      "showCopyright":False,
+                     "showNavigation":False
                      })
 
 b.create('curve',[dataX,dataY],{"strokeColor":'blue'})
