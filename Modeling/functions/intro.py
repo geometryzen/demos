@@ -20,7 +20,7 @@ extensions = np.linspace(-1.0 * meter, +1.0 * meter, N)
 # The range is the energy.
 energies = map(f, extensions)
 
-# Convert data so that it is suitable for JSXGraph.
+# Extract quantity from measure data so that it is suitable for JSXGraph.
 dataX = map(lambda x: x.quantity, extensions)
 dataY = map(lambda x: x.quantity, energies)
 
