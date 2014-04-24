@@ -34,4 +34,4 @@ b = graph.initBoard("box",
                      })
 
 b.create('curve',[dataX,dataY],{"strokeColor":'blue'})
-txt = b.create('text',[-2,-1, 'Hello World'], {fontSize:30})
+txt = b.create('text',[-2,-1, 'Hello World'], {"fontSize":30})
