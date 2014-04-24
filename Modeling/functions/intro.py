@@ -14,7 +14,7 @@ div = document.getElementById("box")
 div.style.width  = "400px"
 div.style.height = "400px"
 
-b = graph.initBoard("box", {"boundingbox":[-10,10,10,-10],"axis":True})
+b = graph.initBoard("box", {"boundingbox":[-5,5,10,-10],"axis":True})
 
 dataX = [1,2,3,4,5,6,7,8]
 dataY = map(y, dataX)
