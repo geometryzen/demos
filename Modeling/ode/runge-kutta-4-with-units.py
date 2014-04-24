@@ -62,7 +62,7 @@ print "k: %s" % k
 m = 0.2 * kilogram
 print "m: %s" % m
 # Damping
-d = 0.05 * newton / (meter / second)
+d = 0.2 * newton / (meter / second)
 print "d: %s" % d
 # Acceleration due to gravity.
 g = -9.81 * e3 * newton / kilogram
