@@ -14,13 +14,9 @@ print meter
 
 print 5 * meter
 
-domainX = np.linspace(0.0, 1.0, 10)
-domainX = domainX * meter
-print "Are we still alive?"
-print domainX.shape
-print domainX
+domainX = np.linspace(0.0 * meter, 1.0 * meter, 10)
+
 rangeY = map(f, domainX)
-print rangeY
 
 dataX = map(lambda x: x.quantity, domainX)
 dataY = map(lambda x: x.quantity, rangeY)
