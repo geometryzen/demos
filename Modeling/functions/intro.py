@@ -23,6 +23,6 @@ rangeY = map(f, domainX)
 print rangeY
 
 dataX = map(lambda x: x.quantity, domainX)
-dataY = map(lambda x: x.quantity, rangeX)
+dataY = map(lambda x: x.quantity, rangeY)
 
 b.create('curve',[dataX,dataY],{"strokeColor":'blue'})
