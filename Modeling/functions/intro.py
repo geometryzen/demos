@@ -5,8 +5,6 @@ from math import *
 
 k = 1.0 * newton / meter
 
-print k
-
 def f(x):
     y = 3
     print k
