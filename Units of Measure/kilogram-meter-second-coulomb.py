@@ -14,7 +14,7 @@ print "J = joule (" +str(joule) + ")"
 
 print "W = watt (" +str(watt) + ")"
 
-print "A = ampere (" +str(ampere) + ")"
+print "A = ampere (" +str(coulomb/second) + ")"
 
 print "V = volt (" +str(joule/coulomb) + ")"
 
