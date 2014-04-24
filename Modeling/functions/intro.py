@@ -15,7 +15,7 @@ def f(x):
 N = 100
 
 # The domain is the extension values.
-extensions = np.linspace(-1.0 * meter, +1.0 * meter, N)
+extensions = np.linspace(-1.0 * meter, +2.0 * meter, N)
 
 # The range is the energy.
 energies = map(f, extensions)
@@ -41,7 +41,6 @@ def boundingBox(padding):
             minY-padding*rangeY]
 
 box = boundingBox(0.10)
-print box
 
 b = graph.initBoard("box", 
                     {"boundingbox": box,
