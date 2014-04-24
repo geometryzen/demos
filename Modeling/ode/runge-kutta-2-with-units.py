@@ -33,7 +33,7 @@ def rungeKutta2(y, x, h, f):
 N = 10
 
 # Keep track of displacement and velocity.
-y = numpy.zeros((N,2)) * 5
+y = numpy.zeros((N,2))
 print y
 
 # Initial position goes in slot 0. We start at the origin.
