@@ -21,3 +21,5 @@ print "V = volt (" +str(joule/coulomb) + ")"
 print "T = tesla (" +str((newton/coulomb)/(meter/second)) + ")"
 
 print "V/m = volt/meter (" +str(volt/meter) + ")"
+
+print "ohm = volt/ampere (" +str(volt/ampere) + ")"
