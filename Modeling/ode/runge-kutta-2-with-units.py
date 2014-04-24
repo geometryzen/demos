@@ -40,6 +40,7 @@ print y
 y[0,0] = origin
 # Initial velocity goes in slot 1. We start from rest.
 y[0,1] = VectorE3(0, 0, 0) * meter / second
+print "y[0]: %s" % y[0]
 
 tau = 10.0 * second
 
