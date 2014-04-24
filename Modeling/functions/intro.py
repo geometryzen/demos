@@ -1,5 +1,5 @@
 from units import *
-from browser import document, window
+from browser import window
 from math import *
 
 def f(x):
