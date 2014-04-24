@@ -40,5 +40,8 @@ xLabel = b.create('text',[0.7,0.05, 'Extension / %s' % meter.uom], {})
 yLabel = b.create('text',[0.0,0.0, 'Energy / %s' % f(meter).uom], {})
 
 tRot = b.create('transform', [pi/2.0, 0.0,0.0], {"type":'rotate'}) 
+tRot.bindTo(xLabel)
+
+tRot = b.create('transform', [pi/2.0, 0.0,0.0], {"type":'rotate'}) 
 tRot.bindTo(yLabel)
 b.update()
