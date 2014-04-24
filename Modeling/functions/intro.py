@@ -8,6 +8,7 @@ k = 1.0 * newton / meter
 print k
 
 def f(x):
+    global k
     return k * x * x
 
 graph = window.JXG.JSXGraph
