@@ -1,6 +1,6 @@
 from units import *
 
-def y(x):
+def f(x):
     return x
 
 from browser import document, window
