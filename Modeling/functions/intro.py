@@ -4,7 +4,7 @@ from browser import window
 from math import *
 
 def f(x):
-    return x
+    return x * x
 
 graph = window.JXG.JSXGraph
 
