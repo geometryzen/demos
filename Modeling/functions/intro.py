@@ -2,6 +2,6 @@ from units import *
 
 
 def y(x):
-    return x * x
+    return x * x * x
 
-print y(2 * meter)
+print y(meter)
