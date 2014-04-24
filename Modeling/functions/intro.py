@@ -17,6 +17,6 @@ div.style.height = "400px"
 b = graph.initBoard("box", {"boundingbox":[-10,10,10,-10],"axis":True,"showCopyright":False})
 
 dataX = [1,2,3,4,5,6,7,8]
-dataY = map(y, dataX)
+dataY = map(f, dataX)
 
 b.create('curve',[dataX,dataY],{"strokeColor":'black'})
