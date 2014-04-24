@@ -68,7 +68,7 @@ print "g: %s" % g
 
 # Propagate forward in time.
 for j in range(N-1):
-    y[j+1] = rungeKutta2(y[j], t[j], dt, SHO)
+    y[j+1] = rungeKutta4(y[j], t[j], dt, SHO)
 
 # Extract the data that we need for driving the graph.
 dataT = [t[j].quantity   for j in range(N)]    
