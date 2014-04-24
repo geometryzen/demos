@@ -4,7 +4,7 @@ from browser import window
 from math import *
 
 # Spring Constant.
-k = 1.0 * newton / meter
+k = 2.0 * newton / meter
 x0 = 0.25 * meter
 
 # Compute the energy for a given extension.
@@ -26,7 +26,6 @@ dataY = map(lambda x: x.quantity, energies)
 
 JXG = window.JXG
 graph = JXG.JSXGraph
-
 
 def boundingBox():
     rangeX = abs(max(dataX)-min(dataX))
