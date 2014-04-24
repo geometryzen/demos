@@ -47,5 +47,5 @@ print x[1]
 print x[0][0]
 print x[0][1]
 print x[0][2]
-
-
+print x[0][3]
+print x[0][4]
