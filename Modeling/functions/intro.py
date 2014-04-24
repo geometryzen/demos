@@ -5,10 +5,11 @@ from math import *
 
 # Spring Constant.
 k = 1.0 * newton / meter
+x0 = 0.5 * meter
 
 # Compute the energy for a given extension.
 def f(x):
-    return k * x ** 2
+    return k * (x - x0) ** 2
 
 # How many points to plot.
 N = 100
