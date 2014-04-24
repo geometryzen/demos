@@ -8,9 +8,6 @@ k = 1.0 * newton / meter
 def f(x):
     return k * x * x
 
-graph = window.JXG.JSXGraph
-
-b = graph.initBoard("box", {"boundingbox":[-1,1,1,-1],"axis":True,"showCopyright":False})
 
 N = 100
 
@@ -19,5 +16,9 @@ rangeY = map(f, domainX)
 
 dataX = map(lambda x: x.quantity, domainX)
 dataY = map(lambda x: x.quantity, rangeY)
+
+graph = window.JXG.JSXGraph
+
+b = graph.initBoard("box", {"boundingbox":[-1,1,1,-1],"axis":True,"showCopyright":False})
 
 b.create('curve',[dataX,dataY],{"strokeColor":'blue'})
