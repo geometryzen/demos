@@ -1,10 +1,10 @@
 from units import *
+from browser import document, window
+from math import *
 
 def f(x):
     return x
 
-from browser import document, window
-from math import *
 
 graph = window.JXG.JSXGraph
 
