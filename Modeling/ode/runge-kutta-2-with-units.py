@@ -48,7 +48,7 @@ t = numpy.linspace(0.0 * second, tau, N)
 
 dt = tau / float(N-1)
 
-print dt
+print "dt: %s" % dt
 
 # Spring constant.
 k = 3.5 * newton / meter
