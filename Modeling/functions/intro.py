@@ -12,7 +12,7 @@ graph = window.JXG.JSXGraph
 
 b = graph.initBoard("box", {"boundingbox":[-1,1,1,-1],"axis":True,"showCopyright":False})
 
-domainX = np.linspace(-1.0 * meter, +1.0 * meter, 100)
+domainX = np.linspace(-1.0 * meter, +1.0 * meter, 10)
 
 rangeY = map(f, domainX)
 
