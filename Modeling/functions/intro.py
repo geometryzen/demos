@@ -17,6 +17,8 @@ rangeY = map(f, domainX)
 dataX = map(lambda x: x.quantity, domainX)
 dataY = map(lambda x: x.quantity, rangeY)
 
+print max(domainX)
+
 graph = window.JXG.JSXGraph
 
 b = graph.initBoard("box", {"boundingbox":[-1,1,1,-1],"axis":True,"showCopyright":False})
