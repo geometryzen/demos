@@ -6,7 +6,7 @@ from math import *
 k = 2.0 * newton / meter
 
 def f(x):
-    return k * x * x
+    return k * x * x * x
 
 
 N = 100
@@ -21,6 +21,8 @@ graph = window.JXG.JSXGraph
 
 b = graph.initBoard("box", 
                     {"boundingbox":[min(dataX),max(dataY),max(dataX),min(dataY)],
-                     "axis":True,"showCopyright":False})
+                     "axis":True,
+                     "showCopyright":False,
+                     })
 
 b.create('curve',[dataX,dataY],{"strokeColor":'blue'})
