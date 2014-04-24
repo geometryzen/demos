@@ -10,7 +10,7 @@ print "C = coulomb (" +str(coulomb) + ")"
 
 print "N = newton (" +str(newton) + ")"
 
-print "J = joule (" +str(joule) + ")"
+print "J = joule (" +str(newton * meter) + ")"
 
 print "W = watt (" +str(joule/second) + ")"
 
