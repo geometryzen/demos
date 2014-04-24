@@ -8,7 +8,7 @@ print "s = second (" +str(second) + ")"
 
 print "C = coulomb (" +str(coulomb) + ")"
 
-print "N = newton (" +str(newton) + ")"
+print "N = newton (" +str(kilogram * meter / (second ** 2)) + ")"
 
 print "J = joule (" +str(newton * meter) + ")"
 
