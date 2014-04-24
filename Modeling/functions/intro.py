@@ -25,7 +25,6 @@ dataX = map(lambda x: x.quantity, domainX)
 dataY = map(lambda x: x.quantity, rangeY)
 
 JXG = window.JXG
-JXG.Options.text.display = 'internal'
 graph = JXG.JSXGraph
 
 b = graph.initBoard("box", 
@@ -38,9 +37,6 @@ b = graph.initBoard("box",
 b.create('curve',[dataX,dataY],{"strokeColor":'blue'})
 xLabel = b.create('text',[0.6, 0.05, 'Extension / %s' % meter.uom], {"fontSize":15})
 yLabel = b.create('text',[-0.05, 0.8, 'Energy / %s' % f(meter).uom], {"display":'internal', "rotate":30})
-
-tRot = b.create('transform', [0.0, 0.0,0.0], {"type":'rotate'}) 
-tRot.bindTo(xLabel)
 
 tRot = b.create('transform', [pi/2.0, -0.05, 0.8], {"type":'rotate'}) 
 tRot.bindTo(yLabel)
