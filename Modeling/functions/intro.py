@@ -1,7 +1,7 @@
 from units import *
 
 def y(x):
-    return x * x * x
+    return x * x
 
 print y(meter)
 
