@@ -28,10 +28,10 @@ JXG = window.JXG
 graph = JXG.JSXGraph
 
 # Compute the bounding box for the graph so that the graph scales automagically.
-def boundingBox(dataX, dataY):
+def boundingBox(xs, dataY):
     padding = 0.05
-    minX = min(dataX)
-    maxX = max(dataX)
+    minX = min(xs)
+    maxX = max(xs)
     rangeX = abs(maxX-minX)
     rangeY = abs(max(dataY)-min(dataY))
     return [minX-padding*rangeX,
