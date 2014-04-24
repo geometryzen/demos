@@ -16,6 +16,6 @@ print "W = watt (" +str(watt) + ")"
 
 print "A = ampere (" +str(ampere) + ")"
 
-print "V = volt (" +str(volt*volt/volt) + ")"
+print "V = volt (" +str(volt) + ")"
 
-print "T = tesla (" +str(tesla*volt/volt) + ")"
+print "T = tesla (" +str(tesla) + ")"
