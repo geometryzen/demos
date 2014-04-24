@@ -39,7 +39,7 @@ y[0,1] = VectorE3(0, 0, 0)
 
 tau = 10.0 * second
 
-t = numpy.linspace(0.0, tau, N)
+t = numpy.linspace(0.0 * second, tau, N)
 
 dt = tau / float(N-1)
 
