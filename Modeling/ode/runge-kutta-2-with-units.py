@@ -80,7 +80,7 @@ div = window.document.getElementById("box")
 div.style.width  = "400px"
 div.style.height = "400px"
 
-board = graph.initBoard("box", {"boundingbox":[-1.0,5.0,tau,-5],"axis":True,"showCopyright":False})
+board = graph.initBoard("box", {"boundingbox":[-1.0,5.0,tau.quantity,-5],"axis":True,"showCopyright":False})
 
 board.create('curve',[dataT,dataX],{"strokeColor":'blue'})
 
