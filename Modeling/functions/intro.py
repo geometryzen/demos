@@ -6,7 +6,7 @@ from math import *
 print newton
 
 def f(x):
-    print newton
+    global newton
     k = 1.0
     return k * x * x
 
