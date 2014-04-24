@@ -24,7 +24,9 @@ rangeY = map(f, domainX)
 dataX = map(lambda x: x.quantity, domainX)
 dataY = map(lambda x: x.quantity, rangeY)
 
-graph = window.JXG.JSXGraph
+JXG = window.JXG
+JXG.Options.text.display = 'internal'
+graph = JXG.JSXGraph
 
 b = graph.initBoard("box", 
                     {"boundingbox":[min(dataX),max(dataY),max(dataX),min(dataY)],
