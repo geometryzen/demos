@@ -30,6 +30,7 @@ b = 1.0 / (2.0 * alpha)
 a = 1.0 - b
 
 def rungeKutta2(y, x, h, f):
+    print "y: %s" % y
     print "x: %s" % x
     k1 = h * f(x,y)
     k2 = h * f(x + alpha * h, y + alpha * k1)
