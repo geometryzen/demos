@@ -36,12 +36,12 @@ b = graph.initBoard("box",
                      })
 
 b.create('curve',[dataX,dataY],{"strokeColor":'blue'})
-xLabel = b.create('text',[0.5,0.05, 'Extension / %s' % meter.uom], {"fontSize":15})
-yLabel = b.create('text',[-0.05,0.9, 'Energy / %s' % f(meter).uom], {"fontSize":15})
+xLabel = b.create('text',[0.5, 0.05, 'Extension / %s' % meter.uom], {"fontSize":15})
+yLabel = b.create('text',[-0.05, 0.8, 'Energy / %s' % f(meter).uom], {"fontSize":15})
 
 tRot = b.create('transform', [0.0, 0.0,0.0], {"type":'rotate'}) 
 tRot.bindTo(xLabel)
 
-tRot = b.create('transform', [pi/2.0, -0.05,0.9], {"type":'rotate'}) 
+tRot = b.create('transform', [pi/2.0, -0.05, 0.8], {"type":'rotate'}) 
 tRot.bindTo(yLabel)
 b.update()
