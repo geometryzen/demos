@@ -10,7 +10,7 @@ graph = window.JXG.JSXGraph
 
 b = graph.initBoard("box", {"boundingbox":[-10,10,10,-10],"axis":True,"showCopyright":False})
 
-domainX = np.linspace(0, 5)
+domainX = np.linspace(0.0, 5.0)
 print domainX
 dataX = map(lambda x: x, domainX)
 print repr(dataX)
