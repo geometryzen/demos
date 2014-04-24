@@ -11,7 +11,9 @@ graph = window.JXG.JSXGraph
 b = graph.initBoard("box", {"boundingbox":[-1,1,1,-1],"axis":True,"showCopyright":False})
 
 domainX = np.linspace(0, 1, 100) * meter
-dataX = map(lambda x: x, domainX)
-dataY = map(f, dataX)
+rangeY = map(f, dataX)
+
+dataX = map(lambda x: x.quantity, domainX)
+dataY = map(lambda x: x.quantity, rangeX)
 
 b.create('curve',[dataX,dataY],{"strokeColor":'blue'})
