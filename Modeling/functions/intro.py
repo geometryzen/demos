@@ -6,7 +6,7 @@ from math import *
 k = 1.0 * newton / meter
 
 def f(x):
-    return x * x
+    return k * x * x
 
 graph = window.JXG.JSXGraph
 
