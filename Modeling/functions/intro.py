@@ -9,6 +9,7 @@ print k
 
 def f(x):
     y = 3
+    print k
     global k
     return k * x * x
 
