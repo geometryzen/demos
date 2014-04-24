@@ -23,10 +23,10 @@ energies = map(f, extensions)
 # Extract quantity from measure data so that it is suitable for JSXGraph.
 dataX = map(lambda x: x.quantity, extensions)
 dataY = map(lambda x: x.quantity, energies)
-minX = min(xs)
-maxX = max(xs)
-minY = min(ys)
-maxY = max(ys)
+minX = min(dataX)
+maxX = max(dataX)
+minY = min(dataY)
+maxY = max(dataY)
 rangeX = abs(maxX-minX)
 rangeY = abs(maxY-minY)
 
@@ -34,14 +34,14 @@ JXG = window.JXG
 graph = JXG.JSXGraph
 
 # Compute the bounding box for the graph so that the graph scales automagically.
-def boundingBox(xs, ys, padding):
+def boundingBox(padding):
     return [minX-padding*rangeX,
             maxY+padding*rangeY,
             maxX+padding*rangeX,
             minY-padding*rangeY]
 
 b = graph.initBoard("box", 
-                    {"boundingbox": boundingBox(dataX, dataY, 0.10),
+                    {"boundingbox": boundingBox(0.10),
                      "axis":True,
                      "showCopyright":False,
                      "showNavigation":False
