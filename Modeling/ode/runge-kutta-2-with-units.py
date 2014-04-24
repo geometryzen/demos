@@ -32,7 +32,6 @@ N = 10
 
 # Keep track of displacement and velocity.
 y = numpy.zeros((N,2))
-print y
 
 # Initial position goes in slot 0. We start at the origin.
 y[0,0] = origin
