@@ -3,6 +3,7 @@ import numpy as np
 from browser import window
 from math import *
 
+print newton
 
 def f(x):
     k = 1.0
