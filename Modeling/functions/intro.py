@@ -8,6 +8,7 @@ k = 1.0 * newton / meter
 print k
 
 def f(x):
+    y = 3
     global k
     return k * x * x
 
