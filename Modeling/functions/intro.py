@@ -5,6 +5,8 @@ from math import *
 
 k = 1.0 * newton / meter
 
+print k
+
 def f(x):
     return k * x * x
 
