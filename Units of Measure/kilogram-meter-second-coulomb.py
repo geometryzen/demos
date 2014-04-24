@@ -18,6 +18,6 @@ print "A = ampere (" +str(ampere) + ")"
 
 print "V = volt (" +str(volt) + ")"
 
-print "T = tesla (" +str(tesla) + ")"
+print "T = tesla (" +str((newton/coulomb)/(meter/second)) + ")"
 
 print "V/m = volt/meter (" +str(volt/meter) + ")"
