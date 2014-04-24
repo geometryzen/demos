@@ -40,7 +40,7 @@ def boundingBox(dataX):
             min(dataY)-padding*rangeY]
 
 b = graph.initBoard("box", 
-                    {"boundingbox": boundingBox(),
+                    {"boundingbox": boundingBox(dataX),
                      "axis":True,
                      "showCopyright":False,
                      "showNavigation":False
