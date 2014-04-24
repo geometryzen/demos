@@ -16,6 +16,7 @@ print "origin: %s" % origin
 def SHO(time, state):
     position = state[0]
     velocity = state[1]
+    print "position: %s" % position
     acceleration = - k/m * position + g - d * velocity
     return numpy.array([velocity, acceleration])
 
