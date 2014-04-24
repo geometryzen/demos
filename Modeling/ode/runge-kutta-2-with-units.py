@@ -39,7 +39,7 @@ y[0,0] = origin
 y[0,1] = VectorE3(0, 0, 0) * meter / second
 print "y[0]: %s" % y[0]
 
-tau = 10.0 * second
+tau = 100.0 * second
 
 t = numpy.linspace(0.0 * second, tau, N)
 
