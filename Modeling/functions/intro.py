@@ -24,7 +24,7 @@ b = graph.initBoard("box", {"boundingbox":[-1,1,1,-1],"axis":True,"showCopyright
 
 domainX = np.linspace(-1.0 * meter, +1.0 * meter, 10)
 print type(domainX)
-rangeY = map(f, domainX)
+rangeY = map(makeFunction(k), domainX)
 print type(rangeY)
 
 dataX = map(lambda x: x.quantity, domainX)
