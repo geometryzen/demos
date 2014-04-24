@@ -49,5 +49,5 @@ b = graph.initBoard("box",
 
 b.create('curve',[dataX,dataY],{"strokeColor":'blue'})
 xLabel = b.create('text',[0.0, -0.10, 'Extension / %s' % meter.uom], {"fontSize":15,"anchorX":'middle'})
-yLabel = b.create('text',[minX, 0.8, 'Energy / %s' % f(meter).uom], {"fontSize":15, "display":'internal', "rotate":90,"anchorX":'middle'})
+yLabel = b.create('text',[minX, (maxY+minY)/2, 'Energy / %s' % f(meter).uom], {"fontSize":15, "display":'internal', "rotate":90,"anchorX":'middle'})
 title = b.create('text',[0.0, 1.4, 'Energy versus Extension for a Spring'], {"fontSize":15,"anchorX":'middle'})
