@@ -10,7 +10,7 @@ hbar = 1.054e-34 * joule * second
 print "Planck's constant, hbar=" + str(hbar)
 
 eV = 1.6e-19 * joule
-print "1 eV = electron volt = " + str(eV / joule) + " J"
+print "1 eV = electron volt = " + str(eV)
 GeV = 1e9 * eV
 
 protonMassEnergy = 0.9383 * GeV
