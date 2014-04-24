@@ -50,6 +50,7 @@ k = 3.5 * newton / meter
 print "k: %s" % k
 # Mass of body.
 m = 0.2
+print "m: %s" % m
 # Damping
 d = 0.0
 # Acceleration due to gravity.
