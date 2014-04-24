@@ -6,8 +6,7 @@ from math import *
 k = 1.0 * newton / meter
 
 def f(x):
-    return k * x * x * x
-
+    return k * x * x
 
 N = 100
 
