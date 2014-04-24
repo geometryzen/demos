@@ -1,4 +1,4 @@
 def y(t):
-    return x * x
+    return t * t
 
 print y(2)
