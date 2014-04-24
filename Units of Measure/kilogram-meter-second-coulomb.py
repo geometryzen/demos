@@ -35,3 +35,5 @@ print "Js = joule * second (" +str(joule * second) + ")"
 print "frequency (" +str(1 / second) + ")"
 
 print "pressure, stress (" +str(newton /(meter ** 2)) + ")"
+
+print "capacitance (" +str(coulomb/volt) + ")"
