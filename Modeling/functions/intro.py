@@ -19,4 +19,4 @@ b = graph.initBoard("box", {"boundingbox":[-10,10,10,-10],"axis":True,"showCopyr
 dataX = [1,2,3,4,5,6,7,8]
 dataY = map(f, dataX)
 
-b.create('curve',[dataX,dataY],{"strokeColor":'black'})
+b.create('curve',[dataX,dataY],{"strokeColor":'blue'})
