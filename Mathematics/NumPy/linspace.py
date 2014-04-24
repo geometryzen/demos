@@ -42,7 +42,6 @@ print x[0][2]
 x = np.linspace(2.0 * second, 3.0 * second, 5, False, True)
 print
 print x
-print x
 print x[0]
 print x[1]
 print x[0][0]
