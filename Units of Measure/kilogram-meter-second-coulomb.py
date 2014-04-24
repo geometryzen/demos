@@ -12,7 +12,7 @@ print "N = newton (" +str(newton) + ")"
 
 print "J = joule (" +str(joule) + ")"
 
-print "W = watt (" +str(watt*volt/volt) + ")"
+print "W = watt (" +str(joule/second) + ")"
 
 print "A = ampere (" +str(coulomb/second) + ")"
 
