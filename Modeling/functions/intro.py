@@ -9,6 +9,8 @@ graph = window.JXG.JSXGraph
 
 b = graph.initBoard("box", {"boundingbox":[-10,10,10,-10],"axis":True,"showCopyright":False})
 
+print range(10)
+
 dataX = range(10)
 dataY = map(f, dataX)
 
