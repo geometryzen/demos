@@ -25,3 +25,5 @@ print "V/m = volt/meter (" +str(volt/meter) + ")"
 print "ohm = volt/ampere (" +str(volt/ampere) + ")"
 
 print "permeability (" +str(tesla * meter/ampere) + ")"
+
+print "permittivity (" +str((coulomb ** 2)/(newton*(meter ** 2))) + ")"
