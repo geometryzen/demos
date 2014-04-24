@@ -14,7 +14,7 @@ print meter
 
 print 5 * meter
 
-domainX = np.linspace(0.0, 1.0, 10)
+domainX = np.linspace(0.0, 1.0, 10) * meter
 
 print domainX
 rangeY = map(f, dataX)
