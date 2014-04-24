@@ -28,4 +28,4 @@ print "permeability (" +str(tesla * meter/ampere) + ")"
 
 print "permittivity (" +str((coulomb ** 2)/(newton*(meter ** 2))) + ")"
 
-print "breakdown (" +str(newton/coulomb) + ")"
+print "breakdown (N/C) (" +str(newton/coulomb) + ")"
