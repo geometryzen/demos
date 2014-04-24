@@ -3,6 +3,9 @@ import numpy as np
 from browser import window
 from math import *
 
+def fake():
+    pass
+
 k = 1.0
 
 def f(x):
