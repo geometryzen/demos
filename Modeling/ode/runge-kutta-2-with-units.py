@@ -19,6 +19,7 @@ def SHO(time, state):
     print "position: %s" % position
     print "velocity: %s" % velocity
     print "spring: %s" % (- k/m * position)
+    print "gravity: %s" % g
     acceleration = - k/m * position + g - d * velocity
     return numpy.array([velocity, acceleration])
 
