@@ -3,6 +3,8 @@ import numpy as np
 from browser import window
 from math import *
 
+x = 3
+
 def fake(p1):
     pass
 
