@@ -27,11 +27,14 @@ dataY = map(lambda x: x.quantity, energies)
 JXG = window.JXG
 graph = JXG.JSXGraph
 
-rangeX = abs(max(dataX)-min(dataX))
-rangeY = abs(max(dataY)-min(dataY))
+
+def boundingBox():
+    rangeX = abs(max(dataX)-min(dataX))
+    rangeY = abs(max(dataY)-min(dataY))
+    return [min(dataX)-0.05*rangeX,max(dataY)+0.05*rangeY,max(dataX),min(dataY)-0.05*rangeY]
 
 b = graph.initBoard("box", 
-                    {"boundingbox":[min(dataX),max(dataY)+0.05*rangeY,max(dataX),min(dataY)-0.05*rangeY],
+                    {"boundingbox": boundingBox(),
                      "axis":True,
                      "showCopyright":False,
                      "showNavigation":False
