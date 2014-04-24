@@ -28,7 +28,7 @@ def rungeKutta2(y, x, h, f):
     k2 = h * f(x + alpha * h, y + alpha * k1)
     return y + a * k1 + b * k2
 
-N = 10
+N = 100
 
 # Keep track of displacement and velocity.
 y = numpy.zeros((N,2))
@@ -39,7 +39,7 @@ y[0,0] = origin
 y[0,1] = VectorE3(0, 0, 0) * meter / second
 print "y[0]: %s" % y[0]
 
-tau = 100.0 * second
+tau = 10.0 * second
 
 t = numpy.linspace(0.0 * second, tau, N)
 
