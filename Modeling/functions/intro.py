@@ -5,7 +5,7 @@ from math import *
 
 # Spring Constant.
 k = 1.0 * newton / meter
-x0 = 0.2 * meter
+x0 = 0.25 * meter
 
 # Compute the energy for a given extension.
 def f(x):
