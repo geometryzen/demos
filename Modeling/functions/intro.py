@@ -11,12 +11,12 @@ def fake(p1):
 k = 1.0 * newton / meter
 
 def makeFunction(s):
-    def f(x,y):
+    def f(x):
         return s * x * x
     return f
 
-print makeFunction(k)(2,1)
-print makeFunction(k)(3,3)
+print makeFunction(k)(2)
+print makeFunction(k)(3)
 
 graph = window.JXG.JSXGraph
 
