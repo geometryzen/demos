@@ -15,14 +15,14 @@ def f(x):
 N = 100
 
 # The domain is the extension values.
-domainX = np.linspace(-1.0 * meter, +1.0 * meter, N)
+extensions = np.linspace(-1.0 * meter, +1.0 * meter, N)
 
 # The range is the energy.
-rangeY = map(f, domainX)
+energies = map(f, extensions)
 
 # Convert data so that it is suitable for JSXGraph.
-dataX = map(lambda x: x.quantity, domainX)
-dataY = map(lambda x: x.quantity, rangeY)
+dataX = map(lambda x: x.quantity, extensions)
+dataY = map(lambda x: x.quantity, energies)
 
 JXG = window.JXG
 graph = JXG.JSXGraph
