@@ -34,5 +34,5 @@ b = graph.initBoard("box",
                      })
 
 b.create('curve',[dataX,dataY],{"strokeColor":'blue'})
-xLabel = b.create('text',[0,1, 'Extension/%s' % "m"], {})
+xLabel = b.create('text',[0,1, 'Extension/%s' % meter], {})
 yLabel = b.create('text',[0.5,0, 'Energy'], {})
