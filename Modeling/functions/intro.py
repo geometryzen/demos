@@ -3,16 +3,23 @@ import numpy as np
 from browser import window
 from math import *
 
+# Spring Constant.
 k = 1.0 * newton / meter
 
+# Compute the energy for a given extension.
 def f(x):
-    return k * x * x
+    return k * x ** 2
 
+# How many points to plot.
 N = 100
 
+# The domain is the extension values.
 domainX = np.linspace(-1.0 * meter, +1.0 * meter, N)
+
+# The range is the energy.
 rangeY = map(f, domainX)
 
+# Convert data so that it is suitable for JSXGraph.
 dataX = map(lambda x: x.quantity, domainX)
 dataY = map(lambda x: x.quantity, rangeY)
 
