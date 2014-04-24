@@ -40,6 +40,6 @@ print x[0][1]
 print x[0][2]
 
 x = np.linspace(2.0, 3.0, 5, False, True)
-
+print
 print x
 
