@@ -47,6 +47,7 @@ print dt
 
 # Spring constant.
 k = 3.5
+print "k: %s" % k
 # Mass of body.
 m = 0.2
 # Damping
