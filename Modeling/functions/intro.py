@@ -28,7 +28,7 @@ graph = window.JXG.JSXGraph
 
 b = graph.initBoard("box", 
                     {"boundingbox":[min(dataX),max(dataY),max(dataX),min(dataY)],
-                     "axis":False,
+                     "axis":True,
                      "showCopyright":False,
                      "showNavigation":True
                      })
