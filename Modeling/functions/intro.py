@@ -27,6 +27,7 @@ dataY = map(lambda x: x.quantity, energies)
 JXG = window.JXG
 graph = JXG.JSXGraph
 
+# Compute the bounding box for the graph so that it scales automagically.
 def boundingBox():
     padding = 0.05
     minX = min(dataX)
