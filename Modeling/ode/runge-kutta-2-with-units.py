@@ -1,6 +1,7 @@
 import numpy
 from e3ga import *
 from time import *
+from units import *
 from browser import window
 
 # Set up the standard unit vectors for Cartesian coordinates.
