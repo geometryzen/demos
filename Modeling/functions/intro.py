@@ -31,7 +31,7 @@ rangeX = abs(max(dataX)-min(dataX))
 rangeY = abs(max(dataY)-min(dataY))
 
 b = graph.initBoard("box", 
-                    {"boundingbox":[min(dataX),max(dataY),max(dataX),min(dataY)],
+                    {"boundingbox":[min(dataX),max(dataY)+0.05*rangeY,max(dataX),min(dataY)],
                      "axis":True,
                      "showCopyright":False,
                      "showNavigation":True
