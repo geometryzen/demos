@@ -10,8 +10,10 @@ def fake(p1):
 
 k = 1.0 * newton / meter
 
-def f(x):
-    return k * x * x
+def makeFunction(s):
+    def f(x):
+        return s * x * x
+    return f
 
 print f(2)
 print f(3)
