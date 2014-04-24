@@ -23,18 +23,18 @@ energies = map(f, extensions)
 # Extract quantity from measure data so that it is suitable for JSXGraph.
 dataX = map(lambda x: x.quantity, extensions)
 dataY = map(lambda x: x.quantity, energies)
+minX = min(xs)
+maxX = max(xs)
+minY = min(ys)
+maxY = max(ys)
+rangeX = abs(maxX-minX)
+rangeY = abs(maxY-minY)
 
 JXG = window.JXG
 graph = JXG.JSXGraph
 
 # Compute the bounding box for the graph so that the graph scales automagically.
 def boundingBox(xs, ys, padding):
-    minX = min(xs)
-    maxX = max(xs)
-    minY = min(ys)
-    maxY = max(ys)
-    rangeX = abs(maxX-minX)
-    rangeY = abs(maxY-minY)
     return [minX-padding*rangeX,
             maxY+padding*rangeY,
             maxX+padding*rangeX,
