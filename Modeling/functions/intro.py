@@ -3,7 +3,7 @@ import numpy as np
 from browser import window
 from math import *
 
-k = 5.0 * newton / meter
+k = 2.0 * newton / meter
 
 def f(x):
     return k * x * x
