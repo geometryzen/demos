@@ -19,7 +19,7 @@ domainX = domainX * meter
 print "Are we still alive?"
 print domainX.shape
 print domainX
-rangeY = map(f, dataX)
+rangeY = map(f, domainX)
 print rangeY
 
 dataX = map(lambda x: x.quantity, domainX)
