@@ -16,7 +16,7 @@ def makeFunction(s):
     return f
 
 print makeFunction(k)(2,1)
-print makeFunction(k)(3)
+print makeFunction(k)(3,3)
 
 graph = window.JXG.JSXGraph
 
