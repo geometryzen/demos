@@ -16,13 +16,7 @@ print "origin: %s" % origin
 def SHO(time, state):
     position = state[0]
     velocity = state[1]
-    print "position: %s" % position
-    print "velocity: %s" % velocity
-    print "spring: %s" % (- k/m * position)
-    print "gravity: %s" % g
-    print "drag: %s" % (- d * velocity)
     acceleration = - k/m * position + g - (d * velocity)/m
-    print "acceleration: %s" % acceleration
     return numpy.array([velocity, acceleration])
 
 alpha = 0.8
