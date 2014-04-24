@@ -4,6 +4,8 @@ from time import *
 from units import *
 from browser import window
 
+print "time begin:", time()
+
 # Set up the standard unit vectors for Cartesian coordinates.
 e1 = VectorE3(1, 0, 0)
 e2 = VectorE3(0, 1, 0)
@@ -89,6 +91,6 @@ board.create('curve',[dataT,dataX],{"strokeColor":'blue'})
 
 board.create('curve',[dataT,dataV],{"strokeColor":'green'})
 board.create('tapemeasure', [[0,-4], [1,-4]], {"name":'distance'});
-print "time now:", time()
+print "time end:", time()
 
 print "alpha", alpha
