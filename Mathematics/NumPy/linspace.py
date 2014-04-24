@@ -1,3 +1,4 @@
+from units import *
 import numpy as np
 
 x = np.linspace(2.0, 3.0, 5, True, False)
@@ -38,4 +39,7 @@ print x[0][0]
 print x[0][1]
 print x[0][2]
 
+x = np.linspace(2.0, 3.0, 5, False, True)
+
+print x
 
