@@ -17,6 +17,7 @@ rangeY = map(f, domainX)
 dataX = map(lambda x: x.quantity, domainX)
 dataY = map(lambda x: x.quantity, rangeY)
 
+print min(dataX)
 print max(dataX)
 
 graph = window.JXG.JSXGraph
