@@ -19,4 +19,4 @@ print "Proton mass " + str(protonMassEnergy / GeV) + " GeV"
 energyUnit = hbar / second
 lengthUnit = c / second
 
-print "Proton mass rest energy " + str(protonMassEnergy / joule) + " J"
+print "Proton mass rest energy " + str(protonMassEnergy) + " J"
