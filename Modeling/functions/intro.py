@@ -11,7 +11,7 @@ def fake(p1):
 k = 1.0 * newton / meter
 
 def makeFunction(s):
-    def f(x):
+    def f(x,y):
         return s * x * x
     return f
 
