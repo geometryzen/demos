@@ -76,7 +76,7 @@ for j in range(N-1):
     y[j+1] = rungeKutta2(y[j], t[j], dt, SHO)
 
 # Extract the data that we need for driving the graph.
-dataT = [t[j]   for j in range(N)]    
+dataT = [t[j].quantity   for j in range(N)]    
 dataX = [y[j,0].quantity.z for j in range(N)]
 dataV = [y[j,1].quantity.z for j in range(N)]
 
