@@ -16,6 +16,7 @@ domainX = np.linspace(-1.0 * meter, +1.0 * meter, 10)
 rangeY = map(f, domainX)
 
 print rangeY[0]
+print rangeY[1]
 
 dataX = map(lambda x: x.quantity, domainX)
 dataY = map(lambda x: x.quantity, rangeY)
