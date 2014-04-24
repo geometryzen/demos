@@ -68,9 +68,6 @@ for j in range(N-1):
 dataT = [t[j].quantity   for j in range(N)]    
 dataX = [y[j,0].quantity.z for j in range(N)]
 dataV = [y[j,1].quantity.z for j in range(N)]
-print dataT
-print dataX
-print dataV
 
 graph = window.JXG.JSXGraph
 
