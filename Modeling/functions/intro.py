@@ -28,10 +28,11 @@ JXG = window.JXG
 graph = JXG.JSXGraph
 
 def boundingBox():
+    minX = min(dataX)
     maxX = max(dataX)
-    rangeX = abs(maxX-min(dataX))
+    rangeX = abs(maxX-minX)
     rangeY = abs(max(dataY)-min(dataY))
-    return [min(dataX)-0.05*rangeX,
+    return [minX-0.05*rangeX,
             max(dataY)+0.05*rangeY,
             maxX+0.05*rangeX,
             min(dataY)-0.05*rangeY]
