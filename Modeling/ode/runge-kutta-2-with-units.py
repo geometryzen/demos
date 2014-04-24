@@ -10,6 +10,7 @@ e2 = VectorE3(0, 1, 0)
 e3 = VectorE3(0, 0, 1)
 
 origin = VectorE3(0,0,0)
+print "origin: %s" % origin
 
 # Simple Harmonic Motion
 def SHO(time, state):
