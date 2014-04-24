@@ -13,6 +13,8 @@ k = 1.0
 def f(x):
     return k * x * x
 
+print f(2)
+
 graph = window.JXG.JSXGraph
 
 b = graph.initBoard("box", {"boundingbox":[-1,1,1,-1],"axis":True,"showCopyright":False})
