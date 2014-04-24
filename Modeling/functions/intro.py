@@ -3,7 +3,7 @@ import numpy as np
 from browser import window
 from math import *
 
-def fake():
+def fake(p1):
     pass
 
 k = 1.0
