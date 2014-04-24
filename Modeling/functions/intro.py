@@ -37,6 +37,6 @@ b.create('curve',[dataX,dataY],{"strokeColor":'blue'})
 xLabel = b.create('text',[0.7,0.05, 'Extension / %s' % meter.uom], {})
 yLabel = b.create('text',[0.0,1.0, 'Energy / %s' % f(meter).uom], {})
 
-tRot = b.create('transform', [30.0*pi/180.0, -2,-1], {type:'rotate'}) 
+tRot = b.create('transform', [30.0*pi/180.0, -2,-1], {"type":'rotate'}) 
 tRot.bindTo(yLabel)
 b.update()
