@@ -3,12 +3,10 @@ import numpy as np
 from browser import window
 from math import *
 
-a = 1.0 * newton / meter
 
 def f(x):
-    y = 3
-    print a
-    return a * x * x
+    k = 1.0 * newton / meter
+    return k * x * x
 
 graph = window.JXG.JSXGraph
 
