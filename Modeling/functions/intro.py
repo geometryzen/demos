@@ -42,7 +42,6 @@ def boundingBox(padding):
 
 box = boundingBox(0.10)
 print box
-print box[3]
 
 b = graph.initBoard("box", 
                     {"boundingbox": box,
