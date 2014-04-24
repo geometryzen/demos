@@ -9,7 +9,7 @@ x0 = 0.5 * meter
 
 # Compute the energy for a given extension.
 def f(x):
-    return k * (x - x0) ** 3
+    return k * (x - x0) ** 2
 
 # How many points to plot.
 N = 100
