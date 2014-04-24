@@ -22,6 +22,6 @@ print max(dataX)
 
 graph = window.JXG.JSXGraph
 
-b = graph.initBoard("box", {"boundingbox":[-1,1,1,-1],"axis":True,"showCopyright":False})
+b = graph.initBoard("box", {"boundingbox":[min(dataX),1,max(dataX),-1],"axis":True,"showCopyright":False})
 
 b.create('curve',[dataX,dataY],{"strokeColor":'blue'})
