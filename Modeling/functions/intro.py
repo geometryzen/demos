@@ -3,8 +3,6 @@ from units import *
 def y(x):
     return x
 
-print y(meter)
-
 from browser import document, window
 from math import *
 
