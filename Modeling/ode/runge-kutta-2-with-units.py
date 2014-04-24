@@ -46,7 +46,7 @@ dt = tau / float(N-1)
 print dt
 
 # Spring constant.
-k = 3.5
+k = 3.5 * newton / meter
 print "k: %s" % k
 # Mass of body.
 m = 0.2
