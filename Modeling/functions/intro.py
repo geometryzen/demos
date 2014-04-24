@@ -1,5 +1,5 @@
 from units import *
-from numpy import *
+import numpy as np
 from browser import window
 from math import *
 
