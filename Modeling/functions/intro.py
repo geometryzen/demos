@@ -20,7 +20,7 @@ dataY = map(lambda x: x.quantity, rangeY)
 graph = window.JXG.JSXGraph
 
 b = graph.initBoard("box", 
-                    {"boundingbox":[min(dataX),max(dataY),max(dataX),-1],
+                    {"boundingbox":[min(dataX),max(dataY),max(dataX),min(dataY)],
                      "axis":True,"showCopyright":False})
 
 b.create('curve',[dataX,dataY],{"strokeColor":'blue'})
