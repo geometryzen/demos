@@ -10,10 +10,6 @@ graph = window.JXG.JSXGraph
 
 b = graph.initBoard("box", {"boundingbox":[-1,1,1,-1],"axis":True,"showCopyright":False})
 
-print meter
-
-print 5 * meter
-
 domainX = np.linspace(-1.0 * meter, +1.0 * meter, 100)
 
 rangeY = map(f, domainX)
