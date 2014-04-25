@@ -21,7 +21,10 @@ head = board.create('point',[a.x,a.y], {'size':5,'fillOpacity':0.3,'strokeOpacit
 
 line = board.create('arrow',[tail,head],{'strokeWidth':5, 'strokeOpacity':0.7, 'strokeColor':'blue'});
 
-txt = board.create('text',[-1.5,+1.5, lambda: str(a)], {'fontSize':30})
+def toString(geo):
+    return repr(geo)
+
+txt = board.create('text',[-1.5,+1.5, toString(a)], {'fontSize':30})
 
 def tick():
     a.x = head.X() - tail.X()
