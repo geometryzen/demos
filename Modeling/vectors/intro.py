@@ -25,3 +25,6 @@ print e1.xy
 
 tail = b.create('point',[0,0], {'name':'A','size':4})
 head = b.create('point',[2,-1], {'name':'B','size':4})
+
+line = b.create('line',[tail,head], 
+ {'straightFirst':false, 'straightLast':false, 'strokeWidth':2, 'dash':2})
