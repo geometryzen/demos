@@ -45,12 +45,12 @@ def updateVector(vector, arrow):
     vector.x = round(arrow.point2.X() - arrow.point1.X())
     vector.y = round(arrow.point2.Y() - arrow.point1.Y())
 
-def tick():
+def tick(time):
     updateVector(a, A)
     updateVector(b, B)
     updateVector(c, C)
 
-def terminate():
+def terminate(time):
     pass
 
 def setUp():
@@ -61,8 +61,6 @@ def setUp():
     C = Arrow('c', c, -scale, -0.7 * scale, 'blue')
 
 def tearDown():
-    A.fixed = True
     print "Goodbye!"
-    pass
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
