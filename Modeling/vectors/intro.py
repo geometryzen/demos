@@ -10,7 +10,7 @@ graph = JXG.JSXGraph
 
 board = graph.initBoard("box", 
                     {"boundingbox": [-100,100,100,-100],
-                     "axis":True,
+                     "axis":False,
                      "showCopyright":False,
                      "showNavigation":False
                      })
