@@ -20,8 +20,8 @@ B = board.create('point',[2,2],{"name":'Bob'})
 f = board.create('functiongraph',[lambda x: A.X() * sin(x)])
 
 def tick(time):
-    A.moveTo([sin(time*pi*2/12),cos(time*pi*2/12)])
-    print "Yahoo"
+    angle = time*pi*2/10
+    A.moveTo([sin(angle),cos(angle)])
 
 def terminate(time):
     return time > 10
