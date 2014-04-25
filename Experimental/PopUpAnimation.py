@@ -1,6 +1,6 @@
 import browser
 
-win = window.open("","","width=415,height=400")
+win = browser.window.open("","","width=415,height=400")
 
 def tick(time):
     pass
