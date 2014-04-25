@@ -26,7 +26,7 @@ B = None
 C = None
 
 def toString(name, mv):
-    return "\\[\\vec{%s}=%s\\]" % (name, str(mv))
+    return "\\[\\vec{%s}=%s\\]" % (name, str(mv / scale))
     return "\\[ %s_x=%0.3f, %s_y=%0.3f \\]" % (name, mv.x, name, mv.y)
 
 def Arrow(name, vector, x, y, color):
