@@ -16,7 +16,7 @@ board = graph.initBoard("box",
 
 a = VectorE2(1,1)
 
-tail = board.create('point',[0,0], {'size':5,'fillOpacity':0.3})
+tail = board.create('point',[0,0], {'size':5,'fillOpacity':0.3,'strokeOpacity':0.3})
 head = board.create('point',[a.x,a.y], {'name':'B'})
 
 line = board.create('line',[tail,head], 
