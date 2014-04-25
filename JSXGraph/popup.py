@@ -22,8 +22,8 @@ f = board.create('functiongraph',[lambda x: A.X() * sin(x)])
 def tick(time):
     try:
         A.moveTo([sin(time*pi*2/12),Math.cos(time*pi*2/12)],800)
-    except:
-        print "Oops"
+    except Exception as e:
+        print "Oops" + e
 
 def terminate(time):
     return time > 10
