@@ -4,8 +4,8 @@ from browser import window
 from math import *
 
 # Spring Constant.
-k = 1.0 * newton / meter
-x0 = 0.0 * meter
+k = 20.0 * newton / second
+x0 = 0.5 * meter
 
 # Compute the energy for a given extension.
 def f(x):
