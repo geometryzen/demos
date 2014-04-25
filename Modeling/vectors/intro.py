@@ -20,6 +20,7 @@ b = VectorE2(0,1)
 c = a + b
 A = None
 B = None
+C = None
 
 def toString(mv):
     return "\\[ a_x=%0.3f, a_y=%0.3f \\]" % (mv.x, mv.y)
@@ -44,6 +45,7 @@ def setUp():
     global A
     A = Arrow('red')
     B = Arrow('blue')
+    C = Arrow('green')
     print "Press Esc to terminate."
 
 def tearDown():
