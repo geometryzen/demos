@@ -27,4 +27,4 @@ tail = b.create('point',[0,0], {'name':'A'})
 head = b.create('point',[lambda: e1.x,lambda: e1.y], {'name':'B'})
 
 line = b.create('line',[tail,head], 
- {'straightFirst':False, 'straightLast':False,'lastArrow':True, 'strokeWidth':2, 'dash':2})
+ {'straightFirst':False, 'straightLast':False,'lastArrow':True})
