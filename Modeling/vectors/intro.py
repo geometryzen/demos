@@ -9,8 +9,10 @@ JXG = window.JXG
 JXG.Options.text.useMathJax = True
 graph = JXG.JSXGraph
 
+scale = 100
+
 board = graph.initBoard("box", 
-                    {"boundingbox": [-100,100,100,-100],
+                    {"boundingbox": [-scale,scale,scale,-scale],
                      "axis":False,
                      "showCopyright":False,
                      "showNavigation":False
@@ -38,7 +40,7 @@ def Arrow(name, vector, x, y, color):
     tail = board.create('point',[random()*50, random()*50], pointDef)
     head = board.create('point',[tail.X() + vector.x, tail.Y() + vector.y], pointDef)
     txt = board.create('text',[x, y, lambda: toString(name, vector)], {'fontSize':20, 'strokeColor':color,'fixed':True})
-    return board.create('arrow',[tail,head],{'strokeWidth':5, 'strokeOpacity':0.7, 'strokeColor':color,'fixed':True});
+    return board.create('arrow',[tail,head],{'strokeWidth':5, 'strokeOpacity':0.7, 'strokeColor':color,'snapToGrid':True});
 
 def updateVector(vector, arrow):
     vector.x = arrow.point1.X() - arrow.point2.X()
