@@ -27,8 +27,8 @@ def toString(mv):
 
 def Arrow(x, y, color):
     pointDef = {'name':'','size':5,'fillOpacity':0.3,'strokeOpacity':0.3,'strokeColor':'gray','fillColor':'gray'}
-    tail = board.create('point',[0,0], pointDef)
-    head = board.create('point',[a.x,a.y], pointDef)
+    tail = board.create('point',[x, y], pointDef)
+    head = board.create('point',[x + a.x, y + a.y], pointDef)
     txt = board.create('text',[x, y, lambda: toString(a)], {'fontSize':20, 'strokeColor':color})
     return board.create('arrow',[tail,head],{'strokeWidth':5, 'strokeOpacity':0.7, 'strokeColor':color});
 
