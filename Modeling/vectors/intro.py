@@ -34,6 +34,7 @@ def setUp():
     print "Press Esc to terminate."
 
 def tearDown():
+    print "Goodbye!"
     pass
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
