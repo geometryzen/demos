@@ -17,6 +17,7 @@ board = graph.initBoard("box",
 
 a = VectorE2(1,0)
 b = VectorE2(0,1)
+c = a + b
 A = None
 B = None
 
@@ -41,7 +42,7 @@ def terminate():
 
 def setUp():
     global A
-    A = Arrow('green')
+    A = Arrow('red')
     B = Arrow('blue')
     print "Press Esc to terminate."
 
