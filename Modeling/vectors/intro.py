@@ -7,19 +7,19 @@ from math import *
 JXG = window.JXG
 graph = JXG.JSXGraph
 
-b = graph.initBoard("box", 
+board = graph.initBoard("box", 
                     {"boundingbox": [-10,10,10,-10],
                      "axis":True,
                      "showCopyright":False,
                      "showNavigation":False
                      })
 
-e1 = VectorE2(1,0)
+a = VectorE2(1,0)
 
-tail = b.create('point',[0,0], {'name':'A'})
-head = b.create('point',[e1.x,e1.y], {'name':'B'})
+tail = board.create('point',[0,0], {'name':'A'})
+head = board.create('point',[a.x,a.y], {'name':'B'})
 
-line = b.create('line',[tail,head], 
+line = board.create('line',[tail,head], 
  {'straightFirst':False, 'straightLast':False,'lastArrow':True})
 
-txt = b.create('text',[-2,-1, lambda: str(e1)], {'fontSize':30})
+txt = board.create('text',[-2,-1, lambda: str(e1)], {'fontSize':30})
