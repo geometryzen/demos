@@ -37,7 +37,7 @@ def Arrow(name, vector, x, y, color):
                 'strokeColor':'gray',
                 'fillColor':'gray',
                 'snapToGrid':True}
-    tail = board.create('point',[random()*50, random()*50], pointDef)
+    tail = board.create('point',[random()*scale/2, random()*scale/2], pointDef)
     head = board.create('point',[tail.X() + vector.x, tail.Y() + vector.y], pointDef)
     txt = board.create('text',[x, y, lambda: toString(name, vector)], {'fontSize':20, 'strokeColor':color,'fixed':True})
     return board.create('arrow',[tail,head],{'strokeWidth':5, 'strokeOpacity':0.7, 'strokeColor':color,'snapToGrid':True});
@@ -57,9 +57,9 @@ def terminate():
 def setUp():
     print "Press Esc to terminate."
     global A, B, C
-    A = Arrow('a', a, -100, -50, 'red')
-    B = Arrow('b', b, -100, -60, 'green')
-    C = Arrow('c', c, -100, -70, 'blue')
+    A = Arrow('a', a, -scale, -0.5 * scale, 'red')
+    B = Arrow('b', b, -scale, -0.6 * scale, 'green')
+    C = Arrow('c', c, -scale, -0.7 * scale, 'blue')
 
 def tearDown():
     print "Goodbye!"
