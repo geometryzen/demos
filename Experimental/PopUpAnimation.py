@@ -6,7 +6,6 @@ import browser
 win = browser.window.open("","","width=600,height=600")
 
 def tick(time):
-    print time
     win.document.body.innerHTML = str(time)
     pass
 
