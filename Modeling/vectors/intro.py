@@ -23,7 +23,7 @@ head = board.create('point',[a.x,a.y], {'size':5,'fillOpacity':0.3,'strokeOpacit
 line = board.create('arrow',[tail,head],{'strokeWidth':5, 'strokeOpacity':0.7, 'strokeColor':'blue'});
 
 def toString(mv):
-    return "%d" % (mv.x)
+    return "%.3f" % (mv.x)
 
 txt = board.create('text',[-1.5,+1.5, lambda: toString(a)], {'fontSize':30})
 
