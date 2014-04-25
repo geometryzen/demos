@@ -3,6 +3,7 @@ from units import *
 import numpy as np
 from browser import *
 from math import *
+from random import random
 
 JXG = window.JXG
 JXG.Options.text.useMathJax = True
