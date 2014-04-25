@@ -3,6 +3,7 @@ import browser
 win = browser.window.open("","","width=415,height=400")
 
 def tick(time):
+    win.document.body = str(time)
     pass
 
 def terminate(time):
@@ -14,4 +15,5 @@ def setUp():
 def tearDown():
     win.close()
 
+# Construct 
 browser.WindowAnimationRunner(tick, terminate, setUp, tearDown, win).start()
