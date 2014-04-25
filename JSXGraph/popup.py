@@ -17,7 +17,7 @@ board = graph.initBoard("box", {"document":win.document,"axis":True,"grid":True}
 A = board.create('point',[1,1],{"name": 'Alice'})
 B = board.create('point',[2,2],{"name":'Bob'})
 
-f = board.create('functiongraph',[lambda x: A.X() * sin(x)])
+f = board.create('functiongraph',[lambda x,unused: A.X() * sin(x)])
 
 def tick(time):
     # May be a faster way to make the animation run?
