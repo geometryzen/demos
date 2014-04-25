@@ -43,7 +43,7 @@ def Arrow(name, vector, x, y, color):
 
 def updateVector(vector, arrow):
     vector.x = round(arrow.point2.X() - arrow.point1.X())
-    vector.y = arrow.point2.Y() - arrow.point1.Y()
+    vector.y = round(arrow.point2.Y() - arrow.point1.Y())
 
 def tick():
     updateVector(a, A)
