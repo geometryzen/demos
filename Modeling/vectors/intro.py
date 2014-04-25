@@ -52,7 +52,7 @@ def terminate():
     pass
 
 def setUp():
-    global A
+    global A, B, C
     A = Arrow(a, -100, -50, 'red')
     B = Arrow(b, -100, -60, 'blue')
     C = Arrow(c, -100, -70, 'green')
