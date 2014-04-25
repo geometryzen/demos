@@ -1,4 +1,4 @@
-from browser import window
+from browser import *
 from math import *
 
 win = window.open("","","width=415,height=400")
