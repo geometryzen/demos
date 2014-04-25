@@ -19,8 +19,7 @@ a = VectorE2(1,1)
 tail = board.create('point',[0,0], {'size':5,'fillOpacity':0.3,'strokeOpacity':0.3})
 head = board.create('point',[a.x,a.y], {'size':5,'fillOpacity':0.3,'strokeOpacity':0.3})
 
-line = board.create('line',[tail,head], 
- {'straightFirst':False, 'straightLast':False,'lastArrow':True})
+line = board.create('arrow',[tail,head],{'strokeWidth':5, 'strokeOpacity':0.7, 'strokeColor':'blue'});
 
 txt = board.create('text',[-1.5,+1.5, lambda: str(a)], {'fontSize':30})
 
