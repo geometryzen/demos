@@ -30,7 +30,7 @@ def moveHandler():
 head.on('mousedown', moveHandler)
 
 def tick():
-    print head 
+    print head.X()
     pass
 
 def terminate():
