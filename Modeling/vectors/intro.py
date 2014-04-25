@@ -61,6 +61,7 @@ def setUp():
     C = Arrow('c', c, -scale, -0.7 * scale, 'blue')
 
 def tearDown():
+    A.fixed = True
     print "Goodbye!"
     pass
 
