@@ -7,13 +7,12 @@ def tick(time):
     pass
 
 def terminate(time):
-    pass
+    return time > 10
 
 def setUp():
     pass
 
 def tearDown():
     win.close()
-    pass
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown, win).start()
