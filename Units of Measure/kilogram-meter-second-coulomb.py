@@ -18,7 +18,7 @@ print "A = ampere (" +str(coulomb/second) + ")"
 
 print "V = volt (" +str(joule/coulomb) + ")"
 
-print "T = tesla (" +str((newton/coulomb)/(meter/second)) + ")"
+print "magnetic flux density (" +str((newton/coulomb)/(meter/second)) + ")"
 
 print "V/m = volt/meter (" +str(volt/meter) + ")"
 
