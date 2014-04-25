@@ -13,7 +13,7 @@ def tick(time):
     pass
 
 def terminate(time):
-    return time > 10
+    return time > 1
 
 def setUp():
     pass
