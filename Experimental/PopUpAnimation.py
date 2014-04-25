@@ -20,7 +20,7 @@ def setUp():
 
 def tearDown(e):
     win.close()
-    print "The window was closed."
+    print "The window was closed." + str(e)
 
 # Notice the last (optional) argument is the window that we want to control.
 # The Esc key is monitored and used to break out of the animation.
