@@ -20,7 +20,7 @@ B = board.create('point',[2,2],{"name":'Bob'})
 f = board.create('functiongraph',[lambda x: A.X() * sin(x)])
 
 def tick(time):
-    try
+    try:
         A.moveTo([sin(time*pi*2/12),Math.cos(time*pi*2/12)],800)
     except:
         print "Oops"
