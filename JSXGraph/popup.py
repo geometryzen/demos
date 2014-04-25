@@ -1,6 +1,8 @@
 from browser import window
 from math import *
 
+print "Starting..."
+
 graph = window.JXG.JSXGraph
 
 plotWin = window.open("","JSXGraph-Window","width=415,height=400")
