@@ -40,6 +40,7 @@ def terminate():
     pass
 
 def setUp():
+    global A
     A = Arrow('blue')
     print "Press Esc to terminate."
 
