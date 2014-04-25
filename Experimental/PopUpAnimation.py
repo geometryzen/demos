@@ -16,6 +16,7 @@ def terminate(time):
     return time > 4
 
 def setUp():
+    print "Off we go!"
     pass
 
 def tearDown(e):
