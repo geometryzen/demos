@@ -13,7 +13,7 @@ scale = 32
 
 board = graph.initBoard("box", 
                     {"boundingbox": [-scale,scale,scale,-scale],
-                     "axis":False,
+                     "axis":True,
                      "showCopyright":False,
                      "showNavigation":False
                      })
