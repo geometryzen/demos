@@ -25,7 +25,7 @@ def tick(time):
     A.moveTo([3 * sin(angle),3 * cos(angle)])
 
 def terminate(time):
-    return time > 20
+    return time > 5
 
 def setUp():
     pass
