@@ -24,21 +24,14 @@ line = board.create('line',[tail,head],
 
 txt = board.create('text',[-1.5,+1.5, lambda: str(a)], {'fontSize':30})
 
-def moveHandler():
-    print "moved"
-    
-head.on('mousedown', moveHandler)
-
 def tick():
-    print head.X()
-    pass
+    e1.x = head.X()
 
 def terminate():
     pass
 
 def setUp():
     print "Press Esc to terminate."
-    pass
 
 def tearDown():
     pass
