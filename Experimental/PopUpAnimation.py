@@ -21,6 +21,6 @@ def tearDown():
     win.close()
     print "The window was closed."
 
-# Notice the last argument is the window that we want to control.
+# Notice the last (optional) argument is the window that we want to control.
 # The Esc key is monitored and used to break out of the animation.
 browser.WindowAnimationRunner(tick, terminate, setUp, tearDown, win).start()
