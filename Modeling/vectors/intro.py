@@ -15,14 +15,15 @@ board = graph.initBoard("box",
                      })
 
 a = VectorE2(1,1)
+i = VectorE2(1,0)
 
 tail = board.create('point',[0,0], {'size':5,'fillOpacity':0.3,'strokeOpacity':0.3})
 head = board.create('point',[a.x,a.y], {'size':5,'fillOpacity':0.3,'strokeOpacity':0.3})
 
 line = board.create('arrow',[tail,head],{'strokeWidth':5, 'strokeOpacity':0.7, 'strokeColor':'blue'});
 
-def toString(geo):
-    return repr(geo)
+def toString(mv):
+    return str(mv % i)
 
 txt = board.create('text',[-1.5,+1.5, lambda: toString(a)], {'fontSize':30})
 
