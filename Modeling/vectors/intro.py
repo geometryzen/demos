@@ -14,7 +14,7 @@ board = graph.initBoard("box",
                      "showNavigation":False
                      })
 
-a = VectorE2(1,0)
+a = VectorE2(1,1)
 
 tail = board.create('point',[0,0], {'name':'A'})
 head = board.create('point',[a.x,a.y], {'name':'B'})
