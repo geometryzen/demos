@@ -23,5 +23,5 @@ print repr(e1)
 print e1.w
 print e1.xy
 
-tail = b.create('point',[-1,1], {'name':'A','size':4})
+tail = b.create('point',[0,0], {'name':'A','size':4})
 head = b.create('point',[2,-1], {'name':'B','size':4})
