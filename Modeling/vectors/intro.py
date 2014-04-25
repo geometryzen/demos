@@ -18,3 +18,4 @@ e1 = VectorE2(1,0)
 
 print e1
 print e1.x
+print e1.y
