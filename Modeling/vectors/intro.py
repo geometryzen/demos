@@ -9,7 +9,7 @@ JXG = window.JXG
 JXG.Options.text.useMathJax = True
 graph = JXG.JSXGraph
 
-scale = 32
+scale = 60
 
 board = graph.initBoard("box", 
                     {"boundingbox": [-scale,scale,scale,-scale],
