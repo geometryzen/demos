@@ -29,4 +29,16 @@ def moveHandler():
     
 head.on('mousedown', moveHandler)
 
-WindowAnimationRunner().start
+def tick():
+    pass
+
+def terminate():
+    pass
+
+def setUp():
+    pass
+
+def tearDown():
+    pass
+
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start
