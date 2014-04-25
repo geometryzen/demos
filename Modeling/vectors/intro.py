@@ -9,14 +9,14 @@ JXG.Options.text.useMathJax = True
 graph = JXG.JSXGraph
 
 board = graph.initBoard("box", 
-                    {"boundingbox": [-2,2,2,-2],
+                    {"boundingbox": [-10,10,10,-10],
                      "axis":True,
                      "showCopyright":False,
                      "showNavigation":False
                      })
 
-a = VectorE2(1,0)
-b = VectorE2(0,1)
+a = VectorE2(10,0)
+b = VectorE2(0,10)
 c = a + b
 A = None
 B = None
