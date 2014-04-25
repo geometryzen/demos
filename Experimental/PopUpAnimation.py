@@ -13,7 +13,7 @@ def tick(time):
     pass
 
 def terminate(time):
-    print "Are we done yet?"
+    print "Are we done yet?" + str(time)
     return time > 4
 
 def setUp():
