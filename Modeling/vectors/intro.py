@@ -21,3 +21,4 @@ print e1.x
 print e1.y
 print repr(e1)
 print e1.w
+print e1.xy
