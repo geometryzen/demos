@@ -24,7 +24,7 @@ B = None
 C = None
 
 def toString(name, mv):
-    return "\\[ a_x=%0.3f, a_y=%0.3f \\]" % (mv.x, mv.y)
+    return "\\[ %s_x=%0.3f, a_y=%0.3f \\]" % (name, mv.x, mv.y)
 
 def Arrow(name, vector, x, y, color):
     pointDef = {'name':'',
