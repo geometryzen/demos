@@ -26,7 +26,13 @@ def toString(mv):
     return "\\[ a_x=%0.3f, a_y=%0.3f \\]" % (mv.x, mv.y)
 
 def Arrow(vector, x, y, color):
-    pointDef = {'name':'','size':5,'fillOpacity':0.3,'strokeOpacity':0.3,'strokeColor':'gray','fillColor':'gray'}
+    pointDef = {'name':'',
+                'size':5,
+                'fillOpacity':0.3,
+                'strokeOpacity':0.3,
+                'strokeColor':'gray',
+                'fillColor':'gray',
+                'snapToGrid':True}
     tail = board.create('point',[x, y], pointDef)
     head = board.create('point',[x + vector.x, y + vector.y], pointDef)
     txt = board.create('text',[x, y, lambda: toString(vector)], {'fontSize':20, 'strokeColor':color})
