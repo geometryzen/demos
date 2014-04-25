@@ -39,11 +39,14 @@ def Arrow(vector, x, y, color):
     txt = board.create('text',[x, y, lambda: toString(vector)], {'fontSize':20, 'strokeColor':color,'fixed':True})
     return board.create('arrow',[tail,head],{'strokeWidth':5, 'strokeOpacity':0.7, 'strokeColor':color});
 
+def updateVector(vector, arrow):
+    vector.x = arrow.point1.X() - arrow.point2.X()
+    vector.y = arrow.point1.Y() - arrow.point2.Y()
 
 def tick():
-    # Modify the vector to track the User Interface.
-    a.x = A.point1.X() - A.point2.X()
-    a.y = A.point1.Y() - A.point2.Y()
+    updateVector(a, A)
+    updateVector(b, B)
+    updateVector(c, C)
 
 def terminate():
     pass
