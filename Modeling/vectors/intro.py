@@ -42,4 +42,4 @@ def setUp():
 def tearDown():
     pass
 
-WindowAnimationRunner(tick, terminate, setUp, tearDown).start
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
