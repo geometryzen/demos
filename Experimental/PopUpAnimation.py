@@ -21,4 +21,5 @@ def tearDown():
     win.close()
     print "The window was closed."
 
+# Notice the last argument is the window that we want to control.
 browser.WindowAnimationRunner(tick, terminate, setUp, tearDown, win).start()
