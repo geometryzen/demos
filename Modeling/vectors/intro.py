@@ -43,9 +43,9 @@ def terminate():
 
 def setUp():
     global A
-    A = Arrow('red')
-    B = Arrow('blue')
-    C = Arrow('green')
+    A = Arrow(-1.5, 'red')
+    B = Arrow(-1.5, 'blue')
+    C = Arrow(-1.5, 'green')
     print "Press Esc to terminate."
 
 def tearDown():
