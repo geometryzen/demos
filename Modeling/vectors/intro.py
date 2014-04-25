@@ -37,6 +37,7 @@ def terminate():
     pass
 
 def setUp():
+    A = Arrow()
     print "Press Esc to terminate."
 
 def tearDown():
