@@ -1,6 +1,5 @@
 '''
 Demonstration of opening a window and running it as an animation.
-The animation is suspended when the window is not visible.
 '''
 import browser
 
