@@ -1,7 +1,7 @@
 from e2ga import *
 from units import *
 import numpy as np
-from browser import window
+from browser import *
 from math import *
 
 JXG = window.JXG
@@ -28,3 +28,5 @@ def moveHandler():
     print "moved"
     
 head.on('mousedown', moveHandler)
+
+WindowAnimationRunner().start
