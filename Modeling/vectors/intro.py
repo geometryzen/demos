@@ -9,7 +9,7 @@ JXG.Options.text.useMathJax = True
 graph = JXG.JSXGraph
 
 board = graph.initBoard("box", 
-                    {"boundingbox": [-10,10,10,-10],
+                    {"boundingbox": [-100,100,100,-100],
                      "axis":True,
                      "showCopyright":False,
                      "showNavigation":False
