@@ -22,7 +22,7 @@ def toString(mv):
     return "\\[ a_x=%0.3f, a_y=%0.3f \\]" % (mv.x, mv.y)
 
 def Arrow(strokeColor):
-    tail = board.create('point',[0,0], {'name':'','size':5,'fillOpacity':0.3,'strokeOpacity':0.3, 'strokeColor':strokeColor})
+    tail = board.create('point',[0,0], {'name':'','size':5,'fillOpacity':0.3,'strokeOpacity':0.3, 'strokeColor':strokeColor, 'fillColor':strokeColor})
     head = board.create('point',[a.x,a.y], {'name':'','size':5,'fillOpacity':0.3,'strokeOpacity':0.3, 'strokeColor':strokeColor})
     return board.create('arrow',[tail,head],{'strokeWidth':5, 'strokeOpacity':0.7, 'strokeColor':strokeColor});
 
