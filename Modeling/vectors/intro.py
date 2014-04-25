@@ -25,11 +25,11 @@ C = None
 def toString(mv):
     return "\\[ a_x=%0.3f, a_y=%0.3f \\]" % (mv.x, mv.y)
 
-def Arrow(x, color):
+def Arrow(x, y, color):
     pointDef = {'name':'','size':5,'fillOpacity':0.3,'strokeOpacity':0.3,'strokeColor':'gray','fillColor':'gray'}
     tail = board.create('point',[0,0], pointDef)
     head = board.create('point',[a.x,a.y], pointDef)
-    txt = board.create('text',[x,+1.5, lambda: toString(a)], {'fontSize':20, 'strokeColor':color})
+    txt = board.create('text',[x, y, lambda: toString(a)], {'fontSize':20, 'strokeColor':color})
     return board.create('arrow',[tail,head],{'strokeWidth':5, 'strokeOpacity':0.7, 'strokeColor':color});
 
 
@@ -43,9 +43,9 @@ def terminate():
 
 def setUp():
     global A
-    A = Arrow(-1.5, 'red')
-    B = Arrow(-1.5, 'blue')
-    C = Arrow(-1.5, 'green')
+    A = Arrow(-1.5, -0.5, 'red')
+    B = Arrow(-1.5, -1.0, 'blue')
+    C = Arrow(-1.5, -1.5, 'green')
     print "Press Esc to terminate."
 
 def tearDown():
