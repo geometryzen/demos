@@ -39,3 +39,5 @@ print "frequency (" +str(1 / second) + ")"
 print "pressure, stress (" +str(newton /(meter ** 2)) + ")"
 
 print "capacitance (" +str(coulomb/volt) + ")"
+
+print "magnetic flux (" +str(volt * second) + ")"
