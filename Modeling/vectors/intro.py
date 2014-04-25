@@ -5,6 +5,7 @@ from browser import *
 from math import *
 
 JXG = window.JXG
+JXG.Options.text.useMathJax = True
 graph = JXG.JSXGraph
 
 board = graph.initBoard("box", 
