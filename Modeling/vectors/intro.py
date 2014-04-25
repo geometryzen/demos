@@ -25,7 +25,7 @@ C = None
 def toString(mv):
     return "\\[ a_x=%0.3f, a_y=%0.3f \\]" % (mv.x, mv.y)
 
-def Arrow(color):
+def Arrow(x, color):
     pointDef = {'name':'','size':5,'fillOpacity':0.3,'strokeOpacity':0.3,'strokeColor':'gray','fillColor':'gray'}
     tail = board.create('point',[0,0], pointDef)
     head = board.create('point',[a.x,a.y], pointDef)
