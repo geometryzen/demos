@@ -27,4 +27,4 @@ txt = board.create('text',[-1.5,+1.5, lambda: str(a)], {'fontSize':30})
 def moveHandler():
     print "moved"
     
-head.on('move', moveHandler)
+head.on('mousedown', moveHandler)
