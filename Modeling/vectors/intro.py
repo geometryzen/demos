@@ -16,8 +16,8 @@ board = graph.initBoard("box",
                      "showNavigation":False
                      })
 
-a = VectorE2(10,0)
-b = VectorE2(0,10)
+a = VectorE2(50,0)
+b = VectorE2(0,50)
 c = a + b
 A = None
 B = None
