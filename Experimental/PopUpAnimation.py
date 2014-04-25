@@ -3,7 +3,7 @@ Demonstration of opening a window and running it as an animation.
 '''
 import browser
 
-win = browser.window.open("","","width=415,height=400")
+win = browser.window.open("","","width=600,height=600")
 
 def tick(time):
     print time
