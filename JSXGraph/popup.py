@@ -30,8 +30,8 @@ def terminate(time):
 def setUp():
     pass
 
-def tearDown():
+def tearDown(e):
     win.close()
-    print "The window was closed."
+    print "The window was closed. " + str(e)
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown, win).start()
