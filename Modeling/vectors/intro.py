@@ -8,7 +8,7 @@ JXG = window.JXG
 graph = JXG.JSXGraph
 
 board = graph.initBoard("box", 
-                    {"boundingbox": [-10,10,10,-10],
+                    {"boundingbox": [-2,2,2,-2],
                      "axis":True,
                      "showCopyright":False,
                      "showNavigation":False
