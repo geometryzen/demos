@@ -25,7 +25,7 @@ line = board.create('arrow',[tail,head],{'strokeWidth':5, 'strokeOpacity':0.7, '
 def toString(mv):
     return "\\theta" % (mv.x, mv.y)
 
-txt = board.create('text',[-1.5,+1.5, lambda: toString(a)], {'fontSize':30,'mathjax':True})
+txt = board.create('text',[-1.5,+1.5, lambda: toString(a)], {'fontSize':30})
 
 def tick():
     # Modify the vector to track the User Interface.
