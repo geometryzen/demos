@@ -4,7 +4,7 @@ from browser import window
 from math import *
 
 # Spring Constant.
-k = 20.0 * newton / second
+k = 20.0 * newton / meter
 x0 = 0.5 * meter
 
 # Compute the energy for a given extension.
