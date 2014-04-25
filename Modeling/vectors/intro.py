@@ -22,4 +22,4 @@ head = board.create('point',[a.x,a.y], {'name':'B'})
 line = board.create('line',[tail,head], 
  {'straightFirst':False, 'straightLast':False,'lastArrow':True})
 
-txt = board.create('text',[-2,-1, lambda: str(a)], {'fontSize':30})
+txt = board.create('text',[-1.5,+1.5, lambda: str(a)], {'fontSize':30})
