@@ -16,6 +16,7 @@ board = graph.initBoard("box",
                      })
 
 a = VectorE2(1,0)
+b = VectorE2(0,1)
 
 def toString(mv):
     return "\\[ a_x=%0.3f, a_y=%0.3f \\]" % (mv.x, mv.y)
