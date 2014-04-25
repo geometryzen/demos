@@ -56,9 +56,9 @@ def terminate(time):
 def setUp():
     print "Press Esc to terminate."
     global A, B, C
-    A = Arrow('a', a, -scale, -0.5 * scale, 'red')
+    A = Arrow('a', a, -scale, -0.4 * scale, 'red')
     B = Arrow('b', b, -scale, -0.6 * scale, 'green')
-    C = Arrow('c', c, -scale, -0.7 * scale, 'blue')
+    C = Arrow('c', c, -scale, -0.8 * scale, 'blue')
 
 def tearDown():
     print "Goodbye!"
