@@ -1,8 +1,8 @@
 '''
 Demonstration of opening a window and running it as an animation.
 '''
-# The browser module provides access to the current window and
-# the WindowAnimationRunner utility.
+# The browser module provides access to the current window
+# and the WindowAnimationRunner utility.
 import browser
 
 win = browser.window.open("","","width=600,height=600")
