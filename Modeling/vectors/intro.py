@@ -24,7 +24,7 @@ print e1.w
 print e1.xy
 
 tail = b.create('point',[0,0], {'name':'A'})
-head = b.create('point',[lambda: e1.x,lambda: e1.y], {'name':'B'})
+head = b.create('point',[1,0], {'name':'B'})
 
 line = b.create('line',[tail,head], 
  {'straightFirst':False, 'straightLast':False,'lastArrow':True})
