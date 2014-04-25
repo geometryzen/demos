@@ -23,7 +23,7 @@ def toString(mv):
 tail = board.create('point',[0,0], {'name':'','size':5,'fillOpacity':0.3,'strokeOpacity':0.3})
 head = board.create('point',[a.x,a.y], {'name':'','size':5,'fillOpacity':0.3,'strokeOpacity':0.3})
 
-arrowA = board.create('arrow',[tail,head],{'label':'a', 'strokeWidth':5, 'strokeOpacity':0.7, 'strokeColor':'red','withLabel':True});
+arrowA = board.create('arrow',[tail,head],{'strokeWidth':5, 'strokeOpacity':0.7, 'strokeColor':'red'});
 
 txt = board.create('text',[-1.5,+1.5, lambda: toString(a)], {'fontSize':30, 'strokeColor':'red'})
 
