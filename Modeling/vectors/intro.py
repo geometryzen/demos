@@ -36,7 +36,7 @@ def Arrow(color):
 def tick():
     # Modify the vector to track the User Interface.
     a.x = A.point1.X() - A.point2.X()
-    a.y = head.Y() - tail.Y()
+    a.y = A.point1.Y() - A.point2.Y()
 
 def terminate():
     pass
