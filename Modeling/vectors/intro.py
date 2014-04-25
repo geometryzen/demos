@@ -36,7 +36,7 @@ def Arrow(vector, x, y, color):
                 'snapToGrid':True}
     tail = board.create('point',[random(), random()], pointDef)
     head = board.create('point',[tail.X() + vector.x, tail.Y() + vector.y], pointDef)
-    txt = board.create('text',[x, y, lambda: toString(vector)], {'fontSize':20, 'strokeColor':color})
+    txt = board.create('text',[x, y, lambda: toString(vector)], {'fontSize':20, 'strokeColor':color,'fixed':True})
     return board.create('arrow',[tail,head],{'strokeWidth':5, 'strokeOpacity':0.7, 'strokeColor':color});
 
 
