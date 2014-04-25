@@ -16,4 +16,4 @@ def tearDown():
     win.close()
     pass
 
-WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown, win).start()
