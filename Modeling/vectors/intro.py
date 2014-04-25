@@ -27,7 +27,7 @@ def Arrow(color):
     head = board.create('point',[a.x,a.y], pointDef)
     return board.create('arrow',[tail,head],{'strokeWidth':5, 'strokeOpacity':0.7, 'strokeColor':color});
 
-txt = board.create('text',[-1.5,+1.5, lambda: toString(a)], {'fontSize':30, 'strokeColor':'red'})
+    txt = board.create('text',[-1.5,+1.5, lambda: toString(a)], {'fontSize':30, 'strokeColor':color})
 
 def tick():
     # Modify the vector to track the User Interface.
