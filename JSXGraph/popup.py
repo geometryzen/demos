@@ -22,7 +22,7 @@ f = board.create('functiongraph',[lambda x: A.X() * sin(x)])
 def tick(time):
     # May be a faster way to make the animation run?
     angle = time*pi*2/10
-    A.moveTo([sin(angle),cos(angle)])
+    A.moveTo([3 * sin(angle),3 * cos(angle)])
 
 def terminate(time):
     return time > 20
