@@ -52,11 +52,11 @@ def terminate():
     pass
 
 def setUp():
+    print "Press Esc to terminate."
     global A, B, C
     A = Arrow(a, -100, -50, 'red')
-    B = Arrow(b, -100, -60, 'blue')
-    C = Arrow(c, -100, -70, 'green')
-    print "Press Esc to terminate."
+    B = Arrow(b, -100, -60, 'green')
+    C = Arrow(c, -100, -70, 'blue')
 
 def tearDown():
     print "Goodbye!"
