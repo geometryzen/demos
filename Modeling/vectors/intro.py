@@ -1,3 +1,4 @@
+from e2ga import *
 from units import *
 import numpy as np
 from browser import window
@@ -12,3 +13,7 @@ b = graph.initBoard("box",
                      "showCopyright":False,
                      "showNavigation":False
                      })
+
+e1 = VectorE2(1,0)
+
+print e1
