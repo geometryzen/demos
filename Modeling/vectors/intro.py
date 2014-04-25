@@ -22,4 +22,4 @@ head = b.create('point',[e1.x,e1.y], {'name':'B'})
 line = b.create('line',[tail,head], 
  {'straightFirst':False, 'straightLast':False,'lastArrow':True})
 
-txt = b.create('text',[-2,-1, 'Hello World'], {'fontSize':30})
+txt = b.create('text',[-2,-1, lambda: str(e1)], {'fontSize':30})
