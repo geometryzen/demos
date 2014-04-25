@@ -17,6 +17,7 @@ div.style.height = "400px"
 
 board = graph.initBoard("box", {"document":plotDoc,"axis":True,"grid":True})
 
+print "Got board!"
 
 A = board.create('point',[1,1],{"name": 'Alice'})
 B = board.create('point',[2,2],{"name":'Bob'})
