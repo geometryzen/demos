@@ -25,7 +25,8 @@ line = board.create('line',[tail,head],
 txt = board.create('text',[-1.5,+1.5, lambda: str(a)], {'fontSize':30})
 
 def tick():
-    a.x = head.X()
+    a.x = head.X() - tail.X()
+    a.y = head.Y() - tail.Y()
 
 def terminate():
     pass
