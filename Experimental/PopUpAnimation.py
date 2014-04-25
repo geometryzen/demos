@@ -14,4 +14,4 @@ def setUp():
 def tearDown():
     win.close()
 
-WindowAnimationRunner(tick, terminate, setUp, tearDown, win).start()
+browser.WindowAnimationRunner(tick, terminate, setUp, tearDown, win).start()
