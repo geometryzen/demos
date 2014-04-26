@@ -22,7 +22,7 @@ print "energy (" +str(joule.uom) + ")"
 
 print "power (" +str(watt.uom) + ")"
 
-print "electric potential (" +str(volt) + ")"
+print "electric potential (" +str(volt.uom) + ")"
 
 print "magnetic flux density (" +str((newton/coulomb)/(meter/second)) + ")"
 
