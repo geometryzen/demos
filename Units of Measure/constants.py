@@ -6,7 +6,7 @@ print kB
 R = 8.31 * joule / kelvin
 print R
 
-C = 4.2 * joule / (kelvin * gram)
+C = 4.2 * joule / kelvin / gram
 print C
 
 m = 12 * kilogram
