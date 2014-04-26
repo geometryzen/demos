@@ -30,7 +30,7 @@ print "V/m = volt/meter (" +str(volt/meter) + ")"
 
 print "resistance (" +str((volt/ampere).uom) + ")"
 
-print "conductance (" +str(ampere/volt) + ")"
+print "conductance (" +str((ampere/volt).uom) + ")"
 
 print "permeability (" +str(tesla * meter/ampere) + ")"
 
