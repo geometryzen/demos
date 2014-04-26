@@ -50,7 +50,7 @@ def tick(t):
     y0 += (y1 - y0) * .1
     x = x0
     y = y0
-    def tweeny():
+    def tweeny(unused1, unused2):
         # This side effect is necessary to make things work!
         a = x
         def circle(t):
