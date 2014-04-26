@@ -10,13 +10,11 @@ win = browser.window.open("","","width=600,height=600")
 def tick(time):
     # raise NameError('Hello')
     win.document.body.innerHTML = str(time)
-    pass
 
 def terminate(time):
     return time > 4
 
 def setUp():
-    print "Off we go!"
     pass
 
 def tearDown(e):
