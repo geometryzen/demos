@@ -1,6 +1,6 @@
 from units import *
 
-print "kg = kilogram (" +str(kilogram) + ")"
+print "mass (" +str(kilogram.uom) + ")"
 
 print "length (" +str(meter.uom) + ")"
 
