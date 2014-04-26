@@ -8,12 +8,11 @@ import browser
 win = browser.window.open("","","width=600,height=600")
 
 def tick(time):
-    raise NameError('Hello')
+    # raise NameError('Hello')
     win.document.body.innerHTML = str(time)
     pass
 
 def terminate(time):
-    print "Are we done yet? " + str(time)
     return time > 4
 
 def setUp():
