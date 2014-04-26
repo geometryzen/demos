@@ -28,7 +28,7 @@ print "magnetic flux density (" +str(tesla.uom) + ")"
 
 print "V/m = volt/meter (" +str(volt/meter) + ")"
 
-print "resistance (" +str(volt/ampere) + ")"
+print "resistance (" +str((volt/ampere).uom) + ")"
 
 print "conductance (" +str(ampere/volt) + ")"
 
