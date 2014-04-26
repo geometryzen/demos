@@ -8,7 +8,7 @@ print "s = second (" +str(second) + ")"
 
 print "A = ampere (" +str(coulomb/second) + ")"
 
-print "thermodynamic temperatue (" +str(kelvin) + ")"
+print "thermodynamic temperatue (" +str(kelvin.uom) + ")"
 
 print "C = coulomb (" +str(coulomb) + ")"
 
