@@ -8,7 +8,7 @@ print "time (" +str(second.uom) + ")"
 
 print "electric current (" +str(ampere.uom) + ")"
 
-print "thermodynamic temperatue (" +str(kelvin.uom) + ")"
+print "thermodynamic temperature (" +str(kelvin.uom) + ")"
 
 print "amount of substance (" +str(mole.uom) + ")"
 
