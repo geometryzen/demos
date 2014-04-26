@@ -10,7 +10,7 @@ print "electric current (" +str(ampere.uom) + ")"
 
 print "thermodynamic temperatue (" +str(kelvin.uom) + ")"
 
-print "amount of subcstance (" +str(mole.uom) + ")"
+print "amount of substance (" +str(mole.uom) + ")"
 
 print "C = coulomb (" +str(coulomb) + ")"
 
