@@ -16,7 +16,7 @@ print "luminous intensity (" +str(candela.uom) + ")"
 
 print "electric charge (" +str(coulomb.uom) + ")"
 
-print "N = newton (" +str(kilogram * meter / (second ** 2)) + ")"
+print "force (" +str(newton.uom) + ")"
 
 print "J = joule (" +str(newton * meter) + ")"
 
