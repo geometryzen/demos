@@ -20,7 +20,7 @@ print "force (" +str(newton.uom) + ")"
 
 print "energy (" +str(joule.uom) + ")"
 
-print "W = watt (" +str(joule/second) + ")"
+print "power (" +str(watt.uom) + ")"
 
 print "V = volt (" +str(joule/coulomb) + ")"
 
