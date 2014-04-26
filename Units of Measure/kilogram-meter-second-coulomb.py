@@ -18,7 +18,7 @@ print "electric charge (" +str(coulomb.uom) + ")"
 
 print "force (" +str(newton.uom) + ")"
 
-print "J = joule (" +str(newton * meter) + ")"
+print "energy (" +str(joule.uom) + ")"
 
 print "W = watt (" +str(joule/second) + ")"
 
