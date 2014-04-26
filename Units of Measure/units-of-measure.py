@@ -16,4 +16,4 @@ a = F / m
 
 print "a => " + str(a)
 
-print g * second 
+print kilogram * g * second 
