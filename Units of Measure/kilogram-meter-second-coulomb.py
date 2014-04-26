@@ -46,6 +46,6 @@ print "pressure, stress (" +str(newton /(meter ** 2)) + ")"
 
 print "capacitance (" +str(coulomb/volt) + ")"
 
-print "magnetic flux (" +str(volt * second) + ")"
+print "magnetic flux (" +str((volt * second).uom) + ")"
 
 print "inductance (" +str(tesla * (meter ** 2)/ampere) + ")"
