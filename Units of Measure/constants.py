@@ -13,3 +13,5 @@ m = 12 * kilogram
 W = 36000 * joule
 
 print W / (m * C)
+
+print kilogram * meter / second
