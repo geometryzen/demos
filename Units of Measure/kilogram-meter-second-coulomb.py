@@ -2,9 +2,9 @@ from units import *
 
 print "kg = kilogram (" +str(kilogram) + ")"
 
-print "m = meter (" +str(meter) + ")"
+print "length (" +str(meter.uom) + ")"
 
-print "s = second (" +str(second) + ")"
+print "time (" +str(second.uom) + ")"
 
 print "electric current (" +str(ampere.uom) + ")"
 
