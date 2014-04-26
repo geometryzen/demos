@@ -24,7 +24,7 @@ print "meter - meter  => " + str(meter - meter)
 print "meter * second => " + str(meter * second)
 
 try:
-    meter + second
+    meter - second
 except AssertionError as e:
     print e
 else:
