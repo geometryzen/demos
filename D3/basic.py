@@ -65,7 +65,7 @@ def tick(t):
 def terminate(t):
     return t > 60
     
-def tearDown():
+def tearDown(e):
     workbench.tearDown()
 
 war = WindowAnimationRunner(tick, terminate, setUp, tearDown)
