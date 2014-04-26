@@ -14,7 +14,7 @@ print "amount of substance (" +str(mole.uom) + ")"
 
 print "luminous intensity (" +str(candela.uom) + ")"
 
-print "C = coulomb (" +str(coulomb) + ")"
+print "electric charge (" +str(coulomb.uom) + ")"
 
 print "N = newton (" +str(kilogram * meter / (second ** 2)) + ")"
 
