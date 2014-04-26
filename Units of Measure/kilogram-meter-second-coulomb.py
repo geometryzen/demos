@@ -6,7 +6,7 @@ print "m = meter (" +str(meter) + ")"
 
 print "s = second (" +str(second) + ")"
 
-print "A = ampere (" +str(coulomb/second) + ")"
+print "electric current (" +str(ampere) + ")"
 
 print "thermodynamic temperatue (" +str(kelvin.uom) + ")"
 
