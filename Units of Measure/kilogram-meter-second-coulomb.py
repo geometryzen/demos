@@ -42,9 +42,9 @@ print "Js = joule * second (" +str(joule * second) + ")"
 
 print "frequency (" +str(1 / second) + ")"
 
-print "pressure, stress (" +str(newton /(meter ** 2)) + ")"
+print "pressure, stress (" +str((newton /(meter ** 2)).uom) + ")"
 
-print "capacitance (" +str(coulomb/volt) + ")"
+print "capacitance (" +str((coulomb/volt).uom) + ")"
 
 print "magnetic flux (" +str((volt * second).uom) + ")"
 
