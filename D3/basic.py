@@ -67,6 +67,7 @@ def terminate(t):
     
 def tearDown(e):
     workbench.tearDown()
+    print "Ending with exception: " + str(e)
 
 war = WindowAnimationRunner(tick, terminate, setUp, tearDown)
 war.start()
