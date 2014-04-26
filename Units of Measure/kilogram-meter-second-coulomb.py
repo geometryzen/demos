@@ -32,7 +32,7 @@ print "resistance (" +str((volt/ampere).uom) + ")"
 
 print "conductance (" +str((ampere/volt).uom) + ")"
 
-print "permeability (" +str(tesla * meter/ampere) + ")"
+print "permeability (" +str((tesla * meter/ampere).uom) + ")"
 
 print "permittivity (" +str(((coulomb ** 2)/(newton*(meter ** 2))).uom) + ")"
 
