@@ -21,7 +21,7 @@ canvas.attr("width", width).attr("height", height)
 
 d3.select("canvas").style("background-color", "#222")
 
-def move():
+def move(unused1, unused2, unused3):
     global x1, y1
     mouse = d3.mouse(canvas.node())
     x1 = mouse[0]
