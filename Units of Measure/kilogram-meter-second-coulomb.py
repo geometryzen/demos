@@ -38,7 +38,7 @@ print "permittivity (" +str(((coulomb ** 2)/(newton*(meter ** 2))).uom) + ")"
 
 print "breakdown (N/C) (" +str((newton/coulomb).uom) + ")"
 
-print "Js = joule * second (" +str(joule * second) + ")"
+print "angular momentum (" +str((joule * second).uom) + ")"
 
 print "frequency (" +str((1 / second).uom) + ")"
 
