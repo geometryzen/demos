@@ -12,6 +12,8 @@ print "thermodynamic temperatue (" +str(kelvin.uom) + ")"
 
 print "amount of substance (" +str(mole.uom) + ")"
 
+print "luminous intensity (" +str(candela.uom) + ")"
+
 print "C = coulomb (" +str(coulomb) + ")"
 
 print "N = newton (" +str(kilogram * meter / (second ** 2)) + ")"
