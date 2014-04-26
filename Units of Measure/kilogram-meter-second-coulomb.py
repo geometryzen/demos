@@ -26,7 +26,7 @@ print "electric potential (" +str(volt.uom) + ")"
 
 print "magnetic flux density (" +str(tesla.uom) + ")"
 
-print "V/m = volt/meter (" +str(volt/meter) + ")"
+print "electric field strength (" +str((volt/meter).uom) + ")"
 
 print "resistance (" +str((volt/ampere).uom) + ")"
 
