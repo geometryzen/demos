@@ -4,7 +4,3 @@ from math import *
 x = Euclidean2(0,4,3,2)
 
 print x * x
-
-print x
-
-print sqrt(x)
