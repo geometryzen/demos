@@ -22,6 +22,6 @@ k = 2 * newton / meter
 
 m = 5 * kilogram
 
-omega = k / m
+omega = sqrt(k / m)
 
 print omega
