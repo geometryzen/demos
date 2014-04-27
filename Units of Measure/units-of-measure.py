@@ -23,16 +23,11 @@ k = 2 * newton / meter
 
 print "k => " + str(k)
 
-# TODO: sqrt as a universal function
-print repr(type(k/m))
 omega = sqrt(k / m)
-
-#TODO: Pow for Euclidean3 and float.
 
 print "k/m => " + str(k/m)
 print "sqrt(k/m) => " + str(sqrt(k/m))
 
-#
 omega = (k / m) ** 0.5
 
 # Interesting, we've really got rad/s here.
