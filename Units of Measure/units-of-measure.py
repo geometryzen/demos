@@ -28,6 +28,8 @@ print "k => " + str(k)
 
 #TODO: Pow for Euclidean3 and float.
 
+print "k/m => " + str(k/m)
+
 #
 omega = (k / m) ** 0.5
 
