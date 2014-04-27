@@ -21,10 +21,13 @@ print kilogram * g * second
 
 k = 2 * newton / meter
 
+print "k => " + str(k)
+
 m = 5 * kilogram
 
 # TODO: sqrt as a universal function
 #omega = sqrt(k / m)
 omega = (k / m) ** 0.5
 
+# Interesting, we've really got rad/s here.
 print omega
