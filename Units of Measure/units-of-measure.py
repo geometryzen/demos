@@ -24,7 +24,7 @@ k = 2 * newton / meter
 m = 5 * kilogram
 
 # TODO: sqrt as a universal function
-omega = sqrt(k / m)
+#omega = sqrt(k / m)
 omega = (k / m) ** 0.5
 
 print omega
