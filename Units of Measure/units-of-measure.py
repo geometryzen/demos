@@ -4,7 +4,7 @@ from math import *
  
 m = ScalarE3(10.0) * kilogram
  
-print "m => " + str(m)
+print "m => " + repr(m)
  
 g = 9.81 * VectorE3(0.0, 0.0, -1.0) * newton / kilogram
 print "g => " + str(g)
