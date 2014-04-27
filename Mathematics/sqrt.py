@@ -1,6 +1,6 @@
 from e2ga import *
 from math import *
 
-x = Euclidean2(5,4,3,0)
+x = Euclidean2(9,16,25,36)
 
-print x * x
+print sqrt(x)
