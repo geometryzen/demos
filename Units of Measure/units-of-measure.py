@@ -16,4 +16,12 @@ a = F / m
 
 print "a => " + str(a)
 
-print kilogram * g * second 
+print kilogram * g * second
+
+k = 2 * newton / meter
+
+m = 5 * kilogram
+
+omega = k / m
+
+print omega
