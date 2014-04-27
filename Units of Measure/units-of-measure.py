@@ -37,3 +37,4 @@ omega = (k / m) ** 0.5
 
 # Interesting, we've really got rad/s here.
 print omega
+print omega * second
