@@ -30,6 +30,7 @@ omega = sqrt(k / m)
 #TODO: Pow for Euclidean3 and float.
 
 print "k/m => " + str(k/m)
+print "sqrt(k/m) => " + str(sqrt(k/m))
 
 #
 omega = (k / m) ** 0.5
