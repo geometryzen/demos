@@ -1,7 +1,7 @@
 from units import *
 
-print "mass (" +str(kilogram.uom) + ")"
-print "length (" +str(meter.uom) + ")"
+print "mass " +str(kilogram.uom)
+print "length " +str(meter.uom)
 print "time (" +str(second.uom) + ")"
 print "electric current (" +str(ampere.uom) + ")"
 print "thermodynamic temperature (" +str(kelvin.uom) + ")"
@@ -30,7 +30,7 @@ print "moment of force (" +str((newton * meter).uom) + ")"
 print "surface tension (" +str((newton/meter).uom) + ")"
 print "heat flux density (" +str((watt/meter ** 2).uom) + ")"
 print "heat capacity, entropy (" +str((joule/kelvin).uom) + ")"
-print "thermal conductivity (" +str((watt/(meter*kelvin)).uom) + ")"
-print "energy density (" +str((joule/(meter**3)).uom) + ")"
-print "molar energy (" +str((joule/mole).uom) + ")"
+print "thermal conductivity " +str((watt/(meter*kelvin)).uom)
+print "energy density " +str((joule/(meter**3)).uom)
+print "molar energy " +str((joule/mole).uom)
 print "molar entropy " +str((joule/(mole*kelvin)).uom)
