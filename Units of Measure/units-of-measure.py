@@ -24,7 +24,7 @@ k = 2 * newton / meter
 print "k => " + str(k)
 
 # TODO: sqrt as a universal function
-print type(k/m)
+print str(type(k/m))
 omega = sqrt(k / m)
 
 #TODO: Pow for Euclidean3 and float.
