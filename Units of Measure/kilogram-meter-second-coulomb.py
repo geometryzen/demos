@@ -53,3 +53,5 @@ print "inductance (" +str((tesla * (meter ** 2)/ampere).uom) + ")"
 print "dynamic viscosity (" +str((newton * second/meter **2).uom) + ")"
 
 print "moment of force (" +str((newton * meter).uom) + ")"
+
+print "surface tension (" +str((newton/meter).uom) + ")"
