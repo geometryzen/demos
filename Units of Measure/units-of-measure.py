@@ -4,7 +4,7 @@ from math import *
  
 m = ScalarE3(10.0) * kilogram
  
-print "m => " + repr(m)
+print "m => " + str(m)
  
 g = 9.81 * VectorE3(0.0, 0.0, -1.0) * newton / kilogram
 print "g => " + str(g)
@@ -25,6 +25,10 @@ print "k => " + str(k)
 
 # TODO: sqrt as a universal function
 #omega = sqrt(k / m)
+
+#TODO: Pow for Euclidean3 and float.
+
+#
 omega = (k / m) ** 0.5
 
 # Interesting, we've really got rad/s here.
