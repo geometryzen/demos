@@ -51,3 +51,5 @@ print "magnetic flux (" +str((volt * second).uom) + ")"
 print "inductance (" +str((tesla * (meter ** 2)/ampere).uom) + ")"
 
 print "dynamic viscosity (" +str((newton * second/meter **2).uom) + ")"
+
+print "moment of force (" +str((newton * meter).uom) + ")"
