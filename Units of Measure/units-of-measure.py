@@ -9,7 +9,7 @@ print "mass => " + str(mass)
 g = 9.81 * VectorE3(0.0, 0.0, -1.0) * newton / kilogram
 print "g => " + str(g)
  
-F = m * g
+F = mass * g
  
 print "F => " + str(F)
  
