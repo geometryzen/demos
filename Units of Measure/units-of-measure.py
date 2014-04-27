@@ -1,5 +1,6 @@
 from e3ga import *
 from units import *
+from math import *
  
 m = ScalarE3(10.0) * kilogram
  
