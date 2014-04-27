@@ -25,6 +25,8 @@ print "k => " + str(k)
 
 m = 5 * kilogram
 
+print "m => " + str(m)
+
 # TODO: sqrt as a universal function
 #omega = sqrt(k / m)
 omega = (k / m) ** 0.5
