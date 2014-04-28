@@ -9,7 +9,7 @@ Quadrance is a term introduced by NJ Wildberger.
 print quadrance(2)
 print quadrance(2.0)
 try:
-    print quadrance(meter)
+    print quadrance(complex(1,1))
 except Exception as e:
     print e
     pass
