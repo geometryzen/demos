@@ -1,6 +1,7 @@
 from math import *
 from units import *
 from cmath import *
+from e3ga import *
 '''
 Quadrance is a term introduced by NJ Wildberger.
 '''
@@ -22,6 +23,6 @@ print str(meter)
 print type(meter)
 print str(type(meter))
 print type(type(meter))
-q = quadrance(meter)
+q = quadrance(VectorE3(1,0,0))
 print q
 m = sqrt(q)
