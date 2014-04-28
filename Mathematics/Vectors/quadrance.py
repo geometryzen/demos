@@ -6,4 +6,4 @@ Quadrance is a term introduced by NJ Wildberger.
 
 x = sqrt(2)
 
-print x
+print quadrance(2)
