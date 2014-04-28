@@ -3,7 +3,7 @@ from units import *
 
 e1 = VectorE3(1,0,0) * dimensionless
 e2 = VectorE3(0,1,0) * dimensionless
-e3 = VectorE3(0,1,0) * dimensionless
+e3 = VectorE3(0,0,1) * dimensionless
 r  = (4 * e1 + 3 * e2 + 2 * e3) * meter
 
 print r
