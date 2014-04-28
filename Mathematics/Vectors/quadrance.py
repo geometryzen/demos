@@ -10,7 +10,7 @@ print quadrance(2)
 print quadrance(2.0)
 
 try:
-    print quadrance("Hello")
+    print quadrance('Hello')
 except Exception as e:
     print e
     pass
