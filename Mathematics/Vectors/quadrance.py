@@ -15,11 +15,5 @@ except Exception as e:
     print e
     pass
 
-c = complex(0.0,-1.0)
-print str(c)
-print repr(c)
-print type(c)
-q = quadrance(c)
-print q
-m = sqrt(complex(0,-1))
-print m
+c = complex(3.0,4.0)
+print quadrance(c)
