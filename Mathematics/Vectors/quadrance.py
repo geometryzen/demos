@@ -21,5 +21,5 @@ print repr(c)
 print type(c)
 q = quadrance(c)
 print q
-m = sqrt(q)
+m = sqrt(complex(-1,0))
 print m
