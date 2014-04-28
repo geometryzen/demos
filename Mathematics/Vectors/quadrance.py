@@ -1,6 +1,7 @@
 from math import *
 from units import *
 from cmath import *
+from e2ga import *
 from e3ga import *
 '''
 Quadrance is a term introduced by NJ Wildberger.
@@ -15,7 +16,9 @@ except Exception as e:
     print e
     pass
 
-c = complex(3.0,4.0)
-print c
-print quadrance(c)
-print sqrt(quadrance(c))
+z = complex(3.0,4.0)
+print z
+print quadrance(z)
+print sqrt(quadrance(z))
+
+r = Euclidean2(4,3,2,1) 
