@@ -15,4 +15,4 @@ print e1 ^ e2
 print (e1 * meter) ^ (e2 * meter)
 print (e1 * meter) % (e2 * meter)
 
-print "$r_x$ = %s" % str((r % e1) * e1)
+print "r_x = %s" % str((r % e1) * e1)
