@@ -24,3 +24,9 @@ r = VectorE3(3,4,12)
 print r
 print quadrance(r)
 print sqrt(quadrance(r))
+
+
+r = VectorE3(3,4,12) * meter
+print r
+print quadrance(r)
+print sqrt(quadrance(r))
