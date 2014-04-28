@@ -21,5 +21,5 @@ print meter
 print str(meter)
 print type(meter)
 print str(type(meter))
-print repr(type(meter))
+print type(type(meter))
 print quadrance(meter)
