@@ -7,6 +7,7 @@ Quadrance is a term introduced by NJ Wildberger.
 '''
 
 print -2
+print +2
 print magnitude(2.0)
 print abs(-2)
 print quadrance(2)
