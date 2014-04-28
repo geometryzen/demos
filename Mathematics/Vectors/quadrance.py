@@ -29,5 +29,5 @@ print sqrt(quadrance(r))
 r = VectorE3(3,4,12) * meter
 print r
 print quadrance(r)
-print type(quadrance(r))
+print repr(quadrance(r))
 print sqrt(quadrance(r))
