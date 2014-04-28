@@ -22,3 +22,4 @@ print type(c)
 q = quadrance(c)
 print q
 m = sqrt(q)
+print m
