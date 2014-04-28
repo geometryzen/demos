@@ -11,4 +11,4 @@ print e1 % e2
 print e1 ^ e2
 
 print (e1 * meter) ^ (e2 * meter)
-#print (e1 * meter) % (e2 * meter)
+print (e1 * meter) % (e2 * meter)
