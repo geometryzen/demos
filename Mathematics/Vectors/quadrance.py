@@ -22,4 +22,6 @@ print str(meter)
 print type(meter)
 print str(type(meter))
 print type(type(meter))
-print quadrance(c)
+q = quadrance(c)
+print q
+m = sqrt(q)
