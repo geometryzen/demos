@@ -7,6 +7,7 @@ e3 = VectorE3(0,0,1) * dimensionless
 r  = (4 * e1 + 3 * e2 + 2 * e3) * meter
 
 print r
+print magnitude(r)
 
 # Using the % symbol means scalar product.
 print e1 % e2
