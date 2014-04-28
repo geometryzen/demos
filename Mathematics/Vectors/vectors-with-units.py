@@ -5,6 +5,8 @@ e1 = VectorE3(1,0,0)
 e2 = VectorE3(0,1,0)
 r = VectorE3(4,3,2) * meter
 
+print r
+
 # Using the % symbol means scalar product.
 print e1 % e2
 
