@@ -6,7 +6,7 @@ from e3ga import *
 Quadrance is a term introduced by NJ Wildberger.
 '''
 
-print magnitude(2)
+print magnitude(2.0)
 print quadrance(2)
 print quadrance(2.0)
 print sqrt(2)
