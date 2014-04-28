@@ -3,4 +3,7 @@ from e3ga import *
 e1 = VectorE3(1,0,0)
 e2 = VectorE3(0,1,0)
 
+# Using the % symbol means scalar product.
 print e1 % e2
+
+print e1 ^ e2
