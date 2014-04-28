@@ -10,7 +10,6 @@ print quadrance(2.0)
 try:
     print quadrance("Hello")
 except:
-
     pass
 
 c = complex(1.0,1.0)
