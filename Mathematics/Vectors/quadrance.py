@@ -16,5 +16,6 @@ except Exception as e:
     pass
 
 c = complex(3.0,4.0)
+print c
 print quadrance(c)
 print sqrt(quadrance(c))
