@@ -13,7 +13,7 @@ except Exception as e:
     print e
     pass
 
-c = complex(1.0,1.0)
+c = complex(3.0,4.0)
 print str(c)
 print repr(c)
 print type(c)
