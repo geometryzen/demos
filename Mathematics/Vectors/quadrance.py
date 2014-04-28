@@ -9,7 +9,8 @@ print quadrance(2)
 print quadrance(2.0)
 try:
     print quadrance("Hello")
-except:
+except Exception e:
+    print e
     pass
 
 c = complex(1.0,1.0)
