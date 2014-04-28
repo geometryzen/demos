@@ -23,6 +23,6 @@ print str(meter)
 print type(meter)
 print str(type(meter))
 print type(type(meter))
-q = quadrance(VectorE3(1,0,0))
+q = sqrt(VectorE3(1,0,0))
 print q
 m = sqrt(q)
