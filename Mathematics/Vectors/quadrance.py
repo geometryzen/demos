@@ -17,4 +17,7 @@ c = complex(1.0,1.0)
 print str(c)
 print repr(c)
 print type(c)
+print meter
+print str(meter)
+preint type(meter)
 print quadrance(meter)
