@@ -6,4 +6,4 @@ Quadrance is a term introduced by NJ Wildberger.
 '''
 
 print quadrance(2)
-print quadrance(complex(1,1))
+print quadrance(complex(1.0,1.0))
