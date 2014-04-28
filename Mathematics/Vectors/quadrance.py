@@ -33,3 +33,4 @@ print r
 print quadrance(r)
 print sqrt(quadrance(r))
 print magnitude(r)
+print abs(r)
