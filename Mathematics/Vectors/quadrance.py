@@ -23,4 +23,4 @@ print sqrt(quadrance(z))
 r = VectorE3(1,0,0)
 print r
 print quadrance(r)
-print sqrt(quadrance(r))
+#print sqrt(quadrance(r))
