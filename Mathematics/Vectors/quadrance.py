@@ -1,6 +1,7 @@
 from math import *
+from units import *
 '''
 Quadrance is a term introduced by NJ Wildberger.
 '''
 
-print quadrance(2)
+print type(meter)
