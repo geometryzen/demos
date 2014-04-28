@@ -31,4 +31,4 @@ r = VectorE3(4,3,2) * meter
 print r
 print quadrance(r)
 print sqrt(quadrance(r))
-print abs(r)
+print magnitude(r)
