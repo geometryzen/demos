@@ -19,5 +19,5 @@ print repr(c)
 print type(c)
 print meter
 print str(meter)
-preint type(meter)
+print type(meter)
 print quadrance(meter)
