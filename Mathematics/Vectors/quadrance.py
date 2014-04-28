@@ -19,6 +19,6 @@ c = complex(3.0,4.0)
 print str(c)
 print repr(c)
 print type(c)
-q = quadrance(VectorE3(1,0,0))
+q = quadrance(c)
 print q
 m = sqrt(q)
