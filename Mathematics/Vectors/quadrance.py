@@ -24,3 +24,4 @@ print sqrt(quadrance(z))
 r = Euclidean2(4,3,2,1)
 print r
 print quadrance(r)
+print sqrt(quadrance(r))
