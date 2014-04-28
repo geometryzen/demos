@@ -9,6 +9,7 @@ r  = (4 * e1 + 3 * e2 + 2 * e3) * meter
 
 print r
 print magnitude(r)
+print abs(r)
 
 # Using the % symbol means scalar product.
 print e1 % e2
