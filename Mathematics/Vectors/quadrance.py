@@ -20,6 +20,7 @@ z = complex(3.0,4.0)
 print z
 print quadrance(z)
 print sqrt(quadrance(z))
+print magnitude(z)
 
 r = VectorE3(3,4,12)
 print r
