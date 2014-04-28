@@ -1,5 +1,6 @@
 from e3ga import *
 from units import *
+from math import *
 
 e1 = VectorE3(1,0,0) * dimensionless
 e2 = VectorE3(0,1,0) * dimensionless
