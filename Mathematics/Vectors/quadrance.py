@@ -1,7 +1,6 @@
 from math import *
 from units import *
 from cmath import *
-from e2ga import *
 from e3ga import *
 '''
 Quadrance is a term introduced by NJ Wildberger.
@@ -21,7 +20,7 @@ print z
 print quadrance(z)
 print sqrt(quadrance(z))
 
-r = Euclidean2(4,3,2,1)
+r = VectorE3(1,0,0)
 print r
 print quadrance(r)
 print sqrt(quadrance(r))
