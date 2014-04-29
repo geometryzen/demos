@@ -26,8 +26,8 @@ print "k => " + str(k)
 
 omega = sqrt(k / mass)
 
-print "k/m => " + str(k/mass)
-print "sqrt(k/m) => " + str(sqrt(k/mass))
+print "k/mass => " + str(k/mass)
+print "sqrt(k/mass) => " + str(sqrt(k/mass))
 
 omega = (k / mass) ** 0.5
 
