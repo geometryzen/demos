@@ -11,5 +11,6 @@ x = VectorE3(3,4,12) * meter
 
 print "x => %s" % x
 
+print e1 * x
 print e1 % x
 print e2 % x
