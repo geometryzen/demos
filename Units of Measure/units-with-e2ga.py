@@ -11,4 +11,7 @@ x = VectorE2(3,4) * meter
 
 print "x => %s" % x
 
-print e1 + x
+try:
+    print e1 + x
+except TypeError as e:
+    print e
