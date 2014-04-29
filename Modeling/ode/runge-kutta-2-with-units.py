@@ -42,7 +42,7 @@ def rungeKutta2(y, x, h, f):
     print "k2 => %s" % k2
     return y + a * k1 + b * k2
 
-N = 500
+N = 50
 
 # Keep track of displacement and velocity.
 y = numpy.zeros((N,2))
