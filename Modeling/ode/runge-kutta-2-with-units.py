@@ -31,7 +31,7 @@ def rungeKutta2(y, x, h, f):
     k2 = f(x + alpha * h, y + alpha * k1) * h
     return y + a * k1 + b * k2
 
-N = 300
+N = 400
 
 # Keep track of displacement and velocity.
 y = numpy.zeros((N,2))
