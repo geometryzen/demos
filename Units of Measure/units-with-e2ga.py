@@ -15,3 +15,8 @@ try:
     print e1 + x
 except TypeError as e:
     print e
+
+try:
+    print x + e1
+except TypeError as e:
+    print e
