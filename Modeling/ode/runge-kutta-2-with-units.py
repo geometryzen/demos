@@ -75,8 +75,10 @@ g = -9.81 * e3 * newton / kilogram
 print "g: %s" % g
 
 # Propagate forward in time.
+print "Running RK2"
 for j in range(N-1):
     y[j+1] = rungeKutta2(y[j], t[j], dt, SHO)
+print "RK2 complete"
 
 # Extract the data that we need for driving the graph.
 dataT = [t[j].quantity   for j in range(N)]    
