@@ -5,4 +5,4 @@ print type(meter)
 print type(meter.quantity)
 print type(meter.uom)
 
-print "Hello" * meter
+print type("Hello" * meter)
