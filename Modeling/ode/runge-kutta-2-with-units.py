@@ -29,7 +29,7 @@ def rungeKutta2(y, x, h, f):
     xArg = x + alpha * h
     yArg = y + alpha * k1
     # FIXME: If we reverse the order here then the Measure gobbles the ndarray!
-    k2 = f(x + alpha * h, y + alpha * k1) * h
+    k2 = h * f(x + alpha * h, y + alpha * k1)
     return y + a * k1 + b * k2
 
 N = 800
