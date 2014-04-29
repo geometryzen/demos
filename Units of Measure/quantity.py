@@ -13,4 +13,7 @@ try:
 except TypeError as e:
     print e
 
-print z * v
+try:
+    print z * v
+except TypeError as e:
+    print e
