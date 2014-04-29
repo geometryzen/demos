@@ -14,6 +14,7 @@ print
 print e1 * x.quantity
 print e1 * x.uom
 print e1 * x
+print e1 * meter
 print "..."
 print e1 % x.quantity
 print e2 % x.uom
