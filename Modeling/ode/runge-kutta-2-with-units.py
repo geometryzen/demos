@@ -5,9 +5,9 @@ from units import *
 from browser import window
 
 # Set up the standard unit vectors for Cartesian coordinates.
-e1 = VectorE3(1, 0, 0)
-e2 = VectorE3(0, 1, 0)
-e3 = VectorE3(0, 0, 1)
+#e1 = VectorE3(1, 0, 0)
+#e2 = VectorE3(0, 1, 0)
+#e3 = VectorE3(0, 0, 1)
 
 origin = VectorE3(0,0,0) * meter
 print "origin: %s" % origin
