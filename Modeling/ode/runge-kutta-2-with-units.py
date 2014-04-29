@@ -24,22 +24,11 @@ b = 1.0 / (2.0 * alpha)
 a = 1.0 - b
 
 def rungeKutta2(y, x, h, f):
-    print type(y[0])
-    print "x => %s" % x
-    print "y => %s" % y
-    print "h => %s" % h
-    print type(x)
-    print type(h)
-    print type(f(x,y)[0])
-    print "f(x,y) => %s" % f(x,y)
     # If we reverse the order here then the Measure gobbles the ndarray!
     k1 = f(x,y) * h
     xArg = x + alpha * h
     yArg = y + alpha * k1
     k2 = f(x + alpha * h, y + alpha * k1) * h
-    print "y => %s" % y
-    print "k1 => %s" % k1
-    print "k2 => %s" % k2
     return y + a * k1 + b * k2
 
 N = 100
