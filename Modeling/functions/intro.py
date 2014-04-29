@@ -22,8 +22,8 @@ extensions = np.linspace(ScalarE3(-1.0) * meter, ScalarE3(+1.0) * meter, N)
 energies = map(f, extensions)
 
 # Extract quantity from measure data so that it is suitable for JSXGraph.
-dataX = map(lambda x: x.quantity[0], extensions)
-dataY = map(lambda x: x.quantity[0], energies)
+dataX = map(lambda x: x.quantity[0].w, extensions)
+dataY = map(lambda x: x.quantity[0].w, energies)
 minX = min(dataX)
 maxX = max(dataX)
 minY = min(dataY)
