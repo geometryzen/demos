@@ -15,7 +15,7 @@ print
 print "Some derived units are..."
 show("electric charge", coulomb)
 show("force", newton)
-print "energy " +str(joule)
+show("energy", joule)
 print "power " +str(watt)
 print "electric potential " +str(volt)
 print "magnetic flux density " +str(tesla)
