@@ -9,8 +9,8 @@ show("time", second)
 show("electric current", ampere)
 show("thermodynamic temperature", kelvin)
 show("amount of substance", mole)
-
-print "luminous intensity " +str(candela)
+show("luminous intensity", candela)
+print
 print "electric charge " +str(coulomb)
 print "force " +str(newton)
 print "energy " +str(joule)
