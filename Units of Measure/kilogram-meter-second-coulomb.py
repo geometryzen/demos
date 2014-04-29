@@ -1,9 +1,9 @@
 from units import *
 
-print "mass " +str(kilogram.uom)
-print "length " +str(meter.uom)
-print "time " +str(second.uom)
-print "electric current " +str(ampere.uom)
+print "mass " +str(kilogram)
+print "length " +str(meter)
+print "time " +str(second)
+print "electric current " +str(ampere)
 print "thermodynamic temperature " +str(kelvin.uom)
 print "amount of substance " +str(mole.uom)
 print "luminous intensity " +str(candela.uom)
