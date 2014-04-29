@@ -17,3 +17,12 @@ try:
     print z * v
 except TypeError as e:
     print e
+try:
+    print x * z
+except TypeError as e:
+    print e
+
+try:
+    print z * x
+except TypeError as e:
+    print e
