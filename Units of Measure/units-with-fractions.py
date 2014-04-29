@@ -3,4 +3,4 @@ from units import *
 
 f = Fraction(1,2)
 
-print f * meter
+print f
