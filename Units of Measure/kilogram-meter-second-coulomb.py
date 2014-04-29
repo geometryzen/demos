@@ -5,6 +5,7 @@ def show(name, measure):
     
 show("mass", kilogram)
 show("length", meter)
+show("time", second)
 
 print "time " +str(second)
 print "electric current " +str(ampere)
