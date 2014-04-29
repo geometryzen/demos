@@ -6,5 +6,8 @@ v = VectorE2(12,13)
 
 print z
 print v
-print v * z
+try:
+    print v * z
+except TypeError as e:
+    print e
 print z * v
