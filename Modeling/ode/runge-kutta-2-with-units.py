@@ -40,7 +40,7 @@ def rungeKutta2(y, x, h, f):
     print "y => %s" % y
     print "k1 => %s" % k1
     print "k2 => %s" % k2
-    return 7#y + a * k1 + b * k2
+    return y + a * k1 + b * k2
 
 N = 5
 
