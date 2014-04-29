@@ -10,3 +10,5 @@ print "e2 => %s" % e2
 x = VectorE2(3,4) * meter
 
 print "x => %s" % x
+
+print e1 % x
