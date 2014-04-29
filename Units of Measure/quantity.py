@@ -1,8 +1,5 @@
-from units import *
+from cmath import *
+from e2ga import *
 
-print meter
-print type(meter)
-print type(meter.quantity)
-print type(meter.uom)
-
-print 123 * kilogram * meter / second ** 2
+z = complex(3,4)
+v = VectorE2(12,13)
