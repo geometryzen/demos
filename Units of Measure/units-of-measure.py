@@ -18,7 +18,7 @@ a = F / mass
 print "a => " + str(a)
 
 print kilogram * g
-print kilogram * g * second
+print (kilogram * g) * second
 
 k = 2 * newton / meter
 
