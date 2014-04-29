@@ -40,7 +40,7 @@ def rungeKutta2(y, x, h, f):
     print "y => %s" % y
     print "k1 => %s" % k1
     print "k2 => %s" % k2
-    return y#y + a * k1 + b * k2
+    return 7#y + a * k1 + b * k2
 
 N = 1000
 
@@ -78,7 +78,6 @@ print "g: %s" % g
 print "Running RK2"
 for j in range(N-1):
     y[j+1] = rungeKutta2(y[j], t[j], dt, SHO)
-exit()
 print "RK2 complete"
 
 # Extract the data that we need for driving the graph.
