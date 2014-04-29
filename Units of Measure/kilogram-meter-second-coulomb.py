@@ -1,7 +1,7 @@
 from units import *
 
 def show(name, measure):
-    print "%s %s" % (name, measure.uom)
+    print "The symbol for the SI unit of %s is %s" % (name, measure.uom)
     
 show("mass", kilogram)
 show("length", meter)
