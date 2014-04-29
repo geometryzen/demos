@@ -27,6 +27,7 @@ def rungeKutta2(y, x, h, f):
     print type(y[0])
     print "x => %s" % x
     print "y => %s" % y
+    print "h => %s" % h
     print type(x)
     print type(h)
     print type(f(x,y)[0])
