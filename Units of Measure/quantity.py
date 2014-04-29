@@ -5,4 +5,4 @@ print type(meter)
 print type(meter.quantity)
 print type(meter.uom)
 
-print 123L * meter
+print 123 * meter
