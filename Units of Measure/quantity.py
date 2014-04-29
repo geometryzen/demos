@@ -6,4 +6,5 @@ v = VectorE2(12,13)
 
 print z
 print v
+print v * z
 print z * v
