@@ -25,6 +25,7 @@ a = 1.0 - b
 
 def rungeKutta2(y, x, h, f):
     print type(y[0])
+    print y
     print type(x)
     print type(h)
     print type(f(x,y)[0])
