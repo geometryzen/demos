@@ -5,8 +5,8 @@ from browser import window
 from math import *
 
 # Spring Constant.
-k = ScalarE3(20.0) * newton / meter
-x0 = ScalarE3(0.5) * meter
+k = 20.0 * newton / meter
+x0 = 0.5 * meter
 
 # Compute the energy for a given extension.
 def f(x):
@@ -16,14 +16,14 @@ def f(x):
 N = 100
 
 # The domain is the extension values.
-extensions = np.linspace(ScalarE3(-1.0) * meter, ScalarE3(+1.0) * meter, N)
+extensions = np.linspace(-1.0 * meter, +1.0 * meter, N)
 
 # The range is the energy.
 energies = map(f, extensions)
 
 # Extract quantity from measure data so that it is suitable for JSXGraph.
-dataX = map(lambda x: x.quantity[0].w, extensions)
-dataY = map(lambda x: x.quantity[0].w, energies)
+dataX = map(lambda x: x.quantity, extensions)
+dataY = map(lambda x: x.quantity, energies)
 minX = min(dataX)
 maxX = max(dataX)
 minY = min(dataY)
