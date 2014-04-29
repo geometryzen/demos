@@ -17,4 +17,5 @@ print "x = %s" % x
 print "y = %s" % y
 
 print quadrance(z)
+print quadrance(z * meter)
 
