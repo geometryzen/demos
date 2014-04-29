@@ -13,6 +13,7 @@ print "x => %s" % x
 
 print e1 * x
 print e1 * x.quantity
+print e1 * x.uom
 print
 print e1 % x.quantity
 print e1 % x
