@@ -15,3 +15,5 @@ print "z = %s" % z
 print "x = %s" % x
 print "y = %s" % y
 
+print quadrance(z)
+
