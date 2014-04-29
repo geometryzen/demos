@@ -15,6 +15,6 @@ print e1 * x
 print e1 * x.quantity
 print e1 * x.uom
 print
-print e1 % x.quantity
 print e1 % x
-print e2 % x
+print e1 % x.quantity
+print e2 % x.uom
