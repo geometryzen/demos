@@ -76,9 +76,9 @@ print "g: %s" % g
 
 # Propagate forward in time.
 print "Running RK2"
-exit()
 for j in range(N-1):
     y[j+1] = rungeKutta2(y[j], t[j], dt, SHO)
+exit()
 print "RK2 complete"
 
 # Extract the data that we need for driving the graph.
