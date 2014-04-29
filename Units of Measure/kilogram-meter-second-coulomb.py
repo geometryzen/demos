@@ -14,7 +14,7 @@ show("luminous intensity", candela)
 print
 print "Some derived units are..."
 show("electric charge", coulomb)
-print "force " +str(newton)
+show("force", newton)
 print "energy " +str(joule)
 print "power " +str(watt)
 print "electric potential " +str(volt)
