@@ -50,7 +50,7 @@ y = numpy.zeros((N,2))
 # Initial position goes in slot 0. We start at the origin.
 y[0,0] = origin
 # Initial velocity goes in slot 1. We start from rest.
-y[0,1] = VectorE3(0, 0, 0) * meter / second
+y[0,1] = VectorE3(0.01, 0, 0) * meter / second
 print "y[0]: %s" % y[0]
 
 tau = 10.0 * second
