@@ -10,4 +10,5 @@ try:
     print v * z
 except TypeError as e:
     print e
+
 print z * v
