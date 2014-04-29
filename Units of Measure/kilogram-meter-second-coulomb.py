@@ -3,6 +3,7 @@ from units import *
 def show(name, measure):
     print "%s : '%s'" % (name, measure.uom)
     
+print "The seven base SI units are..."
 show("mass", kilogram)
 show("length", meter)
 show("time", second)
