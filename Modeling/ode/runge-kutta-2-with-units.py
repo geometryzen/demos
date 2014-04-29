@@ -34,12 +34,12 @@ def rungeKutta2(y, x, h, f):
     print "f(x,y) => %s" % f(x,y)
     # If we reverse the order here then the Measure gobbles the ndarray!
     k1 = f(x,y) * h
-    print "k1 => %s" % k1
     xArg = x + alpha * h
     yArg = y + alpha * k1
     k2 = f(x + alpha * h, y + alpha * k1) * h
-    print "k2 => %s" % k2
     print "y => %s" % y
+    print "k1 => %s" % k1
+    print "k2 => %s" % k2
     return 7#y + a * k1 + b * k2
 
 N = 1000
