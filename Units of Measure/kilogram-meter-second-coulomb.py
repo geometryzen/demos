@@ -4,6 +4,7 @@ def show(name, measure):
     print "%s %s" % (name, measure.uom)
     
 show("mass", kilogram)
+show("length", meter)
 
 print "mass " +str(kilogram)
 print "length " +str(meter)
