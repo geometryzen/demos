@@ -1,5 +1,6 @@
 from cmath import *
 from units import *
+from math import *
 
 u = complex(1,0)
 i = complex(0,1)
