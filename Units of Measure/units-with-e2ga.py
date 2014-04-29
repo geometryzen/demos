@@ -21,7 +21,4 @@ try:
 except TypeError as e:
     print e
     
-try:
-    print e1 * x
-except TypeError as e:
-    print e
+print "e1 * x => %s" % e1 * x
