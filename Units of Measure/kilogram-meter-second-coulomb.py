@@ -1,7 +1,7 @@
 from units import *
 
 def show(name, unit):
-    print "%s %s" % (name, unit)
+    print "%s %s" % (name, unit.uom)
     
 show("mass", kilogram)
 
