@@ -1,5 +1,7 @@
 from units import *
 
+print 5 * joule
+
 kB = 1.38e-23 * joule / kelvin
 print kB
 
