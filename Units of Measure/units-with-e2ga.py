@@ -23,3 +23,5 @@ except TypeError as e:
     
 print "e1 * x => %s" % (e1 * x)
 print "x * e1 => %s" % (x * e1)
+print "e1 ^ x => %s" % (e1 ^ x)
+print "x ^ e1 => %s" % (x ^ e1)
