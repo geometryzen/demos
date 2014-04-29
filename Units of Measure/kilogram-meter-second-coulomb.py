@@ -1,5 +1,8 @@
 from units import *
 
+def show(name, unit):
+    print "mass " +str(kilogram)
+
 print "mass " +str(kilogram)
 print "length " +str(meter)
 print "time " +str(second)
