@@ -32,7 +32,7 @@ def rungeKutta2(y, x, h, f):
     print type(h)
     print type(f(x,y)[0])
     print "f(x,y) => %s" % f(x,y)
-    k1 = h * f(x,y)
+    k1 = f(x,y) * h
     print "k1 => %s" % k1
     xArg = x + alpha * h
     yArg = y + alpha * k1
