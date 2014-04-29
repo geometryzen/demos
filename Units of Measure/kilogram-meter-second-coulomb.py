@@ -16,7 +16,8 @@ print "Some derived units are..."
 show("electric charge", coulomb)
 show("force", newton)
 show("energy", joule)
-print "power " +str(watt)
+show("power", watt)
+# TODO: Use the formatting function.
 print "electric potential " +str(volt)
 print "magnetic flux density " +str(tesla)
 print "electric field strength " +str(volt/meter)
