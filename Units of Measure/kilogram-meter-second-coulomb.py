@@ -12,6 +12,7 @@ show("thermodynamic temperature", kelvin)
 show("amount of substance", mole)
 show("luminous intensity", candela)
 print
+print "Some derived units are..."
 print "electric charge " +str(coulomb)
 print "force " +str(newton)
 print "energy " +str(joule)
