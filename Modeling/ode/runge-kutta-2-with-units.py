@@ -26,7 +26,6 @@ a = 1.0 - b
 def rungeKutta2(y, x, h, f):
     # FIXME: If we reverse the order here then the Measure gobbles the ndarray!
     k1 = h * f(x,y)
-    print k1
     xArg = x + alpha * h
     yArg = y + alpha * k1
     # FIXME: If we reverse the order here then the Measure gobbles the ndarray!
