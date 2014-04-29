@@ -27,6 +27,7 @@ def rungeKutta2(y, x, h, f):
     print type(y[0])
     print type(x)
     print type(h)
+    print type(f(x,y))
     k1 = h * f(x,y)
     k2 = h * f(x + alpha * h, y + alpha * k1)
     return y + a * k1 + b * k2
