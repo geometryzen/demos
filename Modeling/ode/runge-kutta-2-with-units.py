@@ -39,7 +39,8 @@ def rungeKutta2(y, x, h, f):
     yArg = y + alpha * k1
     k2 = f(x + alpha * h, y + alpha * k1) * h
     print "k2 => %s" % k2
-    return y + a * k1 + b * k2
+    print "y => %s" % y
+    return 7#y + a * k1 + b * k2
 
 N = 1000
 
