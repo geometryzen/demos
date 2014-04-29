@@ -6,4 +6,4 @@ g = Fraction(3,2)
 
 print "f => %s" % (f)
 print "g => %s" % (g)
-print "f+g => %s" % (f+g)
+print "f*g => %s" % (f*g)
