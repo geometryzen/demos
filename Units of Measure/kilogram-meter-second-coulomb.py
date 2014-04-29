@@ -13,7 +13,7 @@ show("amount of substance", mole)
 show("luminous intensity", candela)
 print
 print "Some derived units are..."
-print "electric charge " +str(coulomb)
+show("electric charge", coulomb)
 print "force " +str(newton)
 print "energy " +str(joule)
 print "power " +str(watt)
