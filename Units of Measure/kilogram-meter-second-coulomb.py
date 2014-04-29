@@ -6,9 +6,8 @@ def show(name, measure):
 show("mass", kilogram)
 show("length", meter)
 show("time", second)
+show("electric current", ampere)
 
-print "time " +str(second)
-print "electric current " +str(ampere)
 print "thermodynamic temperature " +str(kelvin)
 print "amount of substance " +str(mole)
 print "luminous intensity " +str(candela)
