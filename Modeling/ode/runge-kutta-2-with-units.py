@@ -9,7 +9,7 @@ from browser import window
 #e2 = VectorE3(0, 1, 0)
 e3 = VectorE3(0, 0, 1)
 
-origin = VectorE3(0,0,0) * meter
+origin = VectorE3(0.01,0,0) * meter
 print "origin: %s" % origin
 
 # Simple Harmonic Motion
