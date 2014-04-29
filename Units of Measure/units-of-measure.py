@@ -23,6 +23,7 @@ print (kilogram * g) * second
 k = 2 * newton / meter
 
 print "k => " + repr(k)
+print "mass => " + repr(mass)
 
 omega = sqrt(k / mass)
 
