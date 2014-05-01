@@ -35,6 +35,7 @@ def move(unused1, unused2, unused3):
 
 canvas.on("mousemove", move)
 
+print type(canvas.node())
 workbench = Workbench2D(canvas.node())
 
 context = canvas.node().getContext("2d")
