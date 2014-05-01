@@ -17,4 +17,4 @@ A.foo = A
 B = board.create('point',[1,0])
 s = board.create('slider',[[-1,-2],[1,-2],[0,4,10]])
 print s.Value()
-E = board.create('ellipse',[[-1,0],[1,0],lambda : s.Value()])
+E = board.create('ellipse',[A,B,lambda : s.Value()])
