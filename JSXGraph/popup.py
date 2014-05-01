@@ -9,6 +9,8 @@ win.document.body.innerHTML = '<div id="box" class="jxgbox"></div>'
 
 div = win.document.getElementById("box")
 
+print type(div)
+
 div.style.width  = "400px"
 div.style.height = "400px"
 
