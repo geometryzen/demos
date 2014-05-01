@@ -21,4 +21,4 @@ msg.text = 'Bonjour'
     
 #msg.onend = onEndHandler
     
-#window.speechSynthesis.speak(msg)
+window.speechSynthesis.speak(msg)
