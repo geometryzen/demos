@@ -2,6 +2,8 @@ from browser import *
 from workbench import *
 import math
 
+x = window[1]
+
 print type(window)
 d3 = window.d3
 print type(d3)
