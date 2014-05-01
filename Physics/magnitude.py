@@ -6,6 +6,7 @@ e1 = VectorE3(3,0,0)
 print e1
 
 print quadrance(e1)
+print type(quadrance(e1))
 print magnitude(e1)
 print type(magnitude(e1))
 print abs(e1)
