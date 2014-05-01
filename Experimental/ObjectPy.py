@@ -5,6 +5,9 @@ print type(window)
 
 print type(window.document)
 print window.document
+window.document = window.document
+print type(window.document)
+print window.document
 
 window.foo = 7
 print window.foo
