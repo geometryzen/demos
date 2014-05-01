@@ -1,4 +1,4 @@
 from browser import window
 
-msg = window.SpeechSynthesisUtterance('Hello World')
+msg = window.SpeechSynthesisUtterance('Hello GeometryZen!')
 window.speechSynthesis.speak(msg)
