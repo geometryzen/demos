@@ -17,6 +17,7 @@ r = 200
 tau = math.pi * 2
 
 canvas = d3.select("body").append("canvas")
+print type(canvas)
 canvas.attr("width", width).attr("height", height)
 
 print type(canvas)
