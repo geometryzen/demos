@@ -16,7 +16,9 @@ msg.pitch = 2 # 0 to 2
 msg.text = 'Bonjour'
 #msg.lang = 'en-US'
 
-#msg.onend = function(e) {
-#  console.log('Finished in ' + event.elapsedTime + ' seconds.');
-#};
+def onEndHandler(event):
+    print 'Finished in ' + str(event.elapsedTime) + ' seconds.'
+    
+msg.onend = onEndHandler
+    
 window.speechSynthesis.speak(msg)
