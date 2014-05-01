@@ -19,6 +19,8 @@ tau = math.pi * 2
 canvas = d3.select("body").append("canvas")
 canvas.attr("width", width).attr("height", height)
 
+print type(canvas)
+
 d3.select("canvas").style("background-color", "#222")
 
 def move(unused1, unused2, unused3):
