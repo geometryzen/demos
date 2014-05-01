@@ -1,1 +1,1 @@
-# ObjectPy.py
+from browser import window
