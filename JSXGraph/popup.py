@@ -9,19 +9,15 @@ win.document.body.innerHTML = '<div id="box" class="jxgbox"></div>'
 
 div = win.document.getElementById("box")
 
-print type(win)
-print type(win.document)
-print type(div)
-
 div.style.width  = "400px"
 div.style.height = "400px"
 win.document = win.document
-print "?"
+
 board = graph.initBoard("box", {"document":win.document,"axis":True,"grid":True})
-print "??"
+
 A = board.create('point',[1,1],{"name": 'Alice'})
 B = board.create('point',[2,2],{"name":'Bob'})
-print "Are we here?" + str(A)
+
 f = board.create('functiongraph',[lambda x,unused: A.X() * sin(x)])
 
 def tick(time):
