@@ -12,6 +12,7 @@ div.style.height = "400px"
 board = graph.initBoard("box", {"axis":True,"grid":True})
 
 A = board.create('point',[-1,0])
+print type(A)
 B = board.create('point',[1,0])
 s = board.create('slider',[[-1,-2],[1,-2],[0,4,10]])
 print s.Value()
