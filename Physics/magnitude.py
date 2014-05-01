@@ -7,3 +7,4 @@ print e1
 
 print quadrance(e1)
 print magnitude(e1)
+print abs(e1)
