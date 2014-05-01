@@ -10,5 +10,6 @@ print type(quadrance(e1))
 print
 print magnitude(e1)
 print type(magnitude(e1))
+print
 print abs(e1)
 print type(abs(e1))
