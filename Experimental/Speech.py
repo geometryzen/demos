@@ -1,5 +1,7 @@
 from browser import window
 
+print dir(window)
+
 msg = window.SpeechSynthesisUtterance('Hello Geometry Zen!')
 window.speechSynthesis.speak(msg)
 
