@@ -13,7 +13,7 @@ board = graph.initBoard("box", {"axis":True,"grid":True})
 
 A = board.create('point',[-1,0])
 print type(A)
-A.foo(5)
+A.foo = 5
 B = board.create('point',[1,0])
 s = board.create('slider',[[-1,-2],[1,-2],[0,4,10]])
 print s.Value()
