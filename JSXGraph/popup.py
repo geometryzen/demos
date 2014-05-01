@@ -20,7 +20,7 @@ board = graph.initBoard("box", {"document":win.document,"axis":True,"grid":True}
 
 A = board.create('point',[1,1],{"name": 'Alice'})
 B = board.create('point',[2,2],{"name":'Bob'})
-
+print "Are we here?" + str(A)
 f = board.create('functiongraph',[lambda x,unused: A.X() * sin(x)])
 
 def tick(time):
