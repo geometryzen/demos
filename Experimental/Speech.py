@@ -8,12 +8,12 @@ for voice in window.speechSynthesis.getVoices():
     
 msg = window.SpeechSynthesisUtterance()
 voices = window.speechSynthesis.getVoices()
-msg.voice = voices[3]
+msg.voice = voices[4]
 msg.voiceURI = 'native'
 msg.volume = 1 # 0 to 1
 msg.rate = 1 # 0.1 to 10
 msg.pitch = 2 # 0 to 2
-msg.text = 'Ola'
+msg.text = 'Bonjour'
 #msg.lang = 'en-US'
 
 #msg.onend = function(e) {
