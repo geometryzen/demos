@@ -8,7 +8,7 @@ for voice in window.speechSynthesis.getVoices():
     
 msg = window.SpeechSynthesisUtterance()
 voices = window.speechSynthesis.getVoices()
-msg.voice = voices[0]
+msg.voice = voices[4]
 msg.voiceURI = 'native'
 msg.volume = 1 # 0 to 1
 msg.rate = 1 # 0.1 to 10
