@@ -47,7 +47,7 @@ ball = SphereBuilder().color("green").radius(0.4).build()
 ball.mass     = ScalarE3(1.0)
 ball.momentum = 1.0 * VectorE3(-0.15, -0.23, +0.27)
 scene.add(ball)
-
+print type(ball)
 side = side - thk * 0.5 - ball.geometry.radius
 dt = 0.3
 
@@ -65,8 +65,6 @@ def tick(t):
     ball.position += (ball.momentum / ball.mass) * dt
     # Use a scalar product to project the ball position.
     # Use a geometric vector sandwich to compute the reflection.
-    print type(abs(ball.position % e1))
-    print type(side)
     if abs(ball.position % e1) >= side:
         ball.momentum = - e1 * ball.momentum * e1
     if abs(ball.position % e2) >= side:
