@@ -7,3 +7,4 @@ print type(window.document)
 print window.document
 
 window.foo = 7
+print window.foo
