@@ -4,6 +4,7 @@ import math
 
 print type(window)
 d3 = window.d3
+print type(d3)
 
 #d3.select("body").style("background-color", "#222")
 
