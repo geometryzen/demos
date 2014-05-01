@@ -15,6 +15,7 @@ print type(div)
 
 div.style.width  = "400px"
 div.style.height = "400px"
+win.document = win.document
 print "?"
 board = graph.initBoard("box", {"document":win.document,"axis":True,"grid":True})
 print "??"
