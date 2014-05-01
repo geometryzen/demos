@@ -3,4 +3,4 @@ from browser import window
 msg = window.SpeechSynthesisUtterance('Hello Geometry Zen!')
 window.speechSynthesis.speak(msg)
 
-print window.speechSynthesis.getVoices()
+print map(window.speechSynthesis.getVoices(), lambda voice: (voice.name))
