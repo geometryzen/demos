@@ -64,7 +64,8 @@ def tick(t):
     elapsed = t
     ball.position += (ball.momentum / ball.mass) * dt
     # Use a scalar product to project the ball position.
-    # Use a geometric vector sandwich to compute the reflection. 
+    # Use a geometric vector sandwich to compute the reflection.
+    print type(side)
     if abs(ball.position % e1) >= side:
         ball.momentum = - e1 * ball.momentum * e1
     if abs(ball.position % e2) >= side:
