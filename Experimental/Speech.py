@@ -2,5 +2,5 @@ from browser import window
 
 Utterance = window.SpeechSynthesisUtterance
 
-msg = window.SpeechSynthesisUtterance('Hello World')
+msg = Utterance('Hello World')
 window.speechSynthesis.speak(msg);
