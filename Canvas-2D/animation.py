@@ -40,8 +40,10 @@ def tick(t):
 def terminate(t):
     return t > progressEnd
     
-def tearDown():
+def tearDown(e):
     workbench.tearDown()
+    if e:
+        print e
 
-war = WindowAnimationRunner(tick, terminate, setUp, tearDown)
+war = WindowAnimationRunner(tick, terminate, setUp, tearDown, window)
 war.start()
