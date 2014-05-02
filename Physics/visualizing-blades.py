@@ -147,6 +147,7 @@ def tearDown(e):
     buttonB.removeEventListener("click", onClickB)
     workbench3D.tearDown()
     workbench2D.tearDown()
-    print e
+    if e:
+        print e
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown, window).start()
