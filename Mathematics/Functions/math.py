@@ -16,3 +16,6 @@ print repr(log(100,2))
 print type(log(100,2))
 print
 print pow(2,24)
+print str(pow(2,24))
+print repr(pow(2,24))
+print type(pow(2,24))
