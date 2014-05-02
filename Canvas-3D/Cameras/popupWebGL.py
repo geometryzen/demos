@@ -96,8 +96,10 @@ def tick(t):
 def terminate(t):
     return t > progressEnd
 
-def tearDown():
+def tearDown(e):
     glwin.close()
     print "Goodbye!"
+    if e:
+        print e
 
-WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown, window).start()
