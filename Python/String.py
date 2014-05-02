@@ -1,1 +1,3 @@
-# String.py
+s = "Hello"
+
+print s.ljust
