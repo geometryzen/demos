@@ -40,4 +40,4 @@ def tearDown(e):
     workbench2D.tearDown()
     print e
 
-WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown, window).start()
