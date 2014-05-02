@@ -1,6 +1,7 @@
 from math import *
 
 print pi
+print str(pi)
 print type(pi)
 print "type(pi) => %" % (type(pi))
 
