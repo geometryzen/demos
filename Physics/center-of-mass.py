@@ -54,6 +54,9 @@ def tick(t):
     giant.momentum = giant.momentum + F * dt
     dwarf.momentum = dwarf.momentum - F * dt
     
+    print giant
+    print dwarf
+    
     for star in [giant, dwarf]:
         star.position = star.position + (star.momentum / star.mass) * dt
 
