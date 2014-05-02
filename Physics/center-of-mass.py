@@ -53,7 +53,7 @@ def tick(t):
     print r
     print r % r
     print pow(abs(r % r), 3/2)
-    F = giant.mass * dwarf.mass * r / pow(r % r, 3/2)
+    F = giant.mass * dwarf.mass * r / pow(abs(r % r), 3/2)
     print F
     giant.momentum = giant.momentum + F * dt
     dwarf.momentum = dwarf.momentum - F * dt
