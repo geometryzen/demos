@@ -102,4 +102,4 @@ def tearDown(e):
     if e:
         print e
 
-WindowAnimationRunner(tick, terminate, setUp, tearDown, window).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown, glwin).start()
