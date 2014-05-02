@@ -93,7 +93,8 @@ def tick(t):
 def terminate(t):
     return t > timeOut
 
-def tearDown():
+def tearDown(e):
     workbench3D.tearDown()
+    print e
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
