@@ -1,3 +1,3 @@
 s = "Hello"
 
-print "<" + s.ljust(7) + ">"
+print "<" + s.ljust(7,5) + ">"
