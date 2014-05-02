@@ -11,4 +11,8 @@ print repr(cos(pi))
 print type(cos(pi))
 
 print log(100,2)
+print str(log(100,2))
+print repr(log(100,2))
+print type(log(100,2))
+
 print pow(2,24)
