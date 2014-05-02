@@ -117,8 +117,9 @@ def tick(t):
 def terminate(t):
     return t > progressEnd
 
-def tearDown():
+def tearDown(e):
     discardCanvases()
     print "Goodbye!"
+    print e
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
