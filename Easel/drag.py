@@ -44,6 +44,7 @@ def terminate(t):
 def tearDown(e):
     dragger.removeEventListener("mousedown", onMouseDown)
     workbench2D.tearDown()
-    print e
+    if e:
+        print e
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
