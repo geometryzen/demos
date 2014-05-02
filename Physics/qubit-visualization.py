@@ -230,7 +230,7 @@ def setUp():
     document.addEventListener("mouseup",   onDocumentMouseUp, False)
     document.addEventListener("mouseout",  onDocumentMouseOut, False)
 
-def tearDown():
+def tearDown(e):
     document.removeEventListener("mousedown", onDocumentMouseDown, False)
     document.removeEventListener("mousemove", onDocumentMouseMove, False)
     document.removeEventListener("mouseup",   onDocumentMouseUp, False)
@@ -239,5 +239,6 @@ def tearDown():
     document.removeEventListener("keydown",   onDocumentKeyDown, False)
     workbench2D.tearDown()
     workbench.tearDown()
+    print e
 
-WindowAnimationRunner(render, terminate, setUp, tearDown).start()
+WindowAnimationRunner(render, terminate, setUp, tearDown, window).start()
