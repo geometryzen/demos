@@ -1,7 +1,7 @@
 from math import *
 
 print pi
-print "type(pi) => " % (type(pi))
+print "type(pi) => %" % (type(pi))
 
 
 print cos(pi)
