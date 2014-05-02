@@ -48,18 +48,11 @@ def setUp():
     workbench3D.setUp()
 
 def tick(t):
-    print t
     r = dwarf.position - giant.position
-    print r
-    print r % r
-    print pow(abs(r % r), 3/2)
     F = giant.mass * dwarf.mass * r / pow(abs(r % r), 3/2)
-    print F
-    giant.momentum = giant.momentum + F * dt
-    dwarf.momentum = dwarf.momentum - F * dt
-    
-    print giant
-    print dwarf
+    impulse = F * dt
+    giant.momentum = giant.momentum + impulse
+    dwarf.momentum = dwarf.momentum - impulse
     
     for star in [giant, dwarf]:
         star.position = star.position + (star.momentum / star.mass) * dt
