@@ -70,8 +70,9 @@ def setUp():
     workbench.setUp()
     document.addEventListener("mousemove", onDocumentMouseMove, False)
 
-def tearDown():
+def tearDown(e):
     document.removeEventListener("mousemove", onDocumentMouseMove, False)
     workbench.tearDown()
+    print e
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
