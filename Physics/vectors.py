@@ -47,8 +47,9 @@ def tick(t):
 def terminate(t):
     return t > timeOut
 
-def tearDown():
+def tearDown(e):
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench.tearDown()
+    print e
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
