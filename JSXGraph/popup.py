@@ -34,6 +34,7 @@ def setUp():
 def tearDown(e):
     win.close()
     print "The window was closed."
-    print e
+    if e:
+        print e
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown, win).start()
