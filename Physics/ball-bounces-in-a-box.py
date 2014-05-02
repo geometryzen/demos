@@ -67,13 +67,10 @@ def tick(t):
     # Use a scalar product to project the ball position.
     # Use a geometric vector sandwich to compute the reflection.
     if abs(ball.position % e1) >= side:
-        print "bounce X"
         ball.momentum = - e1 * ball.momentum * e1
     if abs(ball.position % e2) >= side:
-        print "bounce Y"
         ball.momentum = - e2 * ball.momentum * e2
     if abs(ball.position % e3) >= side:
-        print "bounce Z"
         ball.momentum = - e3 * ball.momentum * e3
     renderer.render(scene, camera)
 
