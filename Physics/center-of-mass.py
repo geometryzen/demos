@@ -48,6 +48,7 @@ def setUp():
     workbench3D.setUp()
 
 def tick(t):
+    print t
     r = dwarf.position - giant.position
     F = giant.mass * dwarf.mass * r / pow(r % r, 3/2)
     giant.momentum = giant.momentum + F * dt
