@@ -51,6 +51,7 @@ def tick(t):
     print t
     r = dwarf.position - giant.position
     print r
+    print r % r
     F = giant.mass * dwarf.mass * r / pow(r % r, 3/2)
     print F
     giant.momentum = giant.momentum + F * dt
