@@ -120,6 +120,7 @@ def terminate(t):
 def tearDown(e):
     discardCanvases()
     print "Goodbye!"
-    print e
+    if e:
+        print e
 
-WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown, window).start()
