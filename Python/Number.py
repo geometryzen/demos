@@ -1,1 +1,1 @@
-# Number.py
+print 7
