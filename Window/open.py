@@ -14,7 +14,7 @@ def terminate(time):
 
 def setUp():
     print "Hello!"
-    press "When you would like to terminate the animation, ..."
+    print "When you would like to terminate the animation, ..."
     print "Press Esc key with the popup window as focus."
 
 def tearDown(e):
