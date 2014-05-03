@@ -1,11 +1,10 @@
-from browser import window, WindowAnimationRunner
+from browser import *
 
-# We have to get the window here so that we can pass it to the WindowAnimationRunner
+# We have to get the window here so that we can pass it to the WindowAnimationRunner.
 w = window.open("", "", "height=400, width=600")
 
 def tick(time):
     w.document.body.innerHTML = '<h1>' + str(time) + '</h1>'
-    pass
 
 def terminate(time):
     # Keep on going...
