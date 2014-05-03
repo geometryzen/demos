@@ -5,6 +5,7 @@ from browser import *
 w = window.open("", "", "height=400, width=600")
 
 def tick(time):
+    w.title = "???"
     w.document.body.innerHTML = '<h1>' + str(time) + '</h1>'
 
 def terminate(time):
