@@ -8,16 +8,16 @@ def tick(time):
     pass
 
 def terminate(time):
+    # Keep on going...
     return False
 
 def setUp():
-    print "Press Esc key with this window as focus to termintate the animation."
-    global w
-
-    # w.document.write("<h1>Hello</h1>")
+    print "Press Esc key with the popup window as focus to termintate the animation."
 
 def tearDown(e):
     w.close()
-    print e
+    # If an exception is thrown it will be reported here.
+    if e:
+        print e
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown, w).start()
