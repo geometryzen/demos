@@ -39,10 +39,9 @@ for x in v:
 
     for y in v:
         print "     Op 2 ::: ",type(y),y
-'''
+
         for z in o:
             try:
                 oper(x, y, z)
             except:
                 print "Can't ",type(x),z,type(y)
-'''
