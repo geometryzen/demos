@@ -9,7 +9,7 @@ def tick(time):
     w.document.body.innerHTML = '<h1>' + str(time) + '</h1>'
 
 def terminate(time):
-    # Keep on going...
+    # Keep on going (don't terminate).
     return False
 
 def setUp():
