@@ -1,3 +1,4 @@
+# browser gives access to the window object and the WindowAnimationRunner.
 from browser import *
 
 # We have to get the window here so that we can pass it to the WindowAnimationRunner.
