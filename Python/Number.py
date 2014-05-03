@@ -1,7 +1,7 @@
 import sys
 print "Big number test"
 
-v=[1]
+v=[1,1.0]
 '''
    ,1.0
    ,1L
