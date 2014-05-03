@@ -1,34 +1,45 @@
-print float(), type(float(0))
+print "Big number test"
 
-# integers
-print float(1), type(float(1))
-print float(3/2), type(float(3/2))
-print float(123456789L), type(float(123456789L))
+v=[1,1.0,1L,-1,-1.0,-1L,2,2.0,2L,-2,-2.0,-2L,1e9,-1e9,1e-9,-1e-9,123456789L,12345678901234567890123456789L]
+#v=[2,2.0,2L,-2,-2.0,-2L,123456789L,12345678901234567890123456789L]
+o=['+','-','*','/','**','%','<','=','>','<=','!=','>=']
 
-# floating point
-print float(1.234)
-print float(3/2.0)
+def oper(v1, v2, op):
+    if (op == '+'):
+        print "              ",v1,op,v2,"=",v1+v2,type(v1+v2)
+    elif (op == '-'):
+        print "              ",v1,op,v2,"=",v1-v2,type(v1-v2)
+    elif (op == '*'):
+        print "              ",v1,op,v2,"=",v1*v2,type(v1*v2)
+    elif (op == '/'):
+        print "              ",v1,op,v2,"=",v1/v2,type(v1/v2)
+    elif (op == '**'):
+        if v2 >  100000000:
+            print 'skipping pow of really big number'
+            return
+        print "              ",v1,op,v2,"=",v1**v2,type(v1**v2)
+    elif (op == '%'):
+        print "              ",v1,op,v2,"=",v1%v2,type(v1%v2)
+    elif (op == '<'):
+        print "              ",v1,op,v2,"=",v1<v2,type(v1<v2)
+    elif (op == '='):
+        print "              ",v1,op,v2,"=",v1==v2,type(v1==v2)
+    elif (op == '>'):
+        print "              ",v1,op,v2,"=",v1>v2,type(v1>v2)
+    elif (op == '<='):
+        print "              ",v1,op,v2,"=",v1<=v2,type(v1<=v2)
+    elif (op == '!='):
+        print "              ",v1,op,v2,"=",v1!=v2,type(v1!=v2)
+    elif (op == '>='):
+        print "              ",v1,op,v2,"=",v1>=v2,type(v1>=v2)
 
-# strings
-print float("12.3")
-print float("  0.5 ")
-print float("0."+"123456789"*3)
-print float("123456789"*3)
+for x in v:
+    print "Op 1 ::: ",type(x),x
 
-# nan and inf
-print float('nan')
-print float('-nan')
-print float('NAN')
-print float('-NAN')
-print float('+nAn')
-print float('inf')
-print float('-inf')
-print float('INF')
-print float('-INF')
-print float('+inF')
-
-try:
-    print float("734L")
-    print "You shouldn't see this."
-except ValueError:
-    print float("734")
+    for y in v:
+        print "     Op 2 ::: ",type(y),y
+        for z in o:
+            try:
+                oper(x, y, z)
+            except:
+                print "Can't ",type(x),z,type(y)
