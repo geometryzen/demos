@@ -2,4 +2,5 @@ import sys
 
 sys.debug()
 
-x = (1 = 1)
+if 1 == 1:
+    print "OK"
