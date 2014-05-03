@@ -20,7 +20,7 @@ def setUp():
 def tearDown(e):
     w.close()
     print "Goodbye!"
-    # If an exception is thrown it will be reported here.
+    # If an exception is thrown it will be reported here, otherwise None.
     if e:
         print e
 
