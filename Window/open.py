@@ -15,6 +15,7 @@ def setUp():
 
 def tearDown(e):
     w.close()
+    print "Goodbye!"
     # If an exception is thrown it will be reported here.
     if e:
         print e
