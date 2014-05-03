@@ -36,9 +36,10 @@ def oper(v1, v2, op):
 
 for x in v:
     print "Op 1 ::: ",type(x),x
-'''
+
     for y in v:
         print "     Op 2 ::: ",type(y),y
+'''
         for z in o:
             try:
                 oper(x, y, z)
