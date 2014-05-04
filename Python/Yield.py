@@ -9,5 +9,5 @@ class GeneratorClass:
 gen = GeneratorClass()
 
 sys.debug()
-for g in gen.generator(3):
+for g in gen.generator():
     print g
