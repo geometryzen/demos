@@ -1,4 +1,3 @@
-print int
-print float
-print int(3.0)
+import sys
+sys.debug()
 print float(3)
