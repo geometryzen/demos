@@ -4,6 +4,7 @@ class GeneratorClass:
         print type(self)
         pass
     def generator(self):
+        print type(self)
         for i in range(10):
             yield i
 
