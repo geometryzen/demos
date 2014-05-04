@@ -1,3 +1,4 @@
+import sys
 class GeneratorClass:
     def __init__(self):
         pass
@@ -7,5 +8,6 @@ class GeneratorClass:
 
 gen = GeneratorClass()
 
+sys.debug()
 for g in gen.generator(3):
     print g
