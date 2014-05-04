@@ -11,5 +11,5 @@ class GeneratorClass:
 gen = GeneratorClass()
 
 sys.debug()
-for g in gen.generator(23):
+for g in gen.generator("Hello"):
     print g
