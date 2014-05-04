@@ -1,3 +1,4 @@
+import sys
 def domul(a,b):
     return a*b
 print domul(10, 123456789876543)
