@@ -4,7 +4,7 @@ class GeneratorClass:
         print type(self)
         pass
     def generator(self):
-        print str(type(self)) + self
+        print str(type(self)) + " " + self
         for i in range(10):
             yield i
 
