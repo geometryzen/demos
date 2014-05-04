@@ -1,7 +1,3 @@
-import sys
-sys.debug()
-print 876543234567 * 123456789876543
-
 def domul(a,b):
     return a*b
 print domul(10, 123456789876543)
