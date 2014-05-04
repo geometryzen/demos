@@ -7,5 +7,5 @@ class GeneratorClass:
 
 gen = GeneratorClass()
 
-for g in gen.generator():
+for g in gen.generator(3):
     print g
