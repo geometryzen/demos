@@ -19,7 +19,7 @@ r = 0.5 * meter * e3
 
 show("moment arm, r", r)
 
-# As a vector, the torque is given by
+# As a vector, the torque is given by (using Geometric Algebra)
 N = - e1 * e2 * e3 * (r ^ F)
 
 show("torque, N = r x F", N)
