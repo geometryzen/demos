@@ -22,7 +22,7 @@ show("moment arm, r", r)
 # As a vector, the torque is given by
 N = - e1 * e2 * e3 * (r ^ F)
 
-show("torque, N", N)
+show("torque, N=r x F", N)
 
 # Moment of inertia for a rod of 300 grams, 1 meter long
 I = (300 * gram) * (meter ** 2) / 12
