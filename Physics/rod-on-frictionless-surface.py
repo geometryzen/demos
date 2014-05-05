@@ -27,4 +27,4 @@ print I
 
 alpha = N/I
 
-print alpha
+print sow(alpha, "alpha")
