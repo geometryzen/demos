@@ -3,6 +3,7 @@ from units import *
 
 def show(name, measure):
 #    print "%s => %s" % (name, measure)
+    pass
 
 e1 = VectorE3(1,0,0) # Imagine pointing to the right
 e2 = VectorE3(0,1,0) # Imaging going into the screen
