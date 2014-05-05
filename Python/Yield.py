@@ -10,7 +10,7 @@ class GeneratorClass:
 
 gen = GeneratorClass()
 
-quit(7)
+quit(gen)
 
 sys.debug()
 for g in gen.generator("Hello"):
