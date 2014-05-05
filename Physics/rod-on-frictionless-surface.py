@@ -11,6 +11,8 @@ e3 = VectorE3(0,0,1) # Imaging pointing upwards
 # Force is 6 N to the right
 F = 6 * newton * e1
 
+print show("force, F", F)
+
 # Moment arm is 0.5 m upwards
 r = 0.5 * meter * e3
 
