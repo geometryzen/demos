@@ -21,10 +21,10 @@ show("moment arm, r", r)
 
 # As a vector, the torque is given by
 N = - e1 * e2 * e3 * (r ^ F)
-# FIXME: We've lost the cross product on Euclidean3 because we have now got a measure.
 N = r.cross(F)
 
 show("torque, N = r x F", N)
+show("torque, N = r x F", r.cross(F))
 
 # Moment of inertia for a rod of 300 grams, 1 meter long
 I = (300 * gram) * (meter ** 2) / 12
