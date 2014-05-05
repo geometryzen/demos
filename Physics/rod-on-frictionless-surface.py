@@ -1,6 +1,9 @@
 from e3ga import *
 from units import *
 
+def show(measure, name):
+    print "%s => %s" % (measure, name)
+
 e1 = VectorE3(1,0,0) # Imagine pointing to the right
 e2 = VectorE3(0,1,0) # Imaging going into the screen
 e3 = VectorE3(0,0,1) # Imaging pointing upwards
