@@ -11,7 +11,7 @@ F = 6 * newton * e1
 # Moment arm is 0.5 m upwards
 r = 0.5 * meter * e3
 
-# As a bivector, the torque is given by
+# As a vector, the torque is given by
 N = (r ^ F) * e1 * e2 * e3
 
 print N
