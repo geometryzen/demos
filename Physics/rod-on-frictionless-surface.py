@@ -11,9 +11,15 @@ F = 6 * newton * e1
 # Moment arm is 0.5 m upwards
 r = 0.5 * meter * e2
 
+# As a bivector, the torque is given by
 N = r ^ F
 
 print N
+
+# Moment of inertia for a rod of 300 grams, 1 meter long
+I = (300 * gram)
+
+print I
 
 
 alpha = (0.5 * meter) * (6 * newton) / ((0.3 * kilogram * meter ** 2)/12)
