@@ -13,6 +13,8 @@ r = 0.5 * meter * e2
 
 N = r ^ F
 
+print N
+
 
 alpha = (0.5 * meter) * (6 * newton) / ((0.3 * kilogram * meter ** 2)/12)
 
