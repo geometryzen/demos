@@ -12,7 +12,7 @@ F = 6 * newton * e1
 r = 0.5 * meter * e3
 
 # As a vector, the torque is given by
-N = - (r ^ F) * e1 * e2 * e3
+N = - e1 * e2 * e3 * (r ^ F)
 
 print N
 
