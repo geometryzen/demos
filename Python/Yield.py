@@ -10,8 +10,8 @@ class GeneratorClass:
 
 gen = GeneratorClass()
 
-quit(gen)
+#quit(gen)
 
 sys.debug()
 for g in gen.generator("Hello"):
-    print g
+    print float(g)
