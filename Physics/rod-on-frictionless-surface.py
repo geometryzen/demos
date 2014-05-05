@@ -27,7 +27,7 @@ print show("torque, N", N)
 # Moment of inertia for a rod of 300 grams, 1 meter long
 I = (300 * gram) * (meter ** 2) / 12
 
-print show("moment of inertia, I",I)
+print show("moment of inertia, I", I)
 
 
 alpha = N/I
