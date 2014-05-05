@@ -21,8 +21,8 @@ show("moment arm, r", r)
 
 # As a vector, the torque is given by
 N = - e1 * e2 * e3 * (r ^ F)
-# TODO: We've lost the cross product on Euclidean3 because we have now got a measure.
-N = r.cross(F)
+# FIXME: We've lost the cross product on Euclidean3 because we have now got a measure.
+# N = r.cross(F)
 
 show("torque, N = r x F", N)
 
