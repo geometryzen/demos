@@ -29,4 +29,4 @@ print show("moment of inertia, I",I)
 
 alpha = N/I
 
-print show("alpha", alpha)
+print show("angular acceleration, alpha", alpha)
