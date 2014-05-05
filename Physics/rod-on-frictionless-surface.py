@@ -1,6 +1,6 @@
 from e3ga import *
 from units import *
-from sys import *
+import sys
 
 def show(name, measure):
     sys.debug()
