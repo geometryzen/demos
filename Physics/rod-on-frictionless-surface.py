@@ -3,9 +3,7 @@ from units import *
 import sys
 
 def show(name, measure):
-    sys.debug()
-#    print "%s => %s" % (name, measure)
-    pass
+    print "%s => %s" % (name, measure)
 
 e1 = VectorE3(1,0,0) # Imagine pointing to the right
 e2 = VectorE3(0,1,0) # Imaging going into the screen
@@ -14,24 +12,24 @@ e3 = VectorE3(0,0,1) # Imaging pointing upwards
 # Force is 6 N to the right
 F = 6 * newton * e1
 
-print show("force, F", F)
+show("force, F", F)
 
 # Moment arm is 0.5 m upwards
 r = 0.5 * meter * e3
 
-print show("moment arm, r", r)
+show("moment arm, r", r)
 
 # As a vector, the torque is given by
 N = - e1 * e2 * e3 * (r ^ F)
 
-print show("torque, N", N)
+show("torque, N", N)
 
 # Moment of inertia for a rod of 300 grams, 1 meter long
 I = (300 * gram) * (meter ** 2) / 12
 
-print show("moment of inertia, I", I)
+show("moment of inertia, I", I)
 
 
 alpha = N/I
 
-print show("angular acceleration, alpha", alpha)
+show("angular acceleration, alpha", alpha)
