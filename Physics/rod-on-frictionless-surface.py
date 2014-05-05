@@ -34,5 +34,3 @@ show("moment of inertia, I = M * (L ** 2)/12", I)
 alpha = N / I
 
 show("angular acceleration, alpha = N / I", alpha)
-
-print e1 * e2 * e3
