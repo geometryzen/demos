@@ -14,6 +14,8 @@ F = 6 * newton * e1
 # Moment arm is 0.5 m upwards
 r = 0.5 * meter * e3
 
+print show("moment arm, r", r)
+
 # As a vector, the torque is given by
 N = - e1 * e2 * e3 * (r ^ F)
 
