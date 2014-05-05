@@ -12,7 +12,7 @@ F = 6 * newton * e1
 r = 0.5 * meter * e2
 
 # As a bivector, the torque is given by
-N = r ^ F
+N = (r ^ F) * e1 * e2 * e3
 
 print N
 
