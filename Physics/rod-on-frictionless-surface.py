@@ -1,7 +1,7 @@
 from e3ga import *
 from units import *
 
-def show(measure, name):
+def show(name, measure):
     print "%s => %s" % (name, measure)
 
 e1 = VectorE3(1,0,0) # Imagine pointing to the right
@@ -22,9 +22,9 @@ print N
 # Moment of inertia for a rod of 300 grams, 1 meter long
 I = (300 * gram) * (meter ** 2) / 12
 
-print I
+print showI
 
 
 alpha = N/I
 
-print show(alpha, "alpha")
+print show("alpha", alpha)
