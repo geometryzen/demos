@@ -38,4 +38,4 @@ show("angular acceleration, alpha = N / I", alpha)
 
 print e3.cross(e1)
 print r.cross(e1)
-print e1.cross(7)
+print e1.cross(ScalarE3(7))
