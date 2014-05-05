@@ -22,7 +22,7 @@ show("moment arm, r", r)
 # As a vector, the torque is given by (using Geometric Algebra)
 N = - e1 * e2 * e3 * (r ^ F)
 
-show("torque, N = r x F", N)
+show("torque, N = - I (r ^ F)", N)
 show("torque, N = r x F", r.cross(F))
 
 # Moment of inertia for a rod of 300 grams, 1 meter long
