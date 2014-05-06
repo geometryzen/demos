@@ -2,7 +2,7 @@ from e3ga import *
 from units import *
 
 def show(name, thing):
-    print "%s => $s" % (name, thing)
+    print "%s => %s" % (name, thing)
 
 e1 = VectorE3(1,0,0)
 e2 = VectorE3(0,1,0)
