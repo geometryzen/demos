@@ -1,5 +1,4 @@
 # Demonstration of using THREE through the JavaScript wrapping mechanism.
-# It almost works! Just need to fix the missing lines.
 from browser import *
 from math import cos, sin, floor
 from random import random
