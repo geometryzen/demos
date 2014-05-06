@@ -80,7 +80,7 @@ def terminate(t):
 
 def tearDown(e):
     workbench3D.tearDown()
-    print frames / elapsed
+    print "frames per second: %d" % (frames / elapsed)
     if e:
         print e
 
