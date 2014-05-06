@@ -16,3 +16,8 @@ omegaAxial = 5 * e3 / second
 print omegaAxial
 
 show("omega (axial)", omegaAxial)
+
+# If we treat it as a bivector we would have
+omega = I_3 * omegaAxial
+
+show("omega", omega)
