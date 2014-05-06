@@ -6,12 +6,6 @@ Math = window.Math
 graph = window.JXG.JSXGraph
 JXG = window.JXG
 
-document.getElementById("graph-container").innerHTML = '<div id="box" class="jxgbox"></div>'
-div = document.getElementById("box")
-
-div.style.width  = "400px"
-div.style.height = "400px"
-
 board = graph.initBoard("box", 
                         {"boundingbox":[-100,100,100,-100],
                          "showCopyright":False,
