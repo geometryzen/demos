@@ -23,3 +23,5 @@ omega = I_3 * omegaAxial
 show("omega", omega)
 
 show("e1 << omega", e1 << omega)
+show("e2 << omega", e2 << omega)
+show("e3 << omega", e3 << omega)
