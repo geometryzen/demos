@@ -4,7 +4,7 @@ from random import random
 
 THREE = window.THREE
 
-glwin = window.open("","","width=800,height=600")
+glwin = window.open("","","width=1200,height=800")
 
 # Global variables
 camera = THREE.OrthographicCamera(-1.0, 1.0, 1.0, -1.0, -500.0, 1000.0)
