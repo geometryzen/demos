@@ -7,4 +7,6 @@ e3 = VectorE3(0,0,1)
 
 # Conventionally, we think of the angular velocity as a vector.
 # Would be nice to have radians in units here!
-omegaConv = 5 * e3 / second
+omegaConventional = 5 * e3 / second
+
+print omegaConventional
