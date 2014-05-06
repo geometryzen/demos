@@ -59,7 +59,7 @@ def attitude(v):
     a = VectorE3(0.0, 0.0, 1.0)
     b = VectorE3(v.x, v.y, 0.0) / sqrt(v.quadrance())
     numer = 1 + b * a
-    denom = ScalarE3(sqrt(2 + (a % b)))
+    denom = sqrt(2 + (a % b))
     R = numer / denom
     return R
 
