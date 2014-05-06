@@ -60,7 +60,6 @@ def setUp():
     workbench3D.setUp()
 
 def tick(t):
-    print t
     global frames, elapsed
     frames += 1.0
     elapsed = t
