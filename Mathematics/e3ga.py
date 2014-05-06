@@ -72,3 +72,9 @@ for a in blades:
     for b in blades:
         showValue(str(a) + " >> " + str(b), a >> b)
     print ""
+print "Cross Product Table >>"
+print "=================================="
+for a in blades:
+    for b in blades:
+        showValue(str(a) + ".cross(" + str(b) + ")", a.cross(b))
+    print ""
