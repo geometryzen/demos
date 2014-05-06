@@ -77,8 +77,10 @@ def tick(t):
 def terminate(t):
     return t > timeout
 
-def tearDown():
+def tearDown(e):
     workbench3D.tearDown()
-    # print frames / elapsed
+    print frames / elapsed
+    if e:
+        print e
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
