@@ -22,6 +22,7 @@ omega = I_3 * omegaAxial
 
 show("omega", omega)
 
+# The rate of change of a vector is the left contraction of the vector with omega
 show("e1 << omega", e1 << omega)
 show("e2 << omega", e2 << omega)
 show("e3 << omega", e3 << omega)
