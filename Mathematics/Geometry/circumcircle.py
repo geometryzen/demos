@@ -21,13 +21,13 @@ def circumcircle(p1, p2, p3):
     print "a2: %s" % a2
     print "a3: %s" % a3
 
-    denom = 0.5 * magnitude((p1-p2).cross(p2-p3)) ** 2    
-    alpha = quadrance(p2-p3) * (p1-p2).dot(p1-p3) / denom
-    beta  = quadrance(p1-p3) * (p2-p1).dot(p1-p3) / denom
-    gamma = quadrance(p1-p2) * (p3-p1).dot(p3-p2) / denom
-    print "alpha: %s" % alpha
-    print "beta:  %s" % beta
-    print "gamma: %s" % gamma
+#    denom = 0.5 * magnitude((p1-p2).cross(p2-p3)) ** 2    
+#    alpha = quadrance(p2-p3) * (p1-p2).dot(p1-p3) / denom
+#    beta  = quadrance(p1-p3) * (p2-p1).dot(p1-p3) / denom
+#    gamma = quadrance(p1-p2) * (p3-p1).dot(p3-p2) / denom
+#    print "alpha: %s" % alpha
+#    print "beta:  %s" % beta
+#    print "gamma: %s" % gamma
     
     center = (a1 * p1 + a2 * p2 + a3 * p3) / d
 #   center = (alpha * p1 + beta * p2 + gamma * p3) / d
