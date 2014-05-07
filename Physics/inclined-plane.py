@@ -50,6 +50,7 @@ def acceleration(theta, mu):
 a = acceleration(theta, mu)
 
 print "a << down = %s (down the plane)"      % (a << eDown)
+print "a << norm = %s (normal to the plane)" % (a << eNorm)
 
 aDown = a << eDown
 aNorm = a << eNorm
