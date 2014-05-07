@@ -5,6 +5,7 @@ If the coefficient of friction is 0.3, find the acceleration of the block.
 # We'll be using some trigonometry to handle the angles.
 from math import *
 from e3ga import *
+# We'll use units throughout and let the software do the manipulations.
 from units import *
 
 # Define standard orthogonal unit vectors and their meanings.
