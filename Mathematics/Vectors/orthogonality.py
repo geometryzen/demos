@@ -22,7 +22,7 @@ print "C.dot(A) = %s" % C.dot(A)
 print "C.dot(B) = %s" % C.dot(B)
 print "C.dot(C) = %s" % C.dot(C)
 print
-print "The contraction is the same as the dot product for vectors."
+print "The contraction is the same as the dot product (for vectors)."
 print
 print "C >> A = %s" % (C >> A)
 print "C >> B = %s" % (C >> B)
