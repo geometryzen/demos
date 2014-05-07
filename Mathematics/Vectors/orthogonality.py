@@ -9,3 +9,5 @@ B = VectorE3(-1,1,4)
 
 print A
 print B
+
+C = A.cross(B)
