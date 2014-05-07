@@ -18,6 +18,10 @@ print "k => %s" % (k)
 theta = (30 / 180) * pi
 mu = 0.3
 
+# acceleration due to gravity
+g = - 9.8 * j * meter / (second ** 2)
+print "g => %s" % (g)
+
 def acceleration(theta, mu):
     m = 23 * kilogram
     W = m * g
