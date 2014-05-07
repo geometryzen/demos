@@ -1,6 +1,16 @@
 from e2ga import *
 
 def circumcircle(p1, p2, p3):
+    x1 = p2 - p1
+    x2 = p3 - p2
+    x3 = p1 - p3
+    
+    x11 = x1.dot(x1)
+    x12 = x1.dot(x2)
+    x13 = x1.dot(x3)
+    x22 = x2.dot(x2)
+    x23 = x2.dot(x3)
+    x33 = x3.dot(x3)
     pass
 
 p1 = VectorE2(+1, 0)
