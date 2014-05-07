@@ -15,4 +15,5 @@ C = A.cross(B)
 print "A = %s" % A
 print "B = %s" % B
 
-print "C = A x B = %s" % C
+print "C.dot(A) = %s" % C.dot(A)
+
