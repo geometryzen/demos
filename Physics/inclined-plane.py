@@ -48,4 +48,4 @@ def acceleration(theta, mu):
     
 a = acceleration(theta, mu).dot(eDown)
 
-print a
+print "a = %s" % (a)
