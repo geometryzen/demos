@@ -24,9 +24,10 @@ def circumcircle(p1, p2, p3):
     denom = quadrance((p1-p2).cross(p2-p3))    
     alpha = quadrance(p2-p3) * (p1-p2).dot(p1-p3) / denom
     beta  = quadrance(p1-p3) * (p2-p1).dot(p1-p3) / denom
+    gamma = quadrance(p1-p2) * (p3-p1).dot(p3-p2) / denom
     print "alpha: %s" % alpha
     print "beta:  %s" % beta
-    
+    print "gamma: %s" % gamma
     
     center = (a1 * p1 + a2 * p3 + a3 * p3) / d
     radius = magnitude(p3 - center)
