@@ -30,9 +30,10 @@ g = - 9.8 * j * meter / (second ** 2)
 
 def acceleration(theta, mu):
     # Analytically, the result in this case is independent of the mass.
-    # We could refactor to use (say lowercase quantities
+    # We're using lowercase quantities to show that mass has been divided out.
+    # Quantities which were forces are now accelerations.
     mass = 12345 * kilogram
-    W = mass * g
+    w = mass * g
 
     # The block does not rise above the plane nor sink into it.
     # The normal reaction plus the component of the weight normal to the plane must be zero.
