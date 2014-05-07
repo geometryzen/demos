@@ -15,7 +15,7 @@ k = i.cross(j)      # Must be out of page for a right-handed set.
 print "k => %s" % (k)
 
 # The given parameters
-theta = (30 / 180) * pi
+theta = (30.0 / 180.0) * pi
 mu = 0.3
 
 # acceleration due to gravity
