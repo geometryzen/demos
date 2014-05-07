@@ -5,7 +5,7 @@ p1 = VectorE3( 1.0, 0.0, 0)
 p2 = VectorE3( 2.0, 1.0, 0)
 p3 = VectorE3( 1.0, 2.0, 0)
 
-def circumcircle(p1, p2, p3):
+def circle(p1, p2, p3):
     x1 = p2 - p1
     x2 = p3 - p2
     x3 = p1 - p3
@@ -27,7 +27,7 @@ def circumcircle(p1, p2, p3):
     radius = magnitude(p3 - center)
     return (center, radius)
 
-cc = circumcircle(p1,p2,p3);
+c = circle(p1,p2,p3);
 
-print "center: %s" % cc[0]
-print "radius: %s" % cc[1]
+print "center: %s" % c[0]
+print "radius: %s" % c[1]
