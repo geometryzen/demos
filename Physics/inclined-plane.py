@@ -42,8 +42,10 @@ def acceleration(theta, mu):
     
     return F / mass
     
-    
 a = acceleration(theta, mu)
+
+print "a = %s" % (a)
+
 aDown = a << eDown
 aNorm = a << eNorm
 
