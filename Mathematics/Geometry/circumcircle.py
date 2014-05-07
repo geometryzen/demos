@@ -26,4 +26,6 @@ p1 = VectorE2(+1.0, 0.0)
 p2 = VectorE2( 0.0,+1.0)
 p3 = VectorE2(-1.0, 0.0)
 
-print circumcircle(p1,p2,p3);
+cc = circumcircle(p1,p2,p3);
+
+print "center: %s, radius: %s" % cc
