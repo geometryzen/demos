@@ -23,6 +23,7 @@ g = - 9.8 * j * meter / (second ** 2)
 print "g => %s" % (g)
 
 def acceleration(theta, mu):
+    print theta
     print cos(theta)
     eUp = cos(theta) * i + sin(theta) * j
     print "eUp => %s" % (eUp)
