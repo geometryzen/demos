@@ -1,5 +1,5 @@
 from e2ga import *
-prom math import *
+from math import *
 
 def circumcircle(p1, p2, p3):
     x1 = p2 - p1
