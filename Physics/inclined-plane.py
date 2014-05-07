@@ -43,7 +43,7 @@ def acceleration(theta, mu):
     Friction = magnitude(mu * N) * eUp
 
     # Notice that I simply add the force due to friction because it has the correct direction.
-    F = W.dot(eDown) * eDown + Friction
+    F = (W << eDown) * eDown + Friction
     
     return F / mass
     
