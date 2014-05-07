@@ -45,9 +45,9 @@ def acceleration(theta, mu):
     
     
 a = acceleration(theta, mu)
+aDown = a << eDown
+print repr(aDown)
 
-print repr(a << eDown)
-
-print "a = %s (down the plane)" % (a << eDown)
+print "a = %s %s (down the plane)" % (aDown)
 print "a = %s (normal to the plane)" % (a << eNorm)
 print "a = %s (out of the page)" % (a << k)
