@@ -10,7 +10,7 @@ from e3ga import *
 from units import *
 
 # Define standard orthogonal unit vectors and their meanings.
-# Although the incline also provides a natural frame, I find ut easier
+# Although the incline also provides a natural frame, I find it easier
 # to think of gravity as being simply down in this situation.
 i = VectorE3(1,0,0) # To the right.
 j = VectorE3(0,1,0) # Up
