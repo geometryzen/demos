@@ -35,6 +35,9 @@ def circumcircle(p1, p2, p3):
     print "d1: %s" % magnitude(p1 - center)
     print "d2: %s" % magnitude(p2 - center)
     print "d3: %s" % magnitude(p3 - center)
+    print "p1: %s" % p1
+    print "p2: %s" % p2
+    print "p3: %s" % p3
     return {'center':center, 'radius':radius}
 
 
