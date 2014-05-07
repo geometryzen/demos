@@ -38,7 +38,7 @@ def acceleration(theta, mu):
     Friction = - magnitude(mu * N) * eDown
     print "Friction => %s" % (Friction/eDown)
 
-    F = W.dot(eDown) * eDown
+    F = W.dot(eDown) * eDown - Friction
     print "F => %s (down the incline)." % (F/eDown)
     
     
