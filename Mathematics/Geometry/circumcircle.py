@@ -34,3 +34,5 @@ radius = c[1]
 print "center: %s" % center
 print "radius: %s" % radius
 print "|p1-center|: %s" % magnitude(p1-center)
+print "|p2-center|: %s" % magnitude(p2-center)
+print "|p3-center|: %s" % magnitude(p3-center)
