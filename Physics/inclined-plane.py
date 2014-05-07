@@ -33,11 +33,9 @@ def acceleration(theta, mu):
     # The block does not rise above the plane nor sink into it.
     # The normal reaction plus the component of the weight normal to the plane must be zero.
     N = - W.dot(eNorm) * eNorm
-    print "N => %s (normal to the incline)" % (N / eNorm)
     # The frictional force acts in the opposite direction to the velocity.
     # We assume the velocity to be down the incline.
-    Friction = - magnitude(mu * N) * eDown
-    print "Friction => %s (down the incline)" % (Friction/eDown)
+    Friction = magnitude(mu * N) * eUp
 
     # Notice that I simply add the force due to friction because it has the correct direction.
     F = W.dot(eDown) * eDown + Friction
@@ -48,7 +46,7 @@ def acceleration(theta, mu):
     
 a = acceleration(theta, mu)
 
-print repr(a)
+print repr(a << eDown)
 
 print "a = %s (down the plane)" % (a << eDown)
 print "a = %s (normal to the plane)" % (a << eNorm)
