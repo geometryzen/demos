@@ -21,7 +21,7 @@ def circumcircle(p1, p2, p3):
     d = 2 * (x13 * x12 - x11 * x23)
     a1 = (x12*x13-x12*x23-x11*x23) / d
     a2 = -(x33 * (x12 - x11) - (x13 + x23) * x11) / d
-    a2 = - x33 * x13 / d
+    a2 = - x33 * x12 / d
     a3 = - x11 * x23 / d
     print "a1: %s" % a1
     print "a2: %s" % a2
