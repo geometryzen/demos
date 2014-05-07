@@ -12,7 +12,6 @@ from units import *
 i = VectorE3(1,0,0) # To the right.
 j = VectorE3(0,1,0) # Up
 k = i.cross(j)      # Must be out of page for a right-handed set.
-print "k => %s" % (k)
 
 # The given parameters
 theta = (30.0 / 180.0) * pi
