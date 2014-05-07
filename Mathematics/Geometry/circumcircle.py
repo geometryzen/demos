@@ -29,6 +29,7 @@ def circumcircle(p1, p2, p3):
     print "a3: %s" % a3
 
     denom = 2 * quadrance((p1-p2).cross(p2-p3))    
+    print "denom: %s" % denom
     alpha = quadrance(p2-p3) * (p1-p2).dot(p1-p3) / denom
     beta  = quadrance(p1-p3) * (p2-p1).dot(p2-p3) / denom
     gamma = quadrance(p1-p2) * (p3-p1).dot(p3-p2) / denom
