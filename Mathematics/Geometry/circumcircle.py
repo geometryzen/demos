@@ -35,7 +35,7 @@ def circumcircle(p1, p2, p3):
     print "d1: %s" % magnitude(p1 - center)
     print "d2: %s" % magnitude(p2 - center)
     print "d3: %s" % magnitude(p3 - center)
-    return (center, radius)
+    return {'center':center, 'radius':radius}
 
 
 p1 = VectorE3( 1.0, 0.0, 0.0)
