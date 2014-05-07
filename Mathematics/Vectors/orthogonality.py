@@ -8,3 +8,4 @@ A = VectorE3(2,3,0)
 B = VectorE3(-1,1,4)
 
 print A
+print B
