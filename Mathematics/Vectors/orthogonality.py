@@ -10,7 +10,7 @@ B = VectorE3(-1,1,4) * meter
 
 print "A = %s" % A
 print "B = %s" % B
-
+print
 C = A.cross(B)
 print "C = %s" % C
 
