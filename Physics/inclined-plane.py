@@ -51,4 +51,3 @@ print repr(aDown.quantity.w)
 
 print "a = %.2f %s (down the plane)"      % (aDown.quantity.w, aDown.uom)
 print "a = %.2f %s (normal to the plane)" % (aNorm.quantity.w, aNorm.uom)
-print "a = %s (out of the page)" % (a << k)
