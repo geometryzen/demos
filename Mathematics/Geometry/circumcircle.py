@@ -47,5 +47,5 @@ p3 = VectorE3( 1.0, 2.0, 0.0)
 
 cc = circumcircle(p1,p2,p3);
 
-print cc['center']
+print "center: %s" % cc['center']
 print cc['radius']
