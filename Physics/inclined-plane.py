@@ -35,7 +35,7 @@ def acceleration(theta, mu):
     print "N => %s" % (N / eNorm)
     # The frictional force acts in the opposite direction to the velocity.
     # We assume the velocity to be down the incline.
-    Friction = magnitude(mu * N) * eDown
+    Friction = - magnitude(mu * N) * eDown
     print "Friction => %s" % (Friction/eDown)
 
     F = W.dot(eDown) * eDown
