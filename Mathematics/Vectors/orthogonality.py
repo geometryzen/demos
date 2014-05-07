@@ -19,7 +19,7 @@ print "A = %s" % A
 print "B = %s" % B
 print
 print "C.dot(A) = %s" % C.dot(A)
-print repr(c.dot(A))
+print repr(C.dot(A))
 print "C.dot(B) = %s" % C.dot(B)
 print "C.dot(C) = %s" % C.dot(C)
 print
