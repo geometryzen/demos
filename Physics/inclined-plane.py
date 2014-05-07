@@ -28,7 +28,7 @@ g = - 9.8 * j * meter / (second ** 2)
 print "g => %s" % (g)
 
 def acceleration(theta, mu):
-    mass = 1 * kilogram
+    mass = 12345 * kilogram
     W = mass * g
     # The block does not rise above the plane nor sink into it.
     # The normal reaction plus the component of the weight normal to the plane must be zero.
@@ -39,6 +39,7 @@ def acceleration(theta, mu):
     Friction = - magnitude(mu * N) * eDown
     print "Friction => %s (down the incline)" % (Friction/eDown)
 
+    # Notice that I simply add the 
     F = W.dot(eDown) * eDown + Friction
     print "F => %s (down the incline)." % (F/eDown)
     
