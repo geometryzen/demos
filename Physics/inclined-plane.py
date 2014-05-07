@@ -34,7 +34,7 @@ def acceleration(theta, mu):
     W = mass * g
 
     # The block does not rise above the plane nor sink into it.
-    # The normal reaction plus the component of the weight normal to the plane must be zero.
+    # i.e., The normal reaction plus the component of the weight normal to the plane must be zero.
     N = - (W << eNorm) * eNorm
     # The frictional force acts in the opposite direction to the velocity.
     # We assume the velocity to be down the incline.
