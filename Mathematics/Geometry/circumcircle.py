@@ -1,9 +1,9 @@
-from e3ga import *
+from e2ga import *
 from math import *
 
-p1 = VectorE3( 1.0, 0.0, 0)
-p2 = VectorE3( 2.0, 1.0, 0)
-p3 = VectorE3( 1.0, 2.0, 0)
+p1 = VectorE2(1.0, 0.0)
+p2 = VectorE2(2.0, 1.0)
+p3 = VectorE2(1.0, 2.0)
 
 def circle(p1, p2, p3):
     x1 = p2 - p1
