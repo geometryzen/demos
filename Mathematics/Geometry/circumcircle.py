@@ -12,9 +12,10 @@ def circumcircle(p1, p2, p3):
     x23 = x2.dot(x3)
     x33 = x3.dot(x3)
     
+    d = 2 * (x13 * x12 - x11 * x23)
     a1 = 2 * x13 * x12 - x23 * x11 + x12 * x33
-    return a1 * p1
-    pass
+    return (a1 * p1) / d
+
 
 p1 = VectorE2(+1, 0)
 p2 = VectorE2( 0,+1)
