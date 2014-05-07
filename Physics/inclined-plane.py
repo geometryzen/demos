@@ -34,7 +34,7 @@ def acceleration(theta, mu):
     N = W.dot(eNorm) * eNorm
     print "N => %s" % (N / eNorm)
     F = W.dot(eDown) * eDown - mu * N
-    print "F => %s" % (F)
+    print "F => %s" % (F/eDown)
     
     
 print acceleration(theta, mu)
