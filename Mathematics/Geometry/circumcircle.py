@@ -22,9 +22,9 @@ def circumcircle(p1, p2, p3):
     return (center, radius)
 
 
-p1 = VectorE2(+4.0, 0.0)
-p2 = VectorE2( 0.0,+4.0)
-p3 = VectorE2(-4.0, 0.0)
+p1 = VectorE2(+5.0, 0.0)
+p2 = VectorE2( 1.0,+4.0)
+p3 = VectorE2(-3.0, 0.0)
 
 cc = circumcircle(p1,p2,p3);
 
