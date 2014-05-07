@@ -1,7 +1,7 @@
 from e3ga import *
 from math import *
 
-p1 = VectorE3( 3.0, 0.0, 1)
+p1 = VectorE3( 6.0, 0.0, 1)
 p2 = VectorE3( 2.0, 1.0, 1)
 p3 = VectorE3( 1.0, 2.0, 1)
 
