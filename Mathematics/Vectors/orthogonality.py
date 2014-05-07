@@ -3,9 +3,10 @@ Calculate the cross product of the vectors A, B,
 and verify that it is perpendicular to both A and B.
 '''
 from e3ga import *
+from units import *
 
-A = VectorE3(2,3,0)
-B = VectorE3(-1,1,4)
+A = VectorE3(2,3,0) * meter
+B = VectorE3(-1,1,4) * meter
 
 print "A = %s" % A
 print "B = %s" % B
