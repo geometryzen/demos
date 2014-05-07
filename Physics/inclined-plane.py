@@ -30,7 +30,6 @@ print "g => %s" % (g)
 def acceleration(theta, mu):
     mass = 1 * kilogram
     W = mass * g
-    print "W => %s" % (W)
     N = W.dot(eNorm) * eNorm
     print "N => %s (normal to the incline)" % (N / eNorm)
     # The frictional force acts in the opposite direction to the velocity.
