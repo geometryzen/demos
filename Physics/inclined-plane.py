@@ -30,7 +30,7 @@ def acceleration(theta, mu):
     print "m => %s" % (m)
     W = m * g
     print "W => %s" % (W)
-    F = W.dot(eDown) * eDown
+    F = W.dot(eDown) * eDown - mu * N
     print "F => %s" % (F)
     
     
