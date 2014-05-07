@@ -12,8 +12,8 @@ from units import *
 # Define standard orthogonal unit vectors and their meanings.
 # Although the incline also provides a natural frame, I find it easier
 # to think of gravity as being simply down in this situation.
-i = VectorE2(1,0) # To the right.
-j = VectorE2(0,1) # Up
+i  = VectorE2(1,0) # To the right.
+j  = VectorE2(0,1) # Up
 
 # The given parameters
 theta = (30.0 / 180.0) * pi
@@ -22,7 +22,8 @@ mu = 0.3
 # Unit vectors that may be more useful to the problem.
 eUp = cos(theta) * i + sin(theta) * j
 eDown = -eUp
-eNorm = eDown.cross(k)
+# One-sided multiplication will work correctly in two dimensions to produce a rotation.
+eNorm = eDown * i * j
 
 # acceleration due to gravity
 g = - 9.8 * j * meter / (second ** 2)
