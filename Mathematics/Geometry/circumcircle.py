@@ -13,8 +13,9 @@ def circumcircle(p1, p2, p3):
     x33 = x3.dot(x3)
     
     d = 2 * (x13 * x12 - x11 * x23)
-    a1 = 2 * x13 * x12 - x23 * x11 + x12 * x33
-    return (a1 * p1) / d
+    a1 = (2 * x13 * x12 - x23 * x11 + x12 * x33)/d
+    a3 = x11 * (x13 + x33) / d
+    return (a1 * p1 + a3 * p3) / d
 
 
 p1 = VectorE2(+0.5, 0)
