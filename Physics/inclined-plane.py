@@ -30,6 +30,7 @@ g = - 9.8 * j * meter / (second ** 2)
 
 def acceleration(theta, mu):
     # Analytically, the result is independent of mass, it simply divides out.
+    # We could refactor this out, but we leave it in for pedagogy.
     mass = 1 * kilogram
     W = mass * g
 
