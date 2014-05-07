@@ -2,6 +2,7 @@
 A block slides down an inclined plane that makes a 30 degree angle with the horizontal.
 If the coefficient of friction is 0.3, find the acceleration of the block.
 '''
+# We'll be using some trigonometry to handle the angles.
 from math import *
 from e3ga import *
 from units import *
@@ -26,7 +27,9 @@ eNorm = eDown.cross(k)
 g = - 9.8 * j * meter / (second ** 2)
 
 def acceleration(theta, mu):
-    # Analytically, the result is independent of the mass.
+    # Analytically, the result in this case is independent of the mass.
+    # (Because the incline is not curved).
+    # We could refactor to use (say lowercase quantities
     mass = 12345 * kilogram
     W = mass * g
 
