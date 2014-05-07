@@ -14,7 +14,6 @@ from units import *
 # to think of gravity as being simply down in this situation.
 i = VectorE2(1,0) # To the right.
 j = VectorE2(0,1) # Up
-k = i.cross(j)      # Must be out of page for a right-handed set.
 
 # The given parameters
 theta = (30.0 / 180.0) * pi
