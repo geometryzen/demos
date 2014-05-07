@@ -30,7 +30,9 @@ print "g => %s" % (g)
 def acceleration(theta, mu):
     mass = 1 * kilogram
     W = mass * g
-    N = W.dot(eNorm) * eNorm
+    # The block does not rise above the plane nor sink into it.
+    # The normal reaction plus the component of the weight normal to the plane must be zero.
+    N = - W.dot(eNorm) * eNorm
     print "N => %s (normal to the incline)" % (N / eNorm)
     # The frictional force acts in the opposite direction to the velocity.
     # We assume the velocity to be down the incline.
