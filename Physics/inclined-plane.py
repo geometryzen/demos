@@ -29,7 +29,7 @@ eNorm = eDown * i * j
 g = - 9.8 * j * meter / (second ** 2)
 
 def acceleration(theta, mu):
-    mass = 12345 * kilogram * second
+    mass = 1
     W = mass * g
 
     # The block does not rise above the plane nor sink into it.
