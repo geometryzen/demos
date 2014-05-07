@@ -12,6 +12,8 @@ print "A = %s" % A
 print "B = %s" % B
 
 C = A.cross(B)
+print "C = %s" % C
+
 print
 print "A = %s" % A
 print "B = %s" % B
