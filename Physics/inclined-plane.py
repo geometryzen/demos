@@ -4,5 +4,10 @@ If the coefficient of friction is 0.3, find the acceleration of the block.
 '''
 from math import *
 
-# First, compute the vector up the plane.
+# The given parameters
 theta = (30 / 180) * pi
+mu = 0.3
+
+def acceleration(theta, mu):
+    # First, compute the vector up the plane.
+    eUp = VectoreE3(cos(theta), sin(theta), 0)
