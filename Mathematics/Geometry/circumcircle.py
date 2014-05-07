@@ -20,6 +20,11 @@ def circumcircle(p1, p2, p3):
     print "a1: %s" % a1
     print "a2: %s" % a2
     print "a3: %s" % a3
+    
+    alpha = quadrance(p2-p3)
+    print "alpha: %s" % alpha
+    
+    
     center = (a1 * p1 + a2 * p3 + a3 * p3) / d
     radius = magnitude(p3 - center)
     return (center, radius)
