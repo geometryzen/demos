@@ -46,6 +46,6 @@ def acceleration(theta, mu):
     return F / mass
     
     
-a = acceleration(theta, mu).dot(eDown)
+a = acceleration(theta, mu)
 
-print "a = %s" % (a)
+print "a = %s" % (a << eDown)
