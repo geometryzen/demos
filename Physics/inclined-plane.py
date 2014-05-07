@@ -27,6 +27,7 @@ def acceleration(theta, mu):
     eDown = -eUp
     print "eDown => %s" % (eDown)
     m = 23 * kilogram
+    print "m => %s" % (m)
     W = m * g
     F = W.dot(eDown) * eDown
     
