@@ -11,7 +11,7 @@ mu = 0.3
 
 def acceleration(theta, mu):
     # First, compute the vector up the plane.
-    eUp = VectoreE3(cos(theta), sin(theta), 0)
+    eUp = VectorE3(cos(theta), sin(theta), 0)
     
     
 print acceleration(theta, mu)
