@@ -46,4 +46,4 @@ def acceleration(theta, mu):
     return F / mass
     
     
-a = acceleration(theta, mu).dot()
+a = acceleration(theta, mu).dot(eDown)
