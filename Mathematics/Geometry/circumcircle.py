@@ -1,4 +1,4 @@
-from e3ga import *
+from e2ga import *
 from math import *
 
 def circumcircle(p1, p2, p3):
