@@ -25,7 +25,6 @@ eNorm = eDown.cross(k)
 
 # acceleration due to gravity
 g = - 9.8 * j * meter / (second ** 2)
-print "g => %s" % (g)
 
 def acceleration(theta, mu):
     mass = 12345 * kilogram
