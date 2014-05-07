@@ -4,6 +4,7 @@ If the coefficient of friction is 0.3, find the acceleration of the block.
 '''
 from math import *
 from e3ga import *
+from units import *
 
 # Define the ortogonal unit vectors and their meanings.
 eDown   = VectorE3(1,0,0) # Down the incline (x).
