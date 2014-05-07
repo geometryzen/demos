@@ -13,8 +13,8 @@ print "B = %s" % B
 print
 C = A.cross(B)
 print "C = %s" % C
-
 print
+print "Verify that A and B were not changed."
 print "A = %s" % A
 print "B = %s" % B
 print
