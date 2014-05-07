@@ -3,6 +3,7 @@ A block slides down an inclined plane that makes a 30 degree angle with the hori
 If the coefficient of friction is 0.3, find the acceleration of the block.
 '''
 from math import *
+from e3ga import *
 
 # The given parameters
 theta = (30 / 180) * pi
