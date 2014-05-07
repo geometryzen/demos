@@ -33,11 +33,11 @@ def acceleration(theta, mu):
     # We're using lowercase quantities to show that mass has been divided out.
     # Quantities which were forces are now accelerations.
     mass = 12345 * kilogram
-    w = mass * g
+    W = mass * g
 
     # The block does not rise above the plane nor sink into it.
     # The normal reaction plus the component of the weight normal to the plane must be zero.
-    N = - W.dot(eNorm) * eNorm
+    N = - w.dot(eNorm) * eNorm
     # The frictional force acts in the opposite direction to the velocity.
     # We assume the velocity to be down the incline.
     Friction = magnitude(mu * N) * eUp
