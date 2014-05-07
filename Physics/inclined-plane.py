@@ -26,8 +26,8 @@ def acceleration(theta, mu):
     eUp = cos(theta) * i + sin(theta) * j
     eDown = -eUp
     print "eDown => %s" % (eDown)
-    m = 23 * kilogram
-    print "m => %s" % (m)
+    mass = 23 * kilogram
+    print "m => %s" % (mass)
     W = m * g
     print "W => %s" % (W)
     eNorm = eDown.cross(k)
@@ -40,6 +40,8 @@ def acceleration(theta, mu):
 
     F = W.dot(eDown) * eDown - Friction
     print "F => %s (down the incline)." % (F/eDown)
+    
+    return F / mass
     
     
 print acceleration(theta, mu)
