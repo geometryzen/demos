@@ -12,18 +12,18 @@ print "A = %s" % A
 print "B = %s" % B
 
 C = A.cross(B)
-
+print
 print "A = %s" % A
 print "B = %s" % B
-
+print
 print "C.dot(A) = %s" % C.dot(A)
 print "C.dot(B) = %s" % C.dot(B)
 print "C.dot(C) = %s" % C.dot(C)
-
+print
 print "C >> A = %s" % (C >> A)
 print "C >> B = %s" % (C >> B)
 print "C >> C = %s" % (C >> C)
-
+print
 print "C >> A = %s" % (C << A)
 print "C >> B = %s" % (C << B)
 print "C >> C = %s" % (C << C)
