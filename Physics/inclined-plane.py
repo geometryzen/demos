@@ -18,19 +18,21 @@ print "k => %s" % (k)
 theta = (30.0 / 180.0) * pi
 mu = 0.3
 
+# Unit vectors that may be more useful to the problem.
+eUp = cos(theta) * i + sin(theta) * j
+eDown = -eUp
+eNorm = eDown.cross(k)
+
 # acceleration due to gravity
 g = - 9.8 * j * meter / (second ** 2)
 print "g => %s" % (g)
 
 def acceleration(theta, mu):
-    eUp = cos(theta) * i + sin(theta) * j
-    eDown = -eUp
     print "eDown => %s" % (eDown)
     mass = 23 * kilogram
     print "m => %s" % (mass)
     W = mass * g
     print "W => %s" % (W)
-    eNorm = eDown.cross(k)
     N = W.dot(eNorm) * eNorm
     print "N => %s (normal to the incline)" % (N / eNorm)
     # The frictional force acts in the opposite direction to the velocity.
@@ -44,4 +46,4 @@ def acceleration(theta, mu):
     return F / mass
     
     
-print acceleration(theta, mu)
+a = acceleration(theta, mu).dot()
