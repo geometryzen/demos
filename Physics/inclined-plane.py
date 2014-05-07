@@ -15,9 +15,7 @@ theta = (30 / 180) * pi
 mu = 0.3
 
 def acceleration(theta, mu):
-    # First, compute the vector up the plane.
-    eUp = VectorE3(cos(theta), sin(theta), 0)
-    eNm = 
+    F = W.dot(eDown) * eDown
     
     
 print acceleration(theta, mu)
