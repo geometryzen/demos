@@ -7,7 +7,7 @@ from e3ga import *
 A = VectorE3(2,3,0)
 B = VectorE3(-1,1,4)
 
-print "%s" % A
+print "A -> %s" % A
 print B
 
 C = A.cross(B)
