@@ -1,6 +1,10 @@
 from e3ga import *
 from math import *
 
+p1 = VectorE3( 5.0, 0.0, 1)
+p2 = VectorE3( 2.0, 1.0, 1)
+p3 = VectorE3( 1.0, 2.0, 1)
+
 def circumcircle(p1, p2, p3):
     x1 = p2 - p1
     x2 = p3 - p2
@@ -40,11 +44,6 @@ def circumcircle(p1, p2, p3):
     print "p2: %s" % p2
     print "p3: %s" % p3
     return {'center':center, 'radius':radius}
-
-
-p1 = VectorE3( 1.0, 0.0, 1)
-p2 = VectorE3( 2.0, 1.0, 1)
-p3 = VectorE3( 1.0, 2.0, 1)
 
 cc = circumcircle(p1,p2,p3);
 
