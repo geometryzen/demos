@@ -35,9 +35,9 @@ def circumcircle(p1, p2, p3):
     return (center, radius)
 
 
-p1 = VectorE3(+1.0, 0.0, 1.0)
-p2 = VectorE3( 0.0,+1.0, 1.0)
-p3 = VectorE3(-1.0, 0.0, 1.0)
+p1 = VectorE3(+1.0, 0.0, 0.0)
+p2 = VectorE3( 0.0,+1.0, 0.0)
+p3 = VectorE3(-1.0, 0.0, 0.0)
 
 cc = circumcircle(p1,p2,p3);
 
