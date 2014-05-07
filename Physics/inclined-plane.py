@@ -28,7 +28,7 @@ def acceleration(theta, mu):
     print "eDown => %s" % (eDown)
     mass = 23 * kilogram
     print "m => %s" % (mass)
-    W = m * g
+    W = mass * g
     print "W => %s" % (W)
     eNorm = eDown.cross(k)
     N = W.dot(eNorm) * eNorm
