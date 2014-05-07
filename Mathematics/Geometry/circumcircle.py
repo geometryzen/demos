@@ -19,8 +19,6 @@ def circumcircle(p1, p2, p3):
     
     # FIXME: Why aren't these cyclic? Hmmm.
     d = 2 * (x13 * x12 - x11 * x23)
-    a1 = (x12*x13-x12*x23-x11*x23) / d
-#   a2 = -(x33 * (x12 - x11) - (x13 + x23) * x11) / d
     a1 = - x22 * x13 / d
     a2 = - x33 * x12 / d
     a3 = - x11 * x23 / d
