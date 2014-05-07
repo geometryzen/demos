@@ -29,5 +29,8 @@ def circle(p1, p2, p3):
 
 c = circle(p1,p2,p3);
 
-print "center: %s" % c[0]
-print "radius: %s" % c[1]
+center = c[0]
+radius = c[1]
+print "center: %s" % center
+print "radius: %s" % radius
+print magnitude(p1-c[0])
