@@ -28,9 +28,7 @@ g = - 9.8 * j * meter / (second ** 2)
 print "g => %s" % (g)
 
 def acceleration(theta, mu):
-    print "eDown => %s" % (eDown)
-    mass = 23 * kilogram
-    print "m => %s" % (mass)
+    mass = 1 * kilogram
     W = mass * g
     print "W => %s" % (W)
     N = W.dot(eNorm) * eNorm
