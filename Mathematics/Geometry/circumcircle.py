@@ -11,7 +11,7 @@ def circumcircle(p1, p2, p3):
     x3 = p1 - p3
     
     x11 = x1 << x1
-    x12 = x1 << x2
+    x12 = x1.dot(x2)
     x13 = x1 << x3
     x22 = x2 << x2
     x23 = x2 << x3
