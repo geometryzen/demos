@@ -13,7 +13,7 @@ from units import *
 # Although the incline also provides a natural frame, I find it easier
 # to think of gravity as being simply down in this situation.
 i = VectorE2(1,0) # To the right.
-j = VectorE3(0,1,0) # Up
+j = VectorE2(0,1) # Up
 k = i.cross(j)      # Must be out of page for a right-handed set.
 
 # The given parameters
