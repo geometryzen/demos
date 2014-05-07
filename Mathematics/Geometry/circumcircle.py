@@ -32,6 +32,7 @@ def circumcircle(p1, p2, p3):
     center = (a1 * p1 + a2 * p2 + a3 * p3) / d
 #   center = (alpha * p1 + beta * p2 + gamma * p3) / d
     radius = magnitude(p3 - center)
+    print "d1: %s" % magnitude(p1 - center)
     return (center, radius)
 
 
