@@ -6,12 +6,12 @@ def circumcircle(p1, p2, p3):
     x2 = p3 - p2
     x3 = p1 - p3
     
-    x11 = x1.dot(x1)
-    x12 = x1.dot(x2)
-    x13 = x1.dot(x3)
-    x22 = x2.dot(x2)
-    x23 = x2.dot(x3)
-    x33 = x3.dot(x3)
+    x11 = x1 << x1
+    x12 = x1 << x2
+    x13 = x1 << x3
+    x22 = x2 << x2
+    x23 = x2 << x3
+    x33 = x3 << x3
     
     # FIXME: Why aren't these cyclic? Hmmm.
     d = 2 * (x13 * x12 - x11 * x23)
