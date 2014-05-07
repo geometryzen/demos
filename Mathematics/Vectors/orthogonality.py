@@ -32,3 +32,4 @@ print
 print "C >> A = %s" % (C << A)
 print "C >> B = %s" % (C << B)
 print "C >> C = %s" % (C << C)
+print repr(C << C)
