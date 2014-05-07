@@ -24,6 +24,7 @@ print "g => %s" % (g)
 
 def acceleration(theta, mu):
     eUp = cos(theta) * i + sin(theta) * j
+    eDown = -eUp
     print "eUp => %s" % (eUp)
     m = 23 * kilogram
     W = m * g
