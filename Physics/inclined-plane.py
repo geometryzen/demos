@@ -39,7 +39,7 @@ def acceleration(theta, mu):
     print "Friction => %s" % (Friction/eDown)
 
     F = W.dot(eDown) * eDown
-    print "F => %s" % (F/eDown)
+    print "F => %s down the incline." % (F/eDown)
     
     
 print acceleration(theta, mu)
