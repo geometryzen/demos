@@ -15,6 +15,7 @@ theta = (30 / 180) * pi
 mu = 0.3
 
 def acceleration(theta, mu):
+    m = 23 * kilogram
     W = m * g
     F = W.dot(eDown) * eDown
     
