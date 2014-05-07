@@ -5,7 +5,7 @@ If the coefficient of friction is 0.3, find the acceleration of the block.
 # We'll be using some trigonometry to handle the angles.
 from math import *
 # We'll be economical in our processing and use only 2D quantities.
-from e3ga import *
+from e2ga import *
 # We'll use units throughout and let the software do the manipulations.
 from units import *
 
