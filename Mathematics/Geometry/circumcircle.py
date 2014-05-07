@@ -17,9 +17,9 @@ def circumcircle(p1, p2, p3):
     a1 = (2 * x13 * x12 - x23 * x11 + x12 * x33) / d
     a2 = (x33 * (x12 - x11) - (x13 + x23) * x11) / d
     a3 = x11 * (x13 + x33) / d
-    s = (a1 * p1 + a2 * p3 + a3 * p3) / d
+    center = (a1 * p1 + a2 * p3 + a3 * p3) / d
     radius = magnitude(p1 - s)
-    return (a1 * p1 + a2 * p3 + a3 * p3) / d
+    return (center, radius)
 
 
 p1 = VectorE2(+0.5, 0.0)
