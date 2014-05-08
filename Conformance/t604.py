@@ -42,7 +42,7 @@ print "2) |a cross b| = |a||b|sin(theta), where theta is the angle between a and
 # a dot b = |a||b|cos(theta)
 assertCloseTo(9.1104335791443, a.magnitude(), "|a|")
 #assertCloseTo(7.4833147735478, b.magnitude()[0], "|b|")
-assertEqual(68.0, a.dot(b), "a.dot(b)")
+assertEqual(ScalarE3(68), a.dot(b), "a.dot(b)")
 cosTheta = a.dot(b)/(a.magnitude()*b.magnitude())
 #print "cos(theta) = " + str(cosTheta)
 sinTheta = sqrt(1 - cosTheta * cosTheta)
