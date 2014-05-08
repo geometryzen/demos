@@ -10,7 +10,7 @@ detail = 0 # Must be an integer: 0,1,2,...
 
 geom = IcosahedronGeometry(radius, detail)
 
-mesh = Mesh(icosa, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 2}))
+mesh = Mesh(geom, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 2}))
 
 space.add(mesh)
 
