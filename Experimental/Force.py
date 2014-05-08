@@ -4,9 +4,9 @@ class Gravity:
         self.M = M # mass of object 2
         self.G = 6.67428E-11 # gravity constant, m**3/kg/s**2
 
-    def force(self, r):
+    def force(self, xs):
         G, m, M = self.G, self.m, self.M
-        return G*m*M/r**2
+        return [G*m*M/x**2 for x in xs]
 
     def visualize(self, r_start, r_stop, n=100):
         #from numpy import linspace
