@@ -15,7 +15,7 @@ msg.voiceURI = 'native'
 msg.volume = 1 # 0 to 1
 msg.rate = 1 # 0.1 to 10
 msg.pitch = 2 # 0 to 2
-msg.text = 'Bonjour, géométrique physique!'
+msg.text = 'Bonjour, geometrique physique!'
 msg.lang = 'fr'
 
 #def onEndHandler(event):
