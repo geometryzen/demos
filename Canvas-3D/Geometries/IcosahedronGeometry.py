@@ -8,16 +8,10 @@ space = CartesianSpace()
 radius = 3
 detail = 0 # Must be an integer: 0,1,2,...
 
-icosa = IcosahedronGeometry(radius, detail)
-
-print dir(icosa)
-
-print repr(icosa)
-print "radius:         " + str(icosa.radius)
-print "detail:         " + str(icosa.detail)
-print icosa
+geom = IcosahedronGeometry(radius, detail)
 
 mesh = Mesh(icosa, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 2}))
+
 space.add(mesh)
 
 movement = VectorE3(0.02, 0.02, 0.02)
