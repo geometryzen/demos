@@ -22,5 +22,5 @@ class CoulumbsLaw(Gravity):
         self.G = 8.99E9
 
 c = CoulumbsLaw(1E-6, -2E-6)
-print 'Electric force:', c.force(0.1)
+print 'Electric force:', c.force([0.1])
 c.visualize(0.01, 0.2)
