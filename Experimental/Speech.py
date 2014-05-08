@@ -1,7 +1,6 @@
 from browser import window
 import sys
 
-sys.debug()
 msg = window.SpeechSynthesisUtterance('Hello Geometric Physics!')
 window.speechSynthesis.speak(msg)
 
@@ -9,7 +8,8 @@ for voice in window.speechSynthesis.getVoices():
     print voice.name
     
 msg = window.SpeechSynthesisUtterance()
-voices = window.speechSynthesis.getVoices()
+ss = window.speechSynthesis
+voices = ss.getVoices()
 msg.voice = voices[4]
 msg.voiceURI = 'native'
 msg.volume = 1 # 0 to 1
