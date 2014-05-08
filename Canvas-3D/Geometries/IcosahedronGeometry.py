@@ -1,4 +1,4 @@
-from geometry import *
+#from geometry import *
 from three import *
 from browser import *
 from workbench import *
