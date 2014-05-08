@@ -1,6 +1,4 @@
 class Gravity:
-"""Gravity force between two physical objects."""
-
 def __init__(self, m, M):
     self.m = m # mass of object 1
     self.M = M # mass of object 2
@@ -17,6 +15,7 @@ def visualize(self, r_start, r_stop, n=100):
     g = self.force(r)
     title='Gravity force: m=%g, M=%g' % (self.m, self.M)
     #plot(r, g, title=title)
+
 class CoulumbsLaw(Gravity):
 def init(self, q1, q2):
 Gravity.init(self, q1, q2)
