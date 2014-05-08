@@ -10,7 +10,7 @@ detail = 0 # Must be an integer: 0,1,2,...
 
 icosa = IcosahedronGeometry(radius, detail)
 
-dir(icosa)
+print dir(icosa)
 
 print repr(icosa)
 print "radius:         " + str(icosa.radius)
