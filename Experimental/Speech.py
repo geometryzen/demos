@@ -10,6 +10,7 @@ for voice in window.speechSynthesis.getVoices():
 msg = window.SpeechSynthesisUtterance()
 ss = window.speechSynthesis
 voices = ss.getVoices()
+print voices
 msg.voice = voices[4]
 msg.voiceURI = 'native'
 msg.volume = 1 # 0 to 1
