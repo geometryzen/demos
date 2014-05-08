@@ -42,6 +42,7 @@ def terminate(t):
 def tearDown(e):
     workbench.tearDown()
     print frames / timeout
-    print e
+    if e:
+        print e
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
