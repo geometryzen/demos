@@ -239,6 +239,7 @@ def tearDown(e):
     document.removeEventListener("keydown",   onDocumentKeyDown, False)
     workbench2D.tearDown()
     workbench.tearDown()
-    print e
+    if e:
+        print e
 
 WindowAnimationRunner(render, terminate, setUp, tearDown, window).start()
