@@ -2,7 +2,7 @@ from browser import window
 import sys
 
 sys.debug()
-msg = window.SpeechSynthesisUtterance('Hello Geometry Zen!')
+msg = window.SpeechSynthesisUtterance('Hello Geometric Physics')
 window.speechSynthesis.speak(msg)
 
 for voice in window.speechSynthesis.getVoices():
