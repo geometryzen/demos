@@ -12,7 +12,7 @@ print e1
 
 # Conventionally, we think of the angular velocity as a vector.
 # Would be nice to have radians in units here!
-omegaAxial = 5 * e3 / second
+omegaAxial = 5 * e3 * radian / second
 
 print omegaAxial
 
