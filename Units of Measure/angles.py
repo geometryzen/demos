@@ -7,7 +7,7 @@ angle1 = pi * radian
 angle2 = ScalarE3(180) * degree
 angle3 = ScalarE2(180) * degree
 
-print type(angle1)
+print type(angle1.quantity)
 print angle1
 print angle2
 print angle3
