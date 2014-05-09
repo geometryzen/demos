@@ -1,6 +1,5 @@
 from units import *
 from math import *
-import sys
 
 length0 = 1.0 * meter
 angle1 = pi * radian
@@ -17,6 +16,5 @@ print angle1 + angle2
 
 # It will quite happily do this!
 print 2 * radian
-sys.debug()
 print sqrt(2 * radian)
 print cos(sqrt(angle1 * angle1))
