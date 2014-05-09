@@ -13,6 +13,9 @@ print angle2
 print "cos(angle1) %s" % cos(angle1)
 print "cos(angle2) %s" % cos(angle2)
 
+print "sin(angle1) %s" % sin(angle1)
+print "sin(angle2) %s" % sin(angle2)
+
 print angle1 + angle2
 
 print cos(sqrt(angle1 * angle1))
