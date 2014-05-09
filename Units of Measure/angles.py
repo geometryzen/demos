@@ -38,3 +38,7 @@ print
 print asin(sin(angle1))
 print asin(sin(angle2))
 print asin(sin(angle3))
+print
+print atan(tan(angle1))
+print asin(sin(angle2))
+print asin(sin(angle3))
