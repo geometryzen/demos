@@ -17,7 +17,7 @@ print math.asin(0.5)
 print math.asin(0.0)
 print math.asin(-0.5)
 print math.asin(-1.0)
-print type(math.asin(-1))
+print math.asin(-1)
 
 print "\nmath.atan(x)"
 print math.atan(1.0)
