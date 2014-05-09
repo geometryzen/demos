@@ -7,11 +7,10 @@ angle1 = pi * radian
 angle2 = ScalarE3(180) * degree
 angle3 = ScalarE2(180) * degree
 
-print type(angle1.quantity)
 print angle1
 print angle2
 print angle3
-
+print
 print "cos(angle1) %s" % cos(angle1)
 print "cos(angle2) %s" % cos(angle2)
 print "cos(angle3) %s" % cos(angle3)
