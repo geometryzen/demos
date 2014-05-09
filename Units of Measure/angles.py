@@ -21,7 +21,7 @@ print "sin(angle3) %s" % sin(angle3)
 print
 print "tan(angle1) %s" % tan(angle1)
 print "tan(angle2) %s" % tan(angle2)
-print "sin(angle3) %s" % sin(angle3)
+print "tan(angle3) %s" % tan(angle3)
 print
 print angle1 + angle1
 print angle1 + angle2
