@@ -16,7 +16,6 @@ print angle1 + angle2
 
 # It will quite happily do this!
 print 2 * radian
-print type(2 * radian)
 print sqrt(2 * radian)
 print cos(sqrt(angle1 * angle1))
 print cos(meter)
