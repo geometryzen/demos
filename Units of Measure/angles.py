@@ -15,6 +15,6 @@ print "cos(angle2) %s" % cos(angle2)
 print angle1 + angle2
 
 # It will quite happily do this!
-print sqrt(2)
+print sqrt(2 * radian)
 print cos(sqrt(angle1 * angle1))
 print cos(meter)
