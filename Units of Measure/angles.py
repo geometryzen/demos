@@ -1,9 +1,10 @@
 from units import *
 from math import *
+from e3ga import *
 
 length0 = 1.0 * meter
 angle1 = pi * radian
-angle2 = 180 * degree
+angle2 = ScalarE3(180) * degree
 
 print length0
 print angle1
