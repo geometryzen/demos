@@ -1,1 +1,1 @@
-print j
+print complex(1,0)
