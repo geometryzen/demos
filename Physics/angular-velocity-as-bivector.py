@@ -29,3 +29,5 @@ show("e2 << omega", e2 << omega)
 show("e3 << omega", e3 << omega)
 
 print 6.0/3.0/2.0
+print (6.0/3.0)/2.0
+print 6.0/(3.0/2.0)
