@@ -24,7 +24,7 @@ print angle1 + angle2
 print angle1 + angle3
 print
 print cos(sqrt(angle1 * angle1))
-print type(cos(sqrt(angle2 * angle2)))
+print type(cos(sqrt(angle2 * angle2)).quantity)
 print cos(sqrt(angle3 * angle3))
 print
 print acos(cos(angle1))
