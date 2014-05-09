@@ -1,5 +1,5 @@
 from units import *
-from math import pi, cos
+from math import *
 
 length0 = 1.0 * meter
 angle1 = pi * radian
