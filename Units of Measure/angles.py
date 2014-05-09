@@ -6,7 +6,7 @@ from e2ga import *
 length0 = 1.0 * meter
 angle1 = pi * radian
 angle2 = ScalarE3(180) * degree
-angle3 = ScalarE3(90) * degree
+angle3 = ScalarE2(90) * degree
 
 print length0
 print angle1
