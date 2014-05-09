@@ -14,3 +14,5 @@ print "cos(angle2) %s" % cos(angle2)
 
 print angle1 + angle2
 
+print swirl
+
