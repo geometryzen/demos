@@ -14,7 +14,7 @@ print
 print "cos(angle1) %s" % cos(angle1)
 print "cos(angle2) %s" % cos(angle2)
 print "cos(angle3) %s" % cos(angle3)
-
+print
 print "sin(angle1) %s" % sin(angle1)
 print "sin(angle2) %s" % sin(angle2)
 print "sin(angle3) %s" % sin(angle3)
