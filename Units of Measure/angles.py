@@ -41,4 +41,4 @@ print asin(sin(angle3))
 print
 print atan(tan(angle1))
 print atan(tan(angle2))
-print asin(sin(angle3))
+print atan(tan(angle3))
