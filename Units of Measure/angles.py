@@ -16,4 +16,4 @@ print angle1 + angle2
 
 print cos(sqrt(angle1 * angle1))
 
-print cos(angle1)
+print acos(cos(angle1))
