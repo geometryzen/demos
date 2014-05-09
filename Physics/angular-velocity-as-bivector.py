@@ -13,10 +13,6 @@ print e1
 
 # Conventionally, we think of the angular velocity as a vector.
 # Would be nice to have radians in units here!
-print 5 * e3
-print second
-sys.debug()
-print 1 / second
 omegaAxial = 5 * e3 / second
 
 print omegaAxial
