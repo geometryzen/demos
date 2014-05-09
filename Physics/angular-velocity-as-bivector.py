@@ -14,7 +14,7 @@ print e1
 # Would be nice to have radians in units here!
 print 5 * e3
 print second
-print 5 * e3 / second
+print e3 / second
 omegaAxial = 5 * e3 / second
 
 print omegaAxial
