@@ -1,5 +1,6 @@
 from e3ga import *
 from units import *
+import sys
 
 def show(name, thing):
     print "%s => %s" % (name, thing)
@@ -14,6 +15,7 @@ print e1
 # Would be nice to have radians in units here!
 print 5 * e3
 print second
+sys.debug()
 print 1 / second
 omegaAxial = 5 * e3 / second
 
