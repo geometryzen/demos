@@ -20,4 +20,3 @@ print 2 * radian
 sys.debug()
 print sqrt(2 * radian)
 print cos(sqrt(angle1 * angle1))
-print cos(meter)
