@@ -26,6 +26,7 @@ print angle1 + angle3
 
 print cos(sqrt(angle1 * angle1))
 print cos(sqrt(angle2 * angle2))
+print cos(sqrt(angle3 * angle3))
 
 print acos(cos(angle1))
 print acos(cos(angle2))
