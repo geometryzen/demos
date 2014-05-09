@@ -1,6 +1,5 @@
 from e3ga import *
 from units import *
-import sys
 
 def show(name, thing):
     print "%s => %s" % (name, thing)
