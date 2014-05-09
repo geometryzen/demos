@@ -1,17 +1,21 @@
 from units import *
 from math import *
 from e3ga import *
+from e2ga import *
 
 length0 = 1.0 * meter
 angle1 = pi * radian
 angle2 = ScalarE3(180) * degree
+angle3 = ScalarE3(90) * degree
 
 print length0
 print angle1
 print angle2
+print angle3
 
 print "cos(angle1) %s" % cos(angle1)
 print "cos(angle2) %s" % cos(angle2)
+print "cos(angle3) %s" % cos(angle3)
 
 print "sin(angle1) %s" % sin(angle1)
 print "sin(angle2) %s" % sin(angle2)
