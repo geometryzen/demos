@@ -16,5 +16,5 @@ print angle1 + angle2
 
 print swirl
 
-print angle1 + angle * angle
+print angle1 + angle1 * angle1
 
