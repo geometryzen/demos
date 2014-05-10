@@ -1,3 +1,3 @@
 from units import *
 
-print tesla * meter / ampere
+print tesla * meter * meter / ampere
