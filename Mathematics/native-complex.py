@@ -11,3 +11,4 @@ print z
 z=x/y
 print z
 print x.real
+print x.imag
