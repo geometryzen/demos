@@ -1,3 +1,3 @@
 from units import *
 
-print (0.5 * volt) / (nano * ampere)
+print (50 * volt) / (nano * ampere)
