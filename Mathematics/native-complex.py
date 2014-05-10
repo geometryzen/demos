@@ -3,6 +3,6 @@ print x
 y = complex(3,4)
 print y
 z=x+y
-print x
-print y
+print z
+z=x*y
 print z
