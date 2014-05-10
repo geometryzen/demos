@@ -13,4 +13,4 @@ print z
 print x.real
 print x.imag
 print
-print type(x.conjugate())
+print x.conjugate()
