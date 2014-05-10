@@ -1,3 +1,3 @@
 from units import *
 
-print 50000000000
+print 50000000000.0
