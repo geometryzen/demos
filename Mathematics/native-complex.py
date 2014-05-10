@@ -10,3 +10,4 @@ z=x*y
 print z
 z=x/y
 print z
+print x.real
