@@ -2,4 +2,6 @@ from browser import *
 
 Sk = window.Sk
 
-print Sk
+z = Sk.builtin.complex(2,3)
+
+prnt z
