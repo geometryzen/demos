@@ -12,4 +12,5 @@ z=x/y
 print z
 print x.real
 print x.imag
-print x.conjugate()
+print
+print type(x.conjugate())
