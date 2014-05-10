@@ -1,7 +1,7 @@
 from units import *
 import sys
 
-print ohm
+print volt / meter
 
 sys.debug()
 print 100000000000.0
