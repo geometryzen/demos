@@ -1,6 +1,6 @@
-x = complex(1,2)
+x = complex(1.0, 2.0)
 print x
-y = complex(3,4)
+y = complex(3.0, 4.0)
 print y
 z=x+y
 print z
