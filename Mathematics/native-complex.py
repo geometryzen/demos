@@ -1,1 +1,3 @@
-print complex(1,0)
+x = complex(1,2)
+
+print x
