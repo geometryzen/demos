@@ -1,1 +1,1 @@
-print complex()
+print complex(1,0)
