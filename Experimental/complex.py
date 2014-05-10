@@ -1,3 +1,3 @@
 from units import *
 
-print tesla / ampere
+print (5 * volt) / (3 * ampere)
