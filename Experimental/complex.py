@@ -1,9 +1,8 @@
 from browser import *
-import sys
 
 Sk = window.Sk
 
-sys.debug()
+#It's not actually callable like this because the protocol is for Python objects.
 z = Sk.builtin.complex()
 
 print z
