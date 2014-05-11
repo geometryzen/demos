@@ -1,6 +1,19 @@
 from units import *
 import sys
 
+print 0.0000000000000001
+print 0.000000000000001
+print 0.00000000000001
+print 0.0000000000001
+print 0.000000000001
+print 0.00000000001
+print 0.0000000001
+print 0.000000001
+print 0.00000001
+print 0.0000001
+print 0.000001
+print 0.00001
+print 0.0001
 print 0.001
 print 0.01
 print 0.1
