@@ -1,5 +1,6 @@
 from units import *
+import sys
 
-print float(10000000000.0)
-print float(100000000000.0)
-print float(1000000000000.0)
+print 10000000000.0
+print 100000000000.0
+print 1000000000000.0
