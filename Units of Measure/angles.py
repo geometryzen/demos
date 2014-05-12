@@ -5,7 +5,7 @@ from e2ga import *
 
 angle1 = pi
 angle2 = ScalarE3(pi)
-angle3 = ScalarE2(pi)
+angle3 = ScalarE2(180) * pi / 180
 
 print angle1
 print angle2
