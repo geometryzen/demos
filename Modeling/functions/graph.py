@@ -41,9 +41,8 @@ win.document.body.innerHTML = '<div id="box" class="jxgbox"></div>'
 
 div = win.document.getElementById("box")
 
-div.style.width  = "400px"
-div.style.height = "400px"
-win.document = win.document
+div.style.width  = "600px"
+div.style.height = "600px"
 
 # Compute the bounding box for the graph so that the graph scales automagically.
 def boundingBox(padding):
