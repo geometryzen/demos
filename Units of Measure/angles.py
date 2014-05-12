@@ -4,8 +4,8 @@ from e3ga import *
 from e2ga import *
 
 angle1 = pi
-angle2 = ScalarE3(180)
-angle3 = ScalarE2(180)
+angle2 = ScalarE3(pi)
+angle3 = ScalarE2(pi)
 
 print angle1
 print angle2
