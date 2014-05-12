@@ -35,7 +35,7 @@ rangeY = abs(maxY-minY)
 JXG = window.JXG
 graph = JXG.JSXGraph
 
-win = window.open("","","width=700,height=700")
+win = window.open("","","width=720,height=720")
 
 win.document.body.innerHTML = '<div id="box" class="jxgbox"></div>'
 
