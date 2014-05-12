@@ -43,6 +43,7 @@ div = win.document.getElementById("box")
 
 div.style.width  = "700px"
 div.style.height = "700px"
+div.style.font   = "13px"
 
 # Compute the bounding box for the graph so that the graph scales automagically.
 def boundingBox(padding):
