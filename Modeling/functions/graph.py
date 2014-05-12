@@ -2,7 +2,7 @@
 from e3ga import *
 from units import *
 import numpy as np
-from browser import window
+from browser import *
 from math import *
 
 # Spring Constant.
