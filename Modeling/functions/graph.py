@@ -72,7 +72,7 @@ def tick(time):
     pass
 
 def terminate(time):
-    return time > 30
+    return False
 
 def setUp():
     pass
