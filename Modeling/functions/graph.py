@@ -82,6 +82,6 @@ def tearDown(e):
     if e:
         print e
     else:
-        print "The animation ran normally."
+        print "Goodbye."
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown, win).start()
