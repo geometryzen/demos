@@ -17,7 +17,7 @@ def f(x):
 N = 100
 
 # The domain is the extension values.
-extensions = np.linspace(-1.0 * meter, +1.0 * meter, N)
+extensions = linspace(-1.0 * meter, +1.0 * meter, N)
 
 # The range is the energy.
 energies = map(f, extensions)
