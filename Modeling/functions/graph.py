@@ -35,14 +35,14 @@ rangeY = abs(maxY-minY)
 JXG = window.JXG
 graph = JXG.JSXGraph
 
-win = window.open("","","width=600,height=600")
+win = window.open("","","width=700,height=700")
 
 win.document.body.innerHTML = '<div id="box" class="jxgbox"></div>'
 
 div = win.document.getElementById("box")
 
-div.style.width  = "600px"
-div.style.height = "600px"
+div.style.width  = "700px"
+div.style.height = "700px"
 
 # Compute the bounding box for the graph so that the graph scales automagically.
 def boundingBox(padding):
