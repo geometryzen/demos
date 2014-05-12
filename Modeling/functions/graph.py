@@ -62,9 +62,9 @@ b = graph.initBoard("box",
                      })
 
 b.create('curve',[dataX,dataY],{"strokeColor":'blue'})
-xLabel = b.create('text',[(maxX+minX)/2, (minY+box[3])/2, 'Extension/( %s )' % meter.uom], {"fontSize":15,"anchorX":'middle',"anchorY":'middle'})
-yLabel = b.create('text',[minX, (maxY+minY)/2, 'Energy/( %s )' % f(meter).uom], {"fontSize":15, "display":'internal', "rotate":90,"anchorX":'middle',"anchorY":'middle'})
-title = b.create('text',[(maxX+minX)/2, maxY, 'Energy versus Extension for a Spring with stiffness k=%s' % k], {"fontSize":15,"anchorX":'middle',"anchorY":'middle'})
+b.create('text',[(maxX+minX)/2, (minY+box[3])/2, 'Extension/( %s )' % meter.uom], {"fontSize":15,"anchorX":'middle',"anchorY":'middle'})
+b.create('text',[minX, (maxY+minY)/2, 'Energy/( %s )' % f(meter).uom], {"fontSize":15, "display":'internal', "rotate":90,"anchorX":'middle',"anchorY":'middle'})
+b.create('text',[(maxX+minX)/2, maxY, 'Energy versus Extension for a Spring with stiffness k=%s' % k], {"fontSize":15,"anchorX":'middle',"anchorY":'middle'})
 
 # The following is only really needed if you want to incorporate some animation.
 # I'm using it here to close the window after a timeout or Esc key press.
