@@ -35,6 +35,16 @@ rangeY = abs(maxY-minY)
 JXG = window.JXG
 graph = JXG.JSXGraph
 
+win = window.open("","","width=600,height=600")
+
+win.document.body.innerHTML = '<div id="box" class="jxgbox"></div>'
+
+div = win.document.getElementById("box")
+
+div.style.width  = "400px"
+div.style.height = "400px"
+win.document = win.document
+
 # Compute the bounding box for the graph so that the graph scales automagically.
 def boundingBox(padding):
     return [minX-padding*rangeX,
@@ -45,7 +55,8 @@ def boundingBox(padding):
 box = boundingBox(0.10)
 
 b = graph.initBoard("box", 
-                    {"boundingbox": box,
+                    {"document":win.document,
+                     "boundingbox": box,
                      "axis":True,
                      "showCopyright":False,
                      "showNavigation":False
