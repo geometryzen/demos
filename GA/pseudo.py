@@ -4,7 +4,7 @@ from random import random
 i = VectorE3(1,0,0)
 j = VectorE3(0,1,0)
 k = VectorE3(0,0,1)
-I = i * j * k
+I3 = i * j * k
 
 a = 5 * i + random() * j + random() * k
 b = 7 * i + 4 * j + 9 * k
