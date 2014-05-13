@@ -48,3 +48,5 @@ print
 print I * I
 print (I ^ one) * I
 print I.dot(I)
+print
+print B.dot(a*I)
