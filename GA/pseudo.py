@@ -13,6 +13,7 @@ c = random() * i + random() * j + random() * k
 
 B = b ^ c
 
+print "Triple scalar product Triple wedge product is really Triple pseudoscalar product."
 print a.dot(b.cross(c))
 print a ^ b ^ c
 print a.dot(-I * B)
