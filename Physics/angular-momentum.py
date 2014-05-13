@@ -11,5 +11,4 @@ b = 5 * i * j
 omega = 5  * k / second
 
 print omega
-x = 
 
