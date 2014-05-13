@@ -13,3 +13,5 @@ c = random() * i + random() * j + random() * k
 print a.dot(b.cross(c))
 print a ^ b ^ c
 print a.dot(-I * (b^c))
+
+print a.cross(b.cross(c))
