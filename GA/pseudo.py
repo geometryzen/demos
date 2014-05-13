@@ -6,7 +6,8 @@ k = VectorE3(0,0,1)
 I = i * j * k
 
 a = 5 * i + 3 * j + 2 * k
+b = 7 * i + 4 * j
 
-print a.dot(j.cross(k))
-print a ^ j ^ k
-print a.dot(-I * (j^k))
+print a.dot(b.cross(k))
+print a ^ b ^ k
+print a.dot(-I * (b^k))
