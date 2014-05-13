@@ -25,6 +25,7 @@ energies = map(f, extensions)
 # Extract quantity from measure data so that it is suitable for JSXGraph.
 dataX = map(lambda x: x.quantity, extensions)
 dataY = map(lambda x: x.quantity, energies)
+
 minX = min(dataX)
 maxX = max(dataX)
 minY = min(dataY)
