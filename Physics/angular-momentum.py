@@ -17,7 +17,7 @@ w = I * omega
 
 print w
 
-L = m * (omega)
+L = m * (x * x * omega - omega.dot(x) * x)
 
 print L
 
