@@ -26,3 +26,5 @@ v = omega.cross(x)
 
 print v
 
+print L.dot(x)
+
