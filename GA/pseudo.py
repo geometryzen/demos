@@ -1,5 +1,5 @@
 from e3ga import *
-from random import rando
+from random import random
 
 i = VectorE3(1,0,0)
 j = VectorE3(0,1,0)
