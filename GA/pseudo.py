@@ -29,3 +29,6 @@ print B.dot(a)
 print
 print a * I
 print a.dot(I)
+print
+print I * a
+print I.dot(a)
