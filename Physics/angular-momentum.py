@@ -8,6 +8,8 @@ I = i * j * k
 
 b = 5 * i * j
 
-print b
-print I * b
+omega = 5  * k / second
+
+print omega
+x = 
 
