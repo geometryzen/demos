@@ -16,6 +16,7 @@ print a.dot(b.cross(c))
 print a ^ b ^ c
 print a.dot(-I * B)
 print
+print "Triple cross product"
 print a.cross(b.cross(c))
 print a.dot(c) * b - a.dot(b) * c
 print -a << (b ^ c)
