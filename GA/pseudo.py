@@ -1,6 +1,7 @@
 from e3ga import *
 from random import random
 
+one = ScalarE3(1)
 i = VectorE3(1,0,0)
 j = VectorE3(0,1,0)
 k = VectorE3(0,0,1)
@@ -32,5 +33,5 @@ print
 print I * a
 print I.dot(a)
 print
-print I * I
-print I.dot(I)
+print I * 1
+print I.dot(1)
