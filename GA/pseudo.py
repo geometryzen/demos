@@ -33,3 +33,4 @@ print I * a
 print I.dot(a)
 print
 print I * I
+print I.dot(I)
