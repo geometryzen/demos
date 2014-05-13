@@ -1,5 +1,6 @@
 from e3ga import *
 from units import *
+from math import *
 
 i = VectorE3(1,0,0)
 j = VectorE3(0,1,0)
