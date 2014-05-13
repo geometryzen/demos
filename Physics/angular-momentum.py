@@ -16,5 +16,5 @@ w = I * omega
 
 print w
 
-L = 
+L = m * (omega)
 
