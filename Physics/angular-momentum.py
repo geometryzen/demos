@@ -37,6 +37,8 @@ print L
 u = x / magnitude(x)
 print u
 # This may the most suggestive.
-# The angular momentum is proportional to w minus the reflection of w in the plane normal to x.
+# The angular momentum is proportional to w minus the reflection of w in the plane
+# whose normal is along x.
+# The unit vector sandwich
 print (m / 2.0) * (x * x) * (w - u * w * u)
 
