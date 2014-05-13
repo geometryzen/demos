@@ -12,3 +12,5 @@ omega = 5  * k / second
 
 print omega
 
+print I * omega
+
