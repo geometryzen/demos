@@ -10,7 +10,7 @@ m = 2 * kilogram
 x = (4 * i + 3 * k) * meter
 print x
 
-omega = 5  * k / second
+omega = 7  * k / second
 
 print omega
 
