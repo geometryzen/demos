@@ -31,3 +31,5 @@ print L.dot(v)
 
 L = m * (x * x * w - x * (w ^ x))
 
+print L
+
