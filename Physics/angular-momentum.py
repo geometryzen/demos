@@ -7,6 +7,7 @@ k = VectorE3(0,0,1)
 I = i * j * k
 
 m = 2 * kilogram
+x = (4 * i * 3 * j) * meter
 
 omega = 5  * k / second
 
