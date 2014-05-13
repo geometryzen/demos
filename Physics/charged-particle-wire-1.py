@@ -1,4 +1,3 @@
-# Temporarily Broken: Will be fixed shortly. Tue May 13.
 from browser import *
 from three import *
 from workbench import *
