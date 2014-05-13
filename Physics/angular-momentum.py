@@ -6,7 +6,7 @@ j = VectorE3(0,1,0)
 k = VectorE3(0,0,1)
 I = i * j * k
 
-b = 5 * i * j
+m = 2 * kilogram
 
 omega = 5  * k / second
 
@@ -15,4 +15,6 @@ print omega
 w = I * omega
 
 print w
+
+L = 
 
