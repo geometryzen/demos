@@ -38,3 +38,6 @@ print I.dot(one)
 print
 print one * I
 print one.dot(I)
+print
+print one * one
+print one.dot(one)
