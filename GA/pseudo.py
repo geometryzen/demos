@@ -7,4 +7,4 @@ I = i * j * k
 
 print i.dot(j.cross(k))
 print i ^ j ^ k
-print i.dot(I * (j^k))
+print i.dot(-I * (j^k))
