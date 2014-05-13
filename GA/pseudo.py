@@ -16,3 +16,4 @@ print a.dot(-I * (b^c))
 
 print a.cross(b.cross(c))
 print a.dot(c) * b - a.dot(b) * c
+print a.dot(b ^ c)
