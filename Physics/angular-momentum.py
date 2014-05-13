@@ -12,5 +12,7 @@ omega = 5  * k / second
 
 print omega
 
-print I * omega
+w = I * omega
+
+print w
 
