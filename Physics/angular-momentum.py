@@ -37,5 +37,5 @@ print L
 u = x / magnitude(x)
 print u
 
-print (m / 2.0) * (x ** 2) * (w - u * w * u)
+print (m / 2.0) * (x ** 2)
 
