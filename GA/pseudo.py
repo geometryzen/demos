@@ -12,4 +12,4 @@ c = random() * i + 5 * j + 16 * k
 
 print a.dot(b.cross(c))
 print a ^ b ^ c
-print a.dot(-I * (b^c))
+print a.dot(-I3 * (b^c))
