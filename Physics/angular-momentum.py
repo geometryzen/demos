@@ -29,3 +29,5 @@ print v
 print L.dot(x)
 print L.dot(v)
 
+L = m * (x * x * w - x * (w ^ x))
+
