@@ -22,3 +22,7 @@ L = m * (x * x * omega - omega.dot(x) * x)
 
 print L
 
+v = omega.cross(x)
+
+print v
+
