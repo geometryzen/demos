@@ -28,3 +28,4 @@ print -a.dot(B)
 print B.dot(a)
 print
 print a * I
+print a.dot(I)
