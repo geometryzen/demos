@@ -10,9 +10,11 @@ a = random() * i + random() * j + random() * k
 b = random() * i + random() * j + random() * k
 c = random() * i + random() * j + random() * k
 
+B = b ^ c
+
 print a.dot(b.cross(c))
 print a ^ b ^ c
-print a.dot(-I * (b^c))
+print a.dot(-I * B)
 
 print a.cross(b.cross(c))
 print a.dot(c) * b - a.dot(b) * c
