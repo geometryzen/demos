@@ -18,3 +18,5 @@ print w
 
 L = m * (omega)
 
+print L
+
