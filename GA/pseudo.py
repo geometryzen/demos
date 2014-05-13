@@ -23,3 +23,4 @@ print a << (c ^ b)
 print -0.5 * (a * B - B * a)
 print
 print -a.dot(B)
+print B.dot(a)
