@@ -32,7 +32,7 @@ def material(color, opacity, transparent):
 #    mesh.position = VectorE3(0, i-5,0)
 #    scene.add(mesh)
 
-rotor = exp(-BivectorE3(1.0, 0.0, 0.0)*pi/4.0)
+rotor = exp(-BivectorE3(0.0, 1.0, 0.0)*pi/4.0)
 shape = CylinderBuilder().scale(5).attitude(rotor).material(material(0xFFFF00, 1.0, False)).build()
 scene.add(shape)
 
