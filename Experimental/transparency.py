@@ -41,6 +41,7 @@ space = CartesianSpace(scene, renderer)
 workbench = Workbench3D(renderer.domElement, renderer, camera)
 
 omega = 0.2 / second
+B = -BivectorE3(0.0, 1.0, 0.0)
 
 def setUp():
     workbench.setUp()
@@ -48,7 +49,7 @@ def setUp():
 def tick(t):
     time = t * second
     theta = omega * t
-    rotor = exp(-BivectorE3(0.0, 1.0, 0.0)*theta.quantity/2.0)
+    rotor = exp(B*theta.quantity/2.0)
     shape.attitude = rotor
     renderer.render(scene, camera)
 
