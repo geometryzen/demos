@@ -45,6 +45,7 @@ workbench = Workbench3D(renderer.domElement, renderer, camera)
 
 omega = 1.0 / second
 B = -BivectorE3(0.0, 0.0, 1.0)
+e1 = VectorE3(0,0,1)
 
 def setUp():
     workbench.setUp()
@@ -54,7 +55,7 @@ def tick(t):
     theta = omega * t
     rotor = exp(B*theta.quantity/2.0)
     arrow.attitude = rotor
-    cube.attitude = rotor
+    cube.axis = rotor * e1 * ~rotor
     renderer.render(scene, camera)
 
 def tearDown(e):
