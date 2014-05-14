@@ -18,7 +18,7 @@ div.style.width  = "400px"
 div.style.height = "400px"
 win.document = win.document
 
-board = graph.initBoard("box", {"document":win.document,"axis":True,"grid":True})
+board = graph.initBoard("box", {"document":win.document,"axis":True,"grid":True,"showNavigation":False})
 
 A = board.create('point',[1,1],{"name": 'Alice'})
 B = board.create('point',[2,2],{"name":'Bob'})
