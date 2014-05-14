@@ -27,11 +27,11 @@ def material(color):
     return MeshLambertMaterial({"color": color,"opacity": 0.25,"transparent": True})
 
 for i in range(0,10):
-    mesh = Mesh(CubeGeometry(0.1, 5, 5), material(0x0000FF))
-    mesh.position = VectorE3(i-5,0,0)
-    scene.add(mesh)
+#    mesh = Mesh(CubeGeometry(0.1, 5, 5), material(0x0000FF))
+#    mesh.position = VectorE3(i-5,0,0)
+#    scene.add(mesh)
 
-    mesh = Mesh(CubeGeometry(5, 0.1, 5), material(0x00FF00))
+    mesh = Mesh(CubeGeometry(5, 0.1, 5), material(0x0000FF))
     mesh.position = VectorE3(0, i-5,0)
     scene.add(mesh)
 
