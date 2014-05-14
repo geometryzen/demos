@@ -38,8 +38,6 @@ graph = JXG.JSXGraph
 
 win = window.open("","","width=720,height=720")
 
-win.document.open()
-
 link = win.document.createElement("link")
 link.rel  = "stylesheet"
 link.href = "http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600"
