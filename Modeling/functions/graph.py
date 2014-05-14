@@ -43,6 +43,10 @@ link.rel = "stylesheet"
 link.href= "http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600"
 win.document.head.appendChild(link)
 win.document.body.className = win.document.body.className
+docElem = win.document.documentElement
+docElemNext = docElem.nextSibling
+win.document.removeChild(docElem) # this will clear document.styleSheets
+win.document.insertBefore(docElem, docElemNext)
 
 win.document.body.innerHTML = '<div id="box" class="jxgbox"></div>'
 
