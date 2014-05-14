@@ -31,7 +31,7 @@ for i in range(0,10):
     mesh.position = VectorE3(0, i-5,0)
     scene.add(mesh)
 
-workbench = Workbench3D(renderer, camera)
+workbench = Workbench3D(renderer.domElement, renderer, camera)
 
 def setUp():
     workbench.setUp()
