@@ -33,7 +33,7 @@ def material(color, opacity, transparent):
 #    mesh.position = VectorE3(0, i-5,0)
 #    scene.add(mesh)
 
-shape = ConeBuilder().scale(5).material(material(0xFFFF00, 1.0, False)).build()
+shape = ArrowBuilder().scale(5).material(material(0xFFFF00, 1.0, False)).build()
 scene.add(shape)
 
 space = CartesianSpace(scene, renderer)
