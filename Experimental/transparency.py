@@ -24,21 +24,21 @@ renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
 
 def material(color, opacity, transparent):
-    return MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": True})
+    return MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent})
 
 for i in range(0,10):
 #    mesh = Mesh(CubeGeometry(0.1, 5, 5), material(0x0000FF))
 #    mesh.position = VectorE3(i-5,0,0)
 #    scene.add(mesh)
 
-    mesh = Mesh(CubeGeometry(5, 0.1, 5), material(0x0000FF, 0.05))
+    mesh = Mesh(CubeGeometry(5, 0.1, 5), material(0x0000FF, 0.05, True))
     mesh.position = VectorE3(0, i-5,0)
     scene.add(mesh)
 
 e3 = VectorE3(1,0,0)
 
 rotor = exp(-BivectorE3(1.0, -1.0, 0.0)*pi/4.0)
-shape = ArrowBuilder().scale(10).attitude(rotor).segments(24).material(material(0xFF0000, 0.5)).build()
+shape = ArrowBuilder().scale(10).attitude(rotor).segments(24).material(material(0xFF0000, 0.5, False)).build()
 scene.add(shape)
 
 workbench = Workbench3D(renderer.domElement, renderer, camera)
