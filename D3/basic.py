@@ -71,4 +71,3 @@ def tearDown(e):
 
 war = WindowAnimationRunner(tick, terminate, setUp, tearDown, window)
 war.start()
-
