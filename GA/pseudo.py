@@ -9,7 +9,7 @@ I = i * j * k
 
 a = random() * i + random() * j + random() * k
 b = random() * i + random() * j + random() * k
-c = random() * i + rand om() * j + random() * k
+c = random() * i + random() * j + random() * k
 
 B = b ^ c
 
