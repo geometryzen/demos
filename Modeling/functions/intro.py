@@ -47,7 +47,7 @@ link.type = "text/css"
 link.media = "all"
 win.document.head.appendChild(link)
 
-win.document.title = "Energy vesus Extension for a Spring"
+#win.document.title = "Energy vesus Extension for a Spring"
 
 win.document.body.innerHTML = '<div id="box" class="jxgbox"></div>'
 
