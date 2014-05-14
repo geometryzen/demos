@@ -32,8 +32,8 @@ def material(color, opacity, transparent):
 #    mesh.position = VectorE3(0, i-5,0)
 #    scene.add(mesh)
 
-rotor = exp(-BivectorE3(0.0, 0.5, 0.0)*pi/4.0)
-shape = ArrowBuilder().scale(10).attitude(rotor).material(material(0x0000FF, 0.5, True)).build()
+rotor = exp(-BivectorE3(0.0, 1.0, 0.0)*pi/4.0)
+shape = ArrowBuilder().scale(5).attitude(rotor).material(material(0x0000FF, 0.5, True)).build()
 scene.add(shape)
 
 space = CartesianSpace(scene, renderer)
