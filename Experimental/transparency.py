@@ -44,6 +44,7 @@ def setUp():
     workbench.setUp()
 
 def tick(t):
+    shape.attitude = rotor
     renderer.render(scene, camera)
 
 def tearDown(e):
