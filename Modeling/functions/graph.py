@@ -36,7 +36,7 @@ rangeY = abs(maxY-minY)
 JXG = window.JXG
 graph = JXG.JSXGraph
 
-win = window.open("","","width=720,height=720,toolbar=0")
+win = window.open("","","width=720,height=720,toolbar=0,stat=0")
 
 link = win.document.createElement("link")
 link.rel  = "stylesheet"
