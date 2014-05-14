@@ -94,7 +94,5 @@ def tearDown(e):
     win.close()
     if e:
         print e
-    else:
-        print "Goodbye!"
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown, win).start()
