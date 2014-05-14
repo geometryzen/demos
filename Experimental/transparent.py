@@ -27,6 +27,11 @@ material = MeshLambertMaterial({"color":0x0000FF,"opacity":0.5,"transparent":Tru
 mesh = Mesh(CubeGeometry(5, 5, 1), material)
 
 scene.add(mesh)
+e3 = VectorE3(0,0,1)
+
+rotor = exp(-BivectorE3(0.0, 1.0, 0.0)*pi/4.0)
+shape = ArrowBuilder().scale(2).wireframe(False).color(0x0000FF).axis(e3).segments(12).build()
+space.add(shape)
 
 workbench = Workbench3D(renderer.domElement, renderer, camera)
 
