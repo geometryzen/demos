@@ -55,7 +55,3 @@ print I.dot(I)
 print
 print B.dot(a*I)
 print (B ^ a) * I
-
-
-
-
