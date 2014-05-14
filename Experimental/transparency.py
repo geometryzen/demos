@@ -26,6 +26,7 @@ for i in range(0,10):
     mesh = Mesh(CubeGeometry(0.1, 5, 5), MeshLambertMaterial({"color": 0x0000FF,"opacity": 0.25,"transparent": True}))
     mesh.position = VectorE3(i-5,0,0)
     scene.add(mesh)
+    
     mesh = Mesh(CubeGeometry(5, 0.1, 5), MeshLambertMaterial({"color": 0x00FF00,"opacity": 0.25,"transparent": True}))
     mesh.position = VectorE3(0, i-5,0)
     scene.add(mesh)
@@ -38,8 +39,8 @@ def setUp():
 def tick(t):
     renderer.render(scene, camera)
 
-def terminate(t):
-    return t > 60
+#def terminate(t):
+#    return t > 60
 
 def tearDown(e):
     workbench.tearDown()
