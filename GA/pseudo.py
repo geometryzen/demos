@@ -56,3 +56,6 @@ print
 print B.dot(a*I)
 print (B ^ a) * I
 
+
+
+
