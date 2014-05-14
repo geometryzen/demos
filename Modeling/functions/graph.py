@@ -48,7 +48,7 @@ win.document.head.appendChild(link)
 
 link = win.document.createElement("link")
 link.rel  = "stylesheet"
-link.href = "/css/app.css?version=0.9.215"
+link.href = "http://www.geometryzen.org/css/app.css?version=0.9.215"
 link.type = "text/css"
 link.media = "all"
 win.document.head.appendChild(link)
