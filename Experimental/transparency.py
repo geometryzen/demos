@@ -36,6 +36,9 @@ def material(color, opacity, transparent):
 arrow = ArrowBuilder().scale(5).material(material(0xFFFF00, 1.0, False)).build()
 scene.add(arrow)
 
+cube = CubeBuilder().scale(5).material(material(0xFFFF00, 1.0, False)).build()
+scene.add(cube)
+
 space = CartesianSpace(scene, renderer)
 
 workbench = Workbench3D(renderer.domElement, renderer, camera)
@@ -51,6 +54,7 @@ def tick(t):
     theta = omega * t
     rotor = exp(B*theta.quantity/2.0)
     arrow.attitude = rotor
+    cube.attitude = rotor
     renderer.render(scene, camera)
 
 def tearDown(e):
