@@ -33,8 +33,8 @@ def material(color, opacity, transparent):
 #    mesh.position = VectorE3(0, i-5,0)
 #    scene.add(mesh)
 
-shape = ArrowBuilder().scale(5).material(material(0xFFFF00, 1.0, False)).build()
-scene.add(shape)
+arrow = ArrowBuilder().scale(5).material(material(0xFFFF00, 1.0, False)).build()
+scene.add(arrow)
 
 space = CartesianSpace(scene, renderer)
 
@@ -50,7 +50,7 @@ def tick(t):
     time = t * second
     theta = omega * t
     rotor = exp(B*theta.quantity/2.0)
-    shape.attitude = rotor
+    arrow.attitude = rotor
     renderer.render(scene, camera)
 
 def tearDown(e):
