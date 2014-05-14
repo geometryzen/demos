@@ -35,7 +35,6 @@ context = canvas.node().getContext("2d")
 context.globalCompositionOperation = "lighter"
 context.lineWidth = 2
 
-
 def setUp():
     workbench.setUp()
 
