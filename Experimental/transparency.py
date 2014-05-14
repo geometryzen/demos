@@ -41,6 +41,8 @@ space = CartesianSpace(scene, renderer)
 
 workbench = Workbench3D(renderer.domElement, renderer, camera)
 
+omega = 0.2 / second
+
 def setUp():
     workbench.setUp()
 
