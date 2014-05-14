@@ -48,7 +48,7 @@ def setUp():
 def tick(t):
     time = t * second
     theta = omega * t
-    rotor = exp(-BivectorE3(0.0, 1.0, 0.0)*theta/2.0)
+    rotor = exp(-BivectorE3(0.0, 1.0, 0.0)*theta.quantity/2.0)
     shape.attitude = rotor
     renderer.render(scene, camera)
 
