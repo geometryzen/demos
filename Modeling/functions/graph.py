@@ -38,11 +38,11 @@ graph = JXG.JSXGraph
 
 win = window.open("","","width=720,height=720")
 
-link = win.document.createElement("link")
-link.rel  = "stylesheet"
-link.href = "http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600"
-link.type = "text/css"
-win.document.head.appendChild(link)
+#link = win.document.createElement("link")
+#link.rel  = "stylesheet"
+#link.href = "http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600"
+#link.type = "text/css"
+#win.document.head.appendChild(link)
 
 link = win.document.createElement("link")
 link.rel  = "stylesheet"
@@ -50,11 +50,6 @@ link.href = "http://www.geometryzen.org/css/app.css?version=0.9.215"
 link.type = "text/css"
 link.media = "all"
 win.document.head.appendChild(link)
-
-#docElem = win.document.documentElement
-#docElemNext = docElem.nextSibling
-#win.document.removeChild(docElem) # this will clear document.styleSheets
-#w#in.document.insertBefore(docElem, docElemNext)
 
 win.document.body.innerHTML = '<div id="box" class="jxgbox"></div>'
 
