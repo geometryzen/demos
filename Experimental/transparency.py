@@ -39,13 +39,9 @@ def setUp():
 def tick(t):
     renderer.render(scene, camera)
 
-# terminate is optional. You may pass None instead.
-def terminate(t):
-    return t > 5
-
 def tearDown(e):
     workbench.tearDown()
     if e:
         print e
 
-WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, None, setUp, tearDown).start()
