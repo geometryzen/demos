@@ -3,7 +3,7 @@ from math import *
 
 graph = window.JXG.JSXGraph
 
-win = window.open("","","width=600,height=600")
+win = window.open("","","width=820,height=820")
 
 link = win.document.createElement("link")
 link.rel = "stylesheet"
