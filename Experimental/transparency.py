@@ -1,4 +1,4 @@
-from three import *
+from thr ee import *
 from browser import *
 from workbench import *
 
