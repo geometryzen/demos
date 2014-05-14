@@ -13,14 +13,9 @@ renderer.setClearColor(Color(0x080808), 1.0)
 radius = 1
 detail = 0 # Must be an integer: 0,1,2,...
 
-octah = OctahedronGeometry(radius, detail)
+geom = OctahedronGeometry(radius, detail)
 
-print repr(octah)
-print "radius:         " + str(octah.radius)
-print "detail:         " + str(octah.detail)
-print octah
-
-mesh = Mesh(octah, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3}))
+mesh = Mesh(geom, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3}))
 scene.add(mesh)
 
 movement = VectorE3(0.02, 0.02, 0.02)
