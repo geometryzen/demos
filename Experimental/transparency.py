@@ -55,7 +55,7 @@ def tick(t):
     theta = omega * t
     rotor = exp(B*theta.quantity/2.0)
     arrow.attitude = rotor
-    cube.axis = rotor * e1 * ~rotor
+    cube.attitude = rotor * e1 * ~rotor
     renderer.render(scene, camera)
 
 def tearDown(e):
