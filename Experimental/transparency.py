@@ -33,7 +33,7 @@ for i in range(3,7):
     scene.add(mesh)
 
 rotor = exp(-BivectorE3(0.0, 0.0, 0.0)*pi/4.0)
-shape = ArrowBuilder().scale(10).attitude(rotor).segments(24).material(material(0xFF0000, 0.5, True)).build()
+shape = ArrowBuilder().scale(10).attitude(rotor).segments(24).material(material(0x0000FF, 0.5, True)).build()
 scene.add(shape)
 
 space = CartesianSpace(scene, renderer)
