@@ -1,4 +1,3 @@
-# graph.py
 from e3ga import *
 from units import *
 from numpy import *
