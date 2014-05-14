@@ -51,10 +51,10 @@ link.type = "text/css"
 link.media = "all"
 win.document.head.appendChild(link)
 
-docElem = win.document.documentElement
-docElemNext = docElem.nextSibling
-win.document.removeChild(docElem) # this will clear document.styleSheets
-win.document.insertBefore(docElem, docElemNext)
+#docElem = win.document.documentElement
+#docElemNext = docElem.nextSibling
+#win.document.removeChild(docElem) # this will clear document.styleSheets
+#w#in.document.insertBefore(docElem, docElemNext)
 
 win.document.body.innerHTML = '<div id="box" class="jxgbox"></div>'
 
