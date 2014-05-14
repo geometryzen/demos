@@ -2,4 +2,4 @@ from units import *
 
 print tesla
 
-print tesla * meter
+print tesla * meter / second
