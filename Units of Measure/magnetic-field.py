@@ -1,1 +1,3 @@
-# magnetic-field.py
+from units import *
+
+print tesla
