@@ -7,7 +7,7 @@ scene = Scene()
 
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.set(10.0, 9.0, 8.0)
-camera.up()
+camera.up.set(0,0,1)
 camera.lookAt(scene.position)
 
 ambientLight = AmbientLight(0x111111)
