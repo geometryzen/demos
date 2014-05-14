@@ -38,6 +38,11 @@ graph = JXG.JSXGraph
 
 win = window.open("","","width=720,height=720")
 
+link = win.document.createElement("link")
+link.rel = "stylesheet"
+link.href= "http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600"
+win.document.head.appendChild(link)
+
 win.document.body.innerHTML = '<div id="box" class="jxgbox"></div>'
 
 div = win.document.getElementById("box")
