@@ -23,7 +23,7 @@ scene.add(directionalLight)
 renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
 
-def material(color):
+def material(color, opacity):
     return MeshLambertMaterial({"color": color,"opacity": 0.25,"transparent": True})
 
 for i in range(0,10):
