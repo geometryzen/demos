@@ -14,8 +14,8 @@ win.document.body.innerHTML = '<div id="box" class="jxgbox"></div>'
 
 div = win.document.getElementById("box")
 
-div.style.width  = "500px"
-div.style.height = "500px"
+div.style.width  = "600px"
+div.style.height = "600px"
 win.document = win.document
 
 board = graph.initBoard("box", {"document":win.document,"axis":True,"grid":True,"showNavigation":False,"showCopyright":False})
