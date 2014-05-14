@@ -32,7 +32,7 @@ for i in range(0,10):
     mesh.position = VectorE3(0, i-5,0)
     scene.add(mesh)
 
-e3 = VectorE3(0,0,1)
+e3 = VectorE3(1,0,0)
 
 rotor = exp(-BivectorE3(0.0, 1.0, 0.0)*pi/4.0)
 shape = ArrowBuilder().scale(6).axis(e3).segments(24).material(MeshLambertMaterial({"color":0xFF0000,"opacity":0.5,"transparent":True})).build()
