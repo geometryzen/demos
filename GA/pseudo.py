@@ -47,6 +47,7 @@ print "B * B"
 print B * B
 print B.dot(B)
 print B << B
+print B >> B
 print
 print I * I
 print (I ^ one) * I
