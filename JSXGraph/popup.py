@@ -12,7 +12,7 @@ win.document.head.appendChild(link)
 
 link = win.document.createElement("link")
 link.rel = "stylesheet"
-link.href= "http://localhost:8080/css/app.css?version=0.9.209"
+link.href= "/css/app.css?version=0.9.209"
 win.document.head.appendChild(link)
 
 win.document.body.innerHTML = '<div id="box" class="jxgbox"></div>'
