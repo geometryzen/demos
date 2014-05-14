@@ -39,12 +39,12 @@ def setUp():
 def tick(t):
     renderer.render(scene, camera)
 
-#def terminate(t):
-#    return t > 60
+def terminate(t):
+    return t > 5
 
 def tearDown(e):
     workbench.tearDown()
     if e:
         print e
 
-WindowAnimationRunner(tick, None, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
