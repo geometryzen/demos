@@ -32,9 +32,6 @@ maxY = max(dataY)
 rangeX = abs(maxX-minX)
 rangeY = abs(maxY-minY)
 
-JXG = window.JXG
-graph = JXG.JSXGraph
-
 win = window.open("","","width=720,height=720")
 
 link = win.document.createElement("link")
@@ -67,6 +64,9 @@ def boundingBox(padding):
             minY-padding*rangeY]
 
 box = boundingBox(0.10)
+
+JXG = window.JXG
+graph = JXG.JSXGraph
 
 b = graph.initBoard("box", 
                     {"document":win.document,
