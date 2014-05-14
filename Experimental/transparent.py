@@ -28,8 +28,6 @@ mesh = Mesh(CubeGeometry(5, 5, 1), material)
 
 scene.add(mesh)
 
-movement = VectorE3(0.02, 0.02, 0.02)
-
 workbench = Workbench3D(renderer.domElement, renderer, camera)
 
 def setUp():
