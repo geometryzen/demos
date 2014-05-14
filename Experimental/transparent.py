@@ -44,10 +44,7 @@ def setUp():
 def tick(t):
     renderer.render(scene, camera)
 
-def terminate(t):
-    return t > timeOut
-
 def tearDown():
     workbench.tearDown()
 
-WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
+WindowAnimationRunner(tick, None, setUp, tearDown).start()
