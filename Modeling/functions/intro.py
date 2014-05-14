@@ -69,7 +69,7 @@ JXG = window.JXG
 graph = JXG.JSXGraph
 
 b = graph.initBoard("box", 
-                    {"document":win.document,
+                    {"document": win.document,
                      "boundingbox": box,
                      "axis":True,
                      "showCopyright":False,
