@@ -28,17 +28,6 @@ renderer.gammaOutput = True
 material = MeshLambertMaterial({"color":0x0000FF,"opacity":0.5,"transparent":True})
 material.name = "bluecube"
 
-print "repr(material) => " + repr(material)
-print "id: " + str(material.id)
-print "name: " + material.name
-print "color: " + str(material.color)
-print "needsUpdate: " + str(material.needsUpdate)
-print "opacity: " + str(material.opacity)
-print "overdraw: " + str(material.overdraw)
-print "transparent: " + str(material.transparent)
-print "visible: " + str(material.visible)
-print "str(material) => " + str(material)
-
 mesh = Mesh(CubeGeometry(5, 5, 1), material)
 
 scene.add(mesh)
@@ -49,24 +38,8 @@ workbench = Workbench(renderer, camera)
 
 timeOut = 10
 
-def escKey(event, downFlag):
-    event.preventDefault()
-    global timeOut
-    timeOut = 0
-
-keyHandlers = {
- 27: escKey
-}
-    
-def onDocumentKeyDown(event):
-    try:
-        keyHandlers[event.keyCode](event, True)
-    except:
-        pass
-
 def setUp():
     workbench.setUp()
-    document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(t):
     renderer.render(scene, camera)
@@ -75,7 +48,6 @@ def terminate(t):
     return t > timeOut
 
 def tearDown():
-    document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
