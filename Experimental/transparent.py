@@ -36,7 +36,7 @@ movement = VectorE3(0.02, 0.02, 0.02)
 
 workbench = Workbench(renderer, camera)
 
-timeOut = 10
+timeOut = 3
 
 def setUp():
     workbench.setUp()
