@@ -31,7 +31,7 @@ for i in range(0,10):
 #    mesh.position = VectorE3(i-5,0,0)
 #    scene.add(mesh)
 
-    mesh = Mesh(CubeGeometry(5, 0.1, 5), material(0x0000FF))
+    mesh = Mesh(CubeGeometry(5, 0.1, 5), material(0x0000FF, 0.25))
     mesh.position = VectorE3(0, i-5,0)
     scene.add(mesh)
 
