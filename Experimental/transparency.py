@@ -27,18 +27,18 @@ def material(color):
     return MeshLambertMaterial({"color": 0x0000FF,"opacity": 0.25,"transparent": True})
 
 for i in range(0,10):
-    mesh = Mesh(CubeGeometry(0.1, 5, 5), material())
+    mesh = Mesh(CubeGeometry(0.1, 5, 5), material(0xFF0000))
     mesh.position = VectorE3(i-5,0,0)
     scene.add(mesh)
 
-    mesh = Mesh(CubeGeometry(5, 0.1, 5), material())
+    mesh = Mesh(CubeGeometry(5, 0.1, 5), material(0x00FF00))
     mesh.position = VectorE3(0, i-5,0)
     scene.add(mesh)
 
 e3 = VectorE3(1,0,0)
 
 rotor = exp(-BivectorE3(0.0, 1.0, 0.0)*pi/4.0)
-shape = ArrowBuilder().scale(6).axis(e3).segments(24).material(material()).build()
+shape = ArrowBuilder().scale(6).axis(e3).segments(24).material(material(0x0000FF)).build()
 scene.add(shape)
 
 workbench = Workbench3D(renderer.domElement, renderer, camera)
