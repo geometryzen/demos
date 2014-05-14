@@ -10,7 +10,7 @@ link.rel = "stylesheet"
 link.href= "http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600"
 link.setAttribute("rel","stylesheet")
 link.setAttribute("href","http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600")
-#win.document.head.addChild(link)
+win.document.head.addChild(link)
 win.document.body.innerHTML = '<div id="box" class="jxgbox"></div>'
 
 div = win.document.getElementById("box")
