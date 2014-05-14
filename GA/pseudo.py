@@ -43,6 +43,7 @@ print
 print one * one
 print one.dot(one)
 print
+print "B * B"
 print B * B
 print B.dot(B)
 print
