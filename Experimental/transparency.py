@@ -32,7 +32,7 @@ def material(color, opacity, transparent):
 #    mesh.position = VectorE3(0, i-5,0)
 #    scene.add(mesh)
 
-rotor = exp(-BivectorE3(0.0, 0.0, 0.0)*pi/4.0)
+rotor = exp(-BivectorE3(1.0, 0.0, 0.0)*pi/4.0)
 shape = ArrowBuilder().scale(5).attitude(rotor).material(material(0x0000FF, 0.5, True)).build()
 scene.add(shape)
 
