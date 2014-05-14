@@ -37,7 +37,7 @@ for i in range(0,10):
 
 e3 = VectorE3(1,0,0)
 
-rotor = exp(-BivectorE3(0.0, 1.0, 0.0)*pi/4.0)
+rotor = exp(-BivectorE3(1.0, 1.0, 0.0)*pi/4.0)
 shape = ArrowBuilder().scale(10).attitude(rotor).segments(24).material(material(0xFF0000)).build()
 scene.add(shape)
 
