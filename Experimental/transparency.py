@@ -41,7 +41,7 @@ space = CartesianSpace(scene, renderer)
 workbench = Workbench3D(renderer.domElement, renderer, camera)
 
 omega = 1.0 / second
-B = -BivectorE3(0.0, 1.0, 0.0)
+B = -BivectorE3(0.0, 0.0, 1.0)
 
 def setUp():
     workbench.setUp()
