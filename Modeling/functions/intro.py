@@ -32,7 +32,7 @@ maxY = max(dataY)
 rangeX = abs(maxX-minX)
 rangeY = abs(maxY-minY)
 
-win = window.open("","","width=720,height=720")
+win = window.open("", "", "width=720,height=720")
 
 link = win.document.createElement("link")
 link.rel  = "stylesheet"
