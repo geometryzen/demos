@@ -6,6 +6,7 @@ graph = window.JXG.JSXGraph
 win = window.open("","","width=600,height=600")
 
 link = win.document.createElement("link")
+win.document.head.addChild(link)
 win.document.body.innerHTML = '<div id="box" class="jxgbox"></div>'
 
 div = win.document.getElementById("box")
