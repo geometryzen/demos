@@ -20,10 +20,7 @@ directionalLight.position.set(0.0, 1.0, 0.0)
 scene.add(directionalLight)
 
 renderer = WebGLRenderer()
-renderer.autoClear = True
-renderer.gammaInput = True
-renderer.gammaOutput = True
-renderer.setClearColor(Color(0xCCCCCC), 1.0)
+renderer.setClearColor(Color(0x080808), 1.0)
 
 material = MeshLambertMaterial({"color":0x0000FF,"opacity":0.5,"transparent":True})
 
