@@ -39,6 +39,7 @@ def setUp():
 def tick(t):
     renderer.render(scene, camera)
 
+# terminate is optional. You may pass None instead.
 def terminate(t):
     return t > 5
 
