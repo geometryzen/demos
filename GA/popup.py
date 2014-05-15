@@ -85,7 +85,7 @@ B = BivectorE3(0.0, 0.0, 1.0)
 B = B / magnitude(B)
 
 def setUp():
-    workbench2D.setup()
+    workbench2D.setUp()
     workbench3D.setUp()
 
 def tick(t):
