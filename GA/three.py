@@ -31,7 +31,7 @@ def material(color=0x0000FF, opacity=1.0, transparent=False):
     return THREE.MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent})
 
 mesh = THREE.Mesh(THREE.CubeGeometry(5, 0.1, 5), material(0x00FF00, 1.0, False))
-mesh.position = THREE.VectorE3(0, -2, 0)
+mesh.position.set(0, -2, 0)
 scene.add(mesh)
 
 arrow = THREE.Mesh(THREE.ArrowGeometry(5.0), material(0xFFFF00, 1.0, False))
