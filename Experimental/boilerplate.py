@@ -33,6 +33,7 @@ def terminate(t):
 
 def tearDown(e):
     workbench3D.tearDown()
-    print e
+    if e:
+        print e
 
 WindowAnimationRunner(render, terminate, setUp, tearDown).start()
