@@ -23,7 +23,7 @@ directionalLight.position.set(0.0, 1.0, 0.0)
 scene.add(directionalLight)
 
 renderer = THREE.WebGLRenderer()
-renderer.setClearColor(Color(0x080808), 1.0)
+renderer.setClearColor(THREE.Color(0x080808), 1.0)
 
 def material(color=0x0000FF, opacity=1.0, transparent=False):
     return MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent})
