@@ -39,7 +39,7 @@ mesh.position.set(0, -2, 0)
 scene.add(mesh)
 
 # ArrowGeometry isn't really a THREE artifact right now.
-arrow = THREE.Mesh(THREE.ArrowGeometry(5.0), material(0xFFFF00, 1.0, False))
+arrow = THREE.Mesh(THREE.ArrowGeometry(4.0), material(0xFFFF00, 1.0, False))
 scene.add(arrow)
 
 box = THREE.Mesh(THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25, False))
