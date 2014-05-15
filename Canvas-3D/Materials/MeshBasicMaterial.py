@@ -12,7 +12,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 
 material = MeshBasicMaterial({"color":0x0000FF, "wireframe":True})
 material.wireframeLinewidth = 1
-material.name = "greenie"
+material.name = "blue"
 
 print "repr(material) => " + repr(material)
 print "id: " + str(material.id)
