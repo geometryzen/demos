@@ -21,7 +21,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 
 material = MeshLambertMaterial({"color": 0x0000FF})
 
-mesh = Mesh(CubeGeometry(5, 5, 5), material)
+mesh = Mesh(BoxGeometry(5, 5, 5), material)
 
 scene.add(mesh)
 
@@ -41,6 +41,7 @@ def terminate(t):
 
 def tearDown(e):
     workbench.tearDown()
-    print e
+    if e:
+        print e
     
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
