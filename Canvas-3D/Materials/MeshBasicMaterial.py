@@ -32,7 +32,7 @@ mesh = Mesh(SphereGeometry(50.0, 32, 24), material)
 
 scene.add(mesh)
 
-workbench = Workbench(renderer, camera)
+workbench = Workbench3D(renderer, camera)
 
 def setUp():
     workbench.setUp()
