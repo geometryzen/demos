@@ -1,8 +1,10 @@
-import three as THREE
 from browser import *
 from workbench import *
 from math import *
 from units import *
+
+#import three as THREE
+THREE = window.THREE
 
 scene = THREE.Scene()
 
