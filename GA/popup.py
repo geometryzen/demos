@@ -17,7 +17,7 @@ canvas2D = glwin.document.createElement("canvas")
 canvas2D.style.position = "absolute"
 canvas2D.style.top = "0px"
 canvas2D.style.left = "0px"
-workbench2D = Workbench2D(canvas2D)
+workbench2D = Workbench2D(canvas2D, glwin)
 space2D = Stage(canvas2D)
 space2D.autoClear = True
 
