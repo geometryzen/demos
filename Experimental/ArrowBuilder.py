@@ -11,7 +11,7 @@ rotor = exp(-BivectorE3(0.0, 1.0, 0.0)*pi/4.0)
 shape = ArrowBuilder().scale(2).wireframe(False).color(0x0000FF).axis(e3).segments(12).build()
 space.add(shape)
 
-workbench = Workbench(space.renderer, space.camera)
+workbench = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 
 def setUp():
     space.camera.position = VectorE3(1.5, 1.5, 1.5)
