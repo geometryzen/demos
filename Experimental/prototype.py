@@ -16,7 +16,7 @@ space = CartesianSpace(scene, renderer)
 sphere = SphereBuilder().color(0x0000FF).build()
 space.add(sphere)
 
-workbench = Workbench(renderer, space.camera)
+workbench = Workbench3D(renderer.domElement, renderer, space.camera)
 
 timeOut = 1.5 * T
 
