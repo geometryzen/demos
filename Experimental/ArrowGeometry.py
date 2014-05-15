@@ -8,7 +8,7 @@ i = VectorE3(1.0, 0.0, 0.0)
 j = VectorE3(0.0, 1.0, 0.0)
 k = VectorE3(0.0, 0.0, 1.0)
 
-scene = THREE.cene()
+scene = THREE.Scene()
 
 camera  = THREE.PerspectiveCamera(45, 1.0, 0.1, 1000)
 camera.up.set(0.0, 0.0, 1.0)
