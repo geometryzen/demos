@@ -36,7 +36,7 @@ for i in range(3,5):
 arrow = ArrowBuilder().scale(5).material(material(0xFFFF00, 1.0, False)).build()
 scene.add(arrow)
 
-cube = CubeBuilder().scale(5).material(material(0xFF0000, 1.0, False)).build()
+cube = Mesh(CubeGeometry(), material(0x00FF00, 0.25, True))
 scene.add(cube)
 
 #sphere = Mesh(SphereGeometry(1.0,24,16, 0, 2*pi, 0, pi), material(0x00FF00, 0.25, True))
