@@ -75,7 +75,7 @@ scene.add(flat)
 
 CartesianSpace(scene, renderer)
 
-workbench = Workbench3D(renderer.domElement, renderer, camera, glwin)
+workbench3D = Workbench3D(renderer.domElement, renderer, camera, glwin)
 
 tau = 2 * pi
 omega = (tau / 20) / second
@@ -85,7 +85,7 @@ B = BivectorE3(0.0, 0.0, 1.0)
 B = B / magnitude(B)
 
 def setUp():
-    workbench.setUp()
+    workbench3D.setUp()
 
 def tick(t):
     time = t * second
