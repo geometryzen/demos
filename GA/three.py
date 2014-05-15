@@ -55,7 +55,8 @@ workbench = Workbench3D(renderer.domElement, renderer, camera)
 
 tau = 2 * pi
 omega = (tau / 20) / second
-B = -BivectorE3(0.0, 0.0, 1.0)
+# A unit bivector rotating from k to i
+B = BivectorE3(0.0, 0.0, 1.0)
 
 def setUp():
     workbench.setUp()
