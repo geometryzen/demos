@@ -29,7 +29,7 @@ workbench = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 def tick(t):
     global position, move
     position += move
-    if position % i > L:
+    if abs(position % i) > L:
         position = position + L * i - (i << position) * i
         move = R * move * ~R
         return
