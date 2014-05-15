@@ -40,6 +40,7 @@ scene.add(mesh)
 
 cube = THREE.Mesh(THREE.CubeGeometry(1,2,3), material(0xFF0000, 0.25, False))
 scene.add(cube)
+cube.position.set(3,-3,3)
 
 #vortex = THREE.Mesh(THREE.VortexGeometry(4.0, 0.3, 0.05, 0.05, 0.3, 8, 12), material(0x00FFff, 0.3, False))
 #scene.add(vortex)
@@ -54,8 +55,6 @@ workbench = Workbench3D(renderer.domElement, renderer, camera)
 tau = 2 * pi
 omega = (tau / 20) / second
 B = -BivectorE3(0.0, 0.0, 1.0)
-e1 = VectorE3(0,0,1)
-cube.position.set(3,-3,3)
 
 def setUp():
     workbench.setUp()
