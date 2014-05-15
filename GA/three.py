@@ -59,7 +59,7 @@ workbench = Workbench3D(renderer.domElement, renderer, camera)
 tau = 2 * pi
 omega = (tau / 20) / second
 # A unit bivector rotating from k to i
-B = BivectorE3(1.0, 3.0, 5.0)
+B = BivectorE3(0.0, 0.0, 1.0)
 # Just make sure that we really do have a unit bivector.
 B = B / magnitude(B)
 print B
