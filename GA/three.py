@@ -61,7 +61,7 @@ def setUp():
     workbench.setUp()
 
 def tick(t):
-    time = t * second
+    time = 0 * second
     theta = omega * time
     rotor = exp(B*theta.quantity/2.0)
     arrow.quaternion.set(rotor.w, rotor.yz, rotor.zx, rotor.xy)
