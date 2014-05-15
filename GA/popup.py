@@ -1,4 +1,3 @@
-# Experiment with using WebGL in a window with easy setup using the Workbench3D
 from browser import *
 from workbench import *
 from math import *
