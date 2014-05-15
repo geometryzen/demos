@@ -29,23 +29,10 @@ def terminate(time):
 
 def setUp():
     workbench.setUp()
-    document.addEventListener("keydown", onDocumentKeyDown, False)
 
-def tearDown():
-    document.removeEventListener("keydown", onDocumentKeyDown, False)
+def tearDown(e):
     workbench.tearDown()
-
-def escKey(event, downFlag):
-    event.preventDefault()
-    global timeOut
-    timeOut = 0
-
-keyHandlers = {27: escKey}
-    
-def onDocumentKeyDown(event):
-    try:
-        keyHandlers[event.keyCode](event, True)
-    except:
-        pass
+    if e:
+        print e
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
