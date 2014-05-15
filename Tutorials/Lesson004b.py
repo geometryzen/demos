@@ -56,7 +56,9 @@ def terminate(t):
 def setUp():
     workbench.setUp()
 
-def tearDown():
+def tearDown(e):
     workbench.tearDown()
+    if e:
+        print e
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
