@@ -15,7 +15,7 @@ space.add(SphereBuilder().build().translateX(+2.5).translateY(-2.5))
 space.add(ConeBuilder().build().translateX(-2.5).translateY(+2.5))
 space.add(ArrowBuilder().build())
 
-workbench = Workbench(space.renderer, space.camera)
+workbench = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 
 def tick(t):
     space.render()
