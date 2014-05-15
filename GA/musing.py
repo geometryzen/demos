@@ -11,6 +11,7 @@ import three as THREE
 #THREE = window.THREE
 
 glwin = window.open("","","width=800,height=600")
+# Changing the background color is a bit of a hack until I figure out the padding.
 glwin.document.body.style.backgroundColor = "080808"
 glwin.document.body.style.overflow = "hidden"
 
