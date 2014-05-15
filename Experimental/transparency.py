@@ -42,6 +42,9 @@ scene.add(cube)
 sphere = Mesh(SphereGeometry(1.0,24,16, 0, 2*pi, 0, pi), material(0x00FF00, 0.25, True))
 scene.add(sphere)
 
+plane = Mesh(PlaneGeometry(), material(0x00FF00, 0.25, True))
+scene.add(plane)
+
 CartesianSpace(scene, renderer)
 
 workbench = Workbench3D(renderer.domElement, renderer, camera)
