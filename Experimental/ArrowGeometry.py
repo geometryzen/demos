@@ -54,7 +54,7 @@ scene.add(bluMesh)
 scene.add(grnMesh)
 scene.add(yloMesh)
 
-pointLight = PointLight(0x888888)
+pointLight = THREE.PointLight(0x888888)
 pointLight.position.set(20.0, 20.0, 20.0)
 scene.add(pointLight)
 
