@@ -5,7 +5,7 @@ This gives you more control over the visual appearance of the Mesh objects in yo
 from browser import document, WindowAnimationRunner
 from three import Scene, PerspectiveCamera, WebGLRenderer, Color, PointLight, SphereGeometry, MeshNormalMaterial, Mesh
 from math import cos, sin, pi
-from workbench import Workbench
+from workbench import Workbench3D
 
 T = 5
 omega = 2 * pi / T
