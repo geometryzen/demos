@@ -24,7 +24,7 @@ material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth": 1})
 mesh = Mesh(arrow, material)
 space.add(mesh)
 
-workbench = Workbench(space.renderer, space.camera)
+workbench = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 
 def tick(t):
     space.render()
