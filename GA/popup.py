@@ -92,4 +92,4 @@ def tearDown(e):
     if e:
         print "Error during animation: %s" % (e)
 
-WindowAnimationRunner(tick, None, setUp, tearDown, glwin).start()
+WindowAnimationRunner(tick, None, setUp, tearDown).start()
