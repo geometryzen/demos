@@ -38,6 +38,7 @@ def terminate(t):
 def tearDown(e):
     workbench.tearDown()
     print "Goodbye!"
-    print e
+    if e:
+        print e
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
