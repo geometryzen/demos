@@ -1,4 +1,4 @@
-from three import *
+import three as THREE
 from browser import *
 from workbench import *
 from math import pi
