@@ -21,10 +21,10 @@ renderer.gammaInput = True
 renderer.gammaOutput = True
 renderer.setClearColor(THREE.Color(0x080808), 1.0)
 
-redWire = MeshLambertMaterial({"color":0xFF0000})
-grnWire = MeshLambertMaterial({"color":0x00FF00})
-bluWire = MeshLambertMaterial({"color":0x0000FF})
-yloWire = MeshBasicMaterial({"color":0xFFFF00,"wireframe":True})
+redWire = THREE.MeshLambertMaterial({"color":0xFF0000})
+grnWire = THREE.MeshLambertMaterial({"color":0x00FF00})
+bluWire = THREE.MeshLambertMaterial({"color":0x0000FF})
+yloWire = THREE.MeshBasicMaterial({"color":0xFFFF00,"wireframe":True})
 
 redGeom = ArrowGeometry()
 grnGeom = ArrowGeometry(1.0)
