@@ -23,14 +23,16 @@ omega = 2.0 * pi * i * j / 1
 workbench = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 
 frames = 0.0
+elapsed = 0.0
 timeout = 10.0
 
 def setUp():
     workbench.setUp()
 
 def tick(t):
-    global frames
+    global frames, elapsed
     frames += 1.0
+    elapsed = t
     R = exp(-omega * t / 2.0)
     shape.position = R * i * ~R
 #   shape.attitude = R
@@ -41,7 +43,7 @@ def terminate(t):
 
 def tearDown(e):
     workbench.tearDown()
-    print frames / timeout
+    print frames / elapsed
     if e:
         print e
 
