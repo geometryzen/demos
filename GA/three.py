@@ -50,8 +50,8 @@ workbench = Workbench3D(renderer.domElement, renderer, camera)
 
 tau = 2 * pi
 omega = (tau / 20) / second
-B = -BivectorE3(0.0, 0.0, 1.0)
-e1 = VectorE3(0,0,1)
+B = -THREE.BivectorE3(0.0, 0.0, 1.0)
+e1 = THREE>VectorE3(0,0,1)
 cube.position = VectorE3(3,-3,3)
 
 def setUp():
