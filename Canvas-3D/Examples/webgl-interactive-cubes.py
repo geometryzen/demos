@@ -64,7 +64,7 @@ for i in range(0, 2000):
 
     scene.add(mesh)
     
-workbench = Workbench(renderer, camera)
+workbench = Workbench3D(renderer.domElement, renderer, camera)
 
 def onDocumentMouseMove(event):
     event.preventDefault()
