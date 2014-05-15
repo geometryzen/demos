@@ -20,7 +20,7 @@ pointLight = PointLight(0xFFFFFF);
 pointLight.position = camera.position
 scene.add(pointLight)
 
-workbench3D = Workbench(renderer, camera)
+workbench3D = Workbench3D(renderer.domElement, renderer, camera)
 
 side = 4.0
 thk = 0.3
