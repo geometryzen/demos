@@ -88,6 +88,7 @@ def tick(t):
 
 def tearDown(e):
     workbench.tearDown()
+    glwin.close()
     if e:
         print "Error during animation: %s" % (e)
 
