@@ -35,13 +35,13 @@ scene.add(mesh)
 arrow = THREE.Mesh(THREE.ArrowGeometry(5.0), material(0xFFFF00, 1.0, False))
 scene.add(arrow)
 
-cube = THREE.Mesh(CubeGeometry(1,2,3), material(0xFF0000, 0.25, False))
+cube = THREE.Mesh(THREE.CubeGeometry(1,2,3), material(0xFF0000, 0.25, False))
 scene.add(cube)
 
-vortex = Mesh(VortexGeometry(4.0, 0.3, 0.05, 0.05, 0.3, 8, 12), material(0x00FFff, 0.3, False))
+vortex = THREE.Mesh(THREE.VortexGeometry(4.0, 0.3, 0.05, 0.05, 0.3, 8, 12), material(0x00FFff, 0.3, False))
 scene.add(vortex)
 
-flat = Mesh(CubeGeometry(10.0,10.0,0.1), material(0x0000FF, 0.25, True))
+flat = THREE.Mesh(THREE.CubeGeometry(10.0,10.0,0.1), material(0x0000FF, 0.25, True))
 scene.add(flat)
 
 #CartesianSpace(scene, renderer)
