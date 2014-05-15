@@ -5,7 +5,7 @@ from browser import *
 w = window.open("", "", "height=400, width=600")
 
 def tick(time):
-    w.document.title = "Window Popup Demonstration"
+    w.document.title = "Window Popup Demonstration. Press Esc to quit."
     w.document.body.innerHTML = '<h1>' + str(time) + '</h1>'
 
 def terminate(time):
