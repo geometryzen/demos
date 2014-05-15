@@ -14,7 +14,7 @@ camera.lookAt(scene.position)
 ambientLight = THREE.AmbientLight(0x111111)
 scene.add(ambientLight)
 
-pointLight = PointLight(0xFFFFFF)
+pointLight = THREE.PointLight(0xFFFFFF)
 pointLight.position.set(20.0, 20.0, 20.0)
 scene.add(pointLight)
 
