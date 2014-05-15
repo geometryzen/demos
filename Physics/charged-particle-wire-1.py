@@ -19,7 +19,7 @@ i = VectorE3(1.0, 0.0, 0.0)
 j = VectorE3(0.0, 1.0, 0.0)
 k = VectorE3(0.0, 0.0, 1.0)
 
-workbench3D = Workbench(space3D.renderer, space3D.camera)
+workbench3D = Workbench3D(space3D.renderer.domElement, space3D.renderer, space3D.camera)
 
 particle = SphereBuilder().color("blue").radius(0.1).build()
 particle.charge   = ScalarE3(1.0)
