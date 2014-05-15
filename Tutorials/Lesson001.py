@@ -14,13 +14,13 @@ def tick(time):
     global elapsed, frames
     elapsed = time
     frames += 1
-    print "It's time to move and render. The time is now " + str(time)
+#   print "It's time to move and render. The time is now " + str(time)
 
 # The terminate function is called repeatedly with a time parameter (in seconds).
 # It is used by the animation runner to determine whether the animation should end. 
 def terminate(time):
     done = time > 1
-    print "The time is " + str(time) + ". Are we done yet? " + str(done)
+#   print "The time is " + str(time) + ". Are we done yet? " + str(done)
     return done
 
 # The setUp function is called once at the beginning of the animation.
