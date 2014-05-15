@@ -9,7 +9,7 @@ space = CartesianSpace()
 
 radius = 4.0
 radiusCone = 0.32
-radiusShaft = 0.01
+radiusShaft = 0.1
 lengthCone = 0.36
 lengthShaft = 0.8
 arrowSegments = 8
