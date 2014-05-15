@@ -70,6 +70,7 @@ def tick(t):
     cube.attitude = rotor
     mesh.attitude = rotor
     plane.attitude = rotor
+    vortex.attitude = rotor
     renderer.render(scene, camera)
 
 def tearDown(e):
