@@ -43,8 +43,8 @@ box = THREE.Mesh(THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25, False))
 scene.add(box)
 box.position.set(3,-3,3)
 
-#vortex = THREE.Mesh(THREE.VortexGeometry(4.0, 0.3, 0.05, 0.05, 0.3, 8, 12), material(0x00FFff, 0.3, False))
-#scene.add(vortex)
+vortex = THREE.Mesh(THREE.VortexGeometry(4.0, 0.3, 0.05, 0.05, 0.3, 8, 12), material(0x00FFff, 0.3, False))
+scene.add(vortex)
 
 flat = THREE.Mesh(THREE.BoxGeometry(10.0,10.0,0.1), material(0x0000FF, 0.25, True))
 scene.add(flat)
@@ -67,7 +67,7 @@ def tick(t):
 #   arrow.attitude = rotor
     box.attitude = rotor
     box.quaternion.set(rotor.w, rotor.yz, rotor.zx, rotor.xy)
-#   vortex.attitude = rotor
+    vortex.quaternion.set(rotor.w, rotor.yz, rotor.zx, rotor.xy)
     flat.quaternion.set(rotor.w, rotor.yz, rotor.zx, rotor.xy)
     renderer.render(scene, camera)
 
