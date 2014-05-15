@@ -8,7 +8,7 @@ from browser import document, WindowAnimationRunner
 from three import Scene, PerspectiveCamera, WebGLRenderer, Color, PointLight
 from geometry import SphereBuilder
 from math import cos, sin, pi
-from workbench import Workbench
+from workbench import Workbench3D
 
 T = 5
 omega = 2 * pi / T
@@ -30,7 +30,7 @@ scene.add(pointLight)
 sphere = SphereBuilder().color(0x0000FF).build()
 scene.add(sphere)
 
-workbench = Workbench(renderer, camera)
+workbench = Workbench3D(renderer.domElement, renderer, camera)
 
 timeOut = 20
 
