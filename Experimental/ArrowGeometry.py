@@ -19,7 +19,7 @@ renderer = THREE.WebGLRenderer()
 renderer.autoClear = True
 renderer.gammaInput = True
 renderer.gammaOutput = True
-renderer.setClearColor(Color(0x080808), 1.0)
+renderer.setClearColor(THREE.Color(0x080808), 1.0)
 
 redWire = MeshLambertMaterial({"color":0xFF0000})
 grnWire = MeshLambertMaterial({"color":0x00FF00})
