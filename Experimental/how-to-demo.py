@@ -39,7 +39,7 @@ def tick(t):
 def terminate(t):
     return False
 
-def tearDown():
+def tearDown(e):
     workbench3D.tearDown()
     workbench2D.tearDown()
 
