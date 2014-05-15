@@ -8,7 +8,7 @@ timeOut = 5
 space = CartesianSpace()
 
 radius = 4.0
-radiusCone = 0.08
+radiusCone = 0.32
 radiusShaft = 0.01
 lengthCone = 0.1
 lengthShaft = 0.8
