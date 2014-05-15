@@ -16,7 +16,7 @@ depth = 10
 widthSegments = 1
 heightSegments = 2
 depthSegments = 3
-cube = CubeGeometry(width, height, depth, widthSegments, heightSegments, depthSegments)
+cube = BoxGeometry(width, height, depth, widthSegments, heightSegments, depthSegments)
 
 print repr(cube)
 print "width:          " + str(cube.width)
