@@ -39,14 +39,13 @@ scene.add(arrow)
 cube = CubeBuilder().scale(5).material(material(0xFFFF00, 1.0, False)).build()
 scene.add(cube)
 
-#space = CartesianSpace(scene, renderer)
+space = CartesianSpace(scene, renderer)
 
 workbench = Workbench3D(renderer.domElement, renderer, camera)
 
 tau = 2 * pi
 omega = (tau / 5) / second
 B = -BivectorE3(0.0, 0.0, 1.0)
-print B * B
 e1 = VectorE3(0,0,1)
 cube.position = VectorE3(3,3,0)
 
