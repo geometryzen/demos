@@ -35,7 +35,7 @@ scene.add(mesh)
 timeOut = 6
 movement = 0.02 * VectorE3(1.0, 1.0, 1.0)
 
-workbench = Workbench3D(renderer, camera)
+workbench = Workbench3D(renderer.domElement, renderer, camera)
 
 def setUp():
     workbench.setUp()
