@@ -15,7 +15,7 @@ camera.up.set(0.0, 0.0, 1.0)
 camera.position.set(3.0, 3.0, 3.0)
 camera.lookAt(scene.position)
 
-renderer = WebGLRenderer()
+renderer = THREE.WebGLRenderer()
 renderer.autoClear = True
 renderer.gammaInput = True
 renderer.gammaOutput = True
