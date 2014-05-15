@@ -1,5 +1,3 @@
-# three.py
-from three import *
 from browser import *
 from workbench import *
 from math import *
