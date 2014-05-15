@@ -55,7 +55,7 @@ scene.add(plane)
 renderer = WebGLRenderer({"antialias": True})
 renderer.setClearColor(Color(0xFFFFFF), 1.0)
 
-workbench = Workbench(renderer, camera)
+workbench = Workbench3D(renderer, camera)
 
 def onDocumentMouseDown(event):
     global mouseXOnMouseDown, targetRotationOnMouseDown
