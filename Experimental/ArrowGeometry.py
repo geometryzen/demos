@@ -31,10 +31,10 @@ grnGeom = THREE.ArrowGeometry(1.0)
 bluGeom = THREE.ArrowGeometry(0.5)
 yloGeom = THREE.ArrowGeometry(0.5)
 
-redMesh = Mesh(redGeom, redWire)
-grnMesh = Mesh(grnGeom, grnWire)
-bluMesh = Mesh(bluGeom, bluWire)
-yloMesh = Mesh(yloGeom, yloWire)
+redMesh = THREE.Mesh(redGeom, redWire)
+grnMesh = THREE.Mesh(grnGeom, grnWire)
+bluMesh = THREE.Mesh(bluGeom, bluWire)
+yloMesh = THREE.Mesh(yloGeom, yloWire)
 # lookAt is an alternate way of performing a rotation.
 # lookAt aligns the arrow with the specified vector.
 # It depends on the position of the arrow.
