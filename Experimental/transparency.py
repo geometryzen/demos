@@ -43,7 +43,8 @@ space = CartesianSpace(scene, renderer)
 
 workbench = Workbench3D(renderer.domElement, renderer, camera)
 
-omega = 2 * pi / second
+tau = 2 * pi
+omega = (tau / 5) / second
 B = -BivectorE3(0.0, 0.0, 1.0)
 e1 = VectorE3(0,0,1)
 
