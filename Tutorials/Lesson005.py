@@ -5,7 +5,7 @@ We respond to the Escape key in order to end the animation prematurely.
 from browser import document, WindowAnimationRunner
 from geometry import CartesianSpace, SphereBuilder
 from math import cos, sin, pi
-from workbench import Workbench
+from workbench import Workbench3D
 
 T = 5
 omega = 2 * pi / T
@@ -16,7 +16,7 @@ space = CartesianSpace()
 sphere = SphereBuilder().color(0x0000FF).radius(0.2).build()
 space.add(sphere)
 
-workbench = Workbench(space.renderer, space.camera)
+workbench = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 
 timeOut = 10
 
