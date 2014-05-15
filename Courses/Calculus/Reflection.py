@@ -15,7 +15,7 @@ v = -j + k
 n = 3 * k
 r = n * v * n / (n * n)
 
-workbench3D = Workbench(space3D.renderer, space3D.camera)
+workbench3D = Workbench3D(space3D.renderer.domElement, space3D.renderer, space3D.camera)
 
 # Probe to show the initial vector.
 probeV = ProbeBuilderE3().color(0xFF0000).build()
