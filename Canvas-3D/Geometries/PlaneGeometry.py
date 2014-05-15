@@ -18,7 +18,7 @@ print plane
 mesh = Mesh(plane, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 2}))
 space.add(mesh)
 
-workbench = Workbench(space.renderer, space.camera)
+workbench = Workbench3D(space.renderer, space.camera)
 
 def setUp():
     workbench.setUp()
