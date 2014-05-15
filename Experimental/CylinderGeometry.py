@@ -11,7 +11,7 @@ timeOut = 3
 
 e2 = VectorE3(0,1,0)
 
-workbench = Workbench3D(space.renderer.canvas, space.renderer, space.camera)
+workbench = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 
 def setUp():
     workbench.setUp()
