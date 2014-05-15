@@ -18,7 +18,7 @@ pointLight = THREE.PointLight(0xFFFFFF)
 pointLight.position.set(20.0, 20.0, 20.0)
 scene.add(pointLight)
 
-directionalLight = DirectionalLight(0xFFFFFF)
+directionalLight = THREE.DirectionalLight(0xFFFFFF)
 directionalLight.position.set(0.0, 1.0, 0.0)
 scene.add(directionalLight)
 
