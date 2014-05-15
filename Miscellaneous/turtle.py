@@ -15,5 +15,3 @@ tommy = turtle.Turtle()
 draw_circle(tommy, "green", 50, 25, 0)
 draw_circle(tommy, "blue", 50, 0, 0)
 draw_circle(tommy, "yellow", 50, -25, 0)
-
-# Can you change the circles to be your favorite colors?
