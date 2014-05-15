@@ -54,7 +54,7 @@ dt = 0.3
 
 frames = 0.0
 elapsed = 0.0
-timeout = 6.0
+timeout = 12.0
 
 def setUp():
     workbench3D.setUp()
