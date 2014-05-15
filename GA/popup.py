@@ -103,7 +103,7 @@ def tick(t):
     renderer.render(scene, camera)
 
 def tearDown(e):
-    workbench.tearDown()
+    workbench3D.tearDown()
     glwin.close()
     if e:
         print "Error during animation: %s" % (e)
