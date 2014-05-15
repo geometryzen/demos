@@ -11,6 +11,7 @@ import three as THREE
 #THREE = window.THREE
 
 glwin = window.open("","","width=800,height=600")
+glwin.document.body.style.overflow = "hidden"
 
 scene = THREE.Scene()
 
