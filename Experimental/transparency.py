@@ -54,7 +54,6 @@ def setUp():
 
 def tick(t):
     time = t * second
-    print time
     theta = omega * t
     rotor = exp(B*theta.quantity/2.0)
     arrow.attitude = rotor
