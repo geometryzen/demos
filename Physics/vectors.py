@@ -50,6 +50,7 @@ def terminate(t):
 def tearDown(e):
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench.tearDown()
-    print e
+    if e:
+        print e
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
