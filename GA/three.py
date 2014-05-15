@@ -6,8 +6,9 @@ from e3ga import *
 from geometry import *
 
 # This works both through the Python DaVinci wrapper as well as using JavaScript dynamic wrapping.
-#import three as THREE
-THREE = window.THREE
+# Provided you don't try to use the attitude property on the mesh.
+import three as THREE
+#THREE = window.THREE
 
 scene = THREE.Scene()
 
