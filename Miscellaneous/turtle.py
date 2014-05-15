@@ -1,4 +1,4 @@
-import turtle
+import sprite
 
 def draw_circle(turtle, color, size, x, y):
     turtle.penup()
