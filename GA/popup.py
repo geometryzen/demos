@@ -32,7 +32,6 @@ output.x = 100
 output.y = 60
 space2D.addChild(output)
 
-
 scene = THREE.Scene()
 
 camera = THREE.PerspectiveCamera(45, 1.0, 0.1, 10000)
