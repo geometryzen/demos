@@ -1,1 +1,19 @@
-# turtle.py
+import turtle
+
+def draw_circle(turtle, color, size, x, y):
+    turtle.penup()
+    turtle.color(color)
+    turtle.fillcolor(color)
+    turtle.goto(x,y)
+    turtle.begin_fill()
+    turtle.circle(size)
+    turtle.end_fill()
+    turtle.pendown()
+
+tommy = turtle.Turtle()
+
+draw_circle(tommy, "green", 50, 25, 0)
+draw_circle(tommy, "blue", 50, 0, 0)
+draw_circle(tommy, "yellow", 50, -25, 0)
+
+# Can you change the circles to be your favorite colors?
