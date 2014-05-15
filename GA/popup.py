@@ -7,8 +7,8 @@ from geometry import *
 
 # This works both through the Python DaVinci wrapper as well as using JavaScript dynamic wrapping.
 # Provided you don't try to use the attitude property on the mesh together with native THREE.
-#import three as THREE
-THREE = window.THREE
+import three as THREE
+#THREE = window.THREE
 
 glwin = window.open("","","width=800,height=600")
 
