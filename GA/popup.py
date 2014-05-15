@@ -102,7 +102,6 @@ def tick(t):
     vortex.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     flat.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     renderer.render(scene, camera)
-    workbench2D.render()
 
 def tearDown(e):
     workbench3D.tearDown()
