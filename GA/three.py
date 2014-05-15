@@ -64,7 +64,7 @@ def tick(t):
     time = 0 * second
     theta = omega * time
     rotor = exp(B*theta.quantity/2.0)
-    arrow.quaternion.set(rotor.w, rotor.yz, rotor.zx, rotor.xy)
+    arrow.quaternion.set(rotor.yz, rotor.zx, rotor.xy, rotor.w)
     box.attitude = rotor
     box.quaternion.set(rotor.w, rotor.yz, rotor.zx, rotor.xy)
     vortex.quaternion.set(rotor.w, rotor.yz, rotor.zx, rotor.xy)
