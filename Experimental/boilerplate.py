@@ -23,10 +23,7 @@ def setUp():
     workbench3D.setUp()
 
 def render(t):
-    try:
-        renderer.render(scene, camera)
-    except:
-        print "Unexpected error"
+    renderer.render(scene, camera)
 
 def terminate(t):
     return t > timeOut
