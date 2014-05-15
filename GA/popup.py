@@ -59,7 +59,7 @@ scene.add(flat)
 
 CartesianSpace(scene, renderer)
 
-workbench = Workbench3D(renderer.domElement, renderer, camera, camera)
+workbench = Workbench3D(renderer.domElement, renderer, camera)
 
 tau = 2 * pi
 omega = (tau / 20) / second
