@@ -5,9 +5,15 @@ We don't actually render anything in 3D until the next lesson.
 '''
 from browser import WindowAnimationRunner
 
+frames = 0
+elapsed = 0.0
+
 # The tick function is called repeatedly with a time parameter (in seconds).
 # You will be expected to move objects in your animation and then render them in this function.
 def tick(time):
+    global elapsed, frames
+    elapsed = time
+    frames += 1
     print "It's time to move and render. The time is now " + str(time)
 
 # The terminate function is called repeatedly with a time parameter (in seconds).
@@ -23,6 +29,7 @@ def setUp():
 
 # The tearDown function is called once at the end of the animation.
 def tearDown(e):
+    print frames / elapsed
     if e:
         print e
 
