@@ -39,7 +39,7 @@ scene.add(arrow)
 cube = CubeBuilder().scale(5).material(material(0xFF0000, 1.0, False)).build()
 scene.add(cube)
 
-sphere = Mesh(SphereGeometry(1.0,12,12, 0, pi/2, 0, pi/2), material(0x00FF00, 0.25, True))
+sphere = Mesh(SphereGeometry(1.0,12,12, 0, 2*pi, 0, pi/2), material(0x00FF00, 0.25, True))
 scene.add(sphere)
 
 CartesianSpace(scene, renderer)
