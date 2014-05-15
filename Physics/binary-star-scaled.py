@@ -30,7 +30,7 @@ canvas2D = document.createElement("canvas")
 canvas2D.style.position = "absolute"
 canvas2D.style.top = "0px"
 canvas2D.style.left = "0px"
-workbench2D = Workbench2D(canvas2D)
+#workbench2D = Workbench2D(canvas2D)
 space2D = Stage(canvas2D)
 space2D.autoClear = True
 
@@ -41,7 +41,7 @@ output.y = window.innerHeight / 2
 space2D.addChild(output)
 
 def setUp():
-    workbench2D.setUp()
+#    workbench2D.setUp()
     workbench3D.setUp()
 
 def tick(t):
@@ -64,7 +64,7 @@ def terminate(t):
 
 def tearDown(e):
     workbench3D.tearDown()
-    workbench2D.tearDown()
+#    workbench2D.tearDown()
     if e:
         print e
 
