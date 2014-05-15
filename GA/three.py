@@ -62,7 +62,7 @@ def setUp():
 
 def tick(t):
     time = t * second
-    theta = omega * t
+    theta = omega * time
     rotor = exp(B*theta.quantity/2.0)
 #    arrow.quaternion.set(rotor.w, rotor.yz, rotor.zx, rotor.xy)
     box.attitude = rotor
