@@ -32,7 +32,7 @@ mesh = THREE.Mesh(THREE.CubeGeometry(5, 0.1, 5), material(0x00FF00, 1.0, False))
 mesh.position = THREE.VectorE3(0, -2, 0)
 scene.add(mesh)
 
-arrow = THREE.Mesh(ArrowGeometry(5.0), material(0xFFFF00, 1.0, False))
+arrow = THREE.Mesh(THREE.ArrowGeometry(5.0), material(0xFFFF00, 1.0, False))
 scene.add(arrow)
 
 cube = Mesh(CubeGeometry(1,2,3), material(0xFF0000, 0.25, False))
