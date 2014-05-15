@@ -64,7 +64,7 @@ def tick(t):
     time = t * second
     theta = omega * t
     rotor = exp(B*theta.quantity/2.0)
-    arrow.attitude = rotor
+#   arrow.attitude = rotor
     cube.attitude = rotor
     vortex.attitude = rotor
     flat.attitude = rotor
