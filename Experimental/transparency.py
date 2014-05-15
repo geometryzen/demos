@@ -36,7 +36,7 @@ for i in range(3,5):
 arrow = ArrowBuilder().scale(5).material(material(0xFFFF00, 1.0, False)).build()
 scene.add(arrow)
 
-cube = CubeBuilder().scale(5).material(material(0xFF0000, 0.25, True)).build()
+cube = CubeBuilder().scale(5).material(material(0xFF0000, 1.0, False)).build()
 scene.add(cube)
 
 CartesianSpace(scene, renderer)
