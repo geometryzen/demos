@@ -2,6 +2,7 @@ import three as THREE
 from browser import *
 from workbench import *
 from math import pi
+from e3ga import *
 
 i = VectorE3(1.0, 0.0, 0.0)
 j = VectorE3(0.0, 1.0, 0.0)
