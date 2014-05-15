@@ -35,7 +35,7 @@ scene.add(mesh)
 arrow = THREE.Mesh(THREE.ArrowGeometry(5.0), material(0xFFFF00, 1.0, False))
 scene.add(arrow)
 
-cube = Mesh(CubeGeometry(1,2,3), material(0xFF0000, 0.25, False))
+cube = THREE.Mesh(CubeGeometry(1,2,3), material(0xFF0000, 0.25, False))
 scene.add(cube)
 
 vortex = Mesh(VortexGeometry(4.0, 0.3, 0.05, 0.05, 0.3, 8, 12), material(0x00FFff, 0.3, False))
