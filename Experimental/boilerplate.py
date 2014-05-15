@@ -17,26 +17,10 @@ scene = Scene()
 renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
 
-workbench3D = Workbench3D(renderer.domElement, renderer, camera)
-
-def escKey(event, downFlag):
-    event.preventDefault()
-    global timeOut
-    timeOut = 0
-
-keyHandlers = {
- 27: escKey
-}
-    
-def onDocumentKeyDown(event):
-    try:
-        keyHandlers[event.keyCode](event, True)
-    except:
-        pass
+workbench3D = Workbench3D(renderer.domElement, renderer, camera, window)
 
 def setUp():
     workbench3D.setUp()
-    document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def render(t):
     try:
@@ -48,7 +32,6 @@ def terminate(t):
     return t > timeOut
 
 def tearDown(e):
-    document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench3D.tearDown()
     print e
 
