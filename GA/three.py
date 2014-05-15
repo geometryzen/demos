@@ -66,6 +66,7 @@ def tick(t):
     rotor = exp(B*theta.quantity/2.0)
 #   arrow.attitude = rotor
     cube.attitude = rotor
+    cube.quaternion.set(rotor.w, rotor.yz, rotor.zx, rotor.xy)
 #   vortex.attitude = rotor
     flat.attitude = rotor
     renderer.render(scene, camera)
