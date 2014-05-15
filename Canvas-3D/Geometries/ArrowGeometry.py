@@ -25,7 +25,7 @@ print geometry
 
 space.add(arrow)
 
-workbench = Workbench(space.renderer, space.camera)
+workbench = Workbench3D(space.renderer, space.camera)
 
 def tick(t):
     space.render()
@@ -36,7 +36,7 @@ def terminate(t):
 def setUp():
     workbench.setUp()
 
-def tearDown():
+def tearDown(e):
     workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
