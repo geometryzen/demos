@@ -47,8 +47,9 @@ def render(t):
 def terminate(t):
     return t > timeOut
 
-def tearDown():
+def tearDown(e):
     document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench3D.tearDown()
+    print e
 
 WindowAnimationRunner(render, terminate, setUp, tearDown).start()
