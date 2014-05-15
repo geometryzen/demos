@@ -25,7 +25,7 @@ def setUp():
     # Incorporate the canvas into the Geometry Zen window document.
     workbench.setUp()
 
-def tearDown():
+def tearDown(e):
     # Clean up by removing the canvas from the Geometry Zen window document. 
     workbench.tearDown()
 
