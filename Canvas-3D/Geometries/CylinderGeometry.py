@@ -36,7 +36,7 @@ def tick(t):
 def terminate(t):
     return t > 3
 
-def tearDown():
+def tearDown(e):
     workbench.tearDown()
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
