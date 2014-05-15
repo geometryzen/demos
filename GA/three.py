@@ -64,6 +64,7 @@ def setUp():
 def tick(t):
     time = t * second
     theta = omega * time
+    # The rotor is defined to have a minus sign.
     rotor = exp(-B*theta.quantity/2.0)
     arrow.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     box.attitude = rotor
