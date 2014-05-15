@@ -11,7 +11,7 @@ def draw_circle(turtle, color, size, x, y):
     turtle.end_fill()
     turtle.pendown()
 
-tommy = turtle.Turtle()
+tommy = turtle.Sprite()
 
 draw_circle(tommy, "green", 50, 25, 0)
 draw_circle(tommy, "blue", 50, 0, 0)
