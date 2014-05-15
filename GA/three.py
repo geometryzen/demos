@@ -4,6 +4,7 @@ from math import *
 from units import *
 
 Scene = window.THREE.Scene
+PrespectiveCamera = window.THREE.PerspectiveCamera
 
 scene = Scene()
 
