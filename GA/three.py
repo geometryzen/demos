@@ -1,12 +1,10 @@
+import three as THREE
 from browser import *
 from workbench import *
 from math import *
 from units import *
 
-Scene = window.THREE.Scene
-PerspectiveCamera = window.THREE.PerspectiveCamera
-
-scene = Scene()
+scene = THREE.Scene()
 
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.set(10.0, 9.0, 8.0)
