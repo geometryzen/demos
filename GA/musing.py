@@ -39,12 +39,6 @@ scene.add(arrow)
 cube = Mesh(CubeGeometry(1,2,3), material(0xFF0000, 0.25, False))
 scene.add(cube)
 
-#sphere = Mesh(SphereGeometry(1.0,24,16, 0, 2*pi, 0, pi), material(0x00FF00, 0.25, True))
-#scene.add(sphere)
-
-plane = Mesh(PlaneGeometry(1.0,1.0), material(0x00FF00, 0.25, True))
-scene.add(plane)
-
 vortex = Mesh(VortexGeometry(4.0, 0.3, 0.05, 0.05, 0.3, 8, 12), material(0x00FFff, 0.3, False))
 scene.add(vortex)
 
@@ -71,8 +65,6 @@ def tick(t):
     rotor = exp(B*theta.quantity/2.0)
     arrow.attitude = rotor
     cube.attitude = rotor
-    mesh.attitude = rotor
-    plane.attitude = rotor
     vortex.attitude = rotor
     flat.attitude = rotor
     renderer.render(scene, camera)
