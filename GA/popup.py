@@ -107,5 +107,7 @@ def tearDown(e):
     glwin.close()
     if e:
         print "Error during animation: %s" % (e)
+    else:
+        print "Goodbye!"
 
 WindowAnimationRunner(tick, None, setUp, tearDown, glwin).start()
