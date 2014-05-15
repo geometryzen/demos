@@ -28,7 +28,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 def material(color, opacity, transparent):
     return MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent})
 
-for i in range(3,7):
+for i in range(3,5):
     mesh = Mesh(CubeGeometry(5, 0.1, 5), material(0x0000FF, 0.25, True))
     mesh.position = VectorE3(0, i-5,0)
     scene.add(mesh)
