@@ -23,7 +23,7 @@ space2D.autoClear = True
 
 font = "20px Helvetica"
 
-output = Text("Hit Esc key to exit.", font, "black")
+output = Text("Hit Esc key to exit.", font, "white")
 output.x = 100
 output.y = 60
 space2D.addChild(output)
