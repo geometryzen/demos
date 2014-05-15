@@ -32,7 +32,6 @@ mesh = Mesh(CubeGeometry(5, 0.1, 5), material(0x00FF00, 1.0, False))
 mesh.position = VectorE3(0, -2, 0)
 scene.add(mesh)
 
-arrow = ArrowBuilder().scale(5).material(material(0xFFFF00, 1.0, False)).build()
 arrow = Mesh(ArrowGeometry(5.0), material(0xFFFF00, 1.0, False))
 scene.add(arrow)
 
