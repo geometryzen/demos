@@ -60,6 +60,7 @@ tau = 2 * pi
 omega = (tau / 20) / second
 # A unit bivector rotating from k to i
 B = BivectorE3(0.0, 0.0, 5.0)
+B = B / magnitude(B)
 
 def setUp():
     workbench.setUp()
