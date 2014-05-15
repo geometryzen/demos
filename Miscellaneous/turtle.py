@@ -1,4 +1,4 @@
-import sprite as turtle
+import sprite as t
 
 # FIXME: The library expects there to be a context out there magically.
 def draw_circle(turtle, color, size, x, y):
