@@ -22,8 +22,9 @@ def setUp():
     pass
 
 # The tearDown function is called once at the end of the animation.
-def tearDown():
-    pass
+def tearDown(e):
+    if e:
+        print e
 
 # The animation starts when the start method is caled.
 war = WindowAnimationRunner(tick, terminate, setUp, tearDown)
