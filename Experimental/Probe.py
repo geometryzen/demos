@@ -40,25 +40,9 @@ space3D.add(probe.grade1)
 space3D.add(probe.grade2)
 space3D.add(probe.grade3)
 
-def escKey(event, downFlag):
-    event.preventDefault()
-    global timeOut
-    timeOut = 0
-
-keyHandlers = {
- 27: escKey
-}
-    
-def onDocumentKeyDown(event):
-    try:
-        keyHandlers[event.keyCode](event, True)
-    except:
-        pass
-
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
-    document.addEventListener("keydown", onDocumentKeyDown, False)
 
 def tick(t):
     probe.quantity = quantity
@@ -70,7 +54,6 @@ def terminate(t):
     return t > timeOut
 
 def tearDown():
-    document.removeEventListener("keydown", onDocumentKeyDown, False)
     workbench3D.tearDown()
     workbench2D.tearDown()
 
