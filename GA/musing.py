@@ -54,7 +54,6 @@ omega = (tau / 20) / second
 B = -BivectorE3(0.0, 0.0, 1.0)
 e1 = VectorE3(0,0,1)
 cube.position = VectorE3(3,-3,3)
-plane.position = VectorE3(5,5,5)
 
 def setUp():
     workbench.setUp()
