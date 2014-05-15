@@ -45,7 +45,7 @@ scene.add(cube)
 plane = Mesh(PlaneGeometry(1.0,1.0), material(0x00FF00, 0.25, True))
 scene.add(plane)
 
-vortex = Mesh(VortexGeometry(5.0, 0.3, 0.05, 0.05, 0.3, 8, 12), material(0x00FFff, 0.25, True))
+vortex = Mesh(VortexGeometry(4.0, 0.3, 0.05, 0.05, 0.3, 8, 12), material(0x00FFff, 0.25, True))
 scene.add(vortex)
 
 CartesianSpace(scene, renderer)
