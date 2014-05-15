@@ -73,6 +73,6 @@ def tick(t):
 def tearDown(e):
     workbench.tearDown()
     if e:
-        print "Exception during animation: %s" % (e)
+        print "Error during animation: %s" % (e)
 
 WindowAnimationRunner(tick, None, setUp, tearDown).start()
