@@ -40,8 +40,8 @@ scene.add(mesh)
 cube = THREE.Mesh(THREE.CubeGeometry(1,2,3), material(0xFF0000, 0.25, False))
 scene.add(cube)
 
-vortex = THREE.Mesh(THREE.VortexGeometry(4.0, 0.3, 0.05, 0.05, 0.3, 8, 12), material(0x00FFff, 0.3, False))
-scene.add(vortex)
+#vortex = THREE.Mesh(THREE.VortexGeometry(4.0, 0.3, 0.05, 0.05, 0.3, 8, 12), material(0x00FFff, 0.3, False))
+#scene.add(vortex)
 
 flat = THREE.Mesh(THREE.CubeGeometry(10.0,10.0,0.1), material(0x0000FF, 0.25, True))
 scene.add(flat)
