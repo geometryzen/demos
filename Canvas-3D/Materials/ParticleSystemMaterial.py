@@ -45,7 +45,7 @@ renderer.sortObjects = False
 renderer.autoClearColor = True
 renderer.setClearColor(Color(0xCCCCCC), 1.0)
 
-workbench = Workbench(renderer, camera)
+workbench = Workbench3D(renderer.domElement, renderer, camera)
 
 def onDocumentMouseMove(event):
     windowHalfX = float(window.innerWidth) / 2.0
