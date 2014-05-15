@@ -65,8 +65,8 @@ def tick(t):
     theta = omega * t
     rotor = exp(B*theta.quantity/2.0)
 #   arrow.attitude = rotor
-    cube.attitude = rotor
-    cube.quaternion.set(rotor.w, rotor.yz, rotor.zx, rotor.xy)
+    box.attitude = rotor
+    box.quaternion.set(rotor.w, rotor.yz, rotor.zx, rotor.xy)
 #   vortex.attitude = rotor
     flat.quaternion.set(rotor.w, rotor.yz, rotor.zx, rotor.xy)
     renderer.render(scene, camera)
