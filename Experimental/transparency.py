@@ -51,7 +51,7 @@ scene.add(vortex)
 flat = Mesh(CubeGeometry(10.0,10.0,0.1), material(0x0000FF, 0.25, True))
 scene.add(flat)
 
-CartesianSpace(scene, renderer)
+#CartesianSpace(scene, renderer)
 
 workbench = Workbench3D(renderer.domElement, renderer, camera)
 
