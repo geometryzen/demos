@@ -15,7 +15,7 @@ glwin = window.open("","","width=800,height=600")
 # Changing the background color is a bit of a hack until I figure out the padding.
 glwin.document.body.style.backgroundColor = "080808"
 glwin.document.body.style.overflow = "hidden"
-glwin.document.title = "Visualizing Geometric Algebra witn WebGL"
+glwin.document.title = "Visualizing Geometric Algebra with WebGL"
 
 canvas2D = glwin.document.createElement("canvas")
 canvas2D.style.position = "absolute"
