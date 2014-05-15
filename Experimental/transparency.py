@@ -39,7 +39,7 @@ scene.add(arrow)
 cube = CubeBuilder().scale(5).material(material(0xFFFF00, 1.0, False)).build()
 scene.add(cube)
 
-space = CartesianSpace(scene, renderer)
+#space = CartesianSpace(scene, renderer)
 
 workbench = Workbench3D(renderer.domElement, renderer, camera)
 
