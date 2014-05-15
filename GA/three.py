@@ -3,6 +3,7 @@ from workbench import *
 from math import *
 from units import *
 from e3ga import *
+from geometry import *
 
 #import three as THREE
 THREE = window.THREE
