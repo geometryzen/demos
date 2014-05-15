@@ -11,6 +11,8 @@ from geometry import *
 import three as THREE
 #THREE = window.THREE
 
+glwin = window.open()
+
 scene = THREE.Scene()
 
 camera = THREE.PerspectiveCamera(45, 1.0, 0.1, 10000)
