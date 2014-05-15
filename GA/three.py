@@ -36,8 +36,8 @@ mesh = THREE.Mesh(THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00, 1.0, False))
 mesh.position.set(0, -2, 0)
 scene.add(mesh)
 
-#arrow = THREE.Mesh(THREE.ArrowGeometry(5.0), material(0xFFFF00, 1.0, False))
-#scene.add(arrow)
+arrow = THREE.Mesh(THREE.ArrowGeometry(5.0), material(0xFFFF00, 1.0, False))
+scene.add(arrow)
 
 box = THREE.Mesh(THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25, False))
 scene.add(box)
@@ -64,7 +64,7 @@ def tick(t):
     time = t * second
     theta = omega * t
     rotor = exp(B*theta.quantity/2.0)
-#   arrow.attitude = rotor
+    arrow.quaternion.set(rotor.w, rotor.yz, rotor.zx, rotor.xy)
     box.attitude = rotor
     box.quaternion.set(rotor.w, rotor.yz, rotor.zx, rotor.xy)
     vortex.quaternion.set(rotor.w, rotor.yz, rotor.zx, rotor.xy)
