@@ -3,7 +3,7 @@ from workbench import *
 from math import *
 from units import *
 
-Scene = window,THREE.Scene
+Scene = window.THREE.Scene
 
 scene = Scene()
 
