@@ -39,7 +39,7 @@ scene.add(arrow)
 cube = CubeBuilder().scale(5).material(material(0xFF0000, 1.0, False)).build()
 scene.add(cube)
 
-mesh = Mesh(SphereGeometry(), material(0x00FF00))
+sphere = Mesh(SphereGeometry(), material(0x00FF00))
 
 CartesianSpace(scene, renderer)
 
@@ -61,6 +61,7 @@ def tick(t):
     arrow.attitude = rotor
     cube.attitude = rotor
     mesh.attitude = rotor
+    sphere.attitude = rotor
     renderer.render(scene, camera)
 
 def tearDown(e):
