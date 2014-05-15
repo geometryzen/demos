@@ -18,9 +18,7 @@ i = 0
 r = 200
 tau = math.pi * 2
 
-print type(d3.select('body'))
 canvas = d3.select("body").append("canvas")
-print type(canvas)
 
 canvas.attr("width", width).attr("height", height)
 
@@ -35,7 +33,6 @@ def move(unused1, unused2, unused3):
 
 canvas.on("mousemove", move)
 
-print type(canvas.node())
 workbench = Workbench2D(canvas.node())
 
 context = canvas.node().getContext("2d")
