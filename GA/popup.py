@@ -13,7 +13,7 @@ import three as THREE
 
 glwin = window.open("","","width=800,height=600")
 
-canvas2D = document.createElement("canvas")
+canvas2D = glwin.document.createElement("canvas")
 canvas2D.style.position = "absolute"
 canvas2D.style.top = "0px"
 canvas2D.style.left = "0px"
