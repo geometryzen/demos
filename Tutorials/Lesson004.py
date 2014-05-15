@@ -5,7 +5,7 @@ The sphere moves along a square path using coordinate instructions.
 from browser import WindowAnimationRunner
 from geometry import CartesianSpace, SphereBuilder
 from math import cos, sin, pi
-from workbench import Workbench
+from workbench import Workbench3D
 
 L = 50
 scale = 3.0/L
@@ -22,7 +22,7 @@ space = CartesianSpace()
 sphere = SphereBuilder().radius(0.1).color(0xFFFF00).build()
 space.add(sphere)
 
-workbench = Workbench(space.renderer, space.camera)
+workbench = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 
 def tick(t):
     global x, y, z, moveX, moveY, moveZ
