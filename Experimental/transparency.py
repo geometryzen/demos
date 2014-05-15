@@ -25,7 +25,7 @@ scene.add(directionalLight)
 renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
 
-def material(color, opacity, transparent):
+def material(color, opacity, transparent=False):
     return MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent})
 
 for i in range(3,5):
@@ -39,7 +39,7 @@ scene.add(arrow)
 cube = CubeBuilder().scale(5).material(material(0xFF0000, 1.0, False)).build()
 scene.add(cube)
 
-sphere = SphereGeometry()
+mesh = Mesh(SphereGeometry(), material())
 
 CartesianSpace(scene, renderer)
 
