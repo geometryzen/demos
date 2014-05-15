@@ -48,6 +48,9 @@ scene.add(plane)
 vortex = Mesh(VortexGeometry(4.0, 0.3, 0.05, 0.05, 0.3, 8, 12), material(0x00FFff, 0.3, False))
 scene.add(vortex)
 
+flat = Mesh(CubeGeometry(1,2,3), material(0xFF0000, 0.25, False))
+scene.add(flat)
+
 CartesianSpace(scene, renderer)
 
 workbench = Workbench3D(renderer.domElement, renderer, camera)
@@ -71,6 +74,7 @@ def tick(t):
     mesh.attitude = rotor
     plane.attitude = rotor
     vortex.attitude = rotor
+    flat.attitude = rotor
     renderer.render(scene, camera)
 
 def tearDown(e):
