@@ -4,6 +4,7 @@ from math import *
 from units import *
 from e3ga import *
 from geometry import *
+from easel import *
 
 # This works both through the Python DaVinci wrapper as well as using JavaScript dynamic wrapping.
 # Provided you don't try to use the attitude property on the mesh together with native THREE.
