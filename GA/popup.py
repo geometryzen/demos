@@ -85,6 +85,7 @@ B = BivectorE3(0.0, 0.0, 1.0)
 B = B / magnitude(B)
 
 def setUp():
+    workbench2D.setup()
     workbench3D.setUp()
 
 def tick(t):
@@ -104,6 +105,7 @@ def tick(t):
 
 def tearDown(e):
     workbench3D.tearDown()
+    workbench2D.tearDown()
     glwin.close()
     if e:
         print "Error during animation: %s" % (e)
