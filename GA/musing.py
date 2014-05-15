@@ -28,10 +28,9 @@ renderer.setClearColor(Color(0x080808), 1.0)
 def material(color=0x0000FF, opacity=1.0, transparent=False):
     return MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent})
 
-for i in range(3,5):
-    mesh = Mesh(CubeGeometry(5, 0.1, 5), material(0x00FF00, 0.25, True))
-    mesh.position = VectorE3(0, i-5,0)
-    scene.add(mesh)
+mesh = Mesh(CubeGeometry(5, 0.1, 5), material(0x00FF00, 0.25, True))
+mesh.position = VectorE3(0, 3,0)
+scene.add(mesh)
 
 arrow = ArrowBuilder().scale(5).material(material(0xFFFF00, 1.0, False)).build()
 scene.add(arrow)
