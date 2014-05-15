@@ -20,7 +20,7 @@ k = VectorE3(0.0, 0.0, 1.0)
 # The angular velocity describes a motion of one revolution every timeOut seconds in the x-y plane, counterclockwise.
 omega = 2.0 * pi * i * j / 1
 
-workbench = Workbench(space.renderer, space.camera)
+workbench = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 
 frames = 0.0
 timeout = 10.0
