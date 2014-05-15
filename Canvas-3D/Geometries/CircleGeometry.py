@@ -28,7 +28,7 @@ scene.add(mesh)
 
 movement = 0.02 * VectorE3(1.0, 1.0, 1.0)
 
-workbench = Workbench(renderer, camera)
+workbench = Workbench3D(renderer, camera)
 
 def setUp():
     workbench.setUp()
@@ -40,7 +40,9 @@ def tick(t):
 def terminate(t):
     return t > 3
 
-def tearDown():
+def tearDown(e):
     workbench.tearDown()
+    if e:
+        print e
     
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
