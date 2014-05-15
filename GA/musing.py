@@ -10,6 +10,8 @@ from geometry import *
 import three as THREE
 #THREE = window.THREE
 
+glwin = window.open("","","width=800,height=600")
+
 scene = THREE.Scene()
 
 camera = THREE.PerspectiveCamera(45, 1.0, 0.1, 10000)
@@ -28,6 +30,7 @@ directionalLight = THREE.DirectionalLight(0xFFFFFF)
 directionalLight.position.set(0.0, 1.0, 0.0)
 scene.add(directionalLight)
 
+#renderer = THREE.CanvasRenderer()
 renderer = THREE.WebGLRenderer()
 renderer.setClearColor(THREE.Color(0x080808), 1.0)
 
@@ -55,7 +58,7 @@ scene.add(flat)
 
 CartesianSpace(scene, renderer)
 
-workbench = Workbench3D(renderer.domElement, renderer, camera)
+workbench = Workbench3D(renderer.domElement, renderer, camera, glwin)
 
 tau = 2 * pi
 omega = (tau / 20) / second
@@ -84,7 +87,8 @@ def tick(t):
 
 def tearDown(e):
     workbench.tearDown()
+    glwin.close()
     if e:
         print "Error during animation: %s" % (e)
 
-WindowAnimationRunner(tick, None, setUp, tearDown).start()
+WindowAnimationRunner(tick, None, setUp, tearDown, glwin).start()
