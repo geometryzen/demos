@@ -6,7 +6,7 @@ from math import pow
 
 space3D = CartesianSpace()
 
-workbench3D = Workbench(space3D.renderer, space3D.camera)
+workbench3D = Workbench3D(space3D.renderer.domElement, space3D.renderer, space3D.camera)
 
 giant = SphereBuilder().color("red").radius(0.4).build()
 giant.position = VectorE3(1.0, 0.0, 0.0)
