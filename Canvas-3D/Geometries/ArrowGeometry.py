@@ -25,7 +25,7 @@ print geometry
 
 space.add(arrow)
 
-workbench = Workbench3D(space.renderer, space.camera)
+workbench = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 
 def tick(t):
     space.render()
