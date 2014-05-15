@@ -68,7 +68,7 @@ def tick(t):
     cube.attitude = rotor
     cube.quaternion.set(rotor.w, rotor.yz, rotor.zx, rotor.xy)
 #   vortex.attitude = rotor
-    flat.attitude = rotor
+    flat.quaternion.set(rotor.w, rotor.yz, rotor.zx, rotor.xy)
     renderer.render(scene, camera)
 
 def tearDown(e):
