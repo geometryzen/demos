@@ -3,6 +3,8 @@ from workbench import *
 from math import *
 from units import *
 
+Scene = window,THREE.Scene
+
 scene = Scene()
 
 camera = PerspectiveCamera(45, 1.0, 0.1, 10000)
