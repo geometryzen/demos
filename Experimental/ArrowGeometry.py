@@ -64,7 +64,7 @@ scene.add(directionalLight)
 
 progressEnd = 6
 
-workbench = Workbench(renderer, camera)
+workbench = Workbench3D(renderer, camera)
 
 def setUp():
     workbench.setUp()
