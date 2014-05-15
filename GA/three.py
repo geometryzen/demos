@@ -68,8 +68,7 @@ def tick(t):
     time = t * second
     theta = omega * time
     # The rotor is defined to have a minus sign.
-    rotor = exp(-B*theta/2.0)
-    print rotor.quantity
+    rotor = exp(-B*theta.quantity/2.0)
     # Unfortunately, we have to use a minus sign to convert the rotor grade 2 components to the quaternion values.
     arrow.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     box.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
