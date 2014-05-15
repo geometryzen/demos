@@ -11,7 +11,7 @@ from geometry import *
 import three as THREE
 #THREE = window.THREE
 
-glwin = window.open()
+glwin = window.open("","","width=1200,height=800")
 
 scene = THREE.Scene()
 
