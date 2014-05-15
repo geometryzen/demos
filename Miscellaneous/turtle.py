@@ -1,5 +1,6 @@
 import turtle
 
+# FIXME: The library expects there to be a context out there magically.
 def draw_circle(turtle, color, size, x, y):
     turtle.penup()
     turtle.color(color)
