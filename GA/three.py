@@ -47,7 +47,7 @@ scene.add(box)
 box.position.set(3,-3,3)
 
 # VortexGeometry isn't really a THREE artifact right now.
-vortex = THREE.Mesh(THREE.VortexGeometry(4.0, 0.32, 0.04, 0.05, 0.3, 8, 12), material(0x00FFff, 0.3, False))
+vortex = THREE.Mesh(THREE.VortexGeometry(4.0, 0.32, 0.04, None, 0.3, 8, 12), material(0x00FFff, 0.3, False))
 scene.add(vortex)
 
 flat = THREE.Mesh(THREE.BoxGeometry(10.0,10.0,0.1), material(0x0000FF, 0.25, True))
