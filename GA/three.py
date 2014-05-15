@@ -63,7 +63,6 @@ omega = (tau / 20) / second
 B = BivectorE3(0.0, 0.0, 1.0)
 # Just make sure that we really do have a unit bivector.
 B = B / magnitude(B)
-print B
 
 def setUp():
     workbench.setUp()
