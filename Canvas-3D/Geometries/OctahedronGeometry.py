@@ -20,7 +20,7 @@ scene.add(mesh)
 
 movement = VectorE3(0.02, 0.02, 0.02)
 
-workbench = Workbench(renderer, camera)
+workbench = Workbench3D(renderer.domElement, renderer, camera)
 
 def setUp():
     workbench.setUp()
