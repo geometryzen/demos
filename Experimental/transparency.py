@@ -42,7 +42,7 @@ scene.add(cube)
 sphere = Mesh(SphereGeometry(1.0,24,16, 0, 2*pi, 0, pi), material(0x00FF00, 0.25, True))
 scene.add(sphere)
 
-plane = Mesh(PlaneGeometry(), material(0x00FF00, 0.25, True))
+plane = Mesh(PlaneGeometry(1.0,1.0), material(0x00FF00, 0.25, True))
 scene.add(plane)
 
 CartesianSpace(scene, renderer)
