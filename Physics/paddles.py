@@ -14,7 +14,7 @@ e1 = ArrowBuilder().color(0xFF0000).axis(i).build()#.attitude(exp(-BivectorE3( 0
 e2 = ArrowBuilder().color(0x00FF00).axis(j).build()#.attitude(exp(-BivectorE3( 0, -1, 0)*pi/4)).build()
 e3 = ArrowBuilder().color(0x0000FF).axis(k).build()#.attitude(exp(-BivectorE3( 1,  0, 0)*pi/4)).build()
 
-workbench = Workbench(space.renderer, space.camera)
+workbench = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 
 def setUp():
     workbench.setUp()
