@@ -29,7 +29,7 @@ material = MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":3})
 sphere = Mesh(geometry, material)
 scene.add(sphere)
 
-workbench = Workbench(renderer, camera)
+workbench = Workbench3D(renderer.domElement, renderer, camera)
 
 timeOut = 20
 
