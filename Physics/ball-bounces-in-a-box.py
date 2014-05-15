@@ -83,4 +83,4 @@ def tearDown(e):
     if e:
         print e
 
-WindowAnimationRunner(tick, None, setUp, tearDown).start()
+WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
