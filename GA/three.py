@@ -32,7 +32,7 @@ renderer.setClearColor(THREE.Color(0x080808), 1.0)
 def material(color=0x0000FF, opacity=1.0, transparent=False):
     return THREE.MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent})
 
-mesh = THREE.Mesh(THREE.CubeGeometry(5, 0.1, 5), material(0x00FF00, 1.0, False))
+mesh = THREE.Mesh(THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00, 1.0, False))
 mesh.position.set(0, -2, 0)
 scene.add(mesh)
 
