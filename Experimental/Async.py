@@ -1,1 +1,1 @@
-prin t "Hello"
+print "Hello"
