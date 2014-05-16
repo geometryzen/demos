@@ -1,2 +1,2 @@
-import e3ga
+import e 3ga
 print "Hello"
