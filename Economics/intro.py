@@ -1,1 +1,1 @@
-# Economics/intro.py
+print "Hello, Economics!"
