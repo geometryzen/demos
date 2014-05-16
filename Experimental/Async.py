@@ -1,4 +1,1 @@
-
-
-
 prin t "Hello"
