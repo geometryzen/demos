@@ -15,7 +15,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 
 geom = THREE.RingGeometry(1,5,32)
 
-mesh = THREE.Mesh(geom, MeshBasicMaterial({"wireframe": True, "wireframeLinewidth": 3}))
+mesh = THREE.Mesh(geom, MeshBasicMaterial({color:0xffff00,side:THREE.DoubleSide}))
 scene.add(mesh)
 
 movement = 0.02 * VectorE3(1.0, 1.0, 1.0)
