@@ -11,10 +11,6 @@ camera.position.z = 100.0
 renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
 
-radius = 50
-segments = 32
-thetaStart = 0
-thetaLength = 2 * pi
 geom = CircleGeometry(radius, segments, thetaStart, thetaLength)
 
 mesh = Mesh(geom, MeshBasicMaterial({"wireframe": True, "wireframeLinewidth": 3}))
