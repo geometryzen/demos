@@ -18,6 +18,7 @@ geom = THREE.RingGeometry(1,5,32)
 print geom
 print str(geom)
 print repr(geom)
+print type(geom)
 print window.Sk.ffi.getType(geom)
 
 mesh = Mesh(geom, MeshBasicMaterial({'color':0xffff00, 'side':THREE.DoubleSide}))
