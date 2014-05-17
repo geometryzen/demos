@@ -17,7 +17,7 @@ geom = THREE.RingGeometry(1,5,32)
 
 print window.Sk.ffi.getType(geom)
 
-mesh = Mesh(geom, MeshBasicMaterial({'color':0xffff00, 'side':THREE.DoubleSide}))
+mesh = Mesh(geom, MeshBasicMaterial({'color': 0xffff00, 'side': THREE.DoubleSide}))
 scene.add(mesh)
 
 movement = 0.02 * VectorE3(1.0, 1.0, 1.0)
