@@ -5,6 +5,8 @@ from workbench import *
 from random import random
 from math import *
 
+THREE = window.THREE
+
 canvas2D = document.createElement("canvas")
 canvas2D.style.position = "absolute"
 canvas2D.style.top = "0px"
