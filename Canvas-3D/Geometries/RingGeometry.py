@@ -15,15 +15,9 @@ radius = 50
 segments = 32
 thetaStart = 0
 thetaLength = 2 * pi
-circle = CircleGeometry(radius, segments, thetaStart, thetaLength)
-circle.name = "Foo"
+geom = CircleGeometry(radius, segments, thetaStart, thetaLength)
 
-print repr(circle)
-print "uuid:            " + str(circle.uuid)
-print "name:            " + str(circle.name)
-print circle
-
-mesh = Mesh(circle, MeshBasicMaterial({"wireframe": True, "wireframeLinewidth": 3}))
+mesh = Mesh(geom, MeshBasicMaterial({"wireframe": True, "wireframeLinewidth": 3}))
 scene.add(mesh)
 
 movement = 0.02 * VectorE3(1.0, 1.0, 1.0)
