@@ -37,7 +37,7 @@ camera.position.z = 500.0
 
 scene = Scene()
 
-geometry = BoxGeometry(200.0, 200.0, 200.0)
+geometry = CubeGeometry(200.0, 200.0, 200.0)
 for i in range(0, len(geometry.faces), 2):
     hex = int(random() * 0xFFFFFF)
     geometry.faces[i].color.setHex(hex)
