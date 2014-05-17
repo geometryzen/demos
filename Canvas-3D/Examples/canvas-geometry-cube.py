@@ -22,7 +22,7 @@ output.x = 100
 output.y = 60
 space2D.addChild(output)
 
-timeOut = 6.0
+timeOut = 60.0
 
 mouseX = 0
 mouseXOnMouseDown = 0
