@@ -26,7 +26,7 @@ def setUp():
     workbench.setUp()
 
 def tick(t):
-    # mesh.rotation += movement
+    mesh.rotation += movement
     renderer.render(scene, camera)
 
 def terminate(t):
