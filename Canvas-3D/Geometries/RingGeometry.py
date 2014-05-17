@@ -12,7 +12,7 @@ height = 5
 radialSegments = 32
 heightSegments = 5
 openEnded = False
-geom = CylinderGeometry(radiusTop, radiusBottom, height, radialSegments, heightSegments, openEnded, e1)
+geom = RingGeometry(1,5,32)
 
 mesh = Mesh(geom, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1}))
 space.add(mesh)
