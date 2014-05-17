@@ -14,7 +14,7 @@ heightSegments = 5
 openEnded = False
 geom = CylinderGeometry(radiusTop, radiusBottom, height, radialSegments, heightSegments, openEnded, e1)
 
-mesh = Mesh(cylinder, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1}))
+mesh = Mesh(geom, MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 1}))
 space.add(mesh)
 
 workbench = Workbench3D(space.renderer.canvas, space.renderer, space.camera)
