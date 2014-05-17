@@ -29,7 +29,7 @@ def tick(t):
     renderer.render(scene, camera)
 
 def terminate(t):
-    return t > 15
+    return t > 3
 
 def tearDown(e):
     workbench.tearDown()
