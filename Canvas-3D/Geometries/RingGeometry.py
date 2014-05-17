@@ -13,7 +13,7 @@ camera.position.z = 100.0
 renderer = WebGLRenderer()
 renderer.setClearColor(Color(0x080808), 1.0)
 
-geom = RingGeometry(1,5,32)
+geom = THREE.RingGeometry(1,5,32)
 
 mesh = Mesh(geom, MeshBasicMaterial({"wireframe": True, "wireframeLinewidth": 3}))
 scene.add(mesh)
