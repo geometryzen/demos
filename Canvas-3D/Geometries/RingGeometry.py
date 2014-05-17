@@ -16,6 +16,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 geom = THREE.RingGeometry(1,5,32)
 
 print geom
+print str(geom)
 print repr(geom)
 print window.Sk.ffi.getType(geom)
 
