@@ -1,7 +1,6 @@
 from browser import *
 from workbench import *
 from math import *
-from random import random
 from units import *
 from e3ga import *
 from geometry import *
@@ -66,16 +65,8 @@ scene.add(mesh)
 arrow = THREE.Mesh(THREE.ArrowGeometry(4.0), material(0xFFFF00, 1.0, False))
 scene.add(arrow)
 
-geometry = BoxGeometry(1, 2, 3)
-for i in range(0, len(geometry.faces), 2):
-    hex = int(random() * 0xFFFFFF)
-    geometry.faces[i].color.setHex(hex)
-    geometry.faces[i+1].color.setHex(hex)
-    
-material = THREE.MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
-box = Mesh(geometry, material)
-#box = THREE.Mesh(THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25, False))
-#scene.add(box)
+box = THREE.Mesh(THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25, False))
+scene.add(box)
 box.position.set(3,-3,3)
 
 # VortexGeometry isn't really a THREE artifact right now.
