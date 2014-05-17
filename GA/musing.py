@@ -72,7 +72,7 @@ for i in range(0, len(geometry.faces), 2):
     geometry.faces[i].color.setHex(hex)
     geometry.faces[i+1].color.setHex(hex)
     
-material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
+material = THREE.MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
 box = Mesh(geometry, material)
 #box = THREE.Mesh(THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25, False))
 #scene.add(box)
