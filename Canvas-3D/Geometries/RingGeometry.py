@@ -1,7 +1,6 @@
 from three import *
 from browser import *
 from workbench import *
-from math import pi
 
 THREE = window.THREE
 
