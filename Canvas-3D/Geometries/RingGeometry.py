@@ -15,7 +15,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 
 geom = THREE.RingGeometry(1,5,32)
 
-print window.Sk.ffi.getTypeName(geom)
+print window.Sk.ffi.getType(geom)
 
 mesh = Mesh(geom, MeshBasicMaterial({'color':0xffff00, 'side':THREE.DoubleSide}))
 scene.add(mesh)
