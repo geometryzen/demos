@@ -6,7 +6,7 @@ canvas = window.document.getElementById( 'canvas' )
 gl = canvas.getContext('webgl')# || canvas.getContext('experimental-webgl')
 
 # If the context doesn't exist, we don't have WebGL. Tears.
-if ( !gl ):
+if (not gl):
     throw "This is not the WebGL context you're looking for"
 
 # Set the clearColor attribute
