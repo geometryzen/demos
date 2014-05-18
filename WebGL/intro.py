@@ -7,7 +7,7 @@ gl = canvas.getContext('webgl')# || canvas.getContext('experimental-webgl')
 
 # If the context doesn't exist, we don't have WebGL. Tears.
 if (not gl):
-    throw "This is not the WebGL context you're looking for"
+    print "This is not the WebGL context you're looking for"
 
 # Set the clearColor attribute
 gl.clearColor( 0.82, 0.28, 0.35, 1.0 )
