@@ -3,7 +3,7 @@ from browser import window
 canvas = window.document.getElementById( 'canvas' )
 
 # Retrieve the WebGL context from the canvas
-gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl')
+gl = canvas.getContext('webgl')# || canvas.getContext('experimental-webgl')
 
 # If the context doesn't exist, we don't have WebGL. Tears.
 if ( !gl ):
