@@ -2,7 +2,7 @@ from browser import *
 from easel import *
 from three import *
 from workbench import *
-from math import pow
+from math import pow, abs
 from random import random
 
 space3D = CartesianSpace()
