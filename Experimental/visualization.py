@@ -46,9 +46,7 @@ def setUp():
 
 def tick(t):
     r = dwarf.position - giant.position
-    F = giant.mass * dwarf.mass
-    F = F * r
-    F = F / pow(abs(r * r), 3/2)
+    F = giant.mass * dwarf.mass * r / pow(abs(r * r), 3/2)
     giant.momentum = giant.momentum + F * dt
     dwarf.momentum = dwarf.momentum - F * dt
     
