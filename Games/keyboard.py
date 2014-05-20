@@ -51,7 +51,7 @@ def onDocumentKeyUp(event):
 
 timeOut = 10
 
-workbench = Workbench(renderer, camera)
+workbench = Workbench3D(renderer.domElement, renderer, camera)
 
 def setUp():
     print "Hello!"
