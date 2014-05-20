@@ -66,9 +66,9 @@ scene.add(cube)
 renderer = WebGLRenderer({"antialias": True})
 renderer.setClearColor(Color(0x080808), 1.0)
 
-workbench = Workbench3D(renderer.domElement, renderer, camera)
-
 CartesianSpace(scene, renderer)
+
+workbench = Workbench3D(renderer.domElement, renderer, camera)
 
 def onDocumentMouseDown(event):
     global mouseXOnMouseDown, targetRotationOnMouseDown
