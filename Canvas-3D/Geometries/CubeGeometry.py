@@ -18,15 +18,6 @@ heightSegments = 2
 depthSegments = 3
 cube = BoxGeometry(width, height, depth, widthSegments, heightSegments, depthSegments)
 
-print repr(cube)
-print "width:          " + str(cube.width)
-print "height:         " + str(cube.height)
-print "depth:          " + str(cube.depth)
-print "widthSegments:  " + str(cube.widthSegments)
-print "heightSegments: " + str(cube.heightSegments)
-print "depthSegments:  " + str(cube.depthSegments)
-print cube
-
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3})
 mesh = Mesh(cube, material)
 #mesh = CubeBuilder().width(width).height(height).depth(depth).material(material).build()
