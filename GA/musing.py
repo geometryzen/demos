@@ -76,7 +76,7 @@ scene.add(vortex)
 flat = THREE.Mesh(THREE.BoxGeometry(10.0,10.0,0.1), material(0x0000FF, 0.25, True))
 scene.add(flat)
 
-CartesianSpace(scene, renderer)
+CartesianSpace(scene, renderer, camera)
 
 workbench3D = Workbench3D(renderer.domElement, renderer, camera, glwin)
 
