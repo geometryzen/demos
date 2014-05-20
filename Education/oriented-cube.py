@@ -70,7 +70,6 @@ def tick(t):
     time = t * second
     theta = omega * time
     rotor = exp(-B2*theta.quantity/2.0) * exp(-B1*theta.quantity/2.0)
-    print rotor
     cube.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     space3D.render()
     space2D.render()
