@@ -32,6 +32,7 @@ isShiftDown = False
 isCtrlDown = False
 
 camera = PerspectiveCamera(70, 1, 1, 10000)
+CAMERA.POSITION.x = 1.0
 camera.position.y = 1.5
 camera.position.z = 5.0
 
