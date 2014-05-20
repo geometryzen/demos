@@ -37,7 +37,7 @@ camera.position.z = 500.0
 
 scene = Scene()
 
-geometry = BoxGeometry(200.0, 200.0, 200.0)
+geometry = BoxGeometry(2.0, 2.0, 2.0)
 for i in range(0, len(geometry.faces), 2):
     print i
     hex = int(random() * 0xFFFFFF)
@@ -58,7 +58,7 @@ geometry.faces[11].color.setHex(0xFFFF00)
     
 material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
 cube = Mesh(geometry, material)
-cube.position.y = 150.0
+cube.position.y = 1.5
 scene.add(cube)
 
 #geometry = PlaneGeometry(200.0, 200.0)
