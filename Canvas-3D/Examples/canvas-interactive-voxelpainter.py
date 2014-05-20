@@ -53,7 +53,7 @@ scene.add(light)
 projector = Projector()
 raycaster = None
 
-workbench = Workbench(renderer, camera)
+workbench = Workbench3D(renderer, camera)
 
 def shiftKey(event, downFlag):
     global isShiftDown
