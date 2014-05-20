@@ -39,6 +39,7 @@ scene = Scene()
 
 geometry = BoxGeometry(200.0, 200.0, 200.0)
 for i in range(0, len(geometry.faces), 2):
+    print i
     hex = int(random() * 0xFFFFFF)
     geometry.faces[i].color.setHex(hex)
     geometry.faces[i+1].color.setHex(hex)
