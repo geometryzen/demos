@@ -93,7 +93,7 @@ def setUp():
 
 def tearDown(e):
     workbench2D.tearDown()
-    workbench3D.tearDown
+    workbench3D.tearDown()
     glwin.close()
     if e:
         print e
