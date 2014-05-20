@@ -71,34 +71,6 @@ CartesianSpace(scene, renderer)
 
 workbench = Workbench3D(renderer.domElement, renderer, camera)
 
-def onDocumentMouseDown(event):
-    global mouseXOnMouseDown, targetRotationOnMouseDown
-
-    event.preventDefault()
-
-    document.addEventListener("mousemove", onDocumentMouseMove, False)
-    document.addEventListener("mouseup", onDocumentMouseUp, False)
-    document.addEventListener("mouseout", onDocumentMouseOut, False)
-
-    mouseXOnMouseDown = event.clientX - (float(window.innerWidth) / 2.0)
-    targetRotationOnMouseDown = targetRotation
-    
-def onDocumentMouseMove(event):
-    global mouseX, targetRotation
-
-    mouseX = event.clientX - (float(window.innerWidth) / 2.0)
-    targetRotation = targetRotationOnMouseDown + (mouseX - mouseXOnMouseDown) * 0.02
-
-def onDocumentMouseUp(event):
-    document.removeEventListener("mousemove", onDocumentMouseMove, False)
-    document.removeEventListener("mouseup", onDocumentMouseUp, False)
-    document.removeEventListener("mouseout", onDocumentMouseOut, False)
-
-def onDocumentMouseOut(event):
-    document.removeEventListener("mousemove", onDocumentMouseMove, False)
-    document.removeEventListener("mouseup", onDocumentMouseUp, False)
-    document.removeEventListener("mouseout", onDocumentMouseOut, False)
-
 def tick(t):
     
     cube.rotation.y += (targetRotation - cube.rotation.y) * 0.05
@@ -112,10 +84,8 @@ def terminate(t):
 def setUp():
     workbench.setUp()
     workbench2D.setUp()
-    document.addEventListener("mousedown", onDocumentMouseDown, False)
 
 def tearDown():
-    document.removeEventListener("mousedown", onDocumentMouseDown, False)
     workbench2D.tearDown()
     workbench.tearDown()
 
