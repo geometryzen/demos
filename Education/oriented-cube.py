@@ -48,7 +48,6 @@ geometry.faces[11].color.setHex(0xFFFF00)
     
 material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
 cube = Mesh(geometry, material)
-cube.position.y = 1.5
 scene.add(cube)
 
 renderer = WebGLRenderer({"antialias": True})
