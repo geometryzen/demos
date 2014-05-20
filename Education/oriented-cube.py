@@ -6,7 +6,11 @@ from random import random
 from math import *
 from units import *
 
-glwin = window.open()
+glwin = window.open("","","width=800,height=600")
+# Changing the background color is a bit of a hack until I figure out the padding.
+glwin.document.body.style.backgroundColor = "080808"
+glwin.document.body.style.overflow = "hidden"
+glwin.document.title = "Visualizing Geometric Algebra with WebGL"
 
 THREE = window.THREE
 
@@ -14,7 +18,7 @@ canvas2D = document.createElement("canvas")
 canvas2D.style.position = "absolute"
 canvas2D.style.top = "0px"
 canvas2D.style.left = "0px"
-workbench2D = Workbench2D(canvas2D)
+workbench2D = Workbench2D(canvas2D, glwin)
 space2D = Stage(canvas2D)
 space2D.autoClear = True
 
@@ -89,7 +93,8 @@ def setUp():
 
 def tearDown(e):
     workbench2D.tearDown()
-    workbench3D.tearDown()
+    workbench3D.tearDown
+    glwin.close()
     if e:
         print e
 
