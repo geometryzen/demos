@@ -26,7 +26,7 @@ timeOut = 60.0
 
 camera = PerspectiveCamera(70, 1, 1, 10000)
 camera.position.x = 1.0
-camera.position.y = -3.5
+camera.position.y = 3.5
 camera.position.z = 5.0
 
 scene = Scene()
