@@ -64,7 +64,7 @@ workbench3D = Workbench3D(renderer.domElement, renderer, camera, glwin)
 tau = 2 * pi
 omega = (tau / 20) / second
 B1 = BivectorE3(0,0,1)
-B2 = BivectorE3(0,1,0)
+B2 = BivectorE3(0,0,0)
 
 def tick(t):
     time = t * second
