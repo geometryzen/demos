@@ -52,7 +52,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 
 CartesianSpace(scene, renderer, camera)
 
-workbench = Workbench3D(renderer.domElement, renderer, camera)
+workbench3D = Workbench3D(renderer.domElement, renderer, camera)
 
 def tick(t):
     renderer.render(scene, camera)
@@ -62,12 +62,12 @@ def terminate(t):
     return t > timeOut
 
 def setUp():
-    workbench.setUp()
+    workbench3D.setUp()
     workbench2D.setUp()
 
 def tearDown(e):
     workbench2D.tearDown()
-    workbench.tearDown()
+    workbench3D.tearDown()
     if e:
         print e
 
