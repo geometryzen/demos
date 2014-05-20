@@ -46,7 +46,7 @@ geometry.faces[9].color.setHex(0x0000FF)
 geometry.faces[10].color.setHex(0xFFFF00)
 geometry.faces[11].color.setHex(0xFFFF00)
     
-material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
+material = MeshLambertMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
 cube = Mesh(geometry, material)
 scene.add(cube)
 
