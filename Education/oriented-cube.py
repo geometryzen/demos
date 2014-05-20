@@ -53,6 +53,8 @@ geometry.faces[6].color.setHex(0x00FFFF)
 geometry.faces[7].color.setHex(0x00FFFF)
 geometry.faces[8].color.setHex(0xFF00FF)
 geometry.faces[9].color.setHex(0xFF00FF)
+geometry.faces[10].color.setHex(0xFFFF00)
+geometry.faces[11].color.setHex(0xFFFF00)
     
 material = MeshBasicMaterial({"vertexColors": FaceColors, "overdraw": 0.5})
 cube = Mesh(geometry, material)
