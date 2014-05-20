@@ -33,8 +33,6 @@ scene = Scene()
 
 geometry = THREE.BoxGeometry(2.0, 2.0, 2.0)
 
-print type(geometry.faces[0])
-
 geometry.faces[0].color.setHex(0xFF0000)
 geometry.faces[1].color.setHex(0xFF0000)
 geometry.faces[2].color.setHex(0x00FFFF)
