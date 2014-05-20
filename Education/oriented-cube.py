@@ -6,6 +6,8 @@ from random import random
 from math import *
 from units import *
 
+glwin = window.open()
+
 THREE = window.THREE
 
 canvas2D = document.createElement("canvas")
