@@ -71,7 +71,7 @@ def tick(t):
     B1 = BivectorE3(0,0,1)
     B2 = BivectorE3(0,1,0)
     rotor = exp(-B2*theta/2.0) * exp(-B1*theta/2.0)
-    rotor = exp(-(B1 + B2)*theta/2.0)
+    rotor = exp(-(B2 + B1)*theta/2.0)
     print magnitude(rotor)
     # Unfortunately, we have to use a minus sign to convert the rotor grade 2 components to the quaternion values.
     cube.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
