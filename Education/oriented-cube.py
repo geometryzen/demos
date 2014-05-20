@@ -31,7 +31,7 @@ camera.position.z = 5.0
 
 scene = Scene()
 
-geometry = BoxGeometry(2.0, 2.0, 2.0)
+geometry = THREE.BoxGeometry(2.0, 2.0, 2.0)
 
 geometry.faces[0].color.setHex(0xFF0000)
 geometry.faces[1].color.setHex(0xFF0000)
