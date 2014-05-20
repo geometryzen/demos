@@ -53,7 +53,7 @@ scene.add(cube)
 renderer = WebGLRenderer({"antialias": True})
 renderer.setClearColor(Color(0x080808), 1.0)
 
-CartesianSpace(scene, renderer)
+CartesianSpace(scene, renderer, camera)
 
 workbench = Workbench3D(renderer.domElement, renderer, camera)
 
