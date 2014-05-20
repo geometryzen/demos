@@ -51,12 +51,6 @@ cube = Mesh(geometry, material)
 cube.position.y = 1.5
 scene.add(cube)
 
-#geometry = PlaneGeometry(200.0, 200.0)
-#geometry.applyMatrix(Matrix4().makeRotationX(-pi / 2.0))
-#material = MeshBasicMaterial({"color": 0xE0E0E0, "overdraw": 0.5})
-#plane = Mesh(geometry, material)
-#scene.add(plane)
-
 renderer = WebGLRenderer({"antialias": True})
 renderer.setClearColor(Color(0x080808), 1.0)
 
@@ -65,9 +59,6 @@ CartesianSpace(scene, renderer)
 workbench = Workbench3D(renderer.domElement, renderer, camera)
 
 def tick(t):
-    
-    cube.rotation.y += (targetRotation - cube.rotation.y) * 0.05
-#   plane.rotation.y = cube.rotation.y
     renderer.render(scene, camera)
     space2D.render()
     
