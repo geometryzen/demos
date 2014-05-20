@@ -55,7 +55,7 @@ space3D = CartesianSpace(scene, renderer, camera)
 workbench3D = Workbench3D(renderer.domElement, renderer, camera)
 
 def tick(t):
-    renderer.render(scene, camera)
+    space3D.render()
     space2D.render()
     
 def terminate(t):
