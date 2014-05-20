@@ -24,13 +24,6 @@ space2D.addChild(output)
 
 timeOut = 60.0
 
-mouseX = 0
-mouseXOnMouseDown = 0
-targetRotation = 0
-targetRotationOnMouseDown = 0
-isShiftDown = False
-isCtrlDown = False
-
 camera = PerspectiveCamera(70, 1, 1, 10000)
 camera.position.x = 1.0
 camera.position.y = 1.5
