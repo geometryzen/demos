@@ -63,24 +63,14 @@ workbench3D = Workbench3D(renderer.domElement, renderer, camera, glwin)
 
 tau = 2 * pi
 omega = (tau / 20) / second
-# A unit bivector rotating from k to i
-B = BivectorE3(1.0, 0.0, 0.0)
-# Just make sure that we really do have a unit bivector.
-B = B / magnitude(B)
+B1 = BivectorE3(0,0,1)
+B2 = BivectorE3(0,1,0)
 
 def tick(t):
     time = t * second
     theta = omega * time
-    # The rotor is defined to have a minus sign.
-    rotor = exp(-B*theta.quantity/2.0)
-    theta = pi / 2
-    B1 = BivectorE3(0,0,1)
-    B2 = BivectorE3(0,1,0)
     rotor = exp(-B2*theta/2.0) * exp(-B1*theta/2.0)
-    rotor = exp(-(B2 + B1)*theta/2.0)
-    # Unfortunately, we have to use a minus sign to convert the rotor grade 2 components to the quaternion values.
     cube.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
-    # cube.attitude = rotor
     space3D.render()
     space2D.render()
     
