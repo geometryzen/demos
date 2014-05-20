@@ -78,9 +78,11 @@ def setUp():
     workbench.setUp()
     workbench2D.setUp()
 
-def tearDown():
+def tearDown(e):
     workbench2D.tearDown()
     workbench.tearDown()
+    if e:
+        print e
 
 # Python does not allow functions to be referenced before they are declared.
 war = WindowAnimationRunner(tick, terminate, setUp, tearDown)
