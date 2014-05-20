@@ -35,9 +35,6 @@ space2D.addChild(output)
 scene = THREE.Scene()
 
 camera = THREE.PerspectiveCamera(45, 1.0, 0.1, 10000)
-camera.position.set(10.0, 9.0, 8.0)
-camera.up.set(0,0,1)
-camera.lookAt(scene.position)
 
 ambientLight = THREE.AmbientLight(0x111111)
 scene.add(ambientLight)
@@ -77,6 +74,9 @@ flat = THREE.Mesh(THREE.BoxGeometry(10.0,10.0,0.1), material(0x0000FF, 0.25, Tru
 scene.add(flat)
 
 CartesianSpace(scene, renderer, camera)
+camera.position.set(10.0, 9.0, 8.0)
+camera.up.set(0,0,1)
+camera.lookAt(scene.position)
 
 workbench3D = Workbench3D(renderer.domElement, renderer, camera, glwin)
 
