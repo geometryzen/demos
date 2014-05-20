@@ -55,7 +55,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 
 space3D = CartesianSpace(scene, renderer, camera)
 
-workbench3D = Workbench3D(renderer.domElement, renderer, camera)
+workbench3D = Workbench3D(renderer.domElement, renderer, camera, glwin)
 
 tau = 2 * pi
 omega = (tau / 20) / second
@@ -95,6 +95,6 @@ def tearDown(e):
         print e
 
 # Python does not allow functions to be referenced before they are declared.
-war = WindowAnimationRunner(tick, terminate, setUp, tearDown)
+war = WindowAnimationRunner(tick, terminate, setUp, tearDown, glwin)
 
 war.start()
