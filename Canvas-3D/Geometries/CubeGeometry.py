@@ -20,7 +20,6 @@ cube = BoxGeometry(width, height, depth, widthSegments, heightSegments, depthSeg
 
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3})
 mesh = Mesh(cube, material)
-#mesh = CubeBuilder().width(width).height(height).depth(depth).material(material).build()
 scene.add(mesh)
 
 timeOut = 6
