@@ -63,7 +63,13 @@ B = BivectorE3(0.0, 0.0, 1.0)
 B = B / magnitude(B)
 
 def tick(t):
-    cube.attitude = rotor
+    time = t * second
+    theta = omega * time
+    # The rotor is defined to have a minus sign.
+    rotor = exp(-B*theta.quantity/2.0)
+    # Unfortunately, we have to use a minus sign to convert the rotor grade 2 components to the quaternion values.
+    cube.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
+    # cube.attitude = rotor
     space3D.render()
     space2D.render()
     
