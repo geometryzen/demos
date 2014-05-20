@@ -66,7 +66,7 @@ renderer.setClearColor(Color(0x080808), 1.0)
 
 workbench = Workbench3D(renderer.domElement, renderer, camera)
 
-CartesianSpace(renderer, scene, renderer)
+CartesianSpace(scene, renderer)
 
 def onDocumentMouseDown(event):
     global mouseXOnMouseDown, targetRotationOnMouseDown
