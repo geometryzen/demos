@@ -4,6 +4,7 @@ from browser import *
 from workbench import *
 from random import random
 from math import *
+from units import *
 
 THREE = window.THREE
 
