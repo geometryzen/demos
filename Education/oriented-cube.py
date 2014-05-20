@@ -67,6 +67,7 @@ def tick(t):
     theta = omega * time
     # The rotor is defined to have a minus sign.
     rotor = exp(-B*theta.quantity/2.0)
+    theta = pi / 2
     B1 = BivectorE3(0,0,1)
     B2 = BivectorE3(0,1,0)
     rotor = exp(-B2*theta.quantity/2.0) * exp(-B1*theta.quantity/2.0)
