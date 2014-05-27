@@ -43,6 +43,7 @@ scene.add(wallB)
 scene.add(wallT)
 scene.add(wallZ)
 
+# Radius of the ball.
 R = 0.4
 
 ball = SphereBuilder().color("green").radius(R).build()
