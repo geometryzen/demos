@@ -1,6 +1,7 @@
 from three import *
 from browser import *
 from workbench import *
+import sys
 
 e1 = VectorE3(1.0, 0.0, 0.0)
 
@@ -18,6 +19,8 @@ openEnded = False
 print 2
 
 print e1
+
+sys.debug()
 
 cylinder = CylinderGeometry(radiusTop, radiusBottom, height, radialSegments, heightSegments, openEnded, e1)
 
