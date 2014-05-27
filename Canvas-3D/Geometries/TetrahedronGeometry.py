@@ -28,7 +28,9 @@ def tick(elapsed):
 def terminate(elapsed):
     return elapsed > 6
 
-def tearDown():
+def tearDown(e):
     workbench.tearDown()
+    if e:
+        print e
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown).start()
