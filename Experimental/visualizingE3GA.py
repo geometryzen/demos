@@ -111,7 +111,7 @@ space3D.add(probeC.grade0)
 space3D.add(probeC.grade1)
 space3D.add(probeC.grade2)
 space3D.add(probeC.grade3)
-probeC.position = 0.5 * (e1 + e2 +e3)
+probeC.position = 0.0 * (e1 + e2 +e3)
 
 probeA = ProbeBuilderE3().wireframe(wireframe).segments(18).color(colorA).build()
 space3D.add(probeA.grade0)
