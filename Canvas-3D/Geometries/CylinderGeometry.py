@@ -19,7 +19,7 @@ print 2
 
 cylinder = CylinderGeometry(radiusTop, radiusBottom, height, radialSegments, heightSegments, openEnded, e1)
 
-print 2
+print 3
 
 print repr(cylinder)
 print "radiusTop:      " + str(cylinder.radiusTop)
