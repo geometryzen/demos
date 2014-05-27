@@ -16,6 +16,8 @@ heightSegments = 5
 openEnded = False
 cylinder = CylinderGeometry(radiusTop, radiusBottom, height, radialSegments, heightSegments, openEnded, e1)
 
+print 2
+
 print repr(cylinder)
 print "radiusTop:      " + str(cylinder.radiusTop)
 print "radiusBottom:   " + str(cylinder.radiusBottom)
