@@ -95,7 +95,7 @@ def tick(t):
     # Unfortunately, we have to use a minus sign to convert the rotor grade 2 components to the quaternion values.
     arrow.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     
-    box.useQuaternion = True
+    box.useQuaternion = False
     box.attitude = rotor
     box.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
 
