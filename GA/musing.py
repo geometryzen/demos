@@ -54,7 +54,6 @@ mesh = THREE.Mesh(THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00, 1.0, False))
 mesh.position.set(0, -2, 0)
 scene.add(mesh)
 
-# ArrowGeometry isn't really a THREE artifact right now.
 arrow = THREE.Mesh(THREE.ArrowGeometry(4.0), material(0xFFFF00, 1.0, False))
 scene.add(arrow)
 
@@ -62,7 +61,6 @@ box = THREE.Mesh(THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25, False))
 scene.add(box)
 box.position.set(3,-3,3)
 
-# VortexGeometry isn't really a THREE artifact right now.
 vortex = THREE.Mesh(THREE.VortexGeometry(4.0, 0.32, 0.04, 0.08, 0.3, 8, 12), material(0x00FFff, 0.3, False))
 scene.add(vortex)
 
