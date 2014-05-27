@@ -20,7 +20,7 @@ print 2
 
 print e1
 
-#sys.debug()
+sys.debug()
 
 cylinder = CylinderGeometry(radiusTop, radiusBottom, height, radialSegments, heightSegments, openEnded, e1)
 
