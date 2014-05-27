@@ -10,7 +10,7 @@ timeOut = 10
 # Arrows are assumed to be aligned with the y-axis, so we must adjust their attitudes.
 e1 = ArrowBuilder().color(0xFF0000).attitude(exp(-BivectorE3( 0.0, 0.0, 0.0)*pi/4.0)).build()
 e2 = ArrowBuilder().color(0x00FF00).attitude(exp(-BivectorE3( 0.0, 0.0, 0.0)*pi/4.0)).build()
-e3 = ArrowBuilder().color(0x0000FF).attitude(exp(-BivectorE3( 0.0, 1.0, 0.0)*pi/4.0)).build()
+e3 = ArrowBuilder().color(0x0000FF).attitude(exp(-BivectorE3( 0.0, 0.0, 0.0)*pi/4.0)).build()
 
 workbench = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 
