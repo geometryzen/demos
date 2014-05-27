@@ -6,6 +6,8 @@ e1 = VectorE3(1.0, 0.0, 0.0)
 
 space = CartesianSpace()
 
+print 1
+
 radiusTop = 1
 radiusBottom = 1
 height = 5
