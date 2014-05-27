@@ -6,13 +6,9 @@ from e3ga import *
 from geometry import *
 from easel import *
 
-# This works both through the Python DaVinci wrapper as well as using JavaScript dynamic wrapping.
-# Provided you don't try to use the attitude property on the mesh together with native THREE.
 import three as THREE
-#THREE = window.THREE
 
 glwin = window.open("","","width=800,height=600")
-# Changing the background color is a bit of a hack until I figure out the padding.
 glwin.document.body.style.backgroundColor = "080808"
 glwin.document.body.style.overflow = "hidden"
 glwin.document.title = "Visualizing Geometric Algebra with WebGL"
@@ -61,7 +57,6 @@ mesh = THREE.Mesh(THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00, 1.0, False))
 mesh.position.set(0, -2, 0)
 scene.add(mesh)
 
-# ArrowGeometry isn't really a THREE artifact right now.
 arrow = THREE.Mesh(THREE.ArrowGeometry(4.0), material(0xFFFF00, 1.0, False))
 scene.add(arrow)
 
@@ -69,7 +64,6 @@ box = THREE.Mesh(THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25, False))
 scene.add(box)
 box.position.set(3,-3,3)
 
-# VortexGeometry isn't really a THREE artifact right now.
 vortex = THREE.Mesh(THREE.VortexGeometry(4.0, 0.32, 0.04, 0.08, 0.3, 8, 12), material(0x00FFff, 0.3, False))
 scene.add(vortex)
 
