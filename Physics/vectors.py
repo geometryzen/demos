@@ -14,21 +14,6 @@ e3 = ArrowBuilder().color(0x0000FF).attitude(exp(-BivectorE3( 0.0, 1.0, 0.0)*pi/
 
 workbench = Workbench3D(space.renderer.domElement, space.renderer, space.camera)
 
-def escKey(event, downFlag):
-    event.preventDefault()
-    global timeOut
-    timeOut = 0
-
-keyHandlers = {
- 27: escKey
-}
-    
-def onDocumentKeyDown(event):
-    try:
-        keyHandlers[event.keyCode](event, True)
-    except:
-        pass
-
 def setUp():
     workbench.setUp()
 
@@ -39,16 +24,13 @@ def setUp():
     space.camera.position.set(2.0, 2.0, 2.0)
     space.camera.lookAt(VectorE3(0.0, 0.0, 0.0))
 
-    document.addEventListener("keydown", onDocumentKeyDown, False)
-
 def tick(t):
     space.render()
     
 def terminate(t):
     return t > timeOut
 
-def tearDown(e):
-    document.removeEventListener("keydown", onDocumentKeyDown, False)
+def tearDown(e)
     workbench.tearDown()
     if e:
         print e
