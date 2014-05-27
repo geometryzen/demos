@@ -14,6 +14,9 @@ height = 5
 radialSegments = 32
 heightSegments = 5
 openEnded = False
+
+print 2
+
 cylinder = CylinderGeometry(radiusTop, radiusBottom, height, radialSegments, heightSegments, openEnded, e1)
 
 print 2
