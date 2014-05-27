@@ -17,6 +17,8 @@ openEnded = False
 
 print 2
 
+print e1
+
 cylinder = CylinderGeometry(radiusTop, radiusBottom, height, radialSegments, heightSegments, openEnded, e1)
 
 print 3
