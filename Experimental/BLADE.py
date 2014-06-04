@@ -2,7 +2,7 @@ from browser import window
 
 BLADE = window.BLADE
 
-third = BLADE.Rational(1,3)
+third = BLADE.Rational(2,6)
 print third
 
 v = BLADE.Euclidean2(1,2,3,4)
