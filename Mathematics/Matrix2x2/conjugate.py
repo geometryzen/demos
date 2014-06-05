@@ -43,3 +43,4 @@ print
 print "det(1) => " + str(det(1))
 print "det(I) => " + str(det(I))
 print "det(X) => " + str(det(X))
+print "det(Y) => " + str(det(Y))
