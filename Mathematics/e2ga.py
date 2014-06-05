@@ -55,3 +55,9 @@ for a in blades:
     print ""
     for b in blades:
         showValue(str(a) + " >> " + str(b), str(a >> b))
+print ""
+print "Scalar Product"
+for a in blades:
+    print ""
+    for b in blades:
+        showValue(str(a) + " % " + str(b), str(a % b))
