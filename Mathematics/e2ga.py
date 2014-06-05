@@ -12,7 +12,7 @@ def showValue(name, x):
 zero = explain(Euclidean2(0,0,0,0))
 one  = explain(ScalarE2(1))
 two  = explain(ScalarE2(2))
-three= explain(ScalarE2(3))
+three= explain(3)
 i    = explain(VectorE2(1, 0))
 j    = explain(VectorE2(0, 1))
 I    = explain(PseudoscalarE2(1))
