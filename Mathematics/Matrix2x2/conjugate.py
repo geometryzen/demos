@@ -52,3 +52,4 @@ e1 = VectorE2(1,0)
 e2 = VectorE2(0,1)
 
 print det(Matrix2x2(Matrix2x1(e1, 0), Matrix2x1(0, e2)))
+print det(Matrix2x2(Matrix2x1(0, e2), Matrix2x1(e1, 0)))
