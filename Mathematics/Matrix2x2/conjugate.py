@@ -39,3 +39,5 @@ print "conjugate(X) => " + str(conjugate(X))
 print "conjugate(Y) => " + str(conjugate(Y))
 print "conjugate(Z) => " + str(conjugate(Z))
 print "conjugate(H) => " + str(conjugate(H))
+print
+print "det(I) => " + str(det(I))
