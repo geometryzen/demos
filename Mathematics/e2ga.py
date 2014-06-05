@@ -148,3 +148,19 @@ for a in blades:
     after >>= a
     showValue(str(before) + " >>= " + str(a), after)
 print ""
+print "----------"
+print "Scalar Product %"
+print "----------"
+for a in blades:
+    for b in blades:
+        showValue(str(a) + " % " + str(b), a % b)
+    print ""
+print "----------"
+print "Scalar Product %="
+print "----------"
+for a in blades:
+    before = Euclidean2(1, 1, 1, 1)
+    after =  Euclidean2(before.w, before.x, before.y, before.xy)
+    after %= a
+    showValue(str(before) + " %= " + str(a), after)
+print ""
