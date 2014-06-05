@@ -1,4 +1,5 @@
 from units import *
 
-#print yard
+print inch
+print yard
 print mile
