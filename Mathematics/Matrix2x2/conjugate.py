@@ -9,6 +9,7 @@ This could be extended to Quaternions, Octonions (division algebras) as well as 
 from matrix import *
 from cmath import *
 from math import *
+from e2ga import *
 
 i = complex(0.0, 1.0)
 
@@ -46,3 +47,8 @@ print "det(X) => " + str(det(X))
 print "det(Y) => " + str(det(Y))
 print "det(Z) => " + str(det(Z))
 print "det(H) => " + str(det(H))
+
+e1 = VectorE2(1,0)
+e2 = VectorE2(0,1)
+
+print det(Matrix2x2(Matrix2x1(e1, 0), Matrix2x1(0, e2)))
