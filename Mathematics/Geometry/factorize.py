@@ -11,3 +11,5 @@ B = e1 ^ e2
 print B
 
 x = VectorE3(random(),random(),random())
+
+print x
