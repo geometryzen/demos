@@ -17,3 +17,4 @@ print x
 y = x << B
 
 print y
+print magnitude(y)
