@@ -1,3 +1,4 @@
+# Factorizing a Blade using the contraction and a random seed vector.
 from e3ga import *
 from math import *
 from random import *
