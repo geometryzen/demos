@@ -23,5 +23,5 @@ b = a << B
 
 print b
 
-print a ^ b
+print a ^ b / B
 
