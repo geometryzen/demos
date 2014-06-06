@@ -13,6 +13,8 @@ print B
 x = VectorE3(random(),random(),random())
 x = x / magnitude(x)
 
+print magnitude(x)
+
 a = x << B
 
 b = a << B
