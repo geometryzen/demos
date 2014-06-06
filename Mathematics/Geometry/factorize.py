@@ -14,7 +14,9 @@ x = VectorE3(random(),random(),random())
 
 print x
 
-y = x << B
+a = x << B
 
-print y
-print magnitude(y)
+print a
+print magnitude(a)
+
+
