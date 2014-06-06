@@ -11,6 +11,7 @@ B = VectorE3(random(),random(),random()) ^ VectorE3(random(),random(),random())
 print B
 
 x = VectorE3(random(),random(),random())
+x = x / magnitude(x)
 
 a = x << B
 
