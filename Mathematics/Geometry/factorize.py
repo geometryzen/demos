@@ -16,10 +16,10 @@ x = VectorE3(random(),random(),random())
 x = x / magnitude(x)
 x = e1
 
-a = x << B
-a = a / magnitude(a)
+b = x << B
+b = b / magnitude(b)
 
-b = a << B
+a = b << B
 
 print a ^ b
 
