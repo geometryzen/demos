@@ -14,12 +14,7 @@ x = VectorE3(random(),random(),random())
 
 a = x << B
 
-print a
-print magnitude(a)
-
 b = a << B
-
-print b
 
 print a ^ b
 
