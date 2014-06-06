@@ -23,4 +23,6 @@ b = a << B
 
 print b
 
+print a ^ b
+
 
