@@ -24,6 +24,4 @@ b = a << B
 print b
 
 print a ^ b
-print b ^ a
-
 
