@@ -14,6 +14,7 @@ print B
 
 x = VectorE3(random(),random(),random())
 x = x / magnitude(x)
+x = e1
 
 a = x << B
 a = a / magnitude(a)
