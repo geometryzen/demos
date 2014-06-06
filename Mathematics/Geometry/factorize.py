@@ -19,7 +19,7 @@ a = x << B
 print a
 print magnitude(a)
 
-b = y << B
+b = a << B
 
 print b
 
