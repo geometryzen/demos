@@ -8,6 +8,7 @@ e2 = VectorE3(0,1,0)
 e3 = VectorE3(0,0,1)
 
 B = VectorE3(random(),random(),random()) ^ VectorE3(random(),random(),random()) ^ VectorE3(random(),random(),random())
+B = e1 ^ e2 ^ e3
 
 print B
 
