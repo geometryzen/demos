@@ -22,7 +22,7 @@ material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3})
 mesh = Mesh(cube, material)
 scene.add(mesh)
 
-timeOut = 6
+timeOut = 60
 movement = 0.02 * VectorE3(1.0, 1.0, 1.0)
 
 #CartesianSpace(scene, renderer)
