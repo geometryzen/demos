@@ -14,8 +14,8 @@ width = 10
 height = 10
 depth = 10
 widthSegments = 1
-heightSegments = 2
-depthSegments = 3
+heightSegments = 1
+depthSegments = 1
 cube = BoxGeometry(width, height, depth, widthSegments, heightSegments, depthSegments)
 
 material = MeshNormalMaterial({"wireframe": True, "wireframeLinewidth": 3})
