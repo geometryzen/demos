@@ -75,8 +75,8 @@ def tick(t):
     
     box.attitude = rotor
 
-    vortex.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
-    flat.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
+#    vortex.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
+#    flat.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     renderer.render(scene, camera)
     space2D.render()
 
