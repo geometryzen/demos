@@ -68,6 +68,7 @@ def tick(t):
     rotor = exp(-B*theta.quantity/2.0)
 
     box.attitude = rotor
+    prism.attitude = rotor
 
     renderer.render(scene, camera)
     space2D.render()
