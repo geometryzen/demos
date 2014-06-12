@@ -56,6 +56,7 @@ B = BivectorE3(0.0, 0.0, 1.0)
 B = B / magnitude(B)
 
 def setUp():
+    nonitor.start()
     workbench2D.setUp()
     workbench3D.setUp()
 
@@ -75,6 +76,7 @@ def tick(t):
     space2D.render()
 
 def tearDown(e):
+    monitor.stop()
     glwin.close()
     if e:
         print "Error during animation: %s" % (e)
@@ -82,6 +84,7 @@ def tearDown(e):
         print "Goodbye!"
     workbench3D.tearDown()
     workbench2D.tearDown()
+    scene.tearDown()
 
 runner = WindowAnimationRunner(tick, None, setUp, tearDown, glwin)
 
