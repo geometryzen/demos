@@ -57,7 +57,7 @@ B = B / magnitude(B)
 
 def setUp():
     workbench2D.setUp()
-#   workbench3D.setUp()
+    workbench3D.setUp()
 
 def tick(t):
     time = t * second
@@ -80,7 +80,7 @@ def tearDown(e):
         print "Error during animation: %s" % (e)
     else:
         print "Goodbye!"
-#   workbench3D.tearDown()
+    workbench3D.tearDown()
     workbench2D.tearDown()
 
 WindowAnimationRunner(tick, None, setUp, tearDown, glwin).start()
