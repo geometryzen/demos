@@ -75,6 +75,9 @@ def tick(t):
     renderer.render(scene, camera)
     space2D.render()
 
+def terminate(t):
+    return False
+
 def tearDown(e):
     monitor.stop()
     glwin.close()
@@ -86,7 +89,7 @@ def tearDown(e):
     workbench2D.tearDown()
     scene.tearDown()
 
-runner = WindowAnimationRunner(tick, None, setUp, tearDown, glwin)
+runner = WindowAnimationRunner(tick, terminate, setUp, tearDown, glwin)
 
 def onContextLoss():
     runner.stop()
