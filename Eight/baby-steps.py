@@ -61,15 +61,11 @@ def setUp():
 def tick(t):
     time = t * second
     theta = omega * time
-    # The rotor is defined to have a minus sign.
+
     rotor = exp(-B*theta.quantity/2.0)
-    # Unfortunately, we have to use a minus sign to convert the rotor grade 2 components to the quaternion values.
-#    arrow.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
-    
+
     box.attitude = rotor
 
-#    vortex.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
-#    flat.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     renderer.render(scene, camera)
     space2D.render()
 
@@ -96,7 +92,7 @@ def onContextLoss():
 
 def onContextGain(gl):
     scene.onContextGain(gl)
-#   renderer.onContextGain()
+    renderer.onContextGain(gl)
     runner.start()
 
 monitor = eight.webGLContextMonitor(renderer.canvas, onContextLoss, onContextGain)
