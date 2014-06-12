@@ -74,7 +74,6 @@ def tick(t):
 #    arrow.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     
     box.attitude = rotor
-    box.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
 
     vortex.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     flat.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
