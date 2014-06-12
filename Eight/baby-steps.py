@@ -6,6 +6,10 @@ from e3ga import *
 from geometry import *
 from easel import *
 
+eight = WINDOW.EIGHT
+
+mv = eight.vectorE3(1,2,3)
+
 import three as THREE
 
 glwin = window.open("","","width=800,height=600")
