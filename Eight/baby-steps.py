@@ -83,4 +83,6 @@ def tearDown(e):
     workbench3D.tearDown()
     workbench2D.tearDown()
 
-WindowAnimationRunner(tick, None, setUp, tearDown, glwin).start()
+runner = WindowAnimationRunner(tick, None, setUp, tearDown, glwin)
+
+runner.start()
