@@ -52,7 +52,7 @@ camera.position = eight.vectorE3(10.0, 9.0, 8.0)
 #camera.up.set(0,0,1)
 #camera.lookAt(scene.position)
 
-workbench3D = Workbench3D(renderer.domElement, renderer, camera, glwin)
+#workbench3D = Workbench3D(renderer.domElement, renderer, camera, glwin)
 
 tau = 2 * pi
 omega = (tau / 20) / second
