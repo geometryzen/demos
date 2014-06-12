@@ -85,4 +85,16 @@ def tearDown(e):
 
 runner = WindowAnimationRunner(tick, None, setUp, tearDown, glwin)
 
+def onContextLoss():
+    runner.stop()
+    renderer.onContextLoss()
+    scene.onContextLoss()
+
+def onContextGain(gl):
+    scene.onContextGain(gl)
+    renderer.onContextGain()
+    runner.start()
+
+monitor = eight.webGLContextMonitor(renderer.domElement, onContextLoss, onContextGain)
+
 runner.start()
