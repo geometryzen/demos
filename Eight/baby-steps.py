@@ -48,7 +48,7 @@ scene.add(box)
 box.position = eight.vectorE3(3,-3,3)
 
 #CartesianSpace(scene, renderer, camera)
-camera.position = vectorE3(10.0, 9.0, 8.0)
+camera.position = eight.vectorE3(10.0, 9.0, 8.0)
 #camera.up.set(0,0,1)
 #camera.lookAt(scene.position)
 
