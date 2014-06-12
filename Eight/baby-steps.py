@@ -89,7 +89,7 @@ def tearDown(e):
     workbench2D.tearDown()
     scene.tearDown()
 
-runner = WindowAnimationRunner(tick, terminate, setUp, tearDown, glwin)
+runner = eight.windowAnimationRunner(tick, terminate, setUp, tearDown, glwin)
 
 def onContextLoss():
     runner.stop()
