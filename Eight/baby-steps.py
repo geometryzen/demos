@@ -36,44 +36,16 @@ output.x = 100
 output.y = 60
 space2D.addChild(output)
 
-scene = THREE.Scene()
+scene = eight.scene()
 
-camera = THREE.PerspectiveCamera(45, 1.0, 0.1, 10000)
+camera = eight.perspectiveCamera(45, 1.0, 0.1, 10000)
 
-ambientLight = THREE.AmbientLight(0x111111)
-scene.add(ambientLight)
+renderer = eight.webGLRenderer()
+#renderer.setClearColor(THREE.Color(0x080808), 1.0)
 
-pointLight = THREE.PointLight(0xFFFFFF)
-pointLight.position.set(20.0, 20.0, 20.0)
-scene.add(pointLight)
-
-directionalLight = THREE.DirectionalLight(0xFFFFFF)
-directionalLight.position.set(0.0, 1.0, 0.0)
-scene.add(directionalLight)
-
-#renderer = THREE.CanvasRenderer()
-renderer = THREE.WebGLRenderer()
-renderer.setClearColor(THREE.Color(0x080808), 1.0)
-
-def material(color=0x0000FF, opacity=1.0, transparent=False):
-    return THREE.MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent})
-
-mesh = THREE.Mesh(THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00, 1.0, False))
-mesh.position.set(0, -2, 0)
-scene.add(mesh)
-
-arrow = THREE.Mesh(THREE.ArrowGeometry(4.0), material(0xFFFF00, 1.0, False))
-scene.add(arrow)
-
-box = THREE.Mesh(THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25, False))
+box = eight.mesh(eight.boxGeometry(1,2,3))
 scene.add(box)
 box.position.set(3,-3,3)
-
-vortex = THREE.Mesh(THREE.VortexGeometry(4.0, 0.32, 0.04, 0.08, 0.3, 8, 12), material(0x00FFff, 0.3, False))
-scene.add(vortex)
-
-flat = THREE.Mesh(THREE.BoxGeometry(10.0,10.0,0.1), material(0x0000FF, 0.25, True))
-scene.add(flat)
 
 CartesianSpace(scene, renderer, camera)
 camera.position.set(10.0, 9.0, 8.0)
