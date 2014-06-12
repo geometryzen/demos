@@ -97,7 +97,6 @@ def onContextLoss():
     scene.onContextLoss()
 
 def onContextGain(gl):
-    print gl
     scene.onContextGain(gl)
 #   renderer.onContextGain()
     runner.start()
