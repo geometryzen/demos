@@ -45,7 +45,7 @@ renderer = eight.webGLRenderer()
 
 box = eight.mesh(eight.boxGeometry(1,2,3))
 scene.add(box)
-box.position.set(3,-3,3)
+box.position = eight.vectorE3(3,-3,3)
 
 CartesianSpace(scene, renderer, camera)
 camera.position.set(10.0, 9.0, 8.0)
