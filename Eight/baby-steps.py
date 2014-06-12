@@ -2,7 +2,7 @@ from browser import *
 from workbench import *
 from math import *
 from units import *
-#from e3ga import *
+from e3ga import *
 from geometry import *
 from easel import *
 
@@ -61,10 +61,10 @@ def setUp():
     workbench3D.setUp()
 
 def tick(t):
-#    time = t * second
-#    theta = omega * time
+    time = t * second
+    theta = omega * time
     # The rotor is defined to have a minus sign.
-#    rotor = exp(-B*theta.quantity/2.0)
+    rotor = exp(-B*theta.quantity/2.0)
     # Unfortunately, we have to use a minus sign to convert the rotor grade 2 components to the quaternion values.
 #    arrow.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     
