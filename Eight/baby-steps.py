@@ -9,6 +9,7 @@ from easel import *
 eight = window.EIGHT
 
 mv = eight.vectorE3(1,2,3)
+print mv.x
 
 import three as THREE
 
