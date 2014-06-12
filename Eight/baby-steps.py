@@ -63,7 +63,7 @@ B = B / magnitude(B)
 
 def setUp():
     workbench2D.setUp()
-    workbench3D.setUp()
+#   workbench3D.setUp()
 
 def tick(t):
     time = t * second
