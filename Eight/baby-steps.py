@@ -99,7 +99,7 @@ def onContextLoss():
 def onContextGain(gl):
     print gl
     scene.onContextGain(gl)
-    renderer.onContextGain()
+#   renderer.onContextGain()
     runner.start()
 
 monitor = eight.webGLContextMonitor(renderer.canvas, onContextLoss, onContextGain)
