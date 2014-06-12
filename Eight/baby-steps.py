@@ -6,9 +6,7 @@ from e3ga import *
 from geometry import *
 from easel import *
 
-# Eight.JS is the new Three.JS!
 eight = window.EIGHT
-#import three as THREE
 
 glwin = window.open("","","width=800,height=600")
 glwin.document.body.style.backgroundColor = "080808"
