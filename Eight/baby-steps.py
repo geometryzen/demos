@@ -56,7 +56,7 @@ B = BivectorE3(0.0, 0.0, 1.0)
 B = B / magnitude(B)
 
 def setUp():
-    nonitor.start()
+    monitor.start()
     workbench2D.setUp()
     workbench3D.setUp()
 
