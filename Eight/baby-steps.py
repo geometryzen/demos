@@ -71,7 +71,7 @@ def tick(t):
     # The rotor is defined to have a minus sign.
     rotor = exp(-B*theta.quantity/2.0)
     # Unfortunately, we have to use a minus sign to convert the rotor grade 2 components to the quaternion values.
-    arrow.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
+#    arrow.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     
     box.attitude = rotor
     box.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
