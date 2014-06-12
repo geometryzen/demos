@@ -82,7 +82,7 @@ def tick(t):
     space2D.render()
 
 def tearDown(e):
-    workbench3D.tearDown()
+#   workbench3D.tearDown()
     workbench2D.tearDown()
     glwin.close()
     if e:
