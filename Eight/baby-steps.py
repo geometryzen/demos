@@ -6,14 +6,8 @@ from units import *
 from geometry import *
 from easel import *
 
+# Eight.JS is the new Three.JS!
 eight = window.EIGHT
-
-mv = eight.vectorE3(1,2,3)
-print mv.w
-print mv.x
-print mv.y
-print mv.z
-
 import three as THREE
 
 glwin = window.open("","","width=800,height=600")
