@@ -82,12 +82,12 @@ def tick(t):
     space2D.render()
 
 def tearDown(e):
-#   workbench3D.tearDown()
-    workbench2D.tearDown()
     glwin.close()
     if e:
         print "Error during animation: %s" % (e)
     else:
         print "Goodbye!"
+#   workbench3D.tearDown()
+    workbench2D.tearDown()
 
 WindowAnimationRunner(tick, None, setUp, tearDown, glwin).start()
