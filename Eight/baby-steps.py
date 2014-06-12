@@ -6,7 +6,7 @@ from e3ga import *
 from geometry import *
 from easel import *
 
-eight = WINDOW.EIGHT
+eight = window.EIGHT
 
 mv = eight.vectorE3(1,2,3)
 
