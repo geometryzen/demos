@@ -1,3 +1,6 @@
+define([], function() {
+    console.log("Whoa!")
+});
 var eight = window.EIGHT;
 
 var glwin = window.open("","","width=800,height=600");
