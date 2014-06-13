@@ -6,7 +6,7 @@ from e3ga import *
 from geometry import *
 from easel import *
 from eight import *
-
+# TODO Use the Python eight module.
 eight = window.EIGHT
 
 glwin = window.open("","","width=800,height=600")
