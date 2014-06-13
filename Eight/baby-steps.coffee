@@ -45,7 +45,7 @@ tick = (t) ->
   prism.attitude = R
 
   renderer.render scene, camera
-  ang le += 0.01
+  angle += 0.01
   stats.end()
 
 terminate = (t) -> false
@@ -53,12 +53,12 @@ terminate = (t) -> false
 tearDown = (e) ->
     monitor.stop()
     glwin.close()
+    workbench3D.tearDown()
+    scene.tearDown()
     if e
-      console.log "Error during animation: #{e}"
+      throw new Error "Error during animation: #{e}"
     else
       console.log "Goodbye!"
-      workbench3D.tearDown()
-      scene.tearDown()
 
 runner = eight.windowAnimationRunner tick, terminate, setUp, tearDown, glwin
 
