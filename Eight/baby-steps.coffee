@@ -44,7 +44,7 @@ tick = (t) ->
   box.attitude = R
   prism.attitude = R
 
-  renderer.render(scene, camera)
+  renderer.render scene, camera
   angle += 0.01
   stats.end()
 
@@ -54,24 +54,24 @@ tearDown = (e) ->
     monitor.stop()
     glwin.close()
     if e
-      console.log("Error during animation: #{e}")
+      console.log "Error during animation: #{e}"
     else
-      console.log("Goodbye!")
+      console.log "Goodbye!"
       workbench3D.tearDown()
       scene.tearDown()
 
-runner = eight.windowAnimationRunner(tick, terminate, setUp, tearDown, glwin)
+runner = eight.windowAnimationRunner tick, terminate, setUp, tearDown, glwin
 
-onContextLoss = () ->
+onContextLoss = ->
   runner.stop()
   renderer.onContextLoss()
   scene.onContextLoss()
 
 onContextGain = (gl) ->
-    scene.onContextGain(gl)
-    renderer.onContextGain(gl)
+    scene.onContextGain gl
+    renderer.onContextGain gl
     runner.start()
 
-monitor = eight.webGLContextMonitor(renderer.canvas, onContextLoss, onContextGain)
+monitor = eight.webGLContextMonitor renderer.canvas, onContextLoss, onContextGain
 
 onContextGain renderer.context
