@@ -1,1 +1,2 @@
-# baby-steps.coffee
+name = "World"
+console.log "Hello, #{name}"
