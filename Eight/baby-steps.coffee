@@ -19,7 +19,7 @@ prism = eight.mesh(eight.prismGeometry())
 scene.add(prism)
 prism.position = eight.vectorE3(0.0,0.0,-5.0)
 
-workbench3D = eight.workbench3D(renderer.canvas, renderer, camera, glwin)
+workbench3D = eight.workbench3D renderer.canvas, renderer, camera, glwin
 
 setUp = () ->
   workbench3D.setUp()
