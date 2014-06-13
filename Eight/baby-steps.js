@@ -6,22 +6,6 @@ glwin.document.body.style.backgroundColor = "202020";
 glwin.document.body.style.overflow = "hidden";
 glwin.document.title = "Visualizing Geometric Algebra with WebGL";
 
-var canvas2D = glwin.document.createElement("canvas");
-canvas2D.style.position = "absolute";
-canvas2D.style.top = "0px";
-canvas2D.style.left = "0px";
-/*
-workbench2D = Workbench2D(canvas2D, glwin)
-space2D = Stage(canvas2D)
-space2D.autoClear = True
-
-font = "20px Helvetica"
-
-output = Text(glwin.document.title + ". Hit Esc key to exit.", font, "white")
-output.x = 100
-output.y = 60
-space2D.addChild(output)
-*/
 var scene = eight.scene();
 
 var camera = eight.perspectiveCamera(45, 1.0, 0.1, 100);
@@ -43,17 +27,9 @@ prism.position = eight.vectorE3(0.0,0.0,-5.0);
 #camera.lookAt(scene.position)
 */
 var workbench3D = eight.workbench3D(renderer.canvas, renderer, camera, glwin)
-/*
-tau = 2 * pi
-omega = (tau / 20) / second
-# A unit bivector rotating from k to i
-B = BivectorE3(0.0, 0.0, 1.0)
-# Just make sure that we really do have a unit bivector.
-B = B / magnitude(B)
-*/
+
 function setUp()
 {
-//  workbench2D.setUp()
     workbench3D.setUp()
     monitor.start()
 }
@@ -71,6 +47,7 @@ glwin.document.body.appendChild(stats.domElement);
 function tick(t)
 {
   stats.begin();
+  // Klunky math until we get the operator overloading and GA carried over to JavaScript!
   var c = eight.scalarE3(Math.cos(angle/2));
   var s = eight.scalarE3(Math.sin(angle/2));
   var R = c.sub(B.mul(s));
@@ -78,9 +55,8 @@ function tick(t)
   prism.attitude = R;
 
   renderer.render(scene, camera);
-  stats.end();
-//  space2D.render()
   angle += 0.01;
+  stats.end();
 }
 
 function terminate(t)
@@ -100,7 +76,6 @@ function tearDown(e)
     {
         console.log("Goodbye!")
         workbench3D.tearDown()
-//      workbench2D.tearDown()
         scene.tearDown();
     }
 }
