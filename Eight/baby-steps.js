@@ -4,4 +4,6 @@ function isJavaScript() {
   return true;
 }
 
-isJavaScript();
+var b = isJavaScript();
+
+console.log(b);
