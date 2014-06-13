@@ -1,6 +1,6 @@
 eight = window.EIGHT
 
-glwin = window.open("","","width=800,height=600")
+glwin = window.open "","","width=800,height=600"
 
 glwin.document.body.style.backgroundColor = "202020"
 glwin.document.body.style.overflow = "hidden"
@@ -12,7 +12,7 @@ camera = eight.perspectiveCamera(45, 1.0, 0.1, 100)
 
 renderer = eight.webGLRenderer()
 
-box = eight.mesh(eight.boxGeometry())
+box = eight.mesh eight.boxGeometry()
 scene.add(box)
 box.position = eight.vectorE3(-1.0,-0.5,-5.0)
 prism = eight.mesh(eight.prismGeometry())
