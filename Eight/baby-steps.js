@@ -61,6 +61,13 @@ function setUp()
 var B = eight.bivectorE3(0,0,1);
 var angle = 0;
 
+var stats = new Stats();
+stats.setMode(0);
+stats.domElement.style.position = 'absolute';
+stats.domElement.style.left = '0px';
+stats.domElement.style.top = '0px';
+glwin.document.body.appendChild(stats.domElement);
+
 function tick(t)
 {
   var c = eight.scalarE3(Math.cos(angle/2));
