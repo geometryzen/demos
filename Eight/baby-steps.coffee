@@ -46,7 +46,7 @@ tick = (t) ->
 
   renderer.render scene, camera
   angle += 0.01
-  stats.end()
+  sta ts.end()
 
 terminate = (t) -> false
 
