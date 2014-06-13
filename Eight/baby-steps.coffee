@@ -48,43 +48,30 @@ tick = (t) ->
   angle += 0.01
   stats.end()
 
-terminate = (t) ->
-{
-    return false;
-}
+terminate = (t) -> false
 
-function tearDown(e)
-{
-    monitor.stop();
-    glwin.close();
-    if (e)
-    {
-        console.log("Error during animation: " + e)
-    }
+tearDown = (e) ->
+    monitor.stop()
+    glwin.close()
+    if e
+      console.log("Error during animation: " + e)
     else
-    {
-        console.log("Goodbye!")
-        workbench3D.tearDown()
-        scene.tearDown();
-    }
-}
+      console.log("Goodbye!")
+      workbench3D.tearDown()
+      scene.tearDown()
 
-var runner = eight.windowAnimationRunner(tick, terminate, setUp, tearDown, glwin);
+runner = eight.windowAnimationRunner(tick, terminate, setUp, tearDown, glwin)
 
-function onContextLoss()
-{
-    runner.stop();
-    renderer.onContextLoss();
-    scene.onContextLoss();
-}
+onContextLoss = () ->
+  runner.stop()
+  renderer.onContextLoss()
+  scene.onContextLoss()
 
-function onContextGain(gl)
-{
-    scene.onContextGain(gl);
-    renderer.onContextGain(gl);
-    runner.start();
-}
+onContextGain = (gl) ->
+    scene.onContextGain(gl)
+    renderer.onContextGain(gl)
+    runner.start()
 
-var monitor = eight.webGLContextMonitor(renderer.canvas, onContextLoss, onContextGain);
+monitor = eight.webGLContextMonitor(renderer.canvas, onContextLoss, onContextGain)
 
-onContextGain(renderer.context);
+onContextGain(renderer.context)
