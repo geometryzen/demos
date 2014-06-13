@@ -2,11 +2,11 @@ var eight = window.EIGHT;
 console.log('001');
 
 var glwin = window.open("","","width=800,height=600");
-/*
+
 var glwin.document.body.style.backgroundColor = "202020";
 var glwin.document.body.style.overflow = "hidden";
 var glwin.document.title = "Visualizing Geometric Algebra with WebGL";
-
+/*
 canvas2D = glwin.document.createElement("canvas")
 canvas2D.style.position = "absolute"
 canvas2D.style.top = "0px"
