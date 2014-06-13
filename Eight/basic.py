@@ -5,6 +5,7 @@ from units import *
 from e3ga import *
 from geometry import *
 from easel import *
+from eight import *
 
 eight = window.EIGHT
 
