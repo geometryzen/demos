@@ -51,14 +51,14 @@ tick = (t) ->
 terminate = (t) -> false
 
 tearDown = (e) ->
-    monitor.stop()
-    glwin.close()
-    workbench3D.tearDown()
-    scene.tearDown()
-    if e
-      console.log "Error during animation: #{e}"
-    else
-      console.log "Goodbye!"
+  monitor.stop()
+  glwin.close()
+  workbench3D.tearDown()
+  scene.tearDown()
+  if e
+    console.log "Error during animation: #{e}"
+  else
+    console.log "Goodbye!"
 
 runner = eight.windowAnimationRunner tick, terminate, setUp, tearDown, glwin
 
@@ -68,9 +68,9 @@ onContextLoss = ->
   scene.onContextLoss()
 
 onContextGain = (gl) ->
-    scene.onContextGain gl
-    renderer.onContextGain gl
-    runner.start()
+  scene.onContextGain gl
+  renderer.onContextGain gl
+  runner.start()
 
 monitor = eight.webGLContextMonitor renderer.canvas, onContextLoss, onContextGain
 
