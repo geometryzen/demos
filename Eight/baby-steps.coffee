@@ -8,20 +8,20 @@ glwin.document.title = "Visualizing Geometric Algebra with WebGL"
 
 scene = eight.scene()
 
-camera = eight.perspectiveCamera(45, 1.0, 0.1, 100)
+camera = eight.perspectiveCamera 45, 1.0, 0.1, 100
 
 renderer = eight.webGLRenderer()
 
 box = eight.mesh eight.boxGeometry()
-scene.add(box)
-box.position = eight.vectorE3(-1.0,-0.5,-5.0)
-prism = eight.mesh(eight.prismGeometry())
-scene.add(prism)
-prism.position = eight.vectorE3(0.0,0.0,-5.0)
+scene.add box
+box.position = eight.vectorE3 -1.0, -0.5, -5.0
+prism = eight.mesh eight.prismGeometry()
+scene.add prism
+prism.position = eight.vectorE3 0.0, 0.0, -5.0
 
 workbench3D = eight.workbench3D renderer.canvas, renderer, camera, glwin
 
-setUp = () ->
+setUp = ->
   workbench3D.setUp()
   monitor.start()
 
