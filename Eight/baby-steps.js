@@ -3,7 +3,7 @@ var eight = window.EIGHT;
 var glwin = window.open("","","width=800,height=600");
 var glwin.document.body.style.backgroundColor = "202020";
 var glwin.document.body.style.overflow = "hidden";
-glwin.document.title = "Visualizing Geometric Algebra with WebGL"
+var glwin.document.title = "Visualizing Geometric Algebra with WebGL";
 
 canvas2D = glwin.document.createElement("canvas")
 canvas2D.style.position = "absolute"
