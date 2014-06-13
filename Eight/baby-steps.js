@@ -71,6 +71,7 @@ function tick(t)
 
   renderer.render(scene, camera)
 //  space2D.render()
+  angle += 0.01;
 }
 
 function terminate(t)
