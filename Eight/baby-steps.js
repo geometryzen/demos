@@ -1,5 +1,4 @@
 var eight = window.EIGHT;
-console.log('001');
 
 var glwin = window.open("","","width=800,height=600");
 
@@ -23,7 +22,6 @@ output.x = 100
 output.y = 60
 space2D.addChild(output)
 */
-console.log('002');
 var scene = eight.scene();
 
 var camera = eight.perspectiveCamera(45, 1.0, 0.1, 100);
@@ -37,7 +35,7 @@ box.position = eight.vectorE3(-1.0,-0.5,-5.0);
 var prism = eight.mesh(eight.prismGeometry());
 scene.add(prism);
 prism.position = eight.vectorE3(0.0,0.0,-5.0);
-console.log('003');
+
 /*
 #CartesianSpace(scene, renderer, camera)
 #camera.position = eight.vectorE3(10.0, 9.0, 8.0)
