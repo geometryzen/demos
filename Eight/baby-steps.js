@@ -58,17 +58,18 @@ function setUp()
     monitor.start()
 }
 
+var B = eight.bivectorE3(0,0,1);
+var angle = 0;
+
 function tick(t)
 {
-//  time = t * second
-//  theta = omega * time
+  var c = eight.scalarE3(Math.cos(angle/2));
+  var s = eight.scalarE3(Math.sin(angle/2));
+  var R = c.sub(B.mul(s));
+  box.attitude = R;
+  prism.attitude = R;
 
-//  rotor = exp(-B*theta.quantity/2.0)
-
-//  box.attitude = rotor
-//  prism.attitude = rotor
-
-    renderer.render(scene, camera)
+  renderer.render(scene, camera)
 //  space2D.render()
 }
 
