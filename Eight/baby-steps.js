@@ -1,1 +1,1 @@
-à€€à€€
+console.log("Hello, World!")
