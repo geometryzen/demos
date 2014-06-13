@@ -41,9 +41,9 @@ prism.position = eight.vectorE3(0.0,0.0,-5.0);
 #camera.position = eight.vectorE3(10.0, 9.0, 8.0)
 #camera.up.set(0,0,1)
 #camera.lookAt(scene.position)
-
-workbench3D = Workbench3D(renderer.canvas, renderer, camera, glwin)
-
+*/
+var workbench3D = eight.workbench3D(renderer.canvas, renderer, camera, glwin)
+/*
 tau = 2 * pi
 omega = (tau / 20) / second
 # A unit bivector rotating from k to i
@@ -54,7 +54,7 @@ B = B / magnitude(B)
 function setUp()
 {
 //  workbench2D.setUp()
-//  workbench3D.setUp()
+    workbench3D.setUp()
     monitor.start()
 }
 
@@ -88,7 +88,7 @@ function tearDown(e)
     else
     {
         console.log("Goodbye!")
-//      workbench3D.tearDown()
+        workbench3D.tearDown()
 //      workbench2D.tearDown()
         scene.tearDown();
     }
