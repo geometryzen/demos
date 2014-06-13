@@ -45,7 +45,7 @@ tick = (t) ->
   prism.attitude = R
 
   renderer.render scene, camera
-  angle += 0.01
+  ang le += 0.01
   stats.end()
 
 terminate = (t) -> false
