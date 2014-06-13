@@ -70,13 +70,15 @@ glwin.document.body.appendChild(stats.domElement);
 
 function tick(t)
 {
+  stats.begin();
   var c = eight.scalarE3(Math.cos(angle/2));
   var s = eight.scalarE3(Math.sin(angle/2));
   var R = c.sub(B.mul(s));
   box.attitude = R;
   prism.attitude = R;
 
-  renderer.render(scene, camera)
+  renderer.render(scene, camera);
+  stats.end();
 //  space2D.render()
   angle += 0.01;
 }
