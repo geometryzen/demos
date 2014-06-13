@@ -46,7 +46,7 @@ tick = (t) ->
 
   renderer.render scene, camera
   angle += 0.01
-  sta ts.end()
+  stats.end()
 
 terminate = (t) -> false
 
@@ -56,7 +56,7 @@ tearDown = (e) ->
     workbench3D.tearDown()
     scene.tearDown()
     if e
-      throw new Error "Error during animation: #{e}"
+      console.log "Error during animation: #{e}"
     else
       console.log "Goodbye!"
 
