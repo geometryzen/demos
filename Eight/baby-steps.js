@@ -105,12 +105,13 @@ function onContextLoss()
     scene.onContextLoss();
 }
 
-function onContextGain(gl):
-    scene.onContextGain(gl)
-    renderer.onContextGain(gl)
-    runner.start()
+function onContextGain(gl)
+{
+    scene.onContextGain(gl);
+    renderer.onContextGain(gl);
+    runner.start();
+}
 
-monitor = eight.webGLContextMonitor(renderer.canvas, onContextLoss, onContextGain)
+var monitor = eight.webGLContextMonitor(renderer.canvas, onContextLoss, onContextGain);
 
-onContextGain(renderer.context)
-*/
+onContextGain(renderer.context);
