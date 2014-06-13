@@ -33,7 +33,6 @@ scene = eight.scene()
 camera = eight.perspectiveCamera(45, 1.0, 0.1, 100)
 
 renderer = eight.webGLRenderer()
-#renderer.setClearColor(THREE.Color(0x080808), 1.0)
 
 box = eight.mesh(eight.boxGeometry())
 scene.add(box)
@@ -41,11 +40,6 @@ box.position = eight.vectorE3(-1.0,-0.5,-5.0)
 prism = eight.mesh(eight.prismGeometry())
 scene.add(prism)
 prism.position = eight.vectorE3(0.0,0.0,-5.0)
-
-#CartesianSpace(scene, renderer, camera)
-#camera.position = eight.vectorE3(10.0, 9.0, 8.0)
-#camera.up.set(0,0,1)
-#camera.lookAt(scene.position)
 
 workbench3D = Workbench3D(renderer.canvas, renderer, camera, glwin)
 
