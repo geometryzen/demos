@@ -54,7 +54,7 @@ tearDown = (e) ->
     monitor.stop()
     glwin.close()
     if e
-      console.log("Error during animation: " + e)
+      console.log("Error during animation: #{e}")
     else
       console.log("Goodbye!")
       workbench3D.tearDown()
