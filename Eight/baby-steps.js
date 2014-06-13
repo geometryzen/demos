@@ -6,11 +6,12 @@ var glwin = window.open("","","width=800,height=600");
 glwin.document.body.style.backgroundColor = "202020";
 glwin.document.body.style.overflow = "hidden";
 glwin.document.title = "Visualizing Geometric Algebra with WebGL";
+
+var canvas2D = glwin.document.createElement("canvas");
+canvas2D.style.position = "absolute";
+canvas2D.style.top = "0px";
+canvas2D.style.left = "0px";
 /*
-canvas2D = glwin.document.createElement("canvas")
-canvas2D.style.position = "absolute"
-canvas2D.style.top = "0px"
-canvas2D.style.left = "0px"
 workbench2D = Workbench2D(canvas2D, glwin)
 space2D = Stage(canvas2D)
 space2D.autoClear = True
@@ -21,9 +22,10 @@ output = Text(glwin.document.title + ". Hit Esc key to exit.", font, "white")
 output.x = 100
 output.y = 60
 space2D.addChild(output)
-
-scene = eight.scene()
-
+*/
+console.log('002');
+var scene = eight.scene();
+/*
 camera = eight.perspectiveCamera(45, 1.0, 0.1, 100)
 
 renderer = eight.webGLRenderer()
