@@ -52,46 +52,60 @@ omega = (tau / 20) / second
 B = BivectorE3(0.0, 0.0, 1.0)
 # Just make sure that we really do have a unit bivector.
 B = B / magnitude(B)
-
-def setUp():
-    workbench2D.setUp()
-    workbench3D.setUp()
+*/
+function setUp()
+{
+//  workbench2D.setUp()
+//  workbench3D.setUp()
     monitor.start()
+}
 
-def tick(t):
-    time = t * second
-    theta = omega * time
+function tick(t)
+{
+//  time = t * second
+//  theta = omega * time
 
-    rotor = exp(-B*theta.quantity/2.0)
+//  rotor = exp(-B*theta.quantity/2.0)
 
-    box.attitude = rotor
-    prism.attitude = rotor
+//  box.attitude = rotor
+//  prism.attitude = rotor
 
     renderer.render(scene, camera)
-    space2D.render()
+//  space2D.render()
+}
 
-def terminate(t):
-    return False
+function terminate(t)
+{
+    return false;
+}
 
-def tearDown(e):
-    monitor.stop()
-    glwin.close()
-    if e:
-        print "Error during animation: %s" % (e)
-    else:
-        print "Goodbye!"
-    workbench3D.tearDown()
-    workbench2D.tearDown()
-    scene.tearDown()
+function tearDown(e)
+{
+    monitor.stop();
+    glwin.close();
+    if (e)
+    {
+        console.log("Error during animation: " + e)
+    }
+    else
+    {
+        console.log("Goodbye!")
+//      workbench3D.tearDown()
+//      workbench2D.tearDown()
+        scene.tearDown();
+    }
+}
 
-runner = eight.windowAnimationRunner(tick, terminate, setUp, tearDown, glwin)
+var runner = eight.windowAnimationRunner(tick, terminate, setUp, tearDown, glwin);
 
-def onContextLoss():
-    runner.stop()
-    renderer.onContextLoss()
-    scene.onContextLoss()
+function onContextLoss()
+{
+    runner.stop();
+    renderer.onContextLoss();
+    scene.onContextLoss();
+}
 
-def onContextGain(gl):
+function onContextGain(gl):
     scene.onContextGain(gl)
     renderer.onContextGain(gl)
     runner.start()
