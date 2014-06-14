@@ -2,7 +2,7 @@ from browser import *
 from workbench import *
 from math import *
 from units import *
-from geometry import *
+#from geometry import *
 from easel import *
 from eight import *
 
