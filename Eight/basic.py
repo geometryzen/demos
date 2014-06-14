@@ -94,6 +94,6 @@ def onContextGain(gl):
     renderer.onContextGain(gl)
     runner.start()
 
-monitor = eight.webGLContextMonitor(renderer.canvas, onContextLoss, onContextGain)
+monitor = webGLContextMonitor(renderer.canvas, onContextLoss, onContextGain)
 
 onContextGain(renderer.context)
