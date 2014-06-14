@@ -61,6 +61,7 @@ def setUp():
     monitor.start()
 
 def tick(t):
+    stats.begin()
     time = t * second
     theta = omega * time
 
@@ -71,6 +72,7 @@ def tick(t):
 
     renderer.render(scene, camera)
     space2D.render()
+    stats.end()
 
 def terminate(t):
     return False
