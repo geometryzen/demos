@@ -26,6 +26,13 @@ output.x = 100
 output.y = 60
 space2D.addChild(output)
 
+stats = window.Stats()
+stats.setMode(0)
+stats.domElement.style.position = 'absolute'
+stats.domElement.style.left = '0px'
+stats.domElement.style.top = '0px'
+glwin.document.body.appendChild(stats.domElement)
+
 scene = scene()
 
 camera = perspectiveCamera(45, 1.0, 0.1, 100)
