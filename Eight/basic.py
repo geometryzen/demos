@@ -5,7 +5,7 @@ from units import *
 from e3ga import *
 from geometry import *
 from easel import *
-import eight as EIGHT
+import eight as e
 # TODO Use the Python eight module.
 eight = window.EIGHT
 
@@ -29,7 +29,7 @@ output.x = 100
 output.y = 60
 space2D.addChild(output)
 
-scene = scene()
+scene = e.scene()
 print scene
 
 camera = eight.perspectiveCamera(45, 1.0, 0.1, 100)
