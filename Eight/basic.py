@@ -42,7 +42,7 @@ prism = mesh(prismGeometry())
 scene.add(prism)
 prism.position = vectorE3(0.0,0.0,-5.0)
 
-workbench3D = Workbench3D(renderer.canvas, renderer, camera, glwin)
+workbench3D = workbench3D(renderer.canvas, renderer, camera, glwin)
 
 tau = 2 * pi
 omega = (tau / 20) / second
