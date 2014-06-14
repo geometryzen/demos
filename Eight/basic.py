@@ -46,7 +46,7 @@ omega = (tau / 20) / second
 # A unit bivector rotating from k to i
 B = bivectorE3(0.0, 0.0, 1.0)
 # Just make sure that we really do have a unit bivector.
-B = B / magnitude(B)
+#B = B / magnitude(B)
 
 def setUp():
     workbench2D.setUp()
