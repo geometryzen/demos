@@ -71,7 +71,7 @@ def tick(t):
     prism.attitude = rotor
 
     renderer.render(scene, camera)
-    space2D.render()
+#   space2D.render()
     stats.end()
 
 def terminate(t):
