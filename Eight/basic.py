@@ -32,7 +32,7 @@ space2D.addChild(output)
 scene = e.scene()
 print scene
 
-camera = eight.perspectiveCamera(45, 1.0, 0.1, 100)
+camera = e.perspectiveCamera(45, 1.0, 0.1, 100)
 
 renderer = eight.webGLRenderer()
 
