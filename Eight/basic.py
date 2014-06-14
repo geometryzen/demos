@@ -30,7 +30,6 @@ output.y = 60
 space2D.addChild(output)
 
 scene = e.scene()
-print scene
 
 camera = e.perspectiveCamera(45, 1.0, 0.1, 100)
 
