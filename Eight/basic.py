@@ -29,7 +29,7 @@ output.x = 100
 output.y = 60
 space2D.addChild(output)
 
-scene = eight.scene()
+scene = scene()
 
 camera = eight.perspectiveCamera(45, 1.0, 0.1, 100)
 
