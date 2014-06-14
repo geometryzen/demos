@@ -35,10 +35,10 @@ camera = perspectiveCamera(45, 1.0, 0.1, 100)
 
 renderer = webGLRenderer()
 
-box = mesh(eight.boxGeometry())
+box = mesh(boxGeometry())
 scene.add(box)
 box.position = eight.vectorE3(-1.0,-0.5,-5.0)
-prism = mesh(eight.prismGeometry())
+prism = mesh(prismGeometry())
 scene.add(prism)
 prism.position = eight.vectorE3(0.0,0.0,-5.0)
 
