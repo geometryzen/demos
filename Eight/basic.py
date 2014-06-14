@@ -5,7 +5,7 @@ from units import *
 from e3ga import *
 from geometry import *
 from easel import *
-from eight import *
+import eight as EIGHT
 # TODO Use the Python eight module.
 eight = window.EIGHT
 
