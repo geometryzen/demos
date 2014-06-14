@@ -33,7 +33,7 @@ scene = scene()
 
 camera = perspectiveCamera(45, 1.0, 0.1, 100)
 
-renderer = eight.webGLRenderer()
+renderer = webGLRenderer()
 
 box = eight.mesh(eight.boxGeometry())
 scene.add(box)
