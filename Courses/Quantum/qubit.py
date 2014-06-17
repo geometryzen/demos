@@ -109,7 +109,7 @@ space3D.renderer.setClearColor(0x777777, 1.0)
 space3D.camera.position = (4 * e1 + 4 * e2 + 2 * e3) * 0.6
 space3D.camera.lookAt(probeR2.position)
 
-workbench = Workbench(space3D.renderer, space3D.camera)
+workbench = Workbench3D(space3D.renderer, space3D.camera)
 
 def shiftKey(event, downFlag):
     global isShiftDown
