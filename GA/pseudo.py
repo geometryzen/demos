@@ -58,5 +58,5 @@ print B.dot(a*I)
 print (B ^ a) * I
 print
 print a * b
-print (a % b) + (a ^ b)
+print (a % b) + a ^ b
 print a % b + a ^ b
