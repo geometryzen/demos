@@ -19,5 +19,5 @@ print a >> b + a ^ b
 #print a << b
 #print a >> b
 #print a | b
-print a * b % c
-print a * (b % c)
+print a * b | c
+print a * (b | c)
