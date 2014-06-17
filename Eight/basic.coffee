@@ -1,4 +1,5 @@
 eight = window.EIGHT
+cos = Math.cos
 
 glwin = window.open("","","width=800,height=600")
 
