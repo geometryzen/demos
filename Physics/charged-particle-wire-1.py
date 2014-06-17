@@ -43,11 +43,11 @@ space3D.add(probeF.grade1)
 dt = 0.02
 
 def outsideCube(position, size):
-    if (abs(particle.position % i) > size):
+    if (abs(particle.position | i) > size):
         return True
-    if (abs(particle.position % j) > size):
+    if (abs(particle.position | j) > size):
         return True
-    if (abs(particle.position % k) > size):
+    if (abs(particle.position | k) > size):
         return True
     return False
 
