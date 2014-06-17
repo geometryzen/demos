@@ -17,4 +17,3 @@ print a >> b + a ^ b
 print
 print a * b | c
 print a * (b | c)
-print (a * b) | c
