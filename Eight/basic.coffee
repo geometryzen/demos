@@ -8,7 +8,7 @@ glwin.document.title = "Visualizing Geometric Algebra with WebGL"
 
 scene = eight.scene()
 
-camera = eight.perspectiveCamera 45, 1.0, 0.1, 100
+camera = eight.perspectiveCamera(45, 1.0, 0.1, 100)
 
 renderer = eight.webGLRenderer()
 
