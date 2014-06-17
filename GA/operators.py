@@ -12,13 +12,13 @@ print e3
 a = random() * e1 + random() * e2 + random() * e3
 b = random() * e1 + random() * e2 + random() * e3
 
-print a
-print b
+#print a
+#print b
 
 print a * b
 print a % b + a ^ b
 print a << b + a ^ b
 print a >> b + a ^ b
-print a << b
-print a >> b
+#print a << b
+#print a >> b
 #print a | b
