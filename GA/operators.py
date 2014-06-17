@@ -13,7 +13,7 @@ c = random() * e1 + random() * e2 + random() * e3
 #print b
 
 print a * b
-print a % b + a ^ b
+print a | b + a ^ b
 print a << b + a ^ b
 print a >> b + a ^ b
 #print a << b
