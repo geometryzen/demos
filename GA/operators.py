@@ -9,5 +9,8 @@ print e1
 print e2
 print e3
 
-a = random() * e1
+a = random() * e1 + random() * e2 + random() * e3
+a = random() * e1 + random() * e2 + random() * e3
+
 print a
+print b
