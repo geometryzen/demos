@@ -21,7 +21,7 @@ r = 0.5 * meter * e3
 show("moment arm, r", r)
 
 # As a vector, the torque is given by (using Geometric Algebra)
-N = - I3 * (r ^ F)
+N = - I3 * r ^ F
 
 show("torque, N = - I (r ^ F)", N)
 show("torque, N = r x F", r.cross(F))
