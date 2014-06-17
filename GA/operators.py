@@ -10,16 +10,10 @@ a = (random() * e1 + random() * e2 + random() * e3) * meter
 b = (random() * e1 + random() * e2 + random() * e3) * meter
 c = (random() * e1 + random() * e2 + random() * e3) * meter
 
-#print a
-#print b
-
 print a * b
 print a | b + a ^ b
 print a << b + a ^ b
 print a >> b + a ^ b
 print
-#print a << b
-#print a >> b
-#print a | b
 print a * b | c
 print a * (b | c)
