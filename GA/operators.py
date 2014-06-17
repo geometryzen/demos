@@ -10,3 +10,4 @@ print e2
 print e3
 
 a = random() * e1
+print a
