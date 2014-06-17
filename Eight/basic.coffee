@@ -13,7 +13,7 @@ camera = eight.perspectiveCamera 45, 1.0, 0.1, 100
 renderer = eight.webGLRenderer()
 
 box = eight.mesh eight.boxGeometry()
-scene.add box
+scene.add(box)
 box.position = eight.vectorE3 -1.0, -0.5, -5.0
 prism = eight.mesh eight.prismGeometry()
 scene.add prism
