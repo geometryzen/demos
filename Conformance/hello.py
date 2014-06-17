@@ -1,1 +1,1 @@
-print 0xFFFFFF
+print 0O0505L
