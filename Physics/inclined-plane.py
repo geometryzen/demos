@@ -42,11 +42,11 @@ def acceleration(theta, mu):
     Friction = magnitude(mu * N) * eUp
 
     # Notice that I simply add the force due to friction because it has the correct direction.
-    F = (W << eDown) * eDown + Friction
+    F = (W | eDown) * eDown + Friction
     
     return F / mass
     
 a = acceleration(theta, mu)
 
-print "a << down = %s (down the plane)"      % (a << eDown)
-print "a << norm = %s (normal to the plane)" % (a << eNorm)
+print "a << down = %s (down the plane)"      % (a | eDown)
+print "a << norm = %s (normal to the plane)" % (a | eNorm)
