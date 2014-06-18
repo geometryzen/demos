@@ -1,2 +1,2 @@
-choices=('a
+choices=('a'
          'b')
