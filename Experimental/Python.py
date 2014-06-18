@@ -14,5 +14,5 @@ while yORn == 1:
    print("    1.............._... ... 1    ")
    print("   1...................... 1     ")
    print("  -------------------------      ")
-   yORn = int(input("Type 1 to run the program, Type 2 to Exit:  ")
+   yORn = int(input("Type 1 to run the program, Type 2 to Exit:  "))
 print "GoodBye"
