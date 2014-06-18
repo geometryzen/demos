@@ -1,3 +1,4 @@
-print 1
+def f():
+    pass
 
  print 6
