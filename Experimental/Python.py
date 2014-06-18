@@ -1,4 +1,1 @@
-choices=('a'
-         'b')
-         
-print choices
+() = 7
