@@ -1,3 +1,1 @@
 def f():
-    pass
- print
