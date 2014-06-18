@@ -1,1 +1,1 @@
-print 1s
+ print 6
