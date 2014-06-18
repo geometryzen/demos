@@ -1,5 +1,5 @@
 yORn = int(input("Type 1 to run the program, Type 2 to Exit:  "))
-while yORn = 1:
+while yORn == 1:
    Name = str(input("What is your name?"))
    print("      1111111111111111111111     ")
    print("      1                    1     ")
