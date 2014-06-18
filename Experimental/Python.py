@@ -1,4 +1,4 @@
 def f():
     pass
 
- print 6
+    print 6
