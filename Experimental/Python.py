@@ -1,4 +1,4 @@
 def f():
-    return 1
+    return 1.3
     
 print f()
