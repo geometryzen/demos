@@ -1,3 +1,1 @@
-
-
-print
+print 1s
