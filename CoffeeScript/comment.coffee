@@ -1,1 +1,1 @@
-# CoffeeScript/comment.coffee
+# A comment
