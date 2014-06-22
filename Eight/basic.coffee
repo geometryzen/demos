@@ -18,15 +18,15 @@ scene.add(box)
 box.position = eight.vectorE3(-1.0, -0.5, -5.0)
 prism = eight.mesh eight.prismGeometry()
 scene.add prism
-prism.position = eight.vectorE3 0.0, 0.0, -5.0
+prism.position = eight.vectorE3(0.0, 0.0, -5.0)
 
-workbench3D = eight.workbench3D renderer.canvas, renderer, camera, glwin
+workbench3D = eight.workbench3D(renderer.canvas, renderer, camera, glwin)
 
 setUp = ->
   workbench3D.setUp()
   monitor.start()
 
-B = eight.bivectorE3 0, 0, 1
+B = eight.bivectorE3(0, 0, 1)
 angle = 0
 
 stats = new Stats()
@@ -34,7 +34,7 @@ stats.setMode 0
 stats.domElement.style.position = 'absolute'
 stats.domElement.style.left = '0px'
 stats.domElement.style.top = '0px'
-glwin.document.body.appendChild stats.domElement
+glwin.document.body.appendChild(stats.domElement)
 
 tick = (t) ->
   stats.begin()
@@ -45,7 +45,7 @@ tick = (t) ->
   box.attitude = R
   prism.attitude = R
 
-  renderer.render scene, camera
+  renderer.render(scene, camera)
   angle += 0.010
   stats.end()
 
@@ -75,4 +75,4 @@ onContextGain = (gl) ->
 
 monitor = eight.webGLContextMonitor(renderer.canvas, onContextLoss, onContextGain)
 
-onContextGain renderer.context
+onContextGain(renderer.context)
