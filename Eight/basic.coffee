@@ -61,7 +61,7 @@ tearDown = (e) ->
   else
     console.log "Goodbye!"
 
-runner = eight.windowAnimationRunner tick, terminate, setUp, tearDown, glwin
+runner = eight.windowAnimationRunner(tick, terminate, setUp, tearDown, glwin)
 
 onContextLoss = ->
   runner.stop()
@@ -73,6 +73,6 @@ onContextGain = (gl) ->
   renderer.onContextGain gl
   runner.start()
 
-monitor = eight.webGLContextMonitor renderer.canvas, onContextLoss, onContextGain
+monitor = eight.webGLContextMonitor(renderer.canvas, onContextLoss, onContextGain)
 
 onContextGain renderer.context
