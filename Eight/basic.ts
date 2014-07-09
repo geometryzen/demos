@@ -1,6 +1,3 @@
-var x = 7
-var eight = window.eight;
-
 var glwin = window.open("","","width=800,height=600");
 
 glwin.document.body.style.backgroundColor = "202020";
