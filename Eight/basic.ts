@@ -9,21 +9,21 @@ glwin.document.title = "Visualizing Geometric Algebra with WebGL";
 
 var scene = eight.scene();
 
-var camera = eight.perspectiveCamera(45, 1.0, 0.1, 100);
+var camera = eight.perspective(45, 1.0, 0.1, 100);
 
-var renderer = eight.webGLRenderer();
+var renderer = eight.renderer();
 
-var box = eight.mesh(eight.boxGeometry());
+var box = eight.mesh(eight.box());
 scene.add(box);
 box.position = eight.vectorE3(-1.0,-0.5,-5.0);
-var prism = eight.mesh(eight.prismGeometry());
+var prism = eight.mesh(eight.prism());
 scene.add(prism);
 prism.position = eight.vectorE3(0.0,0.0,-5.0);
 
-var workbench3D = eight.workbench3D(renderer.canvas, renderer, camera, glwin);
+var workbench = eight.workbench(renderer.canvas, renderer, camera, glwin);
 
 function setUp() {
-  workbench3D.setUp();
+  workbench.setUp();
   monitor.start();
 }
 
@@ -61,12 +61,12 @@ function tearDown(e) {
   }
   else {
     console.log("Goodbye!");
-    workbench3D.tearDown();
+    workbench.tearDown();
     scene.tearDown();
   }
 }
 
-var runner = eight.windowAnimationRunner(tick, terminate, setUp, tearDown, glwin);
+var runner = eight.animationRunner(tick, terminate, setUp, tearDown, glwin);
 
 function onContextLoss() {
     runner.stop();
@@ -80,6 +80,6 @@ function onContextGain(gl) {
     runner.start();
 }
 
-var monitor = eight.webGLContextMonitor(renderer.canvas, onContextLoss, onContextGain);
+var monitor = eight.contextMonitor(renderer.canvas, onContextLoss, onContextGain);
 
 onContextGain(renderer.context);
