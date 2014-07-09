@@ -27,15 +27,15 @@ function setUp() {
 var B = eight.bivectorE3(0,0,1);
 var angle = 0;
 
-var stats = new Stats();
-stats.setMode(0);
-stats.domElement.style.position = 'absolute';
-stats.domElement.style.left = '0px';
-stats.domElement.style.top = '0px';
-glwin.document.body.appendChild(stats.domElement);
+//var stats = new Stats();
+//stats.setMode(0);
+//stats.domElement.style.position = 'absolute';
+//stats.domElement.style.left = '0px';
+//stats.domElement.style.top = '0px';
+//glwin.document.body.appendChild(stats.domElement);
 
 function tick(t) {
-  stats.begin();
+//  stats.begin();
   // Klunky math until we get the operator overloading and GA carried over to JavaScript!
   var c = eight.scalarE3(Math.cos(angle/2));
   var s = eight.scalarE3(Math.sin(angle/2));
@@ -45,7 +45,7 @@ function tick(t) {
 
   renderer.render(scene, camera);
   angle += 0.01;
-  stats.end();
+//  stats.end();
 }
 
 function terminate(t) {return false;}
