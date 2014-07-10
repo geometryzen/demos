@@ -37,7 +37,7 @@ popUp.document.body.appendChild(stats.domElement);
 
 function tick(t) {
   stats.begin();
-  // Klunky math until we get the operator overloading and GA carried over to JavaScript!
+  // Klunky math until we get the operator overloading and GA carried over to TypeScript!
   var c = eight.scalarE3(Math.cos(angle/2));
   var s = eight.scalarE3(Math.sin(angle/2));
   var R = c.sub(B.mul(s));
