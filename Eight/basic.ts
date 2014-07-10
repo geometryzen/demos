@@ -1,4 +1,4 @@
-var glwin = open("","","width=800,height=600");
+var glwin = open("", "", "width=800, height=600");
 
 glwin.document.body.style.backgroundColor = "202020";
 glwin.document.body.style.overflow = "hidden";
@@ -13,7 +13,7 @@ var renderer = eight.renderer();
 var box = eight.mesh(eight.box());
 scene.add(box);
 box.position = eight.vectorE3(-1.0,-0.5,-5.0);
-var prism = eight.mesh(eight.prism());
+var prism = eight.meshy(eight.prism());
 scene.add(prism);
 prism.position = eight.vectorE3(0.0,0.0,-5.0);
 
