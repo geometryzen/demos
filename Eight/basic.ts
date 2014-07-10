@@ -13,7 +13,7 @@ var renderer = eight.renderer();
 var box = eight.mesh(eight.box());
 scene.add(box);
 box.position = eight.vectorE3(-1.0,-0.5,-5.0);
-var prism = eight.meshy(eight.prism());
+var prism = eight.mesh(eight.prism());
 scene.add(prism);
 prism.position = eight.vectorE3(0.0,0.0,-5.0);
 
@@ -71,9 +71,9 @@ function onContextLoss() {
     scene.onContextLoss();
 }
 
-function onContextGain(gl) {
-    scene.onContextGain(gl);
-    renderer.onContextGain(gl);
+function onContextGain(context: WebGLRenderingContext) {
+    scene.onContextGain(context);
+    renderer.onContextGain(context);
     runner.start();
 }
 
