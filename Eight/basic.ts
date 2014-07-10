@@ -25,7 +25,7 @@ function setUp() {
 }
 
 var B = eight.bivectorE3(0,0,1);
-var angle = 0;
+var angle: number = 0;
 
 //var stats = new Stats();
 //stats.setMode(0);
