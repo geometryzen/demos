@@ -27,8 +27,8 @@ function setUp() {
 var B = eight.bivectorE3(0,0,1);
 var angle: number = 0;
 
-var x: any = window
-var stats = new x.Stats();
+var w: any = window
+var stats = new w.Stats();
 stats.setMode(0);
 stats.domElement.style.position = 'absolute';
 stats.domElement.style.left = '0px';
