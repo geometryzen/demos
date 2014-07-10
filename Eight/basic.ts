@@ -1,8 +1,8 @@
-var glwin = open("", "", "width=800, height=600");
+var popUp = open("", "", "width=800, height=600");
 
-glwin.document.body.style.backgroundColor = "202020";
-glwin.document.body.style.overflow = "hidden";
-glwin.document.title = "Visualizing Geometric Algebra with WebGL";
+popUp.document.body.style.backgroundColor = "202020";
+popUp.document.body.style.overflow = "hidden";
+popUp.document.title = "Visualizing Geometric Algebra with WebGL";
 
 var scene = eight.scene();
 
@@ -17,7 +17,7 @@ var prism = eight.mesh(eight.prism());
 scene.add(prism);
 prism.position = eight.vectorE3(0.0,0.0,-5.0);
 
-var workbench = eight.workbench(renderer.canvas, renderer, camera, glwin);
+var workbench = eight.workbench(renderer.canvas, renderer, camera, popUp);
 
 function setUp() {
   workbench.setUp();
@@ -52,7 +52,7 @@ function terminate(t) {return false;}
 
 function tearDown(e) {
   monitor.stop();
-  glwin.close();
+  popUp.close();
   if (e) {
     console.log("Error during animation: " + e);
   }
@@ -63,7 +63,7 @@ function tearDown(e) {
   }
 }
 
-var runner = eight.animationRunner(tick, terminate, setUp, tearDown, glwin);
+var runner = eight.animationRunner(tick, terminate, setUp, tearDown, popUp);
 
 function onContextLoss() {
     runner.stop();
