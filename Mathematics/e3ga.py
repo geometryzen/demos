@@ -78,7 +78,7 @@ print "Scalar Product Table %"
 print "=================================="
 for a in blades:
     for b in blades:
-        showValue(str(a) + " % " + str(b), a % b)
+        showValue(str(a) + " % " + str(b), a | b)
     print ""
 print "Cross Product Table"
 print "=================================="
