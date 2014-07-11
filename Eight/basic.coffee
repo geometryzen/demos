@@ -1,5 +1,5 @@
-#eight = window.EIGHT
 cos = Math.cos
+sin = Math.sin
 
 glwin = window.open("","","width=800,height=600")
 
@@ -39,8 +39,8 @@ glwin.document.body.appendChild(stats.domElement)
 tick = (t) ->
   stats.begin()
   # Klunky math until we get the operator overloading and GA carried over to JavaScript!
-  c = eight.scalarE3(cos angle/2)
-  s = eight.scalarE3 Math.sin angle/2
+  c = eight.scalarE3 cos angle/2
+  s = eight.scalarE3 sin angle/2
   R = c.sub B.mul s
   box.attitude = R
   prism.attitude = R
