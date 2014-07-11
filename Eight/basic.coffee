@@ -9,18 +9,18 @@ glwin.document.title = "Visualizing Geometric Algebra with WebGL"
 
 scene = eight.scene()
 
-camera = eight.perspectiveCamera(45, 1.0, 0.1, 100)
+camera = eight.perspective(45, 1.0, 0.1, 100)
 
-renderer = eight.webGLRenderer()
+renderer = eight.renderer()
 
-box = eight.mesh eight.boxGeometry()
+box = eight.mesh eight.box()
 scene.add(box)
 box.position = eight.vectorE3(-1.0, -0.5, -5.0)
-prism = eight.mesh eight.prismGeometry()
+prism = eight.mesh eight.prism()
 scene.add prism
 prism.position = eight.vectorE3(0.0, 0.0, -5.0)
 
-workbench3D = eight.workbench3D(renderer.canvas, renderer, camera, glwin)
+workbench3D = eight.workbench(renderer.canvas, renderer, camera, glwin)
 
 setUp = ->
   workbench3D.setUp()
@@ -61,7 +61,7 @@ tearDown = (e) ->
   else
     console.log "Goodbye!"
 
-runner = eight.windowAnimationRunner(tick, terminate, setUp, tearDown, glwin)
+runner = eight.animationRunner(tick, terminate, setUp, tearDown, glwin)
 
 onContextLoss = ->
   runner.stop()
@@ -73,6 +73,6 @@ onContextGain = (gl) ->
   renderer.onContextGain gl
   runner.start()
 
-monitor = eight.webGLContextMonitor(renderer.canvas, onContextLoss, onContextGain)
+monitor = eight.contextMonitor(renderer.canvas, onContextLoss, onContextGain)
 
 onContextGain(renderer.context)
