@@ -35,7 +35,10 @@ stats.domElement.style.left = '0px';
 stats.domElement.style.top = '0px';
 popUp.document.body.appendChild(stats.domElement);
 
-function tick(t) {
+/**
+ * Performs the animation.
+ */
+function tick(time: number) {
   stats.begin();
   // Klunky math until we get the operator overloading and GA carried over to TypeScript!
   var c = eight.scalarE3(Math.cos(angle/2));
