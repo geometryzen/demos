@@ -49,7 +49,10 @@ function tick(t) {
   stats.end();
 }
 
-function terminate(t) {return false;}
+/**
+ * Determines whether to terminate the animation.
+ */
+function terminate(time: number) {return false;}
 
 function tearDown(e) {
   monitor.stop();
