@@ -18,4 +18,4 @@ for F in range(0, 4500, 500):
     print F, T(D, F, R, alpha, N)
     
 for T in range(0, 80, 5):
-    print T, fee(R, T/10.0, D, alpha, N)
+    print T/10.0, fee(R, T/10.0, D, alpha, N)
