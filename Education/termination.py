@@ -6,7 +6,7 @@ def T(D, F, R, alpha, N):
     return D - f - sqrt(arg)
     
 def fee(R,T, D, alpha, N):
-    return ((T * T / 2.0) - T * D + alpha * D) / (D - (N + T))
+    return R * ((T * T / 2.0) - T * D + alpha * D) / (D - (N + T))
 
 D = 8
 R = 1700.0
