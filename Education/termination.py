@@ -1,7 +1,7 @@
 from math import *
 
 def T(D, F, R, alpha, N):
-    print f
+    f = F/R
     return D - f - sqrt(D * (D - 2* alpha) + f * (f - 2 * N))
 
 D = 8
