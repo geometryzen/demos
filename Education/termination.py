@@ -5,8 +5,7 @@ def time(D,F,R, alpha, N):
     return D - f - sqrt(D * (D - 2* alpha) + f * (f - 2 * N))
 
 D = 8
-F = 1700
 R = 1700
 alpha = 2
 N = 2
-print time(D, F, R, alpha, N)
+print time(D, 2500, R, alpha, N)
