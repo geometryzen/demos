@@ -11,5 +11,5 @@ alpha = 2
 N = 2
 
 print "Fee versus Time"
-for F in range(-2000, 2500, 500):
+for F in range(0, 2500, 500):
     print F, T(D, F, R, alpha, N)
