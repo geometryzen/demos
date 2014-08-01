@@ -8,4 +8,6 @@ D = 8
 R = 1700
 alpha = 2
 N = 2
+
+print time(D, 1700, R, alpha, N)
 print time(D, 2500, R, alpha, N)
