@@ -10,6 +10,7 @@ R = 1700.0
 alpha = 2
 N = 2
 
-print T(D, 1700.0, R, alpha, N)
+for F in 1700 .. 2000:
+    print T(D, F, R, alpha, N)
 print T(D, 2000.0, R, alpha, N)
 print T(D, 2500.0, R, alpha, N)
