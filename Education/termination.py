@@ -10,4 +10,5 @@ alpha = 2
 N = 2
 
 print T(D, 1700, R, alpha, N)
+print T(D, 2000, R, alpha, N)
 print T(D, 2500, R, alpha, N)
