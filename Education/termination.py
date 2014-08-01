@@ -18,5 +18,5 @@ for F in range(0, 4500, 500):
     print F, T(D, F, R, alpha, N)
 
 print "Time versus Fee"
-for T in range(0, 80, 5):
+for T in range(0, 60, 5):
     print T/10.0, fee(R, T/10.0, D, alpha, N)
