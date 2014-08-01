@@ -1,6 +1,6 @@
 from math import *
 
-def time(D,F,R, alpha, N):
+def time(D, F, R, alpha, N):
     f = F/R
     return D - f - sqrt(D * (D - 2* alpha) + f * (f - 2 * N))
 
