@@ -7,7 +7,7 @@ def T(D, F, R, alpha, N):
 
 D = 8
 R = 1700.0
-alpha = 2
+alpha = 3
 N = 2
 
 print "Fee versus Time"
