@@ -2,7 +2,9 @@ from math import *
 
 def T(D, F, R, alpha, N):
     f = F/R
-    return D - f - sqrt(D * (D - 2* alpha) + f * (f - 2 * N))
+    arg = D * (D - 2* alpha) + f * (f - 2 * N)
+    print arg
+    return D - f - sqrt(arg)
 
 D = 8
 R = 1700.0
