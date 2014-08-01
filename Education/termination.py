@@ -10,5 +10,6 @@ R = 1700.0
 alpha = 2
 N = 2
 
+print "Fee versus Time"
 for F in range(1700, 2500, 100):
     print F, T(D, F, R, alpha, N)
