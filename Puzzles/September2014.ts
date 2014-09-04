@@ -13,4 +13,4 @@ var volume = x * x * z
 console.log("volume: " + volume)
 console.log("area: " + ((x * x * 2) + (x * z * 4)))
 // The area is 1246 units squared so the number of stickers remaining is 2009 - 1246 = 763
-console.log(2009-1246)
+console.log("#stickers remaining: " + (2009-1246))
