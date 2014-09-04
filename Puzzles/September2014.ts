@@ -1,3 +1,10 @@
+/*
+2009 unit cubes are glued together to form a cuboid. 
+A pack, containing 2009 stickers, is opened, and there are enough stickers to place 1 sticker on each exposed face 
+of each unit cube.
+
+How many stickers from the pack are left?
+*/
 // The prime factors of 2009 are 7 (twice) and 41.
 // There are only three factors so these must be the side lengths.
 var x = 7
