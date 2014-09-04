@@ -4,4 +4,4 @@ var x = 7
 var z = 41
 var volume = x * x * z
 console.log("volume: " + volume)
-console.log("area: " + (x * x * 2) + (x * z * 4))
+console.log("area: " + ((x * x * 2) + (x * z * 4)))
