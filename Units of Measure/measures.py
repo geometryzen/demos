@@ -30,3 +30,5 @@ except AssertionError as e:
     print e
 else:
     pass
+
+print meter - second
