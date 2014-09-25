@@ -1,6 +1,6 @@
 console.log(blade.UNIT_KILOGRAM.toString())
 
-var quantity = new blade.Euclidean3(0,1,0,0,0,0,0,0);
+var quantity = new blade.Euclidean3(1,0,0,0,0,0,0,0);
 
 var unit = blade.UNIT_INCH;
 
