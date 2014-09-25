@@ -1,1 +1,1 @@
-console.log(blade.UNIT_KILOGRAM)
+console.log(blade.UNIT_KILOGRAM.toString())
