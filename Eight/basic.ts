@@ -8,7 +8,7 @@ var scene = eight.scene();
 
 var camera = eight.perspective(45, 1.0, 0.1, 100);
 
-var renderer = eight.renderer();
+var renderer: eight.WebGLRenderer = eight.renderer();
 
 var box = eight.mesh(eight.box());
 scene.add(box);
