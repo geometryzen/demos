@@ -1,1 +1,1 @@
-console.log(blade.Dimensions)
+console.log(blade.UNIT_KILOGRAM)
