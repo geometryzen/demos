@@ -7,3 +7,7 @@ var unit = blade.UNIT_INCH;
 var measure = new blade.Measure(quantity, unit);
 
 console.log(measure.toString());
+
+var sq = measure.mul(measure);
+
+console.log(sq.toString());
