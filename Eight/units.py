@@ -19,4 +19,4 @@ u = sq.uom;
 
 print sq
 
-console.log(u.toString());
+print u
