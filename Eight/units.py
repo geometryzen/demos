@@ -10,7 +10,7 @@ unit = meter;
 
 measure = quantity * unit
 
-console.log(measure.toString());
+print measure
 
 sq = measure * measure;
 
