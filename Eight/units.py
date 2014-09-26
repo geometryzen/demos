@@ -8,7 +8,7 @@ quantity = Euclidean3(1,0,0,0,0,0,0,0);
 
 unit = meter;
 
-measure = Measure(quantity, unit);
+measure = quantity * unit
 
 console.log(measure.toString());
 
