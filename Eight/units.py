@@ -17,6 +17,6 @@ sq = measure * measure;
 q = sq.quantity;
 u = sq.uom;
 
-console.log(sq.toString());
+print sq
 
 console.log(u.toString());
