@@ -6,7 +6,7 @@ print kilogram
 
 quantity = Euclidean3(1,0,0,0,0,0,0,0);
 
-unit = UNIT_INCH;
+unit = meter;
 
 measure = Measure(quantity, unit);
 
