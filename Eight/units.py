@@ -1,7 +1,7 @@
 from units import *
 
 # units.py
-console.log(blade.UNIT_KILOGRAM.toString())
+print UNIT_KILOGRAM.toString()
 
 quantity = Euclidean3(1,0,0,0,0,0,0,0);
 
