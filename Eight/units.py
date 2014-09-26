@@ -1,7 +1,6 @@
 from units import *
 from e3ga import *
 
-# units.py
 print kilogram
 
 quantity = Euclidean3(1,0,0,0,0,0,0,0);
