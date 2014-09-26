@@ -1,4 +1,4 @@
-from blade import *
+from units import *
 
 # units.py
 console.log(blade.UNIT_KILOGRAM.toString())
