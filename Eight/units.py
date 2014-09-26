@@ -1,7 +1,7 @@
 from units import *
 
 # units.py
-print UNIT_KILOGRAM
+print kilogram
 
 quantity = Euclidean3(1,0,0,0,0,0,0,0);
 
