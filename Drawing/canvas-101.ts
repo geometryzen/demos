@@ -21,11 +21,11 @@ class Printer3D {
     this.context2D.stroke();
   }
   moveTo(x: number, y: number, z: number): void {
-    var point = perspective(x,y,z,this.d);
+    var point = perspective(x, y, z, this.d);
     this.context2D.moveTo(point.x+200, point.y+200);    
   }
   lineTo(x: number, y: number, z: number): void {
-    var point = perspective(x,y,z,this.d);
+    var point = perspective(x, y, z, this.d);
     this.context2D.lineTo(point.x+200, point.y+200);    
   }
 }
