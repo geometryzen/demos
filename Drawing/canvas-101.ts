@@ -65,18 +65,20 @@ class Cube {
     printer.lineTo(this.position.x + this.corners[4].x, this.position.y + this.corners[4].y, this.position.z + this.corners[4].z);
     printer.stroke();
 
+    // LHS face
+    printer.beginPath();
+    printer.moveTo(this.position.x + this.corners[0].x, this.position.y + this.corners[0].y, this.position.z + this.corners[0].z);
+    printer.lineTo(this.position.x + this.corners[4].x, this.position.y + this.corners[4].y, this.position.z + this.corners[4].z);
+    printer.moveTo(this.position.x + this.corners[1].x, this.position.y + this.corners[1].y, this.position.z + this.corners[1].z);
+    printer.lineTo(this.position.x + this.corners[5].x, this.position.y + this.corners[5].y, this.position.z + this.corners[5].z);
+    printer.stroke();
+
     // RHS face
     printer.beginPath();
     printer.moveTo(this.position.x+100, this.position.y - 100, this.position.z - 100);
     printer.lineTo(this.position.x+100, this.position.y - 100, this.position.z + 100);
     printer.moveTo(this.position.x+100, this.position.y + 100, this.position.z + 100);
     printer.lineTo(this.position.x+100, this.position.y + 100, this.position.z - 100);
-    printer.stroke();
-
-    // LHS face
-    printer.beginPath();
-    printer.moveTo(this.position.x + this.corners[0].x, this.position.y + this.corners[0].y, this.position.z + this.corners[0].z);
-    printer.lineTo(this.position.x + this.corners[4].x, this.position.y + this.corners[4].y, this.position.z + this.corners[4].z);
     printer.stroke();
 
     // top face
