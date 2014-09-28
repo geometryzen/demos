@@ -31,4 +31,16 @@ function tick(time: number): void {
   
 }
 
-eight.animationRunner(tick)
+function terminate(time: number): boolean {
+  return false;
+}
+
+function setUp() {
+  
+}
+
+function tearDown() {
+  
+}
+
+eight.animationRunner(tick, terminate, setUp, tearDown)
