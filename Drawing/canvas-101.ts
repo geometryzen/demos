@@ -193,6 +193,15 @@ function tick(time: number): void {
   context.moveTo(p2.x+400, p2.y-10+400);
   context.lineTo(p2.x+400, p2.y+10+400);
   context.stroke();
+
+  var p3 = vanishingPoint(R.mul(e3).mul(T));
+  context.beginPath();
+  context.strokeStyle = "#0000FF";
+  context.moveTo(p3.x-10+400, p3.y+400);
+  context.lineTo(p3.x+10+400, p3.y+400);
+  context.moveTo(p3.x+400, p3.y-10+400);
+  context.lineTo(p3.x+400, p3.y+10+400);
+  context.stroke();
 }
 
 /**
