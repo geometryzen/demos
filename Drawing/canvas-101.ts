@@ -20,8 +20,6 @@ class Printer3D {
   }
 }
 
-var cube = new Cube();
-
 class Cube {
   draw()
   {
@@ -32,6 +30,8 @@ class Cube {
     printer.lineTo(+100,-100,-100);
   }
 }
+
+var cube = new Cube();
 
 function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:number} {
   /**
