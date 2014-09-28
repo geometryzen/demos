@@ -50,7 +50,7 @@ class Cube {
   draw()
   {
     var R = this.attitude;
-    var T = new eight.Euclidean3(this.attitude.w,0,0,0,this.attitude.xy,this.attitude.yz,this.attitude.zx,0);
+    var T = new eight.Euclidean3(this.attitude.w,0,0,0,-this.attitude.xy,-this.attitude.yz,-this.attitude.zx,0);
     console.log(R.toStringIJK());
     console.log(T.toStringIJK());
     var corners = this.corners.map(function(value) {return R.mul(value).mul(T);});
