@@ -10,5 +10,7 @@ canvas.setAttribute("height", "160");
 
 document.body.appendChild(canvas);
 
+var context = canvas.getContext("2d");
+
 
 //popUp.close();
