@@ -157,7 +157,7 @@ function vanishingPoint(v: eight.Euclidean3) : {x: number; y: number} {
  */
 function tick(time: number): void {
   // Set the background color to gray.
-  context.fillStyle = "#666666"
+  context.fillStyle = "#000000"
   context.fillRect(0,0,800,800);
   
   // Draw the cube at the appropriate attitude.
