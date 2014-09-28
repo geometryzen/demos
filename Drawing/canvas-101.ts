@@ -6,8 +6,13 @@ var unused: Window = window;
 var popUp: Window = window.open("", "", "width=800, height=600", false);
 var context: CanvasRenderingContext2D;
 
-function perspective(X: number): {x:number; y:number} {
-  return {'x': 5, 'y': 7};
+function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:number} {
+  /**
+   * The distance factor determines how much the X and Y components are reduced by the distance (Z + d) from the viewer.
+   */
+  var distanceFactor = d / (Z + d);
+  
+  return {'x': distanceFactor * X, 'y': distanceFactor * Y};
 }
 
 /**
@@ -19,7 +24,8 @@ function tick(time: number): void {
   var s = Math.sin(time);
   var center = {x:100,y:100}
   context.beginPath();
-  context.moveTo(center.x, center.y);
+  var coords = perspective(center.x, center.y, center.x, 200);
+  context.moveTo(coords.x, coords.y);
   context.lineTo(c * 100 + center.x, s * 100 + center.y);
   context.closePath();
   context.stroke();
