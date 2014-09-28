@@ -51,6 +51,7 @@ function setUp() {
  */
 function tearDown(e: Error) {
   popUp.close();
+  console.log(e);
 }
 
 eight.animationRunner(tick, terminate, setUp, tearDown, popUp).start();
