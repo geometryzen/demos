@@ -22,8 +22,6 @@ context.lineTo(200, 225);
 context.closePath();
 context.stroke();
 
-//popUp.close();
-
 /**
  * Called for each animation tick.
  */
@@ -40,7 +38,7 @@ function setUp() {
 }
 
 function tearDown(e: Error) {
-  
+  popUp.close();
 }
 
 eight.animationRunner(tick, terminate, setUp, tearDown, popUp).start();
