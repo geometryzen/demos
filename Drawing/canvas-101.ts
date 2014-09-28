@@ -203,7 +203,7 @@ function tick(time: number): void {
   context.lineTo(p3.x+400, p3.y+10+400);
   context.stroke();
   
-  
+  context.strokeStyle = "#FFFFFF";
   context.strokeRect(0+400,0+400,canvasDistance+400,canvasDistance+400);
 }
 
