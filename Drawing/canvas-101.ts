@@ -6,15 +6,18 @@ var unused: Window = window;
 var popUp: Window = window.open("", "", "width=800, height=600", false);
 var context: CanvasRenderingContext2D;
 var cube = new Cube();
-var printer = new Printer3D();
+var printer: Printer3D;
 
 class Printer3D {
-  
+  private context2D: CanvasRenderingContext2D;
+  constructor(context2D: CanvasRenderingContext2D) {
+    this.context2D = context2D;
+  }  
   moveTo(x: number, y: number, z: number): void {
-    context.moveTo(x, y);    
+    this.context2D.moveTo(x, y);    
   }
   lineTo(x: number, y: number, z: number): void {
-    context.lineTo(x, y);    
+    this.context2D.lineTo(x, y);    
   }
 }
 
@@ -68,6 +71,8 @@ function setUp() {
   document.body.appendChild(canvas);
   
   context = canvas.getContext("2d");
+  
+  printer = new Printer3D(context);
 }
 
 /**
