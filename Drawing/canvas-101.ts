@@ -31,19 +31,19 @@ class Printer3D {
 }
 
 class Cube {
-  public position: blade.Euclidean3
-  constructor(position: blade.Euclidean3) {
+  public position: eight.Euclidean3
+  constructor(position: eight.Euclidean3) {
     this.position = position;
   }
   draw()
   {
     // front face
     printer.beginPath();
-    printer.moveTo(-100,-100,-100);
-    printer.lineTo(+100,-100,-100);
-    printer.lineTo(+100,+100,-100);
-    printer.lineTo(-100,+100,-100);
-    printer.lineTo(-100,-100,-100);
+    printer.moveTo(position.x - 100,-100,-100);
+    printer.lineTo(position.x + 100,-100,-100);
+    printer.lineTo(position.x + 100,+100,-100);
+    printer.lineTo(position.x - 100,+100,-100);
+    printer.lineTo(position.x - 100,-100,-100);
     printer.stroke();
 
     // back face
