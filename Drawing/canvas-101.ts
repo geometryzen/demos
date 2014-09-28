@@ -202,6 +202,9 @@ function tick(time: number): void {
   context.moveTo(p3.x+400, p3.y-10+400);
   context.lineTo(p3.x+400, p3.y+10+400);
   context.stroke();
+  
+  
+  context.strokeRect(0,0,canvasDistance,canvasDistance);
 }
 
 /**
