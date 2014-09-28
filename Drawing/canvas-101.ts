@@ -94,7 +94,7 @@ class Cube {
 }
 
 var TAO = Math.PI * 2;
-var theta = TAO / 8;
+var theta = TAO / 9;
 var c = eight.scalarE3(Math.cos(theta/2));
 var s = eight.scalarE3(Math.sin(theta/2));
 var one = eight.scalarE3(1);
