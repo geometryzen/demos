@@ -138,7 +138,7 @@ var b = eight.vectorE3(0,0,1);
 var R = c.sub(s.mul(a.wedge(b)));
 console.log(R.toStringIJK());
 
-var cube = new Cube(eight.vectorE3(0, 0, 200), R);
+var cube = new Cube(eight.vectorE3(0, 0, 200), eight.scalarE3(1));
 
 function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:number} {
   /**
