@@ -171,7 +171,8 @@ function tick(time: number): void {
   cube.draw();
   
   // Draw the vanishing points.
-  var p1 = vanishingPoint(e1);
+  var T = reverse(R);
+  var p1 = vanishingPoint(R.mul(e1).mul(T));
   console.log(e1.toStringIJK())
 }
 
