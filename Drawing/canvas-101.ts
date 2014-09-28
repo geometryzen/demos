@@ -142,6 +142,7 @@ function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:n
  * Called for each animation tick.
  */
 function tick(time: number): void {
+  context.clearRect(0,0,800,800);
   var TAO = Math.PI * 2;
   var omega = TAO / 5;
   var theta = omega * time;
@@ -152,7 +153,6 @@ function tick(time: number): void {
   var a = eight.vectorE3(1,0,0);
   var b = eight.vectorE3(0,0,1);
   var R = c.sub(s.mul(a.wedge(b)));
-  context.clearRect(0,0,200,200);
   cube.attitude = R;
   cube.draw();
 }
