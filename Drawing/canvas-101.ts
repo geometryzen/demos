@@ -31,10 +31,12 @@ class Printer3D {
 }
 
 class Cube {
-  public position: eight.Euclidean3
+  public position: eight.Euclidean3;
+  public attitude: eight.Euclidean3;
   private corners: eight.Euclidean3[];
-  constructor(position: eight.Euclidean3) {
+  constructor(position: eight.Euclidean3, attitude: eight.Euclidean3) {
     this.position = position;
+    this.attitude = attitude;
     this.corners = [];
     this.corners.push(eight.vectorE3(-100, +100, -100));
     this.corners.push(eight.vectorE3(-100, -100, -100));
@@ -86,7 +88,7 @@ class Cube {
   }
 }
 
-var cube = new Cube(eight.vectorE3(0, 0, 200));
+var cube = new Cube(eight.vectorE3(0, 0, 200),eight.scalarE3(1));
 
 function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:number} {
   /**
