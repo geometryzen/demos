@@ -9,8 +9,10 @@ var printer: Printer3D;
 
 class Printer3D {
   private context2D: CanvasRenderingContext2D;
-  constructor(context2D: CanvasRenderingContext2D) {
+  private d: number;
+  constructor(context2D: CanvasRenderingContext2D, d: number) {
     this.context2D = context2D;
+    this.d = d;
   }
   beginPath(): void {
     this.context2D.beginPath();
@@ -19,10 +21,12 @@ class Printer3D {
     this.context2D.stroke();
   }
   moveTo(x: number, y: number, z: number): void {
-    this.context2D.moveTo(x+200, y+200);    
+    var point = perspective(x,y,z,this.d);
+    this.context2D.moveTo(point.x+200, point.y+200);    
   }
   lineTo(x: number, y: number, z: number): void {
-    this.context2D.lineTo(x+200, y+200);    
+    var point = perspective(x,y,z,this.d);
+    this.context2D.lineTo(point.x+200, point.y+200);    
   }
 }
 
@@ -127,7 +131,7 @@ function setUp() {
   
   context = canvas.getContext("2d");
   
-  printer = new Printer3D(context);
+  printer = new Printer3D(context, 100);
 }
 
 /**
