@@ -40,10 +40,10 @@ class Cube {
     this.corners.push(eight.vectorE3(-100, -100, -100));
     this.corners.push(eight.vectorE3(+100, -100, -100));
     this.corners.push(eight.vectorE3(+100, +100, -100));
-    this.corners.push(eight.vectorE3(-100, -100, +100));
     this.corners.push(eight.vectorE3(-100, +100, +100));
-    this.corners.push(eight.vectorE3(+100, +100, +100));
+    this.corners.push(eight.vectorE3(-100, -100, +100));
     this.corners.push(eight.vectorE3(+100, -100, +100));
+    this.corners.push(eight.vectorE3(+100, +100, +100));
   }
   draw()
   {
