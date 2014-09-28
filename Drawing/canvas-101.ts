@@ -95,8 +95,8 @@ class Cube {
 
 var TAO = Math.PI * 2;
 var theta = TAO / 8;
-var c = Math.cos(theta);
-var s = Math.sin(theta);
+var c = eight.scalarE3(Math.cos(theta/2));
+var s = eight.scalarE3(Math.sin(theta/2));
 var one = eight.scalarE3(1);
 var sqrt2 = eight.scalarE3(Math.sqrt(2));
 var a = eight.vectorE3(1,0,0);
