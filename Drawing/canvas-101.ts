@@ -136,6 +136,8 @@ function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:n
   return {'x': distanceFactor * X, 'y': distanceFactor * Y};
 }
 
+function reverse(eight.) {}
+
 /**
  * Called for each animation tick.
  */
