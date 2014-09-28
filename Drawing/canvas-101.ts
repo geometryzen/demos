@@ -146,7 +146,7 @@ function tick(time: number): void {
   
   // Draw the cube at the appropriate attitude.
   var TAO = Math.PI * 2;
-  var omega = TAO / 20.0;
+  var omega = TAO / 1.0;
   var theta = omega * time;
   var c = eight.scalarE3(Math.cos(theta/2));
   var s = eight.scalarE3(Math.sin(theta/2));
