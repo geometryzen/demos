@@ -1,1 +1,1 @@
-# Drawing/canvas-101.ts
+var popup = open("","","",false)
