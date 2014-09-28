@@ -1,6 +1,6 @@
 var url = "";
 var target = "";
-var features =  "width=800, height=600";
+var features = "width=800, height=600";
 var popUp = window.open(url, target, features, false);
 
 var document = popUp.document;
@@ -20,6 +20,5 @@ context.moveTo(150, 100);
 context.lineTo(200, 225);
 context.closePath();
 context.stroke();
-
 
 //popUp.close();
