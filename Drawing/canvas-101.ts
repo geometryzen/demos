@@ -143,6 +143,10 @@ function reverse(m: eight.Euclidean3) {
   return new eight.Euclidean3(m.w, m.x, m.y, m.z,-m.xy,-m.yz,-m.zx, m.xyz);
 }
 
+function vanishingPoint(v: eight.Euclidean3) : {x: number; y: number} {
+  return {x:1,y:2};
+}
+
 /**
  * Called for each animation tick.
  */
