@@ -234,7 +234,7 @@ function terminate(time: number): boolean {
  * Called once at the start of the animation.
  */
 function setUp() {
-  var arcBall = new ArcBall(popUp);
+  arcBall = new ArcBall(popUp);
   arcBall.setUp();
   var document = popUp.document;
   
