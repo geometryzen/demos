@@ -14,6 +14,7 @@ var context = canvas.getContext("2d");
 
 context.beginPath();
 context.lineTo(200, 225);
+context.stroke();
 
 
 //popUp.close();
