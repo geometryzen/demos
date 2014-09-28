@@ -5,7 +5,6 @@ var unused: Window = window;
 // Global Variables.
 var popUp: Window = window.open("", "", "width=800, height=600", false);
 var context: CanvasRenderingContext2D;
-//var cube = new Cube();
 var printer: Printer3D;
 
 class Printer3D {
@@ -20,6 +19,8 @@ class Printer3D {
     this.context2D.lineTo(x, y);    
   }
 }
+
+var cube = new Cube();
 
 class Cube {
   draw()
