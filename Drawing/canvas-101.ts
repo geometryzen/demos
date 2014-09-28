@@ -76,7 +76,7 @@ class Cube {
   }
 }
 
-var cube = new Cube(eight.vectorE3(0, 120, 0));
+var cube = new Cube(eight.vectorE3(0, 0, 0));
 
 function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:number} {
   /**
@@ -118,7 +118,7 @@ function setUp() {
   
   context = canvas.getContext("2d");
   
-  printer = new Printer3D(context, 400);
+  printer = new Printer3D(context, 100);
 }
 
 /**
