@@ -36,10 +36,10 @@ class Cube {
   constructor(position: eight.Euclidean3) {
     this.position = position;
     this.corners = [];
-    this.corners.push(eight.vectorE3(-100, -100, -100));
     this.corners.push(eight.vectorE3(-100, +100, -100));
-    this.corners.push(eight.vectorE3(+100, +100, -100));
+    this.corners.push(eight.vectorE3(-100, -100, -100));
     this.corners.push(eight.vectorE3(+100, -100, -100));
+    this.corners.push(eight.vectorE3(+100, +100, -100));
     this.corners.push(eight.vectorE3(-100, -100, +100));
     this.corners.push(eight.vectorE3(-100, +100, +100));
     this.corners.push(eight.vectorE3(+100, +100, +100));
