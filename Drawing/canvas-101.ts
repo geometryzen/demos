@@ -14,7 +14,7 @@ canvas.setAttribute("height", "400");
 
 document.body.appendChild(canvas);
 
-var context = canvas.getContext("2d");
+var context: CanvasRenderingContext2D = canvas.getContext("2d");
 
 /**
  * Called for each animation tick.
