@@ -14,6 +14,7 @@ var context = canvas.getContext("2d");
 
 context.fillStyle = "#0066CC";
 context.fillRect(0, 0, 400, 400);
+context.clearRect(75, 75, 250, 250);
 
 
 //popUp.close();
