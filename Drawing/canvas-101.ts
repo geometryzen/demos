@@ -3,7 +3,7 @@
 var unused: Window = window;
 
 // Global Variables.
-var popUp: Window = window.open("", "", "width=600, height=600", false);
+var popUp: Window = window.open("", "", "width=800, height=800", false);
 var context: CanvasRenderingContext2D;
 var printer: Printer3D;
 
@@ -111,8 +111,8 @@ function setUp() {
   var canvas = document.createElement("canvas");
   
   canvas.setAttribute("id", "graph");
-  canvas.setAttribute("width", "400");
-  canvas.setAttribute("height", "400");
+  canvas.setAttribute("width", "800");
+  canvas.setAttribute("height", "800");
   
   document.body.appendChild(canvas);
   
