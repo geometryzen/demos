@@ -42,10 +42,10 @@ class ArcBall {
   }
   setUp(): void {
     this.win.addEventListener('mousedown', function(ev: MouseEvent) {
-      window.console.log('mousedown: ' + {x:ev.clientX, y:ev.clientY});
+      window.console.log('mousedown: ' + JSON.stringify({x:ev.clientX, y:ev.clientY}));
     });
     this.win.addEventListener('mouseup', function(ev: MouseEvent) {
-      window.console.log('mouseup: ' + {x:ev.clientX, y:ev.clientY});
+      window.console.log('mouseup: ' + JSON.stringify({x:ev.clientX, y:ev.clientY}));
     });
   }
   tearDown(): void {
