@@ -1,9 +1,8 @@
-var url = "";
-var target = "";
-var features = "width=800, height=600";
-
+// Workaround to prevent TS2082 and TS2087.
+// I don't know why this works.
 var unused: Window = window;
-var popUp = window.open(url, target, features, false);
+
+var popUp = window.open("", "", "width=800, height=600", false);
 
 var document = popUp.document;
 
