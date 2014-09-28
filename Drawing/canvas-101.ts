@@ -37,18 +37,23 @@ class Printer3D {
 
 class ArcBall {
   private win: Window;
+  private down: boolean = false;
   constructor(win: Window) {
     this.win = win;
   }
   setUp(): void {
     this.win.addEventListener('mousedown', function(ev: MouseEvent) {
       window.console.log('mousedown: ' + JSON.stringify({x:ev.clientX, y:ev.clientY}));
+      this.down = true;
     });
     this.win.addEventListener('mouseup', function(ev: MouseEvent) {
       window.console.log('mouseup: ' + JSON.stringify({x:ev.clientX, y:ev.clientY}));
+      this.down = false;
     });
     this.win.addEventListener('mousemove', function(ev: MouseEvent) {
-      window.console.log('mousemove: ' + JSON.stringify({x:ev.clientX, y:ev.clientY}));
+      if (this.down) {
+        window.console.log('mousemove: ' + JSON.stringify({x:ev.clientX, y:ev.clientY}));
+      }
     });
   }
   tearDown(): void {
