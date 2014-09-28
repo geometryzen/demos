@@ -23,3 +23,12 @@ context.closePath();
 context.stroke();
 
 //popUp.close();
+
+/**
+ * Called for each animation tick.
+ */
+function tick(time: number): void {
+  
+}
+
+eight.animationRunner(tick)
