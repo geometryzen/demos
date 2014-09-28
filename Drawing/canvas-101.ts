@@ -10,6 +10,7 @@ var e1 = eight.vectorE3(1,0,0);
 var e2 = eight.vectorE3(0,1,0);
 var e3 = eight.vectorE3(0,0,1);
 var canvasDistance = 100;
+var arcBall: ArcBall;
 
 class Printer3D {
   private context2D: CanvasRenderingContext2D;
@@ -233,6 +234,8 @@ function terminate(time: number): boolean {
  * Called once at the start of the animation.
  */
 function setUp() {
+  var arcBall = new ArcBall(popUp);
+  arcBall.setUp();
   var document = popUp.document;
   
   var canvas = document.createElement("canvas");
@@ -252,6 +255,7 @@ function setUp() {
  * Called once at the end of the animation.
  */
 function tearDown(e: Error) {
+  arcBall.tearDown();
   popUp.close();
   if (e) {
     alert(e.message);
