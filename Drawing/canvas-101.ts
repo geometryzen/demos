@@ -38,6 +38,15 @@ class Cube {
     printer.lineTo(-100,-100,-100);
     printer.stroke();
 
+    // back face
+    printer.beginPath();
+    printer.moveTo(-100,-100,+100);
+    printer.lineTo(+100,-100,+100);
+    printer.lineTo(+100,+100,+100);
+    printer.lineTo(-100,+100,+100);
+    printer.lineTo(-100,-100,+100);
+    printer.stroke();
+
     // RHS face
     printer.beginPath();
     printer.moveTo(+100,-100,-100);
