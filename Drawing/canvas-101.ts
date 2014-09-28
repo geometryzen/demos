@@ -31,14 +31,23 @@ function tick(time: number): void {
   context.stroke();
 }
 
+/**
+ * Called to determine whether to end the animation.
+ */
 function terminate(time: number): boolean {
   return false;
 }
 
+/**
+ * Called once at the start of the animation.
+ */
 function setUp() {
   
 }
 
+/**
+ * Called once at the end of the animation.
+ */
 function tearDown(e: Error) {
   popUp.close();
 }
