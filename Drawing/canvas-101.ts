@@ -70,7 +70,6 @@ class Cube {
     printer.lineTo(-100,-100,+100);
     printer.moveTo(-100,+100,+100);
     printer.lineTo(-100,+100,-100);
-    printer.lineTo(-100,-100,-100);
     printer.stroke();
 
     // top face
