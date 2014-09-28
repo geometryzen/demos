@@ -49,6 +49,9 @@ class Cube {
   }
   draw()
   {
+    var R = this.attitude;
+    var T = new eight.Euclidean3(this.attitude.w,0,0,0,this.attitude.xy,this.attitude.yz,this.attitude.zx,0);
+    var copy = this.corners.map(function(value) {return R.mul(value).mul(T);});
     // front face
     printer.beginPath();
     printer.moveTo(this.position.x + this.corners[0].x, this.position.y + this.corners[0].y, this.position.z + this.corners[0].z);
@@ -88,7 +91,7 @@ class Cube {
   }
 }
 
-var cube = new Cube(eight.vectorE3(0, 0, 200),eight.scalarE3(1));
+var cube = new Cube(eight.vectorE3(0, 0, 200), eight.scalarE3(1));
 
 function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:number} {
   /**
