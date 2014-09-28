@@ -51,14 +51,14 @@ class Cube {
   {
     var R = this.attitude;
     var T = new eight.Euclidean3(this.attitude.w,0,0,0,this.attitude.xy,this.attitude.yz,this.attitude.zx,0);
-    var copy = this.corners.map(function(value) {return R.mul(value).mul(T);});
+    var corners = this.corners.map(function(value) {return R.mul(value).mul(T);});
     // front face
     printer.beginPath();
-    printer.moveTo(this.position.x + this.corners[0].x, this.position.y + this.corners[0].y, this.position.z + this.corners[0].z);
-    printer.lineTo(this.position.x + this.corners[1].x, this.position.y + this.corners[1].y, this.position.z + this.corners[1].z);
-    printer.lineTo(this.position.x + this.corners[2].x, this.position.y + this.corners[2].y, this.position.z + this.corners[2].z);
-    printer.lineTo(this.position.x + this.corners[3].x, this.position.y + this.corners[3].y, this.position.z + this.corners[3].z);
-    printer.lineTo(this.position.x + this.corners[0].x, this.position.y + this.corners[0].y, this.position.z + this.corners[0].z);
+    printer.moveTo(this.position.x + corners[0].x, this.position.y + this.corners[0].y, this.position.z + this.corners[0].z);
+    printer.lineTo(this.position.x + corners[1].x, this.position.y + this.corners[1].y, this.position.z + this.corners[1].z);
+    printer.lineTo(this.position.x + corners[2].x, this.position.y + this.corners[2].y, this.position.z + this.corners[2].z);
+    printer.lineTo(this.position.x + corners[3].x, this.position.y + this.corners[3].y, this.position.z + this.corners[3].z);
+    printer.lineTo(this.position.x + corners[0].x, this.position.y + this.corners[0].y, this.position.z + this.corners[0].z);
     printer.stroke();
 
     // back face
