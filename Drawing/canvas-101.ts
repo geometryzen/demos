@@ -31,7 +31,7 @@ function terminate(time: number): boolean {
  * Called once at the start of the animation.
  */
 function setUp() {
-  var popUp = window.open("", "", "width=800, height=600", false);
+  popUp = window.open("", "", "width=800, height=600", false);
   
   var document = popUp.document;
   
