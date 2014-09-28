@@ -131,7 +131,7 @@ function setUp() {
   
   context = canvas.getContext("2d");
   
-  printer = new Printer3D(context, 250);
+  printer = new Printer3D(context, 400);
 }
 
 /**
