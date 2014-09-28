@@ -7,8 +7,8 @@ var popUp: Window = window.open("", "", "width=800, height=800", false);
 var context: CanvasRenderingContext2D;
 var printer: Printer3D;
 var e1 = eight.vectorE3(1,0,0);
-var e2 = eight.vectorE3(0,1,0);
-var e3 = eight.vectorE3(0,0,1);
+var e2 = eight.vectorE3(0,0,-1);
+var e3 = eight.vectorE3(0,1,0);
 
 class Printer3D {
   private context2D: CanvasRenderingContext2D;
