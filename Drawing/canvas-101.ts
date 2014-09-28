@@ -1,1 +1,1 @@
-var popup = open("","","",false)
+var popUp: Window = open("", "", "width=800, height=600");
