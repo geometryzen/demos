@@ -16,17 +16,15 @@ document.body.appendChild(canvas);
 
 var context = canvas.getContext("2d");
 
-context.beginPath();
-context.moveTo(150, 100);
-context.lineTo(200, 225);
-context.closePath();
-context.stroke();
-
 /**
  * Called for each animation tick.
  */
 function tick(time: number): void {
-  
+  context.beginPath();
+  context.moveTo(150, 100);
+  context.lineTo(200, 225);
+  context.closePath();
+  context.stroke();
 }
 
 function terminate(time: number): boolean {
