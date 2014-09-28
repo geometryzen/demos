@@ -48,19 +48,19 @@ class Cube {
 
     // back face
     printer.beginPath();
-    printer.moveTo(this.position.x - 100, -100, this.position.z + 100);
-    printer.lineTo(this.position.x + 100, -100, this.position.z + 100);
-    printer.lineTo(this.position.x + 100, +100, this.position.z + 100);
-    printer.lineTo(this.position.x - 100, +100, this.position.z + 100);
-    printer.lineTo(this.position.x - 100, -100, this.position.z + 100);
+    printer.moveTo(this.position.x - 100, this.position.y -100, this.position.z + 100);
+    printer.lineTo(this.position.x + 100, this.position.y -100, this.position.z + 100);
+    printer.lineTo(this.position.x + 100, this.position.y +100, this.position.z + 100);
+    printer.lineTo(this.position.x - 100, this.position.y +100, this.position.z + 100);
+    printer.lineTo(this.position.x - 100, this.position.y -100, this.position.z + 100);
     printer.stroke();
 
     // RHS face
     printer.beginPath();
-    printer.moveTo(this.position.x+100,-100, this.position.z - 100);
-    printer.lineTo(this.position.x+100,-100, this.position.z + 100);
-    printer.moveTo(this.position.x+100,+100, this.position.z + 100);
-    printer.lineTo(this.position.x+100,+100, this.position.z - 100);
+    printer.moveTo(this.position.x+100, this.position.y -100, this.position.z - 100);
+    printer.lineTo(this.position.x+100, this.position.y -100, this.position.z + 100);
+    printer.moveTo(this.position.x+100, this.position.y +100, this.position.z + 100);
+    printer.lineTo(this.position.x+100, this.position.y +100, this.position.z - 100);
     printer.stroke();
 
     // LHS face
