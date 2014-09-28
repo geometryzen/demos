@@ -91,7 +91,7 @@ class Cube {
   }
 }
 
-var cube = new Cube(eight.vectorE3(0, 0, 200), eight.scalarE3(2));
+var cube = new Cube(eight.vectorE3(0, 0, 200), eight.scalarE3(1));
 
 function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:number} {
   /**
