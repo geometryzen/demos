@@ -26,6 +26,7 @@ class Printer3D {
   }
   lineTo(x: number, y: number, z: number): void {
     var point = perspective(x, y, z, this.d);
+    console.log(point);
     this.context2D.lineTo(point.x+200, point.y+200);    
   }
 }
