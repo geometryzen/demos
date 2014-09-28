@@ -140,7 +140,7 @@ function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:n
  * Called for each animation tick.
  */
 function tick(time: number): void {
-  context.fillStyle = "#000000"
+  context.fillStyle = "#666666"
   context.fillRect(0,0,800,800);
   var TAO = Math.PI * 2;
   var omega = TAO / 20.0;
