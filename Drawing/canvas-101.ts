@@ -47,7 +47,7 @@ function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:n
  */
 function tick(time: number): void {
   context.clearRect(0,0,200,200);
-//  cube.draw();
+  cube.draw();
 }
 
 /**
