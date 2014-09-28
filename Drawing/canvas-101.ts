@@ -144,6 +144,7 @@ function reverse(m: eight.Euclidean3) {
 }
 
 function vanishingPoint(v: eight.Euclidean3) : {x: number; y: number} {
+  var n = v.norm();
   return {x:1,y:2};
 }
 
@@ -170,6 +171,8 @@ function tick(time: number): void {
   cube.draw();
   
   // Draw the vanishing points.
+  var p1 = vanishingPoint(e1);
+  console.log(e1.toStringIJK())
 }
 
 /**
