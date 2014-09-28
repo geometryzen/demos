@@ -5,6 +5,29 @@ var unused: Window = window;
 // Global Variables.
 var popUp: Window = window.open("", "", "width=800, height=600", false);
 var context: CanvasRenderingContext2D;
+var cube = new Cube();
+var printer = new Printer3D();
+
+class Printer3D {
+  
+  moveTo(x: number, y: number, z: number): void {
+    context.moveTo(x, y);    
+  }
+  lineTo(x: number, y: number, z: number): void {
+    context.lineTo(x, y);    
+  }
+}
+
+class Cube {
+  draw()
+  {
+    printer.moveTo(+100,-100,-100);
+    printer.lineTo(+100,-100,+100);
+    printer.lineTo(+100,+100,+100);
+    printer.lineTo(+100,+100,-100);
+    printer.lineTo(+100,-100,-100);
+  }
+}
 
 function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:number} {
   /**
@@ -20,15 +43,7 @@ function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:n
  */
 function tick(time: number): void {
   context.clearRect(0,0,200,200);
-  var c = Math.cos(time);
-  var s = Math.sin(time);
-  var center = {x:100,y:100}
-  context.beginPath();
-  var coords = perspective(center.x, center.y, center.x, 200);
-  context.moveTo(coords.x, coords.y);
-  context.lineTo(c * 100 + center.x, s * 100 + center.y);
-  context.closePath();
-  context.stroke();
+  cube.draw();
 }
 
 /**
