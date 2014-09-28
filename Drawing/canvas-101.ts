@@ -13,6 +13,7 @@ document.body.appendChild(canvas);
 var context = canvas.getContext("2d");
 
 context.beginPath();
+context
 
 
 //popUp.close();
