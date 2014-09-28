@@ -72,22 +72,7 @@ class Cube {
     printer.stroke();
 
     // top face
-    printer.beginPath();
-    printer.moveTo(-100,-100,-100);
-    printer.lineTo(-100,-100,+100);
-    printer.lineTo(+100,-100,+100);
-    printer.lineTo(+100,-100,-100);
-    printer.lineTo(-100,-100,-100);
-    printer.stroke();
-
     // bottom face
-    printer.beginPath();
-    printer.moveTo(-100,+100,-100);
-    printer.lineTo(-100,+100,+100);
-    printer.lineTo(+100,+100,+100);
-    printer.lineTo(+100,+100,-100);
-    printer.lineTo(-100,+100,-100);
-    printer.stroke();
   }
 }
 
