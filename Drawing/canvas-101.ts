@@ -34,6 +34,21 @@ class Printer3D {
   }
 }
 
+class ArcBall {
+  private win: Window;
+  constructor(win: Window) {
+    this.win = win;
+  }
+  setUp(): void {
+    this.win.addEventListener('mousedown', function(ev: MouseEvent) {
+      console.log(ev.clientX);
+    });
+  }
+  tearDown(): void {
+    
+  }
+}
+
 class Cube {
   public position: eight.Euclidean3;
   public attitude: eight.Euclidean3;
