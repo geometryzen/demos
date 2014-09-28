@@ -45,8 +45,8 @@ class Cube {
     printer.beginPath();
     printer.moveTo(this.position.x + this.corners[0].x, this.position.y + this.corners[0].y, this.position.z + this.corners[0].z);
 //    printer.lineTo(this.position.x + this.corners[1].x, this.position.y + this.corners[1].y, this.position.z + this.corners[1].z);
-    printer.lineTo(this.position.x + 100, this.position.y + 100, this.position.z - 100);
-    printer.lineTo(this.position.x - 100, this.position.y + 100, this.position.z - 100);
+//    printer.lineTo(this.position.x + 100, this.position.y + 100, this.position.z - 100);
+//    printer.lineTo(this.position.x - 100, this.position.y + 100, this.position.z - 100);
     printer.lineTo(this.position.x + this.corners[0].x, this.position.y + this.corners[0].y, this.position.z + this.corners[0].z);
     printer.stroke();
 
