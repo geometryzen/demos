@@ -47,6 +47,9 @@ class ArcBall {
     this.win.addEventListener('mouseup', function(ev: MouseEvent) {
       window.console.log('mouseup: ' + JSON.stringify({x:ev.clientX, y:ev.clientY}));
     });
+    this.win.addEventListener('mousemove', function(ev: MouseEvent) {
+      window.console.log('mousemove: ' + JSON.stringify({x:ev.clientX, y:ev.clientY}));
+    });
   }
   tearDown(): void {
     
