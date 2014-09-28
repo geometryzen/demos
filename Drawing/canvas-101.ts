@@ -101,7 +101,7 @@ var one = eight.scalarE3(1);
 var sqrt2 = eight.scalarE3(Math.sqrt(2));
 var a = eight.vectorE3(1,0,0);
 var b = eight.vectorE3(0,0,1);
-var R = one.add(a.mul(b)).div(sqrt2);
+var R = c.sub(s.mul(a.wedge(b)));
 console.log(R.toStringIJK());
 
 var cube = new Cube(eight.vectorE3(0, 0, 200), R);
