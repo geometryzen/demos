@@ -52,7 +52,7 @@ function setUp() {
 function tearDown(e: Error) {
   popUp.close();
   if (e) {
-    alert(e);
+    alert(e.message);
   }
 }
 
