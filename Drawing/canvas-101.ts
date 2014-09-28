@@ -42,7 +42,10 @@ class ArcBall {
   }
   setUp(): void {
     this.win.addEventListener('mousedown', function(ev: MouseEvent) {
-      window.console.log(ev.clientX);
+      window.console.log('mousedown: ' + ev.clientX);
+    });
+    this.win.addEventListener('mouseup', function(ev: MouseEvent) {
+      window.console.log('mouseup: ' + ev);
     });
   }
   tearDown(): void {
