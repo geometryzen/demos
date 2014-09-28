@@ -142,7 +142,7 @@ function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:n
 function tick(time: number): void {
   context.clearRect(0,0,800,800);
   var TAO = Math.PI * 2;
-  var omega = TAO / 15.0;
+  var omega = TAO / 20.0;
   var theta = omega * time;
   var c = eight.scalarE3(Math.cos(theta/2));
   var s = eight.scalarE3(Math.sin(theta/2));
