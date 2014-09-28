@@ -22,9 +22,10 @@ var context = canvas.getContext("2d");
 function tick(time: number): void {
   var c = Math.cos(time);
   var s = Math.sin(time);
+  var center = {x:100,y:100}
   context.beginPath();
-  context.moveTo(0, 0);
-  context.lineTo(c * 100, s * 100);
+  context.moveTo(center.x, center.y);
+  context.lineTo(c * 100 + center.x, s * 100 + center.y);
   context.closePath();
   context.stroke();
 }
