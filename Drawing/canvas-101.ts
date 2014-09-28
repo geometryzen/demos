@@ -3,7 +3,7 @@ var target = "";
 var features = "width=800, height=600";
 
 var unused: Window = window;
-window.open(url, target, features, false);
+var popUp = window.open(url, target, features, false);
 
 var document = popUp.document;
 
