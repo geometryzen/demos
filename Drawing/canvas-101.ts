@@ -4,4 +4,7 @@ var document = popUp.document;
 
 var canvas = document.createElement("canvas");
 
+canvas.setAttribute("id", "graph");
+canvas.setAttribute("width", "320");
+
 //popUp.close();
