@@ -20,9 +20,11 @@ var context = canvas.getContext("2d");
  * Called for each animation tick.
  */
 function tick(time: number): void {
+  var c = Math.cos(time);
+  var s = Math.sin(time);
   context.beginPath();
-  context.moveTo(150, 100);
-  context.lineTo(200, 225);
+  context.moveTo(0, 0);
+  context.lineTo(c * 100, s * 100);
   context.closePath();
   context.stroke();
 }
