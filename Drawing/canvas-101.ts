@@ -136,7 +136,9 @@ function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:n
   return {'x': distanceFactor * X, 'y': distanceFactor * Y};
 }
 
-function reverse(eight.) {}
+function reverse(m: eight.Euclidean3) {
+  return new eight.Euclidean3(m.w, m.x, m.y, m.z,-m.xy,-m.yz,-m.zx, m.xyz);
+}
 
 /**
  * Called for each animation tick.
