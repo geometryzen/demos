@@ -127,15 +127,6 @@ class Cube {
   }
 }
 
-var TAO = Math.PI * 2;
-var theta = TAO / 9;
-var c = eight.scalarE3(Math.cos(theta/2));
-var s = eight.scalarE3(Math.sin(theta/2));
-var one = eight.scalarE3(1);
-var sqrt2 = eight.scalarE3(Math.sqrt(2));
-var a = eight.vectorE3(1,0,0);
-var b = eight.vectorE3(0,0,1);
-var R = c.sub(s.mul(a.wedge(b)));
 console.log(R.toStringIJK());
 
 var cube = new Cube(eight.vectorE3(0, 0, 200), eight.scalarE3(1));
@@ -153,6 +144,16 @@ function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:n
  * Called for each animation tick.
  */
 function tick(time: number): void {
+  var TAO = Math.PI * 2;
+  var omega = TAO / 5;
+  var theta = omega * time;
+  var c = eight.scalarE3(Math.cos(theta/2));
+  var s = eight.scalarE3(Math.sin(theta/2));
+  var one = eight.scalarE3(1);
+  var sqrt2 = eight.scalarE3(Math.sqrt(2));
+  var a = eight.vectorE3(1,0,0);
+  var b = eight.vectorE3(0,0,1);
+  var R = c.sub(s.mul(a.wedge(b)));
   context.clearRect(0,0,200,200);
   cube.attitude = R;
   cube.draw();
