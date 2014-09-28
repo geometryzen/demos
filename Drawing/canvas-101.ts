@@ -177,7 +177,11 @@ function tick(time: number): void {
   // Draw the vanishing points.
   var T = reverse(R);
   var p1 = vanishingPoint(R.mul(e1).mul(T));
-  console.log(p1)
+  console.log(p1);
+  context.beginPath();
+  context.moveTo(p1.x-10, p1.y);
+  context.lineTo(p1.x+10, p1.y);
+  context.stroke();
 }
 
 /**
