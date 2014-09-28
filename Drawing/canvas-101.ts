@@ -29,6 +29,15 @@ class Printer3D {
 class Cube {
   draw()
   {
+    // front face
+    printer.beginPath();
+    printer.moveTo(-100,-100,-100);
+    printer.lineTo(+100,-100,-100);
+    printer.lineTo(+100,+100,-100);
+    printer.lineTo(-100,+100,-100);
+    printer.lineTo(-100,-100,-100);
+    printer.stroke();
+
     // RHS face
     printer.beginPath();
     printer.moveTo(+100,-100,-100);
