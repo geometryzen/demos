@@ -12,5 +12,7 @@ document.body.appendChild(canvas);
 
 var context = canvas.getContext("2d");
 
+context.fillRect(0, 0, 400, 400);
+
 
 //popUp.close();
