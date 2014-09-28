@@ -26,11 +26,11 @@ class Printer3D {
   }
   moveTo(x: number, y: number, z: number): void {
     var point = perspective(x, y, z, this.d);
-    this.context2D.moveTo(point.x+200, point.y+200);
+    this.context2D.moveTo(point.x+400, point.y+400);
   }
   lineTo(x: number, y: number, z: number): void {
     var point = perspective(x, y, z, this.d);
-    this.context2D.lineTo(point.x+200, point.y+200);
+    this.context2D.lineTo(point.x+400, point.y+400);
   }
 }
 
@@ -179,6 +179,9 @@ function tick(time: number): void {
   var p1 = vanishingPoint(R.mul(e1).mul(T));
   console.log(p1);
   context.beginPath();
+  context.strokeStyle = "#FF0000";
+  context.moveTo(p1.x-10+400, p1.y+400);
+  context.lineTo(p1.x+10+400, p1.y+400);
   context.moveTo(p1.x-10+400, p1.y+400);
   context.lineTo(p1.x+10+400, p1.y+400);
   context.stroke();
