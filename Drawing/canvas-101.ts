@@ -43,7 +43,7 @@ function setUp() {
   
   document.body.appendChild(canvas);
   
-  var context: CanvasRenderingContext2D = canvas.getContext("2d");
+  context = canvas.getContext("2d");
 }
 
 /**
