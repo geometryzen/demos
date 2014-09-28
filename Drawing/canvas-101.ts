@@ -58,11 +58,11 @@ class Cube {
 
     // back face
     printer.beginPath();
-    printer.moveTo(this.position.x + this.corners[0].x, this.position.y + this.corners[0].y, this.position.z + this.corners[0].z);
-    printer.lineTo(this.position.x + this.corners[1].x, this.position.y + this.corners[1].y, this.position.z + this.corners[1].z);
-    printer.lineTo(this.position.x + this.corners[2].x, this.position.y + this.corners[2].y, this.position.z + this.corners[2].z);
-    printer.lineTo(this.position.x + this.corners[3].x, this.position.y + this.corners[3].y, this.position.z + this.corners[3].z);
-    printer.lineTo(this.position.x + this.corners[0].x, this.position.y + this.corners[0].y, this.position.z + this.corners[0].z);
+    printer.moveTo(this.position.x + this.corners[4].x, this.position.y + this.corners[4].y, this.position.z + this.corners[4].z);
+    printer.lineTo(this.position.x + this.corners[5].x, this.position.y + this.corners[5].y, this.position.z + this.corners[5].z);
+    printer.lineTo(this.position.x + this.corners[6].x, this.position.y + this.corners[6].y, this.position.z + this.corners[6].z);
+    printer.lineTo(this.position.x + this.corners[7].x, this.position.y + this.corners[7].y, this.position.z + this.corners[7].z);
+    printer.lineTo(this.position.x + this.corners[4].x, this.position.y + this.corners[4].y, this.position.z + this.corners[4].z);
     printer.stroke();
 
     // RHS face
