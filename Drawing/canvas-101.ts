@@ -91,6 +91,12 @@ class Cube {
   }
 }
 
+var one = eight.scalarE3(1);
+var sqrt2 = eight.scalarE3(Math.sqrt(2));
+var a = eight.vectorE3(1,0,0);
+var b = eight.vectorE3(0,-1,0);
+var R = one.add(a.mul(b)).div(sqrt2);
+
 var cube = new Cube(eight.vectorE3(0, 0, 200), eight.scalarE3(1));
 
 function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:number} {
