@@ -2,19 +2,8 @@
 // I don't know why this works.
 var unused: Window = window;
 
-var popUp = window.open("", "", "width=800, height=600", false);
-
-var document = popUp.document;
-
-var canvas = document.createElement("canvas");
-
-canvas.setAttribute("id", "graph");
-canvas.setAttribute("width", "400");
-canvas.setAttribute("height", "400");
-
-document.body.appendChild(canvas);
-
-var context: CanvasRenderingContext2D = canvas.getContext("2d");
+var popUp: Window;
+var context: CanvasRenderingContext2D;
 
 /**
  * Called for each animation tick.
@@ -42,7 +31,19 @@ function terminate(time: number): boolean {
  * Called once at the start of the animation.
  */
 function setUp() {
+  var popUp = window.open("", "", "width=800, height=600", false);
   
+  var document = popUp.document;
+  
+  var canvas = document.createElement("canvas");
+  
+  canvas.setAttribute("id", "graph");
+  canvas.setAttribute("width", "400");
+  canvas.setAttribute("height", "400");
+  
+  document.body.appendChild(canvas);
+  
+  var context: CanvasRenderingContext2D = canvas.getContext("2d");
 }
 
 /**
