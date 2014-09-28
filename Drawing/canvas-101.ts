@@ -75,6 +75,8 @@ class Cube {
 
     // RHS face
     printer.beginPath();
+    printer.moveTo(this.position.x + this.corners[2].x, this.position.y + this.corners[2].y, this.position.z + this.corners[2].z);
+    printer.lineTo(this.position.x + this.corners[6].x, this.position.y + this.corners[6].y, this.position.z + this.corners[6].z);
     printer.stroke();
 
     // top face
