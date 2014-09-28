@@ -11,7 +11,13 @@ class Printer3D {
   private context2D: CanvasRenderingContext2D;
   constructor(context2D: CanvasRenderingContext2D) {
     this.context2D = context2D;
-  }  
+  }
+  beginPath(): void {
+    this.context2D.beginPath();
+  }
+  stroke(): void {
+    this.context2D.stroke();
+  }
   moveTo(x: number, y: number, z: number): void {
     this.context2D.moveTo(x, y);    
   }
@@ -23,17 +29,21 @@ class Printer3D {
 class Cube {
   draw()
   {
+    printer.beginPath();
     printer.moveTo(+100,-100,-100);
     printer.lineTo(+100,-100,+100);
     printer.lineTo(+100,+100,+100);
     printer.lineTo(+100,+100,-100);
     printer.lineTo(+100,-100,-100);
+    printer.stroke();
 
+    printer.beginPath();
     printer.moveTo(-100,+100,-100);
     printer.lineTo(-100,+100,+100);
     printer.lineTo(+100,+100,+100);
     printer.lineTo(+100,+100,-100);
     printer.lineTo(-100,+100,-100);
+    printer.stroke();
   }
 }
 
