@@ -12,6 +12,7 @@ document.body.appendChild(canvas);
 
 var context = canvas.getContext("2d");
 
+context.fillStyle = "#0066CC";
 context.fillRect(0, 0, 400, 400);
 
 
