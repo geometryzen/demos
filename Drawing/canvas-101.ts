@@ -204,7 +204,7 @@ function tick(time: number): void {
   context.stroke();
   
   
-  context.strokeRect(0,0,canvasDistance,canvasDistance);
+  context.strokeRect(0+400,0+400,canvasDistance+400,canvasDistance+400);
 }
 
 /**
