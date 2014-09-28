@@ -31,6 +31,10 @@ class Printer3D {
 }
 
 class Cube {
+  public position: blade.Euclidean3
+  constructor(position: blade.Euclidean3) {
+    this.position = position;
+  }
   draw()
   {
     // front face
@@ -89,7 +93,7 @@ class Cube {
   }
 }
 
-var cube = new Cube();
+var cube = new Cube(eight.vectorE3(0, 0, 0));
 
 function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:number} {
   /**
