@@ -1,9 +1,14 @@
 // Workaround to prevent TS2082 and TS2087.
 // I don't know why this works.
 var unused: Window = window;
+
 // Global Variables.
 var popUp: Window = window.open("", "", "width=800, height=600", false);
 var context: CanvasRenderingContext2D;
+
+function perspective(X: number): {x:number; y:number} {
+  return {'x': 5, 'y': 7};
+}
 
 /**
  * Called for each animation tick.
