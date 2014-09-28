@@ -140,8 +140,11 @@ function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:n
  * Called for each animation tick.
  */
 function tick(time: number): void {
+  // Set the background color to gray.
   context.fillStyle = "#666666"
   context.fillRect(0,0,800,800);
+  
+  // Draw the cube at the appropriate attitude.
   var TAO = Math.PI * 2;
   var omega = TAO / 20.0;
   var theta = omega * time;
@@ -154,6 +157,8 @@ function tick(time: number): void {
   var R = c.sub(s.mul(a.wedge(b)));
   cube.attitude = R;
   cube.draw();
+  
+  // Draw the vanishing points.
 }
 
 /**
