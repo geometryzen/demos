@@ -93,10 +93,14 @@ class Cube {
   }
 }
 
+var TAO = Math.PI * 2;
+var theta = tAO / 8;
+var c = Math.cos(theta);
+var s = Math.sin(theta);
 var one = eight.scalarE3(1);
 var sqrt2 = eight.scalarE3(Math.sqrt(2));
 var a = eight.vectorE3(1,0,0);
-var b = eight.vectorE3(0,-1,0);
+var b = eight.vectorE3(0,0,1);
 var R = one.add(a.mul(b)).div(sqrt2);
 console.log(R.toStringIJK());
 
