@@ -39,11 +39,11 @@ class Cube {
   {
     // front face
     printer.beginPath();
-    printer.moveTo(position.x - 100,-100,-100);
-    printer.lineTo(position.x + 100,-100,-100);
-    printer.lineTo(position.x + 100,+100,-100);
-    printer.lineTo(position.x - 100,+100,-100);
-    printer.lineTo(position.x - 100,-100,-100);
+    printer.moveTo(this.position.x - 100,-100,-100);
+    printer.lineTo(this.position.x + 100,-100,-100);
+    printer.lineTo(this.position.x + 100,+100,-100);
+    printer.lineTo(this.position.x - 100,+100,-100);
+    printer.lineTo(this.position.x - 100,-100,-100);
     printer.stroke();
 
     // back face
