@@ -8,5 +8,7 @@ canvas.setAttribute("id", "graph");
 canvas.setAttribute("width", "320");
 canvas.setAttribute("height", "160");
 
+document.body.appendChild(canvas);
+
 
 //popUp.close();
