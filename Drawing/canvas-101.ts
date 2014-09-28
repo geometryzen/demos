@@ -145,6 +145,7 @@ function reverse(m: eight.Euclidean3) {
 
 function vanishingPoint(v: eight.Euclidean3) : {x: number; y: number} {
   var n = v.norm();
+  console.log("n: " + n);
   return {x:1,y:2};
 }
 
