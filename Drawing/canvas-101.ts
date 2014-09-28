@@ -182,8 +182,8 @@ function tick(time: number): void {
   context.strokeStyle = "#FF0000";
   context.moveTo(p1.x-10+400, p1.y+400);
   context.lineTo(p1.x+10+400, p1.y+400);
-  context.moveTo(p1.x-10+400, p1.y+400);
-  context.lineTo(p1.x+10+400, p1.y+400);
+  context.moveTo(p1.x+400, p1.y-10+400);
+  context.lineTo(p1.x+400, p1.y+10+400);
   context.stroke();
 }
 
