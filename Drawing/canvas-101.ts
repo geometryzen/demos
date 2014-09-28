@@ -1,4 +1,4 @@
-var popUp = open("", "", "width=800, height=600");
+var popUp = window.open("", "", "width=800, height=600");
 
 var document = popUp.document;
 
