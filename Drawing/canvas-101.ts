@@ -3,7 +3,7 @@
 var unused: Window = window;
 
 // Global Variables.
-var popUp: Window = window.open("", "", "width=800, height=600", false);
+var popUp: Window = window.open("", "", "width=600, height=600", false);
 var context: CanvasRenderingContext2D;
 var printer: Printer3D;
 
@@ -19,10 +19,10 @@ class Printer3D {
     this.context2D.stroke();
   }
   moveTo(x: number, y: number, z: number): void {
-    this.context2D.moveTo(x, y);    
+    this.context2D.moveTo(x+200, y+200);    
   }
   lineTo(x: number, y: number, z: number): void {
-    this.context2D.lineTo(x, y);    
+    this.context2D.lineTo(x+200, y+200);    
   }
 }
 
