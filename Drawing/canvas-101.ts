@@ -6,6 +6,9 @@ var unused: Window = window;
 var popUp: Window = window.open("", "", "width=800, height=800", false);
 var context: CanvasRenderingContext2D;
 var printer: Printer3D;
+var e1 = eight.vectorE3(1,0,0);
+var e2 = eight.vectorE3(0,1,0);
+var e3 = eight.vectorE3(0,0,1);
 
 class Printer3D {
   private context2D: CanvasRenderingContext2D;
@@ -50,7 +53,7 @@ class Cube {
   draw()
   {
     var R = this.attitude;
-    var T = new eight.Euclidean3(this.attitude.w,0,0,0,-this.attitude.xy,-this.attitude.yz,-this.attitude.zx,0);
+    var T = reverse(R);
     var corners = this.corners.map(function(value) {return R.mul(value).mul(T);});
     // front face
     printer.beginPath();
