@@ -20,6 +20,7 @@ var context = canvas.getContext("2d");
  * Called for each animation tick.
  */
 function tick(time: number): void {
+  context.clearRect(0,0,200,200);
   var c = Math.cos(time);
   var s = Math.sin(time);
   var center = {x:100,y:100}
