@@ -9,6 +9,7 @@ var printer: Printer3D;
 var e1 = eight.vectorE3(1,0,0);
 var e2 = eight.vectorE3(0,0,-1);
 var e3 = eight.vectorE3(0,1,0);
+var canvasDistance = 100;
 
 class Printer3D {
   private context2D: CanvasRenderingContext2D;
@@ -146,7 +147,9 @@ function reverse(m: eight.Euclidean3) {
 function vanishingPoint(v: eight.Euclidean3) : {x: number; y: number} {
   var n = v.norm();
   console.log("n: " + n);
-  return {x:1,y:2};
+  var x = canvasDistance * v.x / v.z;
+  var y = canvasDistance * v.y / v.z;
+  return {'x':x,'y':y};
 }
 
 /**
@@ -200,7 +203,7 @@ function setUp() {
   
   context = canvas.getContext("2d");
   
-  printer = new Printer3D(context, 100);
+  printer = new Printer3D(context, canvasDistance);
 }
 
 /**
