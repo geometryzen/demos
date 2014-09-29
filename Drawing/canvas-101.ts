@@ -253,7 +253,12 @@ function tick(time: number): void {
 
   // Draw a rectangle
   context.strokeStyle = "#FFFFFF";
+
+  context.beginPath();
   context.arc(CANVAS_HALF_WIDTH, CANVAS_HALF_HEIGHT, 50, 0, Math.PI);
+  context.closePath();
+  context.stroke();
+
   context.strokeRect(CANVAS_HALF_WIDTH - CANVAS_DISTANCE, CANVAS_HALF_HEIGHT - CANVAS_DISTANCE, CANVAS_DISTANCE * 2, CANVAS_DISTANCE * 2);
 }
 
