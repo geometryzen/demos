@@ -12,6 +12,8 @@ def terminate(t):
     return False
 
 def setUp():
+    popDoc = popUp.document
+    print popDoc
     pass
 
 def tearDown(e):
