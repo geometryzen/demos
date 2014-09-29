@@ -15,8 +15,10 @@ def terminate(t):
 def setUp():
     pass
 
-def tearDown():
+def tearDown(e):
     popUp.close()
+    if e:
+        print e
 
 war = WindowAnimationRunner(tick, terminate, setUp, tearDown)
 war.start()
