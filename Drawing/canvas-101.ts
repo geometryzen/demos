@@ -40,11 +40,11 @@ class Printer3D {
   }
   moveTo(x: number, y: number, z: number): void {
     var point = perspective(x, y, z, this.d);
-    this.context2D.moveTo(point.x + CANVAS_HALF_WIDTH, point.y+400);
+    this.context2D.moveTo(point.x + CANVAS_HALF_WIDTH, point.y + CANVAS_HALF_HEIGHT);
   }
   lineTo(x: number, y: number, z: number): void {
     var point = perspective(x, y, z, this.d);
-    this.context2D.lineTo(point.x+400, point.y+400);
+    this.context2D.lineTo(point.x + CANVAS_HALF_WIDTH, point.y + CANVAS_HALF_HEIGHT);
   }
 }
 
