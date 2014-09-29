@@ -258,8 +258,6 @@ function tick(time: number): void {
   context.arc(CANVAS_HALF_WIDTH, CANVAS_HALF_HEIGHT, CANVAS_DISTANCE, 0, 2 * Math.PI);
   context.closePath();
   context.stroke();
-
-  context.strokeRect(CANVAS_HALF_WIDTH - CANVAS_DISTANCE, CANVAS_HALF_HEIGHT - CANVAS_DISTANCE, CANVAS_DISTANCE * 2, CANVAS_DISTANCE * 2);
 }
 
 /**
