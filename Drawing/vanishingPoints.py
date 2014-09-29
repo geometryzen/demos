@@ -10,7 +10,7 @@ def tick(t):
     pass
 
 def terminate(t):
-    return false
+    return False
 
 def setUp():
     pass
