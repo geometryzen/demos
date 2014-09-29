@@ -13,7 +13,7 @@ def terminate(t):
 
 def setUp():
     popDoc = popUp.document
-    print popDoc
+    canvas = popDoc.createElement("canvas")
     pass
 
 def tearDown(e):
