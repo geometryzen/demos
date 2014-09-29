@@ -55,6 +55,7 @@ class ArcBall {
     var one = eight.scalarE3(1);
     var sqrt2 = eight.scalarE3(Math.SQRT2);
     var rotor = one.add(b.mul(a)).div(sqrt2);
+    console.log("rotor: " + rotor);
     return rotor;
   }
   setUp(): void {
