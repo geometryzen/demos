@@ -7,4 +7,4 @@ s = "width=%s, height=%s" % (WINDOW_WIDTH, WINDOW_HEIGHT)
 
 print s
 
-popUp = window.open("","","width=%1, height=%2" % (WINDOW_WIDTH, WINDOW_HEIGHT))
+popUp = window.open("","","width=%s, height=%s" % (WINDOW_WIDTH, WINDOW_HEIGHT))
