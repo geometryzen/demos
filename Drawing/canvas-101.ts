@@ -207,7 +207,7 @@ function vanishingPoint(v: eight.Euclidean3) : {x: number; y: number} {
 function tick(time: number): void {
   // Set the background color to gray.
   context.fillStyle = "#555555"
-  context.fillRect(0, 0, CANVAS_WIDTH, 200);
+  context.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   
   var R = arcBall.rotor;
   
