@@ -44,12 +44,16 @@ class ArcBall {
     this.win = win;
   }
   private static vectorFromMouse(clientX: number, clientY: number): eight.Euclidean3 {
-    return eight.vectorE3(0,0,0);
+    var x = (clientX - 400) / 400;
+    var y = (clientY - 400) / 400;
+    var z = Math.sqrt(1 - x * x + y * y);
+    return eight.vectorE3(x, y, z);
   }
   setUp(): void {
     this.win.addEventListener('mousedown', function(ev: MouseEvent) {
       this.down = true;
-      this.a = ArcBall.vectorFromMouse(ev.clientX, ev.clientY)
+      this.a = ArcBall.vectorFromMouse(ev.clientX, ev.clientY);
+      console.log("a: " + this.a);
     });
     this.win.addEventListener('mouseup', function(ev: MouseEvent) {
       this.down = false;
