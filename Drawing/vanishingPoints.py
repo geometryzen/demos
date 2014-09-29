@@ -9,7 +9,7 @@ popUp = window.open("","","width=%s, height=%s" % (WINDOW_WIDTH, WINDOW_HEIGHT))
 def tick(t):
     pass
 
-def terminate():
+def terminate(t):
     pass
 
 def setUp():
@@ -18,4 +18,5 @@ def setUp():
 def tearDown():
     pass
 
-WindowAnimationRunner(tick, terminate, setUp, tearDown)
+war = WindowAnimationRunner(tick, terminate, setUp, tearDown)
+war.start()
