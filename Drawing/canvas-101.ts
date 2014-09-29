@@ -51,6 +51,8 @@ class ArcBall {
   private static vectorFromMouse(clientX: number, clientY: number): eight.Euclidean3 {
     var x = (clientX - 400) / 400;
     var y = (clientY - 400) / 400;
+    // The negative sign for z arises because the arc ball is a hemisphere in the
+    // directin of the user, which is negative z.
     var z = -Math.sqrt(1 - x * x - y * y);
     return eight.vectorE3(x, y, z);
   }
