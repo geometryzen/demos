@@ -1,3 +1,7 @@
+/**
+ * Demonstrates the vanishing points from 3D space projected onto a 2D canvas.
+ */
+
 // Workaround to prevent TS2082 and TS2087.
 // I don't know why this works.
 var unused: Window = window;
