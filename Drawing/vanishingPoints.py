@@ -18,7 +18,8 @@ def setUp():
     canvas = popDoc.createElement("canvas")
     
     canvas.setAttribute("id", "graph")
-    pass
+    canvas.setAttribute("width", str(CANVAS_WIDTH))
+    canvas.setAttribute("height",str(CANVAS_HEIGHT))
 
 def tearDown(e):
     popUp.close()
