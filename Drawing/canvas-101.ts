@@ -6,7 +6,7 @@ var CANVAS_HEIGHT = 800;
 var CANVAS_WIDTH  = 800;
 
 // Global Variables.
-var popUp: Window = window.open("", "", "width=800, height=800", false);
+var popUp: Window = window.open("", "", "width=810, height=810", false);
 var context: CanvasRenderingContext2D;
 var printer: Printer3D;
 var e1 = eight.vectorE3(1,0,0);
