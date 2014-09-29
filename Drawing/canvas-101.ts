@@ -273,6 +273,7 @@ function setUp() {
   canvas.setAttribute("height", CANVAS_HEIGHT.toString());
   
   popDoc.body.appendChild(canvas);
+  // Remove the margin that pushes the canvas.
   popDoc.body.style.margin = "0";
   
   context = canvas.getContext("2d");
