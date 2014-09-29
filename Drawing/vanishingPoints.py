@@ -22,6 +22,7 @@ def setUp():
     canvas.setAttribute("height",str(CANVAS_HEIGHT))
     
     popDoc.body.appendChild(canvas)
+    popDoc.body.style.margin = "0"
 
 def tearDown(e):
     popUp.close()
