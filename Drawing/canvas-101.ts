@@ -255,7 +255,7 @@ function tick(time: number): void {
   context.strokeStyle = "#FFFFFF";
 
   context.beginPath();
-  context.arc(CANVAS_HALF_WIDTH, CANVAS_HALF_HEIGHT, CANVAS_DISTANCE, 0, Math.PI);
+  context.arc(CANVAS_HALF_WIDTH, CANVAS_HALF_HEIGHT, CANVAS_DISTANCE, 0, 2 * Math.PI);
   context.closePath();
   context.stroke();
 
