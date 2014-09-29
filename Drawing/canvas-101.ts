@@ -218,7 +218,7 @@ function tick(time: number): void {
   var a = eight.vectorE3(1,0,0);
   var b = eight.vectorE3(0,0,1);
   var R = c.sub(s.mul(a.wedge(b)));
-  cube.attitude = R;
+  cube.attitude = arcBall.rotor;
   cube.draw();
   
   // Draw the vanishing points.
