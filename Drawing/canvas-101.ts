@@ -213,6 +213,16 @@ function vanishingPoint(v: eight.Euclidean3) : {x: number; y: number} {
   return {'x':x,'y':y};
 }
 
+function drawVanishingPoint(point: {x:number;y:number}, strokeStyle: string) {
+  context.beginPath();
+  context.strokeStyle = strokeStyle;
+  context.moveTo(point.x-10 + CANVAS_HALF_WIDTH, point.y    + CANVAS_HALF_HEIGHT);
+  context.lineTo(point.x+10 + CANVAS_HALF_WIDTH, point.y    + CANVAS_HALF_HEIGHT);
+  context.moveTo(point.x    + CANVAS_HALF_WIDTH, point.y-10 + CANVAS_HALF_HEIGHT);
+  context.lineTo(point.x    + CANVAS_HALF_WIDTH, point.y+10 + CANVAS_HALF_HEIGHT);
+  context.stroke();
+}
+
 /**
  * Called for each animation tick.
  */
@@ -230,34 +240,16 @@ function tick(time: number): void {
   // Draw the vanishing points.
   var T = reverse(R);
   var p1 = vanishingPoint(R.mul(e1).mul(T));
-  context.beginPath();
-  context.strokeStyle = "#FF0000";
-  context.moveTo(p1.x-10 + CANVAS_HALF_WIDTH, p1.y    + CANVAS_HALF_HEIGHT);
-  context.lineTo(p1.x+10 + CANVAS_HALF_WIDTH, p1.y    + CANVAS_HALF_HEIGHT);
-  context.moveTo(p1.x    + CANVAS_HALF_WIDTH, p1.y-10 + CANVAS_HALF_HEIGHT);
-  context.lineTo(p1.x    + CANVAS_HALF_WIDTH, p1.y+10 + CANVAS_HALF_HEIGHT);
-  context.stroke();
+  drawVanishingPoint(p1, "#FF0000");
 
   var p2 = vanishingPoint(R.mul(e2).mul(T));
-  context.beginPath();
-  context.strokeStyle = "#00FF00";
-  context.moveTo(p2.x-10+400, p2.y+400);
-  context.lineTo(p2.x+10+400, p2.y+400);
-  context.moveTo(p2.x+400, p2.y-10+400);
-  context.lineTo(p2.x+400, p2.y+10+400);
-  context.stroke();
+  drawVanishingPoint(p2, "#00FF00");
 
   var p3 = vanishingPoint(R.mul(e3).mul(T));
-  context.beginPath();
-  context.strokeStyle = "#0000FF";
-  context.moveTo(p3.x-10+400, p3.y+400);
-  context.lineTo(p3.x+10+400, p3.y+400);
-  context.moveTo(p3.x+400, p3.y-10+400);
-  context.lineTo(p3.x+400, p3.y+10+400);
-  context.stroke();
+  drawVanishingPoint(p2, "#0000FF");
   
   context.strokeStyle = "#FFFFFF";
-  context.strokeRect(0 + 400 - CANVAS_DISTANCE, 0+400 - CANVAS_DISTANCE, CANVAS_DISTANCE * 2, CANVAS_DISTANCE * 2);
+  context.strokeRect(CANVAS_HALF_WIDTH - CANVAS_DISTANCE, CANVAS_HALF_HEIGHT - CANVAS_DISTANCE, CANVAS_DISTANCE * 2, CANVAS_DISTANCE * 2);
 }
 
 /**
