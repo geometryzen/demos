@@ -98,7 +98,7 @@ class ArcBall {
 class Cube {
   public position: eight.Euclidean3;
   public attitude: eight.Euclidean3;
-  public size: number = 100;
+  public size: number = 50;
   private corners: eight.Euclidean3[];
   constructor(position: eight.Euclidean3, attitude: eight.Euclidean3) {
     this.position = position;
