@@ -6,12 +6,14 @@
 // I don't know why this works.
 var unused: Window = window;
 
-var CANVAS_HEIGHT = 800;
-var CANVAS_WIDTH  = 800;
+var WINDOW_HEIGHT = 800;
+var WINDOW_WIDTH  = 800;
+var CANVAS_HEIGHT = 600;
+var CANVAS_WIDTH  = 600;
 var CANVAS_DISTANCE = 100;
 
 // Global Variables.
-var popUp: Window = window.open("", "", "width=" + CANVAS_WIDTH + ", height=" + CANVAS_HEIGHT, false);
+var popUp: Window = window.open("", "", "width=" + WINDOW_WIDTH + ", height=" + WINDOW_HEIGHT, false);
 var context: CanvasRenderingContext2D;
 var printer: Printer3D;
 var e1 = eight.vectorE3(1,0,0);
