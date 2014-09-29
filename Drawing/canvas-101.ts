@@ -4,6 +4,7 @@ var unused: Window = window;
 
 var CANVAS_HEIGHT = 800;
 var CANVAS_WIDTH  = 800;
+var CANVAS_DISTANCE = 100;
 
 // Global Variables.
 var popUp: Window = window.open("", "", "width=" + CANVAS_WIDTH + ", height=" + CANVAS_HEIGHT, false);
@@ -12,7 +13,6 @@ var printer: Printer3D;
 var e1 = eight.vectorE3(1,0,0);
 var e2 = eight.vectorE3(0,1,0);
 var e3 = eight.vectorE3(0,0,1);
-var canvasDistance = 100;
 var arcBall: ArcBall;
 
 class Printer3D {
@@ -198,8 +198,8 @@ function reverse(m: eight.Euclidean3) {
 function vanishingPoint(v: eight.Euclidean3) : {x: number; y: number} {
   var norm = v.norm();
   var normalized = v.div(norm);
-  var x = canvasDistance * v.x / v.z;
-  var y = canvasDistance * v.y / v.z;
+  var x = CANVAS_DISTANCE * v.x / v.z;
+  var y = CANVAS_DISTANCE * v.y / v.z;
   return {'x':x,'y':y};
 }
 
@@ -247,7 +247,7 @@ function tick(time: number): void {
   context.stroke();
   
   context.strokeStyle = "#FFFFFF";
-  context.strokeRect(0+400-canvasDistance,0+400-canvasDistance,canvasDistance*2,canvasDistance*2);
+  context.strokeRect(0 + 400 - CANVAS_DISTANCE, 0+400 - CANVAS_DISTANCE, CANVAS_DISTANCE * 2, CANVAS_DISTANCE * 2);
 }
 
 /**
@@ -278,7 +278,7 @@ function setUp() {
   
   context = canvas.getContext("2d");
   
-  printer = new Printer3D(context, canvasDistance);
+  printer = new Printer3D(context, CANVAS_DISTANCE);
 }
 
 /**
