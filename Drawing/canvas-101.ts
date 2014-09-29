@@ -53,8 +53,7 @@ class ArcBall {
   }
   private static computeRotor(a: eight.Euclidean3, b: eight.Euclidean3) {
     var one = eight.scalarE3(1);
-    var sqrt2 = eight.scalarE3(Math.SQRT2);
-    var rotor = one.add(b.mul(a)).div(sqrt2);
+    var rotor = one.add(b.mul(a)).div(a.add(b).norm());
     console.log("rotor: " + rotor);
     return rotor;
   }
