@@ -107,10 +107,10 @@ class Cube {
     
     var sz = this.size;
     this.corners.push(eight.vectorE3(-1 * sz, +1 * sz, -1 * sz));
-    this.corners.push(eight.vectorE3(-100, -100, -100));
-    this.corners.push(eight.vectorE3(+100, -100, -100));
-    this.corners.push(eight.vectorE3(+100, +100, -100));
-    this.corners.push(eight.vectorE3(-100, +100, +100));
+    this.corners.push(eight.vectorE3(-1 * sz, -1 * sz, -1 * sz));
+    this.corners.push(eight.vectorE3(+1 * sz, -1 * sz, -1 * sz));
+    this.corners.push(eight.vectorE3(+1 * sz, +1 * sz, -1 * sz));
+    this.corners.push(eight.vectorE3(-1 * sz, +100, +100));
     this.corners.push(eight.vectorE3(-100, -100, +100));
     this.corners.push(eight.vectorE3(+100, -100, +100));
     this.corners.push(eight.vectorE3(+100, +100, +100));
