@@ -19,5 +19,5 @@ def tearDown(e):
     if e:
         print e
 
-war = WindowAnimationRunner(tick, terminate, setUp, tearDown)
+war = WindowAnimationRunner(tick, terminate, setUp, tearDown, popUp)
 war.start()
