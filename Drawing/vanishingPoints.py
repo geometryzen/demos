@@ -9,7 +9,8 @@ popUp = window.open("","","width=%s, height=%s" % (WINDOW_WIDTH, WINDOW_HEIGHT))
 context = None
 
 def tick(t):
-    pass
+    context.fillStyle = "#555555"
+    context.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT)
 
 def terminate(t):
     return False
