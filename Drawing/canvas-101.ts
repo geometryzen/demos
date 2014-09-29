@@ -270,7 +270,7 @@ function setUp() {
   canvas.setAttribute("height", CANVAS_HEIGHT.toString());
   
   document.body.appendChild(canvas);
-  document.body.style.margin = "0";
+  document.body.style.margin = "0px";
   
   context = canvas.getContext("2d");
   
