@@ -46,8 +46,8 @@ class ArcBall {
     this.win = win;
   }
   private static vectorFromMouse(clientX: number, clientY: number): eight.Euclidean3 {
-    var x = (clientX - 400) / 400;
-    var y = (clientY - 400) / 400;
+    var x = -(clientX - 400) / 400;
+    var y = -(clientY - 400) / 400;
     var z = Math.sqrt(1 - x * x - y * y);
     return eight.vectorE3(x, y, z);
   }
