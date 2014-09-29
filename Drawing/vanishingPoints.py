@@ -6,6 +6,7 @@ CANVAS_HEIGHT = 800
 CANVAS_WIDTH  = 800
 
 popUp = window.open("","","width=%s, height=%s" % (WINDOW_WIDTH, WINDOW_HEIGHT))
+context = None
 
 def tick(t):
     pass
