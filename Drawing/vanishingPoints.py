@@ -1,5 +1,5 @@
 # Import the browser module in order to make the window variable available.
-from browser import *;
+from browser import window;
 
 WINDOW_WIDTH  = 800
 WINDOW_HEIGHT = 800
