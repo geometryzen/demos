@@ -10,13 +10,13 @@ def tick(t):
     pass
 
 def terminate(t):
-    pass
+    return false
 
 def setUp():
     pass
 
 def tearDown():
-    pass
+    popUp.close()
 
 war = WindowAnimationRunner(tick, terminate, setUp, tearDown)
 war.start()
