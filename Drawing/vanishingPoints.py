@@ -16,6 +16,7 @@ def terminate(t):
     return False
 
 def setUp():
+    global context
     popDoc = popUp.document
     canvas = popDoc.createElement("canvas")
     
