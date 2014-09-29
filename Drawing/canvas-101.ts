@@ -105,7 +105,8 @@ class Cube {
     this.attitude = attitude;
     this.corners = [];
     
-    this.corners.push(eight.vectorE3(-1 * size, +1 * size, -1 * size));
+    var sz = this.size;
+    this.corners.push(eight.vectorE3(-1 * sz, +1 * sz, -1 * sz));
     this.corners.push(eight.vectorE3(-100, -100, -100));
     this.corners.push(eight.vectorE3(+100, -100, -100));
     this.corners.push(eight.vectorE3(+100, +100, -100));
