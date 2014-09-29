@@ -14,6 +14,8 @@ def terminate(t):
 def setUp():
     popDoc = popUp.document
     canvas = popDoc.createElement("canvas")
+    
+    canvas.setAttribute(4,5);
     pass
 
 def tearDown(e):
