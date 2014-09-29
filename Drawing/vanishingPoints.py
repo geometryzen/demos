@@ -24,6 +24,8 @@ def setUp():
     
     popDoc.body.appendChild(canvas)
     popDoc.body.style.margin = "0"
+    
+    context = canvas.getContext("2d")
 
 def tearDown(e):
     popUp.close()
