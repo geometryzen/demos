@@ -192,7 +192,7 @@ function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:n
 }
 
 function reverse(m: eight.Euclidean3) {
-  return new eight.Euclidean3(m.w, m.x, m.y, m.z,-m.xy,-m.yz,-m.zx, m.xyz);
+  return new eight.Euclidean3(m.w, m.x, m.y, m.z,-m.xy,-m.yz,-m.zx, -m.xyz);
 }
 
 function vanishingPoint(v: eight.Euclidean3) : {x: number; y: number} {
