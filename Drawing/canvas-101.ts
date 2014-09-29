@@ -207,18 +207,10 @@ function tick(time: number): void {
   context.fillStyle = "#555555"
   context.fillRect(0,0,800,800);
   
+  var R = arcBall.rotor;
+  
   // Draw the cube at the appropriate attitude.
-  var TAO = Math.PI * 2;
-  var omega = TAO / 60.0;
-  var theta = omega * time;
-  var c = eight.scalarE3(Math.cos(theta/2));
-  var s = eight.scalarE3(Math.sin(theta/2));
-  var one = eight.scalarE3(1);
-  var sqrt2 = eight.scalarE3(Math.sqrt(2));
-  var a = eight.vectorE3(1,0,0);
-  var b = eight.vectorE3(0,0,1);
-  var R = c.sub(s.mul(a.wedge(b)));
-  cube.attitude = arcBall.rotor;
+  cube.attitude = R;
   cube.draw();
   
   // Draw the vanishing points.
