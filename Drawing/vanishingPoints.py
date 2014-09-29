@@ -10,6 +10,12 @@ def tick(t):
     pass
 
 def terminate():
-    pa
+    pass
+
+def setUp():
+    pass
+
+def tearDown():
+    pass
 
 WindowAnimationRunner(tick, terminate, setUp, tearDown)
