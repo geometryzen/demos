@@ -213,7 +213,7 @@ function vanishingPoint(v: eight.Euclidean3) : {x: number; y: number} {
   var normalized = v.div(norm);
   var x = CANVAS_DISTANCE * v.x / v.z;
   var y = CANVAS_DISTANCE * v.y / v.z;
-  return {'x':x,'y':y};
+  return {'x': x,'y': y};
 }
 
 function drawVanishingPoint(point: {x:number;y:number}, strokeStyle: string) {
