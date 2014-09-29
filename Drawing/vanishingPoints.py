@@ -1,4 +1,5 @@
 # Import the browser module in order to make the window variable available.
+# It's good practice to make imports explicit rather than using wildcards.
 from browser import window, WindowAnimationRunner;
 
 WINDOW_WIDTH  = 800
@@ -17,6 +18,7 @@ def terminate(t):
     return False
 
 def setUp():
+    # Let the compiler know that context in this scope is a global variable.
     global context
     popDoc = popUp.document
     canvas = popDoc.createElement("canvas")
