@@ -19,8 +19,8 @@ def setUp():
     canvas = popDoc.createElement("canvas")
     
     canvas.setAttribute("id", "graph")
-    canvas.setAttribute("width", str(CANVAS_WIDTH))
-    canvas.setAttribute("height",str(CANVAS_HEIGHT))
+    canvas.setAttribute("width",  str(CANVAS_WIDTH))
+    canvas.setAttribute("height", str(CANVAS_HEIGHT))
     
     popDoc.body.appendChild(canvas)
     popDoc.body.style.margin = "0"
