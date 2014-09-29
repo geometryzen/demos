@@ -98,12 +98,14 @@ class ArcBall {
 class Cube {
   public position: eight.Euclidean3;
   public attitude: eight.Euclidean3;
+  public size: number = 100;
   private corners: eight.Euclidean3[];
   constructor(position: eight.Euclidean3, attitude: eight.Euclidean3) {
     this.position = position;
     this.attitude = attitude;
     this.corners = [];
-    this.corners.push(eight.vectorE3(-100, +100, -100));
+    
+    this.corners.push(eight.vectorE3(-1 * size, +1 * size, -1 * size));
     this.corners.push(eight.vectorE3(-100, -100, -100));
     this.corners.push(eight.vectorE3(+100, -100, -100));
     this.corners.push(eight.vectorE3(+100, +100, -100));
