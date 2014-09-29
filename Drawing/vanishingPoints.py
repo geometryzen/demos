@@ -1,3 +1,3 @@
 from browser import window;
 
-window.open()
+window.open("","","width=800, height=800")
