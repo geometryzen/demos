@@ -261,16 +261,17 @@ function terminate(time: number): boolean {
 function setUp() {
   arcBall = new ArcBall(popUp);
   arcBall.setUp();
-  var document = popUp.document;
+
+  var popDoc = popUp.document;
   
-  var canvas = document.createElement("canvas");
+  var canvas = popDoc.createElement("canvas");
   
   canvas.setAttribute("id", "graph");
   canvas.setAttribute("width",  CANVAS_WIDTH.toString());
   canvas.setAttribute("height", CANVAS_HEIGHT.toString());
   
-  document.body.appendChild(canvas);
-  document.body.style.margin = "0";
+  popDoc.body.appendChild(canvas);
+  popDoc.body.style.margin = "0";
   
   context = canvas.getContext("2d");
   
