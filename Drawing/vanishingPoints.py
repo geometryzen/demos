@@ -1,7 +1,9 @@
 from browser import *;
 
-WINDOW_WIDTH = 800
+WINDOW_WIDTH  = 800
 WINDOW_HEIGHT = 800
+CANVAS_HEIGHT = 800
+CANVAS_WIDTH  = 800
 
 popUp = window.open("","","width=%s, height=%s" % (WINDOW_WIDTH, WINDOW_HEIGHT))
 
@@ -15,7 +17,7 @@ def setUp():
     popDoc = popUp.document
     canvas = popDoc.createElement("canvas")
     
-    canvas.setAttribute(4,5);
+    canvas.setAttribute("id", "graph")
     pass
 
 def tearDown(e):
