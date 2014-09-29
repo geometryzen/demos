@@ -1,5 +1,5 @@
 # Import the browser module in order to make the window variable available.
-from browser import window;
+from browser import window, WindowAnimationRunner;
 
 WINDOW_WIDTH  = 800
 WINDOW_HEIGHT = 800
