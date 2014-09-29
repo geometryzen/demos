@@ -36,6 +36,8 @@ class Printer3D {
 }
 
 class ArcBall {
+  private start: eight.Euclidean3;
+  public rotor: eight.Euclidean3 = eight.scalarE3(1);
   private win: Window;
   private down: boolean = false;
   private a: eight.Euclidean3;
@@ -49,19 +51,28 @@ class ArcBall {
     var z = Math.sqrt(1 - x * x - y * y);
     return eight.vectorE3(x, y, z);
   }
+  private static computeRotor(a: eight.Euclidean3, b: eight.Euclidean3) {
+    var one = eight.scalarE3(1);
+    var sqrt2 = eight.scalarE3(Math.SQRT2);
+    var rotor = one.add(b.mul(a)).div(sqrt2);
+    return rotor;
+  }
   setUp(): void {
+    var self = this;
     this.win.addEventListener('mousedown', function(ev: MouseEvent) {
-      this.down = true;
-      this.a = ArcBall.vectorFromMouse(ev.clientX, ev.clientY);
-      console.log("a: " + this.a);
+      self.down = true;
+      self.a = ArcBall.vectorFromMouse(ev.clientX, ev.clientY);
+      self.start = self.rotor;
     });
     this.win.addEventListener('mouseup', function(ev: MouseEvent) {
-      this.down = false;
-      this.b = ArcBall.vectorFromMouse(ev.clientX, ev.clientY)
+      self.down = false;
+      self.b = ArcBall.vectorFromMouse(ev.clientX, ev.clientY);
+      self.rotor = ArcBall.computeRotor(self.a, self.b).mul(self.start);
     });
     this.win.addEventListener('mousemove', function(ev: MouseEvent) {
-      if (this.down) {
-        this.b = ArcBall.vectorFromMouse(ev.clientX, ev.clientY)
+      if (self.down) {
+        self.b = ArcBall.vectorFromMouse(ev.clientX, ev.clientY)
+        self.rotor = ArcBall.computeRotor(self.a, self.b).mul(self.start);
       }
     });
   }
