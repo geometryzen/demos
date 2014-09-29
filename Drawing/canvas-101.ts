@@ -38,21 +38,26 @@ class Printer3D {
 class ArcBall {
   private win: Window;
   private down: boolean = false;
+  private a: eight.Euclidean3;
+  private b: eight.Euclidean3;
   constructor(win: Window) {
     this.win = win;
   }
+  private static vectorFromMouse(clientX: number, clientY: number): eight.Euclidean3 {
+    return eight.vectorE3(0,0,0);
+  }
   setUp(): void {
     this.win.addEventListener('mousedown', function(ev: MouseEvent) {
-      window.console.log('mousedown: ' + JSON.stringify({x:ev.clientX, y:ev.clientY}));
       this.down = true;
+      this.a = ArcBall.vectorFromMouse(ev.clientX, ev.clientY)
     });
     this.win.addEventListener('mouseup', function(ev: MouseEvent) {
-      window.console.log('mouseup: ' + JSON.stringify({x:ev.clientX, y:ev.clientY}));
       this.down = false;
+      this.b = ArcBall.vectorFromMouse(ev.clientX, ev.clientY)
     });
     this.win.addEventListener('mousemove', function(ev: MouseEvent) {
       if (this.down) {
-        window.console.log('mousemove: ' + JSON.stringify({x:ev.clientX, y:ev.clientY}));
+        this.b = ArcBall.vectorFromMouse(ev.clientX, ev.clientY)
       }
     });
   }
