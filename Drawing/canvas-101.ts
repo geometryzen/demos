@@ -75,9 +75,7 @@ class ArcBall {
     });
     this.win.addEventListener('mousemove', function(ev: MouseEvent) {
       if (self.down) {
-        console.log("" + JSON.stringify({x:ev.clientX,y:ev.clientY}));
         self.b = ArcBall.vectorFromMouse(ev.clientX, ev.clientY)
-        console.log("" + self.b);
         self.rotor = ArcBall.computeRotor(self.a, self.b).mul(self.start);
       }
     });
