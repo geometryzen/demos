@@ -231,7 +231,7 @@ function drawVanishingPoint(point: {x:number;y:number}, strokeStyle: string) {
  */
 function tick(time: number): void {
   // Set the background color to gray.
-  context.fillStyle = "#555555"
+  context.fillStyle = "#555555";
   context.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   
   var R = arcBall.rotor;
