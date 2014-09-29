@@ -2,6 +2,9 @@
 // I don't know why this works.
 var unused: Window = window;
 
+var CANVAS_HEIGHT = 800;
+var CANVAS_WIDTH  = 800;
+
 // Global Variables.
 var popUp: Window = window.open("", "", "width=800, height=800", false);
 var context: CanvasRenderingContext2D;
@@ -263,8 +266,8 @@ function setUp() {
   var canvas = document.createElement("canvas");
   
   canvas.setAttribute("id", "graph");
-  canvas.setAttribute("width", "800");
-  canvas.setAttribute("height", "800");
+  canvas.setAttribute("width",  CANVAS_WIDTH.toString());
+  canvas.setAttribute("height", CANVAS_HEIGHT.toString());
   
   document.body.appendChild(canvas);
   
