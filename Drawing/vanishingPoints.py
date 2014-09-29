@@ -1,4 +1,4 @@
-from browser import window;
+from browser import *;
 from workbench import *
 
 WINDOW_WIDTH = 800
