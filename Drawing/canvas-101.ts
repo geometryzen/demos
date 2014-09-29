@@ -246,7 +246,7 @@ function tick(time: number): void {
   drawVanishingPoint(p2, "#00FF00");
 
   var p3 = vanishingPoint(R.mul(e3).mul(T));
-  drawVanishingPoint(p2, "#0000FF");
+  drawVanishingPoint(p3, "#0000FF");
   
   context.strokeStyle = "#FFFFFF";
   context.strokeRect(CANVAS_HALF_WIDTH - CANVAS_DISTANCE, CANVAS_HALF_HEIGHT - CANVAS_DISTANCE, CANVAS_DISTANCE * 2, CANVAS_DISTANCE * 2);
