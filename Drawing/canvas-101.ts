@@ -251,11 +251,16 @@ function tick(time: number): void {
   var p3 = vanishingPoint(R.mul(e3).mul(T));
   drawVanishingPoint(p3, "#0000FF");
 
-  // Draw a rectangle
   context.strokeStyle = "#FFFFFF";
-
+  // Draw symmetric two-vanishing point locus.
   context.beginPath();
   context.arc(CANVAS_HALF_WIDTH, CANVAS_HALF_HEIGHT, CANVAS_DISTANCE, 0, 2 * Math.PI);
+  context.closePath();
+  context.stroke();
+
+  // Draw symmetric three-vanishing point locus.
+  context.beginPath();
+  context.arc(CANVAS_HALF_WIDTH, CANVAS_HALF_HEIGHT, CANVAS_DISTANCE * Math.SQRT2, 0, 2 * Math.PI);
   context.closePath();
   context.stroke();
 
