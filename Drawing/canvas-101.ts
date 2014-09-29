@@ -232,7 +232,7 @@ function tick(time: number): void {
   var p1 = vanishingPoint(R.mul(e1).mul(T));
   context.beginPath();
   context.strokeStyle = "#FF0000";
-  context.moveTo(p1.x-10+400, p1.y+400);
+  context.moveTo(p1.x-10 + CANVAS_HALF_WIDTH, p1.y + CANVAS_HALF_HEIGHT);
   context.lineTo(p1.x+10+400, p1.y+400);
   context.moveTo(p1.x+400, p1.y-10+400);
   context.lineTo(p1.x+400, p1.y+10+400);
