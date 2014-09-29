@@ -1,1 +1,1 @@
-à€€à€€
+from browser import window;
