@@ -1,3 +1,5 @@
 from browser import window;
 
-popUp = window.open("","","width=800, height=800")
+WINDOW_HEIGHT = 800
+
+popUp = window.open("","","width=800, height=800" % (WINDOW_HEIGHT))
