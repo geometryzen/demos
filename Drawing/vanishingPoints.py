@@ -3,7 +3,7 @@ from browser import window;
 WINDOW_WIDTH = 400
 WINDOW_HEIGHT = 800
 
-s = "width=%s, height=%s" % (WINDOW_WIDTH, WINDOW_HEIGHT)
+s = "width={0}, height={1}".format(WINDOW_WIDTH, WINDOW_HEIGHT)
 
 print s
 
