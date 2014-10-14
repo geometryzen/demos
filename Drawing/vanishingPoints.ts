@@ -238,7 +238,7 @@ function tick(time: number): void {
   
   // Draw the cube at the appropriate attitude.
   cube.attitude = R;
-  cube.position.y = 150;
+  cube.position.y = 250;
   cube.draw();
   
   // Draw the vanishing points.
