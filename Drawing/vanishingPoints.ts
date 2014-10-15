@@ -208,7 +208,7 @@ function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:n
     var x = d * (1 + X / m);
     var y = d * (1 + Y / m);
 
-    return {'x':x, 'y':6};
+    return {'x':x, 'y':y};
 }
 
 function reverse(m: eight.Euclidean3) {
