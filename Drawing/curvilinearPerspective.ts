@@ -227,10 +227,16 @@ function perspective(X: number, Y: number, Z: number, d: number, s:number): {x:n
 
 function perspective(X: number, Y: number, Z: number, d: number, s:number): {x:number; y:number} {
 
-  var m = 
+  var m = Math.sqrt(X * X + Y * Y + Z * Z)
+  
+  var nx = X / m;
+  var ny = Y / m;
+  var nz = Z / m;
+  
+  var distanceFactor = 1 / (1 + nz);
 
-  var x = distanceFactor * X;
-  var y = distanceFactor * Y;
+  var x = distanceFactor * nx;
+  var y = distanceFactor * ny;
 
   return {'x': x, 'y': y};
 }
