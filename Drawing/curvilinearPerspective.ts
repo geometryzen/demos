@@ -209,7 +209,7 @@ var cubes: Cube[] = [];
 for (var i=-n;i<=n;i++) {
   for (var j=-n;j<=n;j++) {
     for (var k=-n;k<=n;k++) {
-      cubes.push(new Cube(eight.vectorE3(i, j, k), eight.scalarE3(1)));
+      cubes.push(new Cube(eight.vectorE3(i*2, j*2, k*2), eight.scalarE3(1)));
     }
   }
 }
