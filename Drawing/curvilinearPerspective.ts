@@ -107,7 +107,7 @@ class ArcBall {
 class Cube {
   public position: eight.Euclidean3;
   public attitude: eight.Euclidean3;
-  public size: number = 100;
+  public size: number = 1;
   private corners: eight.Euclidean3[];
   constructor(position: eight.Euclidean3, attitude: eight.Euclidean3) {
     this.position = position;
@@ -203,9 +203,9 @@ class Cube {
 }
 
 var cubes: Cube[] = [];
-for (var i=0;i<10;i++) {
-  for (var j=0;j<10;j++) {
-    cubes.push(new Cube(eight.vectorE3(i*10, j*10, 200), eight.scalarE3(1)));
+for (var i=-5;i<=5;i++) {
+  for (var j=-5;j<=5;j++) {
+    cubes.push(new Cube(eight.vectorE3(i, j, 0), eight.scalarE3(1)));
   }
 }
 
