@@ -199,16 +199,16 @@ function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:n
   /**
    * The distance factor determines how much the X and Y components are reduced by the distance (Z + d) from the viewer.
    */
-//  var distanceFactor = d / (Z + d);
+  var distanceFactor = d / (Z + d);
   
-//  return {'x': distanceFactor * X, 'y': distanceFactor * Y};
+  return {'x': distanceFactor * X, 'y': distanceFactor * Y};
 
-    var m = Math.sqrt(X * X + Y * Y + Z * Z);
+//    var m = Math.sqrt(X * X + Y * Y + Z * Z);
     
-    var x = d * (1 + X / m);
-    var y = d * (1 + Y / m);
+//    var x = d * (1 + X / m);
+//    var y = d * (1 + Y / m);
 
-    return {'x':x, 'y':y};
+//    return {'x':x, 'y':y};
 }
 
 function reverse(m: eight.Euclidean3) {
