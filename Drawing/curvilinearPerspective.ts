@@ -323,7 +323,7 @@ function setUp() {
   
   context = canvas.getContext("2d");
   
-  printer = new Printer3D(context, CANVAS_DISTANCE, IMAGE_DISTANCE, 10);
+  printer = new Printer3D(context, CANVAS_DISTANCE, IMAGE_DISTANCE, 50);
 }
 
 /**
