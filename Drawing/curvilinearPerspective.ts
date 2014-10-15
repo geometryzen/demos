@@ -284,32 +284,6 @@ function tick(time: number): void {
     cubes[i].attitude = R
     cubes[i].draw();
   }
-
-  // Draw the vanishing points.
-  var T = reverse(R);
-  var p1 = vanishingPoint(R.mul(e1).mul(T));
-  drawVanishingPoint(p1, "#FF0000");
-
-  var p2 = vanishingPoint(R.mul(e2).mul(T));
-  drawVanishingPoint(p2, "#00FF00");
-
-  var p3 = vanishingPoint(R.mul(e3).mul(T));
-  drawVanishingPoint(p3, "#0000FF");
-
-  context.strokeStyle = "#FFFFFF";
-  // Draw symmetric two-vanishing point locus.
-  context.beginPath();
-  context.arc(CANVAS_HALF_WIDTH, CANVAS_HALF_HEIGHT, CANVAS_DISTANCE, 0, 2 * Math.PI);
-  context.closePath();
-  context.stroke();
-
-  // Draw symmetric three-vanishing point locus.
-  context.beginPath();
-  context.arc(CANVAS_HALF_WIDTH, CANVAS_HALF_HEIGHT, CANVAS_DISTANCE * Math.SQRT2, 0, 2 * Math.PI);
-  context.closePath();
-  context.stroke();
-
-  context.strokeRect(CANVAS_HALF_WIDTH - CANVAS_DISTANCE, CANVAS_HALF_HEIGHT - CANVAS_DISTANCE, CANVAS_DISTANCE * 2, CANVAS_DISTANCE * 2);
 }
 
 /**
