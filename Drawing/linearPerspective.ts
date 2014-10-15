@@ -14,8 +14,8 @@ var CANVAS_HEIGHT = 800;
 var CANVAS_WIDTH  = 800;
 var CANVAS_HALF_HEIGHT = CANVAS_HEIGHT / 2;
 var CANVAS_HALF_WIDTH  = CANVAS_WIDTH / 2;
-var CANVAS_DISTANCE = 10;
-var IMAGE_DISTANCE = 100;
+var CANVAS_DISTANCE = 50;
+var IMAGE_DISTANCE = 150;
 var ZOOM = 30
 
 // Global Variables.
@@ -205,8 +205,8 @@ class Cube {
   }
 }
 
-var n = 20;
-var separation = 5;
+var n = 10;
+var separation = 10;
 var cubes: Cube[] = [];
 for (var i=-n;i<=n;i++) {
   var j = 0;
