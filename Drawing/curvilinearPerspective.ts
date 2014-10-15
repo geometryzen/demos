@@ -109,11 +109,11 @@ class Cube {
     this.corners.push(eight.vectorE3(position.x - sz, position.y + sz, position.z - sz));
     this.corners.push(eight.vectorE3(position.x - sz, position.y - sz, position.z - sz));
     this.corners.push(eight.vectorE3(position.x + sz, position.y - sz, position.z - sz));
-    this.corners.push(eight.vectorE3(position.x + sz, position.y + sz, -1 * sz));
-    this.corners.push(eight.vectorE3(position.x - sz, position.y + sz, +1 * sz));
-    this.corners.push(eight.vectorE3(position.x - sz, position.y - sz, +1 * sz));
-    this.corners.push(eight.vectorE3(position.x + sz, position.y - sz, +1 * sz));
-    this.corners.push(eight.vectorE3(position.x + sz, position.y + sz, +1 * sz));
+    this.corners.push(eight.vectorE3(position.x + sz, position.y + sz, position.z - sz));
+    this.corners.push(eight.vectorE3(position.x - sz, position.y + sz, position.z + sz));
+    this.corners.push(eight.vectorE3(position.x - sz, position.y - sz, position.z + sz));
+    this.corners.push(eight.vectorE3(position.x + sz, position.y - sz, position.z + sz));
+    this.corners.push(eight.vectorE3(position.x + sz, position.y + sz, position.z + sz));
   }
   draw()
   {
