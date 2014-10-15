@@ -98,7 +98,7 @@ class ArcBall {
 class Cube {
   public position: eight.Euclidean3;
   public attitude: eight.Euclidean3;
-  public size: number = 10;
+  public size: number = 100;
   private corners: eight.Euclidean3[];
   constructor(position: eight.Euclidean3, attitude: eight.Euclidean3) {
     this.position = position;
@@ -193,9 +193,9 @@ class Cube {
   }
 }
 
-var cube1 = new Cube(eight.vectorE3(0, 0, 0), eight.scalarE3(1));
-var cube2 = new Cube(eight.vectorE3(0, 0, 10), eight.scalarE3(1));
-var cube3 = new Cube(eight.vectorE3(0, 0, 20), eight.scalarE3(1));
+var cube1 = new Cube(eight.vectorE3(0, 0, 200), eight.scalarE3(1));
+var cube2 = new Cube(eight.vectorE3(0, 0, 300), eight.scalarE3(1));
+var cube3 = new Cube(eight.vectorE3(0, 0, 400), eight.scalarE3(1));
 
 function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:number} {
   /**
