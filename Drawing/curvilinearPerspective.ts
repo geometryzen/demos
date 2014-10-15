@@ -206,11 +206,12 @@ class Cube {
 }
 
 var n = 3;
+var separation = 2;
 var cubes: Cube[] = [];
 for (var i=-n;i<=n;i++) {
   for (var j=-n;j<=n;j++) {
     for (var k=-n;k<=n;k++) {
-      cubes.push(new Cube(eight.vectorE3(i*2, j*2, k*2), eight.scalarE3(1)));
+      cubes.push(new Cube(eight.vectorE3(i*separation, j*separation, k*separation), eight.scalarE3(1)));
     }
   }
 }
