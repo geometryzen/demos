@@ -123,8 +123,8 @@ class Cube {
     // front face
     printer.beginPath();
     context.strokeStyle = "#00FF00";
-    printer.moveTo(this.position.x + corners[0].x, this.position.y + corners[0].y, this.position.z + corners[0].z);
-    printer.lineTo(this.position.x + corners[1].x, this.position.y + corners[1].y, this.position.z + corners[1].z);
+    printer.moveTo(corners[0].x, corners[0].y, corners[0].z);
+    printer.lineTo(corners[1].x, corners[1].y, corners[1].z);
     printer.stroke();
 
     printer.beginPath();
