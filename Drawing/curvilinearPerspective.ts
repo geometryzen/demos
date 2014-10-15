@@ -250,6 +250,8 @@ function tick(time: number): void {
   cube1.draw();
   cube2.attitude = R;
   cube2.draw();
+  cube3.attitude = R;
+  cube3.draw();
   
   // Draw the vanishing points.
   var T = reverse(R);
