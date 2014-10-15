@@ -219,7 +219,7 @@ for (var i=-n;i<=n;i++) {
 
 
 function perspective(X: number, Y: number, Z: number, d: number, s:number): {x:number; y:number} {
-  var distanceFactor = d / (Z + d);
+  var distanceFactor = d / (d + s + Z);
   
   var x = distanceFactor * X;
   var y = distanceFactor * Y;
