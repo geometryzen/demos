@@ -217,17 +217,6 @@ for (var i=-n;i<=n;i++) {
 //  }
 }
 
-
-function perspective(X: number, Y: number, Z: number, d: number, s:number): {x:number; y:number} {
-  var distanceFactor = d / (d + s + Z);
-  
-  var x = distanceFactor * X;
-  var y = distanceFactor * Y;
-
-  return {'x': x, 'y': y};
-}
-
-/*
 function perspective(X: number, Y: number, Z: number, d: number, s:number): {x:number; y:number} {
 
   var vx = X;
@@ -247,7 +236,7 @@ function perspective(X: number, Y: number, Z: number, d: number, s:number): {x:n
 
   return {'x': x, 'y': y};
 }
-*/
+
 function reverse(m: eight.Euclidean3) {
   return new eight.Euclidean3(m.w, m.x, m.y, m.z,-m.xy,-m.yz,-m.zx, -m.xyz);
 }
