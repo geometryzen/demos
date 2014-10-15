@@ -193,7 +193,8 @@ class Cube {
   }
 }
 
-var cube = new Cube(eight.vectorE3(0, 0, 200), eight.scalarE3(1));
+var cube1 = new Cube(eight.vectorE3(0, 0, 200), eight.scalarE3(1));
+var cube2 = new Cube(eight.vectorE3(0, 0, 300), eight.scalarE3(1));
 
 function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:number} {
   /**
@@ -244,9 +245,10 @@ function tick(time: number): void {
   var R = arcBall.rotor;
   
   // Draw the cube at the appropriate attitude.
-  cube.attitude = R;
-  cube.position.y = 0;
-  cube.draw();
+  cube1.attitude = R;
+  cube1.draw();
+  cube2.attitude = R;
+  cube2.draw();
   
   // Draw the vanishing points.
   var T = reverse(R);
