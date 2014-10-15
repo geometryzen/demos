@@ -7,7 +7,7 @@
 var unused: Window = window;
 
 var WINDOW_HEIGHT = 800;
-var WINDOW_WIDTH  = 800;
+var WINDOW_WIDTH  = 1600;
 var WINDOW_HALF_HEIGHT = WINDOW_HEIGHT / 2;
 var WINDOW_HALF_WIDTH  = WINDOW_WIDTH / 2;
 var CANVAS_HEIGHT = 800;
