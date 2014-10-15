@@ -214,19 +214,23 @@ for (var i=-n;i<=n;i++) {
   }
 }
 
+/*
 function perspective(X: number, Y: number, Z: number, d: number, s:number): {x:number; y:number} {
-  /**
-   * The distance factor determines how much the X and Y components are reduced by the distance (Z + d) from the viewer.
-   */
   var distanceFactor = d / (Z + d);
   
   var x = distanceFactor * X;
   var y = distanceFactor * Y;
 
-//  var m = Math.sqrt(X * X + Y * Y + Z * Z);
-    
-//  var x = d * (X / m);
-//  var y = d * (Y / m);
+  return {'x': x, 'y': y};
+}
+*/
+
+function perspective(X: number, Y: number, Z: number, d: number, s:number): {x:number; y:number} {
+
+  var m = 
+
+  var x = distanceFactor * X;
+  var y = distanceFactor * Y;
 
   return {'x': x, 'y': y};
 }
