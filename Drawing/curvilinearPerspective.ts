@@ -141,21 +141,21 @@ class Cube {
 
     printer.beginPath();
     context.strokeStyle = "#FF0000";
-    printer.lineTo(this.position.x + corners[3].x, this.position.y + corners[3].y, this.position.z + corners[3].z);
-    printer.lineTo(this.position.x + corners[0].x, this.position.y + corners[0].y, this.position.z + corners[0].z);
+    printer.lineTo(corners[3].x, corners[3].y, corners[3].z);
+    printer.lineTo(corners[0].x, corners[0].y, corners[0].z);
     printer.stroke();
 
     // back face
     printer.beginPath();
     context.strokeStyle = "#00FF00";
-    printer.moveTo(this.position.x + corners[4].x, this.position.y + corners[4].y, this.position.z + corners[4].z);
-    printer.lineTo(this.position.x + corners[5].x, this.position.y + corners[5].y, this.position.z + corners[5].z);
+    printer.moveTo(corners[4].x, corners[4].y, corners[4].z);
+    printer.lineTo(corners[5].x, corners[5].y, corners[5].z);
     printer.stroke();
 
     printer.beginPath();
     context.strokeStyle = "#FF0000";
-    printer.lineTo(this.position.x + corners[5].x, this.position.y + corners[5].y, this.position.z + corners[5].z);
-    printer.lineTo(this.position.x + corners[6].x, this.position.y + corners[6].y, this.position.z + corners[6].z);
+    printer.lineTo(corners[5].x, corners[5].y, corners[5].z);
+    printer.lineTo(corners[6].x, corners[6].y, corners[6].z);
     printer.stroke();
 
     printer.beginPath();
