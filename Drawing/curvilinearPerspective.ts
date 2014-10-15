@@ -194,8 +194,8 @@ class Cube {
 }
 
 var cube1 = new Cube(eight.vectorE3(0, 0, 0), eight.scalarE3(1));
-var cube2 = new Cube(eight.vectorE3(0, 0, 100), eight.scalarE3(1));
-var cube3 = new Cube(eight.vectorE3(0, 0, 200), eight.scalarE3(1));
+var cube2 = new Cube(eight.vectorE3(0, 0, 10), eight.scalarE3(1));
+var cube3 = new Cube(eight.vectorE3(0, 0, 20), eight.scalarE3(1));
 
 function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:number} {
   /**
@@ -248,10 +248,10 @@ function tick(time: number): void {
   // Draw the cube at the appropriate attitude.
   cube1.attitude = R;
   cube1.draw();
-//  cube2.attitude = R;
-//  cube2.draw();
-//  cube3.attitude = R;
-//  cube3.draw();
+  cube2.attitude = R;
+  cube2.draw();
+  cube3.attitude = R;
+  cube3.draw();
   
   // Draw the vanishing points.
   var T = reverse(R);
