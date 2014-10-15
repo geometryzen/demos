@@ -109,11 +109,11 @@ class Cube {
     this.corners.push(eight.vectorE3(position.x - sz, position.y + sz, position.z - sz));
     this.corners.push(eight.vectorE3(position.x - sz, position.y - sz, position.z - sz));
     this.corners.push(eight.vectorE3(position.x + sz, position.y - sz, position.z - sz));
-    this.corners.push(eight.vectorE3(+1 * sz, +1 * sz, -1 * sz));
-    this.corners.push(eight.vectorE3(-1 * sz, +1 * sz, +1 * sz));
-    this.corners.push(eight.vectorE3(-1 * sz, -1 * sz, +1 * sz));
-    this.corners.push(eight.vectorE3(+1 * sz, -1 * sz, +1 * sz));
-    this.corners.push(eight.vectorE3(+1 * sz, +1 * sz, +1 * sz));
+    this.corners.push(eight.vectorE3(position.x + sz, +1 * sz, -1 * sz));
+    this.corners.push(eight.vectorE3(position.x - sz, +1 * sz, +1 * sz));
+    this.corners.push(eight.vectorE3(position.x - sz, -1 * sz, +1 * sz));
+    this.corners.push(eight.vectorE3(position.x + sz, -1 * sz, +1 * sz));
+    this.corners.push(eight.vectorE3(position.x + sz, +1 * sz, +1 * sz));
   }
   draw()
   {
@@ -135,8 +135,8 @@ class Cube {
 
     printer.beginPath();
     context.strokeStyle = "#00FF00";
-    printer.lineTo(this.position.x + corners[2].x, this.position.y + corners[2].y, this.position.z + corners[2].z);
-    printer.lineTo(this.position.x + corners[3].x, this.position.y + corners[3].y, this.position.z + corners[3].z);
+    printer.lineTo(corners[2].x, corners[2].y, corners[2].z);
+    printer.lineTo(corners[3].x, corners[3].y, corners[3].z);
     printer.stroke();
 
     printer.beginPath();
