@@ -207,7 +207,9 @@ class Cube {
 var cubes: Cube[] = [];
 for (var i=-5;i<=5;i++) {
   for (var j=-5;j<=5;j++) {
-    cubes.push(new Cube(eight.vectorE3(i, j, 0), eight.scalarE3(1)));
+    for (var k=-5;k<=5;k++) {
+      cubes.push(new Cube(eight.vectorE3(i, j, k), eight.scalarE3(1)));
+    }
   }
 }
 
