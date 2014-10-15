@@ -36,10 +36,12 @@ class Printer3D {
    * Distance screen to origin.
    */
   private s: number;
-  constructor(context2D: CanvasRenderingContext2D, d: number, s: number) {
+  private zoom: number;
+  constructor(context2D: CanvasRenderingContext2D, d: number, s: number, zoom: number) {
     this.context2D = context2D;
     this.d = d;
     this.s = s;
+    this.zoom = zoom;
   }
   beginPath(): void {
     this.context2D.beginPath();
@@ -49,11 +51,11 @@ class Printer3D {
   }
   moveTo(x: number, y: number, z: number): void {
     var point = perspective(x, y, z, this.d, this.s);
-    this.context2D.moveTo(point.x + CANVAS_HALF_WIDTH, point.y + CANVAS_HALF_HEIGHT);
+    this.context2D.moveTo(point.x * this.zoom + CANVAS_HALF_WIDTH, point.y * this.zoom + CANVAS_HALF_HEIGHT);
   }
   lineTo(x: number, y: number, z: number): void {
     var point = perspective(x, y, z, this.d, this.s);
-    this.context2D.lineTo(point.x + CANVAS_HALF_WIDTH, point.y + CANVAS_HALF_HEIGHT);
+    this.context2D.lineTo(point.x * this.zoom + CANVAS_HALF_WIDTH, point.y * this.zoom + CANVAS_HALF_HEIGHT);
   }
 }
 
