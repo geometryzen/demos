@@ -16,6 +16,7 @@ var CANVAS_HALF_HEIGHT = CANVAS_HEIGHT / 2;
 var CANVAS_HALF_WIDTH  = CANVAS_WIDTH / 2;
 var CANVAS_DISTANCE = 10;
 var IMAGE_DISTANCE = 100;
+var ZOOM = 100;
 
 // Global Variables.
 var popUp: Window = window.open("", "", "width=" + WINDOW_WIDTH + ", height=" + WINDOW_HEIGHT, false);
@@ -338,7 +339,7 @@ function setUp() {
   
   context = canvas.getContext("2d");
   
-  printer = new Printer3D(context, CANVAS_DISTANCE, IMAGE_DISTANCE, 50);
+  printer = new Printer3D(context, CANVAS_DISTANCE, IMAGE_DISTANCE, ZOOM);
 }
 
 /**
