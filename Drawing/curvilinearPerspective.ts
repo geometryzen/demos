@@ -194,7 +194,10 @@ class Cube {
 }
 
 var cubes: Cube[] = [];
-//var cube1 = new Cube(eight.vectorE3(0, 0, 200), eight.scalarE3(1));
+for (var i=0;i<100;i++)
+{
+  cubes.push(new Cube(eight.vectorE3(i, 0, 200), eight.scalarE3(1)));
+}
 
 function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:number} {
   /**
