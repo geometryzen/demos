@@ -160,14 +160,14 @@ class Cube {
 
     printer.beginPath();
     context.strokeStyle = "#00FF00";
-    printer.lineTo(this.position.x + corners[6].x, this.position.y + corners[6].y, this.position.z + corners[6].z);
-    printer.lineTo(this.position.x + corners[7].x, this.position.y + corners[7].y, this.position.z + corners[7].z);
+    printer.lineTo(corners[6].x, corners[6].y, corners[6].z);
+    printer.lineTo(corners[7].x, corners[7].y, corners[7].z);
     printer.stroke();
 
     printer.beginPath();
     context.strokeStyle = "#FF0000";
-    printer.lineTo(this.position.x + corners[7].x, this.position.y + corners[7].y, this.position.z + corners[7].z);
-    printer.lineTo(this.position.x + corners[4].x, this.position.y + corners[4].y, this.position.z + corners[4].z);
+    printer.lineTo(corners[7].x, corners[7].y, corners[7].z);
+    printer.lineTo(corners[4].x, corners[4].y, corners[4].z);
     printer.stroke();
 
     // LHS face
