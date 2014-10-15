@@ -203,7 +203,9 @@ function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:n
    */
   var distanceFactor = d / (Z + d);
   
-  return {'x': distanceFactor * X, 'y': distanceFactor * Y};
+  var x = distanceFactor * X;
+  
+  return {'x': x, 'y': distanceFactor * Y};
 
 //    var m = Math.sqrt(X * X + Y * Y + Z * Z);
     
