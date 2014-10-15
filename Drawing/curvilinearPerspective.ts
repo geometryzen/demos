@@ -129,8 +129,8 @@ class Cube {
 
     printer.beginPath();
     context.strokeStyle = "#FF0000";
-    printer.lineTo(this.position.x + corners[1].x, this.position.y + corners[1].y, this.position.z + corners[1].z);
-    printer.lineTo(this.position.x + corners[2].x, this.position.y + corners[2].y, this.position.z + corners[2].z);
+    printer.lineTo(corners[1].x, corners[1].y, corners[1].z);
+    printer.lineTo(corners[2].x, corners[2].y, corners[2].z);
     printer.stroke();
 
     printer.beginPath();
