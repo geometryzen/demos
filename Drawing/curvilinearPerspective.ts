@@ -205,7 +205,7 @@ class Cube {
   }
 }
 
-var n = 3;
+var n = 10;
 var separation = 3;
 var cubes: Cube[] = [];
 for (var i=-n;i<=n;i++) {
