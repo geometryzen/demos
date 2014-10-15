@@ -15,6 +15,7 @@ var CANVAS_WIDTH  = 800;
 var CANVAS_HALF_HEIGHT = CANVAS_HEIGHT / 2;
 var CANVAS_HALF_WIDTH  = CANVAS_WIDTH / 2;
 var CANVAS_DISTANCE = 100;
+var IMAGE_DISTANCE = 100;
 
 // Global Variables.
 var popUp: Window = window.open("", "", "width=" + WINDOW_WIDTH + ", height=" + WINDOW_HEIGHT, false);
@@ -27,10 +28,18 @@ var arcBall: ArcBall;
 
 class Printer3D {
   private context2D: CanvasRenderingContext2D;
+  /**
+   * Viewing distance to screen.
+   */
   private d: number;
-  constructor(context2D: CanvasRenderingContext2D, d: number) {
+  /**
+   * Distance screen to origin.
+   */
+  private s: number;
+  constructor(context2D: CanvasRenderingContext2D, d: number, s: number) {
     this.context2D = context2D;
     this.d = d;
+    this.s = s;
   }
   beginPath(): void {
     this.context2D.beginPath();
@@ -39,11 +48,11 @@ class Printer3D {
     this.context2D.stroke();
   }
   moveTo(x: number, y: number, z: number): void {
-    var point = perspective(x, y, z, this.d);
+    var point = perspective(x, y, z, this.d, this.s);
     this.context2D.moveTo(point.x + CANVAS_HALF_WIDTH, point.y + CANVAS_HALF_HEIGHT);
   }
   lineTo(x: number, y: number, z: number): void {
-    var point = perspective(x, y, z, this.d);
+    var point = perspective(x, y, z, this.d, this.s);
     this.context2D.lineTo(point.x + CANVAS_HALF_WIDTH, point.y + CANVAS_HALF_HEIGHT);
   }
 }
@@ -200,7 +209,7 @@ for (var i=0;i<10;i++) {
   }
 }
 
-function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:number} {
+function perspective(X: number, Y: number, Z: number, d: number, s:number): {x:number; y:number} {
   /**
    * The distance factor determines how much the X and Y components are reduced by the distance (Z + d) from the viewer.
    */
@@ -310,7 +319,7 @@ function setUp() {
   
   context = canvas.getContext("2d");
   
-  printer = new Printer3D(context, CANVAS_DISTANCE);
+  printer = new Printer3D(context, CANVAS_DISTANCE, IMAGE_DISTANCE);
 }
 
 /**
