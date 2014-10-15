@@ -14,9 +14,9 @@ var CANVAS_HEIGHT = 800;
 var CANVAS_WIDTH  = 800;
 var CANVAS_HALF_HEIGHT = CANVAS_HEIGHT / 2;
 var CANVAS_HALF_WIDTH  = CANVAS_WIDTH / 2;
-var CANVAS_DISTANCE = 50;
+var CANVAS_DISTANCE = 40;
 var IMAGE_DISTANCE = 150;
-var ZOOM = 30
+var ZOOM = 20
 
 // Global Variables.
 var popUp: Window = window.open("", "", "width=" + WINDOW_WIDTH + ", height=" + WINDOW_HEIGHT, false);
