@@ -276,7 +276,7 @@ function tick(time: number): void {
   for (var i=0;i<cubes.length;i++) {
     cubes[i].attitude = R
     cubes[i].draw(printerLinear);
-    cubes[i].draw(printerConformal);
+//    cubes[i].draw(printerConformal);
   }
 }
 
