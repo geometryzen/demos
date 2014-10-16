@@ -10,7 +10,7 @@ interface Perspective {
   transform(X: number,Y:number, Z: number): {x: number; y: number};
 }
 
-class CurvilinearPerspective implements Perspective {
+class ConformalPerspective implements Perspective {
   public s: number;
   public d: number;
   constructor(d: number, s: number) {
@@ -75,7 +75,7 @@ var e3 = eight.vectorE3(0,0,1);
 var arcBall: ArcBall;
   
 var printerLinear = new Printer3D(context, ZOOM, new LinearPerspective(CANVAS_DISTANCE, IMAGE_DISTANCE));
-var printerConformal = new Printer3D(context, ZOOM, new LinearPerspective(CANVAS_DISTANCE, IMAGE_DISTANCE));
+var printerConformal = new Printer3D(context, ZOOM, new ConformalPerspective(CANVAS_DISTANCE, IMAGE_DISTANCE));
 
 class Printer3D {
   private context2D: CanvasRenderingContext2D;
