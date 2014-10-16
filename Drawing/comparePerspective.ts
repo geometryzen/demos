@@ -62,8 +62,8 @@ var CANVAS_HEIGHT = 800;
 var CANVAS_WIDTH  = 1800;
 var CANVAS_HALF_HEIGHT = CANVAS_HEIGHT / 2;
 var CANVAS_HALF_WIDTH  = CANVAS_WIDTH / 2;
-var CANVAS_DISTANCE =4;
-var IMAGE_DISTANCE = 40;
+var CANVAS_DISTANCE =40;
+var IMAGE_DISTANCE = 400;
 var ZOOM = 20
 
 // Global Variables.
@@ -151,7 +151,7 @@ class ArcBall {
 class Cube {
   public position: eight.Euclidean3;
   public attitude: eight.Euclidean3;
-  public size: number = 1;
+  public size: number = 10;
   private corners: eight.Euclidean3[];
   constructor(position: eight.Euclidean3, attitude: eight.Euclidean3) {
     this.position = position;
@@ -247,7 +247,7 @@ class Cube {
 }
 
 var n = 5;
-var separation = 8;
+var separation = 80;
 var cubes: Cube[] = [];
 for (var i=-n;i<=n;i++) {
   var j = 0;
