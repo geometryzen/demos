@@ -39,6 +39,35 @@ class CurvilinearPerspective implements Perspective {
   }
 }
 
+class LinearPerspective implements Perspective {
+  public s: number;
+  public d: number;
+  constructor(d: number, s: number) {
+    this.d = d;
+    this.s = s;
+  }
+  transform(X: number, Y:number, Z:number): {x: number; y: number} {
+
+  var vx = X;
+  var vy = Y;
+  var vz = this.s + Z;
+
+  var m = Math.sqrt(vx * vx + vy * vy + vz * vz)
+  
+  var nx = this.d * vx / m;
+  var ny = this.d * vy / m;
+  var nz = this.d * vz / m;
+  
+  var distanceFactor = this.d / (this.d + nz);
+
+  var x = distanceFactor * nx;
+  var y = distanceFactor * ny;
+
+  return {'x': x, 'y': y};
+    return {x:7, y:6};
+  }
+}
+
 var WINDOW_HEIGHT = 800;
 var WINDOW_WIDTH  = 1800;
 var WINDOW_HALF_HEIGHT = WINDOW_HEIGHT / 2;
