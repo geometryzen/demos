@@ -6,6 +6,16 @@
 // I don't know why this works.
 var unused: Window = window;
 
+interface Perspective {
+  transform(X: number);
+}
+
+class CurvilinearPerspective implements Perspective {
+  transform() {
+    
+  }
+}
+
 var WINDOW_HEIGHT = 800;
 var WINDOW_WIDTH  = 1800;
 var WINDOW_HALF_HEIGHT = WINDOW_HEIGHT / 2;
