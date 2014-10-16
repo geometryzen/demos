@@ -108,11 +108,11 @@ class ArcBall {
   private down: boolean = false;
   private a: eight.Euclidean3;
   private b: eight.Euclidean3;
-  private mousedownHandler;
+  private mousedown;
   private mouseup;
   constructor(win: Window) {
     this.win = win;
-    this.mousedownHandler = ArcBall.makeMouseDownHandler(this);
+    this.mousedown = ArcBall.makeMouseDownHandler(this);
     this.mouseup = ArcBall.makeMouseUpHandler(this);
   }
   private static vectorFromMouse(clientX: number, clientY: number): eight.Euclidean3 {
@@ -145,7 +145,7 @@ class ArcBall {
   setUp(): void {
     var self = this;
     
-    this.win.addEventListener('mousedown', this.mousedownHandler);
+    this.win.addEventListener('mousedown', this.mousedown);
     this.win.addEventListener('mouseup', this.mouseup);
 
     this.win.addEventListener('mousemove', function(ev: MouseEvent) {
@@ -156,7 +156,7 @@ class ArcBall {
     });
   }
   tearDown(): void {
-    this.win.removeEventListener('mousedown', this.mousedownHandler);
+    this.win.removeEventListener('mousedown', this.mousedown);
     this.win.removeEventListener('mouseup', this.mouseup);
   }
 }
