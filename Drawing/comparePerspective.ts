@@ -7,7 +7,7 @@
 var unused: Window = window;
 
 interface Perspective {
-  transform(X: number,Y:number, Z: number): {x: number; y: number};
+  transform(X: number, Y:number, Z: number): {x: number; y: number};
 }
 
 class ConformalPerspective implements Perspective {
