@@ -18,24 +18,22 @@ class CurvilinearPerspective implements Perspective {
     this.s = s;
   }
   transform(X: number, Y:number, Z:number): {x: number; y: number} {
-
-  var vx = X;
-  var vy = Y;
-  var vz = this.s + Z;
-
-  var m = Math.sqrt(vx * vx + vy * vy + vz * vz)
+    var vx = X;
+    var vy = Y;
+    var vz = this.s + Z;
   
-  var nx = this.d * vx / m;
-  var ny = this.d * vy / m;
-  var nz = this.d * vz / m;
+    var m = Math.sqrt(vx * vx + vy * vy + vz * vz)
+    
+    var nx = this.d * vx / m;
+    var ny = this.d * vy / m;
+    var nz = this.d * vz / m;
+    
+    var distanceFactor = this.d / (this.d + nz);
   
-  var distanceFactor = this.d / (this.d + nz);
-
-  var x = distanceFactor * nx;
-  var y = distanceFactor * ny;
-
-  return {'x': x, 'y': y};
-    return {x:7, y:6};
+    var x = distanceFactor * nx;
+    var y = distanceFactor * ny;
+  
+    return {'x': x, 'y': y};
   }
 }
 
@@ -47,24 +45,12 @@ class LinearPerspective implements Perspective {
     this.s = s;
   }
   transform(X: number, Y:number, Z:number): {x: number; y: number} {
-
-  var vx = X;
-  var vy = Y;
-  var vz = this.s + Z;
-
-  var m = Math.sqrt(vx * vx + vy * vy + vz * vz)
+    var distanceFactor = this.d / (this.d + this.s + Z);
+    
+    var x = distanceFactor * X;
+    var y = distanceFactor * Y;
   
-  var nx = this.d * vx / m;
-  var ny = this.d * vy / m;
-  var nz = this.d * vz / m;
-  
-  var distanceFactor = this.d / (this.d + nz);
-
-  var x = distanceFactor * nx;
-  var y = distanceFactor * ny;
-
-  return {'x': x, 'y': y};
-    return {x:7, y:6};
+    return {'x': x, 'y': y};
   }
 }
 
