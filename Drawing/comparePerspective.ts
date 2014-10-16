@@ -62,20 +62,12 @@ var arcBall: ArcBall;
 
 class Printer3D {
   private context2D: CanvasRenderingContext2D;
-  /**
-   * Viewing distance to screen.
-   */
-  private d: number;
-  /**
-   * Distance screen to origin.
-   */
-  private s: number;
   private zoom: number;
-  constructor(context2D: CanvasRenderingContext2D, d: number, s: number, zoom: number) {
+  private perspective: Perspective;
+  constructor(context2D: CanvasRenderingContext2D, d: number, s: number, zoom: number, perspective: Perspective ) {
     this.context2D = context2D;
-    this.d = d;
-    this.s = s;
     this.zoom = zoom;
+    this.perspective = perspective;
   }
   beginPath(): void {
     this.context2D.beginPath();
@@ -84,11 +76,11 @@ class Printer3D {
     this.context2D.stroke();
   }
   moveTo(x: number, y: number, z: number): void {
-    var point = perspective(x, y, z, this.d, this.s);
+    var point = this.perspective.transform(x, y, z);
     this.context2D.moveTo(point.x * this.zoom + CANVAS_HALF_WIDTH, point.y * this.zoom + CANVAS_HALF_HEIGHT);
   }
   lineTo(x: number, y: number, z: number): void {
-    var point = perspective(x, y, z, this.d, this.s);
+    var point = this.perspective.transform(x, y, z);
     this.context2D.lineTo(point.x * this.zoom + CANVAS_HALF_WIDTH, point.y * this.zoom + CANVAS_HALF_HEIGHT);
   }
 }
@@ -250,26 +242,6 @@ for (var i=-n;i<=n;i++) {
 //  }
 }
 
-function perspective(X: number, Y: number, Z: number, d: number, s:number): {x:number; y:number} {
-
-  var vx = X;
-  var vy = Y;
-  var vz = s + Z;
-
-  var m = Math.sqrt(vx * vx + vy * vy + vz * vz)
-  
-  var nx = d * vx / m;
-  var ny = d * vy / m;
-  var nz = d * vz / m;
-  
-  var distanceFactor = d / (d + nz);
-
-  var x = distanceFactor * nx;
-  var y = distanceFactor * ny;
-
-  return {'x': x, 'y': y};
-}
-
 function reverse(m: eight.Euclidean3) {
   return new eight.Euclidean3(m.w, m.x, m.y, m.z,-m.xy,-m.yz,-m.zx, -m.xyz);
 }
@@ -318,7 +290,7 @@ function setUp() {
   
   context = canvas.getContext("2d");
   
-  printer = new Printer3D(context, CANVAS_DISTANCE, IMAGE_DISTANCE, ZOOM);
+  printer = new Printer3D(context, CANVAS_DISTANCE, IMAGE_DISTANCE, ZOOM, new CurvilinearPerspective(CANVAS_DISTANCE, IMAGE_DISTANCE));
 }
 
 /**
