@@ -7,12 +7,12 @@
 var unused: Window = window;
 
 interface Perspective {
-  transform(X: number);
+  transform(X: number): {x: number; y: number};
 }
 
 class CurvilinearPerspective implements Perspective {
-  transform() {
-    
+  transform(): {x: number; y: number} {
+    return {x:7, y:6};
   }
 }
 
