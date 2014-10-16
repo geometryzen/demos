@@ -13,9 +13,9 @@ interface Perspective {
 class CurvilinearPerspective implements Perspective {
   public s: number;
   public d: number;
-  constructor(s: number, d: number) {
-    this.s = s;
+  constructor(d: number, s: number) {
     this.d = d;
+    this.s = s;
   }
   transform(X: number, Y:number, Z:number): {x: number; y: number} {
 
