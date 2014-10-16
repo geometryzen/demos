@@ -305,7 +305,7 @@ function setUp() {
   
   context = canvas.getContext("2d");
   
-  printer = new Printer3D(context, CANVAS_DISTANCE, IMAGE_DISTANCE, ZOOM, new CurvilinearPerspective(CANVAS_DISTANCE, IMAGE_DISTANCE));
+  printer = new Printer3D(context, CANVAS_DISTANCE, IMAGE_DISTANCE, ZOOM, new LinearPerspective(CANVAS_DISTANCE, IMAGE_DISTANCE));
 }
 
 /**
