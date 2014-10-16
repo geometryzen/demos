@@ -115,6 +115,7 @@ class ArcBall {
     this.win = win;
     this.mousedown = ArcBall.makeMouseDown(this);
     this.mouseup = ArcBall.makeMouseUp(this);
+    this.mousemove = ArcBall.makeMouseMove(this);
   }
   private static vectorFromMouse(clientX: number, clientY: number): eight.Euclidean3 {
     var x = (clientX - CANVAS_HALF_WIDTH) / CANVAS_HALF_WIDTH;
