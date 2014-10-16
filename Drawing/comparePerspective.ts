@@ -274,7 +274,7 @@ function tick(time: number): void {
   // Draw the cube at the appropriate attitude.
   for (var i=0;i<cubes.length;i++) {
     cubes[i].attitude = R
-    cubes[i].draw(printerL);
+//  cubes[i].draw(printerL);
     cubes[i].draw(printerC);
   }
 }
