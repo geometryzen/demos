@@ -108,12 +108,13 @@ class ArcBall {
   private down: boolean = false;
   private a: eight.Euclidean3;
   private b: eight.Euclidean3;
-  private mousedown;
-  private mouseup;
+  private mousedown: (ev: MouseEvent) => void;
+  private mouseup: (ev: MouseEvent) => void;
+  private mousemove: (ev: MouseEvent) => void;
   constructor(win: Window) {
     this.win = win;
-    this.mousedown = ArcBall.makeMouseDownHandler(this);
-    this.mouseup = ArcBall.makeMouseUpHandler(this);
+    this.mousedown = ArcBall.makeMouseDown(this);
+    this.mouseup = ArcBall.makeMouseUp(this);
   }
   private static vectorFromMouse(clientX: number, clientY: number): eight.Euclidean3 {
     var x = (clientX - CANVAS_HALF_WIDTH) / CANVAS_HALF_WIDTH;
@@ -128,36 +129,37 @@ class ArcBall {
     var rotor = one.add(b.mul(a)).div(a.add(b).norm());
     return rotor;
   }
-  private static makeMouseDownHandler(arcBall: ArcBall) {
+  private static makeMouseDown(arcBall: ArcBall) {
     return function(ev: MouseEvent) {
       arcBall.down = true;
       arcBall.a = ArcBall.vectorFromMouse(ev.clientX, ev.clientY);
       arcBall.start = arcBall.rotor;
     }
   }
-  private static makeMouseUpHandler(arcBall: ArcBall) {
+  private static makeMouseUp(arcBall: ArcBall) {
     return function(ev: MouseEvent) {
       arcBall.down = false;
       arcBall.b = ArcBall.vectorFromMouse(ev.clientX, ev.clientY);
       arcBall.rotor = ArcBall.computeRotor(arcBall.a, arcBall.b).mul(arcBall.start);
     }
   }
+  private static makeMouseMove(arcBall: ArcBall) {
+    return function(ev: MouseEvent) {
+      if (arcBall.down) {
+        arcBall.b = ArcBall.vectorFromMouse(ev.clientX, ev.clientY)
+        arcBall.rotor = ArcBall.computeRotor(arcBall.a, arcBall.b).mul(arcBall.start);
+      }
+    }
+  }
   setUp(): void {
-    var self = this;
-    
     this.win.addEventListener('mousedown', this.mousedown);
     this.win.addEventListener('mouseup', this.mouseup);
-
-    this.win.addEventListener('mousemove', function(ev: MouseEvent) {
-      if (self.down) {
-        self.b = ArcBall.vectorFromMouse(ev.clientX, ev.clientY)
-        self.rotor = ArcBall.computeRotor(self.a, self.b).mul(self.start);
-      }
-    });
+    this.win.addEventListener('mousemove', this.mousemove);
   }
   tearDown(): void {
     this.win.removeEventListener('mousedown', this.mousedown);
     this.win.removeEventListener('mouseup', this.mouseup);
+    this.win.removeEventListener('mousemove', this.mousemove);
   }
 }
 
