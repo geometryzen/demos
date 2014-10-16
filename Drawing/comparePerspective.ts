@@ -73,12 +73,15 @@ var e1 = eight.vectorE3(1,0,0);
 var e2 = eight.vectorE3(0,1,0);
 var e3 = eight.vectorE3(0,0,1);
 var arcBall: ArcBall;
+  
+var printerLinear = new Printer3D(context, ZOOM, new LinearPerspective(CANVAS_DISTANCE, IMAGE_DISTANCE));
+var printerConformal = new Printer3D(context, ZOOM, new LinearPerspective(CANVAS_DISTANCE, IMAGE_DISTANCE));
 
 class Printer3D {
   private context2D: CanvasRenderingContext2D;
   private zoom: number;
   private perspective: Perspective;
-  constructor(context2D: CanvasRenderingContext2D, d: number, s: number, zoom: number, perspective: Perspective ) {
+  constructor(context2D: CanvasRenderingContext2D, zoom: number, perspective: Perspective ) {
     this.context2D = context2D;
     this.zoom = zoom;
     this.perspective = perspective;
@@ -272,7 +275,8 @@ function tick(time: number): void {
   // Draw the cube at the appropriate attitude.
   for (var i=0;i<cubes.length;i++) {
     cubes[i].attitude = R
-    cubes[i].draw();
+    cubes[i].draw(printerLinear);
+    cubes[i].draw(printerConformal);
   }
 }
 
@@ -303,8 +307,6 @@ function setUp() {
   popDoc.body.style.margin = "0";
   
   context = canvas.getContext("2d");
-  
-  printer = new Printer3D(context, CANVAS_DISTANCE, IMAGE_DISTANCE, ZOOM, new LinearPerspective(CANVAS_DISTANCE, IMAGE_DISTANCE));
 }
 
 /**
