@@ -168,6 +168,13 @@ interface Drawable {
   draw(printer: Printer3D)
 }
 
+class Circle implements Drawable {
+  public attitude: eight.Euclidean3;
+  draw(printer: Printer3D) {
+    
+  }
+}
+
 class Cube implements Drawable {
   public position: eight.Euclidean3;
   public attitude: eight.Euclidean3;
