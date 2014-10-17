@@ -266,7 +266,7 @@ var n = 5;
 var separation = 50;
 var cubes: Cube[] = [];
 for (var i=-n;i<=n;i++) {
-  var j = 0;
+  var j = 0.5;
 //  for (var j=-n;j<=n;j++) {
     for (var k=-n;k<=n;k++) {
       cubes.push(new Cube(eight.vectorE3(i*separation, j*separation, k*separation), eight.scalarE3(1)));
