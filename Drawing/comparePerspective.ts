@@ -164,6 +164,7 @@ class ArcBall {
 }
 
 interface Drawable {
+  attitude: eight.Euclidean3;
   draw(printer: Printer3D)
 }
 
