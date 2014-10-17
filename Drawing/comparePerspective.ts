@@ -163,7 +163,11 @@ class ArcBall {
   }
 }
 
-class Cube {
+interface Drawable {
+  draw(printer: Printer3D)
+}
+
+class Cube implements Drawable {
   public position: eight.Euclidean3;
   public attitude: eight.Euclidean3;
   public size: number = 10;
@@ -263,7 +267,7 @@ class Cube {
 
 var n = 5;
 var separation = 60;
-var cubes: Cube[] = [];
+var cubes: Drawable[] = [];
 for (var i=-n;i<=n;i++) {
   var j = 0.5;
 //  for (var j=-n;j<=n;j++) {
