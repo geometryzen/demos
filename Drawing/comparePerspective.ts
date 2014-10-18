@@ -171,7 +171,7 @@ interface Drawable {
 class Circle implements Drawable {
   public position: eight.Euclidean3;
   public attitude: eight.Euclidean3;
-  public radius = 10;
+  public radius = 50;
   private points: eight.Euclidean3[];
   constructor(position: eight.Euclidean3, attitude: eight.Euclidean3) {
     this.position = position;
