@@ -31,7 +31,7 @@ print "uuid:           " + str(sphere.uuid)
 #print "phiStart:       " + str(sphere.phiStart)
 #print "phiLength:      " + str(sphere.phiLength)
 #print "thetaStart:     " + str(sphere.thetaStart)
-print "thetaLength:    " + str(sphere.thetaLength)
+#print "thetaLength:    " + str(sphere.thetaLength)
 print sphere
 
 mesh = Mesh(sphere, MeshNormalMaterial({"wireframe":True, "wireframeLinewidth":2}))
