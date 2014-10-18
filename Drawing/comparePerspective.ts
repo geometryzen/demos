@@ -169,8 +169,32 @@ interface Drawable {
 }
 
 class Circle implements Drawable {
+  public position: eight.Euclidean3;
   public attitude: eight.Euclidean3;
+  private points: eight.Euclidean3[];
+  constructor(position: eight.Euclidean3, attitude: eight.Euclidean3) {
+    this.position = position;
+    this.attitude = attitude;
+    this.points = [];
+    for (var i=0;i<360;i++) {
+      var theta = (Math.PI / 180) * i;
+      var c = Math.cos(theta);
+      var s = Math.sin(theta);
+      var v = eight.vectorE3(position.x + 5 * c, position.y + 5 * s, position.z)
+    }
+  }
   draw(printer: Printer3D) {
+    var R = this.attitude;
+    var T = reverse(R);
+    var points = this.points.map(function(value) {return R.mul(value).mul(T);});
+    // front face
+    printer.beginPath();
+    context.strokeStyle = "#00FF00";
+    printer.moveTo(points[0].x, points[0].y, points[0].z);
+    for (var i=1;i<360;i++) {
+      printer.lineTo(points[i].x, points[i].y, points[i].z);
+    }
+    printer.stroke();
     
   }
 }
