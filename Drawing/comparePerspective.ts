@@ -358,8 +358,8 @@ function setUp() {
   popDoc.body.style.margin = "0";
   
   context = canvas.getContext("2d");
-  printer = new Printer3D(context, ZOOM, new LinearPerspective(CANVAS_DISTANCE, IMAGE_DISTANCE));}
-  //printer = new Printer3D(context, ZOOM, new ConformalPerspective(CANVAS_DISTANCE, IMAGE_DISTANCE));}
+  //printer = new Printer3D(context, ZOOM, new LinearPerspective(CANVAS_DISTANCE, IMAGE_DISTANCE));}
+  printer = new Printer3D(context, ZOOM, new ConformalPerspective(CANVAS_DISTANCE, IMAGE_DISTANCE));}
 
 /**
  * Called once at the end of the animation.
