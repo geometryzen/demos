@@ -29,7 +29,7 @@ print "uuid:           " + str(sphere.uuid)
 #print "widthSegments:  " + str(sphere.widthSegments)
 #print "heightSegments: " + str(sphere.heightSegments)
 #print "phiStart:       " + str(sphere.phiStart)
-print "phiLength:      " + str(sphere.phiLength)
+#print "phiLength:      " + str(sphere.phiLength)
 print "thetaStart:     " + str(sphere.thetaStart)
 print "thetaLength:    " + str(sphere.thetaLength)
 print sphere
