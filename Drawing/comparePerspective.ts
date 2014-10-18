@@ -180,7 +180,7 @@ class Circle implements Drawable {
       var theta = (Math.PI / 180) * i;
       var c = Math.cos(theta);
       var s = Math.sin(theta);
-      var v = eight.vectorE3(position.x + 5 * c, position.y + 5 * s, position.z);
+      var v = eight.vectorE3(position.x + 5 * c, position.y, position.z + 5 * s);
       this.points.push(v);
     }
   }
