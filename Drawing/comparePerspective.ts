@@ -171,6 +171,7 @@ interface Drawable {
 class Circle implements Drawable {
   public position: eight.Euclidean3;
   public attitude: eight.Euclidean3;
+  public radius = 10;
   private points: eight.Euclidean3[];
   constructor(position: eight.Euclidean3, attitude: eight.Euclidean3) {
     this.position = position;
@@ -180,7 +181,7 @@ class Circle implements Drawable {
       var theta = (Math.PI / 180) * i;
       var c = Math.cos(theta);
       var s = Math.sin(theta);
-      var v = eight.vectorE3(position.x + 5 * c, position.y, position.z + 5 * s);
+      var v = eight.vectorE3(position.x + this.radius * c, position.y, position.z + this.radius * s);
       this.points.push(v);
     }
   }
