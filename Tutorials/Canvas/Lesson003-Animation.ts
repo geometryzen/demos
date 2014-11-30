@@ -60,11 +60,8 @@ class Canvas {
 }
 
 var canvas = new Canvas(800, 600);
-var red = Math.floor(Math.random() * 255);
-var green = Math.floor(Math.random() * 255);
-var blue = Math.floor(Math.random() * 255);
 
-canvas.backgroundColor = new Color(red, green, blue);
+canvas.backgroundColor = new Color(Math.random(), Math.random(), Math.random());
 
 function animate() {
   canvas.draw();
