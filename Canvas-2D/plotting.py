@@ -35,7 +35,6 @@ glwin.document.body.appendChild(stats.domElement)
 
 def setUp():
     workbench2D.setUp()
-    monitor.start()
 
 def tick(t):
     stats.begin()
@@ -46,7 +45,6 @@ def terminate(t):
     return False
 
 def tearDown(e):
-    monitor.stop()
     glwin.close()
     if e:
         print "Error during animation: %s" % (e)
