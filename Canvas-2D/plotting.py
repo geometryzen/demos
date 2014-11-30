@@ -62,15 +62,6 @@ def setUp():
 
 def tick(t):
     stats.begin()
-    time = t * second
-    theta = omega * time
-
-    rotor = exp(-B*theta.quantity/2.0)
-
-    box.attitude = rotor
-    prism.attitude = rotor
-
-    renderer.render(scene, camera)
     space2D.render()
     stats.end()
 
