@@ -72,26 +72,6 @@ class ArcBall {
   }
 }
 
-function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:number} {
-  /**
-   * The distance factor determines how much the X and Y components are reduced by the distance (Z + d) from the viewer.
-   */
-  var distanceFactor = d / (Z + d);
-  
-  return {'x': distanceFactor * X, 'y': distanceFactor * Y};
-
-//    var m = Math.sqrt(X * X + Y * Y + Z * Z);
-    
-//    var x = d * (1 + X / m);
-//    var y = d * (1 + Y / m);
-
-//    return {'x':x, 'y':y};
-}
-
-function reverse(m: eight.Euclidean3) {
-  return new eight.Euclidean3(m.w, m.x, m.y, m.z,-m.xy,-m.yz,-m.zx, -m.xyz);
-}
-
 /**
  * Called for each animation tick.
  */
@@ -101,24 +81,6 @@ function tick(time: number): void {
   context.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   
   var R = arcBall.rotor;
-  
-  // Draw the vanishing points.
-  var T = reverse(R);
-
-  context.strokeStyle = "#FFFFFF";
-  // Draw symmetric two-vanishing point locus.
-  context.beginPath();
-  context.arc(CANVAS_HALF_WIDTH, CANVAS_HALF_HEIGHT, CANVAS_DISTANCE, 0, 2 * Math.PI);
-  context.closePath();
-  context.stroke();
-
-  // Draw symmetric three-vanishing point locus.
-  context.beginPath();
-  context.arc(CANVAS_HALF_WIDTH, CANVAS_HALF_HEIGHT, CANVAS_DISTANCE * Math.SQRT2, 0, 2 * Math.PI);
-  context.closePath();
-  context.stroke();
-
-  context.strokeRect(CANVAS_HALF_WIDTH - CANVAS_DISTANCE, CANVAS_HALF_HEIGHT - CANVAS_DISTANCE, CANVAS_DISTANCE * 2, CANVAS_DISTANCE * 2);
 }
 
 /**
