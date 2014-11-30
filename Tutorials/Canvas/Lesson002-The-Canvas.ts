@@ -1,5 +1,5 @@
 /**
- * Demonstrates the vanishing points from 3D space projected onto a 2D canvas.
+ * Demonstrates creating a 2D canvas and context.
  */
 
 // Workaround to prevent TS2082 and TS2087.
