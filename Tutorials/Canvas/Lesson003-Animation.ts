@@ -6,6 +6,9 @@
 // I don't know why this works.
 var unused: Window = window;
 
+/**
+ * 
+ */
 class Color {
   private _red: number;
   private _green: number;
@@ -57,7 +60,6 @@ class Canvas {
 }
 
 var canvas = new Canvas(800, 600);
-
 
 function animate() {
   var red = Math.floor(Math.random() * 255);
