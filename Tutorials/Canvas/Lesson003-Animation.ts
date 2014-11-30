@@ -19,7 +19,7 @@ class Color {
     this._blue = blue;
   }
   public asFillStyle() {
-    return "rgb(" + this._red + ", " + this._green + "," + this._blue + ")"
+    return "rgb(" + Math.floor(this._red*255) + ", " + Math.floor(this._green*255) + "," + Math.floor(this._blue*255) + ")"
   }
 }
 
