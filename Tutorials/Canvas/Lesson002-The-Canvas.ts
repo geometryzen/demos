@@ -7,7 +7,14 @@
 var unused: Window = window;
 
 class Color {
-  
+  private _red: number;
+  private _green: number;
+  private _blue: number;
+  constructor(red: number, green: number, blue: number) {
+    this._red = red;
+    this._green = green;
+    this._blue = blue;
+  }
 }
 
 class Canvas {
@@ -48,6 +55,6 @@ class Canvas {
 
 var canvas = new Canvas(800, 600);
 
-canvas.backgroundColor = 23;
+canvas.backgroundColor = new Color(255, 0, 0);
 
 canvas.draw();
