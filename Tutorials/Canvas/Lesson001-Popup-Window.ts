@@ -20,36 +20,6 @@ var CANVAS_DISTANCE = 100;
 var popUp: Window = window.open("", "", "width=" + WINDOW_WIDTH + ", height=" + WINDOW_HEIGHT, false);
 
 /**
- * Called for each animation tick.
- */
-function tick(time: number): void {
-}
-
-/**
- * Called to determine whether to end the animation.
- */
-function terminate(time: number): boolean {
-  return false;
-}
-
-/**
- * Called once at the start of the animation.
- */
-function setUp() {
-  var popDoc = popUp.document;
-  
-  var canvas = popDoc.createElement("canvas");
-  
-  canvas.setAttribute("id", "graph");
-  canvas.setAttribute("width",  CANVAS_WIDTH.toString());
-  canvas.setAttribute("height", CANVAS_HEIGHT.toString());
-  
-  popDoc.body.appendChild(canvas);
-  // Remove the margin that pushes the canvas.
-  popDoc.body.style.margin = "0";
-}
-
-/**
  * Called once at the end of the animation.
  */
 function tearDown(e: Error) {
