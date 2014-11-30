@@ -66,3 +66,4 @@ function tearDown(e: Error) {
 }
 
 setUp()
+tick(0)
