@@ -21,7 +21,7 @@ class Color {
 }
 
 class Canvas {
-  public backgroundColor: Color;
+  public backgroundColor: Color = new Color(127, 127, 127);
   private _window: Window;
   private _width;
   private _height;
