@@ -23,4 +23,4 @@ class PopUp {
 
 var popUp = new PopUp()
 
-popUp.close();
+//popUp.close();
