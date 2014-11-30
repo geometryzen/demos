@@ -18,4 +18,4 @@ class PopUp {
 
 var popUp = new PopUp(800, 600)
 
-//popUp.close();
+popUp.close();
