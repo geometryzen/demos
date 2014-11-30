@@ -14,7 +14,7 @@ var WINDOW_HALF_WIDTH  = WINDOW_WIDTH / 2;
 class PopUp {
   private win: Window;
   constructor(width) {
-    this.win = window.open("", "", "width=" + WINDOW_WIDTH + ", height=" + WINDOW_HEIGHT, false);
+    this.win = window.open("", "", "width=" + width + ", height=" + WINDOW_HEIGHT, false);
   }
   public close() {
     this.win.close();
