@@ -8,8 +8,12 @@
 
 class Canvas {
   private _window: Window;
+  private _width;
+  private _height;
   private _context;
   constructor(width: number, height: number) {
+    this._width = width;
+    this._height = height;
     this._window = window.open("", "", "width=" + width + ", height=" + height, false);
     
     var popDoc: Document = this._window.document;
@@ -25,9 +29,11 @@ class Canvas {
     popDoc.body.style.margin = "0";
     
     this._context = canvas.getContext("2d");
-
+  }
+  
+  public draw() {
     this._context.fillStyle = "#555555";
-    this._context.fillRect(0, 0, width, height);
+    this._context.fillRect(0, 0, this._width, this._height);
   }
 
   public close() {
