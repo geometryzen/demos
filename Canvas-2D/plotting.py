@@ -14,7 +14,7 @@ canvas2D = glwin.document.createElement("canvas")
 canvas2D.style.position = "absolute"
 canvas2D.style.top = "0px"
 canvas2D.style.left = "0px"
-
+workbench2D = Workbench2D(canvas2D, glwin)
 space2D = Stage(canvas2D)
 space2D.autoClear = True
 
@@ -32,16 +32,8 @@ stats.domElement.style.left = '0px'
 stats.domElement.style.top = '0px'
 glwin.document.body.appendChild(stats.domElement)
 
-tau = 2 * pi
-omega = (tau / 20) / second
-# A unit bivector rotating from k to i
-B = BivectorE3(0.0, 0.0, 1.0)
-# Just make sure that we really do have a unit bivector.
-B = B / magnitude(B)
-
 def setUp():
     workbench2D.setUp()
-    workbench3D.setUp()
     monitor.start()
 
 def tick(t):
@@ -59,7 +51,6 @@ def tearDown(e):
         print "Error during animation: %s" % (e)
     else:
         print "Goodbye!"
-    workbench3D.tearDown()
     workbench2D.tearDown()
     scene.tearDown()
 
