@@ -14,7 +14,7 @@ canvas2D = glwin.document.createElement("canvas")
 canvas2D.style.position = "absolute"
 canvas2D.style.top = "0px"
 canvas2D.style.left = "0px"
-workbench2D = Workbench2D(canvas2D, glwin)
+
 space2D = Stage(canvas2D)
 space2D.autoClear = True
 
@@ -31,21 +31,6 @@ stats.domElement.style.position = 'absolute'
 stats.domElement.style.left = '0px'
 stats.domElement.style.top = '0px'
 glwin.document.body.appendChild(stats.domElement)
-
-scene = scene()
-
-camera = perspectiveCamera(45, 1.0, 0.1, 100)
-
-renderer = webGLRenderer()
-
-box = mesh(boxGeometry())
-scene.add(box)
-box.position = vectorE3(-1.0,-0.5,-5.0)
-prism = mesh(prismGeometry())
-scene.add(prism)
-prism.position = vectorE3(0.0,0.0,-5.0)
-
-workbench3D = workbench3D(renderer.canvas, renderer, camera, glwin)
 
 tau = 2 * pi
 omega = (tau / 20) / second
