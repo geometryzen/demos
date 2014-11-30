@@ -72,39 +72,6 @@ class ArcBall {
   }
 }
 
-class Cube {
-  public position: eight.Euclidean3;
-  public attitude: eight.Euclidean3;
-  public size: number = 100;
-  private corners: eight.Euclidean3[];
-  constructor(position: eight.Euclidean3, attitude: eight.Euclidean3) {
-    this.position = position;
-    this.attitude = attitude;
-    this.corners = [];
-    
-    var sz = this.size;
-    this.corners.push(eight.vectorE3(-1 * sz, +1 * sz, -1 * sz));
-    this.corners.push(eight.vectorE3(-1 * sz, -1 * sz, -1 * sz));
-    this.corners.push(eight.vectorE3(+1 * sz, -1 * sz, -1 * sz));
-    this.corners.push(eight.vectorE3(+1 * sz, +1 * sz, -1 * sz));
-    this.corners.push(eight.vectorE3(-1 * sz, +1 * sz, +1 * sz));
-    this.corners.push(eight.vectorE3(-1 * sz, -1 * sz, +1 * sz));
-    this.corners.push(eight.vectorE3(+1 * sz, -1 * sz, +1 * sz));
-    this.corners.push(eight.vectorE3(+1 * sz, +1 * sz, +1 * sz));
-  }
-  draw()
-  {
-    var R = this.attitude;
-    var T = reverse(R);
-    var corners = this.corners.map(function(value) {return R.mul(value).mul(T);});
-
-    // top face
-    // bottom face
-  }
-}
-
-var cube = new Cube(eight.vectorE3(0, 0, 200), eight.scalarE3(1));
-
 function perspective(X: number, Y: number, Z: number, d: number): {x:number; y:number} {
   /**
    * The distance factor determines how much the X and Y components are reduced by the distance (Z + d) from the viewer.
@@ -134,11 +101,6 @@ function tick(time: number): void {
   context.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   
   var R = arcBall.rotor;
-  
-  // Draw the cube at the appropriate attitude.
-  cube.attitude = R;
-  cube.position.y = 0;
-  cube.draw();
   
   // Draw the vanishing points.
   var T = reverse(R);
