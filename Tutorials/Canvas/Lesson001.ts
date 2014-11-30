@@ -20,10 +20,6 @@ var CANVAS_DISTANCE = 100;
 var popUp: Window = window.open("", "", "width=" + WINDOW_WIDTH + ", height=" + WINDOW_HEIGHT, false);
 var context: CanvasRenderingContext2D;
 
-var e1 = eight.vectorE3(1,0,0);
-var e2 = eight.vectorE3(0,1,0);
-var e3 = eight.vectorE3(0,0,1);
-
 /**
  * Called for each animation tick.
  */
