@@ -23,54 +23,6 @@ var context: CanvasRenderingContext2D;
 var e1 = eight.vectorE3(1,0,0);
 var e2 = eight.vectorE3(0,1,0);
 var e3 = eight.vectorE3(0,0,1);
-var arcBall: ArcBall;
-
-class ArcBall {
-  private start: eight.Euclidean3;
-  public rotor: eight.Euclidean3 = eight.scalarE3(1);
-  private win: Window;
-  private down: boolean = false;
-  private a: eight.Euclidean3;
-  private b: eight.Euclidean3;
-  constructor(win: Window) {
-    this.win = win;
-  }
-  private static vectorFromMouse(clientX: number, clientY: number): eight.Euclidean3 {
-    var x = (clientX - CANVAS_HALF_WIDTH) / CANVAS_HALF_WIDTH;
-    var y = (clientY - CANVAS_HALF_HEIGHT) / CANVAS_HALF_HEIGHT;
-    // The negative sign for z arises because the arc ball is a hemisphere in the
-    // directin of the user, which is negative z.
-    var z = -Math.sqrt(1 - x * x - y * y);
-    return eight.vectorE3(x, y, z);
-  }
-  private static computeRotor(a: eight.Euclidean3, b: eight.Euclidean3) {
-    var one = eight.scalarE3(1);
-    var rotor = one.add(b.mul(a)).div(a.add(b).norm());
-    return rotor;
-  }
-  setUp(): void {
-    var self = this;
-    this.win.addEventListener('mousedown', function(ev: MouseEvent) {
-      self.down = true;
-      self.a = ArcBall.vectorFromMouse(ev.clientX, ev.clientY);
-      self.start = self.rotor;
-    });
-    this.win.addEventListener('mouseup', function(ev: MouseEvent) {
-      self.down = false;
-      self.b = ArcBall.vectorFromMouse(ev.clientX, ev.clientY);
-      self.rotor = ArcBall.computeRotor(self.a, self.b).mul(self.start);
-    });
-    this.win.addEventListener('mousemove', function(ev: MouseEvent) {
-      if (self.down) {
-        self.b = ArcBall.vectorFromMouse(ev.clientX, ev.clientY)
-        self.rotor = ArcBall.computeRotor(self.a, self.b).mul(self.start);
-      }
-    });
-  }
-  tearDown(): void {
-    
-  }
-}
 
 /**
  * Called for each animation tick.
@@ -79,8 +31,6 @@ function tick(time: number): void {
   // Set the background color to gray.
   context.fillStyle = "#555555";
   context.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  
-  var R = arcBall.rotor;
 }
 
 /**
@@ -94,9 +44,6 @@ function terminate(time: number): boolean {
  * Called once at the start of the animation.
  */
 function setUp() {
-  arcBall = new ArcBall(popUp);
-  arcBall.setUp();
-
   var popDoc = popUp.document;
   
   var canvas = popDoc.createElement("canvas");
@@ -116,7 +63,6 @@ function setUp() {
  * Called once at the end of the animation.
  */
 function tearDown(e: Error) {
-  arcBall.tearDown();
   popUp.close();
   if (e) {
     alert(e.message);
