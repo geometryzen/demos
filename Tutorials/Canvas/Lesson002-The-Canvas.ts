@@ -41,4 +41,6 @@ class Canvas {
   }
 }
 
-var canvas = new Canvas(800, 600)
+var canvas = new Canvas(800, 600);
+
+canvas.draw();
