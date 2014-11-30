@@ -6,7 +6,7 @@
 // I don't know why this works.
 var unused: Window = window;
 
-class PopUp {
+class Canvas {
   private win: Window;
   private context;
   constructor(width: number, height: number) {
@@ -35,4 +35,4 @@ class PopUp {
   }
 }
 
-var popUp = new PopUp(800, 600)
+var canvas = new Canvas(800, 600)
