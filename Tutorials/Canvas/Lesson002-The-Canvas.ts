@@ -7,14 +7,14 @@
 var unused: Window = window;
 
 class Canvas {
-  private win: Window;
+  private _window: Window;
   private context;
   constructor(width: number, height: number) {
-    this.win = window.open("", "", "width=" + width + ", height=" + height, false);
+    this._window = window.open("", "", "width=" + width + ", height=" + height, false);
     
-    var popDoc = this.win.document;
+    var popDoc = this._window.document;
     
-    var canvas = popDoc.createElement("canvas");
+    var canvas: HTMLCanvasElement = popDoc.createElement("canvas");
     
     canvas.setAttribute("id", "graph");
     canvas.setAttribute("width",  width.toString());
@@ -31,7 +31,7 @@ class Canvas {
   }
 
   public close() {
-    this.win.close();
+    this._window.close();
   }
 }
 
