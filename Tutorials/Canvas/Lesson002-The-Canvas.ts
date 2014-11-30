@@ -6,6 +6,34 @@
 // I don't know why this works.
 var unused: Window = window;
 
+class PopUp {
+  private win: Window;
+  constructor(width: number, height: number) {
+    this.win = window.open("", "", "width=" + width + ", height=" + height, false);
+    
+    var popDoc = this.win.document;
+    
+    var canvas = popDoc.createElement("canvas");
+    
+    canvas.setAttribute("id", "graph");
+    canvas.setAttribute("width",  CANVAS_WIDTH.toString());
+    canvas.setAttribute("height", CANVAS_HEIGHT.toString());
+    
+    popDoc.body.appendChild(canvas);
+    // Remove the margin that pushes the canvas.
+    popDoc.body.style.margin = "0";
+    
+    context = canvas.getContext("2d");
+  }
+  public close() {
+    this.win.close();
+  }
+}
+
+var popUp = new PopUp(800, 600)
+
+//popUp.close();
+
 var WINDOW_HEIGHT = 800;
 var WINDOW_WIDTH  = 800;
 var WINDOW_HALF_HEIGHT = WINDOW_HEIGHT / 2;
@@ -17,7 +45,6 @@ var CANVAS_HALF_WIDTH  = CANVAS_WIDTH / 2;
 var CANVAS_DISTANCE = 100;
 
 // Global Variables.
-var popUp: Window = window.open("", "", "width=" + WINDOW_WIDTH + ", height=" + WINDOW_HEIGHT, false);
 var context: CanvasRenderingContext2D;
 
 /**
