@@ -58,6 +58,10 @@ class Canvas {
 
 var canvas = new Canvas(800, 600);
 
-canvas.backgroundColor = new Color(255, 255, 0);
 
-canvas.draw();
+function animate() {
+  canvas.backgroundColor = new Color(255, 255, 0);
+  canvas.draw();
+}
+
+animate();
