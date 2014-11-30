@@ -60,7 +60,8 @@ var canvas = new Canvas(800, 600);
 
 
 function animate() {
-  canvas.backgroundColor = new Color(255, 255, 0);
+  var red = Math.random() * 255;
+  canvas.backgroundColor = new Color(red, 255, 0);
   canvas.draw();
 }
 
