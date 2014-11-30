@@ -125,24 +125,6 @@ function reverse(m: eight.Euclidean3) {
   return new eight.Euclidean3(m.w, m.x, m.y, m.z,-m.xy,-m.yz,-m.zx, -m.xyz);
 }
 
-function vanishingPoint(v: eight.Euclidean3) : {x: number; y: number} {
-  var norm = v.norm();
-  var normalized = v.div(norm);
-  var x = CANVAS_DISTANCE * v.x / v.z;
-  var y = CANVAS_DISTANCE * v.y / v.z;
-  return {'x': x,'y': y};
-}
-
-function drawVanishingPoint(point: {x:number;y:number}, strokeStyle: string) {
-  context.beginPath();
-  context.strokeStyle = strokeStyle;
-  context.moveTo(point.x-10 + CANVAS_HALF_WIDTH, point.y    + CANVAS_HALF_HEIGHT);
-  context.lineTo(point.x+10 + CANVAS_HALF_WIDTH, point.y    + CANVAS_HALF_HEIGHT);
-  context.moveTo(point.x    + CANVAS_HALF_WIDTH, point.y-10 + CANVAS_HALF_HEIGHT);
-  context.lineTo(point.x    + CANVAS_HALF_WIDTH, point.y+10 + CANVAS_HALF_HEIGHT);
-  context.stroke();
-}
-
 /**
  * Called for each animation tick.
  */
@@ -160,14 +142,6 @@ function tick(time: number): void {
   
   // Draw the vanishing points.
   var T = reverse(R);
-  var p1 = vanishingPoint(R.mul(e1).mul(T));
-  drawVanishingPoint(p1, "#FF0000");
-
-  var p2 = vanishingPoint(R.mul(e2).mul(T));
-  drawVanishingPoint(p2, "#00FF00");
-
-  var p3 = vanishingPoint(R.mul(e3).mul(T));
-  drawVanishingPoint(p3, "#0000FF");
 
   context.strokeStyle = "#FFFFFF";
   // Draw symmetric two-vanishing point locus.
