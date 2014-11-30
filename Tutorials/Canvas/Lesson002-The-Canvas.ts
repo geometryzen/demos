@@ -11,6 +11,7 @@ class Color {
 }
 
 class Canvas {
+  public backgroundColor: Color;
   private _window: Window;
   private _width;
   private _height;
@@ -46,5 +47,7 @@ class Canvas {
 }
 
 var canvas = new Canvas(800, 600);
+
+canvas.backgroundColor = 23;
 
 canvas.draw();
