@@ -65,4 +65,4 @@ function tearDown(e: Error) {
   }
 }
 
-eight.animationRunner(tick, terminate, setUp, tearDown, popUp).start();
+
