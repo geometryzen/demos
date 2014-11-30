@@ -66,6 +66,8 @@ function animate() {
 
   canvas.backgroundColor = new Color(red, green, blue);
   canvas.draw();
+  
+  window.requestAnimationFrame(animate);
 }
 
 var frame: number = window.requestAnimationFrame(animate);
