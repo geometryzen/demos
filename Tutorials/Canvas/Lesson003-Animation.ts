@@ -68,4 +68,6 @@ function animate() {
   canvas.draw();
 }
 
+var frame: number = window.requestAnimationFrame(animate);
+
 animate();
