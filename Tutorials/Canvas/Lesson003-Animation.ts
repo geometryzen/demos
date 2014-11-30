@@ -6,64 +6,58 @@
 // I don't know why this works.
 var unused: Window = window;
 
-var WINDOW_HEIGHT = 800;
-var WINDOW_WIDTH  = 800;
-var WINDOW_HALF_HEIGHT = WINDOW_HEIGHT / 2;
-var WINDOW_HALF_WIDTH  = WINDOW_WIDTH / 2;
-var CANVAS_HEIGHT = 800;
-var CANVAS_WIDTH  = 800;
-var CANVAS_HALF_HEIGHT = CANVAS_HEIGHT / 2;
-var CANVAS_HALF_WIDTH  = CANVAS_WIDTH / 2;
-var CANVAS_DISTANCE = 100;
-
-// Global Variables.
-var popUp: Window = window.open("", "", "width=" + WINDOW_WIDTH + ", height=" + WINDOW_HEIGHT, false);
-var context: CanvasRenderingContext2D;
-
-/**
- * Called for each animation tick.
- */
-function tick(time: number): void {
-  // Set the background color to gray.
-  context.fillStyle = "#555555";
-  context.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-}
-
-/**
- * Called to determine whether to end the animation.
- */
-function terminate(time: number): boolean {
-  return false;
-}
-
-/**
- * Called once at the start of the animation.
- */
-function setUp() {
-  var popDoc = popUp.document;
-  
-  var canvas = popDoc.createElement("canvas");
-  
-  canvas.setAttribute("id", "graph");
-  canvas.setAttribute("width",  CANVAS_WIDTH.toString());
-  canvas.setAttribute("height", CANVAS_HEIGHT.toString());
-  
-  popDoc.body.appendChild(canvas);
-  // Remove the margin that pushes the canvas.
-  popDoc.body.style.margin = "0";
-  
-  context = canvas.getContext("2d");
-}
-
-/**
- * Called once at the end of the animation.
- */
-function tearDown(e: Error) {
-  popUp.close();
-  if (e) {
-    alert(e.message);
+class Color {
+  private _red: number;
+  private _green: number;
+  private _blue: number;
+  constructor(red: number, green: number, blue: number) {
+    this._red = red;
+    this._green = green;
+    this._blue = blue;
+  }
+  public asFillStyle() {
+    return "rgb(" + this._red + ", " + this._green + "," + this._blue + ")"
   }
 }
 
-setUp()
-tick(0)
+class Canvas {
+  public backgroundColor: Color = new Color(127, 127, 127);
+  private _window: Window;
+  private _width;
+  private _height;
+  private _context;
+  constructor(width: number, height: number) {
+    this._width = width;
+    this._height = height;
+    this._window = window.open("", "", "width=" + width + ", height=" + height, false);
+    
+    var popDoc: Document = this._window.document;
+    
+    var canvas: HTMLCanvasElement = popDoc.createElement("canvas");
+    
+    canvas.setAttribute("id", "graph");
+    canvas.setAttribute("width",  width.toString());
+    canvas.setAttribute("height", height.toString());
+    
+    popDoc.body.appendChild(canvas);
+    // Remove the margin that pushes the canvas.
+    popDoc.body.style.margin = "0";
+    
+    this._context = canvas.getContext("2d");
+  }
+  
+  public draw() {
+    this._context.fillStyle = this.backgroundColor.asFillStyle() 
+    this._context.fillRect(0, 0, this._width, this._height);
+  }
+
+  public close() {
+    this._window.close();
+  }
+}
+
+var canvas = new Canvas(800, 600);
+
+canvas.backgroundColor = new Color(255, 255, 0);
+
+canvas.draw();
