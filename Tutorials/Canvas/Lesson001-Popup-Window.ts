@@ -19,13 +19,5 @@ var CANVAS_DISTANCE = 100;
 // Global Variables.
 var popUp: Window = window.open("", "", "width=" + WINDOW_WIDTH + ", height=" + WINDOW_HEIGHT, false);
 
-/**
- * Called once at the end of the animation.
- */
-function tearDown(e: Error) {
-  popUp.close();
-  if (e) {
-    alert(e.message);
-  }
-}
+popUp.close()
 
