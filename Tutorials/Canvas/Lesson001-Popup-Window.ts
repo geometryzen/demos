@@ -18,16 +18,11 @@ var CANVAS_DISTANCE = 100;
 
 // Global Variables.
 var popUp: Window = window.open("", "", "width=" + WINDOW_WIDTH + ", height=" + WINDOW_HEIGHT, false);
-var context: CanvasRenderingContext2D;
 
 /**
  * Called for each animation tick.
  */
 function tick(time: number): void {
-  // Set the background color to gray.
-  context.fillStyle = "#555555";
-  context.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  console.log("Hello!");
 }
 
 /**
@@ -52,8 +47,6 @@ function setUp() {
   popDoc.body.appendChild(canvas);
   // Remove the margin that pushes the canvas.
   popDoc.body.style.margin = "0";
-  
-  context = canvas.getContext("2d");
 }
 
 /**
