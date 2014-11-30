@@ -19,34 +19,11 @@ var CANVAS_DISTANCE = 100;
 // Global Variables.
 var popUp: Window = window.open("", "", "width=" + WINDOW_WIDTH + ", height=" + WINDOW_HEIGHT, false);
 var context: CanvasRenderingContext2D;
-var printer: Printer3D;
+
 var e1 = eight.vectorE3(1,0,0);
 var e2 = eight.vectorE3(0,1,0);
 var e3 = eight.vectorE3(0,0,1);
 var arcBall: ArcBall;
-
-class Printer3D {
-  private context2D: CanvasRenderingContext2D;
-  private d: number;
-  constructor(context2D: CanvasRenderingContext2D, d: number) {
-    this.context2D = context2D;
-    this.d = d;
-  }
-  beginPath(): void {
-    this.context2D.beginPath();
-  }
-  stroke(): void {
-    this.context2D.stroke();
-  }
-  moveTo(x: number, y: number, z: number): void {
-    var point = perspective(x, y, z, this.d);
-    this.context2D.moveTo(point.x + CANVAS_HALF_WIDTH, point.y + CANVAS_HALF_HEIGHT);
-  }
-  lineTo(x: number, y: number, z: number): void {
-    var point = perspective(x, y, z, this.d);
-    this.context2D.lineTo(point.x + CANVAS_HALF_WIDTH, point.y + CANVAS_HALF_HEIGHT);
-  }
-}
 
 class ArcBall {
   private start: eight.Euclidean3;
@@ -120,73 +97,6 @@ class Cube {
     var R = this.attitude;
     var T = reverse(R);
     var corners = this.corners.map(function(value) {return R.mul(value).mul(T);});
-    // front face
-    printer.beginPath();
-    context.strokeStyle = "#00FF00";
-    printer.moveTo(this.position.x + corners[0].x, this.position.y + corners[0].y, this.position.z + corners[0].z);
-    printer.lineTo(this.position.x + corners[1].x, this.position.y + corners[1].y, this.position.z + corners[1].z);
-    printer.stroke();
-
-    printer.beginPath();
-    context.strokeStyle = "#FF0000";
-    printer.lineTo(this.position.x + corners[1].x, this.position.y + corners[1].y, this.position.z + corners[1].z);
-    printer.lineTo(this.position.x + corners[2].x, this.position.y + corners[2].y, this.position.z + corners[2].z);
-    printer.stroke();
-
-    printer.beginPath();
-    context.strokeStyle = "#00FF00";
-    printer.lineTo(this.position.x + corners[2].x, this.position.y + corners[2].y, this.position.z + corners[2].z);
-    printer.lineTo(this.position.x + corners[3].x, this.position.y + corners[3].y, this.position.z + corners[3].z);
-    printer.stroke();
-
-    printer.beginPath();
-    context.strokeStyle = "#FF0000";
-    printer.lineTo(this.position.x + corners[3].x, this.position.y + corners[3].y, this.position.z + corners[3].z);
-    printer.lineTo(this.position.x + corners[0].x, this.position.y + corners[0].y, this.position.z + corners[0].z);
-    printer.stroke();
-
-    // back face
-    printer.beginPath();
-    context.strokeStyle = "#00FF00";
-    printer.moveTo(this.position.x + corners[4].x, this.position.y + corners[4].y, this.position.z + corners[4].z);
-    printer.lineTo(this.position.x + corners[5].x, this.position.y + corners[5].y, this.position.z + corners[5].z);
-    printer.stroke();
-
-    printer.beginPath();
-    context.strokeStyle = "#FF0000";
-    printer.lineTo(this.position.x + corners[5].x, this.position.y + corners[5].y, this.position.z + corners[5].z);
-    printer.lineTo(this.position.x + corners[6].x, this.position.y + corners[6].y, this.position.z + corners[6].z);
-    printer.stroke();
-
-    printer.beginPath();
-    context.strokeStyle = "#00FF00";
-    printer.lineTo(this.position.x + corners[6].x, this.position.y + corners[6].y, this.position.z + corners[6].z);
-    printer.lineTo(this.position.x + corners[7].x, this.position.y + corners[7].y, this.position.z + corners[7].z);
-    printer.stroke();
-
-    printer.beginPath();
-    context.strokeStyle = "#FF0000";
-    printer.lineTo(this.position.x + corners[7].x, this.position.y + corners[7].y, this.position.z + corners[7].z);
-    printer.lineTo(this.position.x + corners[4].x, this.position.y + corners[4].y, this.position.z + corners[4].z);
-    printer.stroke();
-
-    // LHS face
-    printer.beginPath();
-    context.strokeStyle = "#0000FF";
-    printer.moveTo(this.position.x + corners[0].x, this.position.y + corners[0].y, this.position.z + corners[0].z);
-    printer.lineTo(this.position.x + corners[4].x, this.position.y + corners[4].y, this.position.z + corners[4].z);
-    printer.moveTo(this.position.x + corners[1].x, this.position.y + corners[1].y, this.position.z + corners[1].z);
-    printer.lineTo(this.position.x + corners[5].x, this.position.y + corners[5].y, this.position.z + corners[5].z);
-    printer.stroke();
-
-    // RHS face
-    printer.beginPath();
-    context.strokeStyle = "#0000FF";
-    printer.moveTo(this.position.x + corners[2].x, this.position.y + corners[2].y, this.position.z + corners[2].z);
-    printer.lineTo(this.position.x + corners[6].x, this.position.y + corners[6].y, this.position.z + corners[6].z);
-    printer.moveTo(this.position.x + corners[3].x, this.position.y + corners[3].y, this.position.z + corners[3].z);
-    printer.lineTo(this.position.x + corners[7].x, this.position.y + corners[7].y, this.position.z + corners[7].z);
-    printer.stroke();
 
     // top face
     // bottom face
@@ -302,8 +212,6 @@ function setUp() {
   popDoc.body.style.margin = "0";
   
   context = canvas.getContext("2d");
-  
-  printer = new Printer3D(context, CANVAS_DISTANCE);
 }
 
 /**
