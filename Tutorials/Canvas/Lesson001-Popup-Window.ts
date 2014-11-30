@@ -1,5 +1,5 @@
 /**
- * Demonstrates the vanishing points from 3D space projected onto a 2D canvas.
+ * Demonstrates launching a popup window.
  */
 
 // Workaround to prevent TS2082 and TS2087.
@@ -10,14 +10,8 @@ var WINDOW_HEIGHT = 800;
 var WINDOW_WIDTH  = 800;
 var WINDOW_HALF_HEIGHT = WINDOW_HEIGHT / 2;
 var WINDOW_HALF_WIDTH  = WINDOW_WIDTH / 2;
-var CANVAS_HEIGHT = 800;
-var CANVAS_WIDTH  = 800;
-var CANVAS_HALF_HEIGHT = CANVAS_HEIGHT / 2;
-var CANVAS_HALF_WIDTH  = CANVAS_WIDTH / 2;
-var CANVAS_DISTANCE = 100;
 
 // Global Variables.
 var popUp: Window = window.open("", "", "width=" + WINDOW_WIDTH + ", height=" + WINDOW_HEIGHT, false);
 
-popUp.close()
-
+//popUp.close()
