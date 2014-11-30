@@ -15,6 +15,9 @@ class Color {
     this._green = green;
     this._blue = blue;
   }
+  public asFillStyle() {
+    return "rgb(" + this._red + ", " + this._green + "," + this._blue + ")"
+  }
 }
 
 class Canvas {
@@ -44,7 +47,7 @@ class Canvas {
   }
   
   public draw() {
-    this._context.fillStyle = "#555555";
+    this._context.fillStyle = this.backgroundColor.asFillStyle() 
     this._context.fillRect(0, 0, this._width, this._height);
   }
 
