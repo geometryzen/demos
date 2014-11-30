@@ -58,6 +58,6 @@ class Canvas {
 
 var canvas = new Canvas(800, 600);
 
-canvas.backgroundColor = new Color(255, 0, 0);
+canvas.backgroundColor = new Color(255, 255, 0);
 
 canvas.draw();
