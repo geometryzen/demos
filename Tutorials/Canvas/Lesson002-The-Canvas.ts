@@ -8,11 +8,11 @@ var unused: Window = window;
 
 class Canvas {
   private _window: Window;
-  private context;
+  private _context;
   constructor(width: number, height: number) {
     this._window = window.open("", "", "width=" + width + ", height=" + height, false);
     
-    var popDoc = this._window.document;
+    var popDoc: Document = this._window.document;
     
     var canvas: HTMLCanvasElement = popDoc.createElement("canvas");
     
@@ -24,10 +24,10 @@ class Canvas {
     // Remove the margin that pushes the canvas.
     popDoc.body.style.margin = "0";
     
-    this.context = canvas.getContext("2d");
+    this._context = canvas.getContext("2d");
 
-    this.context.fillStyle = "#555555";
-    this.context.fillRect(0, 0, width, height);
+    this._context.fillStyle = "#555555";
+    this._context.fillRect(0, 0, width, height);
   }
 
   public close() {
