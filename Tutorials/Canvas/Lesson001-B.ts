@@ -12,11 +12,15 @@ var WINDOW_HALF_HEIGHT = WINDOW_HEIGHT / 2;
 var WINDOW_HALF_WIDTH  = WINDOW_WIDTH / 2;
 
 class PopUp {
-  public win: Window;
+  private win: Window;
   constructor() {
     this.win = window.open("", "", "width=" + WINDOW_WIDTH + ", height=" + WINDOW_HEIGHT, false);
   }
-  
+  public close() {
+    this.win.close();
+  }
 }
 
 var popUp = new PopUp()
+
+popUp.close();
