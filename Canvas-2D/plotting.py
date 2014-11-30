@@ -57,16 +57,4 @@ def tearDown(e):
 
 runner = windowAnimationRunner(tick, terminate, setUp, tearDown, glwin)
 
-def onContextLoss():
-    runner.stop()
-    renderer.onContextLoss()
-    scene.onContextLoss()
-
-def onContextGain(gl):
-    scene.onContextGain(gl)
-    renderer.onContextGain(gl)
-    runner.start()
-
-monitor = webGLContextMonitor(renderer.canvas, onContextLoss, onContextGain)
-
-onContextGain(renderer.context)
+runner.start()
