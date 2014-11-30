@@ -23,6 +23,10 @@ class Color {
   }
 }
 
+function colorFromAngle() {
+  return new Color(0.5,0.5,0.5);
+}
+
 class Canvas {
   public backgroundColor: Color = new Color(127, 127, 127);
   private _window: Window;
