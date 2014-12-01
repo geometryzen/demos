@@ -282,8 +282,9 @@ class ComplexPlane implements WindowAnimation {
     return this._canvas.wnd;
   }
 }
-var R = 10;
-var cp = new ComplexPlane(new MinMax(-R,+R), new MinMax(-R,+R));
-cp.tick(0);
-//var war = windowAnimationRunner(cp);
-//war.start();
+console.log(colorFromHSL(0,1,0.5));
+
+//var R = 10;
+//var cp = new ComplexPlane(new MinMax(-R,+R), new MinMax(-R,+R));
+//cp.tick(0);
+
