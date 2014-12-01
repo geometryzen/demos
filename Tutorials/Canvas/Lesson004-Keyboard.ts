@@ -187,7 +187,7 @@ class MyAnimation implements WindowAnimation {
     return this._angle > 2 * Math.PI;
   }
   tearDown(ex: any) {
-    
+    this._canvas.close();
   }
   window() {
     return this._canvas.wnd;
