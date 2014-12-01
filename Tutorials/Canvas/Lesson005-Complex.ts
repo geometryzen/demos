@@ -23,3 +23,5 @@ var i = new Complex(0,1);
 console.log("zero: " + zero);
 console.log("one: " + one);
 console.log("i: " + i);
+
+console.log("arg(one) " + one.arg());
