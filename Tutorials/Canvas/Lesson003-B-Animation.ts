@@ -96,10 +96,11 @@ class WindowAnimationRunner {
   constructor(tick: () => void, w: Window) {
     this._wnd = w;
     var self = this;
-    this._animate = function() {
+    var animate = function() {
       tick();
-      w.requestAnimationFrame(self._animate);
+      w.requestAnimationFrame(animate);
     }
+    this._animate = animate;
   }
   /**
    * Starts the animation.
