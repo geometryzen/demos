@@ -220,7 +220,8 @@ class MyAnimation implements WindowAnimation {
   private _canvas = new Canvas(800, 600);
   private _z: Complex = new Complex(1,0);
   private xRange: MinMax;
-  constructor(xRange: MinMax) {
+  private yRange: MinMax;
+  constructor(xRange: MinMax, yRange: MinMax) {
     this.xRange = xRange;
   }
   setUp() {
@@ -250,5 +251,5 @@ class MyAnimation implements WindowAnimation {
   }
 }
 
-var war = windowAnimationRunner(new MyAnimation(new MinMax(-2,1)));
+var war = windowAnimationRunner(new MyAnimation(new MinMax(-1,+1), new MinMax(-1,+1)));
 war.start();
