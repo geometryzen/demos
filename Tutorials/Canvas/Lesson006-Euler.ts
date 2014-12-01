@@ -204,7 +204,7 @@ class Complex {
 var R = new Complex(Math.cos(0.01), Math.sin(0.01));
 
 var f = function(z: Complex): Complex {
-  return z.multiply(z);
+  return z.multiply(z).multiply(z);
 };
 
 class MyAnimation implements WindowAnimation {
