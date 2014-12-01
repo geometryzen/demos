@@ -179,7 +179,10 @@ class MyAnimation implements WindowAnimation {
     
   }
   tick(elapsed: number) {
-    this.z = this.z.multiply(new Complex(0.09,0.01));
+    var theta = Math.PI * 0.01;
+    var c = Math.cos(theta);
+    var s = Math.sin(theta);
+    this.z = this.z.multiply(new Complex(c,s));
     this._canvas.backgroundColor = colorFromAngle(this.z.arg());
     this._canvas.draw();
   }
