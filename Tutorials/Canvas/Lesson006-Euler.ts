@@ -223,6 +223,7 @@ class MyAnimation implements WindowAnimation {
   private yRange: MinMax;
   constructor(xRange: MinMax, yRange: MinMax) {
     this.xRange = xRange;
+    this.yRange = yRange;
   }
   setUp() {
     
@@ -233,7 +234,7 @@ class MyAnimation implements WindowAnimation {
     for (var X=0;X<800;X++) {
       for (var Y=0;Y<600;Y++) {
         var x = (X / 800) * (this.xRange.max - this.xRange.min) + this.xRange.min;
-        var y = ((600-Y)/600) * 2 - 1;
+        var y = ((600-Y)/600) * (this.yRange.max - this.yRange.min) + this.yRange.min;
         var z = new Complex(x,y);
         this._canvas.context.fillStyle = colorFromAngle(f(z).arg()).asFillStyle();
         this._canvas.context.fillRect(X,Y,1,1);
