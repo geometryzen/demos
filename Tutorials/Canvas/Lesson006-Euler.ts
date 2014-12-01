@@ -210,7 +210,10 @@ class Complex {
 var R = new Complex(Math.cos(0.01), Math.sin(0.01));
 
 var f = function(z: Complex): Complex {
-  return z.subtract(new Complex(1,0)).multiply(z).multiply(z);
+  var z3 = z.multiply(z).multiply(z);
+  var sz = new Complex(6,0).multiply(z);
+  var tw = new Complex(20,0);
+  return z3.add(sz).subtract(tw);
 };
 
 class MinMax {
