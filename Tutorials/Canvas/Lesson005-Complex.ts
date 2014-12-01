@@ -17,5 +17,7 @@ class Complex {
 }
 
 var zero = new Complex(0,0);
+var one = new Complex(1,0);
 
-console.log("" + zero);
+console.log("zero: " + zero);
+console.log("one: " + one);
