@@ -103,6 +103,9 @@ class WindowAnimationRunner {
     this._animation = animation;
     var self = this;
     var frame: number;
+    var escKeyPressed = false;
+    var pauseKeyPressed = false;
+    var enterKeyPressed;
     var callback: FrameRequestCallback = function(timestamp: number) {
       if (animation.terminate()) {
         animation.window().cancelAnimationFrame(frame);
@@ -111,8 +114,24 @@ class WindowAnimationRunner {
         animation.tick();
         frame = animation.window().requestAnimationFrame(callback);
       }
-    }
+    };
     this._callback = callback;
+    
+    var onDocumentKeyDown = function(event: KeyboardEvent) {
+        if (event.keyCode == 27) {
+            escKeyPressed = true;
+            event.preventDefault();
+        }
+        else if (event.keyCode == 19) {
+            pauseKeyPressed = true;
+            event.preventDefault();
+        }
+        else if (event.keyCode == 13) {
+            enterKeyPressed = true;
+            event.preventDefault();
+        }
+    };
+
   }
   /**
    * Starts the animation.
