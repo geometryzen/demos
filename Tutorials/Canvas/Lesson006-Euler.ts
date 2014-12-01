@@ -54,7 +54,7 @@ function colorFromHSL(H: number, S: number, L: number): Color {
     return new Color(R + m, G + m, B + m);
   }
   var sextant = ((normalizeAngle(H) / Math.PI) * 3) % 6;
-  var X = C * (1 - Math.abs(sextant));
+  var X = C * (1 - Math.abs(sextant % 2 - 1));
   if (sextant >= 0 && sextant < 1) {
     return matchLightness(C,X/*C*(sextant-0)*/,0.0);
   }
