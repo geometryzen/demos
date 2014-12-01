@@ -115,12 +115,12 @@ var canvas = new Canvas(800, 600);
 
 var angle = 0;
 
-function tick(): void {
+function draw(): void {
   angle += 0.01;
   canvas.backgroundColor = colorFromAngle(angle);
   console.log("angle: " + angle);
   canvas.draw();
 }
 
-var war = new WindowAnimationRunner(tick, canvas.wnd);
+var war = new WindowAnimationRunner(draw, canvas.wnd);
 war.start();
