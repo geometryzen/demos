@@ -25,3 +25,4 @@ console.log("one: " + one);
 console.log("i: " + i);
 
 console.log("arg(one) " + one.arg());
+console.log("arg(i) " + i.arg());
