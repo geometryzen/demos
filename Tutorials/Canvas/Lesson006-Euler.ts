@@ -117,91 +117,6 @@ class Canvas {
   }
 }
 
-interface WindowAnimation {
-  setUp(): void;
-  tick(elapsed: number): void;
-  terminate(elapsed: number): boolean;
-  tearDown(ex: any): void;
-  window(): Window;
-}
-
-/**
- * Handles the control of an animation.
- */
-var windowAnimationRunner = function(animation: WindowAnimation) {
-    var win = animation.window();
-    var escKeyPressed = false;
-    var pauseKeyPressed = false;
-    var enterKeyPressed = false;
-    var startTime: number = null;
-    var elapsed: number = null;
-    var MILLIS_PER_SECOND = 1000;
-    var requestID: number = null;
-    var exception: any = null;
-
-    var animate: FrameRequestCallback = function(timestamp) {
-        if (startTime) {
-            elapsed = timestamp - startTime;
-        }
-        else {
-            startTime = timestamp;
-            elapsed = 0;
-        }
-
-        if (escKeyPressed || animation.terminate(elapsed / MILLIS_PER_SECOND)) {
-            escKeyPressed = false;
-
-            win.cancelAnimationFrame(requestID);
-            win.document.removeEventListener('keydown', onDocumentKeyDown, false);
-            try {
-                animation.tearDown(exception);
-            }
-            catch (e) {
-                console.log(e);
-            }
-        }
-        else {
-            requestID = win.requestAnimationFrame(animate);
-            try {
-                animation.tick(elapsed / MILLIS_PER_SECOND);
-            }
-            catch (e) {
-                exception = e;
-                escKeyPressed = true;
-            }
-        }
-    };
-
-    var onDocumentKeyDown = function(event: KeyboardEvent) {
-        if (event.keyCode == 27) {
-            escKeyPressed = true;
-            event.preventDefault();
-        }
-        else if (event.keyCode == 19) {
-            pauseKeyPressed = true;
-            event.preventDefault();
-        }
-        else if (event.keyCode == 13) {
-            enterKeyPressed = true;
-            event.preventDefault();
-        }
-    };
-
-    var that =
-        {
-            start: function() {
-                animation.setUp();
-                win.document.addEventListener('keydown', onDocumentKeyDown, false);
-                requestID = win.requestAnimationFrame(animate);
-            },
-            stop: function() {
-                escKeyPressed = true;
-            }
-        };
-
-    return that;
-};
-
 class Complex {
   public x: number;
   public y: number;
@@ -254,43 +169,33 @@ class MinMax {
   }
 }
 
-class ComplexPlane implements WindowAnimation {
+class ComplexPlane {
   private _canvas = new Canvas(WIDTH, HEIGHT);
   private xRange: MinMax;
   private yRange: MinMax;
-  constructor(xRange: MinMax, yRange: MinMax) {
+  private f: (z: Complex) => Complex;
+  constructor(xRange: MinMax, yRange: MinMax, f: (z: Complex)=>Complex) {
     this.xRange = xRange;
     this.yRange = yRange;
+    this.f = f;
   }
-  setUp() {
-    
-  }
-  tick(elapsed: number) {
+  draw() {
     for (var X=0;X<WIDTH;X++) {
       for (var Y=0;Y<HEIGHT;Y++) {
         var x = (X / WIDTH) * (this.xRange.max - this.xRange.min) + this.xRange.min;
         var y = ((HEIGHT-Y)/HEIGHT) * (this.yRange.max - this.yRange.min) + this.yRange.min;
         var z = new Complex(x,y);
-        var H = f(z).arg();
+        var H = this.f(z).arg();
         var S = 1;
-        var L = lightnessFromMagnitude(f(z).mod());
+        var L = lightnessFromMagnitude(this.f(z).mod());
         this._canvas.context.fillStyle = colorFromHSL(H, S, L).asFillStyle();
         this._canvas.context.fillRect(X,Y,1,1);
       }
     }
   }
-  terminate(elapsed: number) {
-    return false;
-  }
-  tearDown(ex: any) {
-    this._canvas.close();
-  }
-  window() {
-    return this._canvas.wnd;
-  }
 }
 
 var R = 3;
-var cp = new ComplexPlane(new MinMax(-R,+R), new MinMax(-R,+R));
-cp.tick(0);
+var cp = new ComplexPlane(new MinMax(-R,+R), new MinMax(-R,+R),f);
+cp.draw();
 
