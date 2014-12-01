@@ -261,5 +261,5 @@ class MyAnimation implements WindowAnimation {
   }
 }
 
-var war = windowAnimationRunner(new MyAnimation(new MinMax(-2,+2), new MinMax(-2,+2)));
+var war = windowAnimationRunner(new MyAnimation(new MinMax(-10,+10), new MinMax(-10,+10)));
 war.start();
