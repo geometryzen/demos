@@ -20,11 +20,18 @@ class Color {
     this._green = green;
     this._blue = blue;
   }
+  public luminance(): number {
+    return Color.luminance(this._red, this._green, this._blue);
+  }
   public toString(): string {
     return "rgb(" + this._red + ", " + this._green + "," + this._blue + ")"
   }
   public asFillStyle() {
     return "rgb(" + Math.floor(this._red*255) + ", " + Math.floor(this._green*255) + "," + Math.floor(this._blue*255) + ")"
+  }
+  public static luminance(red: number, green: number, blue: number): number {
+    var gamma = 2.2;
+    return 0.2126 * Math.pow(red, gamma) + 0.7152 * Math.pow(green, gamma) + 0.0722 * Math.pow(blue, gamma);
   }
   /**
    * Converts an angle, radius, height to a color on a color wheel.
@@ -43,6 +50,7 @@ class Color {
       }
     }
     function matchLightness(R: number, G: number, B: number): Color {
+      var x = Color.luminance(R, G, B);
       var m = L - (0.5 * C);
       return new Color(R + m, G + m, B + m);
     }
