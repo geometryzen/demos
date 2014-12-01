@@ -97,6 +97,9 @@ class WindowAnimationRunner {
     this._tick = tick;
     this._wnd = w;
   }
+  /**
+   * Starts the animation.
+   */
   public start() {
     function animate() {
       this._tick();
