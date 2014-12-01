@@ -20,6 +20,9 @@ class Color {
     this._green = green;
     this._blue = blue;
   }
+  toString(): string {
+    return "rgb(" + this._red + ", " + this._green + "," + this._blue + ")"
+  }
   public asFillStyle() {
     return "rgb(" + Math.floor(this._red*255) + ", " + Math.floor(this._green*255) + "," + Math.floor(this._blue*255) + ")"
   }
