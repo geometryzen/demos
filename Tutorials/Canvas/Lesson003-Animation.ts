@@ -87,15 +87,6 @@ class Canvas {
   }
 }
 
-/**
- * Handles the control of an animation.
- */
-class WindowAnimationRunner {
-  constructor(tick: () => void) {
-    
-  }
-}
-
 var canvas = new Canvas(800, 600);
 
 var angle = 0;
