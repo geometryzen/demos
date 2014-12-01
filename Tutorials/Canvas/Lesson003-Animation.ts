@@ -91,6 +91,7 @@ var angle = 0;
 canvas.backgroundColor = colorFromAngle(2 * Math.PI * Math.random());
 
 function animate() {
+  angle += 0.1;
   canvas.backgroundColor = colorFromAngle(angle);
   canvas.draw();
   
