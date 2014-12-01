@@ -38,7 +38,6 @@ function lightnessFromMagnitude(r: number) {
  */
 function colorFromHSL(H: number, S: number, L: number): Color {
   var C = (1 - Math.abs(2*L-1)) * S;
-  var m = L - 0.5 * C;
   function normalizeAngle(angle: number) {
     if (angle > 2 * Math.PI) {
       return normalizeAngle(angle - 2 * Math.PI);
@@ -51,6 +50,7 @@ function colorFromHSL(H: number, S: number, L: number): Color {
     }
   }
   function matchLightness(R: number, G: number, B: number): Color {
+    var m = L - (0.5 * C);
     return new Color(R + m, G + m, B + m);
   }
   var sextant = ((normalizeAngle(H) / Math.PI) * 3) % 6;
