@@ -29,7 +29,7 @@ function colorFromAngle(theta: number): Color {
     return new Color(1.0,sextant,0.0);
   }
   else if (sextant >= 1 && sextant < 2) {
-    return new Color(1.0,2-sextant,0.0);
+    return new Color(2-sextant,1.0,0.0);
   }
   else if (sextant >= 2 && sextant < 3) {
     return new Color(0.0,1.0,0.5);
