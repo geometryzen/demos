@@ -174,17 +174,16 @@ var windowAnimationRunner = function(animation: WindowAnimation) {
 
 class MyAnimation implements WindowAnimation {
   private _canvas = new Canvas(800, 600);
-  private _angle: number = 0;
+  private z: Complex = new Complex(1,0);
   setUp() {
     
   }
   tick(elapsed: number) {
-    this._angle += 0.01;
-    this._canvas.backgroundColor = colorFromAngle(this._angle);
+    this._canvas.backgroundColor = colorFromAngle(this.z.arg());
     this._canvas.draw();
   }
   terminate(elapsed: number) {
-    return this._angle > 2 * Math.PI;
+    return false;
   }
   tearDown(ex: any) {
     this._canvas.close();
