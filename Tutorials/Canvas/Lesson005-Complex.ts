@@ -194,5 +194,17 @@ class MyAnimation implements WindowAnimation {
   }
 }
 
+class Complex {
+  public x: number;
+  public y: number;
+  constructor(x: number, y:number) {
+    this.x = x;
+    this.y = y;
+  }
+  arg(): number {
+    return Math.atan2(this.y, this.x);
+  }
+}
+
 var war = windowAnimationRunner(new MyAnimation());
 war.start();
