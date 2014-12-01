@@ -195,7 +195,7 @@ class ComplexPlane {
   }
 }
 
-var R = 3;
+var R = 2;
 var cp = new ComplexPlane(new MinMax(-R,+R), new MinMax(-R,+R),f);
 cp.draw();
 
