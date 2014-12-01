@@ -27,7 +27,18 @@ class Color {
  * Converts an angle to a color on a color wheel.
  */
 function colorFromAngle(theta: number): Color {
-  var sextant = ((theta / Math.PI) * 3) % 6;
+  function normalizeAngle(angle: number) {
+    if (angle > 2 * Math.PI) {
+      return normalizeAngle(angle - 2 * Math.PI);
+    }
+    else if (angle < 0) {
+      return normalizeAngle(angle + 2 * Math.PI);
+    }
+    else {
+      return angle;
+    }
+  }
+  var sextant = ((normalizeAngle(theta) / Math.PI) * 3) % 6;
   if (sextant >= 0 && sextant < 1) {
     return new Color(1.0,sextant-0,0.0);
   }
