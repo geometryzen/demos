@@ -87,6 +87,10 @@ class Canvas {
   }
 }
 
+interface Animation {
+  tick(): void;
+}
+
 /**
  * Handles the control of an animation.
  */
@@ -107,6 +111,12 @@ class WindowAnimationRunner {
    */
   public start() {
     this._wnd.requestAnimationFrame(this._animate);
+  }
+}
+
+class MyAnimation implements Animation {
+  tick() {
+    
   }
 }
 
