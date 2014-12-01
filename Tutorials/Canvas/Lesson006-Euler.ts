@@ -5,6 +5,8 @@
 // Workaround to prevent TS2082 and TS2087.
 // I don't know why this works.
 var unused: Window = window;
+var WIDTH = 800;
+var HEIGHT = 600;
 
 /**
  * A color value.
@@ -226,7 +228,7 @@ class MinMax {
 }
 
 class MyAnimation implements WindowAnimation {
-  private _canvas = new Canvas(800, 600);
+  private _canvas = new Canvas(WIDTH, HEIGHT);
   private _z: Complex = new Complex(1,0);
   private xRange: MinMax;
   private yRange: MinMax;
@@ -240,10 +242,10 @@ class MyAnimation implements WindowAnimation {
   tick(elapsed: number) {
     this._z = this._z.multiply(R);
     this._canvas.backgroundColor = colorFromAngle(this._z.arg());
-    for (var X=0;X<800;X++) {
-      for (var Y=0;Y<600;Y++) {
-        var x = (X / 800) * (this.xRange.max - this.xRange.min) + this.xRange.min;
-        var y = ((600-Y)/600) * (this.yRange.max - this.yRange.min) + this.yRange.min;
+    for (var X=0;X<WIDTH;X++) {
+      for (var Y=0;Y<HEIGHT;Y++) {
+        var x = (X / WIDTH) * (this.xRange.max - this.xRange.min) + this.xRange.min;
+        var y = ((HEIGHT-Y)/HEIGHT) * (this.yRange.max - this.yRange.min) + this.yRange.min;
         var z = new Complex(x,y);
         this._canvas.context.fillStyle = colorFromAngle(f(z).arg()).asFillStyle();
         this._canvas.context.fillRect(X,Y,1,1);
