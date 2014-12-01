@@ -272,7 +272,6 @@ class ComplexPlane implements WindowAnimation {
         var y = ((HEIGHT-Y)/HEIGHT) * (this.yRange.max - this.yRange.min) + this.yRange.min;
         var z = new Complex(x,y);
         var L = lightnessFromMagnitude(f(z).mod());
-        L = 0.5;
         this._canvas.context.fillStyle = colorFromHSL(f(z).arg(), 1, L).asFillStyle();
         this._canvas.context.fillRect(X,Y,1,1);
       }
