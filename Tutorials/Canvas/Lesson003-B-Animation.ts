@@ -100,14 +100,13 @@ class WindowAnimationRunner {
       this._tick();
       window.requestAnimationFrame(animate);
     }
+    animate();
   }
 }
 
 var canvas = new Canvas(800, 600);
 
 var angle = 0;
-
-canvas.backgroundColor = colorFromAngle(2 * Math.PI * Math.random());
 
 function tick() {
   angle += 0.01;
