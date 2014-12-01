@@ -67,7 +67,7 @@ class Canvas {
   public wnd: Window;
   private _width;
   private _height;
-  private _context;
+  public context: CanvasRenderingContext2D;
   constructor(width: number, height: number) {
     this._width = width;
     this._height = height;
@@ -85,12 +85,12 @@ class Canvas {
     // Remove the margin that pushes the canvas.
     popDoc.body.style.margin = "0";
     
-    this._context = canvas.getContext("2d");
+    this.context = canvas.getContext("2d");
   }
   
   public draw() {
-    this._context.fillStyle = this.backgroundColor.asFillStyle() 
-    this._context.fillRect(0, 0, this._width, this._height);
+    this.context.fillStyle = this.backgroundColor.asFillStyle() 
+    this.context.fillRect(0, 0, this._width, this._height);
   }
 
   public close() {
@@ -212,7 +212,15 @@ class MyAnimation implements WindowAnimation {
   tick(elapsed: number) {
     this._z = this._z.multiply(R);
     this._canvas.backgroundColor = colorFromAngle(this._z.arg());
-    this._canvas.draw();
+    for (var X=0;X<800;X++) {
+      for (var Y=0;Y<600;Y++) {
+        var x = (X / 800) * 2 + 1;
+        var y = ((600-Y)/600) * 2 + 1;
+        var z = new Complex(x,y);
+        this._canvas.context.fillStyle = colorFromAngle(z.arg()).asFillStyle();
+        this._canvas.context.fillRect(X,Y,1,1);
+      }
+    }
   }
   terminate(elapsed: number) {
     return elapsed > 20;
