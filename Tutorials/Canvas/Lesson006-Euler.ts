@@ -214,8 +214,8 @@ class MyAnimation implements WindowAnimation {
     this._canvas.backgroundColor = colorFromAngle(this._z.arg());
     for (var X=0;X<800;X++) {
       for (var Y=0;Y<600;Y++) {
-        var x = (X / 800) * 2 + 1;
-        var y = ((600-Y)/600) * 2 + 1;
+        var x = (X / 800) * 2 - 1;
+        var y = ((600-Y)/600) * 2 - 1;
         var z = new Complex(x,y);
         this._canvas.context.fillStyle = colorFromAngle(z.arg()).asFillStyle();
         this._canvas.context.fillRect(X,Y,1,1);
