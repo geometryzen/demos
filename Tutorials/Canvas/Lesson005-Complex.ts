@@ -26,3 +26,4 @@ console.log("i: " + i);
 
 console.log("arg(one) " + one.arg());
 console.log("arg(i) " + i.arg());
+console.log("arg(-1) " + new Complex(-1,0).arg());
