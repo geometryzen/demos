@@ -25,22 +25,22 @@ class Color {
 
 function colorFromAngle(theta: number): Color {
   var sextant = ((theta / Math.PI) * 3) % 6;
-  if (sextant > 0 && sextant <= 1) {
+  if (sextant >= 0 && sextant < 1) {
     return new Color(1.0,0.5,0.0);
   }
-  else if (sextant > 1 && sextant <= 2) {
+  else if (sextant >= 1 && sextant < 2) {
     return new Color(1.0,0.5,0.0);
   }
-  else if (sextant > 2 && sextant <= 3) {
+  else if (sextant >= 2 && sextant < 3) {
     return new Color(0.0,1.0,0.5);
   }
-  else if (sextant > 3 && sextant <= 4) {
+  else if (sextant >= 3 && sextant < 4) {
     return new Color(0.0,0.5,1.0);
   }
-  else if (sextant > 4 && sextant <= 5) {
+  else if (sextant >= 4 && sextant < 5) {
     return new Color(0.5,0.0,1.0);
   }
-  else if (sextant > 5 && sextant <= 6) {
+  else if (sextant >= 5 && sextant < 6) {
     return new Color(1.0,0.0,0.5);
   }
   else {
