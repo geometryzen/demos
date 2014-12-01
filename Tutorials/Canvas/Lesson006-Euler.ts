@@ -25,6 +25,14 @@ class Color {
   }
 }
 
+function sigmoid(t: number) {
+  return 1 / (1 + Math.exp(-t));
+}
+
+function lightnessFromMagnitude(r: number) {
+  return 2 * sigmoid(r) - 1.0
+}
+
 /**
  * Converts an angle, radius, height to a color on a color wheel.
  */
@@ -253,13 +261,12 @@ class ComplexPlane implements WindowAnimation {
   }
   tick(elapsed: number) {
     this._z = this._z.multiply(R);
-    this._canvas.backgroundColor = colorFromHSL(this._z.arg(), 1, 0.5);
     for (var X=0;X<WIDTH;X++) {
       for (var Y=0;Y<HEIGHT;Y++) {
         var x = (X / WIDTH) * (this.xRange.max - this.xRange.min) + this.xRange.min;
         var y = ((HEIGHT-Y)/HEIGHT) * (this.yRange.max - this.yRange.min) + this.yRange.min;
         var z = new Complex(x,y);
-        this._canvas.context.fillStyle = colorFromHSL(f(z).arg(), 1, 0.5).asFillStyle();
+        this._canvas.context.fillStyle = colorFromHSL(f(z).arg(), 1, lightnessFromMagnitude(z.mod())).asFillStyle();
         this._canvas.context.fillRect(X,Y,1,1);
       }
     }
