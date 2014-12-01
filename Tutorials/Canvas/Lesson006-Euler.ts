@@ -55,10 +55,10 @@ function colorFromHSL(H: number, S: number, L: number): Color {
   }
   var sextant = ((normalizeAngle(H) / Math.PI) * 3) % 6;
   if (sextant >= 0 && sextant < 1) {
-    return matchLightness(C,(sextant-0)*C,0.0);
+    return matchLightness(C,C*(sextant-0),0.0);
   }
   else if (sextant >= 1 && sextant < 2) {
-    return matchLightness(2-sextant,C,0.0);
+    return matchLightness(C*(2-sextant),C,0.0);
   }
   else if (sextant >= 2 && sextant < 3) {
     return matchLightness(0.0,C,sextant-2);
