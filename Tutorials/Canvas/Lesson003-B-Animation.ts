@@ -91,16 +91,14 @@ class Canvas {
  * Handles the control of an animation.
  */
 class WindowAnimationRunner {
-  private _tick: () => void;
   private _wnd: Window;
   private _animate;
   constructor(tick: () => void, w: Window) {
-    this._tick = tick;
     this._wnd = w;
     var self = this;
     this._animate = function() {
       tick();
-      w.requestAnimationFrame(self._animate);
+      w.requestAnimationFrame(this._animate);
     }
   }
   /**
