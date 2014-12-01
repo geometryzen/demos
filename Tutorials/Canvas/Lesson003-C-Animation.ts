@@ -89,20 +89,21 @@ class Canvas {
 
 interface Animation {
   tick(): void;
+  window();
 }
 
 /**
  * Handles the control of an animation.
  */
 class WindowAnimationRunner {
-  private _wnd: Window;
+  private _animation: Animation;
   private _animate;
-  constructor(animation: Animation, w: Window) {
-    this._wnd = w;
+  constructor(animation: Animation) {
+    this._animation = animation;
     var self = this;
     var animate = function() {
       animation.tick();
-      w.requestAnimationFrame(animate);
+      animation.window().requestAnimationFrame(animate);
     }
     this._animate = animate;
   }
@@ -110,22 +111,24 @@ class WindowAnimationRunner {
    * Starts the animation.
    */
   public start() {
-    this._wnd.requestAnimationFrame(this._animate);
+    this._animation.window().requestAnimationFrame(this._animate);
   }
 }
 
 class MyAnimation implements Animation {
+  private _canvas = new Canvas(800, 600);
   private _angle: number = 0;
   tick() {
     this._angle += 0.01;
-    canvas.backgroundColor = colorFromAngle(this._angle);
-    canvas.draw();
+    this._canvas.backgroundColor = colorFromAngle(this._angle);
+    this._canvas.draw();
+  }
+  window() {
+    return this._canvas.wnd;
   }
 }
 
-var canvas = new Canvas(800, 600);
-
 var anime = new MyAnimation();
 
-var war = new WindowAnimationRunner(anime, canvas.wnd);
+var war = new WindowAnimationRunner(anime);
 war.start();
