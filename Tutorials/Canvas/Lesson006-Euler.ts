@@ -193,6 +193,12 @@ class Complex {
   arg(): number {
     return Math.atan2(this.y, this.x);
   }
+  add(that: Complex): Complex {
+    return new Complex(this.x + that.x, this.y + that.y);
+  }
+  subtract(that: Complex): Complex {
+    return new Complex(this.x - that.x, this.y - that.y);
+  }
   multiply(that: Complex): Complex {
     return new Complex(this.x * that.x - this.y * that.y, this.x * that.y + this.y * that.x);
   }
@@ -204,7 +210,7 @@ class Complex {
 var R = new Complex(Math.cos(0.01), Math.sin(0.01));
 
 var f = function(z: Complex): Complex {
-  return z.multiply(z).multiply(z);
+  return z.subtract(new Complex(1,0)).multiply(z).multiply(z);
 };
 
 class MinMax {
