@@ -89,7 +89,8 @@ class Canvas {
 
 interface WindowAnimation {
   tick(): void;
-  window();
+  terminate(): boolean;
+  window(): Window;
 }
 
 /**
@@ -101,9 +102,15 @@ class WindowAnimationRunner {
   constructor(animation: WindowAnimation) {
     this._animation = animation;
     var self = this;
+    var frame: number;
     var animate = function() {
-      animation.tick();
-      animation.window().requestAnimationFrame(animate);
+      if (animation.terminate()) {
+        animation.window().cancelAnimationFrame(frame);
+      }
+      else {
+        animation.tick();
+        frame = animation.window().requestAnimationFrame(animate);
+      }
     }
     this._animate = animate;
   }
@@ -122,6 +129,9 @@ class MyAnimation implements WindowAnimation {
     this._angle += 0.01;
     this._canvas.backgroundColor = colorFromAngle(this._angle);
     this._canvas.draw();
+  }
+  terminate() {
+    return false;
   }
   window() {
     return this._canvas.wnd;
