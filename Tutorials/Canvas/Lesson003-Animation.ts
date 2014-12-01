@@ -23,7 +23,7 @@ class Color {
   }
 }
 
-function colorFromAngle() {
+function colorFromAngle(theta: number) {
   return new Color(0.5,0.5,0.5);
 }
 
