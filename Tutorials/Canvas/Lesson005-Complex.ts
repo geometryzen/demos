@@ -11,6 +11,9 @@ class Complex {
   multiply(that: Complex): Complex {
     return new Complex(this.x * that.x - this.y * that.y, this.x * that.y + this.y * that.x);
   }
+  toString(): String {
+    return this.x + "+" + this.y + "i";
+  }
 }
 
 var zero = new Complex(0,0);
