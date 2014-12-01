@@ -131,7 +131,7 @@ class MyAnimation implements WindowAnimation {
     this._canvas.draw();
   }
   terminate() {
-    return false;
+    return this._angle > 2 * Math.PI;
   }
   window() {
     return this._canvas.wnd;
