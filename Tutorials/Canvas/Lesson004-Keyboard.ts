@@ -99,7 +99,7 @@ interface WindowAnimation {
  * Handles the control of an animation.
  */
 var windowAnimationRunner = function(animation: WindowAnimation) {
-    var win = anime.window();
+    var win = animation.window();
     var escKeyPressed = false;
     var pauseKeyPressed = false;
     var enterKeyPressed = false;
@@ -194,7 +194,5 @@ class MyAnimation implements WindowAnimation {
   }
 }
 
-var anime = new MyAnimation();
-
-var war = windowAnimationRunner(anime);
+var war = windowAnimationRunner(new MyAnimation());
 war.start();
