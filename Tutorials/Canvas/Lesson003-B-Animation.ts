@@ -91,8 +91,15 @@ class Canvas {
  * Handles the control of an animation.
  */
 class WindowAnimationRunner {
+  private _tick;
   constructor(tick: () => void) {
-    
+    this._tick = tick;
+  }
+  public start() {
+    function animate() {
+      this._tick();
+      window.requestAnimationFrame(animate);
+    }
   }
 }
 
@@ -102,14 +109,11 @@ var angle = 0;
 
 canvas.backgroundColor = colorFromAngle(2 * Math.PI * Math.random());
 
-function animate() {
+function tick() {
   angle += 0.01;
   canvas.backgroundColor = colorFromAngle(angle);
   canvas.draw();
-  
-  window.requestAnimationFrame(animate);
 }
 
-var frame: number = window.requestAnimationFrame(animate);
-
-animate();
+var war = new WindowAnimationRunner(tick);
+war.start();
