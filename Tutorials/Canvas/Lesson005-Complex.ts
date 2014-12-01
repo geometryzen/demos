@@ -205,7 +205,7 @@ class Complex {
     this.y = y;
   }
   arg(): number {
-    return Math.atan2(this.y, this.x);
+    return Math.atan2(this.x, this.y);
   }
   multiply(that: Complex): Complex {
     return new Complex(this.x * that.x - this.y * that.y, this.x * that.y + this.y * that.x);
