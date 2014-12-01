@@ -97,11 +97,11 @@ interface Animation {
 class WindowAnimationRunner {
   private _wnd: Window;
   private _animate;
-  constructor(tick: () => void, w: Window) {
+  constructor(animation: Animation, w: Window) {
     this._wnd = w;
     var self = this;
     var animate = function() {
-      tick();
+      animation.tick();
       w.requestAnimationFrame(animate);
     }
     this._animate = animate;
@@ -125,8 +125,7 @@ class MyAnimation implements Animation {
 
 var canvas = new Canvas(800, 600);
 
-function draw(): void {
-}
+var anime = new MyAnimation();
 
-var war = new WindowAnimationRunner(draw, canvas.wnd);
+var war = new WindowAnimationRunner(anime, canvas.wnd);
 war.start();
