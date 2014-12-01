@@ -87,7 +87,7 @@ class Canvas {
   }
 }
 
-interface Animation {
+interface WindowAnimation {
   tick(): void;
   window();
 }
@@ -96,9 +96,9 @@ interface Animation {
  * Handles the control of an animation.
  */
 class WindowAnimationRunner {
-  private _animation: Animation;
+  private _animation: WindowAnimation;
   private _animate;
-  constructor(animation: Animation) {
+  constructor(animation: WindowAnimation) {
     this._animation = animation;
     var self = this;
     var animate = function() {
@@ -115,7 +115,7 @@ class WindowAnimationRunner {
   }
 }
 
-class MyAnimation implements Animation {
+class MyAnimation implements WindowAnimation {
   private _canvas = new Canvas(800, 600);
   private _angle: number = 0;
   tick() {
