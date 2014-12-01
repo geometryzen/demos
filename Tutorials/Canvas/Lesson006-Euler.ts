@@ -174,7 +174,7 @@ var windowAnimationRunner = function(animation: WindowAnimation) {
 
 class MyAnimation implements WindowAnimation {
   private _canvas = new Canvas(800, 600);
-  private _angle: number = 0;
+  private _z: number = 0;
   setUp() {
     
   }
