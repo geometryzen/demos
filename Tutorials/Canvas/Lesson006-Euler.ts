@@ -51,7 +51,7 @@ function colorFromHSL(H: number, S: number, L: number): Color {
   }
   function matchLightness(R: number, G: number, B: number): Color {
     var m = L - (0.5 * C);
-    return new Color(R + m, G + m, B + m);
+    return new Color(Math.round(R + m), Math.round(G + m), Math.round(B + m));
   }
   var sextant = ((normalizeAngle(H) / Math.PI) * 3) % 6;
   var X = C * (1 - Math.abs(sextant));
