@@ -93,19 +93,21 @@ class Canvas {
 class WindowAnimationRunner {
   private _tick: () => void;
   private _wnd: Window;
+  private _animate;
   constructor(tick: () => void, w: Window) {
     this._tick = tick;
     this._wnd = w;
+    var self = this;
+    this._animate = function() {
+      tick();
+      w.requestAnimationFrame(self._animate());
+    }
   }
   /**
    * Starts the animation.
    */
   public start() {
-    function animate() {
-      this._tick();
-      this._wnd.requestAnimationFrame(animate);
-    }
-    this._wnd.requestAnimationFrame(animate);
+    this._wnd.requestAnimationFrame(this._animate);
   }
 }
 
