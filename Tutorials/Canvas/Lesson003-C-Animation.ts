@@ -115,20 +115,17 @@ class WindowAnimationRunner {
 }
 
 class MyAnimation implements Animation {
+  private _angle: number = 0;
   tick() {
-    
+    this._angle += 0.01;
+    canvas.backgroundColor = colorFromAngle(this._angle);
+    canvas.draw();
   }
 }
 
 var canvas = new Canvas(800, 600);
 
-var angle = 0;
-
 function draw(): void {
-  angle += 0.01;
-  canvas.backgroundColor = colorFromAngle(angle);
-  console.log("angle: " + angle);
-  canvas.draw();
 }
 
 var war = new WindowAnimationRunner(draw, canvas.wnd);
