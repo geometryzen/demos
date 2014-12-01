@@ -169,7 +169,7 @@ class MinMax {
 }
 
 function sigmoid(t: number) {
-  return 1 / (1 + Math.exp(-t*t/1000));
+  return 1 / (1 + Math.exp(-t*t/2000));
 }
 
 function lightnessFromMagnitude(r: number) {
