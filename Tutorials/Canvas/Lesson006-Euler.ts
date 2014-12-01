@@ -51,7 +51,6 @@ class Color {
     }
     function matchLightness(R: number, G: number, B: number): Color {
       var x = Color.luminance(R, G, B);
-      console.log("x: " + x);
       var m = L - (0.5 * C);
       return new Color(R + m, G + m, B + m);
     }
