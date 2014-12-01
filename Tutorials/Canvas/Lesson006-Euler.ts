@@ -197,6 +197,9 @@ class Complex {
     this.x = x;
     this.y = y;
   }
+  mod(): number {
+    return Math.sqrt(this.x * this.x + this.y * this.y);
+  }
   arg(): number {
     return Math.atan2(this.y, this.x);
   }
