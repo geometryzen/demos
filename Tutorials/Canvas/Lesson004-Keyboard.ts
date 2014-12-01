@@ -88,35 +88,60 @@ class Canvas {
 }
 
 interface WindowAnimation {
-  tick(): void;
-  terminate(): boolean;
+  setUp(): void;
+  tick(elapsed: number): void;
+  terminate(elapsed: number): boolean;
+  tearDown(ex: any): void;
   window(): Window;
 }
 
 /**
  * Handles the control of an animation.
  */
-class WindowAnimationRunner {
-  private _animation: WindowAnimation;
-  private _callback;
-  constructor(animation: WindowAnimation) {
-    this._animation = animation;
-    var self = this;
-    var frame: number;
+var windowAnimationRunner = function(animation: WindowAnimation) {
+    var win = anime.window();
     var escKeyPressed = false;
     var pauseKeyPressed = false;
-    var enterKeyPressed;
-    var callback: FrameRequestCallback = function(timestamp: number) {
-      if (animation.terminate()) {
-        animation.window().cancelAnimationFrame(frame);
-      }
-      else {
-        animation.tick();
-        frame = animation.window().requestAnimationFrame(callback);
-      }
+    var enterKeyPressed = false;
+    var startTime: number = null;
+    var elapsed: number = null;
+    var MILLIS_PER_SECOND = 1000;
+    var requestID: number = null;
+    var exception: any = null;
+
+    var animate: FrameRequestCallback = function(timestamp) {
+        if (startTime) {
+            elapsed = timestamp - startTime;
+        }
+        else {
+            startTime = timestamp;
+            elapsed = 0;
+        }
+
+        if (escKeyPressed || animation.terminate(elapsed / MILLIS_PER_SECOND)) {
+            escKeyPressed = false;
+
+            win.cancelAnimationFrame(requestID);
+            win.document.removeEventListener('keydown', onDocumentKeyDown, false);
+            try {
+                animation.tearDown(exception);
+            }
+            catch (e) {
+                console.log(e);
+            }
+        }
+        else {
+            requestID = win.requestAnimationFrame(animate);
+            try {
+                animation.tick(elapsed / MILLIS_PER_SECOND);
+            }
+            catch (e) {
+                exception = e;
+                escKeyPressed = true;
+            }
+        }
     };
-    this._callback = callback;
-    
+
     var onDocumentKeyDown = function(event: KeyboardEvent) {
         if (event.keyCode == 27) {
             escKeyPressed = true;
@@ -132,18 +157,27 @@ class WindowAnimationRunner {
         }
     };
 
-  }
-  /**
-   * Starts the animation.
-   */
-  public start() {
-    this._animation.window().requestAnimationFrame(this._callback);
-  }
-}
+    var that =
+        {
+            start: function() {
+                animation.setUp();
+                win.document.addEventListener('keydown', onDocumentKeyDown, false);
+                requestID = win.requestAnimationFrame(animate);
+            },
+            stop: function() {
+                escKeyPressed = true;
+            }
+        };
+
+    return that;
+};
 
 class MyAnimation implements WindowAnimation {
   private _canvas = new Canvas(800, 600);
   private _angle: number = 0;
+  setUp() {
+    
+  }
   tick() {
     this._angle += 0.01;
     this._canvas.backgroundColor = colorFromAngle(this._angle);
@@ -152,6 +186,9 @@ class MyAnimation implements WindowAnimation {
   terminate() {
     return this._angle > 2 * Math.PI;
   }
+  tearDown(ex: any) {
+    
+  }
   window() {
     return this._canvas.wnd;
   }
@@ -159,5 +196,5 @@ class MyAnimation implements WindowAnimation {
 
 var anime = new MyAnimation();
 
-var war = new WindowAnimationRunner(anime);
+var war = windowAnimationRunner(anime);
 war.start();
