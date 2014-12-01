@@ -106,8 +106,9 @@ function animate() {
   angle += 0.01;
   canvas.backgroundColor = colorFromAngle(angle);
   canvas.draw();
-  
-  window.requestAnimationFrame(animate);
+  if (angle < 2 * Math.PI) {
+    window.requestAnimationFrame(animate);
+  }
 }
 
 var frame: number = window.requestAnimationFrame(animate);
