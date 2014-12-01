@@ -203,6 +203,10 @@ class Complex {
 
 var R = new Complex(Math.cos(0.01), Math.sin(0.01));
 
+var f = function(z: Complex): Complex {
+  return z;
+};
+
 class MyAnimation implements WindowAnimation {
   private _canvas = new Canvas(800, 600);
   private _z: Complex = new Complex(1,0);
@@ -217,7 +221,7 @@ class MyAnimation implements WindowAnimation {
         var x = (X / 800) * 2 - 1;
         var y = ((600-Y)/600) * 2 - 1;
         var z = new Complex(x,y);
-        this._canvas.context.fillStyle = colorFromAngle(z.arg()).asFillStyle();
+        this._canvas.context.fillStyle = colorFromAngle(f(z).arg()).asFillStyle();
         this._canvas.context.fillRect(X,Y,1,1);
       }
     }
