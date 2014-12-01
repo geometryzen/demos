@@ -174,7 +174,7 @@ var windowAnimationRunner = function(animation: WindowAnimation) {
 
 class MyAnimation implements WindowAnimation {
   private _canvas = new Canvas(800, 600);
-  private z: Complex = new Complex(1,0);
+  private z: Complex = new Complex(0,1);
   setUp() {
     
   }
