@@ -225,8 +225,6 @@ class Complex {
   }
 }
 
-var R = new Complex(Math.cos(0.01), Math.sin(0.01));
-
 var f = function(z: Complex): Complex {
   return z;
   /*
@@ -249,7 +247,6 @@ class MinMax {
 
 class ComplexPlane implements WindowAnimation {
   private _canvas = new Canvas(WIDTH, HEIGHT);
-  private _z: Complex = new Complex(1,0);
   private xRange: MinMax;
   private yRange: MinMax;
   constructor(xRange: MinMax, yRange: MinMax) {
@@ -260,7 +257,6 @@ class ComplexPlane implements WindowAnimation {
     
   }
   tick(elapsed: number) {
-    this._z = this._z.multiply(R);
     for (var X=0;X<WIDTH;X++) {
       for (var Y=0;Y<HEIGHT;Y++) {
         var x = (X / WIDTH) * (this.xRange.max - this.xRange.min) + this.xRange.min;
@@ -281,7 +277,8 @@ class ComplexPlane implements WindowAnimation {
     return this._canvas.wnd;
   }
 }
-var cp = new ComplexPlane(new MinMax(-1,+1), new MinMax(-1,+1));
+var R = 2;
+var cp = new ComplexPlane(new MinMax(-R,+R), new MinMax(-R,+R));
 cp.tick(0);
 //var war = windowAnimationRunner(cp);
 //war.start();
