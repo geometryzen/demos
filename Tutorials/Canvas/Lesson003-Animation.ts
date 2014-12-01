@@ -86,9 +86,12 @@ class Canvas {
 
 var canvas = new Canvas(800, 600);
 
+var angle = 0;
+
 canvas.backgroundColor = colorFromAngle(2 * Math.PI * Math.random());
 
 function animate() {
+  canvas.backgroundColor = colorFromAngle(angle);
   canvas.draw();
   
   window.requestAnimationFrame(animate);
