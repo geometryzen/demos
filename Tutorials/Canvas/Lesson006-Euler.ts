@@ -20,64 +20,55 @@ class Color {
     this._green = green;
     this._blue = blue;
   }
-  toString(): string {
+  public toString(): string {
     return "rgb(" + this._red + ", " + this._green + "," + this._blue + ")"
   }
   public asFillStyle() {
     return "rgb(" + Math.floor(this._red*255) + ", " + Math.floor(this._green*255) + "," + Math.floor(this._blue*255) + ")"
   }
-}
-
-function sigmoid(t: number) {
-  return 1 / (1 + Math.exp(-t));
-}
-
-function lightnessFromMagnitude(r: number) {
-  return 2 * sigmoid(r) - 1.0
-}
-
-/**
- * Converts an angle, radius, height to a color on a color wheel.
- */
-function colorFromHSL(H: number, S: number, L: number): Color {
-  var C = (1 - Math.abs(2*L-1)) * S;
-  function normalizeAngle(angle: number) {
-    if (angle > 2 * Math.PI) {
-      return normalizeAngle(angle - 2 * Math.PI);
+  /**
+   * Converts an angle, radius, height to a color on a color wheel.
+   */
+  public static fromHSL(H: number, S: number, L: number): Color {
+    var C = (1 - Math.abs(2*L-1)) * S;
+    function normalizeAngle(angle: number) {
+      if (angle > 2 * Math.PI) {
+        return normalizeAngle(angle - 2 * Math.PI);
+      }
+      else if (angle < 0) {
+        return normalizeAngle(angle + 2 * Math.PI);
+      }
+      else {
+        return angle;
+      }
     }
-    else if (angle < 0) {
-      return normalizeAngle(angle + 2 * Math.PI);
+    function matchLightness(R: number, G: number, B: number): Color {
+      var m = L - (0.5 * C);
+      return new Color(R + m, G + m, B + m);
+    }
+    var sextant = ((normalizeAngle(H) / Math.PI) * 3) % 6;
+    var X = C * (1 - Math.abs(sextant % 2 - 1));
+    if (sextant >= 0 && sextant < 1) {
+      return matchLightness(C,X/*C*(sextant-0)*/,0.0);
+    }
+    else if (sextant >= 1 && sextant < 2) {
+      return matchLightness(X/*C*(2-sextant)*/,C,0.0);
+    }
+    else if (sextant >= 2 && sextant < 3) {
+      return matchLightness(0.0,C,C*(sextant-2));
+    }
+    else if (sextant >= 3 && sextant < 4) {
+      return matchLightness(0.0,C*(4-sextant),C);
+    }
+    else if (sextant >= 4 && sextant < 5) {
+      return matchLightness(X,0.0,C);
+    }
+    else if (sextant >= 5 && sextant < 6) {
+      return matchLightness(C,0.0,X);
     }
     else {
-      return angle;
+      return matchLightness(0.0,0.0,0.0);
     }
-  }
-  function matchLightness(R: number, G: number, B: number): Color {
-    var m = L - (0.5 * C);
-    return new Color(R + m, G + m, B + m);
-  }
-  var sextant = ((normalizeAngle(H) / Math.PI) * 3) % 6;
-  var X = C * (1 - Math.abs(sextant % 2 - 1));
-  if (sextant >= 0 && sextant < 1) {
-    return matchLightness(C,X/*C*(sextant-0)*/,0.0);
-  }
-  else if (sextant >= 1 && sextant < 2) {
-    return matchLightness(X/*C*(2-sextant)*/,C,0.0);
-  }
-  else if (sextant >= 2 && sextant < 3) {
-    return matchLightness(0.0,C,C*(sextant-2));
-  }
-  else if (sextant >= 3 && sextant < 4) {
-    return matchLightness(0.0,C*(4-sextant),C);
-  }
-  else if (sextant >= 4 && sextant < 5) {
-    return matchLightness(X,0.0,C);
-  }
-  else if (sextant >= 5 && sextant < 6) {
-    return matchLightness(C,0.0,X);
-  }
-  else {
-    return matchLightness(0.0,0.0,0.0);
   }
 }
 
@@ -169,6 +160,14 @@ class MinMax {
   }
 }
 
+function sigmoid(t: number) {
+  return 1 / (1 + Math.exp(-t));
+}
+
+function lightnessFromMagnitude(r: number) {
+  return 2 * sigmoid(r) - 1.0
+}
+
 class ComplexPlane {
   private _canvas = new Canvas(WIDTH, HEIGHT);
   private xRange: MinMax;
@@ -189,7 +188,7 @@ class ComplexPlane {
         var S = 1;
         var L = lightnessFromMagnitude(this.f(z).mod());
         L = 0.5;
-        this._canvas.context.fillStyle = colorFromHSL(H, S, L).asFillStyle();
+        this._canvas.context.fillStyle = Color.fromHSL(H, S, L).asFillStyle();
         this._canvas.context.fillRect(X,Y,1,1);
       }
     }
