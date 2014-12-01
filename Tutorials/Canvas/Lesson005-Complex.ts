@@ -12,3 +12,7 @@ class Complex {
     return new Complex(this.x * that.x - this.y * that.y, this.x * that.y + this.y * that.x);
   }
 }
+
+var zero = new Complex(0,0);
+
+console.log("" + zero);
