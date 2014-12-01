@@ -179,6 +179,7 @@ class MyAnimation implements WindowAnimation {
     
   }
   tick(elapsed: number) {
+    this.z = this.z.multiply(new Complex(0.9,0.1));
     this._canvas.backgroundColor = colorFromAngle(this.z.arg());
     this._canvas.draw();
   }
@@ -202,6 +203,9 @@ class Complex {
   }
   arg(): number {
     return Math.atan2(this.y, this.x);
+  }
+  multiply(that: Complex): Complex {
+    return new Complex(this.x * that.x - this.y * that.y, this.x * that.y + this.y * that.x);
   }
 }
 
