@@ -5,8 +5,8 @@
 // Workaround to prevent TS2082 and TS2087.
 // I don't know why this works.
 var unused: Window = window;
-var WIDTH = 800;
-var HEIGHT = 600;
+var WIDTH = 400;
+var HEIGHT = 400;
 
 /**
  * A color value.
