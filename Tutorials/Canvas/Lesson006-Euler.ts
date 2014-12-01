@@ -210,6 +210,9 @@ var f = function(z: Complex): Complex {
 class MyAnimation implements WindowAnimation {
   private _canvas = new Canvas(800, 600);
   private _z: Complex = new Complex(1,0);
+  constructor() {
+    
+  }
   setUp() {
     
   }
