@@ -227,7 +227,7 @@ class MinMax {
   }
 }
 
-class MyAnimation implements WindowAnimation {
+class ComplexPlane implements WindowAnimation {
   private _canvas = new Canvas(WIDTH, HEIGHT);
   private _z: Complex = new Complex(1,0);
   private xRange: MinMax;
@@ -262,6 +262,6 @@ class MyAnimation implements WindowAnimation {
     return this._canvas.wnd;
   }
 }
-
-var war = windowAnimationRunner(new MyAnimation(new MinMax(-10,+10), new MinMax(-10,+10)));
+var cp = new ComplexPlane(new MinMax(-10,+10), new MinMax(-10,+10));
+var war = windowAnimationRunner(cp);
 war.start();
