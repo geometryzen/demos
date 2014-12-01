@@ -103,7 +103,7 @@ class WindowAnimationRunner {
     this._animation = animation;
     var self = this;
     var frame: number;
-    var callback: FrameRequestCallback = function() {
+    var callback: FrameRequestCallback = function(timestamp: number) {
       if (animation.terminate()) {
         animation.window().cancelAnimationFrame(frame);
       }
