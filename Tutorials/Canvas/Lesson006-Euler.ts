@@ -215,7 +215,7 @@ class MyAnimation implements WindowAnimation {
     this._canvas.draw();
   }
   terminate(elapsed: number) {
-    return this._z.arg() > 2 * Math.PI;
+    return elapsed > 10;
   }
   tearDown(ex: any) {
     this._canvas.close();
