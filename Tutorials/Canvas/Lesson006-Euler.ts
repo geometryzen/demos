@@ -172,19 +172,39 @@ var windowAnimationRunner = function(animation: WindowAnimation) {
     return that;
 };
 
+class Complex {
+  public x: number;
+  public y: number;
+  constructor(x: number, y:number) {
+    this.x = x;
+    this.y = y;
+  }
+  arg(): number {
+    return Math.atan2(this.y, this.x);
+  }
+  multiply(that: Complex): Complex {
+    return new Complex(this.x * that.x - this.y * that.y, this.x * that.y + this.y * that.x);
+  }
+  toString(): String {
+    return this.x + "+" + this.y + "i";
+  }
+}
+
+var R = new Complex(Math.cos(0.01), Math.sin(0.01));
+
 class MyAnimation implements WindowAnimation {
   private _canvas = new Canvas(800, 600);
-  private _z: number = 0;
+  private _z: Complex = new Complex(1,0);
   setUp() {
     
   }
   tick(elapsed: number) {
-    this._angle += 0.01;
-    this._canvas.backgroundColor = colorFromAngle(this._angle);
+    this._z = this._z.multiply(R);
+    this._canvas.backgroundColor = colorFromAngle(this._z.arg());
     this._canvas.draw();
   }
   terminate(elapsed: number) {
-    return this._angle > 2 * Math.PI;
+    return this._z.arg() > 2 * Math.PI;
   }
   tearDown(ex: any) {
     this._canvas.close();
