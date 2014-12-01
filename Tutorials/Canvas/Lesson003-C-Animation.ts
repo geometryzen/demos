@@ -98,27 +98,27 @@ interface WindowAnimation {
  */
 class WindowAnimationRunner {
   private _animation: WindowAnimation;
-  private _animate;
+  private _callback;
   constructor(animation: WindowAnimation) {
     this._animation = animation;
     var self = this;
     var frame: number;
-    var animate = function() {
+    var callback: FrameRequestCallback = function() {
       if (animation.terminate()) {
         animation.window().cancelAnimationFrame(frame);
       }
       else {
         animation.tick();
-        frame = animation.window().requestAnimationFrame(animate);
+        frame = animation.window().requestAnimationFrame(callback);
       }
     }
-    this._animate = animate;
+    this._callback = callback;
   }
   /**
    * Starts the animation.
    */
   public start() {
-    this._animation.window().requestAnimationFrame(this._animate);
+    this._animation.window().requestAnimationFrame(this._callback);
   }
 }
 
