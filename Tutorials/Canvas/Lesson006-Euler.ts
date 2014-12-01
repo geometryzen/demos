@@ -234,7 +234,8 @@ class Complex {
 }
 
 var f = function(z: Complex): Complex {
-  return new Complex(1,0).divide(z);
+  return z;
+  //return new Complex(1,0).divide(z);
   /*
   var z3 = z.multiply(z).multiply(z);
   var z2 = z.multiply(z);
