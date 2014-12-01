@@ -7,7 +7,7 @@
 var unused: Window = window;
 
 /**
- * 
+ * A color value.
  */
 class Color {
   private _red: number;
@@ -23,6 +23,9 @@ class Color {
   }
 }
 
+/**
+ * Converts an angle to a color on a color wheel.
+ */
 function colorFromAngle(theta: number): Color {
   var sextant = ((theta / Math.PI) * 3) % 6;
   if (sextant >= 0 && sextant < 1) {
