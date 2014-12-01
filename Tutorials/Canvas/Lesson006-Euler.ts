@@ -207,11 +207,21 @@ var f = function(z: Complex): Complex {
   return z.multiply(z).multiply(z);
 };
 
+class MinMax {
+  public min: number;
+  public max: number;
+  constructor(min: number, max: number) {
+    this.min = min;
+    this.max = max;
+  }
+}
+
 class MyAnimation implements WindowAnimation {
   private _canvas = new Canvas(800, 600);
   private _z: Complex = new Complex(1,0);
-  constructor() {
-    
+  private xRange: MinMax;
+  constructor(xRange: MinMax) {
+    this.xRange = xRange;
   }
   setUp() {
     
@@ -221,7 +231,7 @@ class MyAnimation implements WindowAnimation {
     this._canvas.backgroundColor = colorFromAngle(this._z.arg());
     for (var X=0;X<800;X++) {
       for (var Y=0;Y<600;Y++) {
-        var x = (X / 800) * 2 - 1;
+        var x = (X / 800) * (this.xRange.max - this.xRange.min) + this.xRange.min;
         var y = ((600-Y)/600) * 2 - 1;
         var z = new Complex(x,y);
         this._canvas.context.fillStyle = colorFromAngle(f(z).arg()).asFillStyle();
@@ -240,5 +250,5 @@ class MyAnimation implements WindowAnimation {
   }
 }
 
-var war = windowAnimationRunner(new MyAnimation());
+var war = windowAnimationRunner(new MyAnimation(new MinMax(-1,1)));
 war.start();
