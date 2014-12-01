@@ -149,14 +149,14 @@ class Complex {
 
 var f = function(z: Complex): Complex {
   //return z;
-  return new Complex(1,0).divide(z);
-  /*
+  // return new Complex(1,0).divide(z);
+  
   var z3 = z.multiply(z).multiply(z);
   var z2 = z.multiply(z);
   var sz = new Complex(6,0).multiply(z);
   var tw = new Complex(20,0);
   return z3.add(z2).add(sz).subtract(tw);
-  */
+  
 };
 
 class MinMax {
