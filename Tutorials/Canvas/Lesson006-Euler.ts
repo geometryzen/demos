@@ -28,7 +28,7 @@ class Color {
 /**
  * Converts an angle to a color on a color wheel.
  */
-function colorFromAngle(theta: number): Color {
+function colorFromHSL(theta: number, r: number, h: number): Color {
   function normalizeAngle(angle: number) {
     if (angle > 2 * Math.PI) {
       return normalizeAngle(angle - 2 * Math.PI);
@@ -245,13 +245,13 @@ class ComplexPlane implements WindowAnimation {
   }
   tick(elapsed: number) {
     this._z = this._z.multiply(R);
-    this._canvas.backgroundColor = colorFromAngle(this._z.arg());
+    this._canvas.backgroundColor = colorFromHSL(this._z.arg(), 1, 0.5);
     for (var X=0;X<WIDTH;X++) {
       for (var Y=0;Y<HEIGHT;Y++) {
         var x = (X / WIDTH) * (this.xRange.max - this.xRange.min) + this.xRange.min;
         var y = ((HEIGHT-Y)/HEIGHT) * (this.yRange.max - this.yRange.min) + this.yRange.min;
         var z = new Complex(x,y);
-        this._canvas.context.fillStyle = colorFromAngle(f(z).arg()).asFillStyle();
+        this._canvas.context.fillStyle = colorFromHSL(f(z).arg(), 1, 0.5).asFillStyle();
         this._canvas.context.fillRect(X,Y,1,1);
       }
     }
