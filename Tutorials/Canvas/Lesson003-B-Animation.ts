@@ -100,7 +100,7 @@ class WindowAnimationRunner {
     var self = this;
     this._animate = function() {
       tick();
-      w.requestAnimationFrame(self._animate());
+      w.requestAnimationFrame(self._animate);
     }
   }
   /**
