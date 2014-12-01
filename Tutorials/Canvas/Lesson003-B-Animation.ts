@@ -53,16 +53,16 @@ function colorFromAngle(theta: number): Color {
 
 class Canvas {
   public backgroundColor: Color = new Color(127, 127, 127);
-  private _window: Window;
+  public wnd: Window;
   private _width;
   private _height;
   private _context;
   constructor(width: number, height: number) {
     this._width = width;
     this._height = height;
-    this._window = window.open("", "", "width=" + width + ", height=" + height, false);
+    this.wnd = window.open("", "", "width=" + width + ", height=" + height, false);
     
-    var popDoc: Document = this._window.document;
+    var popDoc: Document = this.wnd.document;
     
     var canvas: HTMLCanvasElement = popDoc.createElement("canvas");
     
@@ -83,7 +83,7 @@ class Canvas {
   }
 
   public close() {
-    this._window.close();
+    this.wnd.close();
   }
 }
 
@@ -91,8 +91,8 @@ class Canvas {
  * Handles the control of an animation.
  */
 class WindowAnimationRunner {
-  private _tick;
-  constructor(tick: () => void) {
+  private _tick: () => void;
+  constructor(tick: () => void, w: Window) {
     this._tick = tick;
   }
   public start() {
@@ -108,11 +108,11 @@ var canvas = new Canvas(800, 600);
 
 var angle = 0;
 
-function tick() {
+function tick(): void {
   angle += 0.01;
   canvas.backgroundColor = colorFromAngle(angle);
   canvas.draw();
 }
 
-var war = new WindowAnimationRunner(tick);
+var war = new WindowAnimationRunner(tick, canvas.wnd);
 war.start();
