@@ -18,6 +18,8 @@ class Complex {
 
 var zero = new Complex(0,0);
 var one = new Complex(1,0);
+var i = new Complex(0,1);
 
 console.log("zero: " + zero);
 console.log("one: " + one);
+console.log("i: " + i);
