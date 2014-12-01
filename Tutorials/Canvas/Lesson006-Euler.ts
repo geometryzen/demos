@@ -55,22 +55,22 @@ function colorFromHSL(H: number, S: number, L: number): Color {
   }
   var sextant = ((normalizeAngle(H) / Math.PI) * 3) % 6;
   if (sextant >= 0 && sextant < 1) {
-    return matchLightness(1.0,sextant-0,0.0);
+    return matchLightness(C,(sextant-0)*C,0.0);
   }
   else if (sextant >= 1 && sextant < 2) {
-    return matchLightness(2-sextant,1.0,0.0);
+    return matchLightness(2-sextant,C,0.0);
   }
   else if (sextant >= 2 && sextant < 3) {
-    return matchLightness(0.0,1.0,sextant-2);
+    return matchLightness(0.0,C,sextant-2);
   }
   else if (sextant >= 3 && sextant < 4) {
-    return matchLightness(0.0,4-sextant,1.0);
+    return matchLightness(0.0,4-sextant,C);
   }
   else if (sextant >= 4 && sextant < 5) {
-    return matchLightness(sextant-4,0.0,1.0);
+    return matchLightness(sextant-4,0.0,C);
   }
   else if (sextant >= 5 && sextant < 6) {
-    return matchLightness(1.0,0.0,6-sextant);
+    return matchLightness(C,0.0,6-sextant);
   }
   else {
     return matchLightness(0.0,0.0,0.0);
