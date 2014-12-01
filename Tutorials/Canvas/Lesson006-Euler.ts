@@ -221,13 +221,17 @@ class Complex {
   multiply(that: Complex): Complex {
     return new Complex(this.x * that.x - this.y * that.y, this.x * that.y + this.y * that.x);
   }
+  divide(that: Complex): Complex {
+    var denom = that.x * that.x + that.y * that.y;
+    return new Complex((this.x * that.x + this.y * that.y)/denom, (this.y * that.x - this.x * that.y)/denom);
+  }
   toString(): String {
     return this.x + "+" + this.y + "i";
   }
 }
 
 var f = function(z: Complex): Complex {
-  return z;
+  return new Complex(1,0).divide(z);
   /*
   var z3 = z.multiply(z).multiply(z);
   var z2 = z.multiply(z);
