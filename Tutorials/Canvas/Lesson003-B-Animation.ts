@@ -100,7 +100,7 @@ class WindowAnimationRunner {
       this._tick();
       window.requestAnimationFrame(animate);
     }
-    animate();
+    window.requestAnimationFrame(animate);
   }
 }
 
