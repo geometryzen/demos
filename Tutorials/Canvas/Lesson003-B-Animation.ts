@@ -118,6 +118,7 @@ var angle = 0;
 function tick(): void {
   angle += 0.01;
   canvas.backgroundColor = colorFromAngle(angle);
+  console.log("angle: " + angle);
   canvas.draw();
 }
 
