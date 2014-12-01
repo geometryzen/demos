@@ -178,12 +178,12 @@ class MyAnimation implements WindowAnimation {
   setUp() {
     
   }
-  tick() {
+  tick(elapsed: number) {
     this._angle += 0.01;
     this._canvas.backgroundColor = colorFromAngle(this._angle);
     this._canvas.draw();
   }
-  terminate() {
+  terminate(elapsed: number) {
     return this._angle > 2 * Math.PI;
   }
   tearDown(ex: any) {
