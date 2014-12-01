@@ -61,10 +61,10 @@ function colorFromHSL(H: number, S: number, L: number): Color {
     return matchLightness(C*(2-sextant),C,0.0);
   }
   else if (sextant >= 2 && sextant < 3) {
-    return matchLightness(0.0,C,sextant-2);
+    return matchLightness(0.0,C,C*(sextant-2));
   }
   else if (sextant >= 3 && sextant < 4) {
-    return matchLightness(0.0,4-sextant,C);
+    return matchLightness(0.0,C*(4-sextant),C);
   }
   else if (sextant >= 4 && sextant < 5) {
     return matchLightness(sextant-4,0.0,C);
