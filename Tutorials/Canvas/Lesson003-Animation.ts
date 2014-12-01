@@ -24,6 +24,8 @@ class Color {
 }
 
 function colorFromAngle(theta: number) {
+  var sextant = ((theta / Math.PI) * 3) % 6;
+  if (sextant <= 1)
   return new Color(0.5,0.5,0.5);
 }
 
