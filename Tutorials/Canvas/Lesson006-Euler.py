@@ -75,8 +75,8 @@ class Canvas:
     self.context = canvas.getContext("2d")
   
   def draw(self):
-    self.context.fillStyle = this.backgroundColor.asFillStyle() 
-    self.context.fillRect(0, 0, this._width, this._height);
+    self.context.fillStyle = self.backgroundColor.asFillStyle() 
+    self.context.fillRect(0, 0, self._width, self._height);
 
   def close():
     this.wnd.close()
