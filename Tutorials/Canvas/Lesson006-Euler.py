@@ -124,7 +124,7 @@ class MinMax:
     self.max = max
 
 def sigmoid(t):
-  return 1 / (1 + Math.exp(-t*t/2000))
+  return 1 / (1 + exp(-t*t/2000))
 
 def lightnessFromMagnitude(r):
   return 2 * sigmoid(r) - 1.0
