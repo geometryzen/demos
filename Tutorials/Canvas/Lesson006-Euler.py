@@ -22,7 +22,7 @@ class Color:
     return 0.2126 * Math.pow(red, gamma) + 0.7152 * Math.pow(green, gamma) + 0.0722 * Math.pow(blue, gamma)
 
   def fromHSL(H, S, L):
-    C = (1 - Math.abs(2*L-1)) * S;
+    C = (1 - abs(2*L-1)) * S;
     def normalizeAngle(angle):
       if (angle > 2 * Math.PI):
         return normalizeAngle(angle - 2 * Math.PI)
