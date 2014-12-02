@@ -102,8 +102,8 @@ class Complex:
     return Complex(self.x * other.x - self.y * other.y, self.x * other.y + self.y * other.x)
 
   def __div__(self, other):
-    denom = that.x * that.x + that.y * that.y;
-    return Complex((this.x * that.x + this.y * that.y)/denom, (this.y * that.x - this.x * that.y)/denom)
+    denom = other.x * other.x + other.y * other.y;
+    return Complex((self.x * that.x + this.y * that.y)/denom, (this.y * that.x - this.x * that.y)/denom)
 
   def __repr__(self):
     return "Complex(" + str(self.x) + ", " + str(self.y) + ")"
