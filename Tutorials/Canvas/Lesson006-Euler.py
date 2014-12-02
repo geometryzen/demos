@@ -143,7 +143,7 @@ class ComplexPlane:
         z = Complex(x,y)
         H = self.f(z).arg()
         S = 1
-        L = lightnessFromMagnitude(this.f(z).mod())
+        L = lightnessFromMagnitude(self.f(z).mod())
         #L = 0.5
         this._canvas.context.fillStyle = Color.fromHSL(H, S, L).asFillStyle()
         this._canvas.context.fillRect(X,Y,1,1)
