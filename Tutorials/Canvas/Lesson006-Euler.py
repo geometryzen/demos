@@ -26,9 +26,9 @@ class Color:
     C = (1 - abs(2*L-1)) * S;
     def normalizeAngle(angle):
       if (angle > 2 * pi):
-        return normalizeAngle(angle - 2 * Math.PI)
+        return normalizeAngle(angle - 2 * pi)
       elif (angle < 0):
-        return normalizeAngle(angle + 2 * Math.PI)
+        return normalizeAngle(angle + 2 * pi)
       else:
         return angle
 
