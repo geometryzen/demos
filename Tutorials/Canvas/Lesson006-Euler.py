@@ -131,7 +131,7 @@ class MinMax:
         return "min: " + str(self.min) + ", max: " + str(self.max)
 
 def sigmoid(t):
-  return 1 / (1 + exp(-t*t/2000))
+  return 1 / (1 + exp(-t))
 
 def lightnessFromMagnitude(r):
   return 2 * sigmoid(r) - 1.0
