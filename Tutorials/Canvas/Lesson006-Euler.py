@@ -105,9 +105,11 @@ class Complex:
     denom = that.x * that.x + that.y * that.y;
     return Complex((this.x * that.x + this.y * that.y)/denom, (this.y * that.x - this.x * that.y)/denom)
 
-  def str():
-    return this.x + "+" + this.y + "i"
+  def __repr__(self):
+    return "Complex(" + str(self.x) + ", " + str(self.y) + ")"
 
+  def __str__(self):
+    return str(self.x) + "+" + str(self.y) + "i"
 
 def f(z):
   return z;
