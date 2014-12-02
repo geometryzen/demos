@@ -165,6 +165,7 @@ print one
 print i
 print one + i
 print one - i
+print one * i
 #cp = ComplexPlane(MinMax(-R,+R), MinMax(-R,+R),f)
 #cp.draw()
 
