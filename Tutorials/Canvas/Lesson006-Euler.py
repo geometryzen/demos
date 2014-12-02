@@ -24,7 +24,7 @@ class Color:
   def fromHSL(H, S, L):
     C = (1 - abs(2*L-1)) * S;
     def normalizeAngle(angle):
-      if (angle > 2 * PI):
+      if (angle > 2 * pi):
         return normalizeAngle(angle - 2 * Math.PI)
       elif (angle < 0):
         return normalizeAngle(angle + 2 * Math.PI)
