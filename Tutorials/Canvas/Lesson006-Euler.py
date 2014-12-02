@@ -88,7 +88,7 @@ class Complex:
     return Math.sqrt(self.x * self.x + self.y * self.y)
 
   def arg(self):
-    return Math.atan2(self.y, self.x)
+    return atan2(self.y, self.x)
 
   def __add__(self, other):
     return Complex(this.x + that.x, this.y + that.y)
