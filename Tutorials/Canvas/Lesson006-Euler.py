@@ -17,7 +17,7 @@ class Color:
     return "rgb(" + str(self._red) + ", " + str(self._green) + ", " + str(self._blue) + ")"
 
   def asFillStyle(self):
-    return "rgb(" + str(int(floor(self._red*255.0))) + ", " + str(int(floor(self._green*255.0))) + "," + str(floor(self._blue*255.0)) + ")"
+    return "rgb(" + str(int(floor(self._red*255.0))) + ", " + str(int(floor(self._green*255.0))) + "," + str(int(floor(self._blue*255.0))) + ")"
 
   def luminance(red, green, blue):
     gamma = 2.2
