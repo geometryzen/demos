@@ -53,29 +53,23 @@ class Color:
       return matchLightness(0.0,0.0,0.0)
 
 class Canvas:
-  public backgroundColor: Color = new Color(127, 127, 127);
-  public wnd: Window;
-  private _width;
-  private _height;
-  public context: CanvasRenderingContext2D;
   def __init__(self, width, height):
-    this._width = width;
-    this._height = height;
-    this.wnd = window.open("", "", "width=" + width + ", height=" + height, false);
+    self._width = width;
+    self._height = height;
+    self.wnd = window.open("", "", "width=" + width + ", height=" + height, false);
     
-    var popDoc: Document = this.wnd.document;
+    popDoc = self.wnd.document
     
-    var canvas: HTMLCanvasElement = popDoc.createElement("canvas");
+    canvas = popDoc.createElement("canvas")
     
-    canvas.setAttribute("id", "graph");
-    canvas.setAttribute("width",  width.toString());
-    canvas.setAttribute("height", height.toString());
+    canvas.setAttribute("id", "graph")
+    canvas.setAttribute("width",  width.toString())
+    canvas.setAttribute("height", height.toString())
     
-    popDoc.body.appendChild(canvas);
-    // Remove the margin that pushes the canvas.
-    popDoc.body.style.margin = "0";
+    popDoc.body.appendChild(canvas)
+    popDoc.body.style.margin = "0"
     
-    this.context = canvas.getContext("2d")
+    self.context = canvas.getContext("2d")
   
   def draw(self):
     self.context.fillStyle = this.backgroundColor.asFillStyle() 
