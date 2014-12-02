@@ -14,7 +14,7 @@ class Color:
   def toString():
     return "rgb(" + this._red + ", " + this._green + "," + this._blue + ")"
 
-  def asFillStyle():
+  def asFillStyle(self):
     return "rgb(" + Math.floor(this._red*255) + ", " + Math.floor(this._green*255) + "," + Math.floor(this._blue*255) + ")"
 
   def luminance(red, green, blue):
