@@ -25,6 +25,6 @@ class Complex:
   def str(self):
     return self.x + "+" + self.y + "i"
 
-one = Complex(1,0)
+one = Complex(1.0,0.0)
 
 print one
