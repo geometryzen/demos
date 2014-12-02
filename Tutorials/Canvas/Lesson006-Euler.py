@@ -134,7 +134,7 @@ class ComplexPlane:
     self.yRange = yRange;
     self.f = f;
 
-  def draw():
+  def draw(self):
     for X in range(0, WIDTH):
       for Y in range(0, HEIGHT):
         x = (X / WIDTH) * (this.xRange.max - this.xRange.min) + this.xRange.min
