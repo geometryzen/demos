@@ -149,6 +149,7 @@ class ComplexPlane:
                 x = (float(X) / float(WIDTH)) * (self.xRange.max - self.xRange.min) + self.xRange.min
                 y = ((float(HEIGHT)-float(Y))/float(HEIGHT)) * (self.yRange.max - self.yRange.min) + self.yRange.min
                 z = Complex(x,y)
+                print z
                 H = self.f(z).arg()
                 S = 1
                 L = lightnessFromMagnitude(self.f(z).mod())
