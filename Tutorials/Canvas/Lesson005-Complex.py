@@ -25,7 +25,7 @@ class Complex:
   def repr(self):
     return "???"
 
-  def str(self):
+  def __str__(self):
     return self.x + "+" + self.y + "i"
 
 one = Complex(1.0,0.0)
