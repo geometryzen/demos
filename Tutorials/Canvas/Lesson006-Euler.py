@@ -93,7 +93,7 @@ class Complex:
     return atan2(self.y, self.x)
 
   def __add__(self, other):
-    return Complex(this.x + that.x, this.y + that.y)
+    return Complex(self.x + other.x, self.y + other.y)
 
   def __sub__(self, other):
     return Complex(this.x - that.x, this.y - that.y)
