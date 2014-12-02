@@ -65,8 +65,8 @@ class Canvas:
     canvas = popDoc.createElement("canvas")
     
     canvas.setAttribute("id", "graph")
-    canvas.setAttribute("width",  width.toString())
-    canvas.setAttribute("height", height.toString())
+    canvas.setAttribute("width",  str(width))
+    canvas.setAttribute("height", str(height))
     
     popDoc.body.appendChild(canvas)
     popDoc.body.style.margin = "0"
