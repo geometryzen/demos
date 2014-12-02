@@ -147,7 +147,7 @@ class ComplexPlane:
         this._canvas.context.fillStyle = Color.fromHSL(H, S, L).asFillStyle()
         this._canvas.context.fillRect(X,Y,1,1)
 
-var R = 10;
-var cp = new ComplexPlane(new MinMax(-R,+R), new MinMax(-R,+R),f);
-cp.draw();
+R = 10
+cp = ComplexPlane(MinMax(-R,+R), MinMax(-R,+R),f)
+cp.draw()
 
