@@ -137,27 +137,27 @@ def lightnessFromMagnitude(r):
   return 2 * sigmoid(r) - 1.0
 
 class ComplexPlane:
-  def __init__(self, xRange, yRange, f):
-    self.xRange = xRange
-    self.yRange = yRange
-    self.f = f
-    self._canvas = Canvas(WIDTH, HEIGHT)
+    def __init__(self, xRange, yRange, f):
+        self.xRange = xRange
+        self.yRange = yRange
+        self.f = f
+        self._canvas = Canvas(WIDTH, HEIGHT)
 
-  def draw(self):
-    for X in range(WIDTH):
-        print X
-      for Y in range(HEIGHT):
-        x = (X / WIDTH) * (self.xRange.max - self.xRange.min) + self.xRange.min
-        y = ((HEIGHT-Y)/HEIGHT) * (self.yRange.max - self.yRange.min) + self.yRange.min
-        '''
-        z = Complex(x,y)
-        H = self.f(z).arg()
-        S = 1
-        L = lightnessFromMagnitude(self.f(z).mod())
-        #L = 0.5
-        self._canvas.context.fillStyle = Color.fromHSL(H, S, L).asFillStyle()
-        self._canvas.context.fillRect(X,Y,1,1)
-        '''
+    def draw(self):
+        for X in range(WIDTH):
+            print X
+            for Y in range(HEIGHT):
+                x = (X / WIDTH) * (self.xRange.max - self.xRange.min) + self.xRange.min
+                y = ((HEIGHT-Y)/HEIGHT) * (self.yRange.max - self.yRange.min) + self.yRange.min
+                '''
+                z = Complex(x,y)
+                H = self.f(z).arg()
+                S = 1
+                L = lightnessFromMagnitude(self.f(z).mod())
+                #L = 0.5
+                self._canvas.context.fillStyle = Color.fromHSL(H, S, L).asFillStyle()
+                self._canvas.context.fillRect(X,Y,1,1)
+                '''
 
 R = 10
 cp = ComplexPlane(MinMax(-R,+R), MinMax(-R,+R),f)
