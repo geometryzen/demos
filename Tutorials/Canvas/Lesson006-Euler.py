@@ -147,7 +147,7 @@ class ComplexPlane:
         for X in range(WIDTH):
             for Y in range(HEIGHT):
                 x = (float(X) / float(WIDTH)) * (self.xRange.max - self.xRange.min) + self.xRange.min
-                y = ((HEIGHT-Y)/HEIGHT) * (self.yRange.max - self.yRange.min) + self.yRange.min
+                y = ((float(HEIGHT)-float(Y))/float(HEIGHT)) * (self.yRange.max - self.yRange.min) + self.yRange.min
                 print x
                 '''
                 z = Complex(x,y)
