@@ -27,4 +27,4 @@ class Complex:
 
 one = Complex(1.0,0.0)
 
-print one
+print repr(one)
