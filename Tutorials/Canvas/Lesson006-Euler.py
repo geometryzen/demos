@@ -1,8 +1,8 @@
 from math import *
 from browser import window
 
-WIDTH = 100
-HEIGHT = 80
+WIDTH = 800
+HEIGHT = 800
 
 class Color:
   def __init__(self, red, green, blue):
@@ -158,5 +158,5 @@ class ComplexPlane:
 
 R = 10.0
 cp = ComplexPlane(MinMax(-R,+R), MinMax(-R,+R),f)
-cp.draw()
+#cp.draw()
 
