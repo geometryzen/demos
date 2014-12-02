@@ -149,9 +149,8 @@ class ComplexPlane:
                 x = (float(X) / float(WIDTH)) * (self.xRange.max - self.xRange.min) + self.xRange.min
                 y = ((float(HEIGHT)-float(Y))/float(HEIGHT)) * (self.yRange.max - self.yRange.min) + self.yRange.min
                 z = Complex(x,y)
-                print z
                 H = self.f(z).arg()
-                S = 1
+                S = 1.0
                 L = lightnessFromMagnitude(self.f(z).mod())
                 #L = 0.5
                 self._canvas.context.fillStyle = Color.fromHSL(H, S, L).asFillStyle()
