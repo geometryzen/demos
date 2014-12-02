@@ -27,4 +27,4 @@ class Complex:
 
 one = Complex(1,0)
 
-print str(one)
+print one
