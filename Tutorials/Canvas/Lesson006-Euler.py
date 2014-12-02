@@ -127,7 +127,7 @@ class MinMax:
         self.min = min
         self.max = max
     def __str__(self):
-        return "min" + str(self.min)
+        return "min: " + str(self.min) + ", max: " + str(self.max)
 
 def sigmoid(t):
   return 1 / (1 + exp(-t*t/2000))
