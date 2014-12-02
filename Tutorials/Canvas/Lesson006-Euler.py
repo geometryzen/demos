@@ -1,4 +1,5 @@
 from math import *
+from browser import window
 WIDTH = 400
 HEIGHT = 400
 
