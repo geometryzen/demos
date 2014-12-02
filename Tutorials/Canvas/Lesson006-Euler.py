@@ -130,9 +130,9 @@ def lightnessFromMagnitude(r):
 
 class ComplexPlane:
   def __init__(self, xRange, yRange, f):
-    this.xRange = xRange;
-    this.yRange = yRange;
-    this.f = f;
+    self.xRange = xRange;
+    self.yRange = yRange;
+    self.f = f;
 
   def draw():
     for X in range(0, WIDTH):
