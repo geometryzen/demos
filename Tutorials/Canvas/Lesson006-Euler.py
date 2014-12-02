@@ -37,7 +37,7 @@ class Color:
       return Color(R + m, G + m, B + m)
     
     sextant = ((normalizeAngle(H) / pi) * 3) % 6
-    X = C * (1 - Math.abs(sextant % 2 - 1))
+    X = C * (1 - abs(sextant % 2 - 1))
     if (sextant >= 0 and sextant < 1):
       return matchLightness(C,X,0.0)
     elif (sextant >= 1 and sextant < 2):
