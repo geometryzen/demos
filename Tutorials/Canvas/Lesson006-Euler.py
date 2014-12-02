@@ -146,7 +146,7 @@ class ComplexPlane:
     def draw(self):
         for X in range(WIDTH):
             for Y in range(HEIGHT):
-                x = (X / WIDTH) * (self.xRange.max - self.xRange.min) + self.xRange.min
+                x = (float(X) / float(WIDTH)) * (self.xRange.max - self.xRange.min) + self.xRange.min
                 y = ((HEIGHT-Y)/HEIGHT) * (self.yRange.max - self.yRange.min) + self.yRange.min
                 print x
                 '''
@@ -159,7 +159,7 @@ class ComplexPlane:
                 self._canvas.context.fillRect(X,Y,1,1)
                 '''
 
-R = 10
+R = 10.0
 cp = ComplexPlane(MinMax(-R,+R), MinMax(-R,+R),f)
 cp.draw()
 
