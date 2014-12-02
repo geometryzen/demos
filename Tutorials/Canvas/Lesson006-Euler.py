@@ -14,7 +14,7 @@ class Color:
     return Color.luminance(self._red, self._green, self._blue)
     
   def __str__(self):
-    return "rgb(" + this._red + ", " + this._green + "," + this._blue + ")"
+    return "rgb(" + self._red + ", " + self._green + "," + self._blue + ")"
 
   def asFillStyle(self):
     return "rgb(" + str(floor(self._red*255.0)) + ", " + str(floor(self._green*255.0)) + "," + str(floor(self._blue*255.0)) + ")"
