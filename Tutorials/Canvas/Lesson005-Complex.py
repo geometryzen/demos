@@ -23,7 +23,7 @@ class Complex:
     return Complex((this.x * that.x + this.y * that.y)/denom, (this.y * that.x - this.x * that.y)/denom)
 
   def str(self):
-    return this.x + "+" + this.y + "i"
+    return self.x + "+" + self.y + "i"
 
 one = Complex(1,0)
 
