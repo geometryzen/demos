@@ -125,22 +125,17 @@ class MinMax:
 def sigmoid(t):
   return 1 / (1 + Math.exp(-t*t/2000))
 
-function lightnessFromMagnitude(r: number) {
+def lightnessFromMagnitude(r):
   return 2 * sigmoid(r) - 1.0
-}
 
-class ComplexPlane {
-  private _canvas = new Canvas(WIDTH, HEIGHT);
-  private xRange: MinMax;
-  private yRange: MinMax;
-  private f: (z: Complex) => Complex;
-  constructor(xRange: MinMax, yRange: MinMax, f: (z: Complex)=>Complex) {
+class ComplexPlane:
+  def __init__(self, xRange, yRange, f):
     this.xRange = xRange;
     this.yRange = yRange;
     this.f = f;
-  }
-  draw() {
-    for (var X=0;X<WIDTH;X++) {
+
+  def draw():
+    for (X in range(0, WIDTH)):
       for (var Y=0;Y<HEIGHT;Y++) {
         var x = (X / WIDTH) * (this.xRange.max - this.xRange.min) + this.xRange.min;
         var y = ((HEIGHT-Y)/HEIGHT) * (this.yRange.max - this.yRange.min) + this.yRange.min;
@@ -152,9 +147,6 @@ class ComplexPlane {
         this._canvas.context.fillStyle = Color.fromHSL(H, S, L).asFillStyle();
         this._canvas.context.fillRect(X,Y,1,1);
       }
-    }
-  }
-}
 
 var R = 10;
 var cp = new ComplexPlane(new MinMax(-R,+R), new MinMax(-R,+R),f);
