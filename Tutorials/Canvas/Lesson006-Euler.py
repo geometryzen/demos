@@ -145,6 +145,8 @@ class ComplexPlane:
       for Y in range(0, HEIGHT):
         x = (X / WIDTH) * (self.xRange.max - self.xRange.min) + self.xRange.min
         y = ((HEIGHT-Y)/HEIGHT) * (self.yRange.max - self.yRange.min) + self.yRange.min
+        print x,y
+        '''
         z = Complex(x,y)
         H = self.f(z).arg()
         S = 1
@@ -152,6 +154,7 @@ class ComplexPlane:
         #L = 0.5
         self._canvas.context.fillStyle = Color.fromHSL(H, S, L).asFillStyle()
         self._canvas.context.fillRect(X,Y,1,1)
+        '''
 
 R = 10
 cp = ComplexPlane(MinMax(-R,+R), MinMax(-R,+R),f)
