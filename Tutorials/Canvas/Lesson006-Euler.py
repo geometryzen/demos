@@ -106,30 +106,24 @@ class Complex:
     return this.x + "+" + this.y + "i"
 
 
-var f = function(z: Complex): Complex {
-  //return z;
-  // return new Complex(1,0).divide(z);
-  
+def f(z):
+  #return z;
+  #return new Complex(1,0).divide(z);
+  '''
   var z3 = z.multiply(z).multiply(z);
   var z2 = z.multiply(z);
   var sz = new Complex(6,0).multiply(z);
   var tw = new Complex(20,0);
   return z3.add(z2).add(sz).subtract(tw);
-  
-};
+  '''
 
-class MinMax {
-  public min: number;
-  public max: number;
-  constructor(min: number, max: number) {
-    this.min = min;
-    this.max = max;
-  }
-}
+class MinMax:
+  def __init__(self, min, max):
+    self.min = min
+    self.max = max
 
-function sigmoid(t: number) {
-  return 1 / (1 + Math.exp(-t*t/2000));
-}
+def sigmoid(t):
+  return 1 / (1 + Math.exp(-t*t/2000))
 
 function lightnessFromMagnitude(r: number) {
   return 2 * sigmoid(r) - 1.0
