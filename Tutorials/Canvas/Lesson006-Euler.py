@@ -163,6 +163,7 @@ one = Complex(1,0)
 i = Complex(0,1)
 print one
 print i
+print one + i
 #cp = ComplexPlane(MinMax(-R,+R), MinMax(-R,+R),f)
 #cp.draw()
 
