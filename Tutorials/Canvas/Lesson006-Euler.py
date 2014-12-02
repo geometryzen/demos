@@ -2,47 +2,41 @@ WIDTH = 400
 HEIGHT = 400
 
 class Color:
-  def __init__(self, red, green, blue)
+  def __init__(self, red, green, blue):
     self._red = red;
     self._green = green;
     self._blue = blue;
 
-  public luminance(): number {
-    return Color.luminance(this._red, this._green, this._blue);
-  }
-  public toString(): string {
+  def luminance(self):
+    return Color.luminance(self._red, self._green, self._blue)
+    
+  def toString():
     return "rgb(" + this._red + ", " + this._green + "," + this._blue + ")"
-  }
-  public asFillStyle() {
+
+  def asFillStyle():
     return "rgb(" + Math.floor(this._red*255) + ", " + Math.floor(this._green*255) + "," + Math.floor(this._blue*255) + ")"
-  }
-  public static luminance(red: number, green: number, blue: number): number {
-    var gamma = 2.2;
-    return 0.2126 * Math.pow(red, gamma) + 0.7152 * Math.pow(green, gamma) + 0.0722 * Math.pow(blue, gamma);
-  }
-  /**
-   * Converts an angle, radius, height to a color on a color wheel.
-   */
-  public static fromHSL(H: number, S: number, L: number): Color {
-    var C = (1 - Math.abs(2*L-1)) * S;
-    function normalizeAngle(angle: number) {
-      if (angle > 2 * Math.PI) {
-        return normalizeAngle(angle - 2 * Math.PI);
-      }
-      else if (angle < 0) {
-        return normalizeAngle(angle + 2 * Math.PI);
-      }
-      else {
-        return angle;
-      }
-    }
-    function matchLightness(R: number, G: number, B: number): Color {
-      var x = Color.luminance(R, G, B);
-      var m = L - (0.5 * C);
-      return new Color(R + m, G + m, B + m);
-    }
-    var sextant = ((normalizeAngle(H) / Math.PI) * 3) % 6;
-    var X = C * (1 - Math.abs(sextant % 2 - 1));
+
+  def luminance(red, green, blue):
+    gamma = 2.2
+    return 0.2126 * Math.pow(red, gamma) + 0.7152 * Math.pow(green, gamma) + 0.0722 * Math.pow(blue, gamma)
+
+  def fromHSL(H, S, L):
+    C = (1 - Math.abs(2*L-1)) * S;
+    def normalizeAngle(angle):
+      if (angle > 2 * Math.PI):
+        return normalizeAngle(angle - 2 * Math.PI)
+      elif (angle < 0):
+        return normalizeAngle(angle + 2 * Math.PI)
+      else:
+        return angle
+
+    def matchLightness(R, G, B):
+      x = Color.luminance(R, G, B)
+      m = L - (0.5 * C)
+      return Color(R + m, G + m, B + m)
+    
+    sextant = ((normalizeAngle(H) / Math.PI) * 3) % 6
+    X = C * (1 - Math.abs(sextant % 2 - 1))
     if (sextant >= 0 && sextant < 1) {
       return matchLightness(C,X/*C*(sextant-0)*/,0.0);
     }
