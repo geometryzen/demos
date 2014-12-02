@@ -60,6 +60,7 @@ class Canvas:
     self._width = width;
     self._height = height;
     self.wnd = window.open("", "", "width=" + str(width) + ", height=" + str(height), False);
+    self.backgroundColor = Color(0,0,1)
     
     popDoc = self.wnd.document
     
