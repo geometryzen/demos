@@ -23,7 +23,7 @@ class Complex:
     return Complex((this.x * that.x + this.y * that.y)/denom, (this.y * that.x - this.x * that.y)/denom)
 
   def __repr__(self):
-    return "???"
+    return "Complex(" + str(self.x) + ", " + str(self.y) + ")"
 
   def __str__(self):
     return str(self.x) + "+" + str(self.y) + "i"
