@@ -1,8 +1,8 @@
 from math import *
 from browser import window
 
-WIDTH = 400
-HEIGHT = 400
+WIDTH = 40
+HEIGHT = 40
 
 class Color:
   def __init__(self, red, green, blue):
