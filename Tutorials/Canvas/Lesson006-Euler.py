@@ -78,36 +78,33 @@ class Canvas:
   def close():
     this.wnd.close()
 
-class Complex {
-  public x: number;
-  public y: number;
-  constructor(x: number, y:number) {
-    this.x = x;
-    this.y = y;
-  }
-  mod(): number {
-    return Math.sqrt(this.x * this.x + this.y * this.y);
-  }
-  arg(): number {
-    return Math.atan2(this.y, this.x);
-  }
-  add(that: Complex): Complex {
-    return new Complex(this.x + that.x, this.y + that.y);
-  }
-  subtract(that: Complex): Complex {
-    return new Complex(this.x - that.x, this.y - that.y);
-  }
-  multiply(that: Complex): Complex {
-    return new Complex(this.x * that.x - this.y * that.y, this.x * that.y + this.y * that.x);
-  }
-  divide(that: Complex): Complex {
-    var denom = that.x * that.x + that.y * that.y;
-    return new Complex((this.x * that.x + this.y * that.y)/denom, (this.y * that.x - this.x * that.y)/denom);
-  }
-  toString(): String {
-    return this.x + "+" + this.y + "i";
-  }
-}
+class Complex:
+  def __init__(self, x, y):
+    self.x = x
+    self.y = y
+
+  def mod(self):
+    return Math.sqrt(self.x * self.x + self.y * self.y)
+
+  def arg(self):
+    return Math.atan2(self.y, self.x)
+
+  def __add__(self, other):
+    return Complex(this.x + that.x, this.y + that.y)
+
+  def __sub__(self, other):
+    return Complex(this.x - that.x, this.y - that.y)
+
+  def __mul__(self, other):
+    return Complex(this.x * that.x - this.y * that.y, this.x * that.y + this.y * that.x)
+
+  def __div__(self, other):
+    denom = that.x * that.x + that.y * that.y;
+    return Complex((this.x * that.x + this.y * that.y)/denom, (this.y * that.x - this.x * that.y)/denom)
+
+  def str():
+    return this.x + "+" + this.y + "i"
+
 
 var f = function(z: Complex): Complex {
   //return z;
