@@ -76,7 +76,8 @@ class Canvas:
     self.context = canvas.getContext("2d")
   
   def draw(self):
-    self.context.fillStyle = self.backgroundColor.asFillStyle() 
+    self.context.fillStyle = self.backgroundColor.asFillStyle()
+    print self.context.fillStyle
     self.context.fillRect(0, 0, self._width, self._height);
 
   def close():
