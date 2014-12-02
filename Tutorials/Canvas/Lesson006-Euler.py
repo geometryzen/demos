@@ -13,7 +13,7 @@ class Color:
   def luminance(self):
     return Color.luminance(self._red, self._green, self._blue)
     
-  def __str__():
+  def __str__(self):
     return "rgb(" + this._red + ", " + this._green + "," + this._blue + ")"
 
   def asFillStyle(self):
