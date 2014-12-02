@@ -145,11 +145,10 @@ class ComplexPlane:
 
     def draw(self):
         for X in range(WIDTH):
-            print X
             for Y in range(HEIGHT):
-                print Y
                 x = (X / WIDTH) * (self.xRange.max - self.xRange.min) + self.xRange.min
                 y = ((HEIGHT-Y)/HEIGHT) * (self.yRange.max - self.yRange.min) + self.yRange.min
+                print x
                 '''
                 z = Complex(x,y)
                 H = self.f(z).arg()
