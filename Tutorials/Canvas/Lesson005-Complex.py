@@ -22,7 +22,7 @@ class Complex:
     denom = that.x * that.x + that.y * that.y;
     return Complex((this.x * that.x + this.y * that.y)/denom, (this.y * that.x - this.x * that.y)/denom)
 
-  def repr(self):
+  def __repr__(self):
     return "???"
 
   def __str__(self):
