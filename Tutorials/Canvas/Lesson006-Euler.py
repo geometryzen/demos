@@ -96,7 +96,7 @@ class Complex:
     return Complex(self.x + other.x, self.y + other.y)
 
   def __sub__(self, other):
-    return Complex(this.x - that.x, this.y - that.y)
+    return Complex(self.x - other.x, self.y - other.y)
 
   def __mul__(self, other):
     return Complex(this.x * that.x - this.y * that.y, this.x * that.y + this.y * that.x)
