@@ -32,3 +32,4 @@ one = Complex(1.0,0.0)
 
 print one.x
 print one.y
+print one
