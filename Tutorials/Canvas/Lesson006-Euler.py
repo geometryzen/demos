@@ -52,13 +52,13 @@ class Color:
     else:
       return matchLightness(0.0,0.0,0.0)
 
-class Canvas {
+class Canvas:
   public backgroundColor: Color = new Color(127, 127, 127);
   public wnd: Window;
   private _width;
   private _height;
   public context: CanvasRenderingContext2D;
-  constructor(width: number, height: number) {
+  def __init__(self, width, height):
     this._width = width;
     this._height = height;
     this.wnd = window.open("", "", "width=" + width + ", height=" + height, false);
@@ -75,18 +75,14 @@ class Canvas {
     // Remove the margin that pushes the canvas.
     popDoc.body.style.margin = "0";
     
-    this.context = canvas.getContext("2d");
-  }
+    this.context = canvas.getContext("2d")
   
-  public draw() {
-    this.context.fillStyle = this.backgroundColor.asFillStyle() 
-    this.context.fillRect(0, 0, this._width, this._height);
-  }
+  def draw(self):
+    self.context.fillStyle = this.backgroundColor.asFillStyle() 
+    self.context.fillRect(0, 0, this._width, this._height);
 
-  public close() {
-    this.wnd.close();
-  }
-}
+  def close():
+    this.wnd.close()
 
 class Complex {
   public x: number;
