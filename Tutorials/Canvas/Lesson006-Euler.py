@@ -1,7 +1,7 @@
 from math import *
 from browser import window
 
-WIDTH = 40
+WIDTH = 100
 HEIGHT = 80
 
 class Color:
