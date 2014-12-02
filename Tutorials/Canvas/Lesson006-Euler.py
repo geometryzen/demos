@@ -19,7 +19,7 @@ class Color:
 
   def luminance(red, green, blue):
     gamma = 2.2
-    return 0.2126 * Math.pow(red, gamma) + 0.7152 * Math.pow(green, gamma) + 0.0722 * Math.pow(blue, gamma)
+    return 0.2126 * pow(red, gamma) + 0.7152 * pow(green, gamma) + 0.0722 * pow(blue, gamma)
 
   def fromHSL(H, S, L):
     C = (1 - abs(2*L-1)) * S;
