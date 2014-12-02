@@ -123,9 +123,11 @@ def f(z):
   '''
 
 class MinMax:
-  def __init__(self, min, max):
-    self.min = min
-    self.max = max
+    def __init__(self, min, max):
+        self.min = min
+        self.max = max
+    def __str__(self):
+        return "min" + str(self.min)
 
 def sigmoid(t):
   return 1 / (1 + exp(-t*t/2000))
