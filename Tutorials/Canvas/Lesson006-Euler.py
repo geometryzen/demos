@@ -157,6 +157,7 @@ class ComplexPlane:
         '''
 
 R = 10
-cp = ComplexPlane(MinMax(-R,+R), MinMax(-R,+R),f)
-cp.draw()
+print MinMax(-R,+R)
+#cp = ComplexPlane(MinMax(-R,+R), MinMax(-R,+R),f)
+#cp.draw()
 
