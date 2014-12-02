@@ -37,28 +37,20 @@ class Color:
     
     sextant = ((normalizeAngle(H) / Math.PI) * 3) % 6
     X = C * (1 - Math.abs(sextant % 2 - 1))
-    if (sextant >= 0 && sextant < 1) {
-      return matchLightness(C,X/*C*(sextant-0)*/,0.0);
-    }
-    else if (sextant >= 1 && sextant < 2) {
-      return matchLightness(X/*C*(2-sextant)*/,C,0.0);
-    }
-    else if (sextant >= 2 && sextant < 3) {
-      return matchLightness(0.0,C,C*(sextant-2));
-    }
-    else if (sextant >= 3 && sextant < 4) {
-      return matchLightness(0.0,C*(4-sextant),C);
-    }
-    else if (sextant >= 4 && sextant < 5) {
-      return matchLightness(X,0.0,C);
-    }
-    else if (sextant >= 5 && sextant < 6) {
-      return matchLightness(C,0.0,X);
-    }
-    else {
-      return matchLightness(0.0,0.0,0.0);
-    }
-  }
+    if (sextant >= 0 and sextant < 1):
+      return matchLightness(C,X,0.0)
+    elif (sextant >= 1 and sextant < 2):
+      return matchLightness(X,C,0.0)
+    elif (sextant >= 2 and sextant < 3):
+      return matchLightness(0.0,C,C*(sextant-2))
+    elif (sextant >= 3 and sextant < 4):
+      return matchLightness(0.0,C*(4-sextant),C)
+    elif (sextant >= 4 and sextant < 5):
+      return matchLightness(X,0.0,C)
+    elif (sextant >= 5 and sextant < 6):
+      return matchLightness(C,0.0,X)
+    else:
+      return matchLightness(0.0,0.0,0.0)
 
 class Canvas {
   public backgroundColor: Color = new Color(127, 127, 127);
