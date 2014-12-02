@@ -1,25 +1,12 @@
-/**
- * Demonstrates creating a 2D canvas and context.
- */
+WIDTH = 400
+HEIGHT = 400
 
-// Workaround to prevent TS2082 and TS2087.
-// I don't know why this works.
-var unused: Window = window;
-var WIDTH = 400;
-var HEIGHT = 400;
+class Color:
+  def __init__(self, red, green, blue)
+    self._red = red;
+    self._green = green;
+    self._blue = blue;
 
-/**
- * A color value.
- */
-class Color {
-  private _red: number;
-  private _green: number;
-  private _blue: number;
-  constructor(red: number, green: number, blue: number) {
-    this._red = red;
-    this._green = green;
-    this._blue = blue;
-  }
   public luminance(): number {
     return Color.luminance(this._red, this._green, this._blue);
   }
@@ -78,7 +65,6 @@ class Color {
       return matchLightness(0.0,0.0,0.0);
     }
   }
-}
 
 class Canvas {
   public backgroundColor: Color = new Color(127, 127, 127);
