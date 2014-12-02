@@ -137,10 +137,10 @@ class ComplexPlane:
   def draw(self):
     for X in range(0, WIDTH):
       for Y in range(0, HEIGHT):
-        x = (X / WIDTH) * (this.xRange.max - this.xRange.min) + this.xRange.min
-        y = ((HEIGHT-Y)/HEIGHT) * (this.yRange.max - this.yRange.min) + this.yRange.min
+        x = (X / WIDTH) * (self.xRange.max - self.xRange.min) + self.xRange.min
+        y = ((HEIGHT-Y)/HEIGHT) * (self.yRange.max - self.yRange.min) + self.yRange.min
         z = Complex(x,y)
-        H = this.f(z).arg()
+        H = self.f(z).arg()
         S = 1
         L = lightnessFromMagnitude(this.f(z).mod())
         #L = 0.5
