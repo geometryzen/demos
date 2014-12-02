@@ -113,7 +113,7 @@ class Complex:
     return str(self.x) + "+" + str(self.y) + "i"
 
 def f(z):
-  return z;
+  return z
   #return new Complex(1,0).divide(z);
   '''
   var z3 = z.multiply(z).multiply(z);
