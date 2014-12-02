@@ -135,18 +135,17 @@ class ComplexPlane:
     this.f = f;
 
   def draw():
-    for (X in range(0, WIDTH)):
-      for (var Y=0;Y<HEIGHT;Y++) {
-        var x = (X / WIDTH) * (this.xRange.max - this.xRange.min) + this.xRange.min;
-        var y = ((HEIGHT-Y)/HEIGHT) * (this.yRange.max - this.yRange.min) + this.yRange.min;
-        var z = new Complex(x,y);
-        var H = this.f(z).arg();
-        var S = 1;
-        var L = lightnessFromMagnitude(this.f(z).mod());
-        //L = 0.5;
-        this._canvas.context.fillStyle = Color.fromHSL(H, S, L).asFillStyle();
-        this._canvas.context.fillRect(X,Y,1,1);
-      }
+    for X in range(0, WIDTH):
+      for Y in range(0, HEIGHT):
+        x = (X / WIDTH) * (this.xRange.max - this.xRange.min) + this.xRange.min
+        y = ((HEIGHT-Y)/HEIGHT) * (this.yRange.max - this.yRange.min) + this.yRange.min
+        z = Complex(x,y)
+        H = this.f(z).arg()
+        S = 1
+        L = lightnessFromMagnitude(this.f(z).mod())
+        #L = 0.5
+        this._canvas.context.fillStyle = Color.fromHSL(H, S, L).asFillStyle()
+        this._canvas.context.fillRect(X,Y,1,1)
 
 var R = 10;
 var cp = new ComplexPlane(new MinMax(-R,+R), new MinMax(-R,+R),f);
