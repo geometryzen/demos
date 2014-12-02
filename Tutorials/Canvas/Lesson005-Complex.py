@@ -30,4 +30,5 @@ class Complex:
 
 one = Complex(1.0,0.0)
 
-print repr(one.x)
+print one.x
+print one.y
