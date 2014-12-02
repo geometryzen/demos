@@ -58,7 +58,7 @@ class Canvas:
   def __init__(self, width, height):
     self._width = width;
     self._height = height;
-    self.wnd = window.open("", "", "width=" + width + ", height=" + height, false);
+    self.wnd = window.open("", "", "width=" + str(width) + ", height=" + str(height), false);
     
     popDoc = self.wnd.document
     
