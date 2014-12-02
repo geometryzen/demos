@@ -113,7 +113,7 @@ class Complex:
     return str(self.x) + "+" + str(self.y) + "i"
 
 def f(z):
-    return z * z
+    return z * z * z + Complex(6,0) * z - Complex(20,0)
     #return new Complex(1,0).divide(z);
     '''
     var z3 = z.multiply(z).multiply(z);
@@ -152,7 +152,7 @@ class ComplexPlane:
                 H = self.f(z).arg()
                 S = 1.0
                 L = lightnessFromMagnitude(self.f(z).mod())
-                #L = 0.5
+                L = 0.5
                 self._canvas.context.fillStyle = Color.fromHSL(H, S, L).asFillStyle()
                 self._canvas.context.fillRect(float(X),float(Y),1.0,1.0)
 
