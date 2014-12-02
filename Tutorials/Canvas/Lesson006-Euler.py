@@ -159,7 +159,7 @@ class ComplexPlane:
         '''
 
 R = 10
-canvas = Canvas(WIFTH, HEIGHT)
+canvas = Canvas(WIDTH, HEIGHT)
 canvas.draw()
 #cp = ComplexPlane(MinMax(-R,+R), MinMax(-R,+R),f)
 #cp.draw()
