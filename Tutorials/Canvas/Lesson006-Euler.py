@@ -85,7 +85,7 @@ class Complex:
     self.y = y
 
   def mod(self):
-    return Math.sqrt(self.x * self.x + self.y * self.y)
+    return sqrt(self.x * self.x + self.y * self.y)
 
   def arg(self):
     return atan2(self.y, self.x)
