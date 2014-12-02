@@ -99,7 +99,7 @@ class Complex:
     return Complex(self.x - other.x, self.y - other.y)
 
   def __mul__(self, other):
-    return Complex(this.x * that.x - this.y * that.y, this.x * that.y + this.y * that.x)
+    return Complex(self.x * other.x - self.y * other.y, self.x * other.y + self.y * other.x)
 
   def __div__(self, other):
     denom = that.x * that.x + that.y * that.y;
