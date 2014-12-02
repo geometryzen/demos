@@ -34,3 +34,4 @@ print one.x
 print one.y
 print one
 print str(one)
+print repr(one)
