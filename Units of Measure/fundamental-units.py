@@ -36,4 +36,4 @@ Lp = lp * mp * vp
 print "Plank angular momentum:" + str(Lp)
 
 Ep = mp * vp * vp
-print "Plank energy" + str(Ep)
+print "Plank energy: " + str(Ep)
