@@ -26,3 +26,8 @@ print "Planck mass:   " + str(mp/mosquito) + " mosquito"
 
 tp = (hbar * G / c ** 5) ** 0.5
 print "Planck time:   " + str(tp)
+
+ap = lp / (tp * tp)
+print "Plank acceleration:" + str(ap)
+
+L = lp * mp 
