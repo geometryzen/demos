@@ -32,4 +32,5 @@ print "Plank velocity:" + str(vp)
 ap = lp / (tp * tp)
 print "Plank acceleration:" + str(ap)
 
-L = lp * mp 
+Lp = lp * mp * vp
+print "Plank angular momentum:" + str(Lp)
