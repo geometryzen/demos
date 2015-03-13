@@ -67,10 +67,10 @@ function tearDown(e) {
   monitor.stop();
   popUp.close();
   if (e) {
-    console.log("Error during animation: " + e);
+    log("Error during animation: " + e);
   }
   else {
-    console.log("Goodbye!");
+    log("Goodbye!");
     workbench.tearDown();
     scene.tearDown();
   }
