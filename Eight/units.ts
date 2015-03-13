@@ -1,10 +1,8 @@
 var log = function(s: any) {
+  var w: any = window;
   var output = w.Sk.output;
   output(s+'\n');
 };
-
-var w: any = window;
-
 
 log('Hello, World!');
 
