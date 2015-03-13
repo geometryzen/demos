@@ -1,6 +1,6 @@
 var log = function(s: any) {
   var output = w.Sk.output;
-  output(s);
+  output(s+'\n');
 };
 
 var w: any = window;
@@ -16,7 +16,7 @@ var unit = blade.UNIT_INCH;
 
 var measure = new blade.Measure<blade.Euclidean3>(quantity, unit);
 
-log(measure.toString());
+log(measure);
 
 var sq = measure.mul(measure);
 
