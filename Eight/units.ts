@@ -1,5 +1,9 @@
 var w: any = window;
 
+var output = w.Sk.output;
+
+w.Sk.output('Hello');
+
 console.log(blade.UNIT_KILOGRAM.toString())
 
 var quantity = new blade.Euclidean3(1,0,0,0,0,0,0,0);
@@ -20,4 +24,3 @@ console.log(sq.toString());
 console.log(u.toString());
 
 
-w.Sk.output('Hello');
