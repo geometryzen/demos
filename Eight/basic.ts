@@ -32,6 +32,7 @@ function setUp() {
 }
 
 var B = eight.bivectorE3(0,1,1);
+B = B.div(B.norm())
 var angle: number = 0;
 
 var w: any = window
