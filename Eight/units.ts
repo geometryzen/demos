@@ -1,4 +1,4 @@
-// This little trick (not to be copied!) does not work unless Python code has been run to load Sk.*
+// This little trick (not to be copied!) is a temporary undocumented feature.
 var log = function(s: any) {
   var w: any = window;
   w.Sk.output(s+'\n');
