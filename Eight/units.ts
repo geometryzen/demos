@@ -1,6 +1,6 @@
 var log = function(s: string) {
   var output = w.Sk.output;
-  output(s+'\n');
+  output(s.toString()+'\n');
 };
 
 var w: any = window;
