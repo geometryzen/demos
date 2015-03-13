@@ -1,7 +1,6 @@
 var log = function(s: any) {
   var w: any = window;
-  var output = w.Sk.output;
-  output(s+'\n');
+  w.Sk.output(s+'\n');
 };
 
 log('Hello, World!');
