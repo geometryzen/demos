@@ -1,4 +1,4 @@
-var log = function(s: string) {
+var log = function(s: any) {
   var output = w.Sk.output;
   output(s.toString()+'\n');
 };
@@ -23,7 +23,7 @@ var sq = measure.mul(measure);
 var q = sq.quantity;
 var u = sq.uom;
 
-log(sq.toString());
+log(sq);
 
 log(u.toString());
 
