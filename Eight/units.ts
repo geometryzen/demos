@@ -25,6 +25,6 @@ var u = sq.uom;
 
 log(sq);
 
-log(u.toString());
+log(u);
 
 
