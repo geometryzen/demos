@@ -2,7 +2,7 @@ var w: any = window;
 
 var output = w.Sk.output;
 
-w.Sk.output('Hello');
+w.Sk.output('Hello, World!');
 
 console.log(blade.UNIT_KILOGRAM.toString())
 
