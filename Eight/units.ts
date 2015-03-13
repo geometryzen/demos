@@ -4,7 +4,7 @@ var log = function(s: any) {
   w.Sk.output(s+'\n');
 };
 
-log('Hello, World!');
+log('Hello, World!!');
 
 log(blade.UNIT_KILOGRAM.toString())
 
