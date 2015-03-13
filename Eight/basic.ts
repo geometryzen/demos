@@ -31,7 +31,7 @@ function setUp() {
   monitor.start();
 }
 
-var B = eight.bivectorE3(0,0,1);
+var B = eight.bivectorE3(0,1,1);
 var angle: number = 0;
 
 var w: any = window
