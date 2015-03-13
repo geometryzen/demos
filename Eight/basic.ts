@@ -3,6 +3,8 @@ var log = function(s: any) {
   w.Sk.output(s+'\n');
 };
 
+log("Hello!");
+
 var popUp: Window = open("", "", "width=800, height=600");
 
 popUp.document.body.style.backgroundColor = "202020";
