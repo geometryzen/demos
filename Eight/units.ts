@@ -23,7 +23,7 @@ var sq = measure.mul(measure);
 var q = sq.quantity;
 var u = sq.uom;
 
-console.log(sq.toString());
+log(sq.toString());
 
 console.log(u.toString());
 
