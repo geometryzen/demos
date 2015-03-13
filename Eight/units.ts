@@ -1,10 +1,14 @@
+var log = function(s: string) {
+  var output = w.Sk.output;
+  output(s);
+};
+
 var w: any = window;
 
-var output = w.Sk.output;
 
-output('Hello, World!');
+log('Hello, World!');
 
-output(blade.UNIT_KILOGRAM.toString())
+log(blade.UNIT_KILOGRAM.toString())
 
 var quantity = new blade.Euclidean3(1,0,0,0,0,0,0,0);
 
