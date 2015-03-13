@@ -16,3 +16,7 @@ var u = sq.uom;
 console.log(sq.toString());
 
 console.log(u.toString());
+
+var w: any = window;
+
+w.Sk.output('Hello');
