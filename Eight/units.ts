@@ -4,7 +4,7 @@ var output = w.Sk.output;
 
 output('Hello, World!');
 
-console.log(blade.UNIT_KILOGRAM.toString())
+output(blade.UNIT_KILOGRAM.toString())
 
 var quantity = new blade.Euclidean3(1,0,0,0,0,0,0,0);
 
