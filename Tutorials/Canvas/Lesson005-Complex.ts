@@ -30,11 +30,11 @@ var i = new Complex(0,1);
 var minusOne = new Complex(-1,0);
 var minusI = new Complex(0,-1);
 
-console.log("zero: " + zero);
-console.log("one: " + one);
-console.log("i: " + i);
+log("zero: " + zero);
+log("one: " + one);
+log("i: " + i);
 
-console.log("arg(1) " + one.arg());
-console.log("arg(i) " + i.arg());
-console.log("arg(-1) " + minusOne.arg());
-console.log("arg(-i) " + new Complex(0,-1).arg());
+log("arg(1) " + one.arg());
+log("arg(i) " + i.arg());
+log("arg(-1) " + minusOne.arg());
+log("arg(-i) " + new Complex(0,-1).arg());
