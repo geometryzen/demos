@@ -1,5 +1,6 @@
 /**
  * Demonstrates creating a 2D canvas and context.
+ * Illustrates the fundamental theorem of algebra.
  */
 
 // Workaround to prevent TS2082 and TS2087.
