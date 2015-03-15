@@ -3,6 +3,16 @@
  * Illustrates the fundamental theorem of algebra.
  */
 
+// This little trick (not to be copied!) is a temporary undocumented feature.
+var log = function(s: any) {
+  var w: any = window;
+  w.Sk.output(s+'\n');
+};
+
+log('Fundamental Theorem of Alhebra - Illustrated');
+log('');
+log('This may take a few seconds...');
+
 // Workaround to prevent TS2082 and TS2087.
 // I don't know why this works.
 var unused: Window = window;
