@@ -9,7 +9,7 @@ var log = function(s: any) {
   w.Sk.output(s+'\n');
 };
 
-log('Fundamental Theorem of Alhebra - Illustrated');
+log('Fundamental Theorem of Algebra - Illustrated');
 log('');
 log('This may take a few seconds...');
 
