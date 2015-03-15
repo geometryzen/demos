@@ -2,9 +2,7 @@ from browser import *
 from workbench import *
 from math import *
 from units import *
-from e3ga import *
 from easel import *
-from eight import *
 
 glwin = window.open("","","width=800,height=600")
 glwin.document.body.style.backgroundColor = "202020"
