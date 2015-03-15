@@ -1,3 +1,11 @@
+// This little trick (not to be copied!) is a temporary undocumented feature.
+var log = function(s: any) {
+  var w: any = window;
+  w.Sk.output(s+'\n');
+};
+
+log('Hello, World!!');
+
 class Complex {
   public x: number;
   public y: number;
