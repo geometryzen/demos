@@ -9,7 +9,7 @@ popup.document.body.style.backgroundColor = "202020"
 popup.document.body.style.overflow = "hidden"
 popup.document.title = "Visualizing Geometric Algebra with WebGL"
 
-canvas2D = glwin.document.createElement("canvas")
+canvas2D = popup.document.createElement("canvas")
 canvas2D.style.position = "absolute"
 canvas2D.style.top = "0px"
 canvas2D.style.left = "0px"
