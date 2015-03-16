@@ -52,3 +52,4 @@ def tearDown(e):
     workbench2D.tearDown()
 
 runner = windowAnimationRunner(tick, terminate, setUp, tearDown, popup)
+runner.start()
