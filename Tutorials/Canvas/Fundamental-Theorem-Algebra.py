@@ -3,6 +3,7 @@ from workbench import *
 from math import *
 from units import *
 from easel import *
+from eight import *
 
 popup = window.open("","","width=800,height=600")
 popup.document.body.style.backgroundColor = "202020"
