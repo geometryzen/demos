@@ -8,6 +8,8 @@ log('Hello, World!!');
 
 log(blade.UNIT_KILOGRAM.toString())
 log(blade.UNIT_METER.toString())
+log(blade.UNIT_SECOND.toString())
+log(blade.UNIT_COULOMB.toString())
 
 var quantity = new blade.Euclidean3(1,0,0,0,0,0,0,0);
 
