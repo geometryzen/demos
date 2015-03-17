@@ -7,6 +7,7 @@ var log = function(s: any) {
 log('Hello, World!!');
 
 log(blade.UNIT_KILOGRAM.toString())
+log(blade.UNIT_METER.toString())
 
 var quantity = new blade.Euclidean3(1,0,0,0,0,0,0,0);
 
