@@ -13,7 +13,6 @@ log(blade.UNIT_AMPERE.toString());
 log(blade.UNIT_KELVIN.toString());
 log(blade.UNIT_MOLE.toString());
 log(blade.UNIT_CANDELA.toString());
-log(blade.UNIT_NEWTON.toString());
 
 var quantity = new blade.Euclidean3(1,0,0,0,0,0,0,0);
 
