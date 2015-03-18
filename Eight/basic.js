@@ -1,4 +1,4 @@
-var eight = window.EIGHT;
+var eight = window.eight;
 
 var glwin = window.open("","","width=800,height=600");
 
