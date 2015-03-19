@@ -1,1 +1,1 @@
-# MathScript/experimental.js
+console.log(1+3);
