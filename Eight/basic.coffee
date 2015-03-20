@@ -42,8 +42,10 @@ glwin.document.body.appendChild(stats.domElement)
 
 tick = (t) ->
   stats.begin()
+  # This may not work for you until the GeometryZen is upgraded to 0.9.262
   c = eight.scalarE3 cos angle/2
   s = eight.scalarE3 sin angle/2
+  # We're heading towards R = exp(B * angle/2)
   R = c - B * s
   box.attitude = R
   prism.attitude = R
