@@ -31,7 +31,7 @@ function setUp() {
   monitor.start();
 }
 
-var B = eight.bivectorE3(0,1,1);
+var B: any = eight.bivectorE3(0,1,1);
 B = B.div(B.norm())
 var angle: number = 0;
 
@@ -49,10 +49,10 @@ popUp.document.body.appendChild(stats.domElement);
  */
 function tick(time: number) {
   stats.begin();
-  // Klunky math until we get the operator overloading and GA carried over to TypeScript!
-  var c = eight.scalarE3(Math.cos(angle/2));
-  var s = eight.scalarE3(Math.sin(angle/2));
-  var R = c.sub(B.mul(s));
+  // We have to sprinkle in some 'any' to stop TypeScript from complaining!
+  var c: any = eight.scalarE3(Math.cos(angle/2));
+  var s: any = eight.scalarE3(Math.sin(angle/2));
+  var R: any = c - B * s;
   box.attitude = R;
   prism.attitude = R;
 
