@@ -15,18 +15,18 @@ glwin.document.title = "Visualizing Geometric Algebra with WebGL";
 
 var scene = eight.scene();
 
-var camera = eight.perspectiveCamera(45, 1.0, 0.1, 100);
+var camera = eight.perspective(45, 1.0, 0.1, 100);
 
-var renderer = eight.webGLRenderer();
+var renderer = eight.renderer();
 
-var box = eight.mesh(eight.boxGeometry());
+var box = eight.mesh(eight.box());
 scene.add(box);
 box.position = eight.vectorE3(-1.0,-0.5,-5.0);
-var prism = eight.mesh(eight.prismGeometry());
+var prism = eight.mesh(eight.prism());
 scene.add(prism);
 prism.position = eight.vectorE3(0.0,0.0,-5.0);
 
-var workbench3D = eight.workbench3D(renderer.canvas, renderer, camera, glwin);
+var workbench3D = eight.workbench(renderer.canvas, renderer, camera, glwin);
 
 function setUp() {
   workbench3D.setUp();
