@@ -1,7 +1,12 @@
 // This little trick (not to be copied!) is a temporary undocumented feature.
 var log = function(s: any) {
-  var w: any = window;
-  w.Sk.output(s+'\n');
+  if (s) {
+    var w: any = window;
+    w.Sk.output(s+'\n');
+  }
+  else {
+    w.Sk.output(typeof s+'\n');
+  }
 };
 
 log('Hello, World!!');
