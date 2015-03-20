@@ -13,3 +13,4 @@ print "x: " + x
 print "y: " + y
 print "z: " + z
 print "velocity: " + v
+print -1
