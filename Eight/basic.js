@@ -3,7 +3,7 @@ var log = function(s) {
   w.Sk.output(s+'\n');
 };
 
-var eight = window.EIGHT;
+//var eight = window.EIGHT;
 
 log(eight.VERSION);
 
