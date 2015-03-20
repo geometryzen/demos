@@ -1,3 +1,5 @@
+print = (s) -> Sk.output(s + '\n')
+
 cos = Math.cos
 sin = Math.sin
 
