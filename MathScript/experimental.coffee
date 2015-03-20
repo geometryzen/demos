@@ -6,6 +6,8 @@ z = x + y
 m = blade.UNIT_METER
 s = blade.UNIT_SECOND
 
+v = new blade.Measure(z, m.div(s))
+
 print "x: " + x
 print "y: " + y
 print "z: " + z
