@@ -3,8 +3,6 @@ var log = function(s) {
   w.Sk.output(s+'\n');
 };
 
-//var eight = window.EIGHT;
-
 log(eight.VERSION);
 
 var glwin = window.open("","","width=800,height=600");
