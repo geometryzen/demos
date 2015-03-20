@@ -46,7 +46,7 @@ function tick(t) {
   // Klunky math until we get the operator overloading and GA carried over to JavaScript!
   var c = eight.scalarE3(Math.cos(angle/2));
   var s = eight.scalarE3(Math.sin(angle/2));
-  var R = c.sub(B.mul(s));
+  var R = c - B * s;
   box.attitude = R;
   prism.attitude = R;
 
