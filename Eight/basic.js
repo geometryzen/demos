@@ -3,9 +3,9 @@ var log = function(s) {
   w.Sk.output(s+'\n');
 };
 
-log(window.eight.VERSION);
+var eight = window.EIGHT;
 
-var eight = window.eight;
+log(eight.VERSION);
 
 var glwin = window.open("","","width=800,height=600");
 
