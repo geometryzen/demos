@@ -72,7 +72,7 @@ function tearDown(e) {
   }
 }
 
-var runner = eight.windowAnimationRunner(tick, terminate, setUp, tearDown, glwin);
+var runner = eight.animationRunner(tick, terminate, setUp, tearDown, glwin);
 
 function onContextLoss() {
     runner.stop();
