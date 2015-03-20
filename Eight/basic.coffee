@@ -1,5 +1,6 @@
 print = (s) -> Sk.output(s + '\n')
 
+# verify that we are working with the most current version.
 print eight.VERSION
 
 cos = Math.cos
