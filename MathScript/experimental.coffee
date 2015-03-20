@@ -7,4 +7,4 @@ z = x + y
 
 print x.toString()
 print y.toString()
-print z.toString()
+print "z:" + z
