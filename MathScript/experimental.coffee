@@ -11,4 +11,4 @@ v = new blade.Measure(z, m.div(s))
 print "x: " + x
 print "y: " + y
 print "z: " + z
-print "velocity: " + m.div(s)
+print "velocity: " + v
