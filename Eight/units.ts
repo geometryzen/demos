@@ -4,9 +4,6 @@ var log = function(s: any) {
     var w: any = window;
     w.Sk.output(s+'\n');
   }
-  else {
-    w.Sk.output(typeof s+'\n');
-  }
 };
 
 log('Hello, World!!');
