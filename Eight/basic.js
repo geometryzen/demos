@@ -86,6 +86,6 @@ function onContextGain(gl) {
     runner.start();
 }
 
-var monitor = eight.webGLContextMonitor(renderer.canvas, onContextLoss, onContextGain);
+var monitor = eight.contextMonitor(renderer.canvas, onContextLoss, onContextGain);
 
 onContextGain(renderer.context);
