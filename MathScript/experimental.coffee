@@ -9,4 +9,4 @@ s = blade.UNIT_SECOND
 print "x: " + x
 print "y: " + y
 print "z: " + z
-print "speed: " + m.div(s)
+print "velocity: " + m.div(s)
