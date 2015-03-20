@@ -1,5 +1,7 @@
 print = (s) -> Sk.output(s + '\n')
 
+print eight.VERSION
+
 cos = Math.cos
 sin = Math.sin
 
