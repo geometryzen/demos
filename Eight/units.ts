@@ -24,6 +24,8 @@ log(measure);
 
 var sq: any = measure * measure;
 
+log(typeof sq);
+
 var q = sq.quantity;
 var u = sq.uom;
 
