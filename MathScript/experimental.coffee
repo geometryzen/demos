@@ -9,6 +9,7 @@ s = blade.UNIT_SECOND
 
 v = new blade.Measure(z, m.div(s))
 
+print Ms.VERSION 
 print "x: " + x
 print "y: " + y
 print "z: #{z}"
