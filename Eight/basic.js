@@ -1,3 +1,8 @@
+var log = function(s) {
+  var w = window;
+  w.Sk.output(s+'\n');
+};
+
 var eight = window.EIGHT;
 
 var glwin = window.open("","","width=800,height=600");
