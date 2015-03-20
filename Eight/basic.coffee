@@ -42,7 +42,6 @@ glwin.document.body.appendChild(stats.domElement)
 
 tick = (t) ->
   stats.begin()
-  # Klunky math until we get the operator overloading and GA carried over to JavaScript!
   c = eight.scalarE3 cos angle/2
   s = eight.scalarE3 sin angle/2
   R = c - B * s
