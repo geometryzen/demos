@@ -9,4 +9,4 @@ s = blade.UNIT_SECOND
 print "x: " + x
 print "y: " + y
 print "z: " + z
-print "m: " + m / s
+print "m: " + m.div(s)
