@@ -18,11 +18,11 @@ var quantity = new blade.Euclidean3(1,0,0,0,0,0,0,0);
 
 var unit = blade.UNIT_INCH;
 
-var measure = new blade.Measure<blade.Euclidean3>(quantity, unit);
+var measure: any = new blade.Measure<blade.Euclidean3>(quantity, unit);
 
 log(measure);
 
-var sq = measure.mul(measure);
+var sq: any = measure * measure;
 
 var q = sq.quantity;
 var u = sq.uom;
