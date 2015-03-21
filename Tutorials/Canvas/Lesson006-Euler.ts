@@ -8,7 +8,6 @@
 var unused: Window = window;
 var WIDTH = 400;
 var HEIGHT = 400;
-var Complex = blade.Complex;
 
 /**
  * A color value.
@@ -159,7 +158,7 @@ class ComplexPlane {
       for (var Y=0;Y<HEIGHT;Y++) {
         var x = (X / WIDTH) * (this.xRange.max - this.xRange.min) + this.xRange.min;
         var y = ((HEIGHT-Y)/HEIGHT) * (this.yRange.max - this.yRange.min) + this.yRange.min;
-        var z = new Complex(x,y);
+        var z = new blade.Complex(x,y);
         var H = this.f(z).arg();
         var S = 1;
         var L = lightnessFromMagnitude(this.f(z).norm());
