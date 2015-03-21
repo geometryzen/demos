@@ -118,8 +118,6 @@ class Canvas {
 }
 
 var f = function(arg: blade.Complex): blade.Complex {
-  //return z;
-  // return new Complex(1,0).divide(z);
   
   var z: any = arg;
   var result: any = z * (z * (z + 1) + 6) - 20;
