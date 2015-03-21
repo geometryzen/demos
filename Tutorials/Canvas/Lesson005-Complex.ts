@@ -28,8 +28,8 @@ class Complex {
   }
 }
 
-var zero = new Complex(0,0);
-var one = new Complex(1,0);
+var zero = new blade.Complex(0,0);
+var one = new blade.Complex(1,0);
 var i = new Complex(0,1);
 var minusOne = new Complex(-1,0);
 var minusI = new Complex(0,-1);
