@@ -6,7 +6,7 @@ var log = function(s: any) {
 
 log('Hello, World!!');
 
-var z = blade.Complex(2, 3);
+var z = new blade.Complex(2, 3);
 
 log(z);
 
