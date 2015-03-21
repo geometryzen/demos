@@ -31,7 +31,7 @@ setUp = ->
   workbench3D.setUp()
   monitor.start()
 
-B = eight.bivectorE3(0, 0, 1)
+B = eight.bivectorE3(0, 1, 1)
 angle = 0
 
 stats = new Stats()
