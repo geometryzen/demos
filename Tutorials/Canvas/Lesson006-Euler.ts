@@ -162,7 +162,7 @@ class ComplexPlane {
         var z = new Complex(x,y);
         var H = this.f(z).arg();
         var S = 1;
-        var L = lightnessFromMagnitude(this.f(z).mod());
+        var L = lightnessFromMagnitude(this.f(z).norm());
         L = 0.5;
         this._canvas.context.fillStyle = Color.fromHSL(H, S, L).asFillStyle();
         this._canvas.context.fillRect(X,Y,1,1);
