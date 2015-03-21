@@ -136,6 +136,9 @@ class MinMax {
     this.min = min;
     this.max = max;
   }
+  transform(s: number): number {
+    return s * (this.max - this.min) + this.min;
+  }
 }
 
 function sigmoid(t: number) {
@@ -159,7 +162,7 @@ class ComplexPlane {
   draw() {
     for (var X=0;X<WIDTH;X++) {
       for (var Y=0;Y<HEIGHT;Y++) {
-        var x = (X / WIDTH) * (this.xRange.max - this.xRange.min) + this.xRange.min;
+        var x = this.xRange.transform(X / WIDTH);
         var y = ((HEIGHT-Y)/HEIGHT) * (this.yRange.max - this.yRange.min) + this.yRange.min;
         var z = new blade.Complex(x,y);
         var H = this.f(z).arg();
