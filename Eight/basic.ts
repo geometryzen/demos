@@ -50,8 +50,9 @@ popUp.document.body.appendChild(stats.domElement);
 function tick(time: number) {
   stats.begin();
   // We have to sprinkle in some 'any' to stop TypeScript from complaining!
-  var c: any = eight.scalarE3(Math.cos(angle/2));
-  var s: any = eight.scalarE3(Math.sin(angle/2));
+  var halfAngle = angle/2;
+  var c: any = eight.scalarE3(Math.cos(halfAngle));
+  var s: any = eight.scalarE3(Math.sin(halfAngle));
   var R: any = c - B * s;
   box.attitude = R;
   prism.attitude = R;
