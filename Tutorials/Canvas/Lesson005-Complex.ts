@@ -6,6 +6,8 @@ var log = function(s: any) {
 
 log('Hello, World!!');
 
+var z = blade.Complex(2, 3);
+
 class Complex {
   public x: number;
   public y: number;
