@@ -4,4 +4,4 @@ x = new blade.Euclidean3(1,0,0,0,0,0,0,0)
 
 print x
 print -x
-print +x
+pr int +x
