@@ -3,8 +3,6 @@ var log = function(s: any) {
   w.Sk.output(s+'\n');
 };
 
-log(Ms.VERSION);
-
 /**
  * Demonstrates creating a 2D canvas and context.
  * Illustrates the fundamental theorem of algebra.
