@@ -8,6 +8,8 @@ log('Hello, World!!');
 
 var z = blade.Complex(2, 3);
 
+log(z);
+
 class Complex {
   public x: number;
   public y: number;
