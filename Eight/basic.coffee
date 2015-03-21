@@ -32,6 +32,7 @@ setUp = ->
   monitor.start()
 
 B = eight.bivectorE3(0, 1, 1)
+B = B / B.norm()
 angle = 0
 
 stats = new Stats()
