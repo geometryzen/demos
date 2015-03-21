@@ -8,6 +8,7 @@
 var unused: Window = window;
 var WIDTH = 400;
 var HEIGHT = 400;
+var Complex = blade.Complex;
 
 /**
  * A color value.
@@ -117,38 +118,7 @@ class Canvas {
   }
 }
 
-class Complex {
-  public x: number;
-  public y: number;
-  constructor(x: number, y:number) {
-    this.x = x;
-    this.y = y;
-  }
-  mod(): number {
-    return Math.sqrt(this.x * this.x + this.y * this.y);
-  }
-  arg(): number {
-    return Math.atan2(this.y, this.x);
-  }
-  add(that: Complex): Complex {
-    return new Complex(this.x + that.x, this.y + that.y);
-  }
-  subtract(that: Complex): Complex {
-    return new Complex(this.x - that.x, this.y - that.y);
-  }
-  multiply(that: Complex): Complex {
-    return new Complex(this.x * that.x - this.y * that.y, this.x * that.y + this.y * that.x);
-  }
-  divide(that: Complex): Complex {
-    var denom = that.x * that.x + that.y * that.y;
-    return new Complex((this.x * that.x + this.y * that.y)/denom, (this.y * that.x - this.x * that.y)/denom);
-  }
-  toString(): String {
-    return this.x + "+" + this.y + "i";
-  }
-}
-
-var f = function(z: Complex): Complex {
+var f = function(z: blade.Complex): blade.Complex {
   //return z;
   // return new Complex(1,0).divide(z);
   
@@ -181,8 +151,8 @@ class ComplexPlane {
   private _canvas = new Canvas(WIDTH, HEIGHT);
   private xRange: MinMax;
   private yRange: MinMax;
-  private f: (z: Complex) => Complex;
-  constructor(xRange: MinMax, yRange: MinMax, f: (z: Complex)=>Complex) {
+  private f: (z: blade.Complex) => blade.Complex;
+  constructor(xRange: MinMax, yRange: MinMax, f: (z: blade.Complex)=>blade.Complex) {
     this.xRange = xRange;
     this.yRange = yRange;
     this.f = f;
