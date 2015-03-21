@@ -14,7 +14,6 @@ var unused: Window = window;
 var WIDTH = 400;
 var HEIGHT = 400;
 
-
 class Canvas {
   public backgroundColor: blade.Color = new blade.Color(127, 127, 127);
   public wnd: Window;
