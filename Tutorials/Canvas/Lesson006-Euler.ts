@@ -118,16 +118,13 @@ class Canvas {
   }
 }
 
-var f = function(z: blade.Complex): blade.Complex {
+var f = function(arg: blade.Complex): blade.Complex {
   //return z;
   // return new Complex(1,0).divide(z);
   
-  var z3 = z.multiply(z).multiply(z);
-  var z2 = z.multiply(z);
-  var sz = new Complex(6,0).multiply(z);
-  var tw = new Complex(20,0);
-  return z3.add(z2).add(sz).subtract(tw);
-  
+  var z: any = arg;
+  var result: any = z * z * z + z * z + 6 * z - 20;
+  return result;
 };
 
 class MinMax {
