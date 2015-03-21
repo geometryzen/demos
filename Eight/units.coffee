@@ -1,5 +1,5 @@
 print = (s) -> Sk.output(s + '\n')
 
-x = blade.Euclidean3()
+x = new blade.Euclidean3(1,0,0,0,0,0,0,0)
 
 print x
