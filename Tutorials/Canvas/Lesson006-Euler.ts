@@ -90,7 +90,7 @@ class Canvas {
   constructor(width: number, height: number) {
     this._width = width;
     this._height = height;
-    this.wnd = window.open("111", "222", "width=" + width + ", height=" + height, false);
+    this.wnd = window.open("", "", "width=" + width + ", height=" + height, false);
     
     var popDoc: Document = this.wnd.document;
     
