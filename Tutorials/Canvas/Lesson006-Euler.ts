@@ -163,7 +163,7 @@ class ComplexPlane {
     for (var X=0;X<WIDTH;X++) {
       for (var Y=0;Y<HEIGHT;Y++) {
         var x = this.xRange.transform(X / WIDTH);
-        var y = ((HEIGHT-Y)/HEIGHT) * (this.yRange.max - this.yRange.min) + this.yRange.min;
+        var y = this.yRange.transform((HEIGHT-Y)/HEIGHT);
         var z = new blade.Complex(x,y);
         var H = this.f(z).arg();
         var S = 1;
