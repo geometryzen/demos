@@ -25,3 +25,4 @@ print 5 / s
 print s / 5
 print 5 + s
 print s + 5
+print m + s
