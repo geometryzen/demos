@@ -2,7 +2,13 @@ print = (s) -> Sk.output(s + '\n')
 
 print blade.VERSION
 
-print blade.units.kilogram
-print blade.units.meter
-print blade.units.second
+kg = blade.units.kilogram
+m = blade.units.meter
+s = blade.units.second
+
+print kg
+print m
+print s
+
+print m / s
 
