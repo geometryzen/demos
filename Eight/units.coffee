@@ -27,9 +27,10 @@ print 5 + s
 print s + 5
 
 e1 = new blade.Euclidean3(0,1,0,0,0,0,0,0)
+e2 = new blade.Euclidean3(0,0,1,0,0,0,0,0)
 
 print 5 * e1 * m
 print 5 * m * e1
 print e1 * 5 * m
-# TODO: Operator Overloading for Measure (Measure * number)
 print e1 * m * 5
+print e1 * m * e2 * 5
