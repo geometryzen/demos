@@ -18,4 +18,4 @@ print ''
 print s
 print s.dimensions
 
-print m / (s * s)
+print m / s
