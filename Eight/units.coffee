@@ -28,4 +28,4 @@ print s + 5
 
 e1 = new blade.Euclidean3(0,1,0,0,0,0,0,0)
 
-print e1
+print e1 * m
