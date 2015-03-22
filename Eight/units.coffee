@@ -8,8 +8,10 @@ s = blade.units.second
 
 print kg
 print kg.dimensions
-print m
-print s
 
-print m / s
+print m
+print m.dimensions
+
+print s
+print s.dimensions
 
