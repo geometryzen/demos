@@ -1,6 +1,7 @@
 print = (s) -> Sk.output(s + '\n')
 
 print blade.VERSION
+print blade.units.kilogram
 
 meter = blade.UNIT_METER
 kilogram = blade.UNIT_KILOGRAM
