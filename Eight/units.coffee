@@ -19,3 +19,4 @@ print s
 print s.dimensions
 
 print m * s
+print 5 * m
