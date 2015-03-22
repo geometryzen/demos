@@ -21,4 +21,6 @@ print s.dimensions
 print m * s
 print 5 * m
 print m * 5
-print 1 / s
+print 5 / s
+print s / 5
+print 5 + s
