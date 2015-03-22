@@ -25,4 +25,6 @@ print 5 / s
 print s / 5
 print 5 + s
 print s + 5
-print m + s
+
+e1 = blade.Euclidean3(0,1,0,0,0,0,0,0)
+
