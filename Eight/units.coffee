@@ -1,7 +1,9 @@
 print = (s) -> Sk.output(s + '\n')
 
-x = new blade.Euclidean3(0,1,0,0,0,0,0,0)
+meter = blade.UNIT_METER
+kilogram = blade.UNIT_KILOGRAM
+second = blade.UNIT_SECOND;
 
-print x
-print -x
-print +x
+print meter
+print kilogram
+print second
