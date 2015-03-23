@@ -95,8 +95,7 @@ class WesselPlane {
         var z = new blade.Complex(x,y);
         var H = this.f(z).arg();
         var S = 1;
-        var L = lightnessFromMagnitude(this.f(z).norm());
-        L = 0.5;
+        var L = 0.5;//lightnessFromMagnitude(this.f(z).norm());
         this._canvas.context.fillStyle = blade.Color.fromHSL(H, S, L).asFillStyle();
         this._canvas.context.fillRect(X,Y,1,1);
       }
