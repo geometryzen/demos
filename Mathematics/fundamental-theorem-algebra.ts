@@ -10,7 +10,7 @@ var log = function(s: any) {
 
 // Workaround to prevent TS2082 and TS2087.
 // I don't know why this works.
-var unused: Window = window;
+//var unused: Window = window;
 var WIDTH = 400;
 var HEIGHT = 400;
 
