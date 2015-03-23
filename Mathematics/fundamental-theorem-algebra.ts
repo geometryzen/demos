@@ -77,7 +77,7 @@ function lightnessFromMagnitude(r: number) {
   return 2 * sigmoid(r) - 1.0
 }
 
-class ComplexPlane {
+class WesselPlane {
   private _canvas = new Canvas(WIDTH, HEIGHT);
   private xRange: MinMax;
   private yRange: MinMax;
@@ -105,6 +105,6 @@ class ComplexPlane {
 }
 
 var R = 10;
-var cp = new ComplexPlane(new MinMax(-R,+R), new MinMax(-R,+R),f);
+var cp = new WesselPlane(new MinMax(-R,+R), new MinMax(-R,+R),f);
 cp.draw();
 
