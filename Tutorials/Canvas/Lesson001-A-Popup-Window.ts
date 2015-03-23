@@ -12,6 +12,6 @@ var WINDOW_HALF_HEIGHT = WINDOW_HEIGHT / 2;
 var WINDOW_HALF_WIDTH  = WINDOW_WIDTH / 2;
 
 // Global Variables.
-var popUp: Window = window.open("", "", "width=" + WINDOW_WIDTH + ", height=" + WINDOW_HEIGHT, false);
+var popUp: Window = open("", "", "width=" + WINDOW_WIDTH + ", height=" + WINDOW_HEIGHT, false);
 
 //popUp.close()
