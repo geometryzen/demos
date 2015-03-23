@@ -1,6 +1,7 @@
 print = (s) -> Sk.output(s + '\n')
 
 # verify that we are working with the most current version.
+print blade.VERSION
 print eight.VERSION
 
 cos = Math.cos
