@@ -33,4 +33,4 @@ print 5 * e1 * m
 print 5 * m * e1
 print e1 * 5 * m
 print e1 * m * 5
-print (e1 * m) * e2 * 5
+print ((e1 * m) * e2) * 5
