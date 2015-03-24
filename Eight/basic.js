@@ -4,7 +4,6 @@ var log = function(s) {
 };
 
 log(eight.VERSION);
-log(THREE.REVISION);
 
 var glwin = window.open("","","width=800,height=600");
 
