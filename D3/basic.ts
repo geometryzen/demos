@@ -43,10 +43,8 @@ function tick(t) {
     var x = x0
     var y = y0
     function tweeny(unused1, unused2) {
-        # This side effect is necessary to make things work!
-        a = x
         function circle(t) {
-            var s = c + str(1-t) + ")"
+            var s = c + "" + (1-t) + ")"
             context.strokeStyle = s
             context.beginPath()
             context.arc(x, y, r * t, 0, tau)
@@ -67,5 +65,5 @@ function tearDown(e) {
         print "Ending with exception: " + str(e)
 }
 
-war = WindowAnimationRunner(tick, terminate, setUp, tearDown, window)
+var war = eight.animationRunner(tick, terminate, setUp, tearDown, window)
 war.start()
