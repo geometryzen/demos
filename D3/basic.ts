@@ -36,22 +36,24 @@ function setUp() {
 function tick(t) {
     i += 1
     context.clearRect(0,0,width,height)
-    z = d3.hsl(i % 360, 1, 0.5).rgb()
-    c = "rgba(" + str(int(z.r)) + "," + str(int(z.g)) + "," + str(int(z.b)) + ","
+    var z = d3.hsl(i % 360, 1, 0.5).rgb()
+    var c = "rgba(" + z.r + "," + z.g + "," + z.b + ","
     x0 += (x1 - x0) * .1
     y0 += (y1 - y0) * .1
-    x = x0
-    y = y0
-    def tweeny(unused1, unused2):
+    var x = x0
+    var y = y0
+    function tweeny(unused1, unused2) {
         # This side effect is necessary to make things work!
         a = x
-        def circle(t):
-            s = c + str(1-t) + ")"
+        function circle(t) {
+            var s = c + str(1-t) + ")"
             context.strokeStyle = s
             context.beginPath()
             context.arc(x, y, r * t, 0, tau)
             context.stroke()
+        }
         return circle
+    }
     d3.select({}).transition().duration(2000).ease(math.sqrt).tween("circle", tweeny)
 }
 
