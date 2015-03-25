@@ -8,18 +8,18 @@ var i = 0
 var r = 200
 var tau = Math.PI * 2
 
-canvas = d3.select("body").append("canvas")
+var canvas = d3.select("body").append("canvas")
 
 canvas.attr("width", width).attr("height", height)
 
 d3.select("canvas").style("background-color", "#222")
 
-def move(unused1, unused2, unused3):
-    global x1, y1
-    mouse = d3.mouse(canvas.node())
+function move(data: any, index: number) {
+    var mouse = d3.mouse(canvas.node())
     x1 = mouse[0]
     y1 = mouse[1]
     d3.event.preventDefault()
+}
 
 canvas.on("mousemove", move)
 
