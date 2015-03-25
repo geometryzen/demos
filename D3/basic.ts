@@ -1,12 +1,12 @@
 var width = Math.max(960, window.innerWidth)
 var height = Math.max(500, window.innerHeight)
-x1 = width / 2
-y1 = height / 2
-x0 = x1
-y0 = y1
-i = 0
-r = 200
-tau = math.pi * 2
+var x1 = width / 2
+var y1 = height / 2
+var x0 = x1
+var y0 = y1
+var i = 0
+var r = 200
+var tau = Math.PI * 2
 
 canvas = d3.select("body").append("canvas")
 
