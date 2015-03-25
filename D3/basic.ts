@@ -25,15 +25,15 @@ canvas.on("mousemove", move)
 
 workbench = Workbench2D(canvas.node())
 
-context = canvas.node().getContext("2d")
+var context = canvas.node().getContext("2d")
 context.globalCompositionOperation = "lighter"
 context.lineWidth = 2
 
-def setUp():
+function setUp() {
     workbench.setUp()
+}
 
-def tick(t):
-    global i, x0, y0
+function tick(t) {
     i += 1
     context.clearRect(0,0,width,height)
     z = d3.hsl(i % 360, 1, 0.5).rgb()
@@ -53,14 +53,17 @@ def tick(t):
             context.stroke()
         return circle
     d3.select({}).transition().duration(2000).ease(math.sqrt).tween("circle", tweeny)
+}
 
-def terminate(t):
+function terminate(t) {
     return t > 60
+}
     
-def tearDown(e):
+function tearDown(e) {
     workbench.tearDown()
-    if e:
+    if (e)
         print "Ending with exception: " + str(e)
+}
 
 war = WindowAnimationRunner(tick, terminate, setUp, tearDown, window)
 war.start()
