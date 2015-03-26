@@ -87,9 +87,9 @@ glwin.document.title = "Visualizing Geometric Algebra with WebGL"
 
 var font = "20px Helvetica"
 
-var output = new createjs.Text(glwin.document.title + ". Hit Esc key to exit.", font, "white")
-output.x = 100
-output.y = 60
+//var output = new createjs.Text(glwin.document.title + ". Hit Esc key to exit.", font, "white")
+//output.x = 100
+//output.y = 60
 //space2D.addChild(output)
 
 var scene = new THREE.Scene()
