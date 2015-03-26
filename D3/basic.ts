@@ -35,7 +35,13 @@ class Workbench2D
 {
   constructor(canvas: HTMLCanvasElement)
   {
-    
+    function onWindowResize(event)
+    {
+      var width  = window.innerWidth;
+      var height = window.innerHeight;
+      canvas.width  = width;
+      canvas.height = height;
+    }
   }
   setUp()
   {
