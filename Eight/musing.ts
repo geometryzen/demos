@@ -141,9 +141,9 @@ var workbench3D = new Workbench3D(renderer.domElement, renderer, camera, glwin)
 var tau = 2 * Math.PI
 var omega = (tau / 20)
 // A unit bivector rotating from k to i
-var B = new blade.Euclidean3(0,0,0,0,0.0, 0.0, 1.0,0)
+var B: any = new blade.Euclidean3(0,0,0,0,0.0, 0.0, 1.0,0)
 // Just make sure that we really do have a unit bivector.
-B = B.div(B.norm())
+B = B / B.norm()
 
 function setUp() {
     workbench2D.setUp()
@@ -153,7 +153,8 @@ function setUp() {
 function tick(time: number) {
     var theta = omega * time
     // The rotor is defined to have a minus sign.
-    var rotor = new blade.Euclidean3(Math.cos(theta/2),0,0,0,0,0,0,0).sub(B.mul(Math.sin(theta/2)));
+    var s: any = new blade.Euclidean3(Math.cos(theta/2),0,0,0,0,0,0,0);
+    var rotor = s.sub(B * Math.sin(theta/2));
     // Unfortunately, we have to use a minus sign to convert the rotor grade 2 components to the quaternion values.
     // arrow.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     
