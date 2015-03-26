@@ -42,7 +42,7 @@ var stage = new createjs.Stage(canvas, "", {})
 
 var font = "20px Helvetica"
 
-var output = new createjs.Text(document.title + ". Hit Esc key to exit.", font, "white")
+var output = new createjs.Text(document.title + ". Hit Esc key to exit.", font, "black")
 output.x = 100
 output.y = 60
 stage.addChild(output);
