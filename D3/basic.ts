@@ -93,7 +93,7 @@ function tick(t) {
         }
         return circle
     }
-    d3.select({}).transition().duration(2000).ease(Math.sqrt).tween("circle", tweeny)
+    d3.select().transition().duration(2000).tween("circle", tweeny)
 }
 
 function terminate(t) {
