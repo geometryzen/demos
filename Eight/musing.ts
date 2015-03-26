@@ -121,7 +121,7 @@ var mesh = new THREE.Mesh(new THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00, 1
 mesh.position.set(0, -2, 0)
 scene.add(mesh)
 
-//var arrow = new THREE.Mesh(new THREE.ArrowBoxGeometry(4.0), material(0xFFFF00, 1.0, false))
+var arrow = new THREE.Mesh(new THREE.ArrowGeometry(4.0), material(0xFFFF00, 1.0, false))
 //scene.add(arrow)
 
 var box = new THREE.Mesh(new THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25, false))
