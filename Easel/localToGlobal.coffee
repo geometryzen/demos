@@ -1,11 +1,9 @@
 removeElementsByTagName = (tagName) ->
   elements = document.getElementsByTagName(tagName)
-  for element in elemei = elements.length - 1; i >= 0; i--
-    e = elements[i]
-    e.parentNode.removeChild e;
+  for element in elements
+    element.parentNode.removeChild element
 
 class Workbench2D
-{
   constructor: (canvas: HTMLCanvasElement) ->
     this.canvas = canvas;
     onWindowResize = (event) ->
@@ -15,19 +13,14 @@ class Workbench2D
       canvas.height = height
     this.sizer = onWindowResize;
 
-  setUp()
-  {
+  setUp: () ->
     document.body.insertBefore(this.canvas, document.body.firstChild);
     window.addEventListener('resize', this.sizer, false);
     this.sizer(null);
 
-  }
-  tearDown()
-  {
-    window.removeEventListener('resize', this.sizer, false);
-    removeElementsByTagName("canvas");
-  }
-}
+  tearDown: () ->
+    window.removeEventListener('resize', this.sizer, false)
+    removeElementsByTagName("canvas")
 
 canvas = document.createElement("canvas")
 
