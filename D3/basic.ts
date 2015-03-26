@@ -93,6 +93,7 @@ function tick(t) {
         }
         return circle
     }
+    // The following is correct. Maybe an error in the TypeLibrary definitions?
     d3.select({}).transition().duration(2000).ease(Math.sqrt).tween("circle", tweeny)
 }
 
