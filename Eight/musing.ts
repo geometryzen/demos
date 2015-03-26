@@ -146,7 +146,7 @@ var B = new blade.Euclidean3(0,0,0,0,0.0, 0.0, 1.0,0)
 B = B.div(B.norm())
 
 function setUp() {
-//    workbench2D.setUp()
+    workbench2D.setUp()
     workbench3D.setUp()
 }
 
@@ -163,6 +163,7 @@ function tick(time: number) {
     //vortex.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     flat.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     renderer.render(scene, camera)
+    space2D.update()
 }
 
 function terminate(time: number) {
@@ -171,7 +172,7 @@ function terminate(time: number) {
 
 function tearDown(e) {
     workbench3D.tearDown()
-//    workbench2D.tearDown()
+    workbench2D.tearDown()
     glwin.close()
 }
 
