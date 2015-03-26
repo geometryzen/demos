@@ -166,10 +166,14 @@ function tick(time) {
 //    space2D.draw()
 }
 
+function terminate() {
+  return false;
+}
+
 function tearDown(e) {
     workbench3D.tearDown()
 //    workbench2D.tearDown()
     glwin.close()
 }
 
-eight.animationRunner(tick, null, setUp, tearDown, glwin).start()
+eight.animationRunner(tick, terminate, setUp, tearDown, glwin).start()
