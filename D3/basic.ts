@@ -23,7 +23,18 @@ function move(data: any, index: number) {
 
 canvas.on("mousemove", move)
 
-workbench = Workbench2D(canvas.node())
+class Workbench2D
+{
+  constructor(canvas: HTMLCanvasElement)
+  {
+    
+  }
+}
+
+var element: any = canvas.node();
+var elemCanvas = element;
+
+var workbench = new Workbench2D(elemCanvas)
 
 var context = canvas.node().getContext("2d")
 context.globalCompositionOperation = "lighter"
