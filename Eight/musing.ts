@@ -106,23 +106,23 @@ scene.add(flat)
 workbench3D = Workbench3D(renderer.domElement, renderer, camera, glwin)
 
 var tau = 2 * Math.PI
-var omega = (tau / 20) / second
+var omega = (tau / 20)
 // A unit bivector rotating from k to i
-var B = BivectorE3(0.0, 0.0, 1.0)
+var B = new blade.Euclidean3(0,0,0,0,0.0, 0.0, 1.0,0)
 // Just make sure that we really do have a unit bivector.
-B = B / magnitude(B)
+B = B.div(B.norm())
 
-def setUp():
+function setUp() {
     workbench2D.setUp()
     workbench3D.setUp()
+}
 
-function tick(t) {
-    time = t * second
-    theta = omega * time
-    # The rotor is defined to have a minus sign.
-    rotor = exp(-B*theta.quantity/2.0)
-    # Unfortunately, we have to use a minus sign to convert the rotor grade 2 components to the quaternion values.
-    arrow.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
+function tick(time) {
+    var theta = omega * time
+    // The rotor is defined to have a minus sign.
+    var rotor = new blade.Euclidean3(Math.cos(theta/2),0,0,0,0,0,0,0).sub(B.mul(Math.sin(theta/2)));
+    // Unfortunately, we have to use a minus sign to convert the rotor grade 2 components to the quaternion values.
+    // arrow.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     
     box.attitude = rotor
     box.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
@@ -130,7 +130,7 @@ function tick(t) {
     vortex.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     flat.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     renderer.render(scene, camera)
-    space2D.render()
+    space2D.draw()
 }
 
 function tearDown(e) {
