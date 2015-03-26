@@ -157,7 +157,7 @@ function tick(time: number) {
     var s: any = new blade.Euclidean3(Math.cos(theta/2),0,0,0,0,0,0,0);
     var rotor: any = s - B * Math.sin(theta/2);
     // Unfortunately, we have to use a minus sign to convert the rotor grade 2 components to the quaternion values.
-    // arrow.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
+    arrow.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     
     //box.attitude = rotor
     box.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
