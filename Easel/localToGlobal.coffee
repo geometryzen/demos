@@ -22,25 +22,25 @@ class Workbench2D
     window.removeEventListener 'resize', this.sizer, false
     removeElementsByTagName "canvas"
 
-canvas = document.createElement("canvas")
+canvas = document.createElement "canvas"
 
-stage = new createjs.Stage(canvas, "", {})
+stage = new createjs.Stage canvas, "", {}
 
 font = "20px Helvetica"
 
 output = new createjs.Text(document.title + ". Hit Esc key to exit.", font, "black")
 output.x = 100
 output.y = 60
-stage.addChild(output);
+stage.addChild output
 
-target = stage.addChild(new createjs.Shape())
+target = stage.addChild new createjs.Shape()
 target.graphics.beginFill("blue").drawCircle(0, 0, 50).endFill()
 target.graphics.beginFill("white").drawCircle(0, 0, 30).endFill()
 target.graphics.beginFill("red").drawCircle(0, 0, 10).endFill()
 target.x = 100
 target.y = 180
 
-arm = stage.addChild(new createjs.Shape())
+arm = stage.addChild new createjs.Shape()
 arm.graphics.beginFill("black").drawRect(-2, -2, 100, 4).endFill()
 arm.graphics.beginFill("black").drawCircle(100, 0, 8).endFill()
 arm.x = 180
@@ -54,7 +54,7 @@ tick = (t) ->
     arm.rotation = 180 * t
     target.alpha = 0.2
     point = arm.localToLocal(100, 0, target)
-    if target.hitTest(point.x, point.y)
+    if target.hitTest point.x, point.y
         target.alpha = 1
     stage.update()
 
