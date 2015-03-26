@@ -77,20 +77,20 @@ glwin.document.body.style.backgroundColor = "080808"
 glwin.document.body.style.overflow = "hidden"
 glwin.document.title = "Visualizing Geometric Algebra with WebGL"
 
-//var canvas2D = glwin.document.createElement("canvas")
-//canvas2D.style.position = "absolute"
-//canvas2D.style.top = "0px"
-//canvas2D.style.left = "0px"
-//var workbench2D = new Workbench2D(canvas2D, glwin)
-//var space2D = new createjs.Stage(canvas2D, "", {})
-//space2D.autoClear = true
+var canvas2D = glwin.document.createElement("canvas")
+canvas2D.style.position = "absolute"
+canvas2D.style.top = "0px"
+canvas2D.style.left = "0px"
+var workbench2D = new Workbench2D(canvas2D, glwin)
+var space2D = new createjs.Stage(canvas2D, "", {})
+space2D.autoClear = true
 
 var font = "20px Helvetica"
 
-//var output = new createjs.Text(glwin.document.title + ". Hit Esc key to exit.", font, "white")
-//output.x = 100
-//output.y = 60
-//space2D.addChild(output)
+var output = new createjs.Text(glwin.document.title + ". Hit Esc key to exit.", font, "white")
+output.x = 100
+output.y = 60
+space2D.addChild(output)
 
 var scene = new THREE.Scene()
 
