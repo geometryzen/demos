@@ -11,7 +11,7 @@ class Workbench2D
       height = window.innerHeight
       canvas.width  = width
       canvas.height = height
-    this.sizer = onWindowResize;
+    this.sizer = onWindowResize
 
   setUp: () ->
     document.body.insertBefore(this.canvas, document.body.firstChild);
@@ -33,14 +33,14 @@ output.x = 100
 output.y = 60
 stage.addChild(output);
 
-target:any = stage.addChild(new createjs.Shape())
+target = stage.addChild(new createjs.Shape())
 target.graphics.beginFill("blue").drawCircle(0, 0, 50).endFill()
 target.graphics.beginFill("white").drawCircle(0, 0, 30).endFill()
 target.graphics.beginFill("red").drawCircle(0, 0, 10).endFill()
 target.x = 100
 target.y = 180
 
-arm: any = stage.addChild(new createjs.Shape())
+arm = stage.addChild(new createjs.Shape())
 arm.graphics.beginFill("black").drawRect(-2, -2, 100, 4).endFill()
 arm.graphics.beginFill("black").drawCircle(100, 0, 8).endFill()
 arm.x = 180
