@@ -163,7 +163,6 @@ function tick(time: number) {
     //vortex.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     flat.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     renderer.render(scene, camera)
-    space2D.draw()
 }
 
 function terminate(time: number) {
