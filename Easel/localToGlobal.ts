@@ -40,6 +40,13 @@ var canvas = document.createElement("canvas")
 
 var stage = new createjs.Stage(canvas, "", {})
 
+var font = "20px Helvetica"
+
+var output = new createjs.Text(document.title + ". Hit Esc key to exit.", font, "white")
+output.x = 100
+output.y = 60
+stage.addChild(output);
+
 var target:any = stage.addChild(new createjs.Shape())
 target.graphics.beginFill("blue").drawCircle(0, 0, 50).endFill()
 target.graphics.beginFill("white").drawCircle(0, 0, 30).endFill()
