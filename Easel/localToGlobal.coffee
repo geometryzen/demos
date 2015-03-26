@@ -28,7 +28,7 @@ stage = new createjs.Stage canvas, "", {}
 
 font = "20px Helvetica"
 
-output = new createjs.Text(document.title + ". Hit Esc key to exit.", font, "black")
+output = new createjs.Text document.title + ". Hit Esc key to exit.", font, "black"
 output.x = 100
 output.y = 60
 stage.addChild output
