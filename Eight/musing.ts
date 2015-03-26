@@ -26,7 +26,7 @@ class Workbench2D
   }
   setUp()
   {
-    document.body.insertBefore(this.canvas, document.body.firstChild);
+    this.wnd.doc.body.insertBefore(this.canvas, document.body.firstChild);
     this.wnd.addEventListener('resize', this.sizer, false);
     this.sizer(null);
 
@@ -59,7 +59,7 @@ class Workbench3D
   }
   setUp()
   {
-    document.body.insertBefore(this.canvas, document.body.firstChild);
+    this.wnd.doc.body.insertBefore(this.canvas, document.body.firstChild);
     this.wnd.addEventListener('resize', this.sizer, false);
     this.sizer(null);
 
@@ -67,7 +67,7 @@ class Workbench3D
   tearDown()
   {
     this.wnd.removeEventListener('resize', this.sizer, false);
-    removeElementsByTagName("canvas");
+    removeElementsByTagName(this.wnd.doc, "canvas");
   }
 }
 
