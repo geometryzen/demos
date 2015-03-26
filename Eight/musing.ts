@@ -1,5 +1,3 @@
-debugger;
-
 function removeElementsByTagName(doc: Document, tagName: string) {
   var elements = doc.getElementsByTagName(tagName);
   for (var i = elements.length - 1; i >= 0; i--) {
