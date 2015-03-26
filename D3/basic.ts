@@ -36,8 +36,8 @@ var elemCanvas = element;
 
 var workbench = new Workbench2D(elemCanvas)
 
-var context = canvas.node().getContext("2d")
-context.globalCompositionOperation = "lighter"
+var context = elemCanvas.getContext("2d")
+context.lobalCompositionOperation = "lighter"
 context.lineWidth = 2
 
 function setUp() {
