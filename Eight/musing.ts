@@ -88,35 +88,35 @@ var mesh = new THREE.Mesh(new THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00, 1
 mesh.position.set(0, -2, 0)
 scene.add(mesh)
 
-arrow = THREE.Mesh(THREE.ArrowGeometry(4.0), material(0xFFFF00, 1.0, False))
-scene.add(arrow)
+//var arrow = new THREE.Mesh(new THREE.ArrowBoxGeometry(4.0), material(0xFFFF00, 1.0, false))
+//scene.add(arrow)
 
-box = THREE.Mesh(THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25, False))
+var box = new THREE.Mesh(new THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25, false))
 scene.add(box)
 box.position.set(3,-3,3)
 
-vortex = THREE.Mesh(THREE.VortexGeometry(4.0, 0.32, 0.04, 0.08, 0.3, 8, 12), material(0x00FFff, 0.3, False))
-scene.add(vortex)
+//vortex = THREE.Mesh(THREE.VortexGeometry(4.0, 0.32, 0.04, 0.08, 0.3, 8, 12), material(0x00FFff, 0.3, False))
+//scene.add(vortex)
 
-flat = THREE.Mesh(THREE.BoxGeometry(10.0,10.0,0.1), material(0x0000FF, 0.25, True))
+var flat = new THREE.Mesh(new THREE.BoxGeometry(10.0,10.0,0.1), material(0x0000FF, 0.25, true))
 scene.add(flat)
 
-CartesianSpace(scene, renderer)
+//CartesianSpace(scene, renderer)
 
 workbench3D = Workbench3D(renderer.domElement, renderer, camera, glwin)
 
-tau = 2 * pi
-omega = (tau / 20) / second
-# A unit bivector rotating from k to i
-B = BivectorE3(0.0, 0.0, 1.0)
-# Just make sure that we really do have a unit bivector.
+var tau = 2 * Math.PI
+var omega = (tau / 20) / second
+// A unit bivector rotating from k to i
+var B = BivectorE3(0.0, 0.0, 1.0)
+// Just make sure that we really do have a unit bivector.
 B = B / magnitude(B)
 
 def setUp():
     workbench2D.setUp()
     workbench3D.setUp()
 
-def tick(t):
+function tick(t) {
     time = t * second
     theta = omega * time
     # The rotor is defined to have a minus sign.
@@ -131,14 +131,12 @@ def tick(t):
     flat.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     renderer.render(scene, camera)
     space2D.render()
+}
 
-def tearDown(e):
+function tearDown(e) {
     workbench3D.tearDown()
     workbench2D.tearDown()
     glwin.close()
-    if e:
-        print "Error during animation: %s" % (e)
-    else:
-        print "Goodbye!"
+}
 
-WindowAnimationRunner(tick, None, setUp, tearDown, glwin).start()
+eight.animationRunner(tick, null, setUp, tearDown, glwin).start()
