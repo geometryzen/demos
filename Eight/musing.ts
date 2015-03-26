@@ -38,6 +38,38 @@ class Workbench2D
   }
 }
 
+class Workbench3D
+{
+  public canvas;
+  public wnd;
+  private sizer: EventListener;
+  constructor(canvas: HTMLCanvasElement, renderer: THREE.WebGLRenderer, camera: THREE.PerspectiveCamera, wnd: Window)
+  {
+    this.canvas = canvas;
+    this.wnd = wnd;
+    function onWindowResize(event)
+    {
+      var width  = wnd.innerWidth;
+      var height = wnd.innerHeight;
+      canvas.width  = width;
+      canvas.height = height;
+    }
+    this.sizer = onWindowResize;
+  }
+  setUp()
+  {
+    document.body.insertBefore(this.canvas, document.body.firstChild);
+    this.wnd.addEventListener('resize', this.sizer, false);
+    this.sizer(null);
+
+  }
+  tearDown()
+  {
+    this.wnd.removeEventListener('resize', this.sizer, false);
+    removeElementsByTagName("canvas");
+  }
+}
+
 
 var glwin = window.open("","","width=800,height=600")
 glwin.document.body.style.backgroundColor = "080808"
@@ -103,7 +135,7 @@ scene.add(flat)
 
 //CartesianSpace(scene, renderer)
 
-workbench3D = Workbench3D(renderer.domElement, renderer, camera, glwin)
+var workbench3D = new Workbench3D(renderer.domElement, renderer, camera, glwin)
 
 var tau = 2 * Math.PI
 var omega = (tau / 20)
@@ -124,13 +156,13 @@ function tick(time) {
     // Unfortunately, we have to use a minus sign to convert the rotor grade 2 components to the quaternion values.
     // arrow.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     
-    box.attitude = rotor
+    //box.attitude = rotor
     box.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
 
-    vortex.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
+    //vortex.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     flat.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     renderer.render(scene, camera)
-    space2D.draw()
+//    space2D.draw()
 }
 
 function tearDown(e) {
