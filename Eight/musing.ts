@@ -1,5 +1,5 @@
-function removeElementsByTagName(tagName) {
-  var elements = document.getElementsByTagName(tagName);
+function removeElementsByTagName(doc: Document, tagName: string) {
+  var elements = doc.getElementsByTagName(tagName);
   for (var i = elements.length - 1; i >= 0; i--) {
     var e = elements[i];
     e.parentNode.removeChild(e);
@@ -34,7 +34,7 @@ class Workbench2D
   tearDown()
   {
     this.wnd.removeEventListener('resize', this.sizer, false);
-    removeElementsByTagName("canvas");
+    removeElementsByTagName(this.wnd.doc, "canvas");
   }
 }
 
