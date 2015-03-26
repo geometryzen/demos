@@ -51,8 +51,9 @@ class Workbench3D
     {
       var width  = wnd.innerWidth;
       var height = wnd.innerHeight;
-      canvas.width  = width;
-      canvas.height = height;
+      renderer.setSize(width, height);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
     }
     this.sizer = onWindowResize;
   }
