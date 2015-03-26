@@ -29,6 +29,14 @@ class Workbench2D
   {
     
   }
+  setUp()
+  {
+    
+  }
+  tearDown()
+  {
+    
+  }
 }
 
 var element: any = canvas.node();
