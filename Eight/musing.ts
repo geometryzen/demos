@@ -1,3 +1,44 @@
+function removeElementsByTagName(tagName) {
+  var elements = document.getElementsByTagName(tagName);
+  for (var i = elements.length - 1; i >= 0; i--) {
+    var e = elements[i];
+    e.parentNode.removeChild(e);
+  }
+}
+
+class Workbench2D
+{
+  public canvas;
+  public wnd;
+  private sizer: EventListener;
+  constructor(canvas: HTMLCanvasElement, wnd: Window)
+  {
+    this.canvas = canvas;
+    this.wnd = wnd;
+    function onWindowResize(event)
+    {
+      var width  = wnd.innerWidth;
+      var height = wnd.innerHeight;
+      canvas.width  = width;
+      canvas.height = height;
+    }
+    this.sizer = onWindowResize;
+  }
+  setUp()
+  {
+    document.body.insertBefore(this.canvas, document.body.firstChild);
+    this.wnd.addEventListener('resize', this.sizer, false);
+    this.sizer(null);
+
+  }
+  tearDown()
+  {
+    this.wnd.removeEventListener('resize', this.sizer, false);
+    removeElementsByTagName("canvas");
+  }
+}
+
+
 var glwin = window.open("","","width=800,height=600")
 glwin.document.body.style.backgroundColor = "080808"
 glwin.document.body.style.overflow = "hidden"
@@ -7,43 +48,43 @@ var canvas2D = glwin.document.createElement("canvas")
 canvas2D.style.position = "absolute"
 canvas2D.style.top = "0px"
 canvas2D.style.left = "0px"
-var workbench2D = Workbench2D(canvas2D, glwin)
-space2D = Stage(canvas2D)
-space2D.autoClear = True
+var workbench2D = new Workbench2D(canvas2D, glwin)
+var space2D = new createjs.Stage(canvas2D, "", {})
+space2D.autoClear = true
 
-font = "20px Helvetica"
+var font = "20px Helvetica"
 
-output = Text(glwin.document.title + ". Hit Esc key to exit.", font, "white")
+var output = new createjs.Text(glwin.document.title + ". Hit Esc key to exit.", font, "white")
 output.x = 100
 output.y = 60
 space2D.addChild(output)
 
-scene = THREE.Scene()
+var scene = new THREE.Scene()
 
-camera = THREE.PerspectiveCamera(45, 1.0, 0.1, 10000)
+var camera = new THREE.PerspectiveCamera(45, 1.0, 0.1, 10000)
 camera.position.set(10.0, 9.0, 8.0)
 camera.up.set(0,0,1)
 camera.lookAt(scene.position)
 
-ambientLight = THREE.AmbientLight(0x111111)
+var ambientLight = new THREE.AmbientLight(0x111111)
 scene.add(ambientLight)
 
-pointLight = THREE.PointLight(0xFFFFFF)
+var pointLight = new THREE.PointLight(0xFFFFFF)
 pointLight.position.set(20.0, 20.0, 20.0)
 scene.add(pointLight)
 
-directionalLight = THREE.DirectionalLight(0xFFFFFF)
+var directionalLight = new THREE.DirectionalLight(0xFFFFFF)
 directionalLight.position.set(0.0, 1.0, 0.0)
 scene.add(directionalLight)
 
-#renderer = THREE.CanvasRenderer()
-renderer = THREE.WebGLRenderer()
-renderer.setClearColor(THREE.Color(0x080808), 1.0)
+var renderer = new THREE.WebGLRenderer()
+renderer.setClearColor(new THREE.Color(0x080808), 1.0)
 
-def material(color=0x0000FF, opacity=1.0, transparent=False):
-    return THREE.MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent})
+function material(color, opacity, transparent) {
+    return new THREE.MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent})
+}
 
-mesh = THREE.Mesh(THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00, 1.0, False))
+var mesh = new THREE.Mesh(new THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00, 1.0, false))
 mesh.position.set(0, -2, 0)
 scene.add(mesh)
 
