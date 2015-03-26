@@ -59,7 +59,7 @@ class Workbench3D
   }
   setUp()
   {
-    this.wnd.doc.body.insertBefore(this.canvas, document.body.firstChild);
+    this.wnd.doc.body.insertBefore(this.canvas, this.wnd.doc.body.firstChild);
     this.wnd.addEventListener('resize', this.sizer, false);
     this.sizer(null);
 
