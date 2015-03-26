@@ -10,8 +10,8 @@ function removeElementsByTagName(doc: Document, tagName: string) {
 
 class Workbench2D
 {
-  public canvas;
-  public wnd;
+  public canvas: HTMLCanvasElement;
+  public wnd: Window;
   private sizer: EventListener;
   constructor(canvas: HTMLCanvasElement, wnd: Window)
   {
@@ -28,7 +28,7 @@ class Workbench2D
   }
   setUp()
   {
-    this.wnd.doc.body.insertBefore(this.canvas, document.body.firstChild);
+    this.wnd.document.body.insertBefore(this.canvas, this.wnd.document.body.firstChild);
     this.wnd.addEventListener('resize', this.sizer, false);
     this.sizer(null);
 
@@ -36,14 +36,14 @@ class Workbench2D
   tearDown()
   {
     this.wnd.removeEventListener('resize', this.sizer, false);
-    removeElementsByTagName(this.wnd.doc, "canvas");
+    removeElementsByTagName(this.wnd.document, "canvas");
   }
 }
 
 class Workbench3D
 {
-  public canvas;
-  public wnd;
+  public canvas: HTMLCanvasElement;
+  public wnd: Window;
   private sizer: EventListener;
   constructor(canvas: HTMLCanvasElement, renderer: THREE.WebGLRenderer, camera: THREE.PerspectiveCamera, wnd: Window)
   {
@@ -61,7 +61,7 @@ class Workbench3D
   }
   setUp()
   {
-    this.wnd.doc.body.insertBefore(this.canvas, this.wnd.doc.body.firstChild);
+    this.wnd.document.body.insertBefore(this.canvas, this.wnd.document.body.firstChild);
     this.wnd.addEventListener('resize', this.sizer, false);
     this.sizer(null);
 
@@ -69,7 +69,7 @@ class Workbench3D
   tearDown()
   {
     this.wnd.removeEventListener('resize', this.sizer, false);
-    removeElementsByTagName(this.wnd.doc, "canvas");
+    removeElementsByTagName(this.wnd.document, "canvas");
   }
 }
 
