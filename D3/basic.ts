@@ -33,8 +33,11 @@ function removeElementsByTagName(tagName) {
 
 class Workbench2D
 {
+  public canvas;
+  private sizer;
   constructor(canvas: HTMLCanvasElement)
   {
+    this.canvas = canvas;
     function onWindowResize(event)
     {
       var width  = window.innerWidth;
@@ -42,10 +45,14 @@ class Workbench2D
       canvas.width  = width;
       canvas.height = height;
     }
+    this.sizer = onWindowResize;
   }
   setUp()
   {
-    
+    document.body.insertBefore(this.canvas, document.body.firstChild);
+    window.addEventListener('resize', this.sizer, false);
+    this.sizer(null);
+
   }
   tearDown()
   {
