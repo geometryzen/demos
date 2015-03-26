@@ -23,6 +23,14 @@ function move(data: any, index: number) {
 
 canvas.on("mousemove", move)
 
+function removeElementsByTagName(tagName) {
+  var elements = document.getElementsByTagName(tagName);
+  for (var i = elements.length - 1; i >= 0; i--) {
+    var e = elements[i];
+    e.parentNode.removeChild(e);
+  }
+}
+
 class Workbench2D
 {
   constructor(canvas: HTMLCanvasElement)
