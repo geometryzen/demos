@@ -80,8 +80,6 @@ function terminate(t) {
     
 function tearDown(e) {
     workbench.tearDown()
-    if (e)
-        print "Ending with exception: " + str(e)
 }
 
 var war = eight.animationRunner(tick, terminate, setUp, tearDown, window)
