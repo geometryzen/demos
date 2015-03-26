@@ -14,13 +14,13 @@ class Workbench2D
     this.sizer = onWindowResize
 
   setUp: () ->
-    document.body.insertBefore(this.canvas, document.body.firstChild);
-    window.addEventListener('resize', this.sizer, false);
-    this.sizer(null);
+    document.body.insertBefore this.canvas, document.body.firstChild
+    window.addEventListener 'resize', this.sizer, false
+    this.sizer null
 
   tearDown: () ->
-    window.removeEventListener('resize', this.sizer, false)
-    removeElementsByTagName("canvas")
+    window.removeEventListener 'resize', this.sizer, false
+    removeElementsByTagName "canvas"
 
 canvas = document.createElement("canvas")
 
