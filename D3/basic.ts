@@ -34,7 +34,7 @@ function removeElementsByTagName(tagName) {
 class Workbench2D
 {
   public canvas;
-  private sizer;
+  private sizer: EventListener;
   constructor(canvas: HTMLCanvasElement)
   {
     this.canvas = canvas;
@@ -56,7 +56,8 @@ class Workbench2D
   }
   tearDown()
   {
-    
+    window.removeEventListener('resize', this.sizer, false);
+    removeElementsByTagName("canvas");
   }
 }
 
