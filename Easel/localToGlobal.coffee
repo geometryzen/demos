@@ -1,6 +1,6 @@
 removeElementsByTagName = (tagName) ->
   elements = document.getElementsByTagName(tagName)
-  for (i = elements.length - 1; i >= 0; i--)
+  for element in elemei = elements.length - 1; i >= 0; i--
     e = elements[i]
     e.parentNode.removeChild e;
 
@@ -64,7 +64,6 @@ tick = (t) ->
     if target.hitTest(point.x, point.y)
         target.alpha = 1
     stage.update()
-}
 
 terminate = (t) -> t > 10
 
