@@ -21,6 +21,7 @@ class Arrow
     this.material = new THREE.MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent});
     this.mesh = new THREE.Mesh(this.geometry, this.material);
   }
+
   set attitude(rotor: blade.Euclidean3)
   {
     this.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
@@ -47,6 +48,10 @@ class Box
     this.geometry = new THREE.BoxGeometry(width, height, depth);
     this.material = new THREE.MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent});
     this.mesh = new THREE.Mesh(this.geometry, this.material);
+  }
+  set position(p: blade.Euclidean3)
+  {
+    this.mesh.position.set(p.x, p.y, p.z);
   }
   set attitude(rotor: blade.Euclidean3)
   {
@@ -180,7 +185,7 @@ scene.add(arrow.mesh);
 
 var box = new Box(1,2,3,0xFF0000, 0.25);
 scene.add(box.mesh);
-box.position.set(3,-3,3);
+box.mesh.position.set(3,-3,3);
 
 var vortex = new THREE.Mesh(new THREE.VortexGeometry(4.0, 0.32, 0.04, 0.08, 0.3, 8, 12), material(0x00FFff, 0.3));
 scene.add(vortex)
