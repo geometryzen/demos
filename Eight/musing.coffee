@@ -21,7 +21,6 @@ class Workbench2D
     
   tearDown: () ->
     this.wnd.removeEventListener('resize', this.sizer, false)
-    removeElementsByTagName(this.wnd.document, "canvas")
 
 class Workbench3D
   constructor: (canvas, renderer, camera, wnd) ->
@@ -42,7 +41,6 @@ class Workbench3D
 
   tearDown: () ->
     this.wnd.removeEventListener('resize', this.sizer, false)
-    removeElementsByTagName(this.wnd.document, "canvas")
 
 glwin = window.open("","","width=800,height=600")
 glwin.document.body.style.backgroundColor = "080808"
@@ -143,6 +141,7 @@ terminate = (time) ->
 tearDown = (e) ->
     workbench3D.tearDown()
     workbench2D.tearDown()
+    removeElementsByTagName(glwin.document, "canvas")
     glwin.close()
 
 eight.animationRunner(tick, terminate, setUp, tearDown, glwin).start()
