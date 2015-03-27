@@ -16,8 +16,8 @@ class Workbench2D
     this.sizer = onWindowResize;
 
   setUp: () ->
-    this.wnd.document.body.insertBefore(this.canvas, this.wnd.document.body.firstChild);
-    this.wnd.addEventListener('resize', this.sizer, false);
+    this.wnd.document.body.insertBefore(this.canvas, this.wnd.document.body.firstChild)
+    this.wnd.addEventListener('resize', this.sizer, false)
     this.sizer(null);
     
   tearDown: () ->
@@ -143,7 +143,7 @@ tick = (time) ->
     space2D.update()
 
 terminate = (time) ->
-  return false;
+  return false
 
 tearDown = (e) ->
     workbench3D.tearDown()
