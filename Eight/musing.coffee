@@ -26,7 +26,7 @@ class Workbench2D
 
 class Workbench3D
 {
-  constructor: (canvas: HTMLCanvasElement, renderer: THREE.WebGLRenderer, camera: THREE.PerspectiveCamera, wnd: Window)
+  constructor: (canvas, renderer, camera, wnd)
   {
     this.canvas = canvas;
     this.wnd = wnd;
