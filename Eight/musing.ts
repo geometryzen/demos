@@ -206,7 +206,7 @@ scene.add(flat.mesh);
 
 //CartesianSpace(scene, renderer)
 
-var workbench3D = new Workbench3D(renderer.domElement, renderer, camera, glwin);
+var workbench3D = new Workbench3D(renderer.domElement, renderer, scene.camera, glwin);
 
 var tau = 2 * Math.PI;
 var omega = (tau / 20);
@@ -230,7 +230,7 @@ function tick(time: number) {
     flat.attitude = rotor;
     vortex.attitude = rotor;
 
-    renderer.render(scene, camera);
+    renderer.render(scene.scene, scene.camera);
     space2D.update();
 }
 
