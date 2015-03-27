@@ -247,6 +247,6 @@ function tick(time: number) {
 
 function terminate(time: number) { return false; }
 
-function tearDown(e) { viz.tearDown(); popUp.close(); }
+function tearDown(e: Error) { viz.tearDown(); popUp.close(); }
 
 eight.animationRunner(tick, terminate, setUp, tearDown, popUp).start();
