@@ -15,9 +15,9 @@ class Arrow
   public geometry: THREE.ArrowGeometry;
   public material: THREE.MeshLambertMaterial;
   public mesh: THREE.Mesh;
-  constructor()
+  constructor(length: number = 1.0)
   {
-    this.geometry = new THREE.ArrowGeometry(1.0);
+    this.geometry = new THREE.ArrowGeometry(length);
     this.material = material(0xFFFFFF);
     this.mesh = new THREE.Mesh(this.geometry, this.material);
   }
