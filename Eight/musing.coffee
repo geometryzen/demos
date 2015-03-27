@@ -49,7 +49,7 @@ class Workbench3D
 }
 
 
-glwin: Window = window.open("","","width=800,height=600");
+glwin = window.open("","","width=800,height=600");
 glwin.document.body.style.backgroundColor = "080808";
 glwin.document.body.style.overflow = "hidden";
 glwin.document.title = "Visualizing Geometric Algebra with WebGL";
