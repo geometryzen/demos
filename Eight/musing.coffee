@@ -142,7 +142,7 @@ tick = (time) ->
     renderer.render(scene, camera)
     space2D.update()
 
-terminate = (time: number) ->
+terminate = (time) ->
   return false;
 
 tearDown = (e) ->
