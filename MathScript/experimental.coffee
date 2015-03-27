@@ -7,7 +7,8 @@ z = x << y
 m = blade.UNIT_METER
 s = blade.UNIT_SECOND
 
-v = z * m / s
+# TODO: Measure divided by Unit is not yet implemented.
+v = z * m * s
 
 print Ms.VERSION 
 print "x: " + x
