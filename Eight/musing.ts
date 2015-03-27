@@ -183,7 +183,7 @@ scene.add(mesh);
 var arrow = new Arrow(4.0, 0xFFFF00);
 scene.add(arrow.mesh);
 
-var box = new Box(3.0, 4.0, 5.0, 0xFF0000, 0.25, false);
+var box = new Box(1.0, 2.0, 3.0, 0xFF0000, 0.25, false);
 scene.add(box.mesh);
 box.mesh.position.set(3,-3,3);
 
