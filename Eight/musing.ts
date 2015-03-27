@@ -113,11 +113,11 @@ scene.add(directionalLight);
 var renderer = new THREE.WebGLRenderer()
 renderer.setClearColor(new THREE.Color(0x080808), 1.0)
 
-function material(color: number, opacity: number, transparent: boolean = false) {
+function material(color: number, opacity: number = 1.0, transparent: boolean = false) {
     return new THREE.MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent});
 }
 
-var mesh = new THREE.Mesh(new THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00, 1.0));
+var mesh = new THREE.Mesh(new THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00));
 mesh.position.set(0, -2, 0);
 scene.add(mesh);
 
