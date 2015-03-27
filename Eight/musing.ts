@@ -107,6 +107,7 @@ class Visual
     
     this.workbench2D = new Workbench2D(this.canvas2D, wnd);
     this.space2D = new createjs.Stage(this.canvas2D, "", {});
+    this.space2D.autoClear = true;
   }
   add(object: THREE.Object3D)
   {
@@ -115,10 +116,12 @@ class Visual
   setUp()
   {
     this.workbench3D.setUp();
+    this.workbench2D.setUp();
   }
   tearDown()
   {
     this.workbench3D.tearDown();
+    this.workbench2D.tearDown();
   }
   update()
   {
@@ -196,16 +199,14 @@ glwin.document.body.style.backgroundColor = "080808";
 glwin.document.body.style.overflow = "hidden";
 glwin.document.title = "Visualizing Geometric Algebra with WebGL";
 
-space2D.autoClear = true;
+var viz = new Visual(glwin);
 
 var font = "20px Helvetica";
 
 var output = new createjs.Text(glwin.document.title + ". Hit Esc key to exit.", font, "white");
 output.x = 100;
 output.y = 60;
-space2D.addChild(output);
-
-var viz = new Visual(glwin);
+viz.space2D.addChild(output);
 
 var mono = new Box(5.0, 0.1, 5.0, 0x00FF00);
 mono.mesh.position.set(0, -2, 0);
@@ -232,7 +233,6 @@ var B: any = new blade.Euclidean3(0, 0, 0, 0, 0, 0, 1, 0);
 B = B / B.norm();
 
 function setUp() {
-    workbench2D.setUp();
     viz.setUp();
 }
 
