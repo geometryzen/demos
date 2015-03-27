@@ -43,9 +43,9 @@ class Visual<T extends THREE.Geometry>
 
 class Arrow extends Visual<THREE.ArrowGeometry>
 {
-  constructor(length: number, color: number, opacity: number = 1.0, transparent: boolean = false)
+  constructor(scale: number, color: number, opacity: number = 1.0, transparent: boolean = false)
   {
-    super(new THREE.ArrowGeometry(length), color, opacity, transparent);
+    super(new THREE.ArrowGeometry(scale), color, opacity, transparent);
   }
 }
 
