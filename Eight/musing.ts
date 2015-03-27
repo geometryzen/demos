@@ -107,6 +107,10 @@ class Space
   {
     this.workbench3D.tearDown();
   }
+  update()
+  {
+    this.renderer.render(this.scene, this.camera);
+  }
 }
 
 class Workbench2D
