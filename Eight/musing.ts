@@ -149,6 +149,7 @@ mesh.position.set(0, -2, 0);
 scene.add(mesh);
 
 var arrow = new Arrow();
+arrow.scale = 4;
 arrow.color = new THREE.Color(0xFFFF00);
 scene.add(arrow.mesh);
 
