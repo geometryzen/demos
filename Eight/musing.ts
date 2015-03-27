@@ -18,7 +18,7 @@ class Arrow
   constructor()
   {
     this.geometry = new THREE.ArrowGeometry(4.0);
-    this.material = material(0xFFFF00);
+    this.material = material(0xFFFFFF);
     this.mesh = new THREE.Mesh(this.geometry, this.material);
   }
   set attitude(rotor: blade.Euclidean3)
