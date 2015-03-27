@@ -195,24 +195,24 @@ output.x = 100;
 output.y = 60;
 space2D.addChild(output);
 
-var scene = new Space(glwin);
+var space = new Space(glwin);
 
 var mono = new Box(5.0, 0.1, 5.0, 0x00FF00);
 mono.mesh.position.set(0, -2, 0);
-scene.add(mono.mesh);
+space.add(mono.mesh);
 
 var arrow = new Arrow(4.0, 0xFFFF00);
-scene.add(arrow.mesh);
+space.add(arrow.mesh);
 
 var box = new Box(1.0, 2.0, 3.0, 0xFF0000, 0.25, false);
-scene.add(box.mesh);
+space.add(box.mesh);
 box.mesh.position.set(3,-3,3);
 
 var vortex = new Vortex(1.0, 0x00FFff, 0.3);
-scene.add(vortex.mesh)
+space.add(vortex.mesh)
 
 var flat = new Box(10.0,10.0,0.1, 0x0000FF, 0.25, true);
-scene.add(flat.mesh);
+space.add(flat.mesh);
 
 var tau = 2 * Math.PI;
 var omega = (tau / 20);
@@ -223,7 +223,7 @@ B = B / B.norm();
 
 function setUp() {
     workbench2D.setUp();
-    scene.setUp();
+    space.setUp();
 }
 
 function tick(time: number) {
@@ -236,7 +236,7 @@ function tick(time: number) {
     flat.attitude = rotor;
     vortex.attitude = rotor;
 
-    scene.renderer.render(scene.scene, scene.camera);
+    space.renderer.render(space.scene, space.camera);
     space2D.update();
 }
 
@@ -245,7 +245,7 @@ function terminate(time: number) {
 }
 
 function tearDown(e) {
-    scene.tearDown();
+    space.tearDown();
     workbench2D.tearDown();
     glwin.close();
 }
