@@ -76,6 +76,18 @@ class Space
   {
     var ambientLight = new THREE.AmbientLight(0x111111);
     this.scene.add(ambientLight);
+
+    var pointLight = new THREE.PointLight(0xFFFFFF);
+    pointLight.position.set(20.0, 20.0, 20.0);
+    this.scene.add(pointLight);
+
+    var directionalLight = new THREE.DirectionalLight(0xFFFFFF);
+    directionalLight.position.set(0.0, 1.0, 0.0);
+    this.scene.add(directionalLight);
+  }
+  add(object: THREE.Object3D)
+  {
+    this.scene.add(object);
   }
 }
 
@@ -171,15 +183,6 @@ var camera = new THREE.PerspectiveCamera(45, 1.0, 0.1, 10000);
 camera.position.set(10.0, 9.0, 8.0);
 camera.up.set(0,0,1);
 camera.lookAt(scene.position);
-
-
-var pointLight = new THREE.PointLight(0xFFFFFF);
-pointLight.position.set(20.0, 20.0, 20.0);
-scene.add(pointLight);
-
-var directionalLight = new THREE.DirectionalLight(0xFFFFFF);
-directionalLight.position.set(0.0, 1.0, 0.0);
-scene.add(directionalLight);
 
 var renderer = new THREE.WebGLRenderer()
 renderer.setClearColor(new THREE.Color(0x080808), 1.0)
