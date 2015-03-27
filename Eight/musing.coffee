@@ -92,21 +92,21 @@ scene.add(directionalLight)
 renderer = new THREE.WebGLRenderer()
 renderer.setClearColor(new THREE.Color(0x080808), 1.0)
 
-material = (color, opacity = 1.0, transparent = false) ->
+material = (color, opacity, transparent) ->
     return new THREE.MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent})
 
-mesh = new THREE.Mesh(new THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00))
+mesh = new THREE.Mesh(new THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00,1,false))
 mesh.position.set(0, -2, 0)
 scene.add(mesh)
 
-arrow = new THREE.Mesh(new THREE.ArrowGeometry(4.0), material(0xFFFF00))
+arrow = new THREE.Mesh(new THREE.ArrowGeometry(4.0), material(0xFFFF00,1,false))
 scene.add(arrow)
 
-box = new THREE.Mesh(new THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25))
+box = new THREE.Mesh(new THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25, false))
 scene.add(box)
 box.position.set(3,-3,3)
 
-vortex = new THREE.Mesh(new THREE.VortexGeometry(4.0, 0.32, 0.04, 0.08, 0.3, 8, 12), material(0x00FFff, 0.3))
+vortex = new THREE.Mesh(new THREE.VortexGeometry(4.0, 0.32, 0.04, 0.08, 0.3, 8, 12), material(0x00FFff, 0.3, false))
 scene.add(vortex)
 
 flat = new THREE.Mesh(new THREE.BoxGeometry(10.0,10.0,0.1), material(0x0000FF, 0.25, true))
