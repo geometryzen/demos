@@ -195,16 +195,16 @@ class Workbench3D
   }
 }
 
-var glwin: Window = window.open("","","width=800,height=600");
-glwin.document.body.style.backgroundColor = "080808";
-glwin.document.body.style.overflow = "hidden";
-glwin.document.title = "Visualizing Geometric Algebra with WebGL";
+var popUp: Window = window.open("","","width=800,height=600");
+popUp.document.body.style.backgroundColor = "080808";
+popUp.document.body.style.overflow = "hidden";
+popUp.document.title = "Visualizing Geometric Algebra with WebGL";
 
-var viz = new Visual(glwin);
+var viz = new Visual(popUp);
 
 var font = "20px Helvetica";
 
-var output = new createjs.Text(glwin.document.title + ". Hit Esc key to exit.", font, "white");
+var output = new createjs.Text(popUp.document.title + ". Hit Esc key to exit.", font, "white");
 output.x = 100;
 output.y = 60;
 viz.space2D.addChild(output);
@@ -250,6 +250,6 @@ function tick(time: number) {
 
 function terminate(time: number) { return false; }
 
-function tearDown(e) { viz.tearDown(); glwin.close(); }
+function tearDown(e) { viz.tearDown(); popUp.close(); }
 
-eight.animationRunner(tick, terminate, setUp, tearDown, glwin).start();
+eight.animationRunner(tick, terminate, setUp, tearDown, popUp).start();
