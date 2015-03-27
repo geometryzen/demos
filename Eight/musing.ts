@@ -28,7 +28,7 @@ class Arrow
   
   set color(color: THREE.Color)
   {
-    this.material.color = new THREE.Color(0xFF0000);
+    this.material.color = color;
   }
 }
 
