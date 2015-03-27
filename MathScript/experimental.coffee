@@ -7,7 +7,7 @@ z = x << y
 m = blade.UNIT_METER
 s = blade.UNIT_SECOND
 
-v = new blade.Measure(z, m.div(s))
+v = z * m / s
 
 print Ms.VERSION 
 print "x: " + x
