@@ -134,6 +134,7 @@ scene.add(vortex)
 var flat = new THREE.Mesh(new THREE.BoxGeometry(10.0,10.0,0.1), material(0x0000FF, 0.25, true));
 scene.add(flat);
 
+
 //CartesianSpace(scene, renderer)
 
 var workbench3D = new Workbench3D(renderer.domElement, renderer, camera, glwin);
@@ -152,6 +153,9 @@ function setUp() {
 
 function tick(time: number) {
     var theta = omega * time;
+    
+    flat.material.opacity = Math.abs(1);
+    
     // The rotor is defined to have a minus sign.
     var s: any = new blade.Euclidean3(Math.cos(theta/2),0,0,0,0,0,0,0);
     var rotor: any = s - B * Math.sin(theta/2);
