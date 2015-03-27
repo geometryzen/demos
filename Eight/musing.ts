@@ -27,7 +27,7 @@ class Visual<T extends THREE.Geometry>
   get attitude()
   {
     var q: THREE.Quaternion = this.mesh.quaternion;
-    return new blade.Euclidean3(q.w, 0, 0, 0, -q.x, -q.y, -q.z, 0);
+    return new blade.Euclidean3(q.w, 0, 0, 0, -q.z, -q.x, -q.y, 0);
   }
   set attitude(rotor: blade.Euclidean3)
   {
