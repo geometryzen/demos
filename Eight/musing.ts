@@ -233,9 +233,7 @@ var B: any = new blade.Euclidean3(0, 0, 0, 0, 0, 0, 1, 0);
 // Just make sure that we really do have a unit bivector.
 B = B / B.norm();
 
-function setUp() {
-    viz.setUp();
-}
+function setUp() { viz.setUp(); }
 
 function tick(time: number) {
     var theta = omega * time;
@@ -250,13 +248,8 @@ function tick(time: number) {
     viz.update();
 }
 
-function terminate(time: number) {
-  return false;
-}
+function terminate(time: number) { return false; }
 
-function tearDown(e) {
-    viz.tearDown();
-    glwin.close();
-}
+function tearDown(e) { viz.tearDown(); glwin.close(); }
 
 eight.animationRunner(tick, terminate, setUp, tearDown, glwin).start();
