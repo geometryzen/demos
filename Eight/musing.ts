@@ -134,8 +134,8 @@ var mesh = new THREE.Mesh(new THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00));
 mesh.position.set(0, -2, 0);
 scene.add(mesh);
 
-var arrow = new THREE.Mesh(new THREE.ArrowGeometry(4.0), material(0xFFFF00));
-scene.add(arrow);
+var arrow = new Arrow();
+scene.add(arrow.mesh);
 
 var box = new THREE.Mesh(new THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25));
 scene.add(box);
@@ -170,7 +170,7 @@ function tick(time: number) {
     var s: any = new blade.Euclidean3(Math.cos(theta/2),0,0,0,0,0,0,0);
     var rotor: any = s - B * Math.sin(theta/2);
     // Unfortunately, we have to use a minus sign to convert the rotor grade 2 components to the quaternion values.
-    arrow.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+    arrow.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
     
     //box.attitude = rotor
     box.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
