@@ -203,8 +203,7 @@ popUp.document.title = "Visualizing Geometric Algebra with WebGL";
 var viz = new Visual(popUp);
 
 var output = new createjs.Text(popUp.document.title + ". Hit Esc key to exit.", "20px Helvetica", "white");
-output.x = 100;
-output.y = 60;
+output.x = 100; output.y = 60;
 viz.space2D.addChild(output);
 
 var mono = new Box(5.0, 0.1, 5.0, 0x00FF00);
