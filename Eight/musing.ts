@@ -71,7 +71,8 @@ class Vortex extends Visual<THREE.VortexGeometry>
 
 class Space
 {
-  public scene = new THREE.Scene();
+  public scene: THREE.Scene = new THREE.Scene();
+  public camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(45, 1.0, 0.1, 10000);
   constructor()
   {
     var ambientLight = new THREE.AmbientLight(0x111111);
@@ -84,6 +85,10 @@ class Space
     var directionalLight = new THREE.DirectionalLight(0xFFFFFF);
     directionalLight.position.set(0.0, 1.0, 0.0);
     this.scene.add(directionalLight);
+
+  this.camera.position.set(10.0, 9.0, 8.0);
+  this.camera.up.set(0,0,1);
+  this.camera.lookAt(this.scene.position);
   }
   add(object: THREE.Object3D)
   {
@@ -178,11 +183,6 @@ output.y = 60;
 space2D.addChild(output);
 
 var scene = new Space();
-
-var camera = new THREE.PerspectiveCamera(45, 1.0, 0.1, 10000);
-camera.position.set(10.0, 9.0, 8.0);
-camera.up.set(0,0,1);
-camera.lookAt(scene.position);
 
 var renderer = new THREE.WebGLRenderer()
 renderer.setClearColor(new THREE.Color(0x080808), 1.0)
