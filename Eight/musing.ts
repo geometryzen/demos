@@ -34,9 +34,9 @@ class VisualElement<T extends THREE.Geometry>
     this.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
   }
   
-  set scale(value: number)
+  set scale(value: THREE.Vector3)
   {
-    this.mesh.scale = new THREE.Vector3(value, value, value);
+    this.mesh.scale = value;
   }
   
   set color(color: THREE.Color)
