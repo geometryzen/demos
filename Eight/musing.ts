@@ -113,22 +113,22 @@ scene.add(directionalLight);
 var renderer = new THREE.WebGLRenderer()
 renderer.setClearColor(new THREE.Color(0x080808), 1.0)
 
-function material(color: number, opacity: number, transparent: boolean) {
+function material(color: number, opacity: number, transparent: boolean = false) {
     return new THREE.MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent});
 }
 
-var mesh = new THREE.Mesh(new THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00, 1.0, false));
+var mesh = new THREE.Mesh(new THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00, 1.0));
 mesh.position.set(0, -2, 0);
 scene.add(mesh);
 
-var arrow = new THREE.Mesh(new THREE.ArrowGeometry(4.0), material(0xFFFF00, 1.0, false));
+var arrow = new THREE.Mesh(new THREE.ArrowGeometry(4.0), material(0xFFFF00, 1.0));
 scene.add(arrow);
 
-var box = new THREE.Mesh(new THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25, false));
+var box = new THREE.Mesh(new THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25));
 scene.add(box);
 box.position.set(3,-3,3);
 
-var vortex = new THREE.Mesh(new THREE.VortexGeometry(4.0, 0.32, 0.04, 0.08, 0.3, 8, 12), material(0x00FFff, 0.3, false))
+var vortex = new THREE.Mesh(new THREE.VortexGeometry(4.0, 0.32, 0.04, 0.08, 0.3, 8, 12), material(0x00FFff, 0.3));
 scene.add(vortex)
 
 var flat = new THREE.Mesh(new THREE.BoxGeometry(10.0,10.0,0.1), material(0x0000FF, 0.25, true));
