@@ -6,6 +6,9 @@ function removeElementsByTagName(doc: Document, tagName: string) {
   }
 }
 
+/**
+ * Visual provides the common behavior for all Mesh (Geometry,Material) objects.
+ */
 class Visual<T extends THREE.Geometry>
 {
   public geometry: T;
