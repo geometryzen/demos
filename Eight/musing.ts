@@ -154,7 +154,7 @@ function setUp() {
 function tick(time: number) {
     var theta = omega * time;
     
-    flat.material.opacity = Math.abs(1);
+    flat.material.opacity = Math.abs(Math.sin(theta/2));
     
     // The rotor is defined to have a minus sign.
     var s: any = new blade.Euclidean3(Math.cos(theta/2),0,0,0,0,0,0,0);
