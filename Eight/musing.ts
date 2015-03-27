@@ -24,6 +24,11 @@ class Visual<T extends THREE.Geometry>
   {
     this.mesh.position.set(p.x, p.y, p.z);
   }
+  get attitude()
+  {
+    var q: THREE.Quaternion = this.mesh.quaternion;
+    return new blade.Euclidean3(q.w, 0, 0, 0, -q.x, -q.y, -q.z, 0);
+  }
   set attitude(rotor: blade.Euclidean3)
   {
     this.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
