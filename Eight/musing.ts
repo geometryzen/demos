@@ -49,34 +49,11 @@ class Arrow extends Visual<THREE.ArrowGeometry>
   }
 }
 
-class Box
+class Box extends Visual<THREE.BoxGeometry>
 {
-  public geometry: THREE.BoxGeometry;
-  public material: THREE.MeshLambertMaterial;
-  public mesh: THREE.Mesh;
   constructor(width: number, height: number, depth: number, color: number, opacity: number = 1.0, transparent: boolean = false)
   {
-    this.geometry = new THREE.BoxGeometry(width, height, depth);
-    this.material = new THREE.MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent});
-    this.mesh = new THREE.Mesh(this.geometry, this.material);
-  }
-  set position(p: blade.Euclidean3)
-  {
-    this.mesh.position.set(p.x, p.y, p.z);
-  }
-  set attitude(rotor: blade.Euclidean3)
-  {
-    this.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
-  }
-  
-  set scale(value: number)
-  {
-    this.mesh.scale = new THREE.Vector3(value, value, value);
-  }
-  
-  set color(color: THREE.Color)
-  {
-    this.material.color = color;
+    super(new THREE.BoxGeometry(width, height, depth), color, opacity, transparent);
   }
 }
 
