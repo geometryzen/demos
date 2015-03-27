@@ -69,6 +69,16 @@ class Vortex extends Visual<THREE.VortexGeometry>
   }
 }
 
+class Space
+{
+  public scene = new THREE.Scene();
+  constructor()
+  {
+    var ambientLight = new THREE.AmbientLight(0x111111);
+    this.scene.add(ambientLight);
+  }
+}
+
 class Workbench2D
 {
   public canvas: HTMLCanvasElement;
@@ -155,15 +165,13 @@ output.x = 100;
 output.y = 60;
 space2D.addChild(output);
 
-var scene = new THREE.Scene();
+var scene = new Space();
 
 var camera = new THREE.PerspectiveCamera(45, 1.0, 0.1, 10000);
 camera.position.set(10.0, 9.0, 8.0);
 camera.up.set(0,0,1);
 camera.lookAt(scene.position);
 
-var ambientLight = new THREE.AmbientLight(0x111111);
-scene.add(ambientLight);
 
 var pointLight = new THREE.PointLight(0xFFFFFF);
 pointLight.position.set(20.0, 20.0, 20.0);
