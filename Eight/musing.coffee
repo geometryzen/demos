@@ -1,3 +1,5 @@
+debugger;
+
 removeElementsByTagName = (doc, tagName) ->
   elements = doc.getElementsByTagName(tagName)
   for element in elements
