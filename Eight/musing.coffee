@@ -1,6 +1,7 @@
 removeElementsByTagName = (doc, tagName) ->
   elements = doc.getElementsByTagName(tagName)
   for element in elements
+    # Not sure why we need this check...
     if element
       element.parentNode.removeChild(element)
 
