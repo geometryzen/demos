@@ -4,7 +4,6 @@ removeElementsByTagName = (doc, tagName) ->
     element.parentNode.removeChild(element)
 
 class Workbench2D
-{
   constructor: (canvas, wnd) ->
     this.canvas = canvas
     this.wnd = wnd
@@ -23,10 +22,8 @@ class Workbench2D
   tearDown: () ->
     this.wnd.removeEventListener('resize', this.sizer, false)
     removeElementsByTagName(this.wnd.document, "canvas")
-}
 
 class Workbench3D
-{
   constructor: (canvas, renderer, camera, wnd) ->
     this.canvas = canvas;
     this.wnd = wnd;
@@ -46,8 +43,6 @@ class Workbench3D
   tearDown: () ->
     this.wnd.removeEventListener('resize', this.sizer, false)
     removeElementsByTagName(this.wnd.document, "canvas")
-}
-
 
 glwin = window.open("","","width=800,height=600")
 glwin.document.body.style.backgroundColor = "080808"
