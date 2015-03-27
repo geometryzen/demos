@@ -66,28 +66,28 @@ space2D.autoClear = true;
 
 font = "20px Helvetica";
 
-output = new createjs.Text(glwin.document.title + ". Hit Esc key to exit.", font, "white");
-output.x = 100;
-output.y = 60;
-space2D.addChild(output);
+output = new createjs.Text(glwin.document.title + ". Hit Esc key to exit.", font, "white")
+output.x = 100
+output.y = 60
+space2D.addChild(output)
 
-scene = new THREE.Scene();
+scene = new THREE.Scene()
 
-camera = new THREE.PerspectiveCamera(45, 1.0, 0.1, 10000);
-camera.position.set(10.0, 9.0, 8.0);
-camera.up.set(0,0,1);
-camera.lookAt(scene.position);
+camera = new THREE.PerspectiveCamera(45, 1.0, 0.1, 10000)
+camera.position.set(10.0, 9.0, 8.0)
+camera.up.set(0,0,1)
+camera.lookAt(scene.position)
 
-ambientLight = new THREE.AmbientLight(0x111111);
-scene.add(ambientLight);
+ambientLight = new THREE.AmbientLight(0x111111)
+scene.add(ambientLight)
 
-pointLight = new THREE.PointLight(0xFFFFFF);
-pointLight.position.set(20.0, 20.0, 20.0);
-scene.add(pointLight);
+pointLight = new THREE.PointLight(0xFFFFFF)
+pointLight.position.set(20.0, 20.0, 20.0)
+scene.add(pointLight)
 
-directionalLight = new THREE.DirectionalLight(0xFFFFFF);
-directionalLight.position.set(0.0, 1.0, 0.0);
-scene.add(directionalLight);
+directionalLight = new THREE.DirectionalLight(0xFFFFFF)
+directionalLight.position.set(0.0, 1.0, 0.0)
+scene.add(directionalLight)
 
 renderer = new THREE.WebGLRenderer()
 renderer.setClearColor(new THREE.Color(0x080808), 1.0)
