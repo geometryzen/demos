@@ -148,8 +148,7 @@ var mesh = new THREE.Mesh(new THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00));
 mesh.position.set(0, -2, 0);
 scene.add(mesh);
 
-var arrow = new Arrow();
-arrow.scale = 4;
+var arrow = new Arrow(4.0);
 arrow.color = new THREE.Color(0xFFFF00);
 scene.add(arrow.mesh);
 
