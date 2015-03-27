@@ -10,6 +10,37 @@ function material(color: number, opacity: number = 1.0, transparent: boolean = f
     return new THREE.MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent});
 }
 
+class Visual<T extends THREE.Geometry>
+{
+  public geometry: T;
+  public material: THREE.MeshLambertMaterial;
+  public mesh: THREE.Mesh;
+  constructor(geometry: T, color: number, opacity: number = 1.0, transparent: boolean = false)
+  {
+    this.geometry = geometry;
+    this.material = new THREE.MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent});
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
+  }
+  set position(p: blade.Euclidean3)
+  {
+    this.mesh.position.set(p.x, p.y, p.z);
+  }
+  set attitude(rotor: blade.Euclidean3)
+  {
+    this.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+  }
+  
+  set scale(value: number)
+  {
+    this.mesh.scale = new THREE.Vector3(value, value, value);
+  }
+  
+  set color(color: THREE.Color)
+  {
+    this.material.color = color;
+  }
+}
+
 class Arrow
 {
   public geometry: THREE.ArrowGeometry;
@@ -66,6 +97,14 @@ class Box
   set color(color: THREE.Color)
   {
     this.material.color = color;
+  }
+}
+
+class Vortex extends Visual<THREE.VortexGeometry>
+{
+  constructor(color: number, opacity: number = 1.0, transparent: boolean = false)
+  {
+    super(new THREE.VortexGeometry(4.0, 0.32, 0.04, 0.08, 0.3, 8, 12), color, opacity, transparent);
   }
 }
 
@@ -187,8 +226,8 @@ var box = new Box(1.0, 2.0, 3.0, 0xFF0000, 0.25, false);
 scene.add(box.mesh);
 box.mesh.position.set(3,-3,3);
 
-var vortex = new THREE.Mesh(new THREE.VortexGeometry(4.0, 0.32, 0.04, 0.08, 0.3, 8, 12), material(0x00FFff, 0.3));
-scene.add(vortex)
+var vortex = new Vortex(0x00FFff, 0.3);
+scene.add(vortex.mesh)
 
 var flat = new Box(10.0,10.0,0.1, 0x0000FF, 0.25, true);
 scene.add(flat.mesh);
@@ -219,8 +258,7 @@ function tick(time: number) {
     arrow.attitude = rotor;
     box.attitude = rotor;
     flat.attitude = rotor;
-
-    vortex.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+    vortex.attitude = rotor;
 
     renderer.render(scene, camera);
     space2D.update();
