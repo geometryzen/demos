@@ -6,10 +6,6 @@ function removeElementsByTagName(doc: Document, tagName: string) {
   }
 }
 
-function material(color: number, opacity: number = 1.0, transparent: boolean = false) {
-    return new THREE.MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent});
-}
-
 class Visual<T extends THREE.Geometry>
 {
   public geometry: T;
@@ -188,7 +184,6 @@ scene.add(vortex.mesh)
 
 var flat = new Box(10.0,10.0,0.1, 0x0000FF, 0.25, true);
 scene.add(flat.mesh);
-
 
 //CartesianSpace(scene, renderer)
 
