@@ -90,9 +90,8 @@ scene.add(directionalLight);
 renderer = new THREE.WebGLRenderer()
 renderer.setClearColor(new THREE.Color(0x080808), 1.0)
 
-material(color: number, opacity: number = 1.0, transparent: boolean = false) {
-    return new THREE.MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent});
-}
+material = (colorr, opacity = 1.0, transparent = false) ->
+    return new THREE.MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent})
 
 mesh = new THREE.Mesh(new THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00));
 mesh.position.set(0, -2, 0);
