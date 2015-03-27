@@ -73,8 +73,9 @@ class Space
 {
   public scene: THREE.Scene = new THREE.Scene();
   public camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(45, 1.0, 0.1, 10000);
-  public renderer: THREE.WebGLRenderer = new THREE.WebGLRenderer()
-  constructor()
+  public renderer: THREE.WebGLRenderer = new THREE.WebGLRenderer();
+  public workbench3D: Workbench3D;
+  constructor(wnd: Window)
   {
     var ambientLight = new THREE.AmbientLight(0x111111);
     this.scene.add(ambientLight);
@@ -92,10 +93,19 @@ class Space
     this.camera.lookAt(this.scene.position);
     
     this.renderer.setClearColor(new THREE.Color(0x080808), 1.0)
+    this.workbench3D = new Workbench3D(this.renderer.domElement, this.renderer, this.camera, wnd);
   }
   add(object: THREE.Object3D)
   {
     this.scene.add(object);
+  }
+  setUp()
+  {
+    this.workbench3D.setUp();
+  }
+  tearDown()
+  {
+    this.workbench3D.tearDown();
   }
 }
 
@@ -185,7 +195,7 @@ output.x = 100;
 output.y = 60;
 space2D.addChild(output);
 
-var scene = new Space();
+var scene = new Space(glwin);
 
 var mono = new Box(5.0, 0.1, 5.0, 0x00FF00);
 mono.mesh.position.set(0, -2, 0);
@@ -204,20 +214,16 @@ scene.add(vortex.mesh)
 var flat = new Box(10.0,10.0,0.1, 0x0000FF, 0.25, true);
 scene.add(flat.mesh);
 
-//CartesianSpace(scene, renderer)
-
-var workbench3D = new Workbench3D(renderer.domElement, renderer, scene.camera, glwin);
-
 var tau = 2 * Math.PI;
 var omega = (tau / 20);
 // A unit bivector rotating from k to i
-var B: any = new blade.Euclidean3(0,0,0,0,0.0, 0.0, 1.0,0);
+var B: any = new blade.Euclidean3(0, 0, 0, 0, 0, 0, 1, 0);
 // Just make sure that we really do have a unit bivector.
 B = B / B.norm();
 
 function setUp() {
     workbench2D.setUp();
-    workbench3D.setUp();
+    scene.setUp();
 }
 
 function tick(time: number) {
@@ -230,7 +236,7 @@ function tick(time: number) {
     flat.attitude = rotor;
     vortex.attitude = rotor;
 
-    renderer.render(scene.scene, scene.camera);
+    scene.renderer.render(scene.scene, scene.camera);
     space2D.update();
 }
 
@@ -239,7 +245,7 @@ function terminate(time: number) {
 }
 
 function tearDown(e) {
-    workbench3D.tearDown();
+    scene.tearDown();
     workbench2D.tearDown();
     glwin.close();
 }
