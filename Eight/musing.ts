@@ -214,6 +214,8 @@ function tick(time: number) {
     box.attitude = rotor;
     flat.attitude = rotor;
     vortex.attitude = rotor;
+    
+    box.attitude = arrow.attitude;
 
     renderer.render(scene, camera);
     space2D.update();
