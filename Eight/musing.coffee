@@ -8,7 +8,7 @@ class Workbench2D
   constructor: (canvas, wnd) ->
     this.canvas = canvas
     this.wnd = wnd
-    onWindowResize(event) ->
+    onWindowResize = (event) ->
       width  = wnd.innerWidth
       height = wnd.innerHeight
       canvas.width  = width
@@ -30,7 +30,7 @@ class Workbench3D
   constructor: (canvas, renderer, camera, wnd) ->
     this.canvas = canvas;
     this.wnd = wnd;
-    onWindowResize(event) ->
+    onWindowResize = (event) ->
       width  = wnd.innerWidth
       height = wnd.innerHeight
       renderer.setSize(width, height)
