@@ -15,10 +15,10 @@ class Arrow
   public geometry: THREE.ArrowGeometry;
   public material: THREE.MeshLambertMaterial;
   public mesh: THREE.Mesh;
-  constructor(length: number = 1.0)
+  constructor(length: number, color: number, opacity: number = 1.0, transparent: boolean = false)
   {
     this.geometry = new THREE.ArrowGeometry(length);
-    this.material = material(0xFFFFFF);
+    this.material = new THREE.MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent});
     this.mesh = new THREE.Mesh(this.geometry, this.material);
   }
   set attitude(rotor: blade.Euclidean3)
@@ -148,8 +148,7 @@ var mesh = new THREE.Mesh(new THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00));
 mesh.position.set(0, -2, 0);
 scene.add(mesh);
 
-var arrow = new Arrow(4.0);
-arrow.color = new THREE.Color(0xFFFF00);
+var arrow = new Arrow(4.0, 0xFFFF00);
 scene.add(arrow.mesh);
 
 var box = new THREE.Mesh(new THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25));
