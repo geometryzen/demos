@@ -111,7 +111,7 @@ flat = new THREE.Mesh(new THREE.BoxGeometry(10.0,10.0,0.1), material(0x0000FF, 0
 scene.add(flat);
 
 
-//CartesianSpace(scene, renderer)
+# CartesianSpace(scene, renderer)
 
 workbench3D = new Workbench3D(renderer.domElement, renderer, camera, glwin);
 
