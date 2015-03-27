@@ -23,35 +23,29 @@ class Workbench2D
   tearDown: () ->
     this.wnd.removeEventListener('resize', this.sizer, false)
     removeElementsByTagName(this.wnd.document, "canvas")
+}
 
 class Workbench3D
 {
-  constructor: (canvas, renderer, camera, wnd)
-  {
+  constructor: (canvas, renderer, camera, wnd) ->
     this.canvas = canvas;
     this.wnd = wnd;
     onWindowResize(event) ->
-    {
       width  = wnd.innerWidth;
       height = wnd.innerHeight;
       renderer.setSize(width, height);
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
-    }
     this.sizer = onWindowResize;
-  }
-  setUp()
-  {
-    this.wnd.document.body.insertBefore(this.canvas, this.wnd.document.body.firstChild);
-    this.wnd.addEventListener('resize', this.sizer, false);
-    this.sizer(null);
 
-  }
-  tearDown()
-  {
-    this.wnd.removeEventListener('resize', this.sizer, false);
-    removeElementsByTagName(this.wnd.document, "canvas");
-  }
+  setUp: () ->
+    this.wnd.document.body.insertBefore(this.canvas, this.wnd.document.body.firstChild)
+    this.wnd.addEventListener('resize', this.sizer, false)
+    this.sizer(null)
+
+  tearDown: () ->
+    this.wnd.removeEventListener('resize', this.sizer, false)
+    removeElementsByTagName(this.wnd.document, "canvas")
 }
 
 
