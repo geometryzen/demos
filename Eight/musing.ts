@@ -126,6 +126,7 @@ class Visual
   update()
   {
     this.renderer.render(this.scene, this.camera);
+    this.space2D.update();
   }
 }
 
@@ -247,7 +248,6 @@ function tick(time: number) {
     vortex.attitude = rotor;
 
     viz.update();
-    space2D.update();
 }
 
 function terminate(time: number) {
@@ -256,7 +256,6 @@ function terminate(time: number) {
 
 function tearDown(e) {
     viz.tearDown();
-    workbench2D.tearDown();
     glwin.close();
 }
 
