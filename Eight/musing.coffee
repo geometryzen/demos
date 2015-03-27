@@ -118,7 +118,7 @@ workbench3D = new Workbench3D(renderer.domElement, renderer, camera, glwin)
 tau = 2 * Math.PI
 omega = (tau / 20)
 # A unit bivector rotating from k to i
-B: any = new blade.Euclidean3(0,0,0,0,0.0, 0.0, 1.0,0)
+B = new blade.Euclidean3(0,0,0,0,0.0, 0.0, 1.0,0)
 # Just make sure that we really do have a unit bivector.
 B = B / B.norm()
 
