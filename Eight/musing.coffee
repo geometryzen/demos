@@ -93,65 +93,61 @@ renderer.setClearColor(new THREE.Color(0x080808), 1.0)
 material = (colorr, opacity = 1.0, transparent = false) ->
     return new THREE.MeshLambertMaterial({"color": color,"opacity": opacity,"transparent": transparent})
 
-mesh = new THREE.Mesh(new THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00));
-mesh.position.set(0, -2, 0);
-scene.add(mesh);
+mesh = new THREE.Mesh(new THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00))
+mesh.position.set(0, -2, 0)
+scene.add(mesh)
 
-arrow = new THREE.Mesh(new THREE.ArrowGeometry(4.0), material(0xFFFF00));
-scene.add(arrow);
+arrow = new THREE.Mesh(new THREE.ArrowGeometry(4.0), material(0xFFFF00))
+scene.add(arrow)
 
-box = new THREE.Mesh(new THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25));
-scene.add(box);
-box.position.set(3,-3,3);
+box = new THREE.Mesh(new THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25))
+scene.add(box)
+box.position.set(3,-3,3)
 
-vortex = new THREE.Mesh(new THREE.VortexGeometry(4.0, 0.32, 0.04, 0.08, 0.3, 8, 12), material(0x00FFff, 0.3));
+vortex = new THREE.Mesh(new THREE.VortexGeometry(4.0, 0.32, 0.04, 0.08, 0.3, 8, 12), material(0x00FFff, 0.3))
 scene.add(vortex)
 
-flat = new THREE.Mesh(new THREE.BoxGeometry(10.0,10.0,0.1), material(0x0000FF, 0.25, true));
-scene.add(flat);
+flat = new THREE.Mesh(new THREE.BoxGeometry(10.0,10.0,0.1), material(0x0000FF, 0.25, true))
+scene.add(flat)
 
 
 # CartesianSpace(scene, renderer)
 
-workbench3D = new Workbench3D(renderer.domElement, renderer, camera, glwin);
+workbench3D = new Workbench3D(renderer.domElement, renderer, camera, glwin)
 
-tau = 2 * Math.PI;
-omega = (tau / 20);
+tau = 2 * Math.PI
+omega = (tau / 20)
 # A unit bivector rotating from k to i
-B: any = new blade.Euclidean3(0,0,0,0,0.0, 0.0, 1.0,0);
+B: any = new blade.Euclidean3(0,0,0,0,0.0, 0.0, 1.0,0)
 # Just make sure that we really do have a unit bivector.
-B = B / B.norm();
+B = B / B.norm()
 
-setUp() {
-    workbench2D.setUp();
-    workbench3D.setUp();
-}
+setUp = () ->
+    workbench2D.setUp()
+    workbench3D.setUp()
 
-tick(time: number) {
-    theta = omega * time;
+tick = (time) ->
+    theta = omega * time
     # The rotor is defined to have a minus sign.
-    s: any = new blade.Euclidean3(Math.cos(theta/2),0,0,0,0,0,0,0);
-    rotor: any = s - B * Math.sin(theta/2);
+    s = new blade.Euclidean3(Math.cos(theta/2),0,0,0,0,0,0,0)
+    rotor = s - B * Math.sin(theta/2)
     # Unfortunately, we have to use a minus sign to convert the rotor grade 2 components to the quaternion values.
-    arrow.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+    arrow.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     
-    //box.attitude = rotor
-    box.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+    # box.attitude = rotor
+    box.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
 
-    vortex.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
-    flat.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
-    renderer.render(scene, camera);
-    space2D.update();
-}
+    vortex.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
+    flat.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
+    renderer.render(scene, camera)
+    space2D.update()
 
-terminate(time: number) {
+terminate = (time: number) ->
   return false;
-}
 
-tearDown(e) {
-    workbench3D.tearDown();
-    workbench2D.tearDown();
-    glwin.close();
-}
+tearDown = (e) ->
+    workbench3D.tearDown()
+    workbench2D.tearDown()
+    glwin.close()
 
-eight.animationRunner(tick, terminate, setUp, tearDown, glwin).start();
+eight.animationRunner(tick, terminate, setUp, tearDown, glwin).start()
