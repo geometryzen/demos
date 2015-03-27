@@ -190,8 +190,8 @@ box.mesh.position.set(3,-3,3);
 var vortex = new THREE.Mesh(new THREE.VortexGeometry(4.0, 0.32, 0.04, 0.08, 0.3, 8, 12), material(0x00FFff, 0.3));
 scene.add(vortex)
 
-var flat = new THREE.Mesh(new THREE.BoxGeometry(10.0,10.0,0.1), material(0x0000FF, 0.25, true));
-scene.add(flat);
+var flat = new Box(10.0,10.0,0.1, 0x0000FF, 0.25, true);
+scene.add(flat.mesh);
 
 
 //CartesianSpace(scene, renderer)
@@ -218,9 +218,10 @@ function tick(time: number) {
 
     arrow.attitude = rotor;
     box.attitude = rotor;
+    flat.attitude = rotor;
 
     vortex.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
-    flat.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+
     renderer.render(scene, camera);
     space2D.update();
 }
