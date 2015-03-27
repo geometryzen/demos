@@ -178,8 +178,8 @@ scene.add(mesh);
 var arrow = new Arrow(4.0, 0xFFFF00);
 scene.add(arrow.mesh);
 
-var box = new THREE.Mesh(new THREE.BoxGeometry(1,2,3), material(0xFF0000, 0.25));
-scene.add(box);
+var box = new Box(1,2,3,0xFF0000, 0.25);
+scene.add(box.mesh);
 box.position.set(3,-3,3);
 
 var vortex = new THREE.Mesh(new THREE.VortexGeometry(4.0, 0.32, 0.04, 0.08, 0.3, 8, 12), material(0x00FFff, 0.3));
@@ -210,11 +210,9 @@ function tick(time: number) {
     // The rotor is defined to have a minus sign.
     var s: any = new blade.Euclidean3(Math.cos(theta/2),0,0,0,0,0,0,0);
     var rotor: any = s - B * Math.sin(theta/2);
-    // Unfortunately, we have to use a minus sign to convert the rotor grade 2 components to the quaternion values.
+
     arrow.attitude = rotor;
-    
-    //box.attitude = rotor
-    box.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+    box.attitude = rotor;
 
     vortex.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
     flat.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
