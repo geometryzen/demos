@@ -176,9 +176,9 @@ scene.add(directionalLight);
 var renderer = new THREE.WebGLRenderer()
 renderer.setClearColor(new THREE.Color(0x080808), 1.0)
 
-var mesh = new THREE.Mesh(new THREE.BoxGeometry(5, 0.1, 5), material(0x00FF00));
-mesh.position.set(0, -2, 0);
-scene.add(mesh);
+var mono = new Box(5.0, 0.1, 5.0, 0x00FF00);
+mono.mesh.position.set(0, -2, 0);
+scene.add(mono.mesh);
 
 var arrow = new Arrow(4.0, 0xFFFF00);
 scene.add(arrow.mesh);
