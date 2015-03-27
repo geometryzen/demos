@@ -1,7 +1,8 @@
 removeElementsByTagName = (doc, tagName) ->
   elements = doc.getElementsByTagName(tagName)
   for element in elements
-    element.parentNode.removeChild(element)
+    if element
+      element.parentNode.removeChild(element)
 
 class Workbench2D
   constructor: (canvas, wnd) ->
