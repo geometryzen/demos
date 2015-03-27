@@ -31,12 +31,12 @@ class Workbench3D
     this.canvas = canvas;
     this.wnd = wnd;
     onWindowResize(event) ->
-      width  = wnd.innerWidth;
-      height = wnd.innerHeight;
-      renderer.setSize(width, height);
-      camera.aspect = width / height;
-      camera.updateProjectionMatrix();
-    this.sizer = onWindowResize;
+      width  = wnd.innerWidth
+      height = wnd.innerHeight
+      renderer.setSize(width, height)
+      camera.aspect = width / height
+      camera.updateProjectionMatrix()
+    this.sizer = onWindowResize
 
   setUp: () ->
     this.wnd.document.body.insertBefore(this.canvas, this.wnd.document.body.firstChild)
@@ -49,20 +49,20 @@ class Workbench3D
 }
 
 
-glwin = window.open("","","width=800,height=600");
-glwin.document.body.style.backgroundColor = "080808";
-glwin.document.body.style.overflow = "hidden";
-glwin.document.title = "Visualizing Geometric Algebra with WebGL";
+glwin = window.open("","","width=800,height=600")
+glwin.document.body.style.backgroundColor = "080808"
+glwin.document.body.style.overflow = "hidden"
+glwin.document.title = "Visualizing Geometric Algebra with WebGL"
 
-canvas2D = glwin.document.createElement("canvas");
-canvas2D.style.position = "absolute";
-canvas2D.style.top = "0px";
-canvas2D.style.left = "0px";
-workbench2D = new Workbench2D(canvas2D, glwin);
-space2D = new createjs.Stage(canvas2D, "", {});
-space2D.autoClear = true;
+canvas2D = glwin.document.createElement("canvas")
+canvas2D.style.position = "absolute"
+canvas2D.style.top = "0px"
+canvas2D.style.left = "0px"
+workbench2D = new Workbench2D(canvas2D, glwin)
+space2D = new createjs.Stage(canvas2D, "", {})
+space2D.autoClear = true
 
-font = "20px Helvetica";
+font = "20px Helvetica"
 
 output = new createjs.Text(glwin.document.title + ". Hit Esc key to exit.", font, "white")
 output.x = 100
