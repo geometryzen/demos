@@ -9,7 +9,7 @@ function removeElementsByTagName(doc: Document, tagName: string) {
 /**
  * Visual provides the common behavior for all Mesh (Geometry, Material) objects.
  */
-class Visual<T extends THREE.Geometry>
+class VisualElement<T extends THREE.Geometry>
 {
   public geometry: T;
   public material: THREE.MeshLambertMaterial;
@@ -45,7 +45,7 @@ class Visual<T extends THREE.Geometry>
   }
 }
 
-class Arrow extends Visual<THREE.ArrowGeometry>
+class Arrow extends VisualElement<THREE.ArrowGeometry>
 {
   constructor(scale: number, color: number, opacity: number = 1.0, transparent: boolean = false)
   {
@@ -53,7 +53,7 @@ class Arrow extends Visual<THREE.ArrowGeometry>
   }
 }
 
-class Box extends Visual<THREE.BoxGeometry>
+class Box extends VisualElement<THREE.BoxGeometry>
 {
   constructor(width: number, height: number, depth: number, color: number, opacity: number = 1.0, transparent: boolean = false)
   {
@@ -61,7 +61,7 @@ class Box extends Visual<THREE.BoxGeometry>
   }
 }
 
-class Vortex extends Visual<THREE.VortexGeometry>
+class Vortex extends VisualElement<THREE.VortexGeometry>
 {
   constructor(scale: number, color: number, opacity: number = 1.0, transparent: boolean = false)
   {
@@ -69,7 +69,7 @@ class Vortex extends Visual<THREE.VortexGeometry>
   }
 }
 
-class Space
+class Visual
 {
   public scene: THREE.Scene = new THREE.Scene();
   public camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(45, 1.0, 0.1, 10000);
@@ -199,24 +199,24 @@ output.x = 100;
 output.y = 60;
 space2D.addChild(output);
 
-var space = new Space(glwin);
+var viz = new Visual(glwin);
 
 var mono = new Box(5.0, 0.1, 5.0, 0x00FF00);
 mono.mesh.position.set(0, -2, 0);
-space.add(mono.mesh);
+viz.add(mono.mesh);
 
 var arrow = new Arrow(4.0, 0xFFFF00);
-space.add(arrow.mesh);
+viz.add(arrow.mesh);
 
 var box = new Box(1.0, 2.0, 3.0, 0xFF0000, 0.25, false);
-space.add(box.mesh);
+viz.add(box.mesh);
 box.mesh.position.set(3,-3,3);
 
 var vortex = new Vortex(1.0, 0x00FFff, 0.3);
-space.add(vortex.mesh)
+viz.add(vortex.mesh)
 
 var flat = new Box(10.0,10.0,0.1, 0x0000FF, 0.25, true);
-space.add(flat.mesh);
+viz.add(flat.mesh);
 
 var tau = 2 * Math.PI;
 var omega = (tau / 20);
@@ -227,7 +227,7 @@ B = B / B.norm();
 
 function setUp() {
     workbench2D.setUp();
-    space.setUp();
+    viz.setUp();
 }
 
 function tick(time: number) {
@@ -240,7 +240,7 @@ function tick(time: number) {
     flat.attitude = rotor;
     vortex.attitude = rotor;
 
-    space.update();
+    viz.update();
     space2D.update();
 }
 
@@ -249,7 +249,7 @@ function terminate(time: number) {
 }
 
 function tearDown(e) {
-    space.tearDown();
+    viz.tearDown();
     workbench2D.tearDown();
     glwin.close();
 }
