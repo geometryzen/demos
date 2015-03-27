@@ -73,6 +73,7 @@ class Space
 {
   public scene: THREE.Scene = new THREE.Scene();
   public camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(45, 1.0, 0.1, 10000);
+  public renderer: THREE.WebGLRenderer = new THREE.WebGLRenderer()
   constructor()
   {
     var ambientLight = new THREE.AmbientLight(0x111111);
@@ -89,6 +90,8 @@ class Space
     this.camera.position.set(10.0, 9.0, 8.0);
     this.camera.up.set(0,0,1);
     this.camera.lookAt(this.scene.position);
+    
+    this.renderer.setClearColor(new THREE.Color(0x080808), 1.0)
   }
   add(object: THREE.Object3D)
   {
@@ -183,9 +186,6 @@ output.y = 60;
 space2D.addChild(output);
 
 var scene = new Space();
-
-var renderer = new THREE.WebGLRenderer()
-renderer.setClearColor(new THREE.Color(0x080808), 1.0)
 
 var mono = new Box(5.0, 0.1, 5.0, 0x00FF00);
 mono.mesh.position.set(0, -2, 0);
