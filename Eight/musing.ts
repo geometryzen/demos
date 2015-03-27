@@ -24,7 +24,7 @@ class VisualElement<T extends THREE.Geometry>
   {
     this.mesh.position.set(p.x, p.y, p.z);
   }
-  get attitude()
+  get attitude(): blade.Euclidean3
   {
     var q: THREE.Quaternion = this.mesh.quaternion;
     return new blade.Euclidean3(q.w, 0, 0, 0, -q.z, -q.x, -q.y, 0);
@@ -33,7 +33,10 @@ class VisualElement<T extends THREE.Geometry>
   {
     this.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
   }
-  
+  get scale(): THREE.Vector3
+  {
+    return this.mesh.scale;
+  }
   set scale(value: THREE.Vector3)
   {
     this.mesh.scale = value;
