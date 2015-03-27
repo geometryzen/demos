@@ -7,7 +7,7 @@ z = x << y
 m = blade.UNIT_METER
 s = blade.UNIT_SECOND
 
-v = z * m
+v = z * m * s
 
 print Ms.VERSION 
 print "x: " + x
