@@ -240,7 +240,7 @@ function tick(time: number) {
     flat.attitude = rotor;
     vortex.attitude = rotor;
 
-    space.renderer.render(space.scene, space.camera);
+    space.update();
     space2D.update();
 }
 
