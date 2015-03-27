@@ -20,11 +20,15 @@ class Arrow
     this.geometry = new THREE.ArrowGeometry(4.0);
     this.material = material(0xFFFF00);
     this.mesh = new THREE.Mesh(this.geometry, this.material);
-    this.material.color = new THREE.Color(0xFF0000);
   }
   set attitude(rotor: blade.Euclidean3)
   {
     this.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+  }
+  
+  set color(color: THREE.Color)
+  {
+    this.material.color = new THREE.Color(0xFF0000);
   }
 }
 
