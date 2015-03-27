@@ -12,14 +12,15 @@ function material(color: number, opacity: number = 1.0, transparent: boolean = f
 
 class Arrow
 {
-  public geometry;
-  public material;
-  public mesh;
+  public geometry: THREE.ArrowGeometry;
+  public material: THREE.MeshLambertMaterial;
+  public mesh: THREE.Mesh;
   constructor()
   {
     this.geometry = new THREE.ArrowGeometry(4.0);
     this.material = material(0xFFFF00);
     this.mesh = new THREE.Mesh(this.geometry, this.material);
+    this.material.color = new THREE.Color(0xFF0000);
   }
   set attitude(rotor: blade.Euclidean3)
   {
