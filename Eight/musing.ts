@@ -28,7 +28,7 @@ class Arrow
   
   set scale(value: number)
   {
-    this.mesh.scale = new THREE.Vector3(value,value,value);
+    this.mesh.scale = new THREE.Vector3(value, value, value);
   }
   
   set color(color: THREE.Color)
