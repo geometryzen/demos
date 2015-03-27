@@ -15,12 +15,12 @@ class Workbench2D
       height = wnd.innerHeight
       canvas.width  = width
       canvas.height = height
-    this.sizer = onWindowResize;
+    this.sizer = onWindowResize
 
   setUp: () ->
     this.wnd.document.body.insertBefore(this.canvas, this.wnd.document.body.firstChild)
     this.wnd.addEventListener('resize', this.sizer, false)
-    this.sizer(null);
+    this.sizer(null)
     
   tearDown: () ->
     this.wnd.removeEventListener('resize', this.sizer, false)
