@@ -26,6 +26,11 @@ class Arrow
     this.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
   }
   
+  set scale(value: number)
+  {
+    this.mesh.scale = value;
+  }
+  
   set color(color: THREE.Color)
   {
     this.material.color = color;
