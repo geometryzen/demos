@@ -75,6 +75,10 @@ class Visual
   public camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(45, 1.0, 0.1, 10000);
   public renderer: THREE.WebGLRenderer = new THREE.WebGLRenderer();
   public workbench3D: Workbench3D;
+  public canvas2D: HTMLCanvasElement;
+  public workbench2D: Workbench2D;
+  public space2D: createjs.Stage;
+
   constructor(wnd: Window)
   {
     var ambientLight = new THREE.AmbientLight(0x111111);
@@ -94,6 +98,15 @@ class Visual
     
     this.renderer.setClearColor(new THREE.Color(0x080808), 1.0)
     this.workbench3D = new Workbench3D(this.renderer.domElement, this.renderer, this.camera, wnd);
+    
+    this.canvas2D = wnd.document.createElement("canvas");
+
+    this.canvas2D.style.position = "absolute";
+    this.canvas2D.style.top = "0px";
+    this.canvas2D.style.left = "0px";
+    
+    this.workbench2D = new Workbench2D(this.canvas2D, wnd);
+    this.space2D = new createjs.Stage(this.canvas2D, "", {});
   }
   add(object: THREE.Object3D)
   {
@@ -178,18 +191,11 @@ class Workbench3D
   }
 }
 
-
 var glwin: Window = window.open("","","width=800,height=600");
 glwin.document.body.style.backgroundColor = "080808";
 glwin.document.body.style.overflow = "hidden";
 glwin.document.title = "Visualizing Geometric Algebra with WebGL";
 
-var canvas2D = glwin.document.createElement("canvas");
-canvas2D.style.position = "absolute";
-canvas2D.style.top = "0px";
-canvas2D.style.left = "0px";
-var workbench2D = new Workbench2D(canvas2D, glwin);
-var space2D = new createjs.Stage(canvas2D, "", {});
 space2D.autoClear = true;
 
 var font = "20px Helvetica";
