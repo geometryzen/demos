@@ -413,8 +413,8 @@ var TrackballControls = function ( object: THREE.Object3D, wnd: Window ) {
 
 		}
 
-		this.domElement.addEventListener( 'mousemove', mousemove, false );
-		this.domElement.addEventListener( 'mouseup', mouseup, false );
+		_this.document.addEventListener( 'mousemove', mousemove, false );
+		_this.document.addEventListener( 'mouseup', mouseup, false );
 
 		_this.dispatchEvent( startEvent );
 
@@ -453,8 +453,8 @@ var TrackballControls = function ( object: THREE.Object3D, wnd: Window ) {
 
 		_state = STATE.NONE;
 
-		this.document.removeEventListener( 'mousemove', mousemove );
-		this.document.removeEventListener( 'mouseup', mouseup );
+		_this.document.removeEventListener( 'mousemove', mousemove );
+		_this.document.removeEventListener( 'mouseup', mouseup );
 		_this.dispatchEvent( endEvent );
 
 	}
