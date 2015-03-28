@@ -701,7 +701,7 @@ class Visual
     this.camera.up.set(0,0,1);
     this.camera.lookAt(this.scene.position);
 
-    this.controls = new TrackballControls( this.camera, wnd.document.documentElement );
+    this.controls = new TrackballControls( this.camera, wnd );
     
     this.renderer.setClearColor(new THREE.Color(0x080808), 1.0)
     this.workbench3D = new Workbench3D(this.renderer.domElement, this.renderer, this.camera, this.controls, wnd);
