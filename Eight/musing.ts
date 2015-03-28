@@ -681,6 +681,7 @@ class Visual
   public workbench2D: Workbench2D;
   public space2D: createjs.Stage;
   public controls;
+
   constructor(wnd: Window)
   {
     var ambientLight = new THREE.AmbientLight(0x111111);
