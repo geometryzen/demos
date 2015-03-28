@@ -680,7 +680,7 @@ class Visual
   public canvas2D: HTMLCanvasElement;
   public workbench2D: Workbench2D;
   public space2D: createjs.Stage;
-
+  public controls;
   constructor(wnd: Window)
   {
     var ambientLight = new THREE.AmbientLight(0x111111);
@@ -710,6 +710,22 @@ class Visual
     this.workbench2D = new Workbench2D(this.canvas2D, wnd);
     this.space2D = new createjs.Stage(this.canvas2D, "", {});
     this.space2D.autoClear = true;
+
+    this.controls = new TrackballControls( this.camera, wnd.document );
+
+    this.controls.rotateSpeed = 1.0;
+    this.controls.zoomSpeed = 1.2;
+    this.controls.panSpeed = 0.8;
+
+    this.controls.noZoom = false;
+    this.controls.noPan = false;
+
+    this.controls.staticMoving = true;
+    this.controls.dynamicDampingFactor = 0.3;
+
+    this.controls.keys = [ 65, 83, 68 ];
+
+//    this.controls.addEventListener( 'change', render );
   }
   add(object: THREE.Object3D)
   {
