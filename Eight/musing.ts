@@ -684,6 +684,7 @@ class Visual
 
   constructor(wnd: Window)
   {
+    this.scene.fog = new THREE.FogExp2( 0xcccccc, 0.002 );
     var ambientLight = new THREE.AmbientLight(0x111111);
     this.scene.add(ambientLight);
 
