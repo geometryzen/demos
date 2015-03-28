@@ -413,8 +413,8 @@ var TrackballControls = function ( object: THREE.Object3D, wnd: Window ) {
 
 		}
 
-		this.document.addEventListener( 'mousemove', mousemove, false );
-		this.document.addEventListener( 'mouseup', mouseup, false );
+		this.domElement.addEventListener( 'mousemove', mousemove, false );
+		this.domElement.addEventListener( 'mouseup', mouseup, false );
 
 		_this.dispatchEvent( startEvent );
 
@@ -575,7 +575,8 @@ var TrackballControls = function ( object: THREE.Object3D, wnd: Window ) {
 
 	}
 
-// this.domElement.addEventListener( 'contextmenu', function ( event ) { event.preventDefault(); }, false );
+  // This works, bit we don't unhook it.
+  this.domElement.addEventListener( 'contextmenu', function ( event ) { event.preventDefault(); }, false );
 
 	this.domElement.addEventListener( 'mousedown', mousedown, false );
 
