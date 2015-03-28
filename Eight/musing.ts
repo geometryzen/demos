@@ -452,6 +452,7 @@ var TrackballControls = function ( object: THREE.Object3D, wnd: Window ) {
 
 		_this.document.removeEventListener( 'mousemove', mousemove );
 		_this.document.removeEventListener( 'mouseup', mouseup );
+
 		_this.dispatchEvent( endEvent );
 
 	}
