@@ -1,5 +1,5 @@
 debugger;
-var TrackballControls = function ( object: THREE.Object3D, domElement?: Document ) {
+var TrackballControls = function ( object: THREE.Object3D, domElement?: HTMLElement ) {
 
 	var _this = this;
 	var STATE = { NONE: -1, ROTATE: 0, ZOOM: 1, PAN: 2, TOUCH_ROTATE: 3, TOUCH_ZOOM_PAN: 4 };
@@ -713,7 +713,7 @@ class Visual
     this.space2D = new createjs.Stage(this.canvas2D, "", {});
     this.space2D.autoClear = true;
 
-    this.controls = new TrackballControls( this.camera, wnd.document );
+    this.controls = new TrackballControls( this.camera, wnd.document.body );
 
     this.controls.rotateSpeed = 1.0;
     this.controls.zoomSpeed = 1.2;
