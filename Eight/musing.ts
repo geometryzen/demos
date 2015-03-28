@@ -1,4 +1,3 @@
-debugger;
 var TrackballControls = function ( object: THREE.Object3D, domElement?: HTMLElement ) {
 
 	var _this = this;
