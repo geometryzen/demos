@@ -698,9 +698,11 @@ class Visual
     this.camera.position.set(10.0, 9.0, 8.0);
     this.camera.up.set(0,0,1);
     this.camera.lookAt(this.scene.position);
+
+    this.controls = new TrackballControls( this.camera, wnd.document.body );
     
     this.renderer.setClearColor(new THREE.Color(0x080808), 1.0)
-    this.workbench3D = new Workbench3D(this.renderer.domElement, this.renderer, this.camera, wnd);
+    this.workbench3D = new Workbench3D(this.renderer.domElement, this.renderer, this.camera, this.controls, wnd);
     
     this.canvas2D = wnd.document.createElement("canvas");
 
@@ -711,8 +713,6 @@ class Visual
     this.workbench2D = new Workbench2D(this.canvas2D, wnd);
     this.space2D = new createjs.Stage(this.canvas2D, "", {});
     this.space2D.autoClear = true;
-
-    this.controls = new TrackballControls( this.camera, wnd.document.body );
 
     this.controls.rotateSpeed = 1.0;
     this.controls.zoomSpeed = 1.2;
@@ -792,7 +792,7 @@ class Workbench3D
   public canvas: HTMLCanvasElement;
   public wnd: Window;
   private sizer: EventListener;
-  constructor(canvas: HTMLCanvasElement, renderer: THREE.WebGLRenderer, camera: THREE.PerspectiveCamera, wnd: Window)
+  constructor(canvas: HTMLCanvasElement, renderer: THREE.WebGLRenderer, camera: THREE.PerspectiveCamera, controls, wnd: Window)
   {
     this.canvas = canvas;
     this.wnd = wnd;
@@ -803,6 +803,7 @@ class Workbench3D
       renderer.setSize(width, height);
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
+      controls.handleResize();
     }
     this.sizer = onWindowResize;
   }
