@@ -1,10 +1,12 @@
-var TrackballControls = function ( object: THREE.Object3D, domElement?: HTMLElement ) {
+var TrackballControls = function ( object: THREE.Object3D, wnd: Window ) {
 
 	var _this = this;
 	var STATE = { NONE: -1, ROTATE: 0, ZOOM: 1, PAN: 2, TOUCH_ROTATE: 3, TOUCH_ZOOM_PAN: 4 };
 
 	this.object = object;
-	this.domElement = ( domElement !== undefined ) ? domElement : document;
+	this.window = wnd;
+	this.document = wnd.document;
+	this.domElement = wnd.document.documentElement;
 
 	// API
 
@@ -347,7 +349,7 @@ var TrackballControls = function ( object: THREE.Object3D, domElement?: HTMLElem
 
 		if ( _this.enabled === false ) return;
 
-		window.removeEventListener( 'keydown', keydown );
+		this.window.removeEventListener( 'keydown', keydown );
 
 		_prevState = _state;
 
@@ -377,7 +379,7 @@ var TrackballControls = function ( object: THREE.Object3D, domElement?: HTMLElem
 
 		_state = _prevState;
 
-		window.addEventListener( 'keydown', keydown, false );
+		this.window.addEventListener( 'keydown', keydown, false );
 
 	}
 
@@ -411,8 +413,8 @@ var TrackballControls = function ( object: THREE.Object3D, domElement?: HTMLElem
 
 		}
 
-		document.addEventListener( 'mousemove', mousemove, false );
-		document.addEventListener( 'mouseup', mouseup, false );
+		this.document.addEventListener( 'mousemove', mousemove, false );
+		this.document.addEventListener( 'mouseup', mouseup, false );
 
 		_this.dispatchEvent( startEvent );
 
@@ -451,8 +453,8 @@ var TrackballControls = function ( object: THREE.Object3D, domElement?: HTMLElem
 
 		_state = STATE.NONE;
 
-		document.removeEventListener( 'mousemove', mousemove );
-		document.removeEventListener( 'mouseup', mouseup );
+		this.document.removeEventListener( 'mousemove', mousemove );
+		this.document.removeEventListener( 'mouseup', mouseup );
 		_this.dispatchEvent( endEvent );
 
 	}
@@ -584,8 +586,8 @@ var TrackballControls = function ( object: THREE.Object3D, domElement?: HTMLElem
 	this.domElement.addEventListener( 'touchend', touchend, false );
 	this.domElement.addEventListener( 'touchmove', touchmove, false );
 
-	window.addEventListener( 'keydown', keydown, false );
-	window.addEventListener( 'keyup', keyup, false );
+	this.window.addEventListener( 'keydown', keydown, false );
+	this.window.addEventListener( 'keyup', keyup, false );
 
 	this.handleResize();
 
