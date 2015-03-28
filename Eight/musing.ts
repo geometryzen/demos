@@ -1,5 +1,5 @@
 debugger;
-var TrackballControls = function ( object, domElement? ) {
+var TrackballControls = function ( object: THREE.Object3D, domElement?: Document ) {
 
 	var _this = this;
 	var STATE = { NONE: -1, ROTATE: 0, ZOOM: 1, PAN: 2, TOUCH_ROTATE: 3, TOUCH_ZOOM_PAN: 4 };
@@ -726,8 +726,13 @@ class Visual
     this.controls.dynamicDampingFactor = 0.3;
 
     this.controls.keys = [ 65, 83, 68 ];
+    
+    function render()
+    {
+      
+    }
 
-//    this.controls.addEventListener( 'change', render );
+    this.controls.addEventListener( 'change', render );
   }
   add(object: THREE.Object3D)
   {
