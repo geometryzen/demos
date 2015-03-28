@@ -1,3 +1,6 @@
+// This TrackballControls class was lifted from the THREE examples.
+// I've fixed a few issues to get it working with an explicit window.
+// TODO: Implement using Geometric Algebra and TypeScript.
 var TrackballControls = function ( object: THREE.Object3D, wnd: Window ) {
 
 	var _this = this;
