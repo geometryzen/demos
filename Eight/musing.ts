@@ -110,12 +110,9 @@ var TrackballControls = function ( object: THREE.Object3D, wnd: Window ) {
 
 		var vector = new THREE.Vector2();
 
-		return function ( pageX, pageY ) {
+		return function ( pageX: number, pageY: number ) {
 
-			vector.set(
-				( pageX - _this.screen.left ) / _this.screen.width,
-				( pageY - _this.screen.top ) / _this.screen.height
-			);
+			vector.set( ( pageX - _this.screen.left ) / _this.screen.width, ( pageY - _this.screen.top ) / _this.screen.height);
 
 			return vector;
 
