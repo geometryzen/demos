@@ -1,3 +1,4 @@
+debugger;
 var TrackballControls = function ( object, domElement ) {
 
 	var _this = this;
