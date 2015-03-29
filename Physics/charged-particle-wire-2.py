@@ -21,7 +21,7 @@ particle.velocity = VectorE3(0.0, -1.0, 0.0)
 print "particle:", repr(particle)
 print "VectorE3:", repr(VectorE3(0,1,0))
 print "mass", repr(particle.mass)
-print repr(particle.position)
+print "position", repr(particle.position)
 print repr(particle.velocity)
 space3D.add(particle)
 
