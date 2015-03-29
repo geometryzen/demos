@@ -14,6 +14,7 @@ I = i * j * k
 workbench3D = Workbench3D(space3D.renderer.domElement, space3D.renderer, space3D.camera)
 
 particle = SphereBuilder().color("red").radius(0.1).build()
+print particle
 particle.charge   = ScalarE3(1.0)
 particle.mass     = ScalarE3(1.0)
 particle.position = VectorE3(0.0, 1.0, 0.0)
