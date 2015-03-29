@@ -20,6 +20,7 @@ particle.position = VectorE3(0.0, 1.0, 0.0)
 particle.velocity = VectorE3(0.0, -1.0, 0.0)
 print repr(VectorE3(0,1,0))
 print repr(particle.position)
+print repr(particle.velocity)
 space3D.add(particle)
 
 # Probe to show the velocity of the particle.
