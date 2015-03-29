@@ -1,7 +1,7 @@
 from browser import *
 #rom three import *
 from workbench import *
-from geometry import CartesianSpace
+from geometry import CartesianSpace, VectorE3
 
 timeOut = 60
 
