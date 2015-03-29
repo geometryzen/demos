@@ -14,17 +14,10 @@ I = i * j * k
 workbench3D = Workbench3D(space3D.renderer.domElement, space3D.renderer, space3D.camera)
 
 particle = SphereBuilder().color("red").radius(0.1).build()
-print particle
 particle.charge   = ScalarE3(1.0)
 particle.mass     = ScalarE3(1.0)
 particle.position = VectorE3(0.0, 1.0, 0.0)
 particle.velocity = VectorE3(0.0, -1.0, 0.0)
-print VectorE3(3.0,4.0,5.0).vector
-print "particle:", particle
-print "VectorE3:", repr(VectorE3(0,1,0))
-print "mass:    ", repr(particle.mass)
-print "position:", repr(particle.position)
-print "velocity:", repr(particle.velocity)
 space3D.add(particle)
 
 # Probe to show the velocity of the particle.
