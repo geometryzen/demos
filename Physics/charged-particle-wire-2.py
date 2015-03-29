@@ -18,7 +18,7 @@ particle.charge   = ScalarE3(1.0)
 particle.mass     = ScalarE3(1.0)
 particle.position = VectorE3(0.0, 1.0, 0.0)
 particle.velocity = VectorE3(0.0, -1.0, 0.0)
-print VectorE3(0,1,0)
+print repr(VectorE3(0,1,0))
 print repr(particle.position)
 space3D.add(particle)
 
