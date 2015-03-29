@@ -41,14 +41,10 @@ space3D.add(probeF.grade1)
 dt = 0.02
 
 def wireB(position):
-    print position
     x = position.x
     y = position.y
     quadrance = x * x + y * y
     # Convert the traditional magnetic field to a bivector.
-    print x
-    print y
-    print quadrance
     return -I * VectorE3(-y/quadrance, x/quadrance, 0.0)
 
 def outsideCube(position, size):
