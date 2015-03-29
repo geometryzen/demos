@@ -16,11 +16,11 @@ workbench3D = Workbench3D(space3D.renderer.domElement, space3D.renderer, space3D
 particle = SphereBuilder().color("red").radius(0.1).build()
 particle.charge   = ScalarE3(1.0)
 particle.mass     = ScalarE3(1.0)
-particle.pos = VectorE3(0.0, 1.0, 0.0)
+particle.position = VectorE3(0.0, 1.0, 0.0)
 particle.velocity = VectorE3(0.0, -1.0, 0.0)
 print repr(particle)
 print repr(VectorE3(0,1,0))
-print repr(particle.pos)
+print repr(particle.position)
 print repr(particle.velocity)
 space3D.add(particle)
 
