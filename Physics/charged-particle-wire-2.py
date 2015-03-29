@@ -1,7 +1,7 @@
 from browser import *
 #rom three import *
 from workbench import *
-from geometry import CartesianSpace, VectorE3, SphereBuilder, ScalarE3
+from geometry import CartesianSpace, VectorE3, SphereBuilder, ScalarE3, ProbeBuilderE3
 
 timeOut = 60
 
