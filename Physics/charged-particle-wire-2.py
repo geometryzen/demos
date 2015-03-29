@@ -1,5 +1,5 @@
 from browser import *
-from three import *
+#rom three import *
 from workbench import *
 from geometry import *
 
