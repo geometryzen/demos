@@ -33,10 +33,9 @@ def tick(t):
     global frames, elapsed
     frames += 1.0
     elapsed = t
-    print -omega * t / 2.0
     R = exp(-omega * t / 2.0)
+    print R
     shape.position = R * i * ~R
-    print shape.position
 #   shape.attitude = R
     space.render()
     
