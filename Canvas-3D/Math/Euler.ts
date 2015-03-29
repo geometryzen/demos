@@ -7,4 +7,6 @@ var a = new THREE.Euler(0, 1, 1.57, 'XYZ');
 var b = new THREE.Vector3(1, 0, 1);
 var c = b.applyEuler(a);
 
-log(c.x + "\n")
+log(c.x);
+log(c.y);
+log(c.z);
