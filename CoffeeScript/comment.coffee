@@ -4,4 +4,4 @@
   A multiline comment, perhaps a LICENSE.
 ###
 
-Sk.output "Hello"
+Sk.output "Hello, CoffeeScript!"
