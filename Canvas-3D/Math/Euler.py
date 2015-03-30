@@ -9,4 +9,4 @@ print c.x
 print c.y
 print c.z
 
-print a
+print a.x
