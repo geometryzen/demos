@@ -18,3 +18,4 @@ print str(a)
 print repr(a)
 
 a.set(1,2,3,'ZXY')
+print a
