@@ -16,3 +16,5 @@ print a.order
 print a
 print str(a)
 print repr(a)
+
+a.set(1,2,3,'ZXY')
