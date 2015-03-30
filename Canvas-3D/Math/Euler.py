@@ -14,3 +14,5 @@ print a.y
 print a.z
 print a.order
 print a
+print str(a)
+print repr(a)
