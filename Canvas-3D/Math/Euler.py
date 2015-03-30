@@ -8,3 +8,5 @@ c = b.applyEuler(a)
 print c.x
 print c.y
 print c.z
+
+print a
