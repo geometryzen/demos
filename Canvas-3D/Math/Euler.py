@@ -1,4 +1,4 @@
-from e3ga import *
+from three import *
 
 # TODO: Implement Euler wrapper.
 a = Euler(0, 1, 1.57, 'XYZ')
