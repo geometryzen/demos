@@ -10,3 +10,6 @@ print c.y
 print c.z
 
 print a.x
+print a.y
+print a.z
+print a.order
