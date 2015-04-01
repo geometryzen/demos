@@ -809,7 +809,7 @@ function tick(time: number) {
     var s: any = new blade.Euclidean3(Math.cos(theta/2), 0, 0, 0, 0, 0, 0, 0);
     var rotor: any = s - B * Math.sin(theta/2);
 
-//    arrow.attitude = rotor;
+      arrow.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
 //    box.attitude = rotor;
 //    flat.attitude = rotor;
 //    vortex.attitude = rotor;
