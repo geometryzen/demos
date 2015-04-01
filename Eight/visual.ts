@@ -848,8 +848,8 @@ var mono = new Box(5.0, 0.1, 5.0, 0x00FF00);
 //mono.mesh.position.set(0, -2, 0);
 viz.add(mono.mesh);
 
-//var arrow = new Arrow(4.0, 0xFFFF00);
-//viz.add(arrow.mesh);
+var arrow = new visual.Arrow(4.0, 0xFFFF00);
+viz.add(arrow.mesh);
 
 var box = new Box(1.0, 2.0, 3.0, 0xFF0000, 0.25, false);
 viz.add(box.mesh);
