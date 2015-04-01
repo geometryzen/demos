@@ -1,4 +1,10 @@
 // This program is under development.
+var log = function(s: any) {
+  var w: any = window;
+  w.Sk.output(s+'\n');
+};
+
+log("Hello!");
 // This TrackballControls class was lifted from the THREE examples.
 // I've fixed a few issues to get it working with an explicit window.
 // TODO: Implement using Geometric Algebra and TypeScript.
