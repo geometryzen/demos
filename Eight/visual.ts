@@ -845,7 +845,7 @@ output.x = 100; output.y = 60;
 viz.space2D.addChild(output);
 
 var mono = new Box(5.0, 0.1, 5.0, 0x00FF00);
-//mono.mesh.position.set(0, -2, 0);
+mono.mesh.position.set(0, -2, 0);
 viz.add(mono.mesh);
 
 var arrow = new visual.Arrow(4.0, 0xFFFF00);
