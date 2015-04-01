@@ -667,7 +667,7 @@ class Arrow extends visual.VisualElement<THREE.ArrowGeometry>
   }
 }
 */
-class Box extends VisualElement<THREE.BoxGeometry>
+class Box extends visual.VisualElement<THREE.BoxGeometry>
 {
   constructor(width: number, height: number, depth: number, color: number, opacity: number = 1.0, transparent: boolean = false)
   {
@@ -876,8 +876,8 @@ function tick(time: number) {
     var rotor: any = s - B * Math.sin(theta/2);
 
 //    arrow.attitude = rotor;
-    box.attitude = rotor;
-    flat.attitude = rotor;
+//    box.attitude = rotor;
+//    flat.attitude = rotor;
 //    vortex.attitude = rotor;
 
     viz.update();
