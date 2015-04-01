@@ -848,15 +848,15 @@ var mono = new Box(5.0, 0.1, 5.0, 0x00FF00);
 mono.mesh.position.set(0, -2, 0);
 viz.add(mono.mesh);
 
-var arrow = new Arrow(4.0, 0xFFFF00);
+//var arrow = new Arrow(4.0, 0xFFFF00);
 //viz.add(arrow.mesh);
 
 var box = new Box(1.0, 2.0, 3.0, 0xFF0000, 0.25, false);
 viz.add(box.mesh);
 box.mesh.position.set(3,-3,3);
 
-var vortex = new Vortex(1.0, 0x00FFFF, 0.3);
-viz.add(vortex.mesh)
+//var vortex = new Vortex(1.0, 0x00FFFF, 0.3);
+//viz.add(vortex.mesh)
 
 var flat = new Box(10.0,10.0,0.1, 0x0000FF, 0.25, true);
 viz.add(flat.mesh);
@@ -878,7 +878,7 @@ function tick(time: number) {
 //    arrow.attitude = rotor;
     box.attitude = rotor;
     flat.attitude = rotor;
-    vortex.attitude = rotor;
+//    vortex.attitude = rotor;
 
     viz.update();
 }
