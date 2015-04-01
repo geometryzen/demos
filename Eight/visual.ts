@@ -658,7 +658,7 @@ class VisualElement<T extends THREE.Geometry>
     this.material.color = color;
   }
 }
-
+/*
 class Arrow extends visual.VisualElement<THREE.ArrowGeometry>
 {
   constructor(scale: number, color: number, opacity: number = 1.0, transparent: boolean = false)
@@ -666,7 +666,7 @@ class Arrow extends visual.VisualElement<THREE.ArrowGeometry>
     super(new THREE.ArrowGeometry(scale), color, opacity, transparent);
   }
 }
-
+*/
 class Box extends VisualElement<THREE.BoxGeometry>
 {
   constructor(width: number, height: number, depth: number, color: number, opacity: number = 1.0, transparent: boolean = false)
@@ -674,7 +674,7 @@ class Box extends VisualElement<THREE.BoxGeometry>
     super(new THREE.BoxGeometry(width, height, depth), color, opacity, transparent);
   }
 }
-
+/*
 class Vortex extends VisualElement<THREE.VortexGeometry>
 {
   constructor(scale: number, color: number, opacity: number = 1.0, transparent: boolean = false)
@@ -682,7 +682,7 @@ class Vortex extends VisualElement<THREE.VortexGeometry>
     super(new THREE.VortexGeometry(4.0, 0.32, 0.04, 0.08, 0.3, 8, 12), color, opacity, transparent);
   }
 }
-
+*/
 class Visual
 {
   public scene: THREE.Scene = new THREE.Scene();
