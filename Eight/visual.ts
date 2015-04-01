@@ -659,7 +659,7 @@ class VisualElement<T extends THREE.Geometry>
   }
 }
 
-class Arrow extends VisualElement<THREE.ArrowGeometry>
+class Arrow extends visual.VisualElement<THREE.ArrowGeometry>
 {
   constructor(scale: number, color: number, opacity: number = 1.0, transparent: boolean = false)
   {
