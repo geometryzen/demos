@@ -2,7 +2,7 @@ var log = function(s: any) {
   var w: any = window;
   w.Sk.output(s+'\n');
 };
-log(visual.VERSION);
+
 log("Hello!");
 
 var popUp: Window = open("", "", "width=800, height=600");
