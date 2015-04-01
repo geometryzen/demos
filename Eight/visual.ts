@@ -853,7 +853,7 @@ viz.add(arrow.mesh);
 
 var box = new Box(1.0, 2.0, 3.0, 0xFF0000, 0.25, false);
 viz.add(box.mesh);
-//box.mesh.position.set(3,-3,3);
+box.mesh.position.set(3,-3,3);
 
 //var vortex = new Vortex(1.0, 0x00FFFF, 0.3);
 //viz.add(vortex.mesh)
