@@ -1,5 +1,5 @@
 // This program is under development.
-var popUp: Window = window.open("","","width=800,height=600");
+var popUp: Window = window.open("","","width=1200,height=800");
 popUp.document.body.style.backgroundColor = "080808";
 popUp.document.body.style.overflow = "hidden";
 popUp.document.title = "Visualizing Geometric Algebra with WebGL";
