@@ -18,24 +18,24 @@ help.x = 140; help.y = 100;
 viz.stage.addChild(help);
 
 var box1 = new visual.Box(5.0, 0.1, 5.0, 0x00FF00);
-box1.mesh.position.set(0, -2, 0);
-viz.scene.add(box1.mesh);
+box1.position.set(0, -2, 0);
+viz.scene.add(box1);
 
 var arrow = new visual.Arrow(4.0, 0xFFFF00);
-viz.scene.add(arrow.mesh);
+viz.scene.add(arrow);
 
 var box2 = new visual.Box(1.0, 2.0, 3.0, 0xFF0000, 0.25, false);
-viz.scene.add(box2.mesh);
-box2.mesh.position.set(3,-3,3);
+viz.scene.add(box2);
+box2.position.set(3,-3,3);
 
 var vortex = new visual.Vortex(1.0, 0x00FFFF, 0.3);
-viz.scene.add(vortex.mesh)
+viz.scene.add(vortex)
 
 var box3 = new visual.Box(10.0,10.0,0.1, 0x0000FF, 0.25, true);
-viz.scene.add(box3.mesh);
+viz.scene.add(box3);
 
 var sphere = new visual.Sphere({radius:0.33}, {color:0x0000FF, opacity: 1.0, transparent: false});
-viz.scene.add(sphere.mesh);
+viz.scene.add(sphere);
 
 var tau = 2 * Math.PI;
 var omega = (tau / 20);
@@ -51,10 +51,10 @@ function tick(time: number) {
     var s: any = new blade.Euclidean3(Math.cos(theta/2), 0, 0, 0, 0, 0, 0, 0);
     var rotor: any = s - B * Math.sin(theta/2);
 
-      arrow.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
-      box2.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
-      box3.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
-      vortex.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+      arrow.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+      box2.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+      box3.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+      vortex.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
 
     viz.update();
 }
