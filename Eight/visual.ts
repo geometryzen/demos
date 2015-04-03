@@ -6,7 +6,7 @@ popUp.document.title = "Visualizing Geometric Algebra with WebGL";
 
 var viz = new visual.Visual(popUp);
 
-var title = new createjs.Text(popUp.document.title, "20px Helvetica");
+var title = new createjs.Text(popUp.document.title, "20px Helvetica", "white");
 title.x = 100; title.y = 60;
 viz.stage.addChild(title);
 var help = new createjs.Text("Hit Esc key to exit. Mouse to Rotate, Zoom, and Pan.", "20px Helvetica", "white");
