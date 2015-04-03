@@ -4,6 +4,9 @@ popUp.document.body.style.backgroundColor = "080808";
 popUp.document.body.style.overflow = "hidden";
 popUp.document.title = "Visualizing Geometric Algebra with WebGL";
 
+var w: any = window;
+w.Sk.output(visual.VERSION);
+
 var viz = new visual.Visual(popUp);
 
 var title = new createjs.Text(popUp.document.title, "24px Helvetica", "white");
