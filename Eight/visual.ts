@@ -25,7 +25,7 @@ class Visual
   public canvas2D: HTMLCanvasElement;
   public workbench2D: Workbench2D;
   public space2D: createjs.Stage;
-  public controls;
+  public controls: visual.TrackBall;
 
   constructor(wnd: Window)
   {
