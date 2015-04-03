@@ -480,8 +480,8 @@ var TrackballControls = function ( object: THREE.Object3D, wnd: Window ) {
 		}
 
 		_zoomStart.y += delta * 0.01;
-		_this.dispatchEvent( startEvent );
-		_this.dispatchEvent( endEvent );
+//		_this.dispatchEvent( startEvent );
+//		_this.dispatchEvent( endEvent );
 
 	}
 
