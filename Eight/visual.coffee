@@ -33,27 +33,28 @@ viz.scene.add(box3.mesh);
 tau = 2 * Math.PI;
 omega = (tau / 20);
 # A unit bivector rotating from k to i
- B = new blade.Euclidean3(0, 0, 0, 0, 0, 0, 1, 0);
+B = new blade.Euclidean3(0, 0, 0, 0, 0, 0, 1, 0);
 # Just make sure that we really do have a unit bivector.
 B = B / B.norm();
 
 setUp = () -> viz.setUp()
 
-function tick(time: number) {
-    var theta = omega * time;
-    var s: any = new blade.Euclidean3(Math.cos(theta/2), 0, 0, 0, 0, 0, 0, 0);
-    var rotor: any = s - B * Math.sin(theta/2);
+tick = (time: number) ->
+    theta = omega * time;
+    s = new blade.Euclidean3(Math.cos(theta/2), 0, 0, 0, 0, 0, 0, 0);
+    rotor = s - B * Math.sin(theta/2);
 
-      arrow.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
-      box2.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
-      box3.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
-      vortex.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+    arrow.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+    box2.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+    box3.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+    vortex.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
 
-    viz.update();
-}
+    viz.update()
 
-function terminate(time: number) { return false; }
+terminate = (time: number) -> false
 
-function tearDown(e: Error) { viz.tearDown(); popUp.close(); }
+tearDown = (e: Error) ->
+  viz.tearDown()
+  popUp.close()
 
 eight.animationRunner(tick, terminate, setUp, tearDown, popUp).start();
