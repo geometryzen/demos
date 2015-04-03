@@ -25,7 +25,7 @@ class Visual
   public canvas2D: HTMLCanvasElement;
   public workbench2D: Workbench2D;
   public space2D: createjs.Stage;
-//  public controls;
+  public controls;
 
   constructor(wnd: Window)
   {
@@ -44,7 +44,7 @@ class Visual
     this.camera.up.set(0,0,1);
     this.camera.lookAt(this.scene.position);
 
-//    this.controls = visual.trackball(this.camera, wnd);
+    this.controls = visual.trackball(this.camera, wnd);
     
     this.renderer.setClearColor(new THREE.Color(0x080808), 1.0)
     this.workbench3D = new Workbench3D(this.renderer.domElement, this.renderer, this.camera, /*this.controls,*/ wnd);
