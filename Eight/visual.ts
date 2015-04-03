@@ -25,7 +25,7 @@ class Visual
   public canvas2D: HTMLCanvasElement;
   public workbench2D: Workbench2D;
   public space2D: createjs.Stage;
-  public controls;
+//  public controls;
 
   constructor(wnd: Window)
   {
@@ -44,10 +44,10 @@ class Visual
     this.camera.up.set(0,0,1);
     this.camera.lookAt(this.scene.position);
 
-    this.controls = visual.trackball(this.camera, wnd);
+//    this.controls = visual.trackball(this.camera, wnd);
     
     this.renderer.setClearColor(new THREE.Color(0x080808), 1.0)
-    this.workbench3D = new Workbench3D(this.renderer.domElement, this.renderer, this.camera, this.controls, wnd);
+    this.workbench3D = new Workbench3D(this.renderer.domElement, this.renderer, this.camera, /*this.controls,*/ wnd);
     
     this.canvas2D = wnd.document.createElement("canvas");
 
@@ -59,24 +59,24 @@ class Visual
     this.space2D = new createjs.Stage(this.canvas2D, "", {});
     this.space2D.autoClear = true;
 
-    this.controls.rotateSpeed = 1.0;
-    this.controls.zoomSpeed = 1.2;
-    this.controls.panSpeed = 0.8;
+//    this.controls.rotateSpeed = 1.0;
+//    this.controls.zoomSpeed = 1.2;
+//    this.controls.panSpeed = 0.8;
 
-    this.controls.noZoom = false;
-    this.controls.noPan = false;
+//    this.controls.noZoom = false;
+//    this.controls.noPan = false;
 
-    this.controls.staticMoving = true;
-    this.controls.dynamicDampingFactor = 0.3;
+//    this.controls.staticMoving = true;
+//    this.controls.dynamicDampingFactor = 0.3;
 
-    this.controls.keys = [ 65, 83, 68 ];
+//    this.controls.keys = [ 65, 83, 68 ];
     
     function render()
     {
       
     }
 
-    this.controls.addEventListener( 'change', render );
+//  this.controls.addEventListener( 'change', render );
   }
   add(object: THREE.Object3D)
   {
@@ -95,7 +95,7 @@ class Visual
   update()
   {
     this.renderer.render(this.scene, this.camera);
-    this.controls.update();
+//  this.controls.update();
     this.space2D.update();
   }
 }
@@ -137,7 +137,7 @@ class Workbench3D
   public canvas: HTMLCanvasElement;
   public wnd: Window;
   private sizer: EventListener;
-  constructor(canvas: HTMLCanvasElement, renderer: THREE.WebGLRenderer, camera: THREE.PerspectiveCamera, controls, wnd: Window)
+  constructor(canvas: HTMLCanvasElement, renderer: THREE.WebGLRenderer, camera: THREE.PerspectiveCamera,/* controls,*/ wnd: Window)
   {
     this.canvas = canvas;
     this.wnd = wnd;
@@ -148,7 +148,7 @@ class Workbench3D
       renderer.setSize(width, height);
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
-      controls.handleResize();
+//    controls.handleResize();
     }
     this.sizer = onWindowResize;
   }
