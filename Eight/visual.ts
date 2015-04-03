@@ -34,7 +34,7 @@ viz.scene.add(vortex.mesh)
 var box3 = new visual.Box(10.0,10.0,0.1, 0x0000FF, 0.25, true);
 viz.scene.add(box3.mesh);
 
-var sphere = new visual.Sphere({}, 0xFFFFFF, 1.0, false);
+var sphere = new visual.Sphere({radius:1.0}, 0xFFFFFF, 1.0, false);
 viz.scene.add(sphere.mesh);
 
 var tau = 2 * Math.PI;
