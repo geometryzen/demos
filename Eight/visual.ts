@@ -13,22 +13,22 @@ var help = new createjs.Text("Hit Esc key to exit. Mouse to Rotate, Zoom, and Pa
 help.x = 140; help.y = 100;
 viz.stage.addChild(help);
 
-var mono = new visual.Box(5.0, 0.1, 5.0, 0x00FF00);
-mono.mesh.position.set(0, -2, 0);
-viz.scene.add(mono.mesh);
+var box1 = new visual.Box(5.0, 0.1, 5.0, 0x00FF00);
+box1.mesh.position.set(0, -2, 0);
+viz.scene.add(box1.mesh);
 
 var arrow = new visual.Arrow(4.0, 0xFFFF00);
 viz.scene.add(arrow.mesh);
 
-var box = new visual.Box(1.0, 2.0, 3.0, 0xFF0000, 0.25, false);
-viz.scene.add(box.mesh);
-box.mesh.position.set(3,-3,3);
+var box2 = new visual.Box(1.0, 2.0, 3.0, 0xFF0000, 0.25, false);
+viz.scene.add(box2.mesh);
+box2.mesh.position.set(3,-3,3);
 
 var vortex = new visual.Vortex(1.0, 0x00FFFF, 0.3);
 viz.scene.add(vortex.mesh)
 
-var flat = new visual.Box(10.0,10.0,0.1, 0x0000FF, 0.25, true);
-viz.scene.add(flat.mesh);
+var box3 = new visual.Box(10.0,10.0,0.1, 0x0000FF, 0.25, true);
+viz.scene.add(box3.mesh);
 
 var tau = 2 * Math.PI;
 var omega = (tau / 20);
@@ -45,8 +45,8 @@ function tick(time: number) {
     var rotor: any = s - B * Math.sin(theta/2);
 
       arrow.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
-      box.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
-      flat.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+      box2.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+      box3.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
       vortex.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
 
     viz.update();
