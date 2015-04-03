@@ -60,16 +60,16 @@ class Visual
     this.space2D.autoClear = true;
 
     this.controls.rotateSpeed = 1.0;
-//    this.controls.zoomSpeed = 1.2;
-//    this.controls.panSpeed = 0.8;
+    this.controls.zoomSpeed = 1.2;
+    this.controls.panSpeed = 0.8;
 
-//    this.controls.noZoom = false;
-//    this.controls.noPan = false;
+    this.controls.noZoom = false;
+    this.controls.noPan = false;
 
-//    this.controls.staticMoving = true;
-//    this.controls.dynamicDampingFactor = 0.3;
+    this.controls.staticMoving = true;
+    this.controls.dynamicDampingFactor = 0.3;
 
-//    this.controls.keys = [ 65, 83, 68 ];
+    this.controls.keys = [ 65, 83, 68 ];
     
     function render()
     {
