@@ -9,7 +9,7 @@ var viz = new visual.Visual(popUp);
 var title = new createjs.Text(popUp.document.title, "20px Helvetica", "white");
 title.x = 100; title.y = 60;
 viz.stage.addChild(title);
-var help = new createjs.Text("Hit Esc key to exit. Mouse to Rotate, Zoom, and Pan.", "20px Helvetica", "white");
+var help = new createjs.Text("Hit Esc key to exit. Mouse to Rotate, Zoom, and Pan.", "16px Helvetica", "white");
 help.x = 100; help.y = 80;
 viz.stage.addChild(help);
 
