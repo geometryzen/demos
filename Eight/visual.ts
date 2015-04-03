@@ -5,7 +5,7 @@ popUp.document.body.style.overflow = "hidden";
 popUp.document.title = "Visualizing Geometric Algebra with WebGL";
 
 var w: any = window;
-w.Sk.out("VERSION");
+w.Sk.output("VERSION");
 w.Sk.output(visual.VERSION);
 
 var viz = new visual.Visual(popUp);
