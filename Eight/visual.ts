@@ -21,7 +21,7 @@ var box1 = new visual.Box(5.0, 0.1, 5.0, 0x00FF00);
 box1.position.set(0, -2, 0);
 viz.scene.add(box1);
 
-var arrow = new visual.Arrow(4.0, 0xFFFF00);
+var arrow = new visual.Arrow(10.0, 0xFFFF00);
 viz.scene.add(arrow);
 
 var box2 = new visual.Box(1.0, 2.0, 3.0, 0xFF0000, 0.25, false);
