@@ -1,4 +1,3 @@
-debugger;
 // This program is under development.
 var log = function(s: any) {
   var w: any = window;
