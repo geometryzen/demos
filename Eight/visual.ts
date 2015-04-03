@@ -8,27 +8,27 @@ var viz = new visual.Visual(popUp);
 
 var title = new createjs.Text(popUp.document.title, "20px Helvetica", "white");
 title.x = 100; title.y = 60;
-viz.space2D.addChild(title);
+viz.stage.addChild(title);
 var help = new createjs.Text("Hit Esc key to exit. Mouse to Rotate, Zoom, and Pan.", "20px Helvetica", "white");
 help.x = 100; help.y = 80;
-viz.space2D.addChild(help);
+viz.stage.addChild(help);
 
 var mono = new visual.Box(5.0, 0.1, 5.0, 0x00FF00);
 mono.mesh.position.set(0, -2, 0);
-viz.add(mono.mesh);
+viz.scene.add(mono.mesh);
 
 var arrow = new visual.Arrow(4.0, 0xFFFF00);
-viz.add(arrow.mesh);
+viz.scene.add(arrow.mesh);
 
 var box = new visual.Box(1.0, 2.0, 3.0, 0xFF0000, 0.25, false);
-viz.add(box.mesh);
+viz.scene.add(box.mesh);
 box.mesh.position.set(3,-3,3);
 
 var vortex = new visual.Vortex(1.0, 0x00FFFF, 0.3);
-viz.add(vortex.mesh)
+viz.scene.add(vortex.mesh)
 
 var flat = new visual.Box(10.0,10.0,0.1, 0x0000FF, 0.25, true);
-viz.add(flat.mesh);
+viz.scene.add(flat.mesh);
 
 var tau = 2 * Math.PI;
 var omega = (tau / 10);
