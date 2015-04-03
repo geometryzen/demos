@@ -47,7 +47,7 @@ class Visual
     this.controls = visual.trackball(this.camera, wnd);
     
     this.renderer.setClearColor(new THREE.Color(0x080808), 1.0)
-    this.workbench3D = new Workbench3D(this.renderer.domElement, this.renderer, this.camera, /*this.controls,*/ wnd);
+    this.workbench3D = new Workbench3D(this.renderer.domElement, this.renderer, this.camera, this.controls, wnd);
     
     this.canvas2D = wnd.document.createElement("canvas");
 
@@ -137,7 +137,7 @@ class Workbench3D
   public canvas: HTMLCanvasElement;
   public wnd: Window;
   private sizer: EventListener;
-  constructor(canvas: HTMLCanvasElement, renderer: THREE.WebGLRenderer, camera: THREE.PerspectiveCamera,/* controls,*/ wnd: Window)
+  constructor(canvas: HTMLCanvasElement, renderer: THREE.WebGLRenderer, camera: THREE.PerspectiveCamera, controls, wnd: Window)
   {
     this.canvas = canvas;
     this.wnd = wnd;
@@ -148,7 +148,7 @@ class Workbench3D
       renderer.setSize(width, height);
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
-//    controls.handleResize();
+      controls.handleResize();
     }
     this.sizer = onWindowResize;
   }
