@@ -34,7 +34,6 @@ viz.scene.add(vortex.mesh)
 var box3 = new visual.Box(10.0,10.0,0.1, 0x0000FF, 0.25, true);
 viz.scene.add(box3.mesh);
 
-
 var tau = 2 * Math.PI;
 var omega = (tau / 20);
 // A unit bivector rotating from k to i
