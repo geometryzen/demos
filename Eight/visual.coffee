@@ -1,21 +1,21 @@
 # This program is under development.
-popUp = window.open("","","width=1200,height=800");
-popUp.document.body.style.backgroundColor = "080808";
-popUp.document.body.style.overflow = "hidden";
-popUp.document.title = "Visualizing Geometric Algebra with WebGL";
+popUp = window.open("","","width=1200,height=800")
+popUp.document.body.style.backgroundColor = "080808"
+popUp.document.body.style.overflow = "hidden"
+popUp.document.title = "Visualizing Geometric Algebra with WebGL"
 
-viz = new visual.Visual(popUp);
+viz = new visual.Visual(popUp)
 
-title = new createjs.Text(popUp.document.title, "24px Helvetica", "white");
+title = new createjs.Text(popUp.document.title, "24px Helvetica", "white")
 title.x = 100; title.y = 60;
-viz.stage.addChild(title);
-help = new createjs.Text("Hit Esc key to exit. Mouse to Rotate, Zoom, and Pan.", "20px Helvetica", "white");
-help.x = 140; help.y = 100;
-viz.stage.addChild(help);
+viz.stage.addChild(title)
+help = new createjs.Text("Hit Esc key to exit. Mouse to Rotate, Zoom, and Pan.", "20px Helvetica", "white")
+help.x = 140; help.y = 100
+viz.stage.addChild(help)
 
-box1 = new visual.Box(5.0, 0.1, 5.0, 0x00FF00);
-box1.mesh.position.set(0, -2, 0);
-viz.scene.add(box1.mesh);
+box1 = new visual.Box(5.0, 0.1, 5.0, 0x00FF00)
+box1.mesh.position.set(0, -2, 0)
+viz.scene.add(box1.mesh)
 
 arrow = new visual.Arrow(4.0, 0xFFFF00);
 viz.scene.add(arrow.mesh);
@@ -39,7 +39,7 @@ B = B / B.norm();
 
 setUp = () -> viz.setUp()
 
-tick = (time: number) ->
+tick = (time) ->
     theta = omega * time;
     s = new blade.Euclidean3(Math.cos(theta/2), 0, 0, 0, 0, 0, 0, 0);
     rotor = s - B * Math.sin(theta/2);
@@ -51,9 +51,9 @@ tick = (time: number) ->
 
     viz.update()
 
-terminate = (time: number) -> false
+terminate = (time) -> false
 
-tearDown = (e: Error) ->
+tearDown = (e) ->
   viz.tearDown()
   popUp.close()
 
