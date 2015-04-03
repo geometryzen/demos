@@ -6,11 +6,11 @@ popUp.document.title = "Visualizing Geometric Algebra with WebGL";
 
 var viz = new visual.Visual(popUp);
 
-var title = new createjs.Text(popUp.document.title, "20px Helvetica", "white");
+var title = new createjs.Text(popUp.document.title, "24px Helvetica", "white");
 title.x = 100; title.y = 60;
 viz.stage.addChild(title);
-var help = new createjs.Text("Hit Esc key to exit. Mouse to Rotate, Zoom, and Pan.", "16px Helvetica", "white");
-help.x = 100; help.y = 80;
+var help = new createjs.Text("Hit Esc key to exit. Mouse to Rotate, Zoom, and Pan.", "20px Helvetica", "white");
+help.x = 100; help.y = 100;
 viz.stage.addChild(help);
 
 var mono = new visual.Box(5.0, 0.1, 5.0, 0x00FF00);
