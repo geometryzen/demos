@@ -43,12 +43,10 @@ tick = (time) ->
     theta = omega * time
     s = new blade.Euclidean3(Math.cos(theta/2), 0, 0, 0, 0, 0, 0, 0)
     rotor = s - B * Math.sin(theta/2)
-
     arrow.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     box2.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     box3.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     vortex.mesh.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
-
     viz.update()
 
 terminate = (time) -> false
