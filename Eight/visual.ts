@@ -59,7 +59,7 @@ class Visual
     this.space2D = new createjs.Stage(this.canvas2D, "", {});
     this.space2D.autoClear = true;
 
-//    this.controls.rotateSpeed = 1.0;
+    this.controls.rotateSpeed = 1.0;
 //    this.controls.zoomSpeed = 1.2;
 //    this.controls.panSpeed = 0.8;
 
