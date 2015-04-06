@@ -41,7 +41,7 @@ sphere.position.set(0,3,4);
 viz.scene.add(sphere);
 
 var ball = new visual.Sphere({radius:0.4, color:0x0000FF});
-ball.position.set(0,3,4);
+ball.position.set(0,2,2);
 viz.scene.add(ball);
 
 var tau = 2 * Math.PI;
