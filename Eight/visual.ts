@@ -51,12 +51,10 @@ function tick(time: number) {
     var s: any = new blade.Euclidean3(Math.cos(theta/2), 0, 0, 0, 0, 0, 0, 0);
     var rotor: any = s - B * Math.sin(theta/2);
 
-    arrow.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+    arrow.attitude = rotor;
     box2.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
     box3.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
-    vortex.attitude = rotor;
-    sphere.attitude = vortex.attitude;
-    sphere.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
+    vortex.attitude = arrow.attitude;
 
     viz.update();
 }
