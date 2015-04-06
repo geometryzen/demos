@@ -53,8 +53,8 @@ function tick(time: number) {
 
     arrow.attitude = rotor;
     box2.attitude = rotor;
-    box3.attitude = rotor;
-    vortex.attitude = arrow.attitude;
+//  box3.attitude = rotor;
+//  vortex.attitude = arrow.attitude;
 
     viz.update();
 }
