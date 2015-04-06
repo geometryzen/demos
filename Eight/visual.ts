@@ -58,7 +58,6 @@ function tick(time: number) {
     vortex.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
     sphere.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
 
-    t.update();
     viz.update();
 }
 
