@@ -55,7 +55,7 @@ function tick(time: number) {
     box2.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
     box3.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
     vortex.attitude = rotor;
-    sphere.attitude = vortex.attitude;
+//  sphere.attitude = vortex.attitude;
     sphere.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w);
 
     viz.update();
