@@ -33,7 +33,7 @@ viz.scene.add(vortex)
 var box3 = new visual.Box(10.0,10.0,0.1, 0x0000FF, 0.25, true);
 viz.scene.add(box3);
 
-var sphere = new visual.Sphere({radius:0.4});
+var sphere = new visual.Sphere({radiuXs:0.4});
 sphere.position.set(0,3,4);
 viz.scene.add(sphere);
 
