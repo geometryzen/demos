@@ -2,7 +2,7 @@
 /**
  * Computes the universal exponential function.
  */
-var exp = function(x: any): any {
+function exp(x: any): any {
   if (typeof x === 'number') {
     return Math.exp(x);
   }
