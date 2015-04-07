@@ -74,7 +74,7 @@ function tick(time: number) {
     var R = exp(+x);
     var S = exp(-x);
 
-    var r: any = R * e2 * S;
+    var r: any = R * e1 * S;
 
     ball.position.set(r.x, r.y, r.z);
     arrow.attitude = R;
