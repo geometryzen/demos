@@ -62,15 +62,13 @@ viz.scene.add(ball);
 var e1: any = vz.vectorE3(1, 0, 0);
 var e2: any = vz.vectorE3(0, 1, 0);
 var e3: any = vz.vectorE3(0, 0, 1);
-var tau: any = vz.scalarE3(2 * Math.PI);
-var omega = (tau / 20);
-var B: any = e3 ^ e1;
+var tau = 2 * Math.PI;
+var omega = (tau / 20) * e3 ^ e1;
 
 function setUp() { viz.setUp(); }
 
 function tick(time: number) {
-    var theta = omega * time;
-    var x = - B * theta / 2;
+    var x = - omega * time / 2;
     var R = exp(+x);
     var S = exp(-x);
 
