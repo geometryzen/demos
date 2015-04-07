@@ -71,15 +71,15 @@ function setUp() { viz.setUp(); }
 function tick(time: number) {
     var theta = omega * time;
     var x = - B * theta / 2;
-//  var rotor: any = Math.cos(theta/2) - B * Math.sin(theta/2);
-    var rotor = exp(x);
+    var R = exp(+x);
+    var S = exp(-x);
     var r = e2;
 
     ball.position.set(r.x, r.y, r.z);
-    arrow.attitude = rotor;
-    box2.attitude = rotor;
-    box3.attitude = rotor;
-    vortex.attitude = rotor;
+    arrow.attitude = R;
+    box2.attitude = R;
+    box3.attitude = R;
+    vortex.attitude = R;
 
     viz.update();
 }
