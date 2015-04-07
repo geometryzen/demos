@@ -3,6 +3,11 @@ var exp = function(x: any) {
   if (typeof x === 'number') {
     return Math.exp(x);
   }
+  else if (x instanceof blade.Euclidean3) {
+    var angle = x.norm();
+    var B = x / angle;
+    return Math.cos(angle) + B * Math.sin(angle);
+  }
 }
 
 var popUp: Window = window.open("","","width=1200,height=800");
