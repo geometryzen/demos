@@ -6,9 +6,9 @@ popUp.document.title = "Visualizing Geometric Algebra with WebGL";
 
 var w: any = window;
 w.Sk.output("visual.VERSION: " + visual.VERSION + "\n");
-var v = visual;
+var vz = visual;
 
-var viz = new v.Visual(popUp);
+var viz = new vz.Visual(popUp);
 
 var title = new createjs.Text(popUp.document.title, "24px Helvetica", "white");
 title.x = 100; title.y = 60;
@@ -56,9 +56,9 @@ function setUp() { viz.setUp(); }
 
 function tick(time: number) {
     var theta = omega * time;
-    var e1 = visual.vector(1, 0, 0);
-    var e2 = visual.vector(0, 1, 0);
-    var e3 = visual.vector(0, 0, 1);
+    var e1 = vz.vector(1, 0, 0);
+    var e2 = vz.vector(0, 1, 0);
+    var e3 = vz.vector(0, 0, 1);
     var s: any = new blade.Euclidean3(Math.cos(theta/2), 0, 0, 0, 0, 0, 0, 0);
     var rotor: any = s - B * Math.sin(theta/2);
 
