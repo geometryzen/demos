@@ -54,6 +54,7 @@ var omega = (tau / 20);
 var B = e3 ^ e1;
 // Just make sure that we really do have a unit bivector.
 B = B / B.norm();
+Sk.output(B + "\n");
 
 function setUp() { viz.setUp(); }
 
