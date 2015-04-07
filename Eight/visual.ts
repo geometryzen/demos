@@ -45,10 +45,13 @@ var ball = new visual.Sphere({radius:0.4},{color:0x0000FF});
 ball.position.set(0,2,2);
 viz.scene.add(ball);
 
+var e1 = vz.vector(1, 0, 0);
+var e2 = vz.vector(0, 1, 0);
+var e3 = vz.vector(0, 0, 1);
 var tau = 2 * Math.PI;
 var omega = (tau / 20);
 // A unit bivector rotating from k to i
-var B: any = new blade.Euclidean3(0, 0, 0, 0, 0, 0, 1, 0);
+var B: any = e3 ^ e1;
 // Just make sure that we really do have a unit bivector.
 B = B / B.norm();
 
@@ -56,9 +59,6 @@ function setUp() { viz.setUp(); }
 
 function tick(time: number) {
     var theta = omega * time;
-    var e1 = vz.vector(1, 0, 0);
-    var e2 = vz.vector(0, 1, 0);
-    var e3 = vz.vector(0, 0, 1);
     var s: any = new blade.Euclidean3(Math.cos(theta/2), 0, 0, 0, 0, 0, 0, 0);
     var rotor: any = s - B * Math.sin(theta/2);
 
