@@ -13,8 +13,6 @@ function exp(x: any): any {
   }
 }
 
-var TAU = 2 * Math.PI;
-
 var popUp: Window = window.open("","","width=1200,height=800");
 popUp.document.body.style.backgroundColor = "080808";
 popUp.document.body.style.overflow = "hidden";
@@ -64,7 +62,8 @@ viz.scene.add(ball);
 var e1: any = vz.vectorE3(1, 0, 0);
 var e2: any = vz.vectorE3(0, 1, 0);
 var e3: any = vz.vectorE3(0, 0, 1);
-var omega = (TAU / 20) * e3 ^ e1;
+var frequency = 1/20;
+var omega = (2 * Math.PI * frequency) * e3 ^ e1;
 
 function setUp() { viz.setUp(); }
 
