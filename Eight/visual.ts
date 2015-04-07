@@ -52,7 +52,7 @@ ball.position.set(0,2,2);
 viz.scene.add(ball);
 
 var e1: any = vz.vector(1, 0, 0);
-var e2 = vz.vector(0, 1, 0);
+var e2: any = vz.vector(0, 1, 0);
 var e3: any = vz.vector(0, 0, 1);
 var tau = 2 * Math.PI;
 var omega = (tau / 20);
