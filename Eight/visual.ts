@@ -51,7 +51,7 @@ var e3 = vz.vector(0, 0, 1);
 var tau = 2 * Math.PI;
 var omega = (tau / 20);
 // A unit bivector rotating from k to i
-var B = e3 ^ e1;
+var B = e1 ^ e3;
 // Just make sure that we really do have a unit bivector.
 B = B / B.norm();
 Sk.output(B + "\n");
