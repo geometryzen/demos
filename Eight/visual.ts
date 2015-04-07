@@ -70,7 +70,7 @@ function setUp() { viz.setUp(); }
 
 function tick(time: number) {
     var theta = omega * time;
-    var x = B * theta / 2;
+    var x = - B * theta / 2;
 //  var rotor: any = Math.cos(theta/2) - B * Math.sin(theta/2);
     var rotor = exp(x);
     var r = e2;
