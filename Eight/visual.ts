@@ -1,4 +1,10 @@
 // This program is under development.
+var exp = function(x: any) {
+  if (typeof x === 'number') {
+    return Math.exp(x);
+  }
+}
+
 var popUp: Window = window.open("","","width=1200,height=800");
 popUp.document.body.style.backgroundColor = "080808";
 popUp.document.body.style.overflow = "hidden";
@@ -45,12 +51,12 @@ var ball = new visual.Sphere({radius:0.4},{color:0x0000FF});
 ball.position.set(0,2,2);
 viz.scene.add(ball);
 
-var e1 = vz.vector(1, 0, 0);
+var e1: any = vz.vector(1, 0, 0);
 var e2 = vz.vector(0, 1, 0);
-var e3 = vz.vector(0, 0, 1);
+var e3: any = vz.vector(0, 0, 1);
 var tau = 2 * Math.PI;
 var omega = (tau / 20);
-var B = e3 ^ e1;
+var B: any = e3 ^ e1;
 
 function setUp() { viz.setUp(); }
 
