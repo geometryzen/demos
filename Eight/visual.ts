@@ -65,7 +65,6 @@ var e3: any = vz.vector(0, 0, 1);
 var tau = 2 * Math.PI;
 var omega = (tau / 20);
 var B: any = e3 ^ e1;
-var c = new blade.Euclidean3(0,0,0,0,0,0,0,0);
 
 function setUp() { viz.setUp(); }
 
