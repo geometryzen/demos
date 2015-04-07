@@ -63,6 +63,7 @@ function setUp() { viz.setUp(); }
 function tick(time: number) {
     var theta = omega * time;
     var rotor: any = Math.cos(theta/2) - B * Math.sin(theta/2);
+    Sk.output(B.norm() + "\n");
 
     var r = e2;
 
