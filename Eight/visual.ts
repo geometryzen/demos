@@ -50,17 +50,13 @@ var e2 = vz.vector(0, 1, 0);
 var e3 = vz.vector(0, 0, 1);
 var tau = 2 * Math.PI;
 var omega = (tau / 20);
-// A unit bivector rotating from k to i
 var B = e3 ^ e1;
-// Just make sure that we really do have a unit bivector.
-B = B / B.norm();
-//Sk.output(B + "\n");
 
 function setUp() { viz.setUp(); }
 
 function tick(time: number) {
     var theta = omega * time;
-    var rotor = Math.cos(theta/2) - B * Math.sin(theta/2);
+    var rotor: any = Math.cos(theta/2) - B * Math.sin(theta/2);
 
     var r = e2;
 
