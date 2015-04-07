@@ -68,9 +68,10 @@ var omega = (tau / 20) * e3 ^ e1;
 function setUp() { viz.setUp(); }
 
 function tick(time: number) {
-    var x = - omega * time / 2;
-    var R = exp(+x);
-    var S = exp(-x);
+    var theta = omega * time
+    var x = theta / 2;
+    var R = exp(-x);
+    var S = exp(+x);
 
     var r: any = R * 4 * e3 * S;
     ball.pos = r;
