@@ -63,7 +63,7 @@ var e1: any = vz.vectorE3(1, 0, 0);
 var e2: any = vz.vectorE3(0, 1, 0);
 var e3: any = vz.vectorE3(0, 0, 1);
 var frequency = 1/20;
-var omega = (2 * Math.PI * frequency) * e3 ^ e1;
+var omega = 2 * Math.PI * frequency * e3 ^ e1;
 
 function setUp() { viz.setUp(); }
 
