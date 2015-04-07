@@ -16,7 +16,7 @@ function exp(x: any): any {
 var popUp: Window = window.open("","","width=1200,height=800");
 popUp.document.body.style.backgroundColor = "080808";
 popUp.document.body.style.overflow = "hidden";
-popUp.document.title = "Visualizing Geometric Algebra with WebGL";
+popUp.document.title = "Geometry Zen";
 
 var w: any = window;
 w.Sk.output("visual.VERSION: " + visual.VERSION + "\n");
@@ -24,7 +24,7 @@ var vz = visual;
 
 var viz = new vz.Visual(popUp);
 
-var title = new createjs.Text("Welcome to Geometry Zen!", "24px Helvetica", "white");
+var title = new createjs.Text("Visualizing Geometric Algebra with WebGL", "24px Helvetica", "white");
 title.x = 100; title.y = 60;
 viz.stage.addChild(title);
 var help = new createjs.Text("Hit Esc key to exit. Mouse to Rotate, Zoom, and Pan.", "20px Helvetica", "white");
