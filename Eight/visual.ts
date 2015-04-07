@@ -62,7 +62,7 @@ function tick(time: number) {
     var s: any = new blade.Euclidean3(Math.cos(theta/2), 0, 0, 0, 0, 0, 0, 0);
     var rotor: any = s - B * Math.sin(theta/2);
 
-    var r = e1;
+    var r = e2;
 
     ball.position.set(r.x, r.y, r.z);
     arrow.attitude = rotor;
