@@ -24,7 +24,7 @@ var vz = visual;
 
 var viz = new vz.Visual(popUp);
 
-var title = new createjs.Text(popUp.document.title, "24px Helvetica", "white");
+var title = new createjs.Text("Welcome to Geometry Zen!", "24px Helvetica", "white");
 title.x = 100; title.y = 60;
 viz.stage.addChild(title);
 var help = new createjs.Text("Hit Esc key to exit. Mouse to Rotate, Zoom, and Pan.", "20px Helvetica", "white");
