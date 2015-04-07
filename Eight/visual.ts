@@ -66,8 +66,8 @@ function tick(time: number) {
     ball.position.set(r.x, r.y, r.z);
     arrow.attitude = rotor;
     box2.attitude = rotor;
-//  box3.attitude = rotor;
-//  vortex.attitude = arrow.attitude;
+    box3.attitude = rotor;
+    vortex.attitude = rotor;
 
     viz.update();
 }
