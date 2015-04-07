@@ -56,9 +56,9 @@ function setUp() { viz.setUp(); }
 
 function tick(time: number) {
     var theta = omega * time;
-    var e1 = new blade.Euclidean3(0,1,0,0,0,0,0,0);
-    var e2 = new blade.Euclidean3(0,0,1,0,0,0,0,0);
-    var e3 = new blade.Euclidean3(0,0,0,1,0,0,0,0);
+    var e1 = visual.vector(1, 0, 0);
+    var e2 = visual.vector(0, 1, 0);
+    var e3 = visual.vector(0, 0, 1);
     var s: any = new blade.Euclidean3(Math.cos(theta/2), 0, 0, 0, 0, 0, 0, 0);
     var rotor: any = s - B * Math.sin(theta/2);
 
