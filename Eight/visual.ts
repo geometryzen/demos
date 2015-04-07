@@ -62,6 +62,7 @@ function tick(time: number) {
     var theta = omega * time;
     var s = new blade.Euclidean3(Math.cos(theta/2), 0, 0, 0, 0, 0, 0, 0);
     var rotor = s - B * Math.sin(theta/2);
+Sk.output(rotor + "\n");
 
     var r = e2;
 
