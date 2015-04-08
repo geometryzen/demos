@@ -35,10 +35,10 @@ var box1 = new visual.Box(5.0, 0.1, 5.0, 0x00FF00);
 box1.position.set(0, -2, 0);
 viz.scene.add(box1);
 
-var arrow = new visual.Arrow({scale: 4.0, color: 0xFF0000});
+var arrow = new visual.Arrow({scale: 4.0, color: 0xFFFF00});
 viz.scene.add(arrow);
 
-var arrow2 = new visual.Arrow({scale: 4.0, color: 0x00FF00});
+var arrow2 = new visual.Arrow({scale: 4.0, color: 0x000000});
 viz.scene.add(arrow2);
 
 var box2 = new visual.Box(1.0, 2.0, 3.0, 0xFF0000, 0.25, false);
