@@ -46,7 +46,7 @@ tick = (time) ->
     arrow.attitude = rotor
     box2.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
     box3.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
-    vortex.quaternion.set(-rotor.yz, -rotor.zx, -rotor.xy, rotor.w)
+    vortex.attitude = rotor
     viz.update()
 
 terminate = (time) -> false
