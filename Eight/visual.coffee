@@ -27,7 +27,7 @@ box2.position.set(3,-3,3)
 vortex = new visual.Vortex(1.0, 0x00FFFF, 0.3)
 viz.scene.add(vortex)
 
-box3 = new visual.Box(10.0,10.0,0.1, 0x0000FF, 0.25, true)
+box3 = new visual.Box(8.0, 8.0, 0.1, 0x0000FF, 0.25, true)
 viz.scene.add(box3)
 
 tau = 2 * Math.PI
