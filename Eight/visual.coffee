@@ -17,7 +17,7 @@ box1 = new visual.Box(3.0, 0.1, 5.0, 0x00FF00)
 box1.position.set(0, -2, 0)
 viz.scene.add(box1)
 
-arrow = new visual.Arrow(scale: 1.0, axis: {x:1, y:0, z:0}, color: 0xFFFF00)
+arrow = new visual.Arrow(scale: 1.0, axis: {x:1, y:0, z:0}, color: 0xFFFF00, 0.25, true)
 viz.scene.add(arrow)
 
 box2 = new visual.Box(1.0, 2.0, 3.0, 0xFF0000, 0.25, false)
