@@ -24,12 +24,14 @@ var vz = visual;
 
 var viz = new vz.Visual(popUp);
 
+
 var title = new createjs.Text("Visualizing Geometric Algebra with WebGL", "24px Helvetica", "white");
 title.x = 100; title.y = 60;
 viz.stage.addChild(title);
 var help = new createjs.Text("Hit Esc key to exit. Mouse to Rotate, Zoom, and Pan.", "20px Helvetica", "white");
 help.x = 140; help.y = 100;
 viz.stage.addChild(help);
+
 
 var box1 = new visual.Box(1.0, 0.02, 1.0, 0x00FF00);
 box1.position.set(0, -2, 0);
@@ -79,6 +81,8 @@ function tick(time: number) {
     box2.attitude = R;
     box3.attitude = R;
     vortex.attitude = R;
+    
+    help.text = viz.camera.position + "";
 
     viz.update();
 }
