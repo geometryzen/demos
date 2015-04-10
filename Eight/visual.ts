@@ -35,7 +35,7 @@ var box1 = new visual.Box(5.0, 0.1, 5.0, 0x00FF00);
 box1.position.set(0, -2, 0);
 viz.scene.add(box1);
 
-var arrow = new visual.Arrow({scale: 4.0, color: 0xFFFF00});
+var arrow = new visual.Arrow({scale: 1.0, color: 0xFFFF00});
 viz.scene.add(arrow);
 
 var arrow2 = new visual.Arrow({scale: 1.0});
