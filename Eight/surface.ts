@@ -9,7 +9,6 @@ var vz = visual;
 
 var viz = new vz.Visual(popUp);
 
-
 var title = new createjs.Text("Visualizing Geometric Algebra with WebGL", "24px Helvetica", "white");
 title.x = 100; title.y = 60;
 viz.stage.addChild(title);
@@ -25,16 +24,9 @@ var g = new THREE.ParametricGeometry(point, 10, 10);
 var s = new visual.VisualElement(g, 0xFFFFFF, 1.0, false);
 viz.scene.add(s);
 
-var e1: any = vz.vectorE3(1, 0, 0);
-var e2: any = vz.vectorE3(0, 1, 0);
-var e3: any = vz.vectorE3(0, 0, 1);
-var frequency = 1/20;
-var omega = 2 * Math.PI * frequency * e3 ^ e1;
-
 function setUp() { viz.setUp(); }
 
 function tick(time: number) {
-    var theta = omega * time
 
     help.text = viz.camera.position.x + ", " + viz.camera.position.y;
 
