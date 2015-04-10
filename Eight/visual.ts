@@ -57,7 +57,7 @@ var sphere = new visual.Sphere({radius:0.4});
 sphere.position.set(0,1.5,2);
 viz.scene.add(sphere);
 
-var ball = new visual.Sphere({radius:0.4,color:0x0000FF});
+var ball = new visual.Sphere({radius:0.4, color:0x0000FF});
 ball.position.set(0,1,1);
 viz.scene.add(ball);
 
