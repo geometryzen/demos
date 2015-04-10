@@ -13,7 +13,7 @@ help = new createjs.Text("Hit Esc key to exit. Mouse to Rotate, Zoom, and Pan.",
 help.x = 140; help.y = 100
 viz.stage.addChild(help)
 
-box1 = new visual.Box(3.0, 0.1, 5.0, 0x00FF00)
+box1 = new visual.Box({width:3.0, height:0.1, depth:5.0, color:0x00FF00})
 box1.position.set(0, -2, 0)
 viz.scene.add(box1)
 
