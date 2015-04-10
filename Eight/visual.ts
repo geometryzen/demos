@@ -33,7 +33,7 @@ help.x = 140; help.y = 100;
 viz.stage.addChild(help);
 
 
-var box1 = new visual.Box(1.0, 0.02, 1.0, 0x00FF00);
+var box1 = new visual.Box({height:0.02, color:0x00FF00});
 box1.position.set(0, -2, 0);
 viz.scene.add(box1);
 
@@ -43,14 +43,14 @@ viz.scene.add(arrow);
 var arrow2 = new visual.Arrow();
 viz.scene.add(arrow2);
 
-var box2 = new visual.Box(1.0, 1.0, 1.0, 0xFF0000, 0.25, false);
+var box2 = new visual.Box({color:0xFF0000, opacity:0.25});
 viz.scene.add(box2);
 box2.position.set(3,-3,3);
 
 var vortex = new visual.Vortex();
 viz.scene.add(vortex)
 
-var box3 = new visual.Box(1.0,1.0,0.1, 0x0000FF, 0.25, true);
+var box3 = new visual.Box({depth:0.1, color:0x0000FF, opacity:0.25, transparent:true});
 viz.scene.add(box3);
 
 var sphere = new visual.Sphere({radius:0.4});
