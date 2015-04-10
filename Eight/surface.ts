@@ -21,7 +21,8 @@ function point(u: number, v: number): THREE.Vector3 {
 }
 
 var g = new THREE.ParametricGeometry(point, 10, 10);
-var s = new visual.VisualElement(g, 0xFFFFFF, 1.0, false);
+var m = new THREE.MeshLambertMaterial();
+var s = new visual.Mesh(g, m);
 viz.scene.add(s);
 
 function setUp() { viz.setUp(); }
