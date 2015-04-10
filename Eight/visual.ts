@@ -38,7 +38,7 @@ viz.scene.add(box1);
 var arrow = new visual.Arrow({scale: 4.0, color: 0xFFFF00});
 viz.scene.add(arrow);
 
-var arrow2 = new visual.Arrow({scale: 4.0});
+var arrow2 = new visual.Arrow({scale: 1.0});
 viz.scene.add(arrow2);
 
 var box2 = new visual.Box(1.0, 2.0, 3.0, 0xFF0000, 0.25, false);
