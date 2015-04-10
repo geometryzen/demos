@@ -45,7 +45,7 @@ var box2 = new visual.Box(1.0, 1.0, 1.0, 0xFF0000, 0.25, false);
 viz.scene.add(box2);
 box2.position.set(3,-3,3);
 
-var vortex = new visual.Vortex(4.0, 0x00FFFF, 0.3);
+var vortex = new visual.Vortex();
 viz.scene.add(vortex)
 
 var box3 = new visual.Box(1.0,1.0,0.1, 0x0000FF, 0.25, true);
