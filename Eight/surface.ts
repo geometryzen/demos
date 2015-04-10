@@ -17,8 +17,7 @@ var help = new createjs.Text("Hit Esc key to exit. Mouse to Rotate, Zoom, and Pa
 help.x = 140; help.y = 100;
 viz.stage.addChild(help);
 
-function point(u: number, v: number): THREE.Vector3
-{
+function point(u: number, v: number): THREE.Vector3 {
     return new THREE.Vector3(u,v,u*v);
 }
 
