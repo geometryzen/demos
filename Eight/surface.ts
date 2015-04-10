@@ -30,8 +30,6 @@ function setUp() { viz.setUp(); }
 
 function tick(time: number) {
 
-    help.text = viz.camera.position.x + ", " + viz.camera.position.y;
-
     viz.update();
 }
 
