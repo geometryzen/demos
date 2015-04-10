@@ -21,7 +21,19 @@ function point(u: number, v: number): THREE.Vector3 {
 }
 
 var g = new THREE.ParametricGeometry(point, 10, 10);
-var m = new THREE.MeshLambertMaterial();
+var m = new THREE.ShaderMaterial( {
+
+	uniforms: {
+		time: { type: "f", value: 1.0 },
+		resolution: { type: "v2", value: new THREE.Vector2() }
+	},
+	attributes: {
+		vertexOpacity: { type: 'f', value: [] }
+	},
+	vertexShader: document.getElementById( 'vertexShader' ).textContent,
+	fragmentShader: document.getElementById( 'fragmentShader' ).textContent
+
+} );
 var s = new visual.Mesh(g, m);
 viz.scene.add(s);
 
