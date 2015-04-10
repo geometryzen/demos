@@ -54,11 +54,11 @@ var box3 = new visual.Box({depth:0.1, color:0x0000FF, opacity:0.25, transparent:
 viz.scene.add(box3);
 
 var sphere = new visual.Sphere({radius:0.4});
-sphere.position.set(0,3,4);
+sphere.position.set(0,1.5,2);
 viz.scene.add(sphere);
 
 var ball = new visual.Sphere({radius:0.4,color:0x0000FF});
-ball.position.set(0,2,2);
+ball.position.set(0,1,1);
 viz.scene.add(ball);
 
 var e1: any = vz.vectorE3(1, 0, 0);
