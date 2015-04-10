@@ -17,34 +17,14 @@ var help = new createjs.Text("Hit Esc key to exit. Mouse to Rotate, Zoom, and Pa
 help.x = 140; help.y = 100;
 viz.stage.addChild(help);
 
+function point(u: number, v: number): THREE.Vector3
+{
+    return new THREE.Vector3(u,v,u*v);
+}
 
-var box1 = new visual.Box({height:0.02, color:0x00FF00});
-box1.position.set(0, -2, 0);
-viz.scene.add(box1);
-
-var arrow = new visual.Arrow({scale: 1.0, color: 0xFFFF00});
-viz.scene.add(arrow);
-
-var arrow2 = new visual.Arrow();
-viz.scene.add(arrow2);
-
-var box2 = new visual.Box({color:0xFF0000, opacity:0.25});
-viz.scene.add(box2);
-box2.position.set(2,-2,2);
-
-var vortex = new visual.Vortex();
-viz.scene.add(vortex)
-
-var box3 = new visual.Box({depth:0.1, color:0x0000FF, opacity:0.25, transparent:true});
-viz.scene.add(box3);
-
-var sphere = new visual.Sphere({radius:0.4});
-sphere.position.set(0,1.5,2);
-viz.scene.add(sphere);
-
-var ball = new visual.Sphere({radius:0.4, color:0x0000FF});
-ball.position.set(0,1,1);
-viz.scene.add(ball);
+var g = new THREE.ParametricGeometry(point, 10, 10);
+var s = new visual.VisualElement(g, 0xFFFFFF, 1.0, false);
+viz.scene.add(s);
 
 var e1: any = vz.vectorE3(1, 0, 0);
 var e2: any = vz.vectorE3(0, 1, 0);
