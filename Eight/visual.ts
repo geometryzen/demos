@@ -82,7 +82,7 @@ function tick(time: number) {
     box3.attitude = R;
     vortex.attitude = R;
     
-    help.text = viz.camera.position + "";
+    help.text = viz.camera.position.x + "";
 
     viz.update();
 }
