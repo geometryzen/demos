@@ -1,4 +1,4 @@
-width = Math.max(960, window.innerWidth)
+width = Math.max 960, window.innerWidth
 height = Math.max(500, window.innerHeight)
 x1 = width / 2
 y1 = height / 2
