@@ -22,7 +22,7 @@ move = (data: any, index: number) ->
 
 canvas.on("mousemove", move)
 
-element: any = canvas.node();
+element = canvas.node();
 elemCanvas = element;
 
 workbench = new visual.Workbench2D(elemCanvas, window)
