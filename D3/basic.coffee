@@ -28,7 +28,7 @@ elemCanvas = element
 workbench = new visual.Workbench2D(elemCanvas, window)
 
 context = elemCanvas.getContext("2d")
-context.localCompositionOperation = "lighter"
+context.globalCompositeOperation = "lighter"
 context.lineWidth = 2
 
 setUp = () -> workbench.setUp()
