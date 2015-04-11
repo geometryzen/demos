@@ -22,13 +22,13 @@ move = (data, index) ->
 
 canvas.on("mousemove", move)
 
-element = canvas.node();
-elemCanvas = element;
+element = canvas.node()
+elemCanvas = element
 
 workbench = new visual.Workbench2D(elemCanvas, window)
 
 context = elemCanvas.getContext("2d")
-context.lobalCompositionOperation = "lighter"
+context.localCompositionOperation = "lighter"
 context.lineWidth = 2
 
 setUp = () -> workbench.setUp()
