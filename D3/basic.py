@@ -32,7 +32,7 @@ canvas.on("mousemove", move)
 workbench = Workbench2D(canvas.node())
 
 context = canvas.node().getContext("2d")
-context.globalCompositionOperation = "lighter"
+context.globalCompositeOperation = "lighter"
 context.lineWidth = 2
 
 def setUp():
