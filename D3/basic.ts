@@ -64,7 +64,7 @@ class Workbench2D
 var element: any = canvas.node();
 var elemCanvas = element;
 
-var workbench = new Workbench2D(elemCanvas)
+var workbench = new visual.Workbench2D(elemCanvas, window)
 
 var context = elemCanvas.getContext("2d")
 context.lobalCompositionOperation = "lighter"
