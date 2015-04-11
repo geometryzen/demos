@@ -29,7 +29,7 @@ var elemCanvas = element;
 var workbench = new visual.Workbench2D(elemCanvas, window)
 
 var context = elemCanvas.getContext("2d")
-context.lobalCompositionOperation = "lighter"
+context.globalCompositionOperation = "lighter"
 context.lineWidth = 2
 
 function setUp() {
