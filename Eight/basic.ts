@@ -31,8 +31,8 @@ function setUp() {
   monitor.start();
 }
 
-var B: any = eight.bivectorE3(0,1,1);
-B = B.div(B.norm())
+var B = eight.bivectorE3(0,1,1);
+B = B / B.norm()
 var angle: number = 0;
 
 var w: any = window
@@ -51,9 +51,9 @@ function tick(time: number) {
   stats.begin();
   // We have to sprinkle in some 'any' to stop TypeScript from complaining!
   var halfAngle = angle/2;
-  var c: any = eight.scalarE3(Math.cos(halfAngle));
-  var s: any = eight.scalarE3(Math.sin(halfAngle));
-  var R: any = c - B * s;
+  var c = eight.scalarE3(Math.cos(halfAngle));
+  var s = eight.scalarE3(Math.sin(halfAngle));
+  var R = c - B * s;
   box.attitude = R;
   prism.attitude = R;
 
