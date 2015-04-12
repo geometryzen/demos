@@ -2,15 +2,11 @@
 /**
  * Computes the universal exponential function.
  */
-function exp(x: any): any {
-  if (typeof x === 'number') {
-    return Math.exp(x);
-  }
-  else if (x instanceof blade.Euclidean3) {
-    var angle = x.norm();
+function exp(x: blade.Euclidean3): blade.Euclidean3 {
+    // Really? norm yields a Euclidean3?
+    var angle = x.norm().w;
     var B = x / angle;
     return Math.cos(angle) + B * Math.sin(angle);
-  }
 }
 
 var popUp: Window = window.open("","","width=1200,height=800");
@@ -61,9 +57,9 @@ var ball = new visual.Sphere({radius:0.4, color:0x0000FF});
 ball.position.set(0,1,1);
 viz.scene.add(ball);
 
-var e1: any = vz.vectorE3(1, 0, 0);
-var e2: any = vz.vectorE3(0, 1, 0);
-var e3: any = vz.vectorE3(0, 0, 1);
+var e1 = vz.vectorE3(1, 0, 0);
+var e2 = vz.vectorE3(0, 1, 0);
+var e3 = vz.vectorE3(0, 0, 1);
 var frequency = 1/20;
 var omega = 2 * Math.PI * frequency * e3 ^ e1;
 
