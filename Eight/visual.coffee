@@ -20,7 +20,7 @@ viz.scene.add(box1)
 arrow = new visual.Arrow({axis: {x:0, y:0, z:1}, color: 0xFFFF00, opacity:0.25, transparent:true})
 viz.scene.add(arrow)
 
-box2 = new visual.Box({height:2.0, depth:3.0, color:0xFF0000, opacity:0.25})
+box2 = new visual.Box({height:0.5, depth:0.75, color:0xFF0000, opacity:0.25})
 viz.scene.add(box2)
 box2.position.set(1,-1,1)
 
