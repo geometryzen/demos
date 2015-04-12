@@ -24,7 +24,7 @@ box2 = new visual.Box({height:2.0, depth:3.0, color:0xFF0000, opacity:0.25})
 viz.scene.add(box2)
 box2.position.set(3,-3,3)
 
-vortex = new visual.Vortex(color: 0x0000FF, opacity:0.25, transparent: true)
+vortex = new visual.Vortex(color: 0x0000FF, opacity:1.0, transparent: false)
 viz.scene.add(vortex)
 
 box3 = new visual.Box(width:2.0, height:2.0, depth:0.05, color:0x0000FF, opacity:0.25, transparent:true)
