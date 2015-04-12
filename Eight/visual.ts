@@ -1,6 +1,6 @@
 // This program is under development.
 /**
- * Computes the universal exponential function.
+ * Computes the exponential function for a bivector argument.
  */
 function exp(x: blade.Euclidean3): blade.Euclidean3 {
     // Really? norm yields a Euclidean3?
