@@ -1,4 +1,3 @@
-// This program is under development.
 /**
  * Computes the exponential function for a bivector argument.
  */
