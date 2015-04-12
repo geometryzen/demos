@@ -25,7 +25,7 @@ def tick(t):
     space.render()
     
 def terminate(t):
-    return t > 5
+    return t > 10
 
 def tearDown(e):
     workbench.tearDown();
