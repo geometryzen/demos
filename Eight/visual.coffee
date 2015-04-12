@@ -41,8 +41,7 @@ setUp = () -> viz.setUp()
 
 tick = (time) ->
     theta = omega * time
-    s = new blade.Euclidean3(Math.cos(theta/2), 0, 0, 0, 0, 0, 0, 0)
-    rotor = s - B * Math.sin(theta/2)
+    rotor = Math.cos(theta/2) - B * Math.sin(theta/2)
     arrow.attitude = rotor
     box2.attitude = rotor
     box3.attitude = rotor
