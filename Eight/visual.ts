@@ -88,9 +88,8 @@ function setUp() { viz.setUp(); }
 function tick(time: number) {
     var theta = omega * time
     var x = theta / 2;
-    // TODO: unary operators.
-    var R = exp(0-x);
-    var S = exp(0+x);
+    var R = exp(-x);
+    var S = exp(+x);
 
     var r = R * e3 * S;
     ball.pos = r;
