@@ -3,6 +3,7 @@
  * Constructs a vector from the specified Cartesian components.
  */
 var vector: (x: number, y: number, z:  number)=>blade.Euclidean3 = visual.vectorE3;
+var kg = blade.UNIT_KILOGRAM;
 /**
  * The unit vector in the x-direction.
  */
@@ -48,8 +49,8 @@ viz.stage.addChild(help);
 
 var box1 = new visual.Box({height:0.02, color:0x00FF00});
 box1.position.set(0, -2, 0);
-box1['mass'] = 60;
-w.Sk.output(box1.mass+"\n");
+box1['mass'] = 60 * kg;
+w.Sk.output(box1['mass']+"\n");
 viz.scene.add(box1);
 
 var arrow = new visual.Arrow({scale: 1.0, color: 0xFFFF00});
