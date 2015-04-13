@@ -28,7 +28,7 @@ function run() {
         sumdist += dist
         t.home()
     }
-    w.Sk.output(sumdist/walkCount);
+    w.Sk.output(sumdist/walkCount+"\n");
     board.unsuspendUpdate()
 }
 run()
