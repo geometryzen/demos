@@ -48,7 +48,7 @@ viz.stage.addChild(help);
 
 var box1 = new visual.Box({height:0.02, color:0x00FF00});
 box1.position.set(0, -2, 0);
-box1['mass'] = 6;
+box1['mass'] = 60;
 w.Sk.output(box1.mass+"\n");
 viz.scene.add(box1);
 
