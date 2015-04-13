@@ -29,7 +29,6 @@ var help = new createjs.Text("Hit Esc key to exit. Mouse to Rotate, Zoom, and Pa
 help.x = 140; help.y = 100;
 viz.stage.addChild(help);
 
-
 var box1 = new visual.Box({height:0.02, color:0x00FF00});
 box1.position.set(0, -2, 0);
 viz.scene.add(box1);
