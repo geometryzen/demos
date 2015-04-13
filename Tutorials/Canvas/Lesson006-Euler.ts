@@ -50,12 +50,12 @@ class Canvas {
   }
 }
 
-var f = function(arg: blade.Complex): blade.Complex {
-  
-  var z: any = arg;
-  var result: any = z * (z * (z + 1) + 6) - 20;
-  return result;
-};
+/**
+ * The complex function that we wish to visualize.
+ */
+function foo(z: blade.Complex) {
+    return z * (z * (z + 1) + 6) - 20;
+}
 
 class MinMax {
   public min: number;
@@ -105,5 +105,5 @@ class ComplexPlane {
 }
 
 var R = 10;
-var cp = new ComplexPlane(new MinMax(-R,+R), new MinMax(-R,+R),f);
+var cp = new ComplexPlane(new MinMax(-R,+R), new MinMax(-R,+R), foo);
 cp.draw();
