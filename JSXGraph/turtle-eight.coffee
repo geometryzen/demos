@@ -16,11 +16,11 @@ t.right 90
 alpha = 0
  
 run = () ->
-    t.forward(2);
+    t.forward 2
     if (Math.floor(alpha / 360) % 2 is 0)
-        t.left(1)
+        t.left 1
     else
-        t.right(1)
+        t.right 1
 
     alpha += 1
 
