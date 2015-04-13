@@ -42,7 +42,6 @@ class Popup {
   }
 }
 
-
 var w: any = window;
 w.Sk.output("visual.VERSION: " + visual.VERSION + "\n");
 
