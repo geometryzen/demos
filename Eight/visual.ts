@@ -91,6 +91,7 @@ function tick(time: number) {
     var R = exp(-x);
     var S = exp(+x);
     S = ~R
+    w.Sk.output(S + "\n");
 
     var r = R * e3 * S;
     ball.pos = r;
