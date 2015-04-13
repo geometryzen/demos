@@ -1,10 +1,19 @@
 // A shorthand for creating vectors...
-var vector = visual.vectorE3;
+/**
+ * Constructs a vector from the specified Cartesian components.
+ */
+var vector: (x: number, y: number, z:  number)=>blade.Euclidean3 = visual.vectorE3;
 /**
  * The unit vector in the x-direction.
  */
 var e1 = vector(1, 0, 0);
+/**
+ * The unit vector in the y-direction.
+ */
 var e2 = vector(0, 1, 0);
+/**
+ * The unit vector in the z-direction.
+ */
 var e3 = vector(0, 0, 1);
 /**
  * Computes the exponential function for a bivector argument.
