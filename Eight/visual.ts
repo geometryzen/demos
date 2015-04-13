@@ -1,3 +1,7 @@
+var vector = visual.vectorE3;
+var e1 = vector(1, 0, 0);
+var e2 = vector(0, 1, 0);
+var e3 = vector(0, 0, 1);
 /**
  * Computes the exponential function for a bivector argument.
  */
@@ -15,10 +19,8 @@ popUp.document.title = "Geometry Zen";
 
 var w: any = window;
 w.Sk.output("visual.VERSION: " + visual.VERSION + "\n");
-var vz = visual;
 
-var viz = new vz.Visual(popUp);
-
+var viz = new visual.Visual(popUp);
 
 var title = new createjs.Text("Visualizing Geometric Algebra with WebGL", "24px Helvetica", "white");
 title.x = 100; title.y = 60;
@@ -56,9 +58,6 @@ var ball = new visual.Sphere({radius:0.4, color:0x0000FF});
 ball.position.set(0,1,1);
 viz.scene.add(ball);
 
-var e1 = vz.vectorE3(1, 0, 0);
-var e2 = vz.vectorE3(0, 1, 0);
-var e3 = vz.vectorE3(0, 0, 1);
 var frequency = 1/20;
 var omega = 2 * Math.PI * frequency * e3 ^ e1;
 
@@ -67,7 +66,7 @@ function setUp() { viz.setUp(); }
 function tick(time: number) {
     var theta = omega * time
     var x = theta / 2;
-    // A little problem with unary operators at the moment...
+    // todo: unary operators.
     var R = exp(0-x);
     var S = exp(0+x);
 
