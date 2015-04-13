@@ -8,11 +8,14 @@ var e2 = vector(0, 1, 0);
 var e3 = vector(0, 0, 1);
 /**
  * Computes the exponential function for a bivector argument.
- * @param x The argument to the exponential function.
+ * @param x The argument to the exponential function, a bivector is expected.
  */
 function exp(x: blade.Euclidean3): blade.Euclidean3 {
     // Really? norm yields a Euclidean3?
     var angle = x.norm().w;
+    /**
+     * A unit bivector representing the generator of the rotation.
+     */
     var B = x / angle;
     return Math.cos(angle) + B * Math.sin(angle);
 }
