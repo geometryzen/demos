@@ -90,6 +90,7 @@ function tick(time: number) {
     var x = theta / 2;
     var R = exp(-x);
     var S = exp(+x);
+    S = ~R
 
     var r = R * e3 * S;
     ball.pos = r;
