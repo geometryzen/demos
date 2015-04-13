@@ -45,7 +45,7 @@ class Popup {
 var w: any = window;
 w.Sk.output("visual.VERSION: " + visual.VERSION + "\n");
 
-var popUp = new Popup("Geometry Zen");
+var popUp = new Popup("Geometry Zen", 800);
 var viz = new visual.Visual(popUp.wnd);
 
 var title = new createjs.Text("Visualizing Geometric Algebra with WebGL", "24px Helvetica", "white");
