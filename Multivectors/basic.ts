@@ -9,6 +9,6 @@ w.Sk.output(e1+"\n")
 var M = 1 + e1 + e2 + e3 + e1 * e2 + e2 * e3 + e3 * e1 + e1 * e2 * e3
 w.Sk.output("M=>"+M+"\n");
 w.Sk.output(+M+"\n");
-w.Sk.output(-M+"\n");
+w.Sk.output("-M=>"+-M+"\n");
 var X = ~M;
-w.Sk.output(X+"\n");
+w.Sk.output("~M=>"+X+"\n");
