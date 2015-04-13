@@ -31,8 +31,8 @@ function exp(x: blade.Euclidean3): blade.Euclidean3 {
 
 class Popup {
   public wnd: Window;
-  constructor(title: string) {
-    this.wnd = window.open("","","width=1200,height=800");
+  constructor(title: string, width: number=1200) {
+    this.wnd = window.open("","","width="+width+",height=800");
     this.wnd.document.body.style.backgroundColor = "080808";
     this.wnd.document.body.style.overflow = "hidden";
     this.wnd.document.title = title;
