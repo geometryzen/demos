@@ -29,15 +29,25 @@ function exp(x: blade.Euclidean3): blade.Euclidean3 {
     return Math.cos(angle) + B * Math.sin(angle);
 }
 
-var popUp: Window = window.open("","","width=1200,height=800");
-popUp.document.body.style.backgroundColor = "080808";
-popUp.document.body.style.overflow = "hidden";
-popUp.document.title = "Geometry Zen";
+class Popup {
+  public wnd: Window;
+  constructor() {
+    this.wnd = window.open("","","width=1200,height=800");
+    this.wnd.document.body.style.backgroundColor = "080808";
+    this.wnd.document.body.style.overflow = "hidden";
+    this.wnd.document.title = "Geometry Zen";
+  }
+  close() {
+    this.wnd.close();
+  }
+}
+
 
 var w: any = window;
 w.Sk.output("visual.VERSION: " + visual.VERSION + "\n");
 
-var viz = new visual.Visual(popUp);
+var popUp = new Popup();
+var viz = new visual.Visual(popUp.wnd);
 
 var title = new createjs.Text("Visualizing Geometric Algebra with WebGL", "24px Helvetica", "white");
 title.x = 100; title.y = 60;
@@ -104,4 +114,4 @@ function terminate(time: number) { return false; }
 
 function tearDown(e: Error) { viz.tearDown(); popUp.close(); }
 
-eight.animationRunner(tick, terminate, setUp, tearDown, popUp).start();
+eight.animationRunner(tick, terminate, setUp, tearDown, popUp.wnd).start();
