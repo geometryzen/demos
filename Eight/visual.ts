@@ -1,11 +1,14 @@
 // A shorthand for creating vectors...
 var vector = visual.vectorE3;
-// The standard basis.
+/**
+ * The unit vector in the x-direction.
+ */
 var e1 = vector(1, 0, 0);
 var e2 = vector(0, 1, 0);
 var e3 = vector(0, 0, 1);
 /**
  * Computes the exponential function for a bivector argument.
+ * @param x The argument to the exponential function.
  */
 function exp(x: blade.Euclidean3): blade.Euclidean3 {
     // Really? norm yields a Euclidean3?
