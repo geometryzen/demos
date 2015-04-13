@@ -17,7 +17,7 @@ alpha = 0
  
 run() =>
     t.forward(2)
-    if (Math.floor(alpha / 360) % 2 is 0)
+    if (Math.floor(alpha / 360) % 2 == 0)
         t.left 1
     else
         t.right 1
