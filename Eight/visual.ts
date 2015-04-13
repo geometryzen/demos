@@ -31,11 +31,11 @@ function exp(x: blade.Euclidean3): blade.Euclidean3 {
 
 class Popup {
   public wnd: Window;
-  constructor() {
+  constructor(title: string) {
     this.wnd = window.open("","","width=1200,height=800");
     this.wnd.document.body.style.backgroundColor = "080808";
     this.wnd.document.body.style.overflow = "hidden";
-    this.wnd.document.title = "Geometry Zen";
+    this.wnd.document.title = title;
   }
   close() {
     this.wnd.close();
@@ -45,7 +45,7 @@ class Popup {
 var w: any = window;
 w.Sk.output("visual.VERSION: " + visual.VERSION + "\n");
 
-var popUp = new Popup();
+var popUp = new Popup("Geometry Zen!");
 var viz = new visual.Visual(popUp.wnd);
 
 var title = new createjs.Text("Visualizing Geometric Algebra with WebGL", "24px Helvetica", "white");
