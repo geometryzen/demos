@@ -65,7 +65,7 @@ function setUp() { viz.setUp(); }
 function tick(time: number) {
     var theta = omega * time
     var x = theta / 2;
-    // todo: unary operators.
+    // TODO: unary operators.
     var R = exp(0-x);
     var S = exp(0+x);
 
