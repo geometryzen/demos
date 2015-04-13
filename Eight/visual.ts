@@ -1,3 +1,4 @@
+debugger;
 // A shorthand for creating vectors...
 /**
  * Constructs a vector from the specified Cartesian components.
