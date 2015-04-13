@@ -78,6 +78,9 @@ viz.scene.add(ball);
  * The frequency of the rotation.
  */
 var frequency = 1/20;
+/**
+ * The angular velocity, represented as a bivector.
+ */
 var omega = 2 * Math.PI * frequency * e3 ^ e1;
 
 function setUp() { viz.setUp(); }
