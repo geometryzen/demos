@@ -86,12 +86,10 @@ function setUp() { viz.setUp(); }
  * Called repeatedly by the animation runner.
  */
 function tick(time: number) {
-    var theta = omega * time
-    var x = theta / 2;
-    var R = exp(-x);
+    var theta = omega * time;
+    var R = exp(-theta/2);
 
-    var r = R * e3 * ~R;
-    ball.pos = r;
+    ball.pos = R * e3 * ~R;
     arrow.attitude = R;
     box2.attitude = R;
     box3.attitude = R;
