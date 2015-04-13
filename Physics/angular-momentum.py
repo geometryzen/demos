@@ -41,4 +41,3 @@ print u
 # whose normal is along x.
 # (The unit vector sandwich extends to higher grades).
 print (m / 2.0) * (x * x) * (w - u * w * u)
-
