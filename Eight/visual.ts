@@ -1,4 +1,6 @@
+// A shorthand for creating vectors...
 var vector = visual.vectorE3;
+// The standard basis.
 var e1 = vector(1, 0, 0);
 var e2 = vector(0, 1, 0);
 var e3 = vector(0, 0, 1);
