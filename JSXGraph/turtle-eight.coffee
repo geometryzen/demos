@@ -25,6 +25,6 @@ run() =>
     alpha += 1
 
     if (alpha < 1440)
-        window.setTimeout run, 20
+        window.setTimeout(run, 20)
 
 run()
