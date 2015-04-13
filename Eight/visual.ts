@@ -74,11 +74,17 @@ var ball = new visual.Sphere({radius:0.4, color:0x0000FF});
 ball.position.set(0,1,1);
 viz.scene.add(ball);
 
+/**
+ * The frequency of the rotation.
+ */
 var frequency = 1/20;
 var omega = 2 * Math.PI * frequency * e3 ^ e1;
 
 function setUp() { viz.setUp(); }
 
+/**
+ * Called repeatedly by the animation runner.
+ */
 function tick(time: number) {
     var theta = omega * time
     var x = theta / 2;
