@@ -48,6 +48,8 @@ viz.stage.addChild(help);
 
 var box1 = new visual.Box({height:0.02, color:0x00FF00});
 box1.position.set(0, -2, 0);
+box1['mass'] = 6;
+w.Sk.output(box1.mass);
 viz.scene.add(box1);
 
 var arrow = new visual.Arrow({scale: 1.0, color: 0xFFFF00});
