@@ -3,7 +3,7 @@
  * Constructs a vector from the specified Cartesian components.
  */
 var vector: (x: number, y: number, z:  number)=>blade.Euclidean3 = visual.vectorE3;
-var kg = blade.UNIT_KILOGRAM;
+var kg = blade.units.kilogram;
 /**
  * The unit vector in the x-direction.
  */
