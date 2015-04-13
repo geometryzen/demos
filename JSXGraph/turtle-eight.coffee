@@ -16,7 +16,7 @@ t.setPenSize(3);
 t.right(90);
 alpha = 0;
  
-run() => 
+run() ->
     t.forward(2);
     if (Math.floor(alpha / 360) % 2 == 0)
         t.left(1);
