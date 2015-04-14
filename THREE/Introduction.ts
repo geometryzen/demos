@@ -1,4 +1,4 @@
-// This is the exact introduction code given in the three.js documentation.
+// This is the same as the introductory code given in the three.js documentation.
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
