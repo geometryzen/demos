@@ -1,5 +1,4 @@
-var w: any = window;
-var graph = w.JXG.JSXGraph;
+var graph = JXG.JSXGraph;
 var sin = Math.sin;
 
 document.getElementById("graph-container").innerHTML = '<div id="box" class="jxgbox"></div>'
