@@ -21,3 +21,7 @@ function render() {
     renderer.render( scene, camera );
 }
 render();
+
+// The output will appear below!
+// For a more friendly experience, create a popup window.
+// See the examples.
