@@ -50,11 +50,8 @@ class Canvas {
   }
 }
 
-var f = function(arg: blade.Complex): blade.Complex {
-  
-  var z: any = arg;
-  var result: any = z * (z * (z + 1) + 6) - 20;
-  return result;
+var f = function(z: blade.Complex): blade.Complex {
+  return z * (z * (z + 1) + 6) - 20;
 };
 
 class MinMax {
