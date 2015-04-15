@@ -12,7 +12,7 @@ var div = popUp.document.getElementById("box")
 div.style.width  = "400px"
 div.style.height = "400px"
 
-var board = graph.initBoard("box", {axis:true,grid:true, showCopyright:false})
+var board = graph.initBoard("box", {axis:true,grid:true, showCopyright:false,document:popUp.document})
 
 // Parametric curve
 // Create a curve of the form (t-sin(t), 1-cos(t), i.e.
