@@ -1,5 +1,4 @@
 var graph = JXG.JSXGraph;
-var sin = Math.sin;
 
 var popUp: Window = open("", "", "width=800, height=600");
 
