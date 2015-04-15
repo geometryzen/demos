@@ -1,5 +1,3 @@
-var w: any = window;
-var JXG = w.JXG;
 var graph = JXG.JSXGraph;
 
 document.getElementById("graph-container").innerHTML = '<div id="box" class="jxgbox"></div>';
