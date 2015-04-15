@@ -11,13 +11,13 @@ run = () ->
     stepSize = 5;
     board.suspendUpdate();
     walkCount = 20;
-    for (i=0; i < walkCount; i++)
+    for i in [0..walkCount]
         t.setPenColor(
                   JXG.hsv2rgb(
                               Math.round(Math.random()*255),
                               Math.random(),
                               Math.random()));
-        for (j=0; j < 100; j++)
+        for j in [0..100]
             angle = Math.floor(360*Math.random())
             t.right(angle)
             t.forward(stepSize)
