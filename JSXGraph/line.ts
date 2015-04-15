@@ -12,7 +12,7 @@ var div = popUp.document.getElementById("box");
 div.style.width  = "400px"
 div.style.height = "400px"
 
-var board = graph.initBoard("box", {axis:true, grid:true, showCopyright:false, document:popUp.document})
+var board = graph.initBoard("box", {axis:true, grid:true, showCopyright:false, document: popUp.document})
 var p1 = board.create('point', [-1, 4]);
 var p2 = board.create('point', [4, 1]);
 var q1 = board.create('point', [-2, -3]);
