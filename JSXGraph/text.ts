@@ -14,8 +14,6 @@ div.style.height = "560px";
 
 var board = graph.initBoard("box", {axis: true, grid: true, keepaspectratio: true, showCopyright: false, shownavigation: false, document: popUp.document});
 
-var p = board.create('point', [0.5, 0.5], {id: 'p1'});
-
 // Create a variable text at a variable position.
 var s = board.create('slider',[[0,4],[3,4],[-2,0,2]]);
 var text = board.create('text',
