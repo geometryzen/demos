@@ -18,7 +18,7 @@ var p = board.create('point', [0.5, 0.5], {id: 'p1'});
 
  // Create a button element at position [1,2].
  var button1 = board.create('button', [1, 2, 'Change Y with JavaScript', function() {
-     p.moveTo([p.X(), p.Y() + 0.5], 100,{effect:'<>'});
+     p.moveTo([p.X(), p.Y() + 0.5], 1000);
  }], {});
 
  // Create a button element at position [1,4].
