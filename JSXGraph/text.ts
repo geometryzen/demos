@@ -18,7 +18,7 @@ var board = graph.initBoard("box", {axis: true, grid: true, keepaspectratio: tru
 var slider = board.create('slider',[[0,4],[3,4],[-2,0,2]]);
 var text = board.create('text',
                        [function(x){ return slider.Value();}, 1,
-                        function(){return "The value of the slider is"+slider.Value().toFixed(2);}
+                        function(){return "The value of the slider is "+slider.Value().toFixed(2);}
                        ]
                     );
 
