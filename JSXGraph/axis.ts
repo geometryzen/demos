@@ -5,7 +5,7 @@ var popUp: Window = open("", "", "width=800, height=600");
 
 var css = '<link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />';
 popUp.document.documentElement.innerHTML = css+'<div id="box" class="jxgbox" style="width:800px; height:600px;"></div>'
-popUp.document.title = "JXG.Angle";
+popUp.document.title = "JXG.Axis";
 popUp.document.body.style.backgroundColor = "CCCCCC";
 popUp.document.body.style.overflow = "hidden";
 var div = popUp.document.getElementById("box");
@@ -15,7 +15,7 @@ div.style.height = "560px";
 
 var board = graph.initBoard("box", {axis:true, grid:true, keepaspectratio: true, showCopyright:false, document: popUp.document});
 
-board.create('axis', [[0.0,1.0], [1.0,1.3]], {"withLabel": True, "name": "x-axis", "label": {"offset": [280,130]}})
+board.create('axis', [[0.0,1.0], [1.0,1.3]], {"withLabel": true, "name": "x-axis", "label": {"offset": [280,130]}})
 
 function tick(time: number) {
     // We can use the variables to drive other windows!
