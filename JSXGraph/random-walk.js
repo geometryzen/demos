@@ -1,4 +1,4 @@
-var graph = JXG.JSXGraph
+var graph = JXG.JSXGraph;
 
 var board = graph.initBoard("box", 
                         {"boundingbox":[-100,100,100,-100],
