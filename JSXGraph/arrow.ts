@@ -33,7 +33,7 @@ var p1 = board.point(4.5, 2.0);
 var p2 = board.point(1.0, 1.0);
 var arrow = board.arrow(p1, p2);
 
-p1.snapToGrid = true;
+p2.snapToGrid = true;
 
 function tick(time: number) {
     // We can use the variables to drive other windows!
