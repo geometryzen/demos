@@ -39,7 +39,7 @@ function setUp() {
 }
 
 function tearDown() {
-  
+  popUp.close();
 }
 
 // May need to make sure that JSXGraph and animationRunner play well together?
