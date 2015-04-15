@@ -14,7 +14,10 @@ div.style.height = "560px";
 
 var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, showCopyright:false, document: popUp.document});
 
-var axis = board.create('axis', [[0.0,1.0], [1.0,1.0]], {"withLabel": true, "name": "x-axis", "label": {"offset": [280,130]}})
+// Create an arrow providing two points.
+var p1 = board.create('point', [4.5, 2.0]);
+var p2 = board.create('point', [1.0, 1.0]);
+var arrow = board.create('arrow', [p1, p2]);
 
 function tick(time: number) {
     // We can use the variables to drive other windows!
