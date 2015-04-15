@@ -1,9 +1,6 @@
 graph = JXG.JSXGraph
 
-board = graph.initBoard("box", 
-                        "boundingbox":[-100,100,100,-100],
-                         "showCopyright":false,
-                         "showNavigation":false);
+board = graph.initBoard("box", "boundingbox":[-100,100,100,-100], "showCopyright":false, showNavigation:false);
 t = board.create('turtle');
  
 run = () ->
