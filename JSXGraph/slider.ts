@@ -16,6 +16,7 @@ var board = graph.initBoard("box", {axis: true, grid: true, keepaspectratio: tru
 
 // Create a slider with values between 1 and 10, initial position is 5.
 var slider = board.create('slider', [[1, 2], [3, 2], [1, 5, 10]]);
+slider.hideElement();
 
 function tick(time: number) {
     // We can use the variables to drive other windows!
