@@ -6,7 +6,7 @@ var div = document.getElementById("box");
 div.style.width  = "400px";
 div.style.height = "400px";
 
-var board = graph.initBoard("box", {boundingbox: [-1,3,3,-1], axis: false, showCopyright:false});
+var board = graph.initBoard("box", {boundingbox: [-1,3,3,-1], axis: true, showCopyright:false});
 
 var p1 = board.create('point', [0,0]);
 var p2 = board.create('point', [1,1]);
