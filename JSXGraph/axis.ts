@@ -15,6 +15,7 @@ div.style.height = "560px";
 
 var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, showCopyright:false, document: popUp.document});
 
+// TODO: jxg.d.ts
 board.create('axis', [[0.0,1.0], [1.0,1.0]], {"withLabel": true, "name": "x-axis", "label": {"offset": [280,130]}})
 
 function tick(time: number) {
