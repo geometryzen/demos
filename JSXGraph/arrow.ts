@@ -33,6 +33,7 @@ var tail = board.point(4.5, 2.0);
 var head = board.point(1.0, 1.0);
 var arrow = board.arrow(tail, head, {dash:3});
 tail.hideElement();
+head.hideElement();
 
 function tick(time: number) {
     // We can use the variables to drive other windows!
