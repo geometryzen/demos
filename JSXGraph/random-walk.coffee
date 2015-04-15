@@ -11,8 +11,8 @@ run = () ->
     for i in [0..walkCount]
         t.setPenColor JXG.hsv2rgb Math.round(Math.random()*255), Math.random(), Math.random()
         for j in [0..100]
-            angle = Math.floor(360*Math.random())
-            t.right(angle)
+            angle = Math.floor 360*Math.random()
+            t.right angle
             t.forward(stepSize)
         dist = t.pos[0]*t.pos[0]+t.pos[1]*t.pos[1]
         sumdist += dist
