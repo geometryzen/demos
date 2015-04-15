@@ -7,7 +7,7 @@ var popUp: Window = open("", "", "width=800, height=600");
 popUp.document.body.style.overflow = "hidden";
 popUp.document.documentElement.innerHTML = '<div id="box" class="jxgbox"></div>'
 popUp.document.title = "JXG.Curve";
-var div = popUp.document.getElementById("box")
+var div = popUp.document.getElementById("box");
 
 div.style.width  = "400px"
 div.style.height = "400px"
