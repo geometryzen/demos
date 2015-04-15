@@ -3,10 +3,10 @@ var sin = Math.sin;
 
 var popUp: Window = open("", "", "width=800, height=600");
 
-popUp.document.body.style.backgroundColor = "202020";
-popUp.document.body.style.overflow = "hidden";
 popUp.document.documentElement.innerHTML = '<link rel="stylesheet" href="/css/app.css?version=0.9.292" media="all"><div id="box" class="jxgbox"></div>'
 popUp.document.title = "JXG.Curve";
+popUp.document.body.style.backgroundColor = "202020";
+popUp.document.body.style.overflow = "hidden";
 var div = popUp.document.getElementById("box");
 
 div.style.width  = "400px"
