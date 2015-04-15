@@ -14,7 +14,7 @@ div.style.height = "560px";
 
 var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, showCopyright:false, document: popUp.document});
 
-//var grid = board.create("grid", []);
+var grid = board.create("grid", []);
 
 function tick(time: number) {
     // We can use the variables to drive other windows!
