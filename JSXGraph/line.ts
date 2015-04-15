@@ -4,7 +4,7 @@ var sin = Math.sin;
 var popUp: Window = open("", "", "width=800, height=600");
 
 var css = '<link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />';
-popUp.document.documentElement.innerHTML = css+'<div id="box" class="jxgbox" style="width:800px; height:600px;></div>'
+popUp.document.documentElement.innerHTML = css+'<div id="box" class="jxgbox" style="width:800px; height:600px;"></div>'
 popUp.document.title = "JXG.Curve";
 //popUp.document.body.style.backgroundColor = "CCCCCC";
 popUp.document.body.style.overflow = "hidden";
