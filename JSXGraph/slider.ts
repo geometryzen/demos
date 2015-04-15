@@ -12,7 +12,7 @@ var div = popUp.document.getElementById("box");
 div.style.width  = "760px";
 div.style.height = "560px";
 
-var board = graph.initBoard("box", {axis: true, grid: true, keepaspectratio: true, showCopyright: false, document: popUp.document});
+var board = graph.initBoard("box", {axis: true, grid: true, keepaspectratio: true, showCopyright: false, shownavigation: false, document: popUp.document});
 
 // Create a slider with values between 1 and 10, initial position is 5.
 var slider = board.create('slider', [[1, 2], [3, 2], [1, 5, 10]]);
