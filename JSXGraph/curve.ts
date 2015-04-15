@@ -9,7 +9,11 @@ div.style.height = "400px"
 
 var board = graph.initBoard("box", {axis:true,grid:true, showCopyright:false})
 
-var A = board.create('point',[1,1],{name: 'Alice'})
-var B = board.create('point',[2,2],{name:'Bob'})
-
-var f = board.create('functiongraph',[function(x) {return A.X() * sin(x)}])
+// Parametric curve
+// Create a curve of the form (t-sin(t), 1-cos(t), i.e.
+// the cycloid curve.
+  var curve = board.create('curve',
+                       [function(t){ return t-Math.sin(t);},
+                        function(t){ return 1-Math.cos(t);},
+                        0, 2*Math.PI]
+                    );
