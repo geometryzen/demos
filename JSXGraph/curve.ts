@@ -1,6 +1,8 @@
 var graph = JXG.JSXGraph;
 var sin = Math.sin;
 
+var popUp = window.open();
+
 document.getElementById("graph-container").innerHTML = '<div id="box" class="jxgbox"></div>'
 var div = document.getElementById("box")
 
