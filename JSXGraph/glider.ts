@@ -14,7 +14,11 @@ div.style.height = "560px";
 
 var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, showCopyright:false, document: popUp.document});
 
-var grid = board.create("grid", []);
+// Create a glider with user defined coordinates. If the coordinates are not on
+// the circle (like in this case) the point will be projected onto the circle.
+var p1 = board.create('point', [2.0, 2.0]);
+var c1 = board.create('circle', [p1, 2.0]);
+var p2 = board.create('glider', [2.0, 1.5, c1]);
 
 function tick(time: number) {
     // We can use the variables to drive other windows!
