@@ -12,7 +12,7 @@ var div = popUp.document.getElementById("box");
 div.style.width  = "760px";
 div.style.height = "560px";
 
-var b = graph.initBoard("box", {axis:true, grid:false, keepaspectratio: true, showCopyright:false, document: popUp.document});
+var b = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, showCopyright:false, document: popUp.document});
 
 function tick(time: number) {
     // We can use the variables to drive other windows!
