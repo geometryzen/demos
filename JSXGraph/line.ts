@@ -13,7 +13,7 @@ var div = popUp.document.getElementById("box");
 div.style.width  = "800px";
 div.style.height = "600px";
 
-var board = graph.initBoard("box", {axis:true, grid:true, keepaspectratio:false, showCopyright:false, document: popUp.document});
+var board = graph.initBoard("box", {axis:true, grid:true, keepaspectratio: true, showCopyright:false, document: popUp.document});
 var p1 = board.create('point', [-1, 4]);
 var p2 = board.create('point', [4, 1]);
 var q1 = board.create('point', [-2, -3]);
