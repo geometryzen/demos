@@ -26,8 +26,8 @@ var a1 = board.create('angle', [li1, li2, [5.5, 0], [4, 3]], { radius:1 });
 var a2 = board.create('angle', [li1, li2, 1, -1], { radius:2 });
 
 
-function tick() {
-  Sk.output(p1.X()+"\n");
+function tick(time: number) {
+    // We can use the variables to drive other windows!
 }
 
 function terminate(time: number) {
