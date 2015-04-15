@@ -1,5 +1,17 @@
 var graph = JXG.JSXGraph;
 
+class Board {
+    constructor(public board: JXG.Board) {
+      
+    }
+    point(x: number, y: number): JXG.Point {
+        return this.board.create("point",[x, y]);
+    }
+    arrow(p1: JXG.Point, p2: JXG.Point): JXG.Arrow {
+        return this.board.create("arrow",[p1,p2]);
+    }
+}
+
 var popUp: Window = open("", "", "width=800, height=600");
 
 var css = '<link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />';
@@ -12,12 +24,13 @@ var div = popUp.document.getElementById("box");
 div.style.width  = "760px";
 div.style.height = "560px";
 
-var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, showCopyright:false, document: popUp.document});
+var b = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, showCopyright:false, document: popUp.document});
+var board = new Board(b);
 
 // Create an arrow providing two points.
-var p1 = board.create('point', [4.5, 2.0]);
-var p2 = board.create('point', [1.0, 1.0]);
-var arrow = board.create('arrow', [p1, p2]);
+var p1 = board.point(4.5, 2.0);
+var p2 = board.point(1.0, 1.0);
+var arrow = board.arrow(p1, p2);
 
 function tick(time: number) {
     // We can use the variables to drive other windows!
