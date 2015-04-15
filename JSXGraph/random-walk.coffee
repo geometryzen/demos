@@ -13,7 +13,7 @@ run = () ->
         for j in [0..100]
             angle = Math.floor 360*Math.random()
             t.right angle
-            t.forward(stepSize)
+            t.forward stepSize
         dist = t.pos[0]*t.pos[0]+t.pos[1]*t.pos[1]
         sumdist += dist
         t.home()
