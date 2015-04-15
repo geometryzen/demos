@@ -9,7 +9,7 @@ class Board {
         return this.board.create("point", [x, y]);
     }
     arrow(p1: JXG.Point, p2: JXG.Point, attributes?: {}): JXG.Arrow {
-        return this.board.create("arrow", [p1,p2]);
+        return this.board.create("arrow", [p1,p2], attributes);
     }
 }
 
