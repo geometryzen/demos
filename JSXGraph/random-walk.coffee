@@ -18,7 +18,7 @@ run = () ->
         sumdist += dist
         t.home()
 
-    Sk.output(sumdist/walkCount+"\n")
+    Sk.output sumdist/walkCount+"\n"
     board.unsuspendUpdate()
 
 run()
