@@ -5,7 +5,7 @@ var popUp: Window = open("", "", "width=800, height=600");
 
 popUp.document.documentElement.innerHTML = '<link rel="stylesheet" href="/css/app.css?version=0.9.292" media="all"><div id="box" class="jxgbox"></div>'
 popUp.document.title = "JXG.Curve";
-popUp.document.body.style.backgroundColor = "DDDDDD";
+popUp.document.body.style.backgroundColor = "0DDDDD";
 popUp.document.body.style.overflow = "hidden";
 var div = popUp.document.getElementById("box");
 
