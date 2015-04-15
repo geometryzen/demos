@@ -24,9 +24,9 @@ function run() {
         }
         var dist = t.pos[0]*t.pos[0]+t.pos[1]*t.pos[1];
         sumdist += dist;
-        t.home()
+        t.home();
     }
     Sk.output(sumdist/walkCount+"\n");
-    board.unsuspendUpdate()
+    board.unsuspendUpdate();
 }
-run()
+run();
