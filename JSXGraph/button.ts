@@ -14,9 +14,17 @@ div.style.height = "560px";
 
 var board = graph.initBoard("box", {axis: true, grid: true, keepaspectratio: true, showCopyright: false, shownavigation: false, document: popUp.document});
 
-// Create a slider with values between 1 and 10, initial position is 5.
-var slider = board.create('slider', [[1, 2], [3, 2], [1, 5, 10]]);
+var p = board.create('point', [0.5, 0.5], {id: 'p1'});
 
+ // Create a button element at position [1,2].
+ var button1 = board.create('button', [1, 2, 'Change Y with JavaScript', function() {
+     p.moveTo([p.X(), p.Y() + 0.5], 100);
+ }], {});
+
+ // Create a button element at position [1,4].
+ var button2 = board.create('button', [1, 4, 'Change Y with JessieCode',
+     "$('p1').Y = $('p1').Y() - 0.5;"
+ ], {});
 function tick(time: number) {
     // We can use the variables to drive other windows!
 }
