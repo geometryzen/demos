@@ -15,7 +15,7 @@ div.style.height = "560px";
 
 var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, showCopyright:false, document: popUp.document});
 
-board.create('axis', [[0.0,1.0], [1.0,1.3]], {"withLabel": true, "name": "x-axis", "label": {"offset": [280,130]}})
+board.create('axis', [[0.0,1.0], [1.0,1.0]], {"withLabel": true, "name": "x-axis", "label": {"offset": [280,130]}})
 
 function tick(time: number) {
     // We can use the variables to drive other windows!
