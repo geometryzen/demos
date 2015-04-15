@@ -11,7 +11,7 @@ var board = graph.initBoard("box",
                          "showCopyright":false,
                          "showNavigation":false});
 
-var t = board.create('turtle',[0, 0], {"strokeOpacity":0.5});
+var t = board.create('turtle', [0, 0], {"strokeOpacity":0.5});
 
 t.setPenSize(3);
 t.right(90);
