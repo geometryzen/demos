@@ -10,8 +10,8 @@ popUp.document.title = "JXG.Curve";
 popUp.document.body.style.overflow = "hidden";
 var div = popUp.document.getElementById("box");
 
-div.style.width  = "800px";
-div.style.height = "600px";
+div.style.width  = "760px";
+div.style.height = "560px";
 
 var board = graph.initBoard("box", {axis:true, grid:true, keepaspectratio: true, showCopyright:false, document: popUp.document});
 var p1 = board.create('point', [-1, 4]);
