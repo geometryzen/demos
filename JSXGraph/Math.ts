@@ -1,1 +1,1 @@
-# Math.ts
+var Math = JXG.Math;
