@@ -8,8 +8,8 @@ class Board {
     point(x: number, y: number): JXG.Point {
         return this.board.create("point", [x, y]);
     }
-    arrow(p1: JXG.Point, p2: JXG.Point): JXG.Arrow {
-        return this.board.create("arrow",[p1,p2]);
+    arrow(p1: JXG.Point, p2: JXG.Point, attributes?: {}): JXG.Arrow {
+        return this.board.create("arrow", [p1,p2]);
     }
 }
 
@@ -31,7 +31,7 @@ var board = new Board(b);
 // Create an arrow providing two points.
 var p1 = board.point(4.5, 2.0);
 var p2 = board.point(1.0, 1.0);
-var arrow = board.arrow(p1, p2);
+var arrow = board.arrow(p1, p2, {dash:3});
 
 arrow.dash = 3;
 
