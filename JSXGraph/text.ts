@@ -16,15 +16,14 @@ var board = graph.initBoard("box", {axis: true, grid: true, keepaspectratio: tru
 
 var p = board.create('point', [0.5, 0.5], {id: 'p1'});
 
- // Create a button element at position [1,2].
- var button1 = board.create('button', [1, 2, 'Change Y with JavaScript', function() {
-     p.moveTo([p.X(), p.Y() + 0.5], 100);
- }], {});
+// Create a variable text at a variable position.
+var s = board.create('slider',[[0,4],[3,4],[-2,0,2]]);
+var text = board.create('text',
+                       [function(x){ return s.Value();}, 1,
+                        function(){return "The value of s is"+s.Value().toFixed(2);}
+                       ]
+                    );
 
- // Create a button element at position [1,4].
- var button2 = board.create('button', [1, 4, 'Change Y with JessieCode',
-     "$('p1').Y = $('p1').Y() - 0.5;"
- ], {});
 function tick(time: number) {
     // We can use the variables to drive other windows!
 }
