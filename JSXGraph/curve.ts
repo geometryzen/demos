@@ -1,7 +1,11 @@
 var graph = JXG.JSXGraph;
 var sin = Math.sin;
 
-var popUp = window.open();
+var popUp: Window = open("", "", "width=800, height=600");
+
+popUp.document.body.style.backgroundColor = "202020";
+popUp.document.body.style.overflow = "hidden";
+popUp.document.title = "JXG.Curve";
 
 document.getElementById("graph-container").innerHTML = '<div id="box" class="jxgbox"></div>'
 var div = document.getElementById("box")
