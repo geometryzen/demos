@@ -1,6 +1,4 @@
-var w: any = window;
-var graph = w.JXG.JSXGraph
-var JXG = w.JXG
+var graph = JXG.JSXGraph
 
 var board = graph.initBoard("box", 
                         {"boundingbox":[-100,100,100,-100],
