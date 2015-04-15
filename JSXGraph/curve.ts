@@ -3,7 +3,7 @@ var sin = Math.sin;
 
 var popUp: Window = open("", "", "width=800, height=600");
 
-popUp.document.body.style.backgroundColor = "202020";
+//popUp.document.body.style.backgroundColor = "202020";
 popUp.document.body.style.overflow = "hidden";
 popUp.document.title = "JXG.Curve";
 
