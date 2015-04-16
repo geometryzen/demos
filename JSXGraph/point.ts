@@ -34,7 +34,7 @@ function tick(time: number) {
   var theta = omega * time;
   var x = R * Math.cos(theta);
   var y = R * Math.sin(theta);
-  E.moveTo([x, 0]);
+  E.moveTo([0, y]);
 }
 
 function terminate(time: number) {
