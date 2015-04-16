@@ -20,7 +20,7 @@ var B = board.create('point', [1,2]);
 var C = board.create('point', [2,0]);
 var D = board.create('point', [0,0]);
 var E = board.create('point', [-1,5]);
-var conic = board.create('conic',[A,B,C,D,E]);
+var conic = board.create('conic',[A,B,C,D,E],{draft:true});
  
 function tick(time: number) {
     // We can use the variables to drive other windows!
