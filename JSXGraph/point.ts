@@ -16,7 +16,7 @@ var board = graph.initBoard("box", {axis:true, grid:true, keepaspectratio: true,
 
 var point: JXG.Point = board.create('point', [0,0]);
 
-point.setName("Earth");
+point.setName("Sun");
 
 Sk.output(point.getName()+"\n");
 
