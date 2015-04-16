@@ -25,8 +25,6 @@ var board = graph.initBoard("box", {axis:true,
 
 var E: JXG.Point = board.create('point', [0,0]);
 
-E.strokeColor = 0x00FF00
-
 E.setName("m");
 
 var omega = 2 * Math.PI * 0.1;
