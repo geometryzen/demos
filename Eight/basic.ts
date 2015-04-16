@@ -50,8 +50,8 @@ popUp.document.body.appendChild(stats.domElement);
 function tick(time: number) {
   stats.begin();
   var halfAngle = angle/2;
-  var c = eight.scalarE3(Math.cos(halfAngle));
-  var s = eight.scalarE3(Math.sin(halfAngle));
+  var c = Math.cos(halfAngle);
+  var s = Math.sin(halfAngle);
   var R = c - B * s;
   box.attitude = R;
   prism.attitude = R;
