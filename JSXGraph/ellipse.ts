@@ -12,10 +12,16 @@ var div = popUp.document.getElementById("box");
 div.style.width  = "760px";
 div.style.height = "560px";
 
-var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, showCopyright:false, document: popUp.document});
+var board = graph.initBoard("box", {axis:true, grid:true, keepaspectratio: true, showCopyright:false, document: popUp.document});
 
-var axis = board.create('axis', [[0.0,1.0], [1.0,1.0]], {"withLabel": true, "name": "x-axis", "label": {"offset": [280,130]}})
-
+// Create a conic section through the points A, B, C, D, and E.
+var A = board.create('point', [1,5]);
+var B = board.create('point', [1,2]);
+var C = board.create('point', [2,0]);
+var D = board.create('point', [0,0]);
+var E = board.create('point', [-1,5]);
+var conic = board.create('conic',[A,B,C,D,E]);
+ 
 function tick(time: number) {
     // We can use the variables to drive other windows!
 }
