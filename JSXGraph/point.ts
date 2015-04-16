@@ -18,20 +18,15 @@ div.style.height = "560px";
 
 var board = graph.initBoard("box", {axis:true, grid:true, keepaspectratio: true, showCopyright:false, document: popUp.document});
 
-var point: JXG.Point = board.create('point', [0,0]);
+var E: JXG.Point = board.create('point', [0,0]);
 
-point.setName("E");
-
-out(point.getName()+"\n");
+E.setName("E");
 
 var omega = 2 * Math.PI * 0.1;
 
 function tick(time: number) {
   var theta = omega * time;
-  point.moveTo([Math.cos(theta),Math.sin(theta)]);
-    // We can use the variables to drive other windows!
-    var x: number = point.X();
-    var y: number = point.Y();
+  E.moveTo([Math.cos(theta), Math.sin(theta)]);
 }
 
 function terminate(time: number) {
