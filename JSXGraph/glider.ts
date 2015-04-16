@@ -25,15 +25,15 @@ function tick(time: number) {
 }
 
 function terminate(time: number) {
-  return false;
+    return false;
 }
 
 function setUp() {
-  
+
 }
 
 function tearDown() {
-  popUp.close();
+    popUp.close();
 }
 
 // May need to make sure that JSXGraph and animationRunner play well together?
