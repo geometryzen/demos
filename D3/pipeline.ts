@@ -6,7 +6,11 @@ var canvas = d3.select("body").append("canvas")
     .attr("width", width)
     .attr("height", height);
 
-var context = canvas.node().getContext("2d");
+var element: any = canvas.node();
+var elemCanvas: HTMLCanvasElement = element;
+
+var workbench = new visual.Workbench2D(elemCanvas, window)
+var context = elemCanvas.getContext("2d");
 
 var sphere = {type: "Sphere"},
     graticule = d3.geo.graticule()();
