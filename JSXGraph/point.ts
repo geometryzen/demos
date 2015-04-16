@@ -15,10 +15,8 @@ div.style.height = "560px";
 var board = graph.initBoard("box", {axis:true, grid:true, keepaspectratio: true, showCopyright:false, document: popUp.document});
 
 // Create an Ellipse by three points
-var A = board.create('point', [-1,4]);
-var B = board.create('point', [-1,-4]);
-var C = board.create('point', [1,1]);
-var ellipse = board.create('ellipse',[A,B,C]);
+var point = board.create('point', [0,0]);
+
 
 function tick(time: number) {
     // We can use the variables to drive other windows!
