@@ -42,11 +42,10 @@ function terminate(time: number) {
 }
 
 function setUp() {
-  
 }
 
 function tearDown(e: Error) {
-  popUp.close();
+    popUp.close();
 }
 
 // May need to make sure that JSXGraph and animationRunner play well together?
