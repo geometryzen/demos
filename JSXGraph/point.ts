@@ -25,7 +25,7 @@ var board = graph.initBoard("box", {axis:true,
 
 var E: JXG.Point = board.create('point', [0,0]);
 
-E.setName("E");
+E.setName("m");
 
 var omega = 2 * Math.PI * 0.1;
 var R = 3;
