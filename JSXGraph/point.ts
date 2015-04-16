@@ -24,8 +24,11 @@ point.setName("E");
 
 out(point.getName()+"\n");
 
+var omega = 2 * Math.PI * 0.1;
+
 function tick(time: number) {
-  point.moveTo([1,2])
+  var theta = omega * time;
+  point.moveTo([Math.cos(theta),Math.sin(theta)]);
     // We can use the variables to drive other windows!
     var x: number = point.X();
     var y: number = point.Y();
