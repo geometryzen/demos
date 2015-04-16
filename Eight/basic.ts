@@ -49,7 +49,6 @@ popUp.document.body.appendChild(stats.domElement);
  */
 function tick(time: number) {
   stats.begin();
-  // We have to sprinkle in some 'any' to stop TypeScript from complaining!
   var halfAngle = angle/2;
   var c = eight.scalarE3(Math.cos(halfAngle));
   var s = eight.scalarE3(Math.sin(halfAngle));
