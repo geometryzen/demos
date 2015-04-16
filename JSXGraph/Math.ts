@@ -6,4 +6,4 @@ function print(x) {
 }
 
 print("JXG.Math.eps = " + JXG.Math.eps);
-print("JXG.Math.binomail(4, 4) = " + JXG.Math.binomial(4, 4));
+print("JXG.Math.binomail(4, 2) = " + JXG.Math.binomial(4, 2));
