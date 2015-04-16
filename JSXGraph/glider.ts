@@ -18,7 +18,7 @@ var board = graph.initBoard("box", {axis: true, grid: true, keepaspectratio: tru
 // the circle (like in this case) the point will be projected onto the circle.
 var p1 = board.create('point', [2.0, 2.0]);
 var c1 = board.create('circle', [p1, 2.0]);
-var p2 = board.create('glider', [2.0, 1.5, c1]);
+var glider = board.create('glider', [2.0, 1.5, c1]);
 
 function tick(time: number) {
     // We can use the variables to drive other windows!
