@@ -97,7 +97,7 @@ class ComplexPlane {
         var S = 1;
         // var L = lightnessFromMagnitude(this.f(z).norm());
         var L = 0.5;
-        this._canvas.context.fillStyle = JXG.hsv2rgb(H,S,L);//blade.Color.fromHSL(H, S, L).asFillStyle();
+        this._canvas.context.fillStyle = blade.Color.fromHSL(H, S, L).asFillStyle();
         this._canvas.context.fillRect(X, Y, 1, 1);
       }
     }
