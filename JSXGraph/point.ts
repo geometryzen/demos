@@ -14,9 +14,9 @@ div.style.height = "560px";
 
 var board = graph.initBoard("box", {axis:true, grid:true, keepaspectratio: true, showCopyright:false, document: popUp.document});
 
-// Create an Ellipse by three points
-var point = board.create('point', [0,0]);
+var point: JXG.Point = board.create('point', [0,0]);
 
+var x = point.X();
 
 function tick(time: number) {
     // We can use the variables to drive other windows!
