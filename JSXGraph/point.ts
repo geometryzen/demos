@@ -23,10 +23,11 @@ var E: JXG.Point = board.create('point', [0,0]);
 E.setName("E");
 
 var omega = 2 * Math.PI * 0.1;
+var R = 3;
 
 function tick(time: number) {
   var theta = omega * time;
-  E.moveTo([Math.cos(theta), Math.sin(theta)]);
+  E.moveTo([R * Math.cos(theta), R * Math.sin(theta)]);
 }
 
 function terminate(time: number) {
