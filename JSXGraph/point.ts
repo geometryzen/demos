@@ -31,7 +31,7 @@ function setUp() {
   
 }
 
-function tearDown() {
+function tearDown(e: Error) {
   popUp.close();
 }
 
