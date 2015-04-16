@@ -7,4 +7,4 @@ function print(x) {
 
 print("JXG.Math.eps = " + JXG.Math.eps);
 print("JXG.Math.binomial(4,2) = " + JXG.Math.binomial(4,2));
-print("JXG.Math.cosh(5) = " + JXG.Math.cosh(5));
+print("JXG.Math.cosh(5) = " + JXG.Math.cosh(1));
