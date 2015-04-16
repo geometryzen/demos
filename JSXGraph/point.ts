@@ -48,6 +48,5 @@ function tearDown(e: Error) {
     popUp.close();
 }
 
-// May need to make sure that JSXGraph and animationRunner play well together?
-var war = eight.animationRunner(tick, terminate, setUp, tearDown, popUp.window);
-war.start();
+var runner = eight.animationRunner(tick, terminate, setUp, tearDown, popUp.window);
+runner.start();
