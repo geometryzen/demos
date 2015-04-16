@@ -1,5 +1,9 @@
 var graph = JXG.JSXGraph;
 
+function out(x: string) {
+  var w: any = window;
+  w.Sk.output(x + "\n");
+}
 var popUp: Window = open("", "", "width=800, height=600");
 
 var css = '<link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />';
@@ -18,7 +22,7 @@ var point: JXG.Point = board.create('point', [0,0]);
 
 point.setName("E");
 
-Sk.output(point.getName()+"\n");
+out(point.getName()+"\n");
 
 function tick(time: number) {
     // We can use the variables to drive other windows!
