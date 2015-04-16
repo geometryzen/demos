@@ -1,2 +1,8 @@
 var Math = JXG.Math;
-Sk.output(JXG.Math.eps + "\n");
+
+function print(x) {
+  var w: any = window;
+  w.Sk.output(x + "\n");
+}
+
+print("JXG.Math.eps = " + JXG.Math.eps);
