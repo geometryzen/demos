@@ -25,7 +25,7 @@ var board = graph.initBoard("box", {axis:true,
 
 var E: JXG.Point = board.create('point', [0,0]);
 
-out(E.strokeColor);
+E.strokeColor = "rgb(0,0,255)"
 
 E.setName("m");
 
