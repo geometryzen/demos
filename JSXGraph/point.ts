@@ -23,7 +23,7 @@ var board = graph.initBoard("box", {axis:true,
                                     showNavigation: false,
                                     document: popUp.document});
 
-var E: JXG.Point = board.create('point', [0,0]);
+var E: JXG.Point = board.create('point');
 
 E.setName("E");
 
