@@ -16,6 +16,8 @@ var board = graph.initBoard("box", {axis:true, grid:true, keepaspectratio: true,
 
 var point: JXG.Point = board.create('point', [0,0]);
 
+point.setName("Earth");
+
 Sk.output(point.getName()+"\n");
 
 function tick(time: number) {
