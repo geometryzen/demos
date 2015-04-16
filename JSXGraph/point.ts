@@ -31,10 +31,10 @@ var omega = 2 * Math.PI * (1/10);
 var R = 4;
 
 function tick(time: number) {
-  var theta = omega * time;
-  var x = R * Math.cos(theta);
-  var y = R * Math.sin(theta);
-  E.moveTo([0, y]);
+    var theta = omega * time;
+    var x = R * Math.cos(theta);
+    var y = R * Math.sin(theta);
+    E.moveTo([0, y]);
 }
 
 function terminate(time: number) {
