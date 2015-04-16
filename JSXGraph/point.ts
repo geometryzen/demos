@@ -32,7 +32,9 @@ var R = 3;
 
 function tick(time: number) {
   var theta = omega * time;
-  E.moveTo([R * Math.cos(theta), R * Math.sin(theta)]);
+  var x = R * Math.cos(theta);
+  var y = R * Math.sin(theta);
+  E.moveTo([x, y]);
 }
 
 function terminate(time: number) {
