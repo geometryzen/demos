@@ -27,7 +27,7 @@ var E: JXG.Point = board.create('point',[0,0]);
 
 E.setName("E");
 
-var omega = 2 * Math.PI;
+var omega = 2 * Math.PI * (1/10);
 var R = 4;
 
 function tick(time: number) {
