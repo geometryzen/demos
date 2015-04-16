@@ -25,6 +25,7 @@ point.setName("E");
 out(point.getName()+"\n");
 
 function tick(time: number) {
+  point.moveTo([1,2])
     // We can use the variables to drive other windows!
     var x: number = point.X();
     var y: number = point.Y();
