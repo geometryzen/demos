@@ -15,7 +15,12 @@ var context = elemCanvas.getContext("2d");
 var sphere = {type: "Sphere"},
     graticule = d3.geo.graticule()();
 
-d3.timer(function(elapsed) {
+d3.select(self.frameElement).style("height", height + "px");
+function setUp() {
+    workbench.setUp()
+}
+
+function tick(t) {
   var render = d3.geo.pipeline()
       .source(d3.geo.jsonSource)
       .pipe(d3.geo.rotate, 0, -.5, 0)
@@ -40,6 +45,15 @@ d3.timer(function(elapsed) {
   context.stroke();
 
   context.restore();
-});
+}
 
-d3.select(self.frameElement).style("height", height + "px");
+function terminate(t) {
+    return t > 60
+}
+    
+function tearDown(e) {
+    workbench.tearDown()
+}
+
+var war = eight.animationRunner(tick, terminate, setUp, tearDown, window)
+war.start()
