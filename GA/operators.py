@@ -13,6 +13,8 @@ c = (17 * e1 + 19 * e2 + 23 * e3)
 print a
 print b
 print a * b
+print a | b
+print a ^ b
 print a | b + a ^ b
 print a << b + a ^ b
 print a >> b + a ^ b
