@@ -13,9 +13,9 @@ var e3 = eight.vectorE3(0,0,1);
 var random = Math.random;
 var meter = blade.units.meter;
 
-var a = (random() * e1 + random() * e2 + random() * e3);
-var b = (random() * e1 + random() * e2 + random() * e3);
-var c = (random() * e1 + random() * e2 + random() * e3);
+var a = (2 * e1 + 3 * e2 + 5 * e3);
+var b = (7 * e1 + 11 * e2 + 13 * e3);
+var c = (17 * e1 + 19 * e2 + 23 * e3);
 
 log(a * b);
 log(a | b + a ^ b);
