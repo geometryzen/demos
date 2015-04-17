@@ -21,6 +21,7 @@ log(a);
 log(b);
 log(a * b);
 log(a % b);
+log(a ^ b);
 log(a % b + a ^ b);
 log(a << b + a ^ b);
 log(a >> b + a ^ b);
