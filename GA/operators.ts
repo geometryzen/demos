@@ -13,7 +13,7 @@ var meter = blade.units.meter;
 
 var a = (random() * e1 + random() * e2 + random() * e3);
 var b = (random() * e1 + random() * e2 + random() * e3);
-var c = (random() * e1 + random() * e2 + random() * e3) * meter
+var c = (random() * e1 + random() * e2 + random() * e3);
 
 log(a * b);
 log(a | b + a ^ b);
