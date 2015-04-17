@@ -10,6 +10,8 @@ a = (2 * e1 + 3 * e2 + 5 * e3) * meter
 b = (7 * e1 + 11 * e2 + 13 * e3) * meter
 c = (17 * e1 + 19 * e2 + 23 * e3) * meter
 
+print a
+print b
 print a * b
 print a | b + a ^ b
 print a << b + a ^ b
