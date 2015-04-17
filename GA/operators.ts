@@ -22,5 +22,5 @@ log(a % b + a ^ b);
 log(a << b + a ^ b);
 log(a >> b + a ^ b);
 log("");
-log(a * b | c);
-log(a * (b | c));
+log(a * b % c);
+log(a * (b % c));
