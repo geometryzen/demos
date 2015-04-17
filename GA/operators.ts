@@ -18,7 +18,7 @@ var b = (7 * e1 + 11 * e2 + 13 * e3);
 var c = (17 * e1 + 19 * e2 + 23 * e3);
 
 log(a * b);
-log(a | b + a ^ b);
+log(a % b + a ^ b);
 log(a << b + a ^ b);
 log(a >> b + a ^ b);
 log("");
