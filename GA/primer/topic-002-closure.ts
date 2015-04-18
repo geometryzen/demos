@@ -25,8 +25,8 @@ var tailParents = [function(){return pos.x;}, function(){return pos.y}];
 var headParents = [function(){return pos.x+A.x;}, function(){return pos.y+A.y}];
 
 // Create an arrow providing two points.
-var tail = board.create('point', [0,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#CCCCCC'});
-var head = board.create('point', [1,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#00FF00'});
+var tail = board.create('point', [0,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+var head = board.create('point', [1,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 var a = board.create('arrow', [tail, head]);
 a.setAttribute({strokeColor: '#FF0000', withLabel:true});
 a.setLabelText("a");
