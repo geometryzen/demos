@@ -21,12 +21,14 @@ div.style.height = "560px";
 
 var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, showCopyright:false, showNavigation:false, document: popUp.document});
 
-var t = new blade.Euclidean2(0,5,2,0);
-var parents = [function(){return t.x;}, function(){return t.y}];
+var pos = new blade.Euclidean2(0,5,2,0);
+var vec = new blade.Euclidean2(0,1,0,0);
+var tailParents = [function(){return pos.x;}, function(){return pos.y}];
+var headParents = [function(){return pos.x+vec.x;}, function(){return pos.y+vec.y}];
 
 // Create an arrow providing two points.
-var tail = board.create('point', parents, {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#CCCCCC'});
-var head = board.create('point', [1.0, 0.0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#00FF00'});
+var tail = board.create('point', tailParents, {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#CCCCCC'});
+var head = board.create('point', headParents, {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#00FF00'});
 var arrow = board.create('arrow', [tail, head]);
 //tail.hideElement();
 //head.hideElement();
@@ -36,8 +38,8 @@ arrow.setLabelText("a");
 var omega = 2 * Math.PI * 1/10;
 
 function tick(time: number) {
-  t.x = Math.cos(omega * time);
-  t.y = Math.sin(omega * time);
+  pos.x = Math.cos(omega * time);
+  pos.y = Math.sin(omega * time);
   board.update();
     // We can use the variables to drive other windows!
 }
