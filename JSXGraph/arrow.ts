@@ -43,6 +43,7 @@ tail.hideElement();
 head.hideElement();
 arrow.setAttribute({strokeColor: JXG.hsv2rgb(0,0,0), withLabel:true});
 arrow.setName("v");
+arrow.setLabel("x");
 
 function tick(time: number) {
     // We can use the variables to drive other windows!
