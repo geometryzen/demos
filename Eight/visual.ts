@@ -88,7 +88,12 @@ var frequency = 1/10;
  */
 var omega = 2 * Math.PI * frequency * e3 ^ e1;
 
-function setUp() { viz.setUp(); }
+function setUp() {
+  viz.setUp();
+  w.Sk.output(viz.camera.position.x);
+  w.Sk.output(viz.camera.position.y);
+  w.Sk.output(viz.camera.position.z);
+}
 
 /**
  * Called repeatedly by the animation runner.
