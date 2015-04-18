@@ -55,6 +55,7 @@ function createOutputArrow(vector: ()=>blade.Euclidean3) {
 createOutputArrow(function(){return a+b;});
 
 function tick(time: number) {
+  board.update();
 }
 
 function terminate(time: number) {return false;}
