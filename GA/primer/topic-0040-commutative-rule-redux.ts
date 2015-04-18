@@ -51,8 +51,6 @@ var H = board.create('point', [function(){return b.x;},function(){return b.y;}],
 H.hideElement();
 var F = board.create('point', [function(){return (b+a).x;},function(){return (b+a).y;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 
-var a1 = board.create('arrow', [B, C]);
-a1.setAttribute({strokeColor: '#00FF00'});
 var b1 = board.create('arrow', [C, A]);
 b1.setAttribute({strokeColor: '#00FF00'});
 
@@ -77,10 +75,7 @@ var omega = 2 * Math.PI * 1/10;
 
 function tick(time: number) {
   // Update the model from the view.
-  a.x = AHead.X() * 2;
-  a.y = AHead.Y() * 2;
-  b.x = BHead.X() * 2;
-  b.y = BHead.Y() * 2;
+  log(a);
   board.update();
 }
 
