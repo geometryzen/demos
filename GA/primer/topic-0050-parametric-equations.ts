@@ -20,9 +20,9 @@ var div = popUp.document.getElementById("box");
 div.style.width  = "760px";
 div.style.height = "560px";
 
-var colorA = '#FFFF00';
-var colorB = '#FF00FF';
-var colorC = '#00FFFF';
+var colorA = '#0000FF';
+var colorB = '#FF0000';
+var colorC = '#00FF00';
 var colorX = '#000000';
 
 // Model: Using Euclidean3 right now because __div__ is not there for Euclidean2.
