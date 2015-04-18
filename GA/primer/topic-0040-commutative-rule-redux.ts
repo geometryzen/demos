@@ -50,7 +50,7 @@ function createOutputArrow(vector: ()=>blade.Euclidean3, color: string) {
 createInputArrow(a, '#FF0000');
 createInputArrow(b, '#00FF00');
 
-createOutputArrow(function(){return a*b;}, '#0000FF');
+createOutputArrow(function(){return a+b;}, '#0000FF');
 
 function tick(time: number) {
   //board.update();
