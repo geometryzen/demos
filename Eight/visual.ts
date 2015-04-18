@@ -72,12 +72,12 @@ viz.scene.add(vortex)
 var box3 = new visual.Box({width:10, height:10, depth:0.1, color:0x0000FF, opacity:0.25, transparent:true});
 viz.scene.add(box3);
 
-var sphere = new visual.Sphere({radius:0.4});
-sphere.pos = 1.5 * e2 + 2 * e3;
-viz.scene.add(sphere);
+//var sphere = new visual.Sphere({radius:0.4});
+//sphere.pos = 1.5 * e2 + 2 * e3;
+//viz.scene.add(sphere);
 
-var ball = new visual.Sphere({radius:0.4, color:0x0000FF});
-viz.scene.add(ball);
+//var ball = new visual.Sphere({radius:0.4, color:0x0000FF});
+//viz.scene.add(ball);
 
 /**
  * The frequency of the rotation.
@@ -97,7 +97,7 @@ function tick(time: number) {
     var theta = omega * time;
     var R = exp(-theta/2);
 
-    ball.pos = R * 3 * e3 * ~R;
+//    ball.pos = R * 3 * e3 * ~R;
     arrow.attitude = R;
     box2.attitude = R;
     box3.attitude = R;
