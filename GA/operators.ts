@@ -20,7 +20,7 @@ var c = (17 * e1 + 19 * e2 + 23 * e3);
 log(a);
 log(b);
 log(a * b);
-log(a.wedge(b));
+log(a.splat(b));
 log(a | b);
 log(a.wedge(b));
 log(a ^ b);
