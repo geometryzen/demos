@@ -35,6 +35,7 @@ arrow.setLabelText("a");
 
 function tick(time: number) {
   t.x = time;
+  arrow.update();
     // We can use the variables to drive other windows!
 }
 
