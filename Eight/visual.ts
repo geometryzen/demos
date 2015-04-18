@@ -21,6 +21,8 @@ var e3 = vector(0, 0, 1);
  */
 function exp(x: blade.Euclidean3): blade.Euclidean3 {
     // Really? norm yields a Euclidean3?
+    // We now have to extract the scalar component to calculate cos, sin.
+    // Of course, we could have universal functions instead.
     var angle = x.norm().w;
     /**
      * A unit bivector representing the generator of the rotation.
@@ -71,10 +73,6 @@ viz.scene.add(vortex)
 
 var box3 = new visual.Box({width:2, height:2, depth:0.02, color:0x0000FF, opacity:0.25, transparent:true});
 viz.scene.add(box3);
-
-//var sphere = new visual.Sphere({radius:0.4});
-//sphere.pos = 1.5 * e2 + 2 * e3;
-//viz.scene.add(sphere);
 
 var ball = new visual.Sphere({radius:0.4, color:0x0000FF});
 viz.scene.add(ball);
