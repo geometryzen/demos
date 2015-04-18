@@ -19,11 +19,11 @@ div.style.height = "560px";
 
 var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, showCopyright:false, showNavigation:false, document: popUp.document});
 
-var pos = new blade.Euclidean2(0,0,0,0);
+var Z = new blade.Euclidean2(0,0,0,0);
 var A = new blade.Euclidean2(0,1,0,0);
 var B = new blade.Euclidean2(0,1,1,0);
-var tailParents = [function(){return pos.x;}, function(){return pos.y}];
-var headParents = [function(){return pos.x+A.x;}, function(){return pos.y+A.y}];
+var tailParents = [function(){return Z.x;}, function(){return Z.y}];
+var headParents = [function(){return Z.x+A.x;}, function(){return Z.y+A.y}];
 
 // Create an arrow providing two points.
 var tail = board.create('point', [0,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
