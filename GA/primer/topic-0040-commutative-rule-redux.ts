@@ -66,12 +66,8 @@ var omega = 2 * Math.PI * 1/10;
 
 function tick(time: number) {
   // Update the model from the view.
-  /*
-  a.x = C.X() - B.X();
-  a.y = C.Y() - B.Y();
-  b.x = A.X() - C.X();
-  b.y = A.Y() - C.Y();
-  */
+  a.x = AHead.X() - ATail.X();
+  a.y = AHead.Y() - AHead.Y();
   board.update();
 }
 
