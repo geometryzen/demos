@@ -35,12 +35,12 @@ function createInputArrow(initial: blade.Euclidean2, color: string): JXG.Point {
   var tail = board.create('point', [function(){return -head.X();}, function(){return -head.Y()}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
   tail.hideElement();
   board.create('arrow', [tail, head]).setAttribute({strokeColor: color});
-  head.on('drag',function(){initial.x = head.X();initial.y = head.Y()});
+//  head.on('drag',function(){initial.x = head.X();initial.y = head.Y()});
   return head;
 }
 
-createInputArrow(a, '#FF0000');
-createInputArrow(b, '#0000FF');
+var A = createInputArrow(a, '#FF0000');
+var B = createInputArrow(b, '#0000FF');
 
 var CHead = board.create('point', [function(){return (a+b).x/2;},function(){return (a+b).y/2;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 var CTail = board.create('point', [function(){return -CHead.X();},function(){return -CHead.Y();}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
@@ -49,6 +49,8 @@ var CTail = board.create('point', [function(){return -CHead.X();},function(){ret
 //a2.setAttribute({strokeColor: '#0000FF'});
 
 function tick(time: number) {
+  a.x = A.X() * 2;
+  a.y = A.Y() * 2;
   // Update the model from the view.
   board.update();
 }
