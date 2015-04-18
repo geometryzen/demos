@@ -7,19 +7,6 @@ log(JXG.hsv2rgb(0,1,1));
 
 var graph = JXG.JSXGraph;
 
-// Experiment with an alternative 'type-safe' API.
-class Board {
-    constructor(public board: JXG.Board) {
-      
-    }
-    point(x: number, y: number): JXG.Point {
-        return this.board.create("point", [x, y]);
-    }
-    arrow(tailPoint: JXG.Point, headPoint: JXG.Point, attributes?: {}): JXG.Arrow {
-        return this.board.create("arrow", [tailPoint, headPoint], attributes);
-    }
-}
-
 var popUp: Window = open("", "", "width=800, height=600");
 
 var css = '<link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />';
@@ -32,13 +19,12 @@ var div = popUp.document.getElementById("box");
 div.style.width  = "760px";
 div.style.height = "560px";
 
-var b = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, showCopyright:false, showNavigation:false, document: popUp.document});
-var board = new Board(b);
+var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, showCopyright:false, showNavigation:false, document: popUp.document});
 
 // Create an arrow providing two points.
-var tail = board.point(0.0, 0.0);
-var head = board.point(1.0, 0.0);
-var arrow = b.create('arrow', [tail, head]);
+var tail = board.create('point', [0.0, 0.0]);
+var head = board.create('point', [1.0, 0.0]);
+var arrow = board.create('arrow', [tail, head]);
 tail.hideElement();
 head.hideElement();
 arrow.setAttribute({strokeColor: JXG.hsv2rgb(0,0,0), withLabel:true});
