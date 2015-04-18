@@ -29,8 +29,9 @@ var a1 = board.create('arrow', [B, C]);
 a1.setAttribute({strokeColor: '#00FF00'});
 var b = board.create('arrow', [C, A]);
 b.setAttribute({strokeColor: '#0000FF'});
+
 var c = board.create('arrow', [B, A]);
-c.setAttribute({strokeColor: '#00FF00'});
+c.setAttribute({strokeColor: '#FF0000'});
 
 var b2 = board.create('arrow', [B, H]);
 b2.setAttribute({strokeColor: '#0000FF'});
@@ -42,7 +43,7 @@ a2.setAttribute({strokeColor: '#0000FF'});
 
 board.create('text',[function(){return (B.X()+C.X())/2},function(){return (B.Y()+C.Y())/2},"a"]);
 board.create('text',[function(){return (C.X()+A.X())/2},function(){return (C.Y()+A.Y())/2},"b"]);
-board.create('text',[function(){return (B.X()+A.X())/2},function(){return (B.Y()+A.Y())/2},"C=A+B"]);
+board.create('text',[function(){return (B.X()+A.X())/2},function(){return (B.Y()+A.Y())/2},"c"]);
 board.create('text',[function(){return (B.X()+H.X())/2},function(){return (B.Y()+H.Y())/2},"b"]);
 
 var omega = 2 * Math.PI * 1/10;
