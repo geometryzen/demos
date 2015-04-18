@@ -90,6 +90,7 @@ var omega = 2 * Math.PI * frequency * e3 ^ e1;
 
 function setUp() {
   viz.setUp();
+  viz.camera.position.set(8,8,8);
   w.Sk.output(viz.camera.position.x + "\n");
   w.Sk.output(viz.camera.position.y + "\n");
   w.Sk.output(viz.camera.position.z + "\n");
