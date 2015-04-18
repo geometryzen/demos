@@ -54,4 +54,12 @@ createInputArrow(c, 8 * e1 - 2 * e2, colorC, function(tail, head) {c.x=head.X()-
 createOutputArrow(function(){return a;}, function(){return c;}, colorA);
 createOutputArrow(function(){return b;}, function(){return c;}, colorB);
 createOutputArrow(function(){return c;}, function(){return o;}, colorC);
-createOutputArrow(function(){return c + alpha.Value() * a + beta.Value() * b;}, function(){return o;}, colorX);
+createOutputArrow(
+  function(){
+      return c + alpha.Value() * a + beta.Value() * b;
+  },
+  function(){
+    return o;
+  },
+  colorX
+);
