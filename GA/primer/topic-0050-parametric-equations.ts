@@ -30,8 +30,10 @@ var c = blade.vectorE3(2,1,0);
 // There will be two free points that act as input controlling the vectors a and b.
 var board = graph.initBoard("box", {boundingbox:[-2, 6, 14, -3], axis:true, grid:true, keepaspectratio: true, showCopyright:false, showNavigation:true, document: popUp.document});
 
-var alpha = board.create('slider', [[10, -1], [12, -1], [0, 2, 4]]).setAttribute({strokeColor:'#0000FF'});
-var beta = board.create('slider', [[10, -2], [12, -2], [0, 3, 4]]).setAttribute({strokeColor:'#FF0000'});
+var alpha = board.create('slider', [[10, -1], [12, -1], [0, 2, 4]]);
+alpha.setAttribute({strokeColor:'#0000FF'});
+var beta = board.create('slider', [[10, -2], [12, -2], [0, 3, 4]]);
+beta.setAttribute({strokeColor:'#FF0000'});
 
 // TODO: These functions could be generalized to visualize multivectors.
 function createInputArrow(mv: blade.Euclidean3, pos: ()=>blade.Euclidean3, color: string) {
