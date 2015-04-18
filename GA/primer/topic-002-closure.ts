@@ -22,7 +22,7 @@ var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: tru
 // Create an arrow providing two points.
 var B = board.create('point', [0,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 var C = board.create('point', [1,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
-var A = board.create('point', [1,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+var A = board.create('point', [2,1], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 
 var a = board.create('arrow', [B, C]);
 a.setAttribute({strokeColor: '#FF0000', withLabel:true});
