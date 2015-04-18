@@ -5,7 +5,7 @@ var log = function(s: any) {
   w.Sk.output(s+'\n');
 };
 
-// We should support shortcut construction in the BLADE library.
+// We should support shortcut construction in the blade library.
 var e1 = blade.vectorE3(1,0,0);
 var e2 = blade.vectorE3(0,1,0);
 var e3 = blade.vectorE3(0,0,1);
