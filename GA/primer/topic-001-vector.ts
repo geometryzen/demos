@@ -36,24 +36,16 @@ arrow.setLabelText("a");
 var omega = 2 * Math.PI * 1/10;
 
 function tick(time: number) {
-//  pos.x = Math.cos(omega * time);
-//  pos.y = Math.sin(omega * time);
+  vec.x = Math.cos(omega * time);
+  vec.y = Math.sin(omega * time);
   board.update();
-    // We can use the variables to drive other windows!
 }
 
-function terminate(time: number) {
-  return false;
-}
+function terminate(time: number) {return false;}
 
-function setUp() {
-  
-}
+function setUp() {}
 
-function tearDown() {
-  popUp.close();
-}
+function tearDown() {popUp.close();}
 
-// May need to make sure that JSXGraph and animationRunner play well together?
-var war = eight.animationRunner(tick, terminate, setUp, tearDown, popUp.window);
-war.start();
+var runner = eight.animationRunner(tick, terminate, setUp, tearDown, popUp.window);
+runner.start();
