@@ -32,8 +32,9 @@ var board = new Board(b);
 var tail = board.point(0.0, 0.0);
 var head = board.point(1.0, 0.0);
 var arrow = board.arrow(tail, head);
-tail.hideElement()
+tail.hideElement();
 head.hideElement();
+arrow.setLabeltext("a");
 
 function tick(time: number) {
     // We can use the variables to drive other windows!
