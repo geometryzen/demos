@@ -21,7 +21,7 @@ div.style.height = "560px";
 
 var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, showCopyright:false, showNavigation:false, document: popUp.document});
 
-var t = new blade.Euclidean2(0,5,0,0);
+var t = new blade.Euclidean2(0,5,2,0);
 var parents = [function(){return t.x;}, function(){return t.y}];
 
 // Create an arrow providing two points.
