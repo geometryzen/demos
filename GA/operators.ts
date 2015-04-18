@@ -25,3 +25,5 @@ log("");
 log(a * b | c);
 log(a * (b | c));
 log((a * b) | c);
+
+log(e1 << e1 ^ e2);
