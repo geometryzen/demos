@@ -62,9 +62,9 @@ viz.scene.add(box1);
 var arrow = new visual.Arrow({scale: 0.4, color: 0xFFFF00});
 viz.scene.add(arrow);
 
-var box2 = new visual.Box({width:1, height:2, depth:3, color:0xFF0000, opacity:0.25});
+var box2 = new visual.Box({width:0.2, height:0.4, depth:0.6, color:0xFF0000, opacity:0.25});
 viz.scene.add(box2);
-box2.position.set(3,-3,3);
+box2.position.set(0.6,-0.6,0.6);
 
 var vortex = new visual.Vortex({radius:4,radiusCone:0.32,color:0x00FFFF});
 viz.scene.add(vortex)
