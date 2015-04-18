@@ -20,6 +20,8 @@ var div = popUp.document.getElementById("box");
 div.style.width  = "760px";
 div.style.height = "560px";
 
+var colorA = '#FFFF00';
+
 // Model: Using Euclidean3 right now because __div__ is not there for Euclidean2.
 var o = blade.vectorE3(0,0,0);
 var e1 = blade.vectorE3(1,0,0);
