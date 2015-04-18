@@ -20,7 +20,7 @@ var div = popUp.document.getElementById("box");
 div.style.width  = "760px";
 div.style.height = "560px";
 
-// Model
+// Model: Using Eiclidean3 right now because __div__ is not there for Euclidean2.
 var o = blade.vectorE3(0,0,0);
 var a = blade.vectorE3(1,0,0);
 var b = blade.vectorE3(1,1,0);
@@ -29,18 +29,14 @@ var b = blade.vectorE3(1,1,0);
 // There will be two free points that act as input controlling the vectors a and b.
 var board = graph.initBoard("box", {boundingbox:[-2,2,2,-2], axis:true, grid:true, keepaspectratio: true, showCopyright:false, showNavigation:true, document: popUp.document});
 
-function createInputArrow(initial: blade.Euclidean3, color: string): JXG.Point {
+function createInputArrow(initial: blade.Euclidean3, color: string) {
   // This construction could be turned into a function...
   var head = board.create('point', [initial.x/2, initial.y/2], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
   var tail = board.create('point', [function(){return -head.X();}, function(){return -head.Y()}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
   tail.hideElement();
   board.create('arrow', [tail, head]).setAttribute({strokeColor: color});
   head.on('drag',function(){initial.x = head.X()*2;initial.y = head.Y()*2});
-  return head;
 }
-
-var A = createInputArrow(a, '#FF0000');
-var B = createInputArrow(b, '#00FF00');
 
 function createOutputArrow(vector: ()=>blade.Euclidean3, color: string) {
 
@@ -50,6 +46,9 @@ function createOutputArrow(vector: ()=>blade.Euclidean3, color: string) {
     tail.hideElement();
     board.create('arrow', [tail, head]).setAttribute({strokeColor: color});
 }
+
+createInputArrow(a, '#FF0000');
+createInputArrow(b, '#00FF00');
 
 createOutputArrow(function(){return a+b;}, '#0000FF');
 
