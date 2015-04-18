@@ -20,6 +20,10 @@ var div = popUp.document.getElementById("box");
 div.style.width  = "760px";
 div.style.height = "560px";
 
+// Model
+var a = new blade.Euclidean2(0,0,0,0);
+var b = new blade.Euclidean2(0,0,0,0);
+
 var board = graph.initBoard("box", {boundingbox:[-1,2,3,-1], axis:false, grid:false, keepaspectratio: true, showCopyright:false, showNavigation:true, document: popUp.document});
 
 // Create an arrow providing two points.
@@ -54,6 +58,10 @@ board.create('text',[function(){return (B.X()+H.X())/2},function(){return (B.Y()
 var omega = 2 * Math.PI * 1/10;
 
 function tick(time: number) {
+  a.x = C.X() - B.X();
+  a.y = C.Y() - B.Y();
+  b.x = A.X() - C.X();
+  b.y = A.Y() - C.Y();
   board.update();
 }
 
