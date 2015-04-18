@@ -31,7 +31,7 @@ var a = board.create('arrow', [tail, head]);
 a.setAttribute({strokeColor: '#FF0000', withLabel:true});
 a.setLabelText("A");
 var bTail = board.create('point', [function(){return Z.x+A.x;}, function(){return Z.y+A.y}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
-var bHead = board.create('point', [1,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+var bHead = board.create('point', [function(){return Z.x+A.x+B.x;}, function(){return Z.y+A.y+B.y}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 var b = board.create('arrow', [tail, head]);
 b.setAttribute({strokeColor: '#0000FF', withLabel:true});
 b.setLabelText("B");
