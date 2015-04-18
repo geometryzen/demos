@@ -21,8 +21,9 @@ div.style.width  = "760px";
 div.style.height = "560px";
 
 // Model
-var a = new blade.Euclidean2(0,0,0,0);
-var b = new blade.Euclidean2(0,0,0,0);
+var o = new blade.Euclidean2(0,0,0,0);
+var a = new blade.Euclidean2(0,1,0,0);
+var b = new blade.Euclidean2(0,1,1,0);
 
 var board = graph.initBoard("box", {boundingbox:[-1,2,3,-1], axis:false, grid:false, keepaspectratio: true, showCopyright:false, showNavigation:true, document: popUp.document});
 
@@ -30,7 +31,8 @@ var board = graph.initBoard("box", {boundingbox:[-1,2,3,-1], axis:false, grid:fa
 var B = board.create('point', [0,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 var C = board.create('point', [1,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 var A = board.create('point', [2,1], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
-var H = board.create('point', [function(){return B.X()+A.X()-C.X();},function(){return B.Y()+A.Y()-C.Y();}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+
+var H = board.create('point', [function(){return b.x;},function(){return B.Y()+A.Y()-C.Y();}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 H.hideElement();
 
 var a1 = board.create('arrow', [B, C]);
@@ -58,6 +60,7 @@ board.create('text',[function(){return (B.X()+H.X())/2},function(){return (B.Y()
 var omega = 2 * Math.PI * 1/10;
 
 function tick(time: number) {
+  // Update the model from the view.
   a.x = C.X() - B.X();
   a.y = C.Y() - B.Y();
   b.x = A.X() - C.X();
