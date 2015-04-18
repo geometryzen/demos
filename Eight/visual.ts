@@ -97,7 +97,7 @@ function tick(time: number) {
     var theta = omega * time;
     var R = exp(-theta/2);
 
-    ball.pos = R * 2 * e3 * ~R;
+    ball.pos = R * 3 * e3 * ~R;
     arrow.attitude = R;
     box2.attitude = R;
     box3.attitude = R;
