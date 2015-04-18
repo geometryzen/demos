@@ -51,6 +51,8 @@ function createOutputArrow() {
     C.setAttribute({strokeColor: '#0000FF'});
 }
 
+createOutputArrow();
+
 function tick(time: number) {
 }
 
