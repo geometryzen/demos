@@ -2,7 +2,7 @@
 /**
  * Constructs a vector from the specified Cartesian components.
  */
-var vector: (x: number, y: number, z:  number)=>blade.Euclidean3 = visual.vectorE3;
+var vector: (x: number, y: number, z:  number)=>blade.Euclidean3 = blade.vectorE3;
 /**
  * The unit vector in the x-direction.
  */
