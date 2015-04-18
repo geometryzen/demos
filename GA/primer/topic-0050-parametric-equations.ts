@@ -56,4 +56,4 @@ createInputArrow(a, '#0000FF');
 createInputArrow(b, '#FF0000');
 createInputArrow(c, '#00FF00');
 
-createOutputArrow(function(){return a+b;}, '#000000');
+createOutputArrow(function(){return c + alpha.Value() * a + beta.Value() * b;}, '#000000');
