@@ -32,6 +32,7 @@ b.setLabelText("B");
 var c = board.create('arrow', [B, A]);
 c.setAttribute({strokeColor: '#00FF00'});
 board.create('text',[function(){return (B.X()+C.X())/2},function(){return (B.Y()+C.Y())/2},"A"]);
+board.create('text',[function(){return (C.X()+A.X())/2},function(){return (C.Y()+A.Y())/2},"B"]);
 board.create('text',[function(){return (B.X()+A.X())/2},function(){return (B.Y()+A.Y())/2},"C=A+B"]);
 
 var omega = 2 * Math.PI * 1/10;
