@@ -33,7 +33,8 @@ var board = graph.initBoard("box", {boundingbox:[-1,2,3,-1], axis:true, grid:tru
 var AHead = board.create('point', [a.x/2, a.y/2], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 var ATail = board.create('point', [function(){return -AHead.X();}, function(){return -AHead.Y()}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 
-var a1 = board.create('arrow', [ATail, AHead]);
+var A = board.create('arrow', [ATail, AHead]);
+A.setAttribute({strokeColor: '#FF0000'});
 
 /*
 var C = board.create('point', [1,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
