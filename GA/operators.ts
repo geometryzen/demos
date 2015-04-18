@@ -10,9 +10,6 @@ var e1 = blade.vectorE3(1,0,0);
 var e2 = blade.vectorE3(0,1,0);
 var e3 = blade.vectorE3(0,0,1);
 
-var random = Math.random;
-var meter = blade.units.meter;
-
 var a = (2 * e1 + 3 * e2 + 5 * e3);
 var b = (7 * e1 + 11 * e2 + 13 * e3);
 var c = (17 * e1 + 19 * e2 + 23 * e3);
