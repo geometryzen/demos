@@ -22,6 +22,7 @@ log(b);
 log(a * b);
 log(a.wedge(b));
 log(a | b);
+log(a.wedge(b));
 log(a ^ b);
 log(a | b + a ^ b);
 log(a << b + a ^ b);
