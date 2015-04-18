@@ -42,7 +42,7 @@ var arrow = board.arrow(tail, head);
 tail.hideElement();
 head.hideElement();
 arrow.setAttribute({strokeColor: JXG.hsv2rgb(0,0,0), withLabel:true});
-arrow.setName("v");
+arrow.setName("{vec(v)}");
 arrow.setLabel("x");
 
 function tick(time: number) {
