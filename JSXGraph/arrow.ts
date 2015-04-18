@@ -31,7 +31,7 @@ var tail = board.create('point', tailParents, {withLabel:false, strokeColor:'#CC
 var head = board.create('point', headParents, {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#00FF00'});
 var arrow = board.create('arrow', [tail, head]);
 arrow.setAttribute({strokeColor: JXG.hsv2rgb(0,0,0), withLabel:true});
-arrow.setLabelText("a");
+arrow.setLabelText("v");
 
 var omega = 2 * Math.PI * 1/10;
 
