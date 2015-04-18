@@ -17,7 +17,7 @@ var div = popUp.document.getElementById("box");
 div.style.width  = "760px";
 div.style.height = "560px";
 
-var board = graph.initBoard("box", {boundingbox:[-1,2,3,-1], axis:false, grid:true, keepaspectratio: true, showCopyright:false, showNavigation:true, document: popUp.document});
+var board = graph.initBoard("box", {boundingbox:[-1,2,3,-1], axis:false, grid:false, keepaspectratio: true, showCopyright:false, showNavigation:true, document: popUp.document});
 
 // Create an arrow providing two points.
 var B = board.create('point', [0,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
