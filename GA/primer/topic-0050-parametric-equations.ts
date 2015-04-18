@@ -52,8 +52,8 @@ function createOutputArrow(mv: ()=>blade.Euclidean3, color: string) {
     board.create('arrow', [tail, head]).setAttribute({strokeColor: color});
 }
 
-createInputArrow(a, c, '#0000FF');
-createInputArrow(b, c, '#FF0000');
+createInputArrow(a, c+a/2, '#0000FF');
+createInputArrow(b, c+b/2, '#FF0000');
 createInputArrow(c, o, '#00FF00');
 
 createOutputArrow(function(){return c + alpha.Value() * a + beta.Value() * b;}, '#000000');
