@@ -55,8 +55,8 @@ var help = new createjs.Text("Hit Esc key to exit. Mouse to Rotate, Zoom, and Pa
 help.x = 140; help.y = 100;
 viz.stage.addChild(help);
 
-var box1 = new visual.Box({width:5, height:0.1, depth:5, color:0x00FF00});
-box1.pos = -2 * e2;
+var box1 = new visual.Box({height:0.02, color:0x00FF00});
+box1.pos = -2 * e2 / 5;
 viz.scene.add(box1);
 
 var arrow = new visual.Arrow({scale: 2.0, color: 0xFFFF00});
@@ -90,7 +90,7 @@ var omega = 2 * Math.PI * frequency * e3 ^ e1;
 
 function setUp() {
   viz.setUp();
-  viz.camera.position.set(10,10,10);
+  viz.camera.position.set(2,2,2);
   w.Sk.output(viz.camera.position.x + "\n");
   w.Sk.output(viz.camera.position.y + "\n");
   w.Sk.output(viz.camera.position.z + "\n");
