@@ -38,7 +38,7 @@ var board = new Board(b);
 // Create an arrow providing two points.
 var tail = board.point(0.0, 0.0);
 var head = board.point(1.0, 0.0);
-var arrow = board.arrow(tail, head);
+var arrow = b.create('arrow', [tail, head]);
 tail.hideElement();
 head.hideElement();
 arrow.setAttribute({strokeColor: JXG.hsv2rgb(0,0,0), withLabel:true});
