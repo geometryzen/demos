@@ -21,7 +21,7 @@ div.style.height = "560px";
 
 var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, showCopyright:false, showNavigation:false, document: popUp.document});
 
-var pos = new blade.Euclidean2(0,5,2,0);
+var pos = new blade.Euclidean2(0,0,0,0);
 var vec = new blade.Euclidean2(0,1,0,0);
 var tailParents = [function(){return pos.x;}, function(){return pos.y}];
 var headParents = [function(){return pos.x+vec.x;}, function(){return pos.y+vec.y}];
