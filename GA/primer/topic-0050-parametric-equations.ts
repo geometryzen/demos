@@ -21,6 +21,7 @@ div.style.width  = "760px";
 div.style.height = "560px";
 
 var colorA = '#FFFF00';
+var colorB = '#FF00FF'
 
 // Model: Using Euclidean3 right now because __div__ is not there for Euclidean2.
 var o = blade.vectorE3(0,0,0);
@@ -35,9 +36,9 @@ var c = 2 * e1 + e2;
 var board = graph.initBoard("box", {boundingbox:[-2, 6, 14, -3], axis:true, grid:true, keepaspectratio: true, showCopyright:false, showNavigation:true, document: popUp.document});
 
 var alpha = board.create('slider', [[10, -1], [12, -1], [0, 1, 4]]);
-alpha.setAttribute({strokeColor:'#0000FF'});
+alpha.setAttribute({strokeColor: colorA});
 var beta = board.create('slider', [[10, -2], [12, -2], [0, 1, 4]]);
-beta.setAttribute({strokeColor:'#FF0000'});
+beta.setAttribute({strokeColor: colorB});
 
 // TODO: These functions could be generalized to visualize multivectors.
 function createInputArrow(mv: blade.Euclidean3, pos: blade.Euclidean3, color: string, handler: (tail:JXG.Point, head:JXG.Point)=>void) {
@@ -59,10 +60,10 @@ function createOutputArrow(mv: ()=>blade.Euclidean3, pos: ()=>blade.Euclidean3, 
 }
 
 createInputArrow(a, 1 * e1 - 2 * e2, colorA, function(tail, head) {a.x=head.X()-tail.X();a.y=head.Y()-tail.Y()});
-createInputArrow(b, 4 * e1 - 2 * e2, '#FF0000', function(tail, head) {b.x=head.X()-tail.X();b.y=head.Y()-tail.Y()});
+createInputArrow(b, 4 * e1 - 2 * e2, colorB, function(tail, head) {b.x=head.X()-tail.X();b.y=head.Y()-tail.Y()});
 createInputArrow(c, 7 * e1 - 2 * e2, '#00FF00', function(tail, head) {c.x=head.X()-tail.X();c.y=head.Y()-tail.Y()});
 
 createOutputArrow(function(){return a;}, function(){return c;}, colorA);
-createOutputArrow(function(){return b;}, function(){return c;}, '#FF0000');
+createOutputArrow(function(){return b;}, function(){return c;}, colorB);
 createOutputArrow(function(){return c;}, function(){return o;}, '#00FF00');
 createOutputArrow(function(){return c + alpha.Value() * a + beta.Value() * b;}, function(){return o;}, '#000000');
