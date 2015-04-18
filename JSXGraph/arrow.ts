@@ -24,7 +24,7 @@ var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: tru
 var t = new blade.Euclidean2(0,5,0,0);
 
 // Create an arrow providing two points.
-var tail = board.create('point', [function(){return t.x;}, 0.0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#00FF00'});
+var tail = board.create('point', [function(){return t.x;}, 0.0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#CCCCCC'});
 var head = board.create('point', [1.0, 0.0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#00FF00'});
 var arrow = board.create('arrow', [tail, head]);
 //tail.hideElement();
