@@ -78,8 +78,6 @@ var omega = 2 * Math.PI * 1/10;
 
 function tick(time: number) {
   // Update the model from the view.
-  var c1 = a + b;
-  var c2 = b + a;
   board.update();
 }
 
