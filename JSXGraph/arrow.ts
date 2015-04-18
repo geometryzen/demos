@@ -3,7 +3,7 @@ var log = function(s: any) {
   w.Sk.output(s+'\n');
 };
 
-log(JXG.hsv2rgb(0,0,0));
+log(JXG.hsv2rgb(0,1,0));
 
 var graph = JXG.JSXGraph;
 
