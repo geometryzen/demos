@@ -20,24 +20,22 @@ div.style.height = "560px";
 var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, showCopyright:false, showNavigation:false, document: popUp.document});
 
 var pos = new blade.Euclidean2(0,0,0,0);
-var vec = new blade.Euclidean2(0,1,0,0);
+var A = new blade.Euclidean2(0,1,0,0);
 var tailParents = [function(){return pos.x;}, function(){return pos.y}];
-var headParents = [function(){return pos.x+vec.x;}, function(){return pos.y+vec.y}];
+var headParents = [function(){return pos.x+A.x;}, function(){return pos.y+A.y}];
 
 // Create an arrow providing two points.
-var tail = board.create('point', tailParents, {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#CCCCCC'});
-var head = board.create('point', headParents, {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#00FF00'});
-var arrow = board.create('arrow', [tail, head]);
+var tail = board.create('point', [0,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#CCCCCC'});
+var head = board.create('point', [1,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#00FF00'});
+var a = board.create('arrow', [tail, head]);
 tail.hideElement();
 head.hideElement();
-arrow.setAttribute({strokeColor: JXG.hsv2rgb(0,0,0), withLabel:true});
-arrow.setLabelText("a");
+a.setAttribute({strokeColor: '#FF0000', withLabel:true});
+a.setLabelText("a");
 
 var omega = 2 * Math.PI * 1/10;
 
 function tick(time: number) {
-  vec.x = Math.cos(omega * time);
-  vec.y = Math.sin(omega * time);
   board.update();
 }
 
