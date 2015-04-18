@@ -1,5 +1,5 @@
-var i = new blade.Euclidean2(0,1,0,0);
-var j = new blade.Euclidean2(0,0,1,0);
+var e1 = new blade.Euclidean2(0,1,0,0);
+var e2 = new blade.Euclidean2(0,0,1,0);
 
 var log = function(s: any) {
   var w: any = window;
@@ -10,4 +10,5 @@ function show(label: string, x) {
   log(label + ": " + x);
 }
 
-show('e1', i);
+show('e1', e1);
+show('e1 * e2', e1 * e2);
