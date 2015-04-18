@@ -36,13 +36,13 @@ var beta = board.create('slider', [[10, -2], [12, -2], [0, 1, 4]]);
 beta.setAttribute({strokeColor:'#FF0000'});
 
 // TODO: These functions could be generalized to visualize multivectors.
-function createInputArrow(mv: blade.Euclidean3, pos: ()=>blade.Euclidean3, color: string) {
+function createInputArrow(mv: blade.Euclidean3, pos: ()=>blade.Euclidean3, color: string, handler: (tail:JXG.Point, head:JXG.Point)=>void) {
   // This construction could be turned into a function...
   var head = board.create('point', [pos().x + mv.x, pos().y + mv.y], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
   var tail = board.create('point', [function(){return pos().x;}, function(){return pos().y;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
   tail.hideElement();
   board.create('arrow', [tail, head]).setAttribute({strokeColor: color});
-  head.on('drag',function(){mv.x = head.X()-tail.X(); mv.y = head.Y()-tail.Y()});
+  head.on('drag',function(){handler(tail, head)});
 }
 
 function createOutputArrow(mv: ()=>blade.Euclidean3, pos: ()=>blade.Euclidean3, color: string) {
@@ -54,8 +54,10 @@ function createOutputArrow(mv: ()=>blade.Euclidean3, pos: ()=>blade.Euclidean3, 
     board.create('arrow', [tail, head]).setAttribute({strokeColor: color});
 }
 
-createInputArrow(a, function(){return c;}, '#0000FF');
-createInputArrow(b, function(){return c;}, '#FF0000');
-createInputArrow(c, function(){return o;}, '#00FF00');
+createInputArrow(a, function(){return c;}, '#0000FF', function(tail, head) {a.x=head.X()-tail.X();a.y=head.Y()-tail.Y()});
+createInputArrow(b, function(){return c;}, '#FF0000', function(tail, head) {b.x=head.X()-tail.X();b.y=head.Y()-tail.Y()});
+createInputArrow(c, function(){return o;}, '#00FF00', function(tail, head) {
+  
+});
 
 createOutputArrow(function(){return c + alpha.Value() * a + beta.Value() * b;}, function(){return o;}, '#000000');
