@@ -35,7 +35,7 @@ function createInputArrow(initial: blade.Euclidean3, color: string): JXG.Point {
   var tail = board.create('point', [function(){return -head.X();}, function(){return -head.Y()}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
   tail.hideElement();
   board.create('arrow', [tail, head]).setAttribute({strokeColor: color});
-  head.on('drag',function(){initial.x = head.X();initial.y = head.Y()});
+//  head.on('drag',function(){initial.x = head.X();initial.y = head.Y()});
   return head;
 }
 
@@ -49,6 +49,10 @@ var CHead = board.create('point', [function(){return (a+b).x/2;},function(){retu
 //a2.setAttribute({strokeColor: '#0000FF'});
 
 function tick(time: number) {
+  a.x = A.X() * 2;
+  a.y = A.Y() * 2;
+  b.x = B.X() * 2;
+  b.y = B.Y() * 2;
   // Update the model from the view.
 //  board.update();
 }
