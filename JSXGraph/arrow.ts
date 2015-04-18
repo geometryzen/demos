@@ -1,3 +1,8 @@
+var log = function(s: any) {
+  var w: any = window;
+  w.Sk.output(s+'\n');
+};
+
 var graph = JXG.JSXGraph;
 
 // Experiment with an alternative 'type-safe' API.
