@@ -39,6 +39,7 @@ function createArrow(initial: blade.Euclidean2, color: string): JXG.Point {
 }
 
 var AHead = createArrow(a,'#FF0000');
+var BHead = createArrow(b,'#0000FF');
 
 
 /*
