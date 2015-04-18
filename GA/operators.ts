@@ -26,4 +26,4 @@ log(a * b | c);
 log(a * (b | c));
 log((a * b) | c);
 
-log(e1 << e1 ^ e2);
+log(e1 << e2 ^ e1);
