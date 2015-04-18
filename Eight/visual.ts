@@ -82,7 +82,7 @@ viz.scene.add(box3);
 /**
  * The frequency of the rotation.
  */
-var frequency = 1/20;
+var frequency = 1/10;
 /**
  * The angular velocity, represented as a bivector.
  */
