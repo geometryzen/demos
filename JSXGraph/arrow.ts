@@ -42,8 +42,7 @@ var arrow = board.arrow(tail, head);
 tail.hideElement();
 head.hideElement();
 arrow.setAttribute({strokeColor: JXG.hsv2rgb(0,0,0), withLabel:true});
-arrow.setName("x");
-arrow.setLabelText("m");
+arrow.setLabelText("a");
 
 function tick(time: number) {
     // We can use the variables to drive other windows!
