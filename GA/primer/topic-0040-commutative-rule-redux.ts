@@ -70,8 +70,8 @@ var omega = 2 * Math.PI * 1/10;
 
 function tick(time: number) {
   // Update the model from the view.
-  a.x = AHead.X() - ATail.X();
-  a.y = AHead.Y() - AHead.Y();
+  a.x = AHead.X() * 2;
+  a.y = AHead.Y() * 2;
   board.update();
 }
 
