@@ -22,9 +22,11 @@ div.style.height = "560px";
 
 // Model: Using Euclidean3 right now because __div__ is not there for Euclidean2.
 var o = blade.vectorE3(0,0,0);
-var a = blade.vectorE3(2,0,0);
-var b = blade.vectorE3(0,1,0);
-var c = blade.vectorE3(2,1,0);
+var e1 = blade.vectorE3(1,0,0);
+var e2 = blade.vectorE3(0,1,0);
+var a = 2 * e1;
+var b = e2;
+var c = 2 * e1 + e2;
 
 // View
 // There will be two free points that act as input controlling the vectors a and b.
@@ -54,7 +56,7 @@ function createOutputArrow(mv: ()=>blade.Euclidean3, pos: ()=>blade.Euclidean3, 
     board.create('arrow', [tail, head]).setAttribute({strokeColor: color});
 }
 
-createInputArrow(a, function(){return c;}, '#0000FF', function(tail, head) {a.x=head.X()-tail.X();a.y=head.Y()-tail.Y()});
+createInputArrow(a, function(){return 1 * e1 - 2 * e2;}, '#0000FF', function(tail, head) {a.x=head.X()-tail.X();a.y=head.Y()-tail.Y()});
 createInputArrow(b, function(){return c;}, '#FF0000', function(tail, head) {b.x=head.X()-tail.X();b.y=head.Y()-tail.Y()});
 createInputArrow(c, function(){return o;}, '#00FF00', function(tail, head) {c.x=head.X()-tail.X();c.y=head.Y()-tail.Y()});
 
