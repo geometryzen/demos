@@ -34,6 +34,7 @@ arrow.setAttribute({strokeColor: JXG.hsv2rgb(0,0,0), withLabel:true});
 arrow.setLabelText("a");
 
 function tick(time: number) {
+  t.x = time;
     // We can use the variables to drive other windows!
 }
 
