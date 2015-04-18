@@ -66,7 +66,7 @@ var box2 = new visual.Box({width:0.2, height:0.4, depth:0.6, color:0xFF0000, opa
 viz.scene.add(box2);
 box2.position.set(0.6,-0.6,0.6);
 
-var vortex = new visual.Vortex({radius:4,radiusCone:0.32,color:0x00FFFF});
+var vortex = new visual.Vortex({radius:0.8,radiusCone:0.7,color:0x00FFFF});
 viz.scene.add(vortex)
 
 var box3 = new visual.Box({width:10, height:10, depth:0.1, color:0x0000FF, opacity:0.25, transparent:true});
