@@ -54,7 +54,6 @@ createInputArrow(b, '#00FF00');
 createOutputArrow(function(){return a+b;}, '#0000FF');
 
 function tick(time: number) {
-  //board.update();
 }
 
 function terminate(time: number) {return false;}
