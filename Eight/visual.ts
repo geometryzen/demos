@@ -81,6 +81,8 @@ var frequency = 1/10;
  */
 var omega = 2 * Math.PI * frequency * e3 ^ e1;
 
+var track = visual.trackball(box2, popUp.wnd);
+
 function setUp() {
   viz.setUp();
   viz.camera.position.set(2,2,2);
@@ -100,6 +102,7 @@ function tick(time: number) {
     vortex.attitude = R;
 
     viz.update();
+    track.update();
 }
 
 function terminate(time: number) { return false; }
