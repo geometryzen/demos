@@ -29,7 +29,7 @@ var b = new blade.Euclidean2(0,1,1,0);
 // There will be two free points that act as input controlling the vectors a and b.
 var board = graph.initBoard("box", {boundingbox:[-1,2,3,-1], axis:true, grid:true, keepaspectratio: true, showCopyright:false, showNavigation:true, document: popUp.document});
 
-// Create an arrow providing two points.
+// This construction could be turned into a function.
 var AHead = board.create('point', [a.x/2, a.y/2], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 var ATail = board.create('point', [function(){return -AHead.X();}, function(){return -AHead.Y()}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 ATail.hideElement();
