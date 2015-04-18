@@ -29,8 +29,8 @@ var b = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, s
 var board = new Board(b);
 
 // Create an arrow providing two points.
-var tail = board.point(4.5, 2.0);
-var head = board.point(1.0, 1.0);
+var tail = board.point(0.0, 0.0);
+var head = board.point(0.0, 1.0);
 var arrow = board.arrow(tail, head);
 tail.hideElement()
 head.hideElement();
