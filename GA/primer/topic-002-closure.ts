@@ -28,8 +28,6 @@ var headParents = [function(){return pos.x+A.x;}, function(){return pos.y+A.y}];
 var tail = board.create('point', [0,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#CCCCCC'});
 var head = board.create('point', [1,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#00FF00'});
 var a = board.create('arrow', [tail, head]);
-tail.hideElement();
-head.hideElement();
 a.setAttribute({strokeColor: '#FF0000', withLabel:true});
 a.setLabelText("a");
 
