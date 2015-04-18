@@ -43,10 +43,10 @@ function createInputArrow(mv: blade.Euclidean3, pos: ()=>blade.Euclidean3, color
   head.on('drag',function(){mv.x = head.X()-tail.X(); mv.y = head.Y()-tail.Y()});
 }
 
-function createOutputArrow(mv: ()=>blade.Euclidean3, color: string) {
+function createOutputArrow(mv: ()=>blade.Euclidean3, pos: ()=>blade.Euclidean3, color: string) {
 
-    var head = board.create('point', [function(){return mv().x/2;},function(){return mv().y/2;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
-    var tail = board.create('point', [function(){return -head.X();},function(){return -head.Y();}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+    var head = board.create('point', [function(){return mv().x;},function(){return mv().y;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+    var tail = board.create('point', [function(){return pos().x;},function(){return pos().y;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
     head.hideElement();
     tail.hideElement();
     board.create('arrow', [tail, head]).setAttribute({strokeColor: color});
@@ -56,4 +56,4 @@ createInputArrow(a, function(){return c;}, '#0000FF');
 createInputArrow(b, function(){return c;}, '#FF0000');
 createInputArrow(c, function(){return o;}, '#00FF00');
 
-createOutputArrow(function(){return c + alpha.Value() * a + beta.Value() * b;}, '#000000');
+createOutputArrow(function(){return c + alpha.Value() * a + beta.Value() * b;}, function(){return o;}, '#000000');
