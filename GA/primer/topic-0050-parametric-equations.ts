@@ -54,6 +54,6 @@ function createOutputArrow(mv: ()=>blade.Euclidean3, color: string) {
 
 createInputArrow(a, c+a/2, '#0000FF');
 createInputArrow(b, c+b/2, '#FF0000');
-createInputArrow(c, o, '#00FF00');
+createInputArrow(c, c/2, '#00FF00');
 
 createOutputArrow(function(){return c + alpha.Value() * a + beta.Value() * b;}, '#000000');
