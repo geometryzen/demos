@@ -38,10 +38,10 @@ var beta = board.create('slider', [[10, -2], [12, -2], [0, 1, 4]]);
 beta.setAttribute({strokeColor:'#FF0000'});
 
 // TODO: These functions could be generalized to visualize multivectors.
-function createInputArrow(mv: blade.Euclidean3, pos: ()=>blade.Euclidean3, color: string, handler: (tail:JXG.Point, head:JXG.Point)=>void) {
+function createInputArrow(mv: blade.Euclidean3, pos: blade.Euclidean3, color: string, handler: (tail:JXG.Point, head:JXG.Point)=>void) {
   // This construction could be turned into a function...
-  var head = board.create('point', [pos().x + mv.x, pos().y + mv.y], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
-  var tail = board.create('point', [function(){return pos().x;}, function(){return pos().y;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+  var head = board.create('point', [pos.x + mv.x, pos.y + mv.y], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+  var tail = board.create('point', [function(){return pos.x - mv.x/2;}, function(){return pos.y-mv.y/2;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
   tail.hideElement();
   board.create('arrow', [tail, head]).setAttribute({strokeColor: color});
   head.on('drag',function(){handler(tail, head)});
@@ -56,8 +56,8 @@ function createOutputArrow(mv: ()=>blade.Euclidean3, pos: ()=>blade.Euclidean3, 
     board.create('arrow', [tail, head]).setAttribute({strokeColor: color});
 }
 
-createInputArrow(a, function(){return 1 * e1 - 2 * e2;}, '#0000FF', function(tail, head) {a.x=head.X()-tail.X();a.y=head.Y()-tail.Y()});
-createInputArrow(b, function(){return 4 * e1 - 2 * e2;}, '#FF0000', function(tail, head) {b.x=head.X()-tail.X();b.y=head.Y()-tail.Y()});
-createInputArrow(c, function(){return 7 * e1 - 2 * e2;}, '#00FF00', function(tail, head) {c.x=head.X()-tail.X();c.y=head.Y()-tail.Y()});
+createInputArrow(a, 1 * e1 - 2 * e2, '#0000FF', function(tail, head) {a.x=head.X()-tail.X();a.y=head.Y()-tail.Y()});
+createInputArrow(b, 4 * e1 - 2 * e2, '#FF0000', function(tail, head) {b.x=head.X()-tail.X();b.y=head.Y()-tail.Y()});
+createInputArrow(c, 7 * e1 - 2 * e2, '#00FF00', function(tail, head) {c.x=head.X()-tail.X();c.y=head.Y()-tail.Y()});
 
 createOutputArrow(function(){return c + alpha.Value() * a + beta.Value() * b;}, function(){return o;}, '#000000');
