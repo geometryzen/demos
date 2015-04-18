@@ -33,8 +33,11 @@ var arrow = board.create('arrow', [tail, head]);
 arrow.setAttribute({strokeColor: JXG.hsv2rgb(0,0,0), withLabel:true});
 arrow.setLabelText("a");
 
+var omega = 2 * Math.PI * 1/10;
+
 function tick(time: number) {
-  t.x = Math.cos(time);
+  t.x = Math.cos(omega * time);
+  t.y = Math.sin(omega * time);
   board.update();
     // We can use the variables to drive other windows!
 }
