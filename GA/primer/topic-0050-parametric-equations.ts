@@ -43,7 +43,6 @@ function createInputArrow(mv: blade.Euclidean3, pos: ()=>blade.Euclidean3, color
   tail.hideElement();
   board.create('arrow', [tail, head]).setAttribute({strokeColor: color});
   head.on('drag',function(){mv.x = head.X()-tail.X(); mv.y = head.Y()-tail.Y()});
-  tail.on('drag',function(){mv.x = head.X()-tail.X(); mv.y = head.Y()-tail.Y()});
 }
 
 function createOutputArrow(mv: ()=>blade.Euclidean3, pos: ()=>blade.Euclidean3, color: string) {
