@@ -21,7 +21,9 @@ div.style.width  = "760px";
 div.style.height = "560px";
 
 var colorA = '#FFFF00';
-var colorB = '#FF00FF'
+var colorB = '#FF00FF';
+var colorC = '#00FFFF';
+var colorX = '#FF0000';
 
 // Model: Using Euclidean3 right now because __div__ is not there for Euclidean2.
 var o = blade.vectorE3(0,0,0);
@@ -61,9 +63,9 @@ function createOutputArrow(mv: ()=>blade.Euclidean3, pos: ()=>blade.Euclidean3, 
 
 createInputArrow(a, 1 * e1 - 2 * e2, colorA, function(tail, head) {a.x=head.X()-tail.X();a.y=head.Y()-tail.Y()});
 createInputArrow(b, 4 * e1 - 2 * e2, colorB, function(tail, head) {b.x=head.X()-tail.X();b.y=head.Y()-tail.Y()});
-createInputArrow(c, 7 * e1 - 2 * e2, '#00FF00', function(tail, head) {c.x=head.X()-tail.X();c.y=head.Y()-tail.Y()});
+createInputArrow(c, 7 * e1 - 2 * e2, colorC, function(tail, head) {c.x=head.X()-tail.X();c.y=head.Y()-tail.Y()});
 
 createOutputArrow(function(){return a;}, function(){return c;}, colorA);
 createOutputArrow(function(){return b;}, function(){return c;}, colorB);
-createOutputArrow(function(){return c;}, function(){return o;}, '#00FF00');
-createOutputArrow(function(){return c + alpha.Value() * a + beta.Value() * b;}, function(){return o;}, '#000000');
+createOutputArrow(function(){return c;}, function(){return o;}, colorC);
+createOutputArrow(function(){return c + alpha.Value() * a + beta.Value() * b;}, function(){return o;}, colorX);
