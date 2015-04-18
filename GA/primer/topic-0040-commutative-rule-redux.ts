@@ -32,7 +32,7 @@ var B = board.create('point', [0,0], {withLabel:false, strokeColor:'#CCCCCC', fi
 var C = board.create('point', [1,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 var A = board.create('point', [2,1], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 
-var H = board.create('point', [function(){return b.x;},function(){return B.Y()+A.Y()-C.Y();}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+var H = board.create('point', [function(){return b.x;},function(){return b.y;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 H.hideElement();
 
 var a1 = board.create('arrow', [B, C]);
