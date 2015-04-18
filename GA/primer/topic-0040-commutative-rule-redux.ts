@@ -29,7 +29,7 @@ var b = new blade.Euclidean2(0,1,1,0);
 // There will be two free points that act as input controlling the vectors a and b.
 var board = graph.initBoard("box", {boundingbox:[-1,2,3,-1], axis:true, grid:true, keepaspectratio: true, showCopyright:false, showNavigation:true, document: popUp.document});
 
-function createArrow(initial: blade.Euclidean2, color: string): JXG.Point {
+function createInputArrow(initial: blade.Euclidean2, color: string): JXG.Point {
   // This construction could be turned into a function...
   var head = board.create('point', [initial.x/2, initial.y/2], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
   var tail = board.create('point', [function(){return -head.X();}, function(){return -head.Y()}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
@@ -38,8 +38,8 @@ function createArrow(initial: blade.Euclidean2, color: string): JXG.Point {
   return head;
 }
 
-var AHead = createArrow(a, '#FF0000');
-var BHead = createArrow(b, '#0000FF');
+var AHead = createInputArrow(a, '#FF0000');
+var BHead = createInputArrow(b, '#0000FF');
 
 
 /*
