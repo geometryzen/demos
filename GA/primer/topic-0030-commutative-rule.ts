@@ -39,6 +39,7 @@ b2.setAttribute({strokeColor: '#0000FF'});
 board.create('text',[function(){return (B.X()+C.X())/2},function(){return (B.Y()+C.Y())/2},"A"]);
 board.create('text',[function(){return (C.X()+A.X())/2},function(){return (C.Y()+A.Y())/2},"B"]);
 board.create('text',[function(){return (B.X()+A.X())/2},function(){return (B.Y()+A.Y())/2},"C=A+B"]);
+board.create('text',[function(){return (B.X()+H.X())/2},function(){return (B.Y()+H.Y())/2},"b"]);
 
 var omega = 2 * Math.PI * 1/10;
 
