@@ -59,7 +59,7 @@ var box1 = new visual.Box({height:0.02, color:0x00FF00});
 box1.pos = -2 * e2 / 5;
 viz.scene.add(box1);
 
-var arrow = new visual.Arrow({scale:1, color: 0xFFFF00});
+var arrow = new visual.Arrow({color: 0xFFFF00});
 viz.scene.add(arrow);
 
 var box2 = new visual.Box({width:0.2, height:0.4, depth:0.6, color:0xFF0000, opacity:0.25});
