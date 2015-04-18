@@ -27,8 +27,8 @@ var H = board.create('point', [function(){return B.X()+A.X()-C.X();},function(){
 
 var a1 = board.create('arrow', [B, C]);
 a1.setAttribute({strokeColor: '#00FF00'});
-var b = board.create('arrow', [C, A]);
-b.setAttribute({strokeColor: '#0000FF'});
+var b1 = board.create('arrow', [C, A]);
+b1.setAttribute({strokeColor: '#00FF00'});
 
 var c = board.create('arrow', [B, A]);
 c.setAttribute({strokeColor: '#FF0000'});
