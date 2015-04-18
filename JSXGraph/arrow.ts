@@ -3,8 +3,6 @@ var log = function(s: any) {
   w.Sk.output(s+'\n');
 };
 
-log(JXG.hsv2rgb(0,1,1));
-
 var graph = JXG.JSXGraph;
 
 var popUp: Window = open("", "", "width=800, height=600");
