@@ -31,6 +31,7 @@ var board = graph.initBoard("box", {boundingbox:[-1,2,3,-1], axis:true, grid:tru
 
 // Create an arrow providing two points.
 var AHead = board.create('point', [a.x/2, a.y/2], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+var ATail = board.create('point', [function(){return -AHead.X();}, a.y/2], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 /*
 var C = board.create('point', [1,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 var A = board.create('point', [2,1], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
