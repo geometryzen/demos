@@ -30,16 +30,14 @@ var headParents = [function(){return pos.x+vec.x;}, function(){return pos.y+vec.
 var tail = board.create('point', tailParents, {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#CCCCCC'});
 var head = board.create('point', headParents, {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#00FF00'});
 var arrow = board.create('arrow', [tail, head]);
-//tail.hideElement();
-//head.hideElement();
 arrow.setAttribute({strokeColor: JXG.hsv2rgb(0,0,0), withLabel:true});
 arrow.setLabelText("a");
 
 var omega = 2 * Math.PI * 1/10;
 
 function tick(time: number) {
-  pos.x = Math.cos(omega * time);
-  pos.y = Math.sin(omega * time);
+//  pos.x = Math.cos(omega * time);
+//  pos.y = Math.sin(omega * time);
   board.update();
     // We can use the variables to drive other windows!
 }
