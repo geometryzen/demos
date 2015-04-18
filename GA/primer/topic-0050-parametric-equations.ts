@@ -58,11 +58,11 @@ function createOutputArrow(mv: ()=>blade.Euclidean3, pos: ()=>blade.Euclidean3, 
     board.create('arrow', [tail, head]).setAttribute({strokeColor: color});
 }
 
-createInputArrow(a, 1 * e1 - 2 * e2, '#0000FF', function(tail, head) {a.x=head.X()-tail.X();a.y=head.Y()-tail.Y()});
+createInputArrow(a, 1 * e1 - 2 * e2, colorA, function(tail, head) {a.x=head.X()-tail.X();a.y=head.Y()-tail.Y()});
 createInputArrow(b, 4 * e1 - 2 * e2, '#FF0000', function(tail, head) {b.x=head.X()-tail.X();b.y=head.Y()-tail.Y()});
 createInputArrow(c, 7 * e1 - 2 * e2, '#00FF00', function(tail, head) {c.x=head.X()-tail.X();c.y=head.Y()-tail.Y()});
 
-createOutputArrow(function(){return a;}, function(){return c;}, '#0000FF');
+createOutputArrow(function(){return a;}, function(){return c;}, colorA);
 createOutputArrow(function(){return b;}, function(){return c;}, '#FF0000');
 createOutputArrow(function(){return c;}, function(){return o;}, '#00FF00');
 createOutputArrow(function(){return c + alpha.Value() * a + beta.Value() * b;}, function(){return o;}, '#000000');
