@@ -42,17 +42,16 @@ function createInputArrow(initial: blade.Euclidean3, color: string): JXG.Point {
 var A = createInputArrow(a, '#FF0000');
 var B = createInputArrow(b, '#00FF00');
 
-function createOutputArrow(vector: ()=>blade.Euclidean3) {
+function createOutputArrow(vector: ()=>blade.Euclidean3, color: string) {
 
-    var CHead = board.create('point', [function(){return vector().x/2;},function(){return vector().y/2;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
-    var CTail = board.create('point', [function(){return -CHead.X();},function(){return -CHead.Y();}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
-    CHead.hideElement();
-    CTail.hideElement();
-    var C = board.create('arrow', [CTail, CHead]);
-    C.setAttribute({strokeColor: '#0000FF'});
+    var head = board.create('point', [function(){return vector().x/2;},function(){return vector().y/2;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+    var tail = board.create('point', [function(){return -head.X();},function(){return -head.Y();}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+    head.hideElement();
+    tail.hideElement();
+    board.create('arrow', [tail, head]).setAttribute({strokeColor: color});
 }
 
-createOutputArrow(function(){return a+b;});
+createOutputArrow(function(){return a+b;}, '#0000FF');
 
 function tick(time: number) {
   //board.update();
