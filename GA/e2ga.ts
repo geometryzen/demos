@@ -11,4 +11,4 @@ function show(label: string, x) {
 }
 
 show('e1', e1);
-show('e1 * e2', e1 * e2);
+show('e1 + e2', e1 + e2);
