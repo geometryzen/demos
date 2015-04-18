@@ -29,6 +29,8 @@ var b = blade.vectorE3(1,1,0);
 // There will be two free points that act as input controlling the vectors a and b.
 var board = graph.initBoard("box", {boundingbox:[-2,6,14,-3], axis:true, grid:true, keepaspectratio: true, showCopyright:false, showNavigation:true, document: popUp.document});
 
+var alpha = board.create('slider',[[-1,10],[-1,12],[0,2,4]]);
+
 // TODO: These functions could be generalized to visualize multivectors.
 function createInputArrow(mv: blade.Euclidean3, color: string) {
   // This construction could be turned into a function...
