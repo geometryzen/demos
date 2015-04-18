@@ -40,7 +40,7 @@ function tick(time: number) {
 }
 
 function terminate(time: number) {
-  return false;
+  return time > 5;
 }
 
 function setUp() {
