@@ -61,5 +61,6 @@ createInputArrow(b, 4 * e1 - 2 * e2, '#FF0000', function(tail, head) {b.x=head.X
 createInputArrow(c, 7 * e1 - 2 * e2, '#00FF00', function(tail, head) {c.x=head.X()-tail.X();c.y=head.Y()-tail.Y()});
 
 createOutputArrow(function(){return a;}, function(){return c;}, '#0000FF');
+createOutputArrow(function(){return b;}, function(){return c;}, '#FF0000');
 createOutputArrow(function(){return c;}, function(){return o;}, '#00FF00');
 createOutputArrow(function(){return c + alpha.Value() * a + beta.Value() * b;}, function(){return o;}, '#000000');
