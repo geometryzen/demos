@@ -38,7 +38,7 @@ function createArrow() {
   return head;
 }
 
-var AH = createArrow();
+var AHead = createArrow();
 
 
 /*
