@@ -23,7 +23,7 @@ var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: tru
 
 // Create an arrow providing two points.
 var tail = board.create('point', [0.0, 0.0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#00FF00'});
-var head = board.create('point', [1.0, 0.0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0});
+var head = board.create('point', [1.0, 0.0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#00FF00'});
 var arrow = board.create('arrow', [tail, head]);
 //tail.hideElement();
 //head.hideElement();
