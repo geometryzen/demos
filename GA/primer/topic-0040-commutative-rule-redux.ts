@@ -38,8 +38,8 @@ function createArrow(initial: blade.Euclidean2, color: string): JXG.Point {
   return head;
 }
 
-var AHead = createArrow(a,'#FF0000');
-var BHead = createArrow(b,'#0000FF');
+var AHead = createArrow(a, '#FF0000');
+var BHead = createArrow(b, '#0000FF');
 
 
 /*
@@ -78,6 +78,8 @@ function tick(time: number) {
   // Update the model from the view.
   a.x = AHead.X() * 2;
   a.y = AHead.Y() * 2;
+  b.x = BHead.X() * 2;
+  b.y = BHead.Y() * 2;
   board.update();
 }
 
