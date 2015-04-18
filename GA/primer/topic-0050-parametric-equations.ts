@@ -22,8 +22,9 @@ div.style.height = "560px";
 
 // Model: Using Euclidean3 right now because __div__ is not there for Euclidean2.
 var o = blade.vectorE3(0,0,0);
-var a = blade.vectorE3(1,0,0);
+var a = blade.vectorE3(2,0,0);
 var b = blade.vectorE3(1,1,0);
+var c = blade.vectorE3(2,1,0);
 
 // View
 // There will be two free points that act as input controlling the vectors a and b.
