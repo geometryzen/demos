@@ -74,7 +74,7 @@ viz.scene.add(vortex)
 var box3 = new visual.Box({width:2, height:2, depth:0.02, color:0x0000FF, opacity:0.25, transparent:true});
 viz.scene.add(box3);
 
-var ball = new visual.Sphere({radius:0.4, color:0x0000FF});
+var ball = new visual.Sphere({radius:0.2, color:0x0000FF});
 viz.scene.add(ball);
 
 /**
