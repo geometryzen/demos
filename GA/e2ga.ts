@@ -9,3 +9,5 @@ var log = function(s: any) {
 function show(label: string, x) {
   log(label + ": " + x);
 }
+
+show('e1', e1);
