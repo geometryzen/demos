@@ -6,9 +6,9 @@ var log = function(s: any) {
 };
 
 // We should support shortcut construction in the blade library.
-var e1 = blade.vectorE3(1,0,0);
-var e2 = blade.vectorE3(0,1,0);
-var e3 = blade.vectorE3(0,0,1);
+var e1 = blade.vectorE3(1, 0, 0);
+var e2 = blade.vectorE3(0, 1, 0);
+var e3 = blade.vectorE3(0, 0, 1);
 
 var a = (2 * e1 + 3 * e2 + 5 * e3);
 var b = (7 * e1 + 11 * e2 + 13 * e3);
