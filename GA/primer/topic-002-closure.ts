@@ -19,20 +19,15 @@ div.style.height = "560px";
 
 var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, showCopyright:false, showNavigation:false, document: popUp.document});
 
-var Z = new blade.Euclidean2(0,0,0,0);
-var A = new blade.Euclidean2(0,1,0,0);
-var B = new blade.Euclidean2(0,1,1,0);
-var tailParents = [function(){return Z.x;}, function(){return Z.y}];
-
 // Create an arrow providing two points.
-var tail = board.create('point', [0,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
-var head = board.create('point', [1,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
-var a = board.create('arrow', [tail, head]);
+var B = board.create('point', [0,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+var C = board.create('point', [1,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+var A = board.create('point', [1,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+
+var a = board.create('arrow', [B, C]);
 a.setAttribute({strokeColor: '#FF0000', withLabel:true});
 a.setLabelText("A");
-var bTail = board.create('point', [function(){return Z.x+A.x;}, function(){return Z.y+A.y}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
-var bHead = board.create('point', [function(){return Z.x+A.x+B.x;}, function(){return Z.y+A.y+B.y}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
-var b = board.create('arrow', [tail, head]);
+var b = board.create('arrow', [C, A]);
 b.setAttribute({strokeColor: '#0000FF', withLabel:true});
 b.setLabelText("B");
 
