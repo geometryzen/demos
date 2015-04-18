@@ -20,7 +20,7 @@ var div = popUp.document.getElementById("box");
 div.style.width  = "760px";
 div.style.height = "560px";
 
-// Model: Using Eiclidean3 right now because __div__ is not there for Euclidean2.
+// Model: Using Euclidean3 right now because __div__ is not there for Euclidean2.
 var o = blade.vectorE3(0,0,0);
 var a = blade.vectorE3(1,0,0);
 var b = blade.vectorE3(1,1,0);
