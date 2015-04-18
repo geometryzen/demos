@@ -49,7 +49,7 @@ function createInputArrow(mv: blade.Euclidean3, pos: blade.Euclidean3, color: st
 
 function createOutputArrow(mv: ()=>blade.Euclidean3, pos: ()=>blade.Euclidean3, color: string) {
 
-    var head = board.create('point', [function(){return mv().x;},function(){return mv().y;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+    var head = board.create('point', [function(){return mv().x+pos().x;},function(){return mv().y+pos().y;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
     var tail = board.create('point', [function(){return pos().x;},function(){return pos().y;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
     head.hideElement();
     tail.hideElement();
