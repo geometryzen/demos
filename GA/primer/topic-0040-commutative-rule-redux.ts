@@ -45,36 +45,8 @@ createInputArrow(b, '#0000FF');
 var CHead = board.create('point', [function(){return (a+b).x/2;},function(){return (a+b).y/2;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 var CTail = board.create('point', [function(){return -CHead.X();},function(){return -CHead.Y();}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 
-
-/*
-var C = board.create('point', [1,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
-var A = board.create('point', [2,1], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
-
-var H = board.create('point', [function(){return b.x;},function(){return b.y;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
-H.hideElement();
-var F = board.create('point', [function(){return (b+a).x;},function(){return (b+a).y;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
-
-var b1 = board.create('arrow', [C, A]);
-b1.setAttribute({strokeColor: '#00FF00'});
-
-var c = board.create('arrow', [B, A]);
-c.setAttribute({strokeColor: '#FF0000'});
-
-var b2 = board.create('arrow', [B, H]);
-b2.setAttribute({strokeColor: '#0000FF'});
-
-
-var a2 = board.create('arrow', [H, A]);
-a2.setAttribute({strokeColor: '#0000FF'});
-
-
-board.create('text',[function(){return (B.X()+C.X())/2},function(){return (B.Y()+C.Y())/2},"a"]);
-board.create('text',[function(){return (C.X()+A.X())/2},function(){return (C.Y()+A.Y())/2},"b"]);
-board.create('text',[function(){return (B.X()+A.X())/2},function(){return (B.Y()+A.Y())/2},"c"]);
-board.create('text',[function(){return (A.X()+H.X())/2},function(){return (A.Y()+H.Y())/2},"a"]);
-board.create('text',[function(){return (B.X()+H.X())/2},function(){return (B.Y()+H.Y())/2},"b"]);
-*/
-var omega = 2 * Math.PI * 1/10;
+//var a2 = board.create('arrow', [H, A]);
+//a2.setAttribute({strokeColor: '#0000FF'});
 
 function tick(time: number) {
   // Update the model from the view.
