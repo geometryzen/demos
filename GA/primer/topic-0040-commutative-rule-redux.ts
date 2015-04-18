@@ -39,8 +39,11 @@ function createInputArrow(initial: blade.Euclidean2, color: string): JXG.Point {
   return head;
 }
 
-var AHead = createInputArrow(a, '#FF0000');
-var BHead = createInputArrow(b, '#0000FF');
+createInputArrow(a, '#FF0000');
+createInputArrow(b, '#0000FF');
+
+var CHead = board.create('point', [function(){return (a+b).x/2;},function(){return (a+b).y/2;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+var CTail = board.create('point', [function(){return -CHead.X();},function(){return -CHead.Y();}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 
 
 /*
@@ -75,7 +78,8 @@ var omega = 2 * Math.PI * 1/10;
 
 function tick(time: number) {
   // Update the model from the view.
-  log(a);
+  var c1 = a + b;
+  var c2 = b + a;
   board.update();
 }
 
