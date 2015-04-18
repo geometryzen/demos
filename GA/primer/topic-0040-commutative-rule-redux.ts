@@ -27,7 +27,7 @@ var b = blade.vectorE3(1,1,0);
 
 // View
 // There will be two free points that act as input controlling the vectors a and b.
-var board = graph.initBoard("box", {boundingbox:[-3,2,3,-1], axis:true, grid:true, keepaspectratio: true, showCopyright:false, showNavigation:true, document: popUp.document});
+var board = graph.initBoard("box", {boundingbox:[-2,2,2,-1], axis:true, grid:true, keepaspectratio: true, showCopyright:false, showNavigation:true, document: popUp.document});
 
 function createInputArrow(initial: blade.Euclidean3, color: string): JXG.Point {
   // This construction could be turned into a function...
