@@ -25,8 +25,8 @@ var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: tru
 var tail = board.create('point', [0.0, 0.0]);
 var head = board.create('point', [1.0, 0.0]);
 var arrow = board.create('arrow', [tail, head]);
-tail.hideElement();
-head.hideElement();
+//tail.hideElement();
+//head.hideElement();
 arrow.setAttribute({strokeColor: JXG.hsv2rgb(0,0,0), withLabel:true});
 arrow.setLabelText("a");
 
