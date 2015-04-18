@@ -43,9 +43,8 @@ var A = createInputArrow(a, '#FF0000');
 var B = createInputArrow(b, '#00FF00');
 
 function createOutputArrow(vector: ()=>blade.Euclidean3) {
-    var v = vector();
-    log(v);
-    var CHead = board.create('point', [function(){return v.x/2;},function(){return v.y/2;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+
+    var CHead = board.create('point', [function(){return vector().x/2;},function(){return vector().y/2;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
     var CTail = board.create('point', [function(){return -CHead.X();},function(){return -CHead.Y();}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
     CHead.hideElement();
     CTail.hideElement();
