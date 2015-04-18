@@ -30,7 +30,10 @@ var tail = board.create('point', [0,0], {withLabel:false, strokeColor:'#CCCCCC',
 var head = board.create('point', [1,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 var a = board.create('arrow', [tail, head]);
 a.setAttribute({strokeColor: '#FF0000', withLabel:true});
-a.setLabelText("a");
+a.setLabelText("A");
+var b = board.create('arrow', [tail, head]);
+b.setAttribute({strokeColor: '#0000FF', withLabel:true});
+b.setLabelText("B");
 
 var omega = 2 * Math.PI * 1/10;
 
