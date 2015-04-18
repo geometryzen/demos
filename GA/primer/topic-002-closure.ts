@@ -21,6 +21,9 @@ var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: tru
 
 var pos = new blade.Euclidean2(0,0,0,0);
 var A = new blade.Euclidean2(0,1,0,0);
+var B = new blade.Euclidean2(0,1,1,0);
+var tailParents = [function(){return pos.x;}, function(){return pos.y}];
+var headParents = [function(){return pos.x+A.x;}, function(){return pos.y+A.y}];
 
 // Create an arrow providing two points.
 var tail = board.create('point', [0,0], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
