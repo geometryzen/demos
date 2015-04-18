@@ -72,13 +72,6 @@ viz.scene.add(vortex)
 var box3 = new visual.Box({width:2, height:2, depth:0.02, color:0x0000FF, opacity:0.25, transparent:true});
 viz.scene.add(box3);
 
-//var sphere = new visual.Sphere({radius:0.4});
-//sphere.pos = 1.5 * e2 + 2 * e3;
-//viz.scene.add(sphere);
-
-//var ball = new visual.Sphere({radius:0.4, color:0x0000FF});
-//viz.scene.add(ball);
-
 /**
  * The frequency of the rotation.
  */
