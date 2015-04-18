@@ -1,3 +1,6 @@
+// In the previous commutative rule demonstration, we did not really show that a+b=c+a.
+// We now use the JXG visual elements to update a model (the underlying mathematical structures)
+// which is then used to update the view.
 var log = function(s: any) {
   var w: any = window;
   w.Sk.output(s+'\n');
