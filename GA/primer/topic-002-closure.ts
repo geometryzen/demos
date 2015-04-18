@@ -31,8 +31,8 @@ var b = board.create('arrow', [C, A]);
 b.setAttribute({strokeColor: '#0000FF', withLabel:true});
 b.setLabelText("B");
 var c = board.create('arrow', [B, A]);
-b.setAttribute({strokeColor: '#00FF00', withLabel:true});
-b.setLabelText("C=A+B");
+c.setAttribute({strokeColor: '#00FF00', withLabel:true});
+c.setLabelText("C=A+B");
 
 var omega = 2 * Math.PI * 1/10;
 
