@@ -52,16 +52,3 @@ createInputArrow(a, '#FF0000');
 createInputArrow(b, '#00FF00');
 
 createOutputArrow(function(){return a+b;}, '#0000FF');
-/*
-function tick(time: number) {
-}
-
-function terminate(time: number) {return false;}
-
-function setUp() {}
-
-function tearDown() {popUp.close();}
-
-var runner = eight.animationRunner(tick, terminate, setUp, tearDown, popUp.window);
-runner.start();
-*/
