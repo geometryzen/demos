@@ -34,7 +34,7 @@ arrow.setAttribute({strokeColor: JXG.hsv2rgb(0,0,0), withLabel:true});
 arrow.setLabelText("a");
 
 function tick(time: number) {
-  t.x = time;
+  t.x = Math.cos(time);
   board.update();
     // We can use the variables to drive other windows!
 }
