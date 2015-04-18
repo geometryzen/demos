@@ -42,7 +42,7 @@ function createInputArrow(initial: blade.Euclidean3, color: string): JXG.Point {
 var A = createInputArrow(a, '#FF0000');
 var B = createInputArrow(b, '#00FF00');
 
-function createOutputArrow() {
+function createOutputArrow(vector: ()=>blade.Euclidean3) {
     var CHead = board.create('point', [function(){return (a+b).x/2;},function(){return (a+b).y/2;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
     var CTail = board.create('point', [function(){return -CHead.X();},function(){return -CHead.Y();}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
     CHead.hideElement();
@@ -51,7 +51,7 @@ function createOutputArrow() {
     C.setAttribute({strokeColor: '#0000FF'});
 }
 
-createOutputArrow();
+createOutputArrow(function(){return a+b;});
 
 function tick(time: number) {
 }
