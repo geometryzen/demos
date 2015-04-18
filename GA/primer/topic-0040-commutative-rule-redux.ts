@@ -52,7 +52,7 @@ function tick(time: number) {
   a.x = A.X() * 2;
   a.y = A.Y() * 2;
   // Update the model from the view.
-  board.update();
+//  board.update();
 }
 
 function terminate(time: number) {return false;}
