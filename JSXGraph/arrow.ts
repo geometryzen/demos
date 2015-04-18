@@ -41,7 +41,7 @@ var head = board.point(1.0, 0.0);
 var arrow = board.arrow(tail, head);
 tail.hideElement();
 head.hideElement();
-arrow.setAttribute({strokeColor: JXG.hsv2rgb(0,0,0)});
+arrow.setAttribute({strokeColor: JXG.hsv2rgb(0,0,0), withLabel:true});
 
 function tick(time: number) {
     // We can use the variables to drive other windows!
