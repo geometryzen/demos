@@ -25,8 +25,7 @@ var C = board.create('point', [1,0], {withLabel:false, strokeColor:'#CCCCCC', fi
 var A = board.create('point', [2,1], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
 
 var a = board.create('arrow', [B, C]);
-a.setAttribute({strokeColor: '#FF0000', withLabel:true});
-a.setLabelText("A");
+a.setAttribute({strokeColor: '#FF0000'});
 var b = board.create('arrow', [C, A]);
 b.setAttribute({strokeColor: '#0000FF', withLabel:true});
 b.setLabelText("B");
