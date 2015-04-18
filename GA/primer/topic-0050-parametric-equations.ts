@@ -36,7 +36,7 @@ var beta = board.create('slider', [[10, -2], [12, -2], [0, 3, 4]]);
 // TODO: These functions could be generalized to visualize multivectors.
 function createInputArrow(mv: blade.Euclidean3, pos: ()=>blade.Euclidean3, color: string) {
   // This construction could be turned into a function...
-  var head = board.create('point', [pos().x + mv.x/2, pos().y + mv.y/2], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+  var head = board.create('point', [pos().x + mv.x, pos().y + mv.y], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
   var tail = board.create('point', [function(){return pos().x;}, function(){return pos().y;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
   tail.hideElement();
   board.create('arrow', [tail, head]).setAttribute({strokeColor: color});
