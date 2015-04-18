@@ -23,7 +23,7 @@ div.style.height = "560px";
 var colorA = '#FFFF00';
 var colorB = '#FF00FF';
 var colorC = '#00FFFF';
-var colorX = '#FF0000';
+var colorX = '#000000';
 
 // Model: Using Euclidean3 right now because __div__ is not there for Euclidean2.
 var o = blade.vectorE3(0,0,0);
