@@ -19,7 +19,7 @@ var div = popUp.document.getElementById("box");
 div.style.width  = "760px";
 div.style.height = "560px";
 
-var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, showCopyright:false, showNavigation:false, document: popUp.document});
+var board = graph.initBoard("box", {axis:false, grid:true, keepaspectratio: true, showCopyright:false, showNavigation:false, document: popUp.document});
 
 var pos = new blade.Euclidean2(0,0,0,0);
 var vec = new blade.Euclidean2(0,1,0,0);
