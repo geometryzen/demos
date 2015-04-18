@@ -1,5 +1,3 @@
-debugger;
-
 var log = function(s: any) {
   var w: any = window;
   w.Sk.output(s+'\n');
