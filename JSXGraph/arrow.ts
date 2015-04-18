@@ -22,7 +22,7 @@ div.style.height = "560px";
 var board = graph.initBoard("box", {axis:false, grid:false, keepaspectratio: true, showCopyright:false, showNavigation:false, document: popUp.document});
 
 var t = new blade.Euclidean2(0,5,0,0);
-var parents = [function(){return t.x;}, 0.0];
+var parents = [function(){return t.x;}, function(){return t.y}];
 
 // Create an arrow providing two points.
 var tail = board.create('point', parents, {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0, highlightStrokeColor:'#CCCCCC'});
