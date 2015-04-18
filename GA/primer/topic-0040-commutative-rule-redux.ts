@@ -50,12 +50,6 @@ var C = board.create('arrow', [CTail, CHead]);
 C.setAttribute({strokeColor: '#0000FF'});
 
 function tick(time: number) {
-  /*
-  a.x = A.X() * 2;
-  a.y = A.Y() * 2;
-  b.x = B.X() * 2;
-  b.y = B.Y() * 2;
-  */
   // Update the model from the view.
 //  board.update();
 }
