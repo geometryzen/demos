@@ -35,7 +35,7 @@ function createInputArrow(initial: blade.Euclidean3, color: string): JXG.Point {
   var tail = board.create('point', [function(){return -head.X();}, function(){return -head.Y()}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
   tail.hideElement();
   board.create('arrow', [tail, head]).setAttribute({strokeColor: color});
-  head.on('drag',function(){initial.x = head.X();initial.y = head.Y()});
+  head.on('drag',function(){initial.x = head.X()*2;initial.y = head.Y()*2});
   return head;
 }
 
