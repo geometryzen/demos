@@ -31,14 +31,14 @@ var board = graph.initBoard("box", {boundingbox:[-1,2,3,-1], axis:true, grid:tru
 
 function createArrow() {
   // This construction could be turned into a function...
-  var AHead = board.create('point', [a.x/2, a.y/2], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
-  var ATail = board.create('point', [function(){return -AHead.X();}, function(){return -AHead.Y()}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
-  ATail.hideElement();
-  board.create('arrow', [ATail, AHead]).setAttribute({strokeColor: '#FF0000'});
-  return AHead;
+  var head = board.create('point', [a.x/2, a.y/2], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+  var tail = board.create('point', [function(){return -head.X();}, function(){return -head.Y()}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+  tail.hideElement();
+  board.create('arrow', [tail, head]).setAttribute({strokeColor: '#FF0000'});
+  return head;
 }
 
-var AHead = createArrow();
+var AH = createArrow();
 
 
 /*
