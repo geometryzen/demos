@@ -55,3 +55,5 @@ show('e2 >> one', e2 >> one);
 show('e2 >> e1',  e2 >> e1);
 show('e2 >> e2',  e2 >> e2);
 show('e2 >> I',   e2 >> I);
+
+show('e1 | e1',   e1 | e1);
