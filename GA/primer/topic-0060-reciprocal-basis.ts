@@ -46,8 +46,8 @@ function createOutputArrow(mv: ()=>blade.Euclidean2, pos: ()=>blade.Euclidean2, 
 createInputArrow(a, 2 * e1 - 2 * e2, colorA, function(tail, head) {a.x=head.X()-tail.X();a.y=head.Y()-tail.Y()});
 createInputArrow(b, 5 * e1 - 2 * e2, colorB, function(tail, head) {b.x=head.X()-tail.X();b.y=head.Y()-tail.Y()});
 
-createOutputArrow(function(){return a;}, function(){return o;}, colorA,1);
-createOutputArrow(function(){return b;}, function(){return o;}, colorB,1);
+createOutputArrow(function(){return a;}, function(){return o;}, colorA, 0);
+createOutputArrow(function(){return b;}, function(){return o;}, colorB, 0);
 createOutputArrow(
   function() {
     var I = a ^ b;
