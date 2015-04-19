@@ -15,10 +15,9 @@ var colorB = '#FF0000';
 var colorC = '#00FF00';
 var colorX = '#000000';
 
-// Model: Using Euclidean3 right now because __div__ is not there for Euclidean2.
-var o = blade.vectorE3(0,0,0);
-var e1 = blade.vectorE3(1,0,0);
-var e2 = blade.vectorE3(0,1,0);
+var o  = new blade.Euclidean2(0,0,0,0);
+var e1 = new blade.Euclidean2(0,1,0,0);
+var e2 = new blade.Euclidean2(0,0,1,0);
 var a = 2 * e1;
 var b = e2;
 var c = 2 * e1 + e2;
@@ -31,7 +30,7 @@ alpha.setAttribute({strokeColor: colorA});
 var beta = board.create('slider', [[10, -2], [12, -2], [0, 1, 4]]);
 beta.setAttribute({strokeColor: colorB});
 
-function createInputArrow(mv: blade.Euclidean3, pos: blade.Euclidean3, color: string, handler: (tail:JXG.Point, head:JXG.Point)=>void) {
+function createInputArrow(mv: blade.Euclidean2, pos: blade.Euclidean2, color: string, handler: (tail:JXG.Point, head:JXG.Point)=>void) {
   var head = board.create('point', [pos.x + mv.x/2, pos.y + mv.y/2], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
   var tail = board.create('point', [function(){return pos.x - mv.x/2;}, function(){return pos.y-mv.y/2;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
   tail.hideElement();
@@ -39,7 +38,7 @@ function createInputArrow(mv: blade.Euclidean3, pos: blade.Euclidean3, color: st
   head.on('drag',function(){handler(tail, head)});
 }
 
-function createOutputArrow(mv: ()=>blade.Euclidean3, pos: ()=>blade.Euclidean3, color: string) {
+function createOutputArrow(mv: ()=>blade.Euclidean2, pos: ()=>blade.Euclidean2, color: string) {
     var head = board.create('point', [function(){return mv().x+pos().x;},function(){return mv().y+pos().y;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
     var tail = board.create('point', [function(){return pos().x;},function(){return pos().y;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
     head.hideElement();
