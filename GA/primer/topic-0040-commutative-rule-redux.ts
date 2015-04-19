@@ -21,16 +21,16 @@ div.style.width  = "760px";
 div.style.height = "560px";
 
 // Model: Using Euclidean3 right now because __div__ is not there for Euclidean2.
-var o = blade.vectorE3(0,0,0);
-var a = blade.vectorE3(1,0,0);
-var b = blade.vectorE3(1,1,0);
+var o = new blade.Euclidean2(0,0,0,0);
+var a = new blade.Euclidean2(0,1,0,0);
+var b = new blade.Euclidean2(0,1,1,0);
 
 // View
 // There will be two free points that act as input controlling the vectors a and b.
 var board = graph.initBoard("box", {boundingbox:[-2,2,2,-2], axis:true, grid:true, keepaspectratio: true, showCopyright:false, showNavigation:true, document: popUp.document});
 
 // TODO: These functions could be generalized to visualize multivectors.
-function createInputArrow(mv: blade.Euclidean3, color: string) {
+function createInputArrow(mv: blade.Euclidean2, color: string) {
   // This construction could be turned into a function...
   var head = board.create('point', [mv.x/2, mv.y/2], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
   var tail = board.create('point', [function(){return -head.X();}, function(){return -head.Y()}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
@@ -39,7 +39,7 @@ function createInputArrow(mv: blade.Euclidean3, color: string) {
   head.on('drag',function(){mv.x = head.X()*2; mv.y = head.Y()*2});
 }
 
-function createOutputArrow(mv: ()=>blade.Euclidean3, color: string) {
+function createOutputArrow(mv: ()=>blade.Euclidean2, color: string) {
 
     var head = board.create('point', [function(){return mv().x/2;},function(){return mv().y/2;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
     var tail = board.create('point', [function(){return -head.X();},function(){return -head.Y();}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
