@@ -40,7 +40,7 @@ function createOutputArrow(mv: ()=>blade.Euclidean2, pos: ()=>blade.Euclidean2, 
     var tail = board.create('point', [function(){return pos().x;},function(){return pos().y;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
     head.hideElement();
     tail.hideElement();
-    board.create('arrow', [tail, head]).setAttribute({strokeColor: color});
+    board.create('arrow', [tail, head]).setAttribute({strokeColor: color, dash:3});
 }
 
 createInputArrow(a, 2 * e1 - 2 * e2, colorA, function(tail, head) {a.x=head.X()-tail.X();a.y=head.Y()-tail.Y()});
