@@ -22,7 +22,6 @@ var a = 2 * e1;
 var b = e2;
 var c = 2 * e1 + e2;
 
-// View
 var board = JXG.JSXGraph.initBoard("box", {boundingbox:[-2, 6, 14, -3], axis:true, grid:true, keepaspectratio: true, showCopyright:false, showNavigation:true, document: popUp.document});
 
 var alpha = board.create('slider', [[10, -1], [12, -1], [0, 1, 4]]);
