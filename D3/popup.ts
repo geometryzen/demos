@@ -3,7 +3,7 @@ var popUp: Window = open("", "", "width=800, height=600");
 
 popUp.document.body.style.backgroundColor = "202020";
 popUp.document.body.style.overflow = "hidden";
-popUp.document.title = "Visualizing Geometric Algebra with WebGL";
+popUp.document.title = "D3";
 
 var width = Math.max(960, popUp.window.innerWidth)
 var height = Math.max(500, popUp.window.innerHeight)
@@ -19,7 +19,7 @@ var canvas = d3.select(popUp.document.body).append("canvas")
 
 canvas.attr("width", width).attr("height", height)
 
-d3.select("canvas").style("background-color", "#222")
+d3.select(popUp.document.body).select("canvas").style("background-color", "#222")
 
 function move(data: any, index: number) {
     var mouse = d3.mouse(canvas.node())
