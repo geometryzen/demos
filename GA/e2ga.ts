@@ -14,3 +14,4 @@ function show(label: string, x) {
 
 show('e1 | e1',   e1 | e1);
 show('e2 | e2',   e2 | e2);
+show('I | I',   I | I);
