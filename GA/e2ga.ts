@@ -12,6 +12,7 @@ function show(label: string, x) {
   log(label + ": " + x);
 }
 
+show('one | 1',   one | 1);
 show('e1 | e1',   e1 | e1);
 show('e2 | e2',   e2 | e2);
 show('I | I',   I | I);
