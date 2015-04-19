@@ -48,16 +48,10 @@ createInputArrow(b, 5 * e1 - 2 * e2, colorB, function(tail, head) {b.x=head.X()-
 
 createOutputArrow(function(){return a;}, function(){return o;}, colorA, 0);
 createOutputArrow(function(){return b;}, function(){return o;}, colorB, 0);
-createOutputArrow(
-  function() {
-    return a / a.norm();
-    
-  }, function(){return o;}, colorA, 3);
+createOutputArrow(function() {return a / a.norm();}, function(){return o;}, colorA, 3);
 createOutputArrow(
   function() {
     var I = a ^ b;
-    var m = I | I;
-    var inverse = I / m;
-    return -a * inverse;
+    return a / a.norm() * (I / I.norm());
     
   }, function(){return o;}, colorB,3);
