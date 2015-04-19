@@ -55,6 +55,8 @@ createOutputArrow(
     var I = a ^ b;
     var m = I | I;
     var inverse = I / m;
+    log(inverse * I);
+    log(I * inverse)
     return b * inverse;
     
   }, function(){return o;}, colorAR);
