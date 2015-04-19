@@ -1,5 +1,10 @@
 var popUp: Window = open("", "", "width=800, height=600");
 
+var log = function(s: any) {
+  var w: any = window;
+  w.Sk.output(s+'\n');
+};
+
 var css = '<link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />';
 popUp.document.documentElement.innerHTML = css+'<div id="box" class="jxgbox" style="width:800px; height:600px;"></div>'
 popUp.document.title = "Parametric Equations";
@@ -50,6 +55,7 @@ createOutputArrow(
     var I = a ^ b;
     var m = I | I;
     var inverse = I / m;
+    log(inverse);
     return a * inverse;
     
   }, function(){return o;}, colorAR);
