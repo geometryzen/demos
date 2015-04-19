@@ -1,7 +1,7 @@
 var scene = new THREE.Scene();
 
-var aspect_ratio = window.innerWidth / window.innerHeight;
-var camera = new THREE.PerspectiveCamera(75, aspect_ratio, 1, 10000);
+var aspectRatio = window.innerWidth / window.innerHeight;
+var camera = new THREE.PerspectiveCamera(75, aspectRatio, 1, 10000);
 camera.position.z = 500;
 scene.add(camera);
 
