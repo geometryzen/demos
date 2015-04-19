@@ -45,4 +45,11 @@ createInputArrow(b, 5 * e1 - 2 * e2, colorB, function(tail, head) {b.x=head.X()-
 
 createOutputArrow(function(){return a;}, function(){return o;}, colorA);
 createOutputArrow(function(){return b;}, function(){return o;}, colorB);
-createOutputArrow(function(){return a;}, function(){return o;}, colorAR);
+createOutputArrow(
+  function() {
+    var I = a ^ b;
+    var m = I * I;
+    var inverse = I / m;
+    return a * inverse;
+    
+  }, function(){return o;}, colorAR);
