@@ -48,7 +48,7 @@ createOutputArrow(function(){return b;}, function(){return o;}, colorB);
 createOutputArrow(
   function() {
     var I = a ^ b;
-    var m = I * I;
+    var m = I | I;
     var inverse = I / m;
     return a * inverse;
     
