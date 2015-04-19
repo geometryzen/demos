@@ -19,7 +19,7 @@ var canvas = d3.select(popUp.document.body).append("canvas")
 
 canvas.attr("width", width).attr("height", height)
 
-d3.select(popUp.document.body).select("canvas").style("background-color", "#FF0000")
+d3.select(popUp.document.body).select("canvas").style("background-color", "#222")
 
 function move(data: any, index: number) {
     var mouse = d3.mouse(canvas.node())
@@ -63,7 +63,7 @@ function tick(t) {
         return circle
     }
     // The following is correct. Maybe an error in the TypeLibrary definitions?
-    d3.select(popUp.document.body).transition().duration(2000).ease(Math.sqrt).tween("circle", tweeny)
+    d3.select(popUp.document).transition().duration(2000).ease(Math.sqrt).tween("circle", tweeny)
 }
 
 function terminate(t) {
