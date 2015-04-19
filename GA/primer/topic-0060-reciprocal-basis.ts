@@ -59,3 +59,12 @@ createOutputArrow(
     return b * inverse;
     
   }, function(){return o;}, colorAR);
+createOutputArrow(
+  function() {
+    var I = a ^ b;
+    var m = I | I;
+    var inverse = I / m;
+    log(inverse);
+    return a * inverse;
+    
+  }, function(){return o;}, colorBR);
