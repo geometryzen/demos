@@ -27,9 +27,11 @@ var b = e2;
 // View
 var board = JXG.JSXGraph.initBoard("box", {boundingbox:[-2, 3, 6, -3], axis:false, grid:false, keepaspectratio: true, showCopyright:false, showNavigation:true, document: popUp.document});
 
-function createInputArrow(mv: blade.Euclidean2, pos: blade.Euclidean2, color: string, handler: (tail:JXG.Point, head:JXG.Point)=>void) {
-  var head = board.create('point', [pos.x + mv.x/2, pos.y + mv.y/2], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
-  var tail = board.create('point', [function(){return pos.x - mv.x/2;}, function(){return pos.y-mv.y/2;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+function createInputArrow(mv: blade.Euclidean2, pos: blade.Euclidean2, color: string, handler: (tail:JXG.Point, head:JXG.Point)=>void, localized: boolean) {
+  var denom = localized ? 2 : 1;
+  var k = localized ? 1 : 0;
+  var head = board.create('point', [pos.x + mv.x/denom, pos.y + mv.y/denom], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+  var tail = board.create('point', [function(){return pos.x - k * mv.x/2;}, function(){return pos.y - k * mv.y/2;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
   tail.hideElement();
   board.create('arrow', [tail, head]).setAttribute({strokeColor: color});
   head.on('drag',function(){handler(tail, head)});
@@ -43,8 +45,8 @@ function createOutputArrow(mv: ()=>blade.Euclidean2, pos: ()=>blade.Euclidean2, 
     board.create('arrow', [tail, head]).setAttribute({strokeColor: color, dash:dash});
 }
 
-createInputArrow(a, 2 * e1 - 2 * e2, colorA, function(tail, head) {a.x=head.X()-tail.X();a.y=head.Y()-tail.Y()});
-createInputArrow(b, 5 * e1 - 2 * e2, colorB, function(tail, head) {b.x=head.X()-tail.X();b.y=head.Y()-tail.Y()});
+createInputArrow(a, 2 * e1 - 2 * e2, colorA, function(tail, head) {a.x=head.X()-tail.X();a.y=head.Y()-tail.Y()}, false);
+createInputArrow(b, 5 * e1 - 2 * e2, colorB, function(tail, head) {b.x=head.X()-tail.X();b.y=head.Y()-tail.Y()}, false);
 
 createOutputArrow(function(){return a;}, function(){return o;}, colorA, 0);
 createOutputArrow(function(){return b;}, function(){return o;}, colorB, 0);
