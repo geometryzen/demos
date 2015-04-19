@@ -23,3 +23,7 @@ show('e1 - 1', e1 - 1);
 show('e1 * e2', e1 * e2);
 show('2 * e2', 2 * e2);
 show('e1 * 2', e1 * 2);
+
+show('e1 / e2', e1 / e2);
+show('2 / e2', 2 / e2);
+show('e1 / 2', e1 / 2);
