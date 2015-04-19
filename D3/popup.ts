@@ -19,7 +19,7 @@ var canvas = d3.select(popUp.document.body).append("canvas")
 
 canvas.attr("width", width).attr("height", height)
 
-d3.select(popUp.document.body).select("canvas").style("background-color", "#222")
+d3.select(popUp.document.body).select("canvas").style("background-color", "#FF0000")
 
 function move(data: any, index: number) {
     var mouse = d3.mouse(canvas.node())
