@@ -43,3 +43,15 @@ show('e2 << one', e2 << one);
 show('e2 << e1',  e2 << e1);
 show('e2 << e2',  e2 << e2);
 show('e2 << I',   e2 << I);
+
+show('e1 >> 1',   e1 >> 1);
+show('e1 >> one', e1 >> one);
+show('e1 >> e1',  e1 >> e1);
+show('e1 >> e2',  e1 >> e2);
+show('e1 >> I',   e1 >> I);
+
+show('e2 >> 1',   e2 >> 1);
+show('e2 >> one', e2 >> one);
+show('e2 >> e1',  e2 >> e1);
+show('e2 >> e2',  e2 >> e2);
+show('e2 >> I',   e2 >> I);
