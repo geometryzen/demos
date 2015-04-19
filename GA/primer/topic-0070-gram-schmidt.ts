@@ -50,10 +50,9 @@ createOutputArrow(function(){return a;}, function(){return o;}, colorA, 0);
 createOutputArrow(function(){return b;}, function(){return o;}, colorB, 0);
 createOutputArrow(
   function() {
-    var m = a * a;
-    return a / m;
+    return a / a.norm();
     
-  }, function(){return o;}, colorA,3);
+  }, function(){return o;}, colorA, 3);
 createOutputArrow(
   function() {
     var I = a ^ b;
