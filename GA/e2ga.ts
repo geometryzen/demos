@@ -15,3 +15,4 @@ function show(label: string, x) {
 show('+e1',   +e1);
 show('-e1',   -e1);
 show('~e1',   ~e1);
+show('-I',   -I);
