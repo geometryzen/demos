@@ -28,8 +28,10 @@ var b = e2;
 var board = JXG.JSXGraph.initBoard("box", {boundingbox:[-2, 3, 6, -3], axis:false, grid:false, keepaspectratio: true, showCopyright:false, showNavigation:true, document: popUp.document});
 
 function createInputArrow(mv: blade.Euclidean2, pos: blade.Euclidean2, color: string, handler: (tail:JXG.Point, head:JXG.Point)=>void, localized: boolean) {
-  var head = board.create('point', [pos.x + mv.x/2, pos.y + mv.y/2], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
-  var tail = board.create('point', [function(){return pos.x - mv.x/2;}, function(){return pos.y-mv.y/2;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+  var denom = localized ? 2 : 1;
+  var k = localized ? 1 : 0;
+  var head = board.create('point', [pos.x + mv.x/denom, pos.y + mv.y/denom], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
+  var tail = board.create('point', [function(){return pos.x - k * mv.x/2;}, function(){return pos.y - k * mv.y/2;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
   tail.hideElement();
   board.create('arrow', [tail, head]).setAttribute({strokeColor: color});
   head.on('drag',function(){handler(tail, head)});
