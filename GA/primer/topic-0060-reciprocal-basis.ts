@@ -17,8 +17,6 @@ div.style.height = "560px";
 
 var colorA  = '#0000FF';
 var colorB  = '#FF0000';
-var colorAR = '#FFFF00';
-var colorBR = '#00FFFF';
 
 var o  = new blade.Euclidean2(0,0,0,0);
 var e1 = new blade.Euclidean2(0,1,0,0);
@@ -57,7 +55,7 @@ createOutputArrow(
     var inverse = I / m;
     return b * inverse;
     
-  }, function(){return o;}, colorAR);
+  }, function(){return o;}, colorA);
 createOutputArrow(
   function() {
     var I = a ^ b;
@@ -65,4 +63,4 @@ createOutputArrow(
     var inverse = I / m;
     return -a * inverse;
     
-  }, function(){return o;}, colorBR);
+  }, function(){return o;}, colorB);
