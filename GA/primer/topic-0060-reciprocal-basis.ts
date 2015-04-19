@@ -35,19 +35,19 @@ function createInputArrow(mv: blade.Euclidean2, pos: blade.Euclidean2, color: st
   head.on('drag',function(){handler(tail, head)});
 }
 
-function createOutputArrow(mv: ()=>blade.Euclidean2, pos: ()=>blade.Euclidean2, color: string) {
+function createOutputArrow(mv: ()=>blade.Euclidean2, pos: ()=>blade.Euclidean2, color: string, dash: number) {
     var head = board.create('point', [function(){return mv().x+pos().x;},function(){return mv().y+pos().y;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
     var tail = board.create('point', [function(){return pos().x;},function(){return pos().y;}], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
     head.hideElement();
     tail.hideElement();
-    board.create('arrow', [tail, head]).setAttribute({strokeColor: color, dash:3});
+    board.create('arrow', [tail, head]).setAttribute({strokeColor: color, dash:dash});
 }
 
 createInputArrow(a, 2 * e1 - 2 * e2, colorA, function(tail, head) {a.x=head.X()-tail.X();a.y=head.Y()-tail.Y()});
 createInputArrow(b, 5 * e1 - 2 * e2, colorB, function(tail, head) {b.x=head.X()-tail.X();b.y=head.Y()-tail.Y()});
 
-createOutputArrow(function(){return a;}, function(){return o;}, colorA);
-createOutputArrow(function(){return b;}, function(){return o;}, colorB);
+createOutputArrow(function(){return a;}, function(){return o;}, colorA,1);
+createOutputArrow(function(){return b;}, function(){return o;}, colorB,1);
 createOutputArrow(
   function() {
     var I = a ^ b;
@@ -55,7 +55,7 @@ createOutputArrow(
     var inverse = I / m;
     return b * inverse;
     
-  }, function(){return o;}, colorA);
+  }, function(){return o;}, colorA,3);
 createOutputArrow(
   function() {
     var I = a ^ b;
@@ -63,4 +63,4 @@ createOutputArrow(
     var inverse = I / m;
     return -a * inverse;
     
-  }, function(){return o;}, colorB);
+  }, function(){return o;}, colorB,3);
