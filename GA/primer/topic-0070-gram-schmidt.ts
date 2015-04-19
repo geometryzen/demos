@@ -50,10 +50,8 @@ createOutputArrow(function(){return a;}, function(){return o;}, colorA, 0);
 createOutputArrow(function(){return b;}, function(){return o;}, colorB, 0);
 createOutputArrow(
   function() {
-    var I = a ^ b;
-    var m = I | I;
-    var inverse = I / m;
-    return b * inverse;
+    var m = a * a;
+    return a / m;
     
   }, function(){return o;}, colorA,3);
 createOutputArrow(
