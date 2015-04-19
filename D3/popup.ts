@@ -1,5 +1,12 @@
-var width = Math.max(960, window.innerWidth)
-var height = Math.max(500, window.innerHeight)
+
+var popUp: Window = open("", "", "width=800, height=600");
+
+popUp.document.body.style.backgroundColor = "202020";
+popUp.document.body.style.overflow = "hidden";
+popUp.document.title = "Visualizing Geometric Algebra with WebGL";
+
+var width = Math.max(960, popUp.window.innerWidth)
+var height = Math.max(500, popUp.window.innerHeight)
 var x1 = width / 2
 var y1 = height / 2
 var x0 = x1
@@ -8,7 +15,7 @@ var i = 0
 var r = 200
 var tau = Math.PI * 2
 
-var canvas = d3.select("body").append("canvas")
+var canvas = d3.select(popUp.document.body).append("canvas")
 
 canvas.attr("width", width).attr("height", height)
 
@@ -26,7 +33,7 @@ canvas.on("mousemove", move)
 var element: any = canvas.node();
 var elemCanvas: HTMLCanvasElement = element;
 
-var workbench = new visual.Workbench2D(elemCanvas, window)
+var workbench = new visual.Workbench2D(elemCanvas, popUp.window)
 
 var context = elemCanvas.getContext("2d")
 context.globalCompositeOperation = "lighter"
@@ -67,5 +74,5 @@ function tearDown(e) {
     workbench.tearDown()
 }
 
-var war = eight.animationRunner(tick, terminate, setUp, tearDown, window)
+var war = eight.animationRunner(tick, terminate, setUp, tearDown, popUp.window)
 war.start()
