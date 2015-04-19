@@ -27,7 +27,7 @@ var a = 2 * e1;
 var b = e2;
 
 // View
-var board = JXG.JSXGraph.initBoard("box", {boundingbox:[-2, 3, 14, -3], axis:true, grid:true, keepaspectratio: true, showCopyright:false, showNavigation:true, document: popUp.document});
+var board = JXG.JSXGraph.initBoard("box", {boundingbox:[-2, 3, 6, -3], axis:true, grid:true, keepaspectratio: true, showCopyright:false, showNavigation:true, document: popUp.document});
 
 function createInputArrow(mv: blade.Euclidean2, pos: blade.Euclidean2, color: string, handler: (tail:JXG.Point, head:JXG.Point)=>void) {
   var head = board.create('point', [pos.x + mv.x/2, pos.y + mv.y/2], {withLabel:false, strokeColor:'#CCCCCC', fillOpacity: 0, highlightFillOpacity: 0});
