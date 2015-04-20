@@ -82,7 +82,7 @@ var omega = 2 * Math.PI * frequency * e3 ^ e1;
 
 function setUp() {
   viz.setUp();
-  viz.camera.position.set(2,2,2);
+  viz.camera.position.set(2, 2, 2);
 }
 
 /**
