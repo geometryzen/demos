@@ -39,8 +39,7 @@ class Popup {
   }
 }
 
-var w: any = window;
-w.Sk.output("visual.VERSION: " + visual.VERSION + "\n");
+console.log("visual.VERSION: " + visual.VERSION + "\n");
 
 var popUp = new Popup("Geometry Zen");
 var viz = new visual.Visual(popUp.wnd);
