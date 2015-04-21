@@ -1,8 +1,3 @@
-var log = function(s: any) {
-  var w: any = window;
-  w.Sk.output(s+'\n');
-};
-
 /**
  * Demonstrates creating a 2D canvas and context.
  * Illustrates the fundamental theorem of algebra.
